@@ -250,7 +250,7 @@ func near_player(near:bool)->void:
 		# [KR] 대화 중에는 카메라/플레이어 이동(anim_change)으로 이벤트 영역에 닿아도 버블 SE를 재생하지 않는다.
 		#      (호감도 H 이벤트 씬 전환 중 "퐁" SE가 잘못 울리던 버그 방지)
 		if sfx and not Dialogic.current_timeline:
-			var sound := UiSoundStreamPlayer.SOUND_LOVE_BUBBLE_OK if event_enabled else UiSoundStreamPlayer.SOUND_LOVE_BUBBLE_NO
+			var sound = UiSoundStreamPlayer.SOUND_LOVE_BUBBLE_OK if event_enabled else UiSoundStreamPlayer.SOUND_LOVE_BUBBLE_NO
 			sfx.set_stream_play_to_file(sound)
 		if not event_enabled:
 			_try_show_friendly_noti()

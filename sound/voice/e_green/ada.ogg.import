@@ -2,12 +2,13 @@
 
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
-uid="uid://cxht0cksjo02a"
-valid=false
+uid="uid://etnpklwu1t0o"
+path="res://.godot/imported/ada.ogg-5aad99035bded991550a9654a0c7b8a5.oggvorbisstr"
 
 [deps]
 
 source_file="res://sound/voice/e_green/ada.ogg"
+dest_files=["res://.godot/imported/ada.ogg-5aad99035bded991550a9654a0c7b8a5.oggvorbisstr"]
 
 [params]
 

@@ -50,8 +50,92 @@ gdscript/warnings/unused_signal=0
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"Player": "res://Gameplay/Dialog/Character/Player.dch",
+"batora": "res://Gameplay/Dialog/Character/batora.dch",
+"bubble": "res://Gameplay/Dialog/Character/bubble.dch",
+"butler": "res://Gameplay/Dialog/Character/butler.dch",
+"butler_bird_hidden": "res://Gameplay/Dialog/Character/butler_bird_hidden.dch",
+"konial": "res://Gameplay/Dialog/Character/konial.dch",
+"mai": "res://Gameplay/Dialog/Character/mai.dch",
+"pazuzu": "res://Gameplay/Dialog/Character/pazuzu.dch",
+"reina": "res://Gameplay/Dialog/Character/reina.dch",
+"talk_asset": "res://Gameplay/Dialog/Character/talk_asset.dch",
+"unit_test_character": "res://Tests/Resources/unit_test_character.dch",
+"unknown": "res://Gameplay/Dialog/Character/unknown.dch"
+}
+directories/dtl_directory={
+"basetalk": "res://Gameplay/Dialog/TimeLines/basetalk.dtl",
+"butler_love_0": "res://Gameplay/Dialog/TimeLines/butler_love_0.dtl",
+"butler_love_1": "res://Gameplay/Dialog/TimeLines/butler_love_1.dtl",
+"butler_love_2": "res://Gameplay/Dialog/TimeLines/butler_love_2.dtl",
+"butler_love_quest_start": "res://Gameplay/Dialog/TimeLines/butler_love_quest_start.dtl",
+"chapter2_butler": "res://Gameplay/Dialog/TimeLines/chapter2_butler.dtl",
+"chapter3_ch_talk": "res://Gameplay/Dialog/TimeLines/chapter3_ch_talk.dtl",
+"chapter3_start": "res://Gameplay/Dialog/TimeLines/chapter3_start.dtl",
+"chapter3_talk": "res://Gameplay/Dialog/TimeLines/chapter3_talk.dtl",
+"chapter3_talk2": "res://Gameplay/Dialog/TimeLines/chapter3_talk2.dtl",
+"chapter4_butler": "res://Gameplay/Dialog/TimeLines/chapter4_butler.dtl",
+"chapter4_butler2": "res://Gameplay/Dialog/TimeLines/chapter4_butler2.dtl",
+"chapter4_butler3": "res://Gameplay/Dialog/TimeLines/chapter4_butler3.dtl",
+"chapter4_butler4": "res://Gameplay/Dialog/TimeLines/chapter4_butler4.dtl",
+"chapter4_complete": "res://Gameplay/Dialog/TimeLines/chapter4_complete.dtl",
+"chapter4_complete2": "res://Gameplay/Dialog/TimeLines/chapter4_complete2.dtl",
+"chapter4_complete3": "res://Gameplay/Dialog/TimeLines/chapter4_complete3.dtl",
+"chapter4_kankannavi": "res://Gameplay/Dialog/TimeLines/chapter4_kankannavi.dtl",
+"chapter5_complete": "res://Gameplay/Dialog/TimeLines/chapter5_complete.dtl",
+"chapter5_start": "res://Gameplay/Dialog/TimeLines/chapter5_start.dtl",
+"chapter6_2": "res://Gameplay/Dialog/TimeLines/chapter6_2.dtl",
+"chapter6_complete": "res://Gameplay/Dialog/TimeLines/chapter6_complete.dtl",
+"chapter6_npc_talk": "res://Gameplay/Dialog/TimeLines/chapter6_npc_talk.dtl",
+"chapter6_start": "res://Gameplay/Dialog/TimeLines/chapter6_start.dtl",
+"door_block": "res://Gameplay/Dialog/TimeLines/door_block.dtl",
+"e_bird": "res://Gameplay/Dialog/TimeLines/e_bird.dtl",
+"e_bottom_eye": "res://Gameplay/Dialog/TimeLines/e_bottom_eye.dtl",
+"e_bra": "res://Gameplay/Dialog/TimeLines/e_bra.dtl",
+"e_cat": "res://Gameplay/Dialog/TimeLines/e_cat.dtl",
+"e_dog_strap": "res://Gameplay/Dialog/TimeLines/e_dog_strap.dtl",
+"e_fella": "res://Gameplay/Dialog/TimeLines/e_fella.dtl",
+"e_green": "res://Gameplay/Dialog/TimeLines/e_green.dtl",
+"e_mai_full_doggy": "res://Gameplay/Dialog/TimeLines/e_mai_full_doggy.dtl",
+"e_nopan": "res://Gameplay/Dialog/TimeLines/e_nopan.dtl",
+"e_onsen": "res://Gameplay/Dialog/TimeLines/e_onsen.dtl",
+"e_paizuri_mai": "res://Gameplay/Dialog/TimeLines/e_paizuri_mai.dtl",
+"e_panty": "res://Gameplay/Dialog/TimeLines/e_panty.dtl",
+"e_reina_fella": "res://Gameplay/Dialog/TimeLines/e_reina_fella.dtl",
+"e_reina_full_sitting": "res://Gameplay/Dialog/TimeLines/e_reina_full_sitting.dtl",
+"e_reina_swimsuit": "res://Gameplay/Dialog/TimeLines/e_reina_swimsuit.dtl",
+"e_reverse_train": "res://Gameplay/Dialog/TimeLines/e_reverse_train.dtl",
+"e_roullete": "res://Gameplay/Dialog/TimeLines/e_roullete.dtl",
+"e_sd_char": "res://Gameplay/Dialog/TimeLines/e_sd_char.dtl",
+"e_semen": "res://Gameplay/Dialog/TimeLines/e_semen.dtl",
+"e_stand_sign": "res://Gameplay/Dialog/TimeLines/e_stand_sign.dtl",
+"e_stuck_door": "res://Gameplay/Dialog/TimeLines/e_stuck_door.dtl",
+"e_swimsuit": "res://Gameplay/Dialog/TimeLines/e_swimsuit.dtl",
+"e_window": "res://Gameplay/Dialog/TimeLines/e_window.dtl",
+"ending_0": "res://Gameplay/Dialog/TimeLines/ending_0.dtl",
+"epilogue_0": "res://Gameplay/Dialog/TimeLines/epilogue_0.dtl",
+"konial_love_0": "res://Gameplay/Dialog/TimeLines/konial_love_0.dtl",
+"konial_love_1": "res://Gameplay/Dialog/TimeLines/konial_love_1.dtl",
+"konial_love_2": "res://Gameplay/Dialog/TimeLines/konial_love_2.dtl",
+"konial_talk1": "res://Gameplay/Dialog/TimeLines/konial_talk1.dtl",
+"pazuzu_mirror": "res://Gameplay/Dialog/TimeLines/pazuzu_mirror.dtl",
+"prologue": "res://Gameplay/Dialog/TimeLines/prologue.dtl",
+"prologue_stage": "res://Gameplay/Dialog/TimeLines/prologue_stage.dtl",
+"prologue_stage2": "res://Gameplay/Dialog/TimeLines/prologue_stage2.dtl",
+"prologue_stage3": "res://Gameplay/Dialog/TimeLines/prologue_stage3.dtl",
+"prologue_stage4": "res://Gameplay/Dialog/TimeLines/prologue_stage4.dtl",
+"prologue_system": "res://Gameplay/Dialog/TimeLines/prologue_system.dtl",
+"recollect_room": "res://Gameplay/Dialog/TimeLines/recollect_room.dtl",
+"small_talk_mai": "res://Gameplay/Dialog/TimeLines/small_talk_mai.dtl",
+"small_talk_reina": "res://Gameplay/Dialog/TimeLines/small_talk_reina.dtl",
+"stage_clear_talk": "res://Gameplay/Dialog/TimeLines/stage_clear_talk.dtl",
+"stage_complete": "res://Gameplay/Dialog/TimeLines/stage_complete.dtl",
+"stage_complete_partner": "res://Gameplay/Dialog/TimeLines/stage_complete_partner.dtl",
+"stage_complete_pazuzu": "res://Gameplay/Dialog/TimeLines/stage_complete_pazuzu.dtl",
+"stage_talk": "res://Gameplay/Dialog/TimeLines/stage_talk.dtl",
+"timeline": "res://Gameplay/Dialog/timeline.dtl"
+}
 layout/style_list=["res://Gameplay/Dialog/Novel_Style.tres", "res://Gameplay/Dialog/TextBubbleStyle.tres", "res://Gameplay/Dialog/fullscene_style.tres"]
 layout/default_style="res://Gameplay/Dialog/Novel_Style.tres"
 glossary/default_case_sensitive=true
@@ -417,11 +501,11 @@ locale/translation_remaps={
 "res://resources/ui/tuto_image/tuto_inven1.png": PackedStringArray("res://resources/ui/tuto_image/tuto_inven1_jp.png:jp", "res://resources/ui/tuto_image/tuto_inven1_kr.png:ko", "res://resources/ui/tuto_image/tuto_inven1_cn.png:cn", "res://resources/ui/tuto_image/tuto_inven1_zh.png:zh"),
 "res://resources/ui/tuto_image/tuto_inven2.png": PackedStringArray("res://resources/ui/tuto_image/tuto_inven2_jp.png:jp", "res://resources/ui/tuto_image/tuto_inven2_kr.png:ko", "res://resources/ui/tuto_image/tuto_inven2_cn.png:cn", "res://resources/ui/tuto_image/tuto_inven2_zh.png:zh")
 }
-locale/translations=PackedStringArray("res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.jp.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.ko.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.ko.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.jp.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.ko.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.jp.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.ko.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.en.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.zh.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.zh.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.en.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.jp.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.zh.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.zh.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.en.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.cn.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.cn.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.cn.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.en.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.cn.translation")
+locale/translations=PackedStringArray("res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.jp.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.ko.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.ko.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.jp.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.ko.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.jp.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.ko.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.en.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.vi.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.zh.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.zh.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.vi.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.en.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.jp.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.zh.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.vi.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.zh.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.vi.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.en.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.cn.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.cn.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.cn.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.en.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.cn.translation")
 locale/include_text_server_data=true
 rendering/text_driver="ICU / HarfBuzz / Graphite (Built-in)"
 locale/locale_filter_mode=0
-locale/language_filter=["ja", "zh"]
+locale/language_filter=["ja", "zh", "ko", "en", "vi"]
 
 [layer_names]
 

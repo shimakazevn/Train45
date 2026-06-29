@@ -265,7 +265,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bobwo")
 focus_rect = NodePath("CanvasLayer/Panel/FocusRect")
-title_labels = [NodePath("CanvasLayer/Panel/TitleLabelKR"), NodePath("CanvasLayer/Panel/TitleLabelJP"), NodePath("CanvasLayer/Panel/TitleLabelZH"), NodePath("CanvasLayer/Panel/TitleLabelCN"), NodePath("CanvasLayer/Panel/TitleLabelEN")]
+title_labels = [NodePath("CanvasLayer/Panel/TitleLabelKR"), NodePath("CanvasLayer/Panel/TitleLabelJP"), NodePath("CanvasLayer/Panel/TitleLabelZH"), NodePath("CanvasLayer/Panel/TitleLabelCN"), NodePath("CanvasLayer/Panel/TitleLabelEN"), NodePath("CanvasLayer/Panel/TitleLabelVI")]
 
 [node name="UiStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
@@ -414,6 +414,31 @@ text = "Settings"
 label_settings = SubResource("LabelSettings_7llp7")
 horizontal_alignment = 1
 justification_flags = 227
+
+[node name="TitleLabelVI" type="Label" parent="CanvasLayer/Panel"]
+visible = false
+layout_mode = 0
+offset_left = 209.0
+offset_top = 96.0
+offset_right = 245.0
+offset_bottom = 228.0
+text = "MAIN_OPTION"
+label_settings = SubResource("LabelSettings_548ya")
+horizontal_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 1
+
+[node name="TitleSmallLabel" type="Label" parent="CanvasLayer/Panel/TitleLabelVI"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -1.0
+offset_right = 63.0
+offset_bottom = 19.0
+rotation = 1.5708
+text = "Settings"
+label_settings = SubResource("LabelSettings_ul5ae")
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="FocusRect" parent="CanvasLayer/Panel" instance=ExtResource("3_11on4")]
 layout_mode = 0
