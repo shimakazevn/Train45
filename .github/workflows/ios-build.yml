@@ -29,18 +29,15 @@ jobs:
 
       - name: Patch export_presets.cfg
         run: |
-          # --editor --quit strips codesign/team_id when codesign/enable=false
-          # so we patch directly on the committed file before any Godot run
-          python3 -c "
-import re, sys
-content = open('export_presets.cfg').read()
-if 'codesign/team_id=' in content:
-    content = re.sub(r'codesign/team_id=\"[^\"]*\"', 'codesign/team_id=\"H6H365832M\"', content)
-else:
-    content = content.replace('codesign/enable=false', 'codesign/enable=false\ncodesign/team_id=\"H6H365832M\"', 1)
-open('export_presets.cfg', 'w').write(content)
-print('Patched:')
-"
+          python3 << 'PYEOF'
+          import re
+          content = open('export_presets.cfg').read()
+          if 'codesign/team_id=' in content:
+              content = re.sub(r'codesign/team_id="[^"]*"', 'codesign/team_id="H6H365832M"', content)
+          else:
+              content = content.replace('codesign/enable=false', 'codesign/enable=false\ncodesign/team_id="H6H365832M"', 1)
+          open('export_presets.cfg', 'w').write(content)
+          PYEOF
           grep "codesign/team_id" export_presets.cfg
 
       - name: Export Xcode Project from Godot
