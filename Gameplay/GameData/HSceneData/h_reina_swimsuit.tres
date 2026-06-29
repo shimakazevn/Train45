@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://c3ajomko8aynr"]
+
+[ext_resource type="Texture2D" uid="uid://b4h88kadeetyu" path="res://resources/ui/EventCoverImage/Hpreview_reina_12.png" id="1_3acvf"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="2_c8ptm"]
+
+[resource]
+script = ExtResource("2_c8ptm")
+scene_description = "SCENE_SWIMSUIT"
+scene_name = "scene22"
+dialog_title = "e_reina_swimsuit"
+stage_name = "stage_d_reina_swimsuit"
+preview_texture = ExtResource("1_3acvf")
+is_position = Vector2(1355, 228)
+ahen_keys = PackedStringArray("SCENE_REINA_AHEN_3", "SCENE_REINA_AHEN_4", "SCENE_REINA_AHEN_5", "SCENE_REINA_AHEN_6", "SCENE_REINA_AHEN_7", "SCENE_REINA_AHEN_8", "SCENE_REINA_AHEN_9", "SCENE_REINA_AHEN_10")

@@ -1,0 +1,165 @@
+if {npc.type} == {ch.reina}:
+	join reina left
+	label reina #id:49
+	[signal arg="highlight_reina"]
+	if {MetaProgression.has_read_event("konial_love_2")} == true:
+		join talk_asset right [z_index="100" extra_data="set Images/KonChan"]
+		reina: 이건.. 분명 콘짱 이었죠. 코니알의 모습을 본따 만든 ..오나홀. #id:4a
+		emotion reina Suprised 
+		reina: 이건 그때 것보다는 ..확실히 조금 특별한 느낌이 드는 거 같아요. #id:4b
+		emotion reina Shy 
+		reina: 아무래도 마지막으로 챙겨야 할 것은 이 인형이었나 봐요. #id:4c
+		emotion reina Smile 
+		reina: 그럼, 준비가 되면 기관실로 출발하도록 하죠. #id:4d
+		leave talk_asset
+	elif {MetaProgression.has_read_event("konial_love_0")} == true:
+		reina: 이제 기관실로 가는 길을 알게 되었어요. #id:4e
+		reina: 하지만.. 무언가 석연치 않은 부분이 많아요. #id:4f
+		emotion reina Serious 
+		reina: 정말 이대로 전차를 떠나도 되는 걸까요? #id:50
+		emotion reina Idle 
+	else:
+		reina: 무슨 일이신가요? #id:51
+	
+	label reina_choice #id:52
+	do GameEvents.stop_skip_on_next_choice()
+	- 엣찌 하고싶어 | [if {npc.love} >= 1] [else="hide"] #id:53
+		emotion reina Shy
+		reina: 아..네. 원하시는 만큼 부탁드릴게요. #id:54
+		leave reina [animation="Fade Out" wait="true"]
+		do GameEvents.emit_without_npc_hide(true, {ch.reina})
+		do GameEvents.emit_quest_process("recollect_reina")
+		do GameEvents.anim_change("idle")
+		do GameEvents.emit_without_npc_hide(false, {ch.reina})
+		[end_timeline]
+	
+	- [if {GameEvents.is_new_read_event(0)} 대화(New)/대화] | [if {npc.love} >= 0] #id:55
+		jump small_talk_reina/
+	
+	- 탐색 동행 | [if {npc.current_partner} != {npc.type}] [else="hide"] #id:56
+		emotion reina Smile
+		reina: <알겠습니다. 어서 출발하도록 하죠/네, 맡겨 주세요./네, 꼼꼼하게 살펴 보도록 할게요.> #id:57
+		[signal arg="set_partner"]
+		[end_timeline]
+	- 용건은 없다. #id:58
+		[end_timeline]
+elif {npc.type} == 1:
+	join mai 1
+	label mai #id:59
+	[signal arg="highlight_reina"]
+	if {MetaProgression.has_read_event("konial_love_2")} == true:
+		join talk_asset right [z_index="100" extra_data="set Images/KonChan"]
+		emotion mai Surprised 
+		mai: 그거! 콘짱이었지? 맨 처음 탑승 기념품이라며 줬던 거. #id:5a
+		emotion mai Flat 
+		mai: 코니알이 작별 선물로 준 건.. 으음.. 잘 보니 처음 것과는 살짝 다른거 같아 보이기도.. #id:5b
+		emotion mai Idle 
+		mai: 그렇담 이제야말로 완벽히 떠날 준비가 된 거지? 난 언제든 오케이니까! #id:5c
+		leave talk_asset
+	elif {MetaProgression.has_read_event("konial_love_0")} == true:
+		emotion mai Smile 
+		mai: 드디어 집으로 돌아갈 수 있겠네! #id:5d
+		emotion mai Flat 
+		mai: ..라고 평소라면 기뻐하겠지만. 정말 이대로 된 걸까? #id:5e
+		mai: 아까 코니알하고 뭔가 얘기하던데, 중요한 거야? #id:5f
+		emotion mai Idle 
+		mai: 뭐, 선택은 너에게 맡길게! #id:60
+	else:
+		mai: 응? 무슨 일이야? #id:61
+	
+	label mai_choice #id:62
+	do GameEvents.stop_skip_on_next_choice()
+	- 엣찌 하고싶어 | [if {npc.love} >= 1] [else="hide"] #id:63
+		emotion mai Laugh
+		mai: 많이 쌓였구나? 좋아! #id:64
+		leave mai [animation="Fade Out" wait="true"]
+		do GameEvents.emit_without_npc_hide(true, {ch.mai})
+		do GameEvents.emit_quest_process("recollect_mai")
+		do GameEvents.anim_change("idle")
+		do GameEvents.emit_without_npc_hide(false, {ch.mai})
+		[end_timeline]
+	
+	- [if {GameEvents.is_new_read_event(1)} 대화(New)/대화] | [if {npc.love} >= 0] #id:65
+		jump small_talk_mai/
+	
+	- 탐색 동행 | [if {npc.current_partner} != {npc.type}] [else="hide"] #id:66
+		emotion mai Laugh
+		mai: <그래~ 도움이 될지 모르겠지만. 노력해볼게./응 좋아~ 출발하자./이번엔 더 멀리 갈 수 있겠지? 어서 가자!> #id:67
+		[signal arg="set_partner"]
+		[end_timeline]
+	- 용건은 없다. #id:68
+		[end_timeline]
+
+elif {npc.type} == {ch.butler}:
+	label butler #id:69
+	if {MetaProgression.has_read_event("chapter4_butler3")} == true:
+		join butler (human) left
+		jump butler_greeting
+	else:
+		join butler left [mirrored="true"]
+		jump butler_greeting
+	
+	label butler_greeting #id:6a
+	if {MetaProgression.has_read_event("konial_love_2")} == true:
+		join talk_asset right [z_index="100" extra_data="set Images/KonChan"]
+		emotion butler(human) Panic  
+		butler(human): 이.. 이건..! 어디서 이걸 가져오신 겁니까? #id:6b
+		emotion butler(human) Serious 
+		butler(human): 코니알 님에게서요? ..아아. 그렇군요. ..코니알 님이 직접. #id:6c
+		emotion butler(human) Serious 
+		butler(human): 코니알님의 뜻이 그렇다면.. 잘 알겠습니다. #id:6d
+		emotion butler(human) Idle 
+		butler(human): 저 말입니까? ..저는.. 전차에서 떠나지 않을 예정입니다. #id:6e
+		butler(human): 이 전차가 아니면 달리 갈 곳도 없을 뿐더러, 이 상황을 만든 데는 제 잘못도 있으니까요. #id:6f
+		emotion butler(human) Smile 
+		butler(human): 저를 거두어주신 코니알 님을 끝까지 따라갈 테니, 저는 걱정하지 마십시오. #id:70
+		butler(human): 짧게나마 함께해서 즐거웠습니다. #id:71
+		leave talk_asset
+	elif {MetaProgression.has_read_event("chapter6_start")} == true:
+		emotion butler(human) Serious 
+		butler(human): 코니알 님.. 어째서. #id:72
+		butler(human): 파주주.. 저 분한테서 엄청난 신성력이 느껴집니다. #id:73
+		butler(human): 어떻게 된 상황인지 모르겠지만.. 여러분들을 믿겠습니다. #id:74
+		jump butler_choice
+	elif {MetaProgression.has_read_event("chapter5_start")} == true:
+		butler(human): 찾으시는 분이 무사하시길 빌겠습니다. #id:75
+		emotion butler(human) Smile
+		butler(human): 당신도.. 다치지 말아 주세요. #id:76
+		jump butler_choice
+	else:
+		butler: 안녕하십니까. 필요한 게 있으십니까? #id:77
+		jump butler_choice
+	
+	label butler_choice #id:78
+	do GameEvents.stop_skip_on_next_choice()
+	- 파주주가 갇힌 위치를 찾고 싶어 | [if {MetaProgression.get_current_chapter() == 5} && {MetaProgression.has_read_event("chapter5_start")} == false] [else="hide"] #id:79
+		if {GameEvents.get_current_main_quest_all_clear("quest_5")} == true:
+			leave --All--
+			jump chapter5_start/
+			[end_timeline]
+		else:
+			emotion butler Panic
+			butler: 그건.. 아무리 여러분이라도 말하기 힘들 거 같습니다.. #id:7a
+			아무래도 집사와 더 사이좋아져야 할 거 같다. #id:7b
+			[end_timeline]
+	
+	- 티켓 교환 | [if {MetaProgression.get_game_clear_count()} >= 1] [else="hide" alt_text="선택 불가"] #id:7c
+		[signal arg="shop_open"]
+		[end_timeline]
+	
+	- 탐지한 이변의 수를 알고 싶어 | [if {MetaProgression.has_read_event("chapter4_butler")} == true] [else="hide"] #id:7d
+		butler: 현재까지 탐지한 이변의 수는 {MetaProgression.get_routes_dict().size()}개입니다. #id:7e
+	
+	- 볼 일은 없다 #id:7f
+		[end_timeline]
+
+elif {npc.type} == {ch.konial}:
+	label konial #id:80
+	if {MetaProgression.get_current_chapter()} == 6:
+		konial: 읏..으긋.. 오옷..! #id:81
+		..파주주가 말한 대로 자백을 받아내고 있는 중인 거 같다. #id:82
+		팔찌를 착용하고 탐색을 진행하면 코니알에게 정념이 전달된다고 했지.. #id:83
+		- 파주주에 대해.. | [if {npc.love} == 1 && {MetaProgression.has_read_event("konial_love_1")}] [else="hide"] #id:84
+			jump konial_talk1/
+		- 대화 끝내기 #id:85
+		[end_timeline]

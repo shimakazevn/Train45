@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Tutos" load_steps=9 format=3 uid="uid://blplgcsob7fga"]
+
+[ext_resource type="Script" uid="uid://e4im8cmlv638" path="res://Gameplay/GameData/Tutorials/tutos.gd" id="1_js2w4"]
+[ext_resource type="Script" uid="uid://cgivho4o0eoma" path="res://Gameplay/GameData/Tutorials/tuto.gd" id="2_63ped"]
+[ext_resource type="Texture2D" uid="uid://4hnx412wixw1" path="res://resources/ui/tuto_image/tuto_inven1.png" id="3_b5f8j"]
+[ext_resource type="Texture2D" uid="uid://rv2ue4heh37" path="res://resources/ui/tuto_image/tuto_inven2.png" id="4_763f7"]
+[ext_resource type="Texture2D" uid="uid://crb6moytuxo0o" path="res://resources/ui/tuto_image/tuto_inven3.png" id="5_pdhob"]
+
+[sub_resource type="Resource" id="Resource_2o1ju"]
+script = ExtResource("2_63ped")
+texture = ExtResource("3_b5f8j")
+description = "TUTO_INVEN_1"
+
+[sub_resource type="Resource" id="Resource_ywlnt"]
+script = ExtResource("2_63ped")
+texture = ExtResource("4_763f7")
+description = "TUTO_INVEN_2"
+
+[sub_resource type="Resource" id="Resource_tv0rc"]
+script = ExtResource("2_63ped")
+texture = ExtResource("5_pdhob")
+description = "TUTO_INVEN_3"
+
+[resource]
+script = ExtResource("1_js2w4")
+id = "inven"
+title = "TUTO_TITLE_INVEN"
+tuto_pages = Array[ExtResource("2_63ped")]([SubResource("Resource_2o1ju"), SubResource("Resource_ywlnt"), SubResource("Resource_tv0rc")])

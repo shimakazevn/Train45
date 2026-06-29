@@ -1,0 +1,179 @@
+[gd_scene load_steps=14 format=3 uid="uid://s65ghl56dlny"]
+
+[ext_resource type="Script" uid="uid://cmrexusy3vshg" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.gd" id="1_4mqm3"]
+[ext_resource type="PackedScene" uid="uid://cuoywrmvda1yg" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/example_history_item.tscn" id="2_x1xgk"]
+[ext_resource type="Texture2D" uid="uid://bdx54kkvfvfu3" path="res://resources/ui/gui/window.png" id="3_l43c8"]
+[ext_resource type="Texture2D" uid="uid://c62k040pkqcnw" path="res://resources/ui/gui/button_close_hover.png" id="5_cb6ve"]
+[ext_resource type="Texture2D" uid="uid://bow17kglov2tl" path="res://resources/ui/controller_icons/xbox-LT-16.png" id="5_e43cw"]
+[ext_resource type="Script" uid="uid://nnjff5ms5xn6" path="res://scene/component/controller_button_component.gd" id="6_iitms"]
+[ext_resource type="Texture2D" uid="uid://5b3c173sc147" path="res://resources/ui/gui/button_close_active.png" id="6_tu373"]
+[ext_resource type="PackedScene" uid="uid://cvorrprxskobm" path="res://Gameplay/font_change_component.tscn" id="7_tu373"]
+
+[sub_resource type="Theme" id="Theme_l43c8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hdvb"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tu373"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0x1sy"]
+texture = ExtResource("5_cb6ve")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_thb7h"]
+texture = ExtResource("6_tu373")
+
+[node name="ExampleHistoryScene" type="Control"]
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_4mqm3")
+HistoryItem = ExtResource("2_x1xgk")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.941176)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 70.0
+offset_top = 58.0
+offset_right = 1271.0
+offset_bottom = 614.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.27, 0.27)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_l43c8")
+patch_margin_left = 88
+patch_margin_top = 87
+patch_margin_right = 89
+patch_margin_bottom = 90
+
+[node name="HistoryBox" type="ScrollContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = 70.0
+offset_right = -79.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_l43c8")
+theme_override_styles/panel = SubResource("StyleBoxFlat_1hdvb")
+horizontal_scroll_mode = 0
+
+[node name="HistoryLog" type="VBoxContainer" parent="HistoryBox"]
+unique_name_in_owner = true
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+
+[node name="HistoryItem2" parent="HistoryBox/HistoryLog" instance=ExtResource("2_x1xgk")]
+layout_mode = 2
+
+[node name="HistoryItem7" parent="HistoryBox/HistoryLog" instance=ExtResource("2_x1xgk")]
+layout_mode = 2
+
+[node name="HistoryItem3" parent="HistoryBox/HistoryLog" instance=ExtResource("2_x1xgk")]
+layout_mode = 2
+
+[node name="HistoryItem4" parent="HistoryBox/HistoryLog" instance=ExtResource("2_x1xgk")]
+layout_mode = 2
+
+[node name="HistoryItem5" parent="HistoryBox/HistoryLog" instance=ExtResource("2_x1xgk")]
+layout_mode = 2
+
+[node name="HistoryItem6" parent="HistoryBox/HistoryLog" instance=ExtResource("2_x1xgk")]
+layout_mode = 2
+
+[node name="ShowHistory" type="Button" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1, 0.756863)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -218.00003
+offset_top = 340.0
+offset_right = -152.00003
+offset_bottom = 362.0
+grow_horizontal = 0
+scale = Vector2(0.58, 0.58)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_tu373")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tu373")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_tu373")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_tu373")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tu373")
+text = "DIALOG_BACKLOG"
+
+[node name="PadUiIcon" type="TextureRect" parent="ShowHistory"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -2.2068825
+offset_top = -8.0
+offset_right = 17.793121
+offset_bottom = 8.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("5_e43cw")
+script = ExtResource("6_iitms")
+metadata/_custom_type_script = "uid://nnjff5ms5xn6"
+
+[node name="HideHistory" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -97.0
+offset_top = 40.0
+offset_right = -56.0
+offset_bottom = 81.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_0x1sy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_thb7h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_thb7h")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_thb7h")
+theme_override_styles/focus = SubResource("StyleBoxTexture_0x1sy")
+
+[node name="FontChangeComponent" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("7_tu373")]
+target_node = NodePath("..")
+
+[connection signal="pressed" from="ShowHistory" to="." method="_on_show_history_pressed"]
+[connection signal="pressed" from="HideHistory" to="." method="_on_hide_history_pressed"]

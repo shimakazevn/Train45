@@ -1,0 +1,29 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "1706",
+&"color": Color(0.701965, 0.718477, 0.966146, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+&"default_portrait": "reina",
+&"description": "타카하시 레이나",
+&"display_name": "레이나",
+&"mirror": false,
+&"nicknames": ["Reina"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"reina": {
+"export_overrides": {
+"image": "\"res://resources/ch/illust/reina.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://Gameplay/Dialog/Character/reina_portrait.tscn"
+}
+},
+&"scale": 1.0
+}

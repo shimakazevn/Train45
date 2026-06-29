@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=4 format=3 uid="uid://b4rk1vabfwqm8"]
+
+[ext_resource type="Script" uid="uid://clvpdm1ps7wwf" path="res://Gameplay/GameData/QuestData/quest_npc.gd" id="1_ww0t6"]
+[ext_resource type="Script" uid="uid://c5pycwl0nmslk" path="res://Gameplay/GameData/QuestData/quest.gd" id="2_1ijtq"]
+
+[sub_resource type="Resource" id="Resource_32uvn"]
+script = ExtResource("1_ww0t6")
+npc_type = 4
+need_love = 1
+
+[resource]
+script = ExtResource("2_1ijtq")
+id = "quest_5"
+description = "집사가 사람으로 변한 뒤 발생 이벤트
+집사와의 호감도를 1 달성한다.
+"
+npcs = Array[ExtResource("1_ww0t6")]([SubResource("Resource_32uvn")])
+collect_destinations = 7
+collect_items = 12
+talk = "QUEST_GOAL_TEXT_5"

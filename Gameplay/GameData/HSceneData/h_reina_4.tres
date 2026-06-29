@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://bsne0s6mgs354"]
+
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_0vi2l"]
+[ext_resource type="Texture2D" uid="uid://dxu0c32jk1auk" path="res://resources/ui/EventCoverImage/Hpreview_reina_10.png" id="1_mv7ua"]
+
+[resource]
+script = ExtResource("1_0vi2l")
+main_love_event = true
+scene_description = "SCENE_WALL_LEAN"
+scene_name = "scene23"
+dialog_title = "e_panty"
+stage_name = "stage_5"
+love_ability = 5
+preview_texture = ExtResource("1_mv7ua")
+is_position = Vector2(1089, 190)
+ahen_keys = PackedStringArray("SCENE_REINA_AHEN_3", "SCENE_REINA_AHEN_4", "SCENE_REINA_AHEN_5", "SCENE_REINA_AHEN_6", "SCENE_REINA_AHEN_7", "SCENE_REINA_AHEN_8", "SCENE_REINA_AHEN_9", "SCENE_REINA_AHEN_10")

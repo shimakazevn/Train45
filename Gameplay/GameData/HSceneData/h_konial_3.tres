@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://gwv0rs1e1l33"]
+
+[ext_resource type="Texture2D" uid="uid://di4f8d2vbnr0f" path="res://resources/ui/EventCoverImage/Hpreview_konial_5.png" id="1_kcjv8"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="2_7nhal"]
+
+[resource]
+script = ExtResource("2_7nhal")
+scene_description = "SCENE_MISSIONARY"
+scene_name = "scene102"
+dialog_title = "konial_love_2"
+partner = 2
+love_ability = 2
+preview_texture = ExtResource("1_kcjv8")
+is_position = Vector2(490, 231)
+unlock_chapter = 6
+ahen_keys = PackedStringArray("SCENE_KONIAL_AHEN_KISS_1", "SCENE_KONIAL_AHEN_KISS_2", "SCENE_KONIAL_AHEN_KISS_3", "SCENE_KONIAL_AHEN_KISS_4", "SCENE_KONIAL_AHEN_KISS_5")

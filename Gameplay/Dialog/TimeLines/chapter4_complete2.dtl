@@ -1,0 +1,31 @@
+join mai left
+mai: 이 주변도 역시 가득 차 있어. #id:35c
+join reina right [mirrored="true"]
+reina: 그래도 입구보단 한결 낫네요. 어디.. 이 주변의 물건들은.. #id:35d
+update mai right [move_time="1.0"]
+update reina center [move_time="1.0" mirrored="true"]
+emotion mai Surprised 
+mai: 와아! 이거 뭐야? 이것 좀 볼래? #id:35e
+reina: 이건.. 패션 잡지네요. 뭐랄까. 표지의 사람이 엄청난 화장을 하고 있어요. #id:35f
+emotion mai Idle 
+mai: 맞아. 엄청 유명한 갸루 잡지. TopTeen이야. 어릴 때 언니들이 보던 걸 몰래 봐서 기억하고 있어. #id:360
+- 이때는 정말 이런 모습이 유행했어? #id:361
+mai: 언니들이 다 이런 화장하고 옷을 입고 다녔으니까. 솔직히 난 좀 무서웠지만. 아마 이 시기면 2010년도쯤 되려나? #id:362
+emotion reina Serious 
+reina: 입구쪽 물건이 2000년대쯤으로 보였으니까.. 확실히 좀 더 최근이네요. #id:363
+reina: ..아. 마이 씨, 혹시 그 옆의 건? #id:364
+update reina left [move_time="1.0"]
+update mai [mirrored="true"]
+emotion mai Flat 
+mai: 이거? 그냥 나무판 같은데.. 뭔가 써져 있네? #id:365
+mai: 주먹밥 50엔, 생수 70엔, 접이 우산 500엔.. 역 노점 가격표인가 봐. 이때는 이정도 가격인가? 무척 싸잖아? #id:366
+emotion reina Idle 
+reina: 아뇨.. 10년 전이라 해도 상당히 싼 가격 같아요. 가격 위에 취소선이 여러번 그어진 걸 보니.. 할인중이던 걸까요? #id:367
+reina: 가장 밑에는.. [br]'상품 구매 외 열차 고장,불만 접수는 처리하지 않습니다.' #id:368
+reina: '차내 에어컨 고장은 관리소측에 방문해 주세요.'[br]..라고 써져 있네요. #id:369
+emotion mai Idle 
+mai: 상품은 안 팔리고 전차에 대한 컴플레인이 잦았던 곳인가? #id:36a
+reina: 그다지 인기가 없던 노선일 수도 있겠어요. #id:36b
+- 일단 앞으로 더 가보자. #id:36c
+do GameEvents.emit_quest_process("chapter4_talk2")
+do TransitionScreen.dialog_transition()

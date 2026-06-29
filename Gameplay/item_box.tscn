@@ -1,0 +1,705 @@
+[gd_scene load_steps=32 format=3 uid="uid://mjvl860yvplh"]
+
+[ext_resource type="Script" uid="uid://ivkirgni7f1p" path="res://Gameplay/Levels/reward_item_box.gd" id="1_wjf61"]
+[ext_resource type="Script" uid="uid://b7btqmodfkd8g" path="res://Gameplay/collect_item_boxes_component.gd" id="2_wjf61"]
+[ext_resource type="Shader" uid="uid://bybk1yymm2va8" path="res://Gameplay/Levels/item_box_outline.gdshader" id="3_rwtqk"]
+[ext_resource type="Texture2D" uid="uid://byr8naae6ykuk" path="res://resources/item/item_itembox.png" id="4_npbbh"]
+[ext_resource type="Shader" uid="uid://cpjgcyff5css0" path="res://Gameplay/Levels/item_box_shine2.gdshader" id="5_2vayl"]
+[ext_resource type="PackedScene" uid="uid://bvddyffn8losd" path="res://scene/blur_bg.tscn" id="6_dnn8r"]
+[ext_resource type="Texture2D" uid="uid://bisawr6dhlsb2" path="res://resources/ui/keyboard_icon/keyboard_icon11.png" id="6_rwtqk"]
+[ext_resource type="Texture2D" uid="uid://d05jjmxu4w3sd" path="res://resources/ui/keyboard_icon/keyboard_icon12.png" id="7_npbbh"]
+[ext_resource type="Texture2D" uid="uid://cgmtj8xg7xbyf" path="res://resources/ui/icons/icons6.png" id="7_xt2em"]
+[ext_resource type="Shader" uid="uid://dfgnxawr2lt0j" path="res://Gameplay/Levels/ridial_shine.gdshader" id="8_50w33"]
+[ext_resource type="PackedScene" uid="uid://c8spg168xguc2" path="res://Gameplay/Ui/controller_button_component.tscn" id="8_npbbh"]
+[ext_resource type="AudioStream" uid="uid://wa5lplmpqtjt" path="res://sound/sfx/ui/ItemBox_Drop.mp3" id="12_50w33"]
+[ext_resource type="AudioStream" uid="uid://dt7y750nd67xn" path="res://sound/sfx/ui/ItemBox_Open.mp3" id="13_nqblc"]
+[ext_resource type="AudioStream" uid="uid://dlsdqvv4fl0ag" path="res://sound/sfx/ui/ItemBox_Open2.mp3" id="14_50w33"]
+[ext_resource type="AudioStream" uid="uid://c1fqih27rekwe" path="res://sound/sfx/ui/ItemBox_Get.wav" id="15_7h51f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c7ek7"]
+resource_local_to_scene = true
+shader = ExtResource("3_rwtqk")
+shader_parameter/Smooth = false
+shader_parameter/width = 28.862
+shader_parameter/outline_color = Vector4(1, 1, 1, 0.8)
+shader_parameter/pixel_size = 10
+shader_parameter/width_speed = 2.89
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cp85c"]
+shader = ExtResource("5_2vayl")
+shader_parameter/angle = 0.27
+shader_parameter/position = 0.215
+shader_parameter/spread = 0.418
+shader_parameter/cutoff = -0.012
+shader_parameter/falloff = 0.848
+shader_parameter/edge_fade = 0.028
+shader_parameter/speed = 1.0
+shader_parameter/ray1_density = 8.0
+shader_parameter/ray2_density = 30.0
+shader_parameter/ray2_intensity = 0.234
+shader_parameter/color = Color(1.2, 1.703, 1.5, 0.339)
+shader_parameter/hdr = false
+shader_parameter/seed = 5.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2vayl"]
+light_mode = 1
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_dnn8r"]
+frames = 2
+frame_0/texture = ExtResource("6_rwtqk")
+frame_1/texture = ExtResource("7_npbbh")
+frame_1/duration = 1.0
+
+[sub_resource type="Animation" id="Animation_me5w7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasGroup/Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasGroup/Sprite2D/ShineEffect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasGroup/Sprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-16, 42)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasGroup:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BoxDropSFX:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BoxOpenSFX:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BoxOpenSFX2:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_jhgix"]
+resource_name = "in"
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup/Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.29, 0.51, 0.77),
+"transitions": PackedFloat32Array(2, 0.5, 2, 1),
+"update": 0,
+"values": [Vector2(-16, 2), Vector2(-16, 42), Vector2(-16, 26), Vector2(-16, 42)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasGroup:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.28),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BoxDropSFX:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.27),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_hud13"]
+resource_name = "open"
+length = 2.0
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.21, 1.36, 1.44),
+"transitions": PackedFloat32Array(0.5, 0.5, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.16, 0.88), Vector2(1.02156, 1.28973), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasGroup/Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.21),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasGroup/Sprite2D/ShineEffect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.21),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasGroup/Sprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.29, 0.36, 0.43, 0.49, 0.55, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-16, 42), Vector2(-10, 42), Vector2(-26, 42), Vector2(-10, 42), Vector2(-26, 42), Vector2(-16, 42)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasGroup:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BoxOpenSFX:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.010000002),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BoxOpenSFX2:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1y2kt"]
+_data = {
+&"RESET": SubResource("Animation_me5w7"),
+&"in": SubResource("Animation_jhgix"),
+&"open": SubResource("Animation_hud13")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nc7f3"]
+shader = ExtResource("8_50w33")
+shader_parameter/shine_num = 8.0
+shader_parameter/rotation_speed = 1.0
+shader_parameter/light_magnitude = 0.7
+shader_parameter/filter_distence = 1.0
+shader_parameter/filter_magnitude = 1.0
+shader_parameter/filter_minv = 0.75
+shader_parameter/cut_inner_radius = 0.008
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/NOISE_speed = Vector2(0, 0)
+shader_parameter/NOISE_magnitude = 0.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_urkqf"]
+font_size = 21
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.898039)
+shadow_offset = Vector2(1.5, 1.5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rwtqk"]
+line_spacing = 0.0
+font_size = 14
+
+[sub_resource type="Animation" id="Animation_m3uhn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%ItemNameLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(270.5, 181)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%ItemDescriptionLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(168, 238)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%ItemNameLabel:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%ItemDescriptionLabel:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NextLabel:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("%ItemTextureRect:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.8, 0.8)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../BoxGetSFX:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_037ta"]
+resource_name = "show_item"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%ItemNameLabel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 1.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(121, 181), Vector2(121, 198)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%ItemDescriptionLabel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.63333, 2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(168, 217), Vector2(168, 238)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%ItemNameLabel:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%ItemDescriptionLabel:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.63333, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("NextLabel:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(4.5, 5),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("%ItemTextureRect:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.3),
+"transitions": PackedFloat32Array(0.5, 2, 1),
+"update": 0,
+"values": [Vector2(0.8, 0.8), Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../BoxGetSFX:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.03333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5hwxw"]
+_data = {
+&"RESET": SubResource("Animation_m3uhn"),
+&"show_item": SubResource("Animation_037ta")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_28dqh"]
+font_color = Color(0.32, 0.818667, 1, 1)
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ea32h"]
+size = Vector2(183, 142)
+
+[node name="ItemBox" type="Node2D" groups=["ItemBox"]]
+process_mode = 3
+z_index = 2
+script = ExtResource("1_wjf61")
+
+[node name="CollectItemBoxesComponent" type="Node" parent="."]
+script = ExtResource("2_wjf61")
+search_root = "res://"
+boxes = Array[String](["res://Gameplay/Levels/stage_1.tscn", "res://Gameplay/Levels/stage_11.tscn", "res://Gameplay/Levels/stage_12.tscn", "res://Gameplay/Levels/stage_16.tscn", "res://Gameplay/Levels/stage_27.tscn", "res://Gameplay/Levels/stage_30.tscn", "res://Gameplay/Levels/stage_31.tscn", "res://Gameplay/Levels/stage_40.tscn", "res://Gameplay/Levels/stage_41.tscn", "res://Gameplay/Levels/stage_44.tscn", "res://Gameplay/Levels/stage_49.tscn", "res://Gameplay/Levels/stage_52.tscn", "res://Gameplay/Levels/stage_d_clock.tscn", "res://Gameplay/Levels/stage_d_ghost.tscn", "res://Gameplay/Levels/stage_d_handfan.tscn", "res://Gameplay/Levels/stage_d_locker.tscn", "res://Gameplay/Levels/stage_d_lowspeed.tscn", "res://Gameplay/Levels/stage_d_partner_anomaly.tscn", "res://Gameplay/Levels/stage_d_snowman.tscn", "res://Gameplay/Levels/stage_d_ticket_check.tscn"])
+
+[node name="guide" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(0.45, 0.853333, 1, 0.482353)
+texture_filter = 1
+position = Vector2(-16, 42)
+texture = ExtResource("4_npbbh")
+offset = Vector2(2, -33)
+hframes = 2
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+modulate = Color(1, 1, 1, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasGroup"]
+unique_name_in_owner = true
+texture_filter = 1
+material = SubResource("ShaderMaterial_c7ek7")
+position = Vector2(-16, 42)
+texture = ExtResource("4_npbbh")
+offset = Vector2(2, -33)
+hframes = 2
+
+[node name="ShineEffect" type="ColorRect" parent="CanvasGroup/Sprite2D"]
+visible = false
+material = SubResource("ShaderMaterial_cp85c")
+offset_left = 93.0
+offset_top = -51.0
+offset_right = 261.0
+offset_bottom = 5.0
+rotation = -3.14159
+
+[node name="KeyboardIcon" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_2vayl")
+offset_left = -28.0
+offset_top = -44.0
+offset_right = 4.0
+offset_bottom = -28.0
+texture = SubResource("AnimatedTexture_dnn8r")
+
+[node name="ControllerButtonComponent" parent="KeyboardIcon" instance=ExtResource("8_npbbh")]
+layout_mode = 1
+offset_left = 18.0
+offset_top = -5.0
+offset_right = 28.0
+offset_bottom = 5.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1y2kt")
+}
+autoplay = "RESET"
+
+[node name="GetItemCanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+layer = 5
+
+[node name="ScreenBlurRect" parent="GetItemCanvasLayer" instance=ExtResource("6_dnn8r")]
+
+[node name="ItemTextureRect" type="TextureRect" parent="GetItemCanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -123.0
+offset_right = 86.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(86, 57)
+texture = ExtResource("7_xt2em")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="GetItemCanvasLayer/ItemTextureRect"]
+show_behind_parent = true
+material = SubResource("ShaderMaterial_nc7f3")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.5
+offset_top = -97.0
+offset_right = 97.5
+offset_bottom = 98.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemNameLabel" type="Label" parent="GetItemCanvasLayer"]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.5
+offset_top = 1.0
+offset_right = 350.5
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "아이템 이름aaaaa"
+label_settings = SubResource("LabelSettings_urkqf")
+horizontal_alignment = 1
+
+[node name="ItemDescriptionLabel" type="Label" parent="GetItemCanvasLayer"]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.0
+offset_top = 58.0
+offset_right = 152.0
+offset_bottom = 146.00003
+grow_horizontal = 2
+grow_vertical = 2
+text = "아이템 설명ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ아이템 설명ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ아이템 설명ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ아이템 설명ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ"
+label_settings = SubResource("LabelSettings_rwtqk")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CanvasAnimPlayer" type="AnimationPlayer" parent="GetItemCanvasLayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_5hwxw")
+}
+autoplay = "RESET"
+
+[node name="NextLabel" type="Label" parent="GetItemCanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -87.0
+offset_top = -29.0
+offset_right = 87.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "PRESS_FIND_KEY"
+label_settings = SubResource("LabelSettings_28dqh")
+horizontal_alignment = 1
+
+[node name="ControllerButtonComponent" parent="GetItemCanvasLayer/NextLabel" instance=ExtResource("8_npbbh")]
+layout_mode = 1
+anchors_preset = 9
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = 0.0
+offset_right = 2.0
+offset_bottom = -6.5
+grow_horizontal = 1
+expand_mode = 2
+stretch_mode = 5
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8192
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(-6.5, 0)
+shape = SubResource("RectangleShape2D_ea32h")
+
+[node name="BoxDropSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_50w33")
+bus = &"Sfx"
+
+[node name="BoxOpenSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_nqblc")
+bus = &"Sfx"
+
+[node name="BoxOpenSFX2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_50w33")
+volume_db = -2.0
+bus = &"Sfx"
+
+[node name="BoxGetSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_7h51f")
+bus = &"Sfx"
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://buqdy7hqn0oxw"]
+
+[ext_resource type="FontFile" uid="uid://drk4ye7wq0wjq" path="res://resources/font/ShipporiGothicB2-Bold.ttf" id="1_4u1ut"]
+[ext_resource type="FontFile" uid="uid://b1dvmlyn31acx" path="res://resources/font/NotoSansCJKtc-Regular.otf" id="2_xtg67"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pgs4w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tgcrl"]
+bg_color = Color(0.258824, 0.898039, 0.239216, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[resource]
+default_font = ExtResource("2_xtg67")
+Button/colors/font_focus_color = Color(0.133333, 0.145098, 0.133333, 1)
+Button/colors/font_hover_color = Color(0.133333, 0.145098, 0.133333, 1)
+Button/font_sizes/font_size = 26
+Button/styles/disabled = SubResource("StyleBoxEmpty_pgs4w")
+Button/styles/focus = SubResource("StyleBoxFlat_tgcrl")
+Button/styles/hover = SubResource("StyleBoxEmpty_pgs4w")
+Button/styles/normal = SubResource("StyleBoxEmpty_pgs4w")
+Button/styles/pressed = SubResource("StyleBoxEmpty_pgs4w")
+Label/colors/font_color = Color(0.133333, 0.145098, 0.133333, 1)
+Label/fonts/font = ExtResource("1_4u1ut")

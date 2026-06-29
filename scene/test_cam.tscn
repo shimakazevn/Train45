@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6hfkbqcmad6q"]
+
+[ext_resource type="Script" uid="uid://cw2xhs0m6krwy" path="res://Gameplay/NPC/TestCam.gd" id="1_wwugt"]
+
+[node name="TestCam" type="Camera2D"]
+position = Vector2(0, -98)
+enabled = false
+script = ExtResource("1_wwugt")

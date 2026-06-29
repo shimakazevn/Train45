@@ -1,0 +1,602 @@
+# #jump test
+# jump sfx_test
+
+if {MetaProgression.get_current_chapter()} == 1:
+	jump chapter1_complete
+elif {MetaProgression.get_current_chapter()} == 2:
+	jump chapter2_complete
+elif {MetaProgression.get_current_chapter()} == 4:
+	# #챕터4종착점 대사
+	jump chapter4_complete_return
+elif {MetaProgression.get_current_chapter()} == 5:
+	# #챕터5종착점 대사
+	jump chapter5_complete_return
+
+label chapter1_complete #id:15aa
+join konial right [animation="Fade In Up" wait="true" mirrored="true"]
+emotion konial Smile
+[music path="res://sound/music/loop/mellow.ogg" fade="0.0" volume="0.0" bus="Music"]
+konial: 빰빠밤~ 종착점까지 무사히 도달하였습니다! 짝짝짝짝짝.. #id:15ab
+konial: 어때? 아직은 여유있으려나? #id:15ac
+- 쉽게 찾아냈어. #id:15ad
+	join reina left [animation="Fade In Up" wait="true"]
+	reina: 무심코 지나버릴 뻔 한 적이 있지만.. 집중한다면 그렇게 어렵진 않네요. #id:15ae
+	leave reina
+	join mai left [animation="Fade In Up" wait="true"]
+	mai: 나도, 재밌었어! 점점 눈에 익는걸. #id:15af
+- 만만치 않네. #id:15b0
+	join reina left [animation="Fade In Up" wait="true"]
+	emotion reina Shy
+	reina: 솔직히 저는 대부분을 놓쳐 버려서.. 도움이 되지 못했어요. #id:15b1
+	leave reina
+	join mai left [animation="Fade In Up" wait="true"]
+	emotion mai Dislike
+	mai: 나도 집중력이 약하거든, 열심히 뛰어다니긴 했지만.. #id:15b2
+	konial: 그래? 하지만 결국 도착했으니까 된 거 아니겠어? 내 생각보다 빠르게 적응하고 있으니 걱정하진 마. 그리고.. #id:15b3
+emotion konial Idle
+konial: 아직까진 맛보기였으니까. 너희들이 입장할 수 있는 칸을 제한해뒀거든. 다음에는 좀 더 많은 전차 칸을 개방할거야. 이제부터는 더 신경써서 확인해야 할걸? #id:15b4
+- 더 많은 칸을 개방한다는 건.. #id:15b5
+emotion mai Idle
+mai: 난이도 업! 이라는 느낌인가? 뭐든 좋지만! #id:15b6
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Idle
+reina: 지금보다 더 많은 이변이 발생한다는 거군요.. [br]정신을 차리지 않으면 계속 처음 칸으로 돌아갈 거에요. #id:15b7
+konial: 이 뒤로 나아갈수록 정념의 농도가 짙어질거야. 그로 인한 이변 또한 교묘해지고 고약하게 변해 있을 거고. #id:15b8
+- 정념? #id:15b9
+reina: 정..념.. 이라면? #id:15ba
+konial: 아, 설명 안했구나? 그 이전에, 너희들 이곳까지 오면서 평소와는 다른 분위기인걸? #id:15bb
+emotion reina Suprised
+reina: 아.. #id:15bc
+emotion konial Sadistic
+konial: 궁금한데~ 전차 칸을 탐색하면서 너희들이 한 것들.. #id:15bd
+reina: 궁금하다고 해 봐야.. 열심히 이변을 찾는 것 외에는.. #id:15be
+emotion konial Idle
+konial: 흐응~ 그런가? 너는 어때? #id:15bf
+- 그게.. 아무것도.. #id:15c0
+	konial: 으음.. 얼굴이 붉은데, 기분 탓인가. #id:15c1
+	emotion reina Shy
+	reina: 타.. 탐색하느라 여기저기 살펴보느라 힘들었거든요. #id:15c2
+	leave reina
+	join mai left [animation="Fade In Up" wait="true"]
+	emotion mai Dislike
+	mai: 응? 난 휴식 시간에 자위.. #id:15c3
+	leave mai
+	join reina left [animation="Fade In Up" wait="true"]
+	emotion reina Suprised
+	reina: 마이 양! 무슨 말을.. #id:15c4
+	konial: 이것 참.. 처음에 했던 얘기 기억나? #id:15c5
+- 야한 짓 했어. #id:15c6
+	leave 
+	join mai left [animation="Fade In Up" wait="true"]
+	emotion mai Smile
+	mai: 하하하! 맞아, 해버렸지! 야한 거. #id:15c7
+	leave mai
+	join reina left [animation="Fade In Up" wait="true"]
+	emotion reina Suprised
+	reina: 저..저기! 어째서 그런 거 바로 말하는 건가요. #id:15c8
+	leave reina
+	join mai left [animation="Fade In Up" wait="true"]
+	emotion mai Idle
+	mai: 뭐, 애초에 그런 컨셉의 전차인 거 같으니까. #id:15c9
+	emotion konial Smile
+	konial: 키히히! 그래, 의도한 대로 즐기고 있으니까 좋네. #id:15ca
+emotion konial Idle
+konial: 말했지만 이곳에서 무슨 짓을 해도 밖에 알려지지 않아. 왜 굳이 번거롭게 전차 하나를 끊임없이 운행하면서 너희를 모셔 왔겠어? #id:15cb
+konial: 45번 전차가 멈추지 않는 이상 '귀찮은 녀석'들은 이곳을 절대 찾지 못해. 이 전차 안에는 너희 셋 뿐, 더 이상은 절대 들어오지도 나가지도 못하니까. #id:15cc
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Shy
+reina: 아무리 그래도 그건.. #id:15cd
+emotion konial Idle
+konial: 어차피 시간이 지나면 마음이 바뀔 거야. 키히히. 자, 그럼 이제 정념에 대해 설명해 볼까? #id:15ce
+konial: 탐색을 하면서 생긴 변화에 또 뭐가 있었어? #id:15cf
+- 그러고 보니.. #id:15d0
+- 주머니에 어느샌가.. #id:15d1
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Idle
+mai: 아 맞아! #id:15d2
+emotion mai Dislike
+mai: (옷 속으로 손을 집어넣어 브라 안에서 무언가를 꺼낸다.) #id:15d3
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Idle
+reina: 그건.. 티켓? 어째서 가슴 안에서 그런 게 나오는 거죠..? #id:15d4
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Idle
+mai: 몰라, 가슴이 간지러워서 보니까 브라 사이에 잔뜩 껴 있었어. #id:15d5
+- 나도 이정도가 생겼어. #id:15d6
+emotion mai Idle
+konial: 오오~ 꽤나 많은 걸. #id:15d7
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Serious
+reina: 이 티켓은 대체? 행선지 같은 정보가 써 있지 않아요. #id:15d8
+emotion konial Idle
+konial: 그건 평범한 티켓이 아니거든. '정념 티켓'이라는 거야. #id:15d9
+emotion reina Suprised
+reina: 정념 티켓? #id:15da
+konial: 이 전차의 모든 칸에는 정념이라는 기운이 포자처럼 퍼져 있거든. 정념이 많이 뭉치게 되면 주변 환경을 변화시켜. 그것이 너희가 찾아 낸 이변이라는 존재. #id:15db
+reina: 그.. 그렇다면, 정념이라는 건 무해한 건가요? 전차 칸 안에 퍼져있다면 여기까지 오면서 엄청 마셨을 거 같은데.. #id:15dc
+emotion konial Dislike
+konial: 당연히 무해하지! 오히려 너희들에게 이득이 된달까? #id:15dd
+- 이득이라고? #id:15de
+emotion konial Idle
+konial: 그 정념을 흡수할수록 서로에게 솔직해 질 수 있거든. 좀 더 쉽게 야한 기분이 되고, 만지고 싶고, 핥고, 키스하고, 껴안고 싶어 지는 거야. #id:15df
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Laugh
+mai: 그거 알아.. 페로몬 향수 같은 건가? #id:15e0
+emotion konial Dislike
+konial: 그런 허접한 것보다 대단하거든! 강제로 기분을 바꾸는 게 아니야. #id:15e1
+konial: 원래의 감정에 부스트를 다는 거랄까. 관심이 호감이 되고, 애정으로 변하고, 사랑까지 도달하는 과정을 대폭 단축시켜 주는 거지. #id:15e2
+emotion konial Idle
+konial: 몸에 흡수된 정념은 용도가 다하면 너희들이 가지고 있는 정념 티켓으로 실체화 된 후 배출돼. #id:15e3
+emotion mai Smile
+mai: 알았어! 땀이나 오줌 같은 노폐물이구나. #id:15e4
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Serious
+reina: ...그런데, 그 용도라는 것은.. #id:15e5
+emotion konial Idle
+konial: 욕구의 해소, 자세하게는 성욕이야. 사랑한다면 당연한 거지? 좋아한다면 맘껏 만지고 섹스하고 싶잖아. #id:15e6
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Dislike
+mai: 그렇구나, 야한 기분을 해소할 때마다.. 그래서 이렇게나 티켓이 생겨난 거였어. #id:15e7
+konial: 그래, 하지만 그 티켓은 버리지 말고 모아서 나에게 줘. #id:15e8
+emotion mai Idle
+mai: 이게 필요한 거야? 뭐 상관 없지만. #id:15e9
+emotion konial Smile
+konial: 너희가 충분히 즐기고 있다는 증거니까, 그에 따른 답례를 해 줄게! #id:15ea
+emotion konial Idle
+konial: 다시 시작 지점으로 돌아가면 처음 보는 녀석이 기다릴거야. 편하게 '집사'라고 부르면 돼. #id:15eb
+konial: 집사에게 말을 걸면 티켓을 통해 여러가지 경품으로 바꿀 수 있어. #id:15ec
+konial: 교환 샵의 물품들은 집사가 직접 쓸만한 분실물들을 모아 재활용하는 거니까. 이제는 주인도 없고. #id:15ed
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Serious
+reina: 그건 도덕적으로 괜찮은 걸까요.. #id:15ee
+konial: 모두 특별한 능력을 주입해서 탐색에 쓸모 있도록 만들어 놨으니 한번 둘러 봐! 모두 티켓을 이용해 교환할 수 있어! #id:15ef
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Idle
+mai: 와아! 그럼 티켓은 한 명한테 모아 놓는게 좋겠네. 자, 내 티켓 전부야! 가슴에 껴 있어서 축축해졌지만.. 헤헤. #id:15f0
+do GameEvents.emit_set_ticket("plus", 37)
+티켓 37장을 받았다. #id:15f1
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Shy
+label sfx_test
+reina: 아.. 그게, 저는 한 장도.. #id:15f2
+[sound path="res://sound/sfx/Reina_many_ticket.mp3" volume="3.0" bus="Sfx"]
+(후두두둑) #id:15f3
+? 레이나의 치마 안에서.. 무언가 우수수 떨어진다. #id:15f4
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Surprised
+mai: ...레이나짱, 뭔가 낳았어! #id:15f5
+leave mai
+join reina left [animation="Fade In Up" wait="true" extra_data="show Etc/Blur"]
+emotion reina Suprised
+reina: 낳은게 아니에요! 팬티 속에 있었나 봐요.. #id:15f6
+- 이건.. 티켓? #id:15f7
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Serious
+mai: 와앗! 엄청 많아. 내 두배는 되는 거 같네! #id:15f8
+- 정념 티켓이 이렇게나 많다는 건.. #id:15f9
+emotion mai Smile
+mai: 하하하! 레이나짱, 누구보다 알차게 즐기고 있었잖아? #id:15fa
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Shy
+reina: 아아, 아니에요! 이건! ..이건.. ..으으.. 저도, 이거 다 드릴게요. #id:15fb
+do GameEvents.emit_set_ticket("plus", 72)
+티켓 72장을 받았다. #id:15fc
+emotion konial Smile
+konial: 키히히! 재밌네 너희들. 앞으로의 탐색은 더 어려워 질 테니 적극적으로 교환 샵을 이용해. #id:15fd
+emotion reina Idle
+konial: 탐색에 도움이 되는 기념품도 많으니까. 훨씬 더 빠르게 탐색할 수 있을거야. #id:15fe
+konial: 이제 시작 지점으로 돌려 보내 줄게. 이제부턴 더 깊은 곳까지 개방할 거야. [br]다음 목표까지 얼마나 빠르게 도달할지 기대되네! #id:15ff
+[clear time="1.0" text="false" portraits="false" background="false" positions="false" style="false"]
+do GameEvents.emit_set_chapter(2)
+do GameEvents.emit_game_complete()
+[end_timeline]
+
+label chapter2_complete #id:1600
+join konial right [animation="Fade In Up" wait="true" mirrored="true"]
+konial: 도착했구나! 이번 칸까지 오느라 수고했어. 이제 완전 익숙해 진 거 같네? #id:1601
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Shy
+reina: 네, 어느 정도는.. #id:1602
+konial: 좋아! 모은 티켓을 보니.. 그 쪽으로도 많이 즐겼구나? #id:1603
+emotion reina Serious
+update reina [extra_data="show Etc/Blur"]
+reina: 읏.. 그건.. 네.. #id:1604
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Ecchi
+mai: 레이나 짱, 탐색을 다녀올 때마다 엉망진창이 된다니까. 하하하! #id:1605
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Angry
+reina: 그러는 마이 양도 마찬가지잖아요.. 혼자 있을 때도.. #id:1606
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Dislike
+mai: 그게, 시작 지점을 지키는 건 외로우니까. #id:1607
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Serious
+reina: ..아, 마.. 맞아요. 지금까지 말하지 못했지만 역장에게 궁금한 게 있어요. #id:1608
+emotion konial Idle
+konial: 뭐지? 궁금한 거라. #id:1609
+emotion reina Idle
+reina: 이곳에 오고서 시간이 꽤 지났어요. 저녁 시간쯤 된 거 같은데 창밖은.. #id:160a
+- 노을 진 채 그대로야. #id:160b
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Serious
+mai: 어? 정말이잖아. 기다려 봐. 핸드폰 시간으로는.. #id:160c
+mai: 4시 32분? #id:160d
+mai: 탑승했을 때가 적어도 4시 이후였을 텐데.. #id:160e
+- 그렇다는 건.. #id:160f
+	- 시간이 멈춰 있어. #id:1610
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Serious
+reina: 그리고 이 전차. 지금까지 정차 한번 없이 철로를 달리고 있어요. 일반적이라면 앞선 전차를 추월하거나 충돌하는게 정상이겠죠.. #id:1611
+reina: 우리 외에는 아무도 안 보이고, 확실히 뭔가 수상한.. #id:1612
+konial: 아아~ 레이나 짱은 그런 쪽이구나. 백화점에 시계가 없는 걸 의심하는 타입. #id:1613
+[music path="res://sound/music/darker/Vortex.ogg" fade="10.0" volume="0.0" bus="Music"]
+reina: ..? 무슨 말인지 잘.. #id:1614
+emotion konial Dislike
+konial: 그런 사소한 의문은 신경 쓸 필요 없다는 거야. 모두 의도대로 설계한 거니까. 고객이 현실을 잊고 환상에 빠져들게 하기 위해서 얼마나 고민하는 줄 알아? #id:1615
+konial: 의문을 가지는 건 상관 없지만 그로 인해 몰입할 수 없게 되는 건 용서하지 않아. 재미있게 빠져 있는 다른 사람에게도 방해잖아. 그렇지? #id:1616
+emotion reina Suprised
+reina: ..... #id:1617
+emotion konial Idle
+konial: 너희들 생각은? #id:1618
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Dislike
+mai: 나는 야한 거 좋아하니까, 집에 가면 지루하기도 하고.. 하지만.. 나 동생들이 있거든. 저녁은 늘 내가 차려 줘서. #id:1619
+mai: 정말 즐겁지만.. 오늘은 슬슬 돌아가야 한달까. #id:161a
+emotion konial Dislike
+konial: 흐응. 넌 어때? #id:161b
+- 좀 더 있고 싶지만. #id:161c
+- 약속한 알바가.. #id:161d
+konial: 하아~ 그래, 내가 간과했어. 인간들은 시간 이라는 쓸데없는 것에 묶여 살아야 하는구나. #id:161e
+emotion konial Dislike
+konial: 그럼 특별히 레이나 짱이 궁금해하는 비밀 하나를 알려줄게. 아까 탑승할 때와 같은 풍경이라고 했지? #id:161f
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+reina: 네, 태양의 위치도 그대로인 체.. #id:1620
+emotion konial Idle
+konial: 맞아. 이곳은 시간이란 개념은 없어. #id:1621
+- 뭐라고? #id:1622
+konial: 정확히는 시간이 닿지 않는 장소로 이동한 거지만. #id:1623
+konial: 너희들이 마지막으로 본 풍경을 토대로 재구성한 거지. 이제 너희들에게 시간은 필요 없는 개념이 되어 버렸으니까. #id:1624
+- 시간이 필요 없어졌다? #id:1625
+- 무슨 소린지 모르겠어.. #id:1626
+konial: 키히히. 알 필요도, 알 방법도 없어. #id:1627
+emotion reina Shy
+reina: 그건 너무해요. 당신의 말대로 지금까지 협조했는데.. #id:1628
+emotion konial Idle
+konial: 너희들도 마음껏 즐기고 있잖아? 영업 비밀까지 누설하라는 건 너무한걸. 하지만.. 슬슬 나가고 싶어졌다면 방법을 알려 줄게. #id:1629
+konial: 지금까지 나에게 바친 정념 티켓. 이게 너희를 45번 전차에 탑승시킨 이유야. #id:162a
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Serious
+mai: 이 티켓이? 저번에는 분명 정념이 소화되고 나온 부산물이라고.. #id:162b
+emotion konial Smile
+konial: 그건 너희들이 멋대로 해석한 거지. 뭐, 크게 다르진 않아. #id:162c
+konial: 다만 '배출된' 이 아닌 '가공된' 이 맞는 표현이겠지. 이 티켓은 나에게 엄청난 가치를 지니거든. #id:162d
+emotion mai Flat
+mai: 이 티켓이 말이야? 그냥 종이 조각으로 보이는데.. #id:162e
+emotion konial Idle
+konial: 키히히. 멍청한 인간들에게는 그렇지. 내 눈에는 정념이 이쁘게 응축된 에너지 덩어리로 보이는걸. #id:162f
+konial: 너희 기준이라면, 금? 다이아몬드? 그 수천배 이상의 가치를 지닌 게 이 정념 티켓이야. #id:1630
+- 그걸 모으기 위해 우리를? #id:1631
+konial: 그래! 하지만 조건이 있어. 원료인 정념과.. 그것을 가공하는 기계. #id:1632
+- ..그게.. #id:1633
+- 우리들? #id:1634
+konial: ..키히히힛. 정답! #id:1635
+- 말도 안돼.. #id:1636
+- 그게 애초의 목적이란 거야? #id:1637
+emotion konial Smile
+konial: ...키히.. 캬하하하핫! #id:1638
+emotion konial Idle
+konial: 너, 너의 입장에서 지금까지 겪은 것중 말이 되는 일이 있었다고 생각해? #id:1639
+- ..? #id:163a
+konial: 생각해 봐, 이 전차 안에서가 아니라면 네가 저런 녀석들과 한번이라도 말을 나눌 수 있었겠어? #id:163b
+- ..읏 #id:163c
+konial: 단 둘이 행동하고 시간을 보내면서 몸을 만지고. 마주보거나 키스하고, 자지를 문지르고, 젖을 빨아대는 거! #id:163d
+konial: 이곳이 아니라면. 가능했던 걸까나? #id:163e
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Suprised
+reina: ... #id:163f
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Dislike
+mai: 뭐야, 난 전차에 타기 전에 몇마디 했다고! #id:1640
+konial: 그뿐이었겠지. 그 인연이 이어졌을 리 없어. #id:1641
+... #id:1642
+확실히 그렇다. #id:1643
+멀리서 바라보기만 할 뿐이었던 레이나와도 45번 전차에서 처음 대화했고.. #id:1644
+마이를 처음 만났을 때, 나에게 핸드폰을 빌리려 했지만.. 그 전에 폰을 잃어버리는 바람에 그대로 헤어져 버렸어. #id:1645
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Shy
+reina: 저, 저는 이전부터 알고 있었어요. 치한을 막아 주는 것에 대한 감사 인사를 하고자 전차에 따라 탄 거니까요. #id:1646
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Idle
+mai: 나도, 어째선지 이 전차에 잘못 타버렸지만, 이렇게 만났으니까! #id:1647
+konial: 키히히. 너희들이 모인 것도 우연이 아니거든. #id:1648
+konial: 가지고 있던 정념 티켓을 쓴 거야. 이 티켓은 그정도의 힘이 있지. 인과를 뒤트는 것. #id:1649
+emotion konial Smile
+konial: 상당한 양을 썼는데도 세 명 뿐인건 아쉽지만.. 이제는 너희들한테서 뽑아 내면 되니까! 키히히힛! #id:164a
+- 전차의 테스트 따위는 모두 핑계였어. #id:164b
+- 티켓을 만들어 내기 위한.. #id:164c
+emotion konial Idle
+konial: 응, 맞아. 저쪽의 레이나짱은 대충 눈치챘을걸? #id:164d
+konial: 다만 이곳에서의 야한 짓들이 점점 좋아져서 아무 말 안한거겠지? 비일상에서 빠져 나오기 싫으니까. #id:164e
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Serious
+reina: 이 곳이 좋아져서 잠자코 있던 게 아니에요. 예상이 맞다면 너무 말이 안 되는 상황이었으니까요.. #id:164f
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Dislike
+mai: 난 여태 몰랐어.. #id:1650
+emotion konial Idle
+konial: 난 그런 마이짱도 좋아해! 단순해서 더 쉽게 써먹을 수 있거든. #id:1651
+konial: 전에 말했지? 이 전차 칸에는 정념이 가득 퍼져 있어. 그 정념이 뭉쳐 있는 곳은 이변이 생기게 되지. #id:1652
+- 그렇다는 건.. #id:1653
+- 반대로 말하면.. #id:1654
+konial: 그래! 이변이 생긴 위치는 정념이 엄청나게 밀집된 포인트라는 것! #id:1655
+konial: 너희들이 이변을 찾는다는 빌미로 이변을 코앞에 둔다면 그만큼 엄청난 양의 정념을 흡수하는 거야! #id:1656
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Suprised
+reina: 그런.. 지금까지 일부러 정념이 밀집한 장소를 찾게 하려고.. #id:1657
+konial: 키히히. 맞아! 하지만 걱정 마. 정념은 아무리 흡수해도 신체에 어떤 영향이 없거든. 신체적으로는. #id:1658
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Flat
+mai: 신체적으로는? #id:1659
+konial: 대신 정념을 흡수한 만큼의 다른 욕구를 밀어내게 되지. 식욕이나 수면욕 같은. #id:165a
+konial: 이건 영구적이지만, 오히려 좋지 않아? 그저 섹스만 생각하는 거야.. 밥이나 잠을 잘 필요도 없어. 몇번이고 사정해도 끊임없이 발기할 수 있어. #id:165b
+konial: 결국에는 성욕 외에는 아무것도 필요하지 않게 돼. 이게 얼마나 효율적인지 알겠어? #id:165c
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Suprised
+reina: 그건.. 그건 완전히 가축과 다를 게 없잖아요! 어떻게 그런.. #id:165d
+emotion konial Smile
+konial: 캬하핫! 가축. 좋네 그거. 이제 그렇게 표현할게. 고마워. #id:165e
+- .... #id:165f
+emotion konial Idle
+konial: 그래, 너. 지금처럼 정념을 가득 모으면 말이야. 다음은 알지? 이런 상황에서도 불알 안을 정자로 가득 채워서 말이야.. #id:1660
+[music fade="5.0" volume="0.0"]
+emotion konial Sadistic
+konial: 살짝만 만져도 이렇게. #id:1661
+leave --All--
+- 으읏.. #id:1662
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_anim_change_this_npc("scene4_1", {ch.konial})
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change({ch.konial}, 100)
+konial: 이렇게 단단하게 발기하잖아. 이정도로 정념을 흡수했다면, 다음은 뭘까? #id:1663
+konial: 바로 '가공' 단계라는 거야. #id:1664
+konial: 크고 단단한 발기 자지를.. 보지 안에 천천히.. #id:1665
+do GameEvents.emit_anim_change_this_npc("scene4_2", {ch.konial})
+konial: 아앙~ 꽤 좋은 물건을 가졌는걸. 느낌이 어때? #id:1666
+konial: 뜨겁고 끈적한 안쪽이 자세하게 느껴져?.. 가만히 누워 있어도 돼.. 온몸에 힘을 빼고. #id:1667
+konial: 자지에만 집중해. 정념을 모두 그곳에 모은다 생각하고. 천천히.. 질의 주름 하나하나를 느끼면서. #id:1668
+konial: 안쪽이 살아 움직이는 것 같지? 키히히.. 영광으로 알라고. 인간 따위가 코니알님과 연결되는 거 말이야. #id:1669
+konial: 키히히.. 흣..응. 이렇게. 점점 빠르게 해 볼까? #id:166a
+konial: 언제든 싸도 되니까. 아앙.. 안쪽에서 점점 커지고 있네. 흣..하아. #id:166b
+konial: 으응..? 키히히. 읏..으응.. 아니, 밖에는 안 돼. 안에 가득 싸버려. #id:166c
+konial: 그게 가장 효율이 좋으니까 말이야.. 앙..으응. 그래~ 안쪽에. 싸버려, 싸버려. #id:166d
+konial: 하아.. 아응.. 가득 싸버리라고.. 자궁 안에. 모아놓은 정액 전부! #id:166e
+do GameEvents.emit_anim_change_this_npc("scene4_3", {ch.konial})
+[wait time="8.0"]
+konial: 하아..하아.. 가득 나오고 있네~ 키히히.. 이정도로 모아놨을 줄 몰랐는걸.. 하아.. #id:166f
+do GameEvents.emit_anim_change_this_npc("scene4_4", {ch.konial})
+konial: 으음. 움찔거리고 있네. 만족한 표정이지만.. #id:1670
+konial: 아직, 이 자지는 부족한 모양이야? 설마하니.. 더 짜낼 수 있겠는걸? 키히히. #id:1671
+konial: 그래 좋아~ 불알이 텅텅 빌 정도로 짜 줄게. 물론 거부권은 없어. 기분 좋으니 상관 없잖아? #id:1672
+set {npc.type} = {ch.konial}
+[signal arg="scene4"]
+join konial center [animation="Fade In Up" wait="true"]
+emotion konial Smile
+konial: 하아~ 기분 좋았어. 이정도면 꽤나 많이 생기겠는걸. #id:1673
+konial: 이렇게.. 섹스나 애무를 통해 성욕이 해소되면 정념 티켓이 생성되는 거야. 이미 몇번이고 체험해 봤을테니 다 알고 있으려나? #id:1674
+emotion konial Dislike
+konial: 어머, 뭐야. 반응이 없네. 죽어버린 거야? 너무 자극이 강했나? #id:1675
+update konial right [mirrored="true" move_time="0.5"]
+join reina left [animation="Fade In Up" wait="true" extra_data="show Etc/Sweat"]
+emotion reina Suprised
+reina: 네? 무슨.. 저.. 저기! 정신 차리세요! #id:1676
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Serious
+mai: 엣.. 거짓말. 이 녀석. 기절했어. #id:1677
+emotion konial Idle
+konial: 키힛! 역시나, 인간 따위가 버틸 수 있는 자극이 아니지. 너희 둘을 탑승시킨 것도 이런 이유야. 인간 끼리의 궁합이 제일이니까. #id:1678
+konial: 그 녀석 잘 챙기렴. 죽어 버리면 티켓을 만들어 낼 수도 없을 테니. #id:1679
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Serious
+reina: 잠깐만요, 아까 분명 탈출하는 법을 알려준다고 하셨어요. #id:167a
+konial: 탈출? 아아 그랬던가~ #id:167b
+label test #id:193e
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Flat
+mai: 나도 분명 들었어. 티켓에 관련된 거지? #id:167c
+leave --All--
+[wait time="0.5"]
+do CutSceneManager.show_cutscene("CutsceneKonialDark")
+[style name="fullscene_style"]
+konial: 보기와 다르게 기억력 좋잖아. 마이짱. 그래, 단도직입적으로 말하면 너희는 이곳에 탑승하는 순간 빚을 진 거야. #id:167d
+[music path="res://sound/music/loop/Cultist Loop.ogg" fade="0.0" volume="0.0" bus="Music"]
+# #join reina left [animation="Fade In Up" wait="true"]
+emotion reina Idle
+reina: 빚이라고요? #id:167e
+konial: 응. 아까도 말했지만 너희를 이 전차에 탑승시키기 위해 인과를 뒤틀었어. 인과를 뒤트는 데에는 정념 티켓이 무지막지하게 들거든. 아주 사소한 거라도. #id:167f
+leave reina
+# #join mai left [animation="Fade In Up" wait="true"]
+emotion mai Dislike
+mai: 뭐? 그건 우리가 원해서 온 게 아니거든! #id:1680
+emotion konial Dislike
+konial: 어쨌든 전차는 출발했어. 너희를 다시 하차시키려면 다시 한번 인과를 뒤틀어야 하는 거지. #id:1681
+konial: 특히 너희들의 '현재 상황'이라면 탑승때와는 비교도 안될만큼 많은 티켓이 필요해. #id:1682
+emotion mai Serious
+mai: 그게 뭐야, 완전 억지잖아! #id:1683
+emotion konial Smile
+konial: 키히히힛! 사실인걸 어쩌겠어, 아니, 억지라도 너희들이 그걸 판단할 순 있고? #id:1684
+emotion mai Flat
+mai: ..뭐? #id:1685
+emotion konial Idle
+konial: 이 전차에는 나를 포함한 네명 뿐, 무한히 달리는 전차에서는 누구도 들어오고 나갈 수 없어. #id:1686
+konial: 그럼 너희들이 내 말을 믿지 않는다고 무엇이 달라지지? 불평하는 거 말고는 아무것도 없는 주제에. #id:1687
+leave mai
+# #join reina left [animation="Fade In Up" wait="true"]
+emotion reina Suprised
+reina: ... #id:1688
+konial: 지금 당장 여기서 너희 셋을 죽여 버려도 아무도 알아채지 못해. 도움도 청할 수 없지. 우위는 누가 쥐고 있다 생각해? #id:1689
+leave reina
+# #join mai left [animation="Fade In Up" wait="true"]
+emotion mai Dislike
+mai: 뭐야, 우리는 셋이라고! 수적으로는 우리가.. #id:168a
+emotion konial Dislike
+konial: 개미가 세 마리던 30마리던 알 바 아니지. 만약 할 거라면 잘 준비해야 할거야. #id:168b
+emotion konial Smile
+konial: 날 제압하는 게 실패하는 순간 조각조각 찢어버릴 테니까. 가능하다면 말이지! 키히힛! #id:168c
+emotion mai Serious
+mai: ..... #id:168d
+emotion konial Idle
+konial: 이런, 너무 겁을 줬네! 미안 미안. 내가 너무 어른스럽지 못했어. #id:168e
+konial: 슬슬 빚을 갚을 시간이지? 어서 돌아가자. 기꺼이 모두를 이동시켜 줄게. 기절한 저 녀석까지 말이야. #id:168f
+leave mai
+# #join reina left [animation="Fade In Up" wait="true"]
+emotion reina Suprised
+reina: 하지만 아직 묻고 싶은 게.. #id:1690
+konial: 뭐야, 나 바쁜데. 딱 하나만 더 들을게. #id:1691
+reina: ..탈출하기 위한 티켓. 몇 장이 필요한 거죠? #id:1692
+emotion konial Dislike
+konial: ...그러네, 그 정도의 인과라면. #id:1693
+emotion konial Smile
+konial: 1000만 장 정도 필요하겠네. #id:1694
+leave reina
+# #join mai left [animation="Fade In Up" wait="true"]
+emotion mai Surprised
+mai: 뭐?.. 모두가 지금까지 모은 게 10000장도 안 될텐데.. #id:1695
+emotion konial Idle
+konial: 그만큼 엄청난 일이니까. 참고로 한 명당이야. 세 명이라면? #id:1696
+emotion mai Serious
+mai: ..3천만 장. #id:1697
+do CutSceneManager.hide_cutscene("CutsceneKonialDark")
+[style]
+leave mai
+join reina left [animation="Fade In Up" wait="true" extra_data="show Etc/Sweat"]
+join konial right [mirrored="true"]
+emotion reina Suprised
+reina: 마.. 말도 안 돼요..! 그건 너무 억지에요! #id:1698
+emotion konial Dislike
+konial: 같은 말 하게 하지 마. 싫다면 달리 방법이 없다고 했지? #id:1699
+emotion konial Idle
+konial: 자 이제 이야기는 끝. 기절한 녀석에게도 잘 전해 줘. #id:169a
+konial: 걱정하지 마, 열심히 이곳 생활을 즐기면 어느 샌가 탈출할 수 있을 테니. 그때는 오히려 내보내지 말라고 애원하게 될 걸? 키히히! #id:169b
+emotion reina Suprised
+reina: 자.. 잠깐! 이대로 갈 수는..! #id:169c
+update reina leftmost [move_time="0.5"]
+join mai left [animation="Fade In Up" wait="true" mirrored="true"]
+mai: 레이나 짱! ..일단은 두고 보자. ..지금은 별 수 없잖아? #id:169d
+reina: 마이 씨.. #id:169e
+emotion mai Dislike
+mai: 짜증나지만 저 녀석이 하는 말이 맞아. 지금으로썬 우리끼리 아무것도 못하니까. #id:169f
+mai: ..대신 이 녀석이 깨어나면 둘에게 해 줄 얘기가 있어. #id:16a0
+emotion reina Serious
+reina: ..얘기?.. #id:16a1
+mai: 응, 뭔가 걸리는 게 있달까.. #id:16a2
+reina: ..네. 알겠습니다. #id:16a3
+leave reina
+leave mai
+update konial center [move_time="0.5"]
+konial: 그럼 다시 한번 시작 지점으로 돌아갈까? 저번 클리어 기억나지? [br]더 진한 정념을 담은 전차 칸들을 개방했어. 이번에는 더 안쪽 칸을 목표로 해 봐! #id:16a4
+emotion konial Smile
+konial: 추가로 교환숍에도 경품을 더 추가했으니 티켓이랑 교환하도록 해! #id:16a5
+do GameEvents.emit_set_chapter(3)
+do GameEvents.emit_game_complete()
+[end_timeline]
+
+label quest_failed #id:16a6
+if {MetaProgression.get_current_chapter()} == 1:
+	join konial rightmost [mirrored="true"]
+	emotion konial Dislike
+	konial: 으음~ 아직 충분히 체험하지 못한 거 같은데. #id:16a7
+	emotion konial Idle
+	konial: 레이나와 마이, 둘 다 친해진 다음에 다시 오라고? #id:16a8
+	do GameEvents.emit_game_complete()
+	[end_timeline]
+elif {MetaProgression.get_current_chapter()} == 2:
+	join konial rightmost [mirrored="true"]
+	emotion konial Dislike
+	konial: 좀 더 깊은 곳으로 가기엔 아직 부족한걸. #id:16a9
+	emotion konial Idle
+	konial: 모은 티켓을 교환소에서 바꾸는 건 자유지만.. 내게 줄 것도 남겨야 한다? #id:16aa
+	do GameEvents.emit_game_complete()
+	[end_timeline]
+
+label quest_failed_chapter3 #id:16ab
+join mai left
+join reina leftmost
+reina: 이 곳이 지금까지 도달할 수 있는 제일 깊은 칸인 거 같아요. #id:16ac
+- 마이, 이 칸이 그 소리를 들었다는 곳이야? #id:16ad
+emotion mai Dislike
+mai: 으음.. 어쩐지 다른 느낌인데. #id:16ae
+mai: 이곳은 아닌 거 같아. 아무 소리도 들리지 않아. #id:16af
+emotion reina Serious
+reina: 그런가요? 그럼 어떻게 하죠.. #id:16b0
+- 일단은 시작 지점으로 돌아가서 다시 탐색해 보자. #id:16b1
+emotion mai Smile
+mai: 응! 하지만 조금 더 전차에 익숙해지면 확실하게 찾아낼 수 있을거 같아. #id:16b2
+do GameEvents.emit_game_complete()
+[end_timeline]
+
+label chapter4_complete_return #id:16b3
+join konial rightmost [mirrored="true"]
+konial: 키히히, 또 왔구나? 티켓 모으기는 순조로워? #id:16b4
+konial: 다른 방법? 그런 건 없어. 오직 나만이 너희를 여기서 내보낼 수 있다니까. #id:16b5
+konial: 자, 다시 되돌려줄게. #id:16b6
+do GameEvents.emit_game_complete()
+[end_timeline]
+
+label chapter5_complete_return #id:16b7
+if {MetaProgression.has_read_event("chapter4_butler3") == true}:
+	join konial rightmost [mirrored="true"]
+	emotion konial Dislike
+	konial: 하아.. 집사 그녀석. 뒤로는 몰래 그런 짓을 하고 있었다니. #id:16b8
+	konial: 뭐, 덕분에 너희들이 더 고생해 줘야겠지만.. #id:16b9
+	emotion konial Idle
+	konial: 인원이 한 명 더 늘었으니 상관 없겠지? 열심히 해보라고! #id:16ba
+	do GameEvents.emit_game_complete()
+	[end_timeline]
+else:
+	jump chapter4_complete_return
+	[end_timeline]
+
+
+label debug_skip #id:16bb
+# #디버그용 대화 스킵합니다 #id:16e2
+do GameEvents.emit_set_chapter(2)
+do GameEvents.emit_game_complete()
+[end_timeline]

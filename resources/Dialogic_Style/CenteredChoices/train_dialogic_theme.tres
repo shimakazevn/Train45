@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://csjm024dvyee2"]
+
+[ext_resource type="StyleBox" uid="uid://b6h00xd1cn6cc" path="res://resources/Dialogic_Style/CenteredChoices/train_choice_style_normal.tres" id="1_qevpy"]
+[ext_resource type="StyleBox" uid="uid://bunrtmoxje2wi" path="res://resources/Dialogic_Style/CenteredChoices/train_choice_style_select.tres" id="2_nnecp"]
+[ext_resource type="Texture2D" uid="uid://b1un4ty2d3rra" path="res://resources/ui/gui/choice_active.png" id="3_2ll4p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kxo1p"]
+content_margin_left = 24.0
+texture = ExtResource("3_2ll4p")
+modulate_color = Color(1, 1, 1, 0.901961)
+
+[resource]
+Button/colors/font_focus_color = Color(0.05, 0.05, 0.05, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/styles/disabled = ExtResource("1_qevpy")
+Button/styles/focus = ExtResource("2_nnecp")
+Button/styles/hover = SubResource("StyleBoxTexture_kxo1p")
+Button/styles/normal = ExtResource("1_qevpy")
+Button/styles/pressed = ExtResource("1_qevpy")

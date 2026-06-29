@@ -1,0 +1,204 @@
+do GameEvents.emit_position_change({ch.mai}, 983, 315)
+... #id:f12
+누가 봐도 수상한 출구이다. #id:f13
+이런 어설픈 함정에 걸릴 사람이 있나? #id:f14
+join mai center 
+mai: 와! 어째서 문이 활짝 열려 있지? #id:f15
+emotion mai Smile 
+mai: 으음~ 신선한 공기! #id:f16
+- 자.. 잠깐! #id:f17
+emotion mai Idle 
+mai: 응, 왜 그래? #id:f18
+- 그 문은 출구가 아닐거야.. #id:f19
+emotion mai Ecchi 
+mai: 후후후.. 나도 그 정도는 알아. 함정이다 이 말이지? #id:f1a
+- 알고 있었어? #id:f1b
+emotion mai Flat 
+mai: 그도 그럴게 우리를 이렇게 쉽게 내보내 줄 리 없지. #id:f1c
+emotion mai Idle 
+mai: 걱정하지 마. 그냥 문 틈으로 들어오는 바람을 쐐는 것 뿐이니까. #id:f1d
+- 많이 성장했구나 마이.. #id:f1e
+emotion mai Serious 
+mai: 뭐야! 이런 어설픈 함정에 걸릴 정도의 바보는 아니라고. #id:f1f
+emotion mai Flat 
+mai: .. #id:f20
+mai: 근데 말이야. #id:f21
+mai: 이대로 다음 칸으로 넘어가기엔 뭔가 아쉽지 않아? #id:f22
+- ? #id:f23
+mai: 들어 봐. 전차 안의 모습은 질리도록 봤는데 전차 바깥의 모습은 어떨지. #id:f24
+emotion mai Dislike 
+mai: 궁금하지 않아? #id:f25
+- 확실히.. #id:f26
+- 무슨 뜻이야? #id:f27
+emotion mai Idle 
+mai: 혹시 슈뢰딩거의 고양이 법칙이라고 알아? #id:f28
+mai: 내가 실제로 보기 전에는 고양이가 검은 고양이일수도, 삼색 고양이일수도 있다는 이론이야. #id:f29
+mai: 이 전차의 바깥 모습도 우리가 실제로 확인해 보기 전에는 전차인지 비행기인지 알 수 없다는 거지. #id:f2a
+mai: 어쩌면 조작된 세트장일 수도 있어. 확인해 볼 방법은 지금 뿐.. #id:f2b
+emotion mai Dislike 
+mai: ..어떻게 생각해? #id:f2c
+- ..틀린 말은 아니지만.. #id:f2d
+emotion mai Dislike 
+mai: 뭐야! 그 표정.. 어쨌든 위험하지 않은 선에서 확인해 보면 좋겠다는 뜻이었어. #id:f2e
+- 안전한 방법이 있어? #id:f2f
+emotion mai Idle
+mai: 음.. 아! 이건 어때? #id:f30
+mai: 내가 가벼우니까 안쪽에서 날 잡고 있어. #id:f31
+mai: 밖을 내다보는 동안 위험해지면 네가 안으로 끌어 당기는거지. #id:f32
+mai: 고개만 내밀고 빼꼼 확인해 볼테니 조금이라도 전차가 움직이면 당겨 줘. #id:f33
+- 나쁘지 않은 방법인데.. #id:f34
+emotion mai Smile 
+mai: 그치? 그럼 내 뒤로 와! #id:f35
+emotion mai Dislike 
+mai: 좋아. 꽉 잡고 있어.. #id:f36
+mai: ... #id:f37
+- 무언가 보여? #id:f38
+mai: ..으음.. 글쎄.. #id:f39
+mai: 그냥 전차네. #id:f3a
+- 역시나 #id:f3b
+mai: 주변에 사람도 없고. 좀 으스스한데? #id:f3c
+emotion mai Laugh 
+mai: 그래도 공기 상쾌해~ 하아~ #id:f3d
+- 그럼 이제 슬슬 들어와. #id:f3e
+mai: 으응~ 모처럼인데 좀만 더 숨쉴게. 후~ 하.. #id:f3f
+mai: 바깥 공기가 이렇게 좋은 줄.. 꺄앗?! #id:f40
+emotion mai Surprised 
+update mai [extra_data="show Etc/Sweat"]
+leave mai
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene102_5")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(1, 100)
+(덜컥!) #id:f41
+mai: ... #id:f42
+- 괜찮아? #id:f43
+emotion mai Serious 
+mai: 아야야.. #id:f44
+mai: 이거.. 어떻게 된 거야? #id:f45
+- 문에 끼어 버렸어. 아프지 않아? #id:f46
+emotion mai Surprised 
+mai: 읏! 정말? #id:f47
+mai: 허리가 끼어 버린 순간 문이 멈춰서 아프진 않은데.. #id:f48
+emotion mai Flat 
+mai: 옴짝달싹 못하겠어.. 절묘한 힘으로 잡혀 버렸네. #id:f49
+mai: 우으.. 위험하면 당겨주기로 했잖아. #id:f4a
+- 생각보다 묵직해서 바로 당기지 못했어.. #id:f4b
+emotion mai Surprised 
+update mai [extra_data="show Etc/Blur"]
+mai: 야!! 무슨 말이야! 다시 들어가기만 해봐.. #id:f4c
+emotion mai Flat 
+mai: .. 그나저나 큰 일인데.. 이대로 전차가 움직인다면.. #id:f4d
+mai: 저기, 뒤에서 당겨 줄 수 있을까? 허리라던가 잡고.. #id:f4e
+emotion mai Idle 
+mai: 응. 그렇게. 왠지 야한걸. #id:f4f
+emotion mai Dislike 
+update mai [extra_data="hide Etc/Blur, hide Etc/Sweat"]
+mai: 셋 하면 당기는 거야.. 하나. 둘. 셋! #id:f50
+mai: 으읏..! #id:f51
+emotion mai Serious 
+mai: 하아..하아.. #id:f52
+mai: 미동도 않네.. ..이번엔 반대로 밀어 볼래? #id:f53
+mai: ..셋! 으으윽! #id:f54
+mai: ..역시 꼼짝도 않아. #id:f55
+mai: ..응? 그치만 이거. 조금 헐거워 진 거 같은데? #id:f56
+emotion mai Dislike 
+mai: 다시 한번 허리를 잡아 봐! 그대로 당기고..옷! #id:f57
+mai: 하아.. 다시 밀어서..으읏?! #id:f58
+emotion mai Flat 
+mai: ..확실히 아주 조금씩 조이고 있는 문이 헐거워 지는 느낌이야.. #id:f59
+update mai [extra_data="show Etc/Blur"]
+mai: (..그리고 어쩐지 기분이 이상해져.) #id:f5a
+emotion mai Idle 
+mai: 조..좋아. 이대로 계속 피스톤.. 아니. 밀고 당기길 반복하면 탈출할 수 있을 거 같아! #id:f5b
+마이의 제안대로 문에 끼인 큰 엉덩이의 허리를 잡고 앞뒤로 흔들길 반복한다.. #id:f5c
+do TransitionScreen.dialog_transition()
+emotion mai Dislike 
+mai: 앙..아아..하아.. #id:f5d
+mai: 기분 좋아.. 가 아니고. #id:f5e
+emotion mai Idle 
+mai: 확실히 많이 헐거워 졌어.. 응.. #id:f5f
+mai: (이대로 조금만 더 하면.. 갈 거 같아..) #id:f60
+emotion mai Dislike 
+mai: 계..계속 해줄래? #id:f61
+- ..? #id:f62
+- 문 너머에.. 무언가 단추가 있는데. #id:f63
+emotion mai Serious 
+update mai [extra_data="hide Etc/Blur"]
+mai: 뭐? 바깥 쪽에? #id:f64
+mai: ..앗 정말이네! 유리창 옆에.. '비상 단추'? #id:f65
+(..꾸욱) #id:f66
+emotion mai Surprised 
+mai: 꺄악! #id:f67
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+(쿠당탕..) #id:f68
+(문이 양옆으로 활짝 열리며 마이가 맥없이 쓰러진다.) #id:f69
+join mai left 
+emotion mai Flat 
+update mai [extra_data="show Etc/Sweat"]
+mai: 아야야.. #id:f6a
+mai: ... #id:f6b
+emotion mai Serious 
+mai: 문.. 열린 거야? #id:f6c
+mai: 방금 내가 비상 버튼을 눌러 버려서?.. 그런가.. #id:f6d
+mai: 이대로 해결? 정말?.. 나 아직.. #id:f6e
+emotion mai Flat 
+mai: ... #id:f6f
+mai: ... #id:f70
+mai: (..꾸욱) #id:f71
+- ?! #id:f72
+(덜컹!) #id:f73
+leave mai
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene102_5")
+mai: 으읏~.. #id:f74
+mai: 우물쭈물 하는 사이 다시 끼어 버렸어~. 아앙.. #id:f75
+- 방금 분명 스스로.. #id:f76
+mai: 무슨 소린지 모르겠어.. 저기. 이대로면 열차 출발해 버릴지도~ #id:f77
+mai: 버튼도 더 이상 작동하지 않네.. #id:f78
+mai: 아까처럼 파앙~ 파앙~ 해서 꺼낼 수밖에 없겠는걸.. #id:f79
+mai: 좋아하지 않아? 허리 흔드는 거.. #id:f7a
+mai: 아아. 지금이라면, 무슨 짓을 하던 저항 못하니까. #id:f7b
+mai: 어떤 장난을 쳐도 문 너머에서 참을 수밖에 없어.. #id:f7c
+mai: 그리고 부끄럽지만. 엄청 젖어버려서.. 찝찝하거든. #id:f7d
+mai: 원하는 만큼 격렬하게 해도. 저항하지 않을 테니. #id:f7e
+mai: 어서 꺼내 줄 수 있을까? #id:f7f
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene102_1")
+mai: ..팬티 벗겨져 버렸어. #id:f80
+mai: 으응~ 단단한 무언가 닿고 있는데.. #id:f81
+mai: 이래선 뭔지 확인할 수 없잖아.. #id:f82
+mai: 하아.. 허리도 단단히 잡혀서.. #id:f83
+mai: 응.. 그대로.. 밀어 줘.. #id:f84
+do GameEvents.anim_change("scene102_2")
+mai: 아읏..! 들어왔어.. 아앙.. 뜨거운 게 가득 들어와버렸어.. #id:f85
+mai: 보이지 않지만.. 감각이 더 예민해져서.. 아앙.. #id:f86
+mai: 그렇게.. 으응.. 앞 뒤로.. 열심히 흔들어 줘.. #id:f87
+[signal arg="scene102"]
+mai: 아앙.. 뜨거운 게 가득.. 기분 좋아.. #id:f88
+mai: ..아직 여운이 남아서.. #id:f89
+mai: 꺄악?! #id:f8a
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+join mai left 
+emotion mai Dislike 
+... #id:f8b
+mai: 아야야.. 이것도 두 번째야. #id:f8c
+emotion mai Idle 
+mai: ..응. 문이 열렸네..다행이다! #id:f8d
+emotion mai Dislike 
+mai: 코니알도 참. 이건 너무 위험하잖아. 그 사이 전철이 출발해 버리면 어쩌려고. #id:f8e
+- 아마 그 이유로 비상 버튼을 설치해둔 건.. #id:f8f
+mai: 어어? 무..무슨 얘기일까. 잘 모르겠는 걸. #id:f90
+mai: 어 어쨌든! 이 문이 함정이라는 건 잘 알았으니.. #id:f91
+emotion mai Smile 
+mai: 앞으로는 활짝 열려있는 문이라도 함부로 내다보면 안 된다? #id:f92
+- 그것도 마이가 스스로.. #id:f93
+emotion mai Laugh 
+mai: 아무튼! 서..서로 기분 좋았으니 아무래도 좋잖아? #id:f94
+mai: 자. 어서 다음 칸으로 가자고! #id:f95
+emotion mai Idle 
+mai: 이번에는 조용히 뒤따를 테니까! #id:f96
+do GameEvents.anim_change("idle")
+do GameEvents.emit_game_complete()
+[end_timeline]

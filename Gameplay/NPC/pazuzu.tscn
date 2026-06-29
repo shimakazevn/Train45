@@ -1,0 +1,158 @@
+[gd_scene load_steps=15 format=3]
+
+[ext_resource type="Script" uid="uid://1o0wftqtsnin" path="res://Gameplay/npc.gd" id="1_q7elp"]
+[ext_resource type="PackedScene" uid="uid://cbr2j2kcop6ix" path="res://scene/component/event_position_component.tscn" id="2_ajpmm"]
+[ext_resource type="Script" uid="uid://dutlwymcmyyqo" path="res://Gameplay/NPC/full_scene_component.gd" id="3_tu8tj"]
+[ext_resource type="PackedScene" uid="uid://cepl2jt2a37wn" path="res://Gameplay/Ui/talk_bubble.tscn" id="5_fyapv"]
+[ext_resource type="PackedScene" uid="uid://bw0vtqx7qojkw" path="res://Gameplay/npc_camera.tscn" id="6_11rsg"]
+[ext_resource type="PackedScene" uid="uid://c6hfkbqcmad6q" path="res://scene/test_cam.tscn" id="7_14cof"]
+[ext_resource type="PackedScene" uid="uid://jj3k74cbkdan" path="res://scene/component/free_action_component.tscn" id="8_fyq3t"]
+[ext_resource type="Texture2D" uid="uid://c0kccw2rqb5vc" path="res://Gameplay/NPC/pazuzu_nomal.png" id="48_5132w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2d18"]
+size = Vector2(86, 251)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m86oq"]
+
+[sub_resource type="Animation" id="Animation_7qiwf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_v1dga"]
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10]
+}
+
+[sub_resource type="Animation" id="Animation_qdxy8"]
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lf6ds"]
+_data = {
+&"RESET": SubResource("Animation_7qiwf"),
+&"hang": SubResource("Animation_v1dga"),
+&"idle": SubResource("Animation_qdxy8")
+}
+
+[node name="Pazuzu" type="CharacterBody2D" node_paths=PackedStringArray("npc_sprite", "npc_camera", "text_bubble") groups=["npc"]]
+z_index = 3
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_q7elp")
+npc_name = 3
+npc_sprite = NodePath("Sprite2D")
+npc_camera = NodePath("NPCCamera")
+text_bubble = NodePath("TextBubble")
+
+[node name="EventPositionComponent" parent="." instance=ExtResource("2_ajpmm")]
+
+[node name="SubAnimContainer" type="Node2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(6, -115.5)
+shape = SubResource("RectangleShape2D_u2d18")
+
+[node name="SubFullSceneCanvas" type="Node2D" parent="."]
+script = ExtResource("3_tu8tj")
+
+[node name="FullAnimComponent" type="Node2D" parent="."]
+script = ExtResource("3_tu8tj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+clip_children = 2
+texture_filter = 1
+material = SubResource("ShaderMaterial_m86oq")
+position = Vector2(0, -122)
+texture = ExtResource("48_5132w")
+hframes = 4
+vframes = 3
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": true,
+"layer_section": true,
+"output_section": true,
+"slice_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "c4ce6cc09615c93a472d6021450721df"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lf6ds")
+}
+autoplay = "idle"
+
+[node name="TextBubble" parent="." instance=ExtResource("5_fyapv")]
+
+[node name="NPCCamera" parent="." node_paths=PackedStringArray("follow_targets") instance=ExtResource("6_11rsg")]
+position = Vector2(0, -99)
+follow_targets = [NodePath("../CameraPosition")]
+
+[node name="CameraPosition" type="Area2D" parent="."]
+position = Vector2(0, -99)
+
+[node name="TestCam" parent="." instance=ExtResource("7_14cof")]
+visible = false
+
+[node name="FreeActionComponent" parent="." node_paths=PackedStringArray("npc", "normal_anim", "normal_sprite") instance=ExtResource("8_fyq3t")]
+npc = NodePath("..")
+normal_anim = NodePath("../AnimationPlayer")
+normal_sprite = NodePath("../Sprite2D")
+scene_progress = 1

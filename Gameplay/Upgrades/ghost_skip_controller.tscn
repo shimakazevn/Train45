@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmqwi3884uk78"]
+
+[ext_resource type="Script" uid="uid://dhl7lxw7d16cw" path="res://Gameplay/Upgrades/ghost_skip_controller.gd" id="1_5lte6"]
+
+[node name="GhostSkipController" type="Node2D"]
+script = ExtResource("1_5lte6")

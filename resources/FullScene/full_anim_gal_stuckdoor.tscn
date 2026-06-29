@@ -1,0 +1,372 @@
+[gd_scene load_steps=97 format=3]
+
+[ext_resource type="Texture2D" uid="uid://bhx6huren11ni" path="res://resources/FullScene/galFull_102.png" id="1_owmb1"]
+[ext_resource type="Script" uid="uid://c7f6633lnp85w" path="res://resources/FullScene/full_anim.gd" id="2_ssua5"]
+[ext_resource type="Script" uid="uid://xham5m0ijh6a" path="res://resources/HScene/h_scene_audio_stream_player_2d.gd" id="3_yca1i"]
+[ext_resource type="AudioStream" uid="uid://x6n38q2xf8bn" path="res://sound/sfx/h_sfx/normal/h_sfx_normal1.wav" id="4_20fwj"]
+[ext_resource type="AudioStream" uid="uid://c2dpfiabhxllj" path="res://sound/sfx/h_sfx/normal/h_sfx_normal2.wav" id="5_05omy"]
+[ext_resource type="AudioStream" uid="uid://0kx2flvefjev" path="res://sound/sfx/h_sfx/normal/h_sfx_normal3.wav" id="6_2ikp8"]
+[ext_resource type="AudioStream" uid="uid://kvefno173rxk" path="res://sound/sfx/h_sfx/normal/h_sfx_normal4.wav" id="7_5132w"]
+[ext_resource type="AudioStream" uid="uid://b0amtx7kraahf" path="res://sound/sfx/h_sfx/normal/h_sfx_normal5.wav" id="8_03acr"]
+[ext_resource type="AudioStream" uid="uid://c24q4hi1nn8ef" path="res://sound/sfx/h_sfx/normal/h_sfx_normal6.wav" id="9_fa4vs"]
+[ext_resource type="AudioStream" uid="uid://drlury14wex5" path="res://sound/sfx/h_sfx/normal/h_sfx_normal7.wav" id="10_dyiuj"]
+[ext_resource type="AudioStream" uid="uid://uu8tv62lxs5e" path="res://sound/sfx/h_sfx/normal/h_sfx_normal8.wav" id="11_1k5uq"]
+[ext_resource type="AudioStream" uid="uid://c3oryqbd80kgg" path="res://sound/sfx/h_sfx/normal/h_sfx_normal9.wav" id="12_cisj0"]
+[ext_resource type="AudioStream" uid="uid://bky3ivf31m86m" path="res://sound/sfx/h_sfx/normal/h_sfx_normal10.wav" id="13_i8khw"]
+[ext_resource type="AudioStream" uid="uid://do1ofldcpnhyk" path="res://sound/sfx/h_sfx/normal/h_sfx_normal11.wav" id="14_tgbsp"]
+[ext_resource type="AudioStream" uid="uid://b3fb24cfmvopx" path="res://sound/sfx/h_sfx/normal/h_sfx_normal12.wav" id="15_vc7yx"]
+[ext_resource type="AudioStream" uid="uid://b3vkqj533mcnj" path="res://sound/sfx/h_sfx/normal/h_sfx_normal13.wav" id="16_cxs4i"]
+[ext_resource type="AudioStream" uid="uid://b70px38dego4i" path="res://sound/sfx/h_sfx/normal/h_sfx_normal14.wav" id="17_qisa8"]
+[ext_resource type="AudioStream" uid="uid://7mleb2i03l2w" path="res://sound/sfx/h_sfx/normal/h_sfx_normal15.wav" id="18_nln40"]
+[ext_resource type="AudioStream" uid="uid://dobe6us4e2yqc" path="res://sound/sfx/h_sfx/normal/h_sfx_normal16.wav" id="19_c23xs"]
+[ext_resource type="AudioStream" uid="uid://dpsdjpfw2anqs" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_1.wav" id="20_trqux"]
+[ext_resource type="AudioStream" uid="uid://b6nar5gnot5v4" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_3.wav" id="21_5sdeo"]
+[ext_resource type="AudioStream" uid="uid://dbftsakoacb1l" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_4.wav" id="22_nyy1m"]
+[ext_resource type="AudioStream" uid="uid://bwcwfdkagkcvw" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_5.wav" id="23_aikpl"]
+[ext_resource type="AudioStream" uid="uid://dls6au7m8etu2" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_6.wav" id="24_7kct0"]
+[ext_resource type="AudioStream" uid="uid://cglmowy0guvwd" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_7.wav" id="25_24ywi"]
+[ext_resource type="AudioStream" uid="uid://cstl78nd1sjhr" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_8.wav" id="26_poy8v"]
+[ext_resource type="AudioStream" uid="uid://lyq4xuhkpebi" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_9.wav" id="27_8uywe"]
+[ext_resource type="AudioStream" uid="uid://d2pfmgw4if6t6" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_10.wav" id="28_gipea"]
+[ext_resource type="AudioStream" uid="uid://rut6loei7tmy" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_11.wav" id="29_27f77"]
+[ext_resource type="AudioStream" uid="uid://derxm6wdr85sv" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_12.wav" id="30_lttxt"]
+[ext_resource type="AudioStream" uid="uid://dyipncl4vbkoc" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_13.wav" id="31_17i0s"]
+[ext_resource type="AudioStream" uid="uid://bc3ao2gjqesfq" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_14.wav" id="32_hbs72"]
+[ext_resource type="AudioStream" uid="uid://c41m81q58x3sw" path="res://sound/sfx/h_sfx/hard/h_sfx_hard_15.wav" id="33_mywyy"]
+[ext_resource type="AudioStream" uid="uid://dl3f7gl3widjl" path="res://sound/sfx/h_sfx/fella/in/h_sfx_fella_in1.wav" id="34_uivih"]
+[ext_resource type="AudioStream" uid="uid://bubu5ovo6pjjf" path="res://sound/sfx/h_sfx/fella/in/h_sfx_fella_in2.wav" id="35_txn0d"]
+[ext_resource type="AudioStream" uid="uid://dwwammc5djbjb" path="res://sound/sfx/h_sfx/fella/in/h_sfx_fella_in3.wav" id="36_ou8ds"]
+[ext_resource type="AudioStream" uid="uid://7bufnpypv5f0" path="res://sound/sfx/h_sfx/fella/in/h_sfx_fella_in4.wav" id="37_781bl"]
+[ext_resource type="AudioStream" uid="uid://co12ypkjsbbcj" path="res://sound/sfx/h_sfx/fella/in/h_sfx_fella_in5.wav" id="38_4xr6x"]
+[ext_resource type="AudioStream" uid="uid://ccaes4w5kq3lq" path="res://sound/sfx/h_sfx/fella/out/h_sfx_fella_out1.wav" id="39_sdn8f"]
+[ext_resource type="AudioStream" uid="uid://dtso7268n0o28" path="res://sound/sfx/h_sfx/fella/out/h_sfx_fella_out2.wav" id="40_j1r5f"]
+[ext_resource type="AudioStream" uid="uid://d1hmse7rji4hd" path="res://sound/sfx/h_sfx/fella/out/h_sfx_fella_out3.wav" id="41_twhk0"]
+[ext_resource type="AudioStream" uid="uid://dsgh8u1yxw8ok" path="res://sound/sfx/h_sfx/fella/out/h_sfx_fella_out4.wav" id="42_mpqtk"]
+[ext_resource type="AudioStream" uid="uid://d0mqaqqbjs2t" path="res://sound/sfx/h_sfx/fella/out/h_sfx_fella_out5.wav" id="43_frsw5"]
+[ext_resource type="AudioStream" uid="uid://cvd3xje025nyp" path="res://sound/sfx/h_sfx/fella/out/h_sfx_fella_out6.wav" id="44_2lllp"]
+[ext_resource type="AudioStream" uid="uid://dpfd1rjkvlvyu" path="res://sound/sfx/h_sfx/fella/out/h_sfx_fella_out7.wav" id="45_ru1of"]
+[ext_resource type="AudioStream" uid="uid://c7sl25h1pasaw" path="res://sound/sfx/h_sfx/fella/out/h_sfx_fella_out8.wav" id="46_a5txg"]
+[ext_resource type="AudioStream" uid="uid://c00po7s3wx11e" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_1.wav" id="47_kmend"]
+[ext_resource type="AudioStream" uid="uid://qxeve0j77onx" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_2.wav" id="48_g4l2s"]
+[ext_resource type="AudioStream" uid="uid://b34cvp1k8nemp" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_3.wav" id="49_xpe1w"]
+[ext_resource type="AudioStream" uid="uid://irh33ye51ibx" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_4.wav" id="50_smj0k"]
+[ext_resource type="AudioStream" uid="uid://dxyn7ud1g0fyj" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_5.wav" id="51_d84s2"]
+[ext_resource type="AudioStream" uid="uid://yltbans8tpl2" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_6.wav" id="52_7rp8t"]
+[ext_resource type="AudioStream" uid="uid://b36l3u45o84wm" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_7.wav" id="53_7g8ie"]
+[ext_resource type="AudioStream" uid="uid://bbwrscfxlvgu3" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_8.wav" id="54_pd44k"]
+[ext_resource type="AudioStream" uid="uid://bn8621jqctt5x" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_9.wav" id="55_e1xm1"]
+[ext_resource type="AudioStream" uid="uid://dnq8ukcibiauy" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_10.wav" id="56_snapk"]
+[ext_resource type="AudioStream" uid="uid://d3vrst2p0bliu" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_11.wav" id="57_c2qpw"]
+[ext_resource type="AudioStream" uid="uid://b0krk2t04a6cq" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_12.wav" id="58_6kv7s"]
+[ext_resource type="AudioStream" uid="uid://cndkd4nhgudy5" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_13.wav" id="59_ko5kx"]
+[ext_resource type="AudioStream" uid="uid://c4i4y56o8q4eq" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_14.wav" id="60_iagwx"]
+[ext_resource type="AudioStream" uid="uid://hjyuxbju472k" path="res://sound/sfx/h_sfx/kiss/h_sfx_kiss_15.wav" id="61_44iwf"]
+[ext_resource type="AudioStream" uid="uid://2gcmqthuv4ya" path="res://sound/sfx/h_sfx/hand/h_sfx_hand1.wav" id="62_s4p86"]
+[ext_resource type="AudioStream" uid="uid://bswg2mbptuwir" path="res://sound/sfx/h_sfx/hand/h_sfx_hand2.wav" id="63_ti1am"]
+[ext_resource type="AudioStream" uid="uid://bqtfxqj4lt7qj" path="res://sound/sfx/h_sfx/hand/h_sfx_hand3.wav" id="64_ivatf"]
+[ext_resource type="AudioStream" uid="uid://debnvnn2thb0n" path="res://sound/sfx/h_sfx/hand/h_sfx_hand4.wav" id="65_dtmkn"]
+[ext_resource type="AudioStream" uid="uid://coumaa7qn0uta" path="res://sound/sfx/h_sfx/hand/h_sfx_hand5.wav" id="66_un02n"]
+[ext_resource type="AudioStream" uid="uid://csjjt4fkpfdvv" path="res://sound/sfx/h_sfx/hand/h_sfx_hand6.wav" id="67_3ogxo"]
+[ext_resource type="AudioStream" uid="uid://c2t6ekc8f6ja" path="res://sound/sfx/h_sfx/hand/h_sfx_hand7.wav" id="68_bthir"]
+[ext_resource type="AudioStream" uid="uid://dv56rg73ui82b" path="res://sound/sfx/h_sfx/hand/h_sfx_hand8.wav" id="69_eqol1"]
+[ext_resource type="AudioStream" uid="uid://rgb6x2klew8u" path="res://sound/sfx/h_sfx/hand/h_sfx_hand9.wav" id="70_ss64q"]
+[ext_resource type="AudioStream" uid="uid://3arsh140v11n" path="res://sound/sfx/h_sfx/hand/h_sfx_hand10.wav" id="71_mqmxm"]
+[ext_resource type="AudioStream" uid="uid://cf5v6yyx8lx5a" path="res://sound/sfx/h_sfx/hand/h_sfx_hand11.wav" id="72_wuj1l"]
+[ext_resource type="AudioStream" uid="uid://iaemsbg5og0r" path="res://sound/sfx/h_sfx/hand/h_sfx_hand12.wav" id="73_y7om6"]
+[ext_resource type="AudioStream" uid="uid://bo1c60auh33bf" path="res://sound/sfx/h_sfx/hand/h_sfx_hand13.wav" id="74_oac80"]
+[ext_resource type="AudioStream" uid="uid://0qlry1hv75m1" path="res://sound/sfx/h_sfx/hand/h_sfx_hand14.wav" id="75_6f0m7"]
+[ext_resource type="AudioStream" uid="uid://ba7cwx2d5euyd" path="res://sound/sfx/h_sfx/hand/h_sfx_hand15.wav" id="76_v5kmo"]
+[ext_resource type="AudioStream" uid="uid://dwprt5rn7cmbk" path="res://sound/sfx/h_sfx/hand/h_sfx_hand16.wav" id="77_25cxb"]
+[ext_resource type="AudioStream" uid="uid://c22k5o8gtxoqx" path="res://sound/sfx/h_sfx/cum/h_sfx_cum1.wav" id="78_rpfgv"]
+[ext_resource type="AudioStream" uid="uid://bahg0uauseluo" path="res://sound/sfx/h_sfx/cum/h_sfx_cum2.wav" id="79_wlpdl"]
+[ext_resource type="AudioStream" uid="uid://da0w2a46tutl6" path="res://sound/sfx/h_sfx/cum/h_sfx_cum3.wav" id="80_hk7gf"]
+[ext_resource type="AudioStream" uid="uid://cd41gdyq61qai" path="res://sound/sfx/h_sfx/cum/h_sfx_cum4.wav" id="81_tbjol"]
+[ext_resource type="AudioStream" uid="uid://xhl1ceulxsil" path="res://sound/sfx/h_sfx/cum/h_sfx_cum5.wav" id="82_pvnpy"]
+[ext_resource type="AudioStream" uid="uid://cfev7msou4rx6" path="res://sound/sfx/h_sfx/cum/h_sfx_cum6.wav" id="83_g58xx"]
+[ext_resource type="AudioStream" uid="uid://co1778044lr85" path="res://sound/sfx/h_sfx/cum/h_sfx_cum7.wav" id="84_7lj5e"]
+[ext_resource type="AudioStream" uid="uid://pbu2ju7nktwa" path="res://sound/sfx/h_sfx/cum/h_sfx_cum8.wav" id="85_s2tb1"]
+[ext_resource type="AudioStream" uid="uid://ry6ahpxy6iuj" path="res://sound/sfx/h_sfx/cum/h_sfx_cum9.wav" id="86_uuhmx"]
+[ext_resource type="AudioStream" uid="uid://638lqhrv8xs1" path="res://sound/sfx/h_sfx/cum/h_sfx_cum10.wav" id="87_sdxy5"]
+[ext_resource type="Script" uid="uid://cvw2fn6ui11kt" path="res://scene/component/omt_marker.gd" id="88_wec21"]
+
+[sub_resource type="Animation" id="Animation_xfhf7"]
+length = 1.15
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.23, 0.46, 0.69, 0.92),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_porrn"]
+length = 0.75
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 7, 8, 9]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HSfxAudioStreamPlayer2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_h_sfx_hard"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_qaylv"]
+length = 7.25
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.65, 1.8, 1.95, 2.1, 2.25, 2.4, 2.55, 2.7, 2.9, 3.05, 3.65, 3.95, 4.25, 4.55, 5.25, 5.65),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 7, 8, 5, 7, 8, 5, 7, 8, 5, 7, 8, 5, 7, 8, 5, 7, 8, 9, 5, 6, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HSfxAudioStreamPlayer2D")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.13, 0.4, 0.75, 1, 1.3, 1.65, 2.4, 3.05),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"play_h_sfx_hard"
+}, {
+"args": [],
+"method": &"play_h_sfx_hard"
+}, {
+"args": [],
+"method": &"play_h_sfx_hard"
+}, {
+"args": [],
+"method": &"play_h_sfx_hard"
+}, {
+"args": [],
+"method": &"play_h_sfx_hard"
+}, {
+"args": [],
+"method": &"play_h_sfx_hard"
+}, {
+"args": [],
+"method": &"play_h_sfx_hard"
+}, {
+"args": [],
+"method": &"play_h_sfx_hard"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HSfxAudioStreamPlayer2DSub")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.4, 3.05),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"play_h_sfx_cum"
+}, {
+"args": [],
+"method": &"play_h_sfx_cum"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_fa1ee"]
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [21, 22, 23, 24, 25]
+}
+
+[sub_resource type="Animation" id="Animation_w1xxa"]
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [26, 27, 28, 29, 30]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bh43p"]
+_data = {
+&"scene102_1": SubResource("Animation_xfhf7"),
+&"scene102_2": SubResource("Animation_porrn"),
+&"scene102_3": SubResource("Animation_qaylv"),
+&"scene102_4": SubResource("Animation_fa1ee"),
+&"scene102_5": SubResource("Animation_w1xxa")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xfhf7"]
+radius = 69.93223
+height = 222.12006
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h88pn"]
+radius = 49.97935
+height = 101.995636
+
+[node name="FullAnimSpriteStuckDoor" type="Sprite2D"]
+texture_filter = 1
+texture = ExtResource("1_owmb1")
+hframes = 6
+vframes = 6
+frame = 5
+script = ExtResource("2_ssua5")
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false
+}
+metadata/_aseprite_wizard_source_file_hash_ = "7007147ec191d9ab30295b1791781128"
+
+[node name="GalFull" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bh43p")
+}
+
+[node name="HSfxAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+bus = &"Sfx"
+script = ExtResource("3_yca1i")
+sfx_normal_streams = Array[AudioStream]([ExtResource("4_20fwj"), ExtResource("5_05omy"), ExtResource("6_2ikp8"), ExtResource("7_5132w"), ExtResource("8_03acr"), ExtResource("9_fa4vs"), ExtResource("10_dyiuj"), ExtResource("11_1k5uq"), ExtResource("12_cisj0"), ExtResource("13_i8khw"), ExtResource("14_tgbsp"), ExtResource("15_vc7yx"), ExtResource("16_cxs4i"), ExtResource("17_qisa8"), ExtResource("18_nln40"), ExtResource("19_c23xs")])
+sfx_hard_streams = Array[AudioStream]([ExtResource("20_trqux"), ExtResource("21_5sdeo"), ExtResource("22_nyy1m"), ExtResource("23_aikpl"), ExtResource("24_7kct0"), ExtResource("25_24ywi"), ExtResource("26_poy8v"), ExtResource("27_8uywe"), ExtResource("28_gipea"), ExtResource("29_27f77"), ExtResource("30_lttxt"), ExtResource("31_17i0s"), ExtResource("32_hbs72"), ExtResource("33_mywyy")])
+sfx_fella_in_streams = Array[AudioStream]([ExtResource("34_uivih"), ExtResource("35_txn0d"), ExtResource("36_ou8ds"), ExtResource("37_781bl"), ExtResource("38_4xr6x")])
+sfx_fella_out_streams = Array[AudioStream]([ExtResource("39_sdn8f"), ExtResource("40_j1r5f"), ExtResource("41_twhk0"), ExtResource("42_mpqtk"), ExtResource("43_frsw5"), ExtResource("44_2lllp"), ExtResource("45_ru1of"), ExtResource("46_a5txg")])
+sfx_kiss_streams = Array[AudioStream]([ExtResource("47_kmend"), ExtResource("48_g4l2s"), ExtResource("49_xpe1w"), ExtResource("50_smj0k"), ExtResource("51_d84s2"), ExtResource("52_7rp8t"), ExtResource("53_7g8ie"), ExtResource("54_pd44k"), ExtResource("55_e1xm1"), ExtResource("56_snapk"), ExtResource("57_c2qpw"), ExtResource("58_6kv7s"), ExtResource("59_ko5kx"), ExtResource("60_iagwx"), ExtResource("61_44iwf")])
+sfx_hand_streams = Array[AudioStream]([ExtResource("62_s4p86"), ExtResource("63_ti1am"), ExtResource("64_ivatf"), ExtResource("65_dtmkn"), ExtResource("66_un02n"), ExtResource("67_3ogxo"), ExtResource("68_bthir"), ExtResource("69_eqol1"), ExtResource("70_ss64q"), ExtResource("71_mqmxm"), ExtResource("72_wuj1l"), ExtResource("73_y7om6"), ExtResource("74_oac80"), ExtResource("75_6f0m7"), ExtResource("76_v5kmo"), ExtResource("77_25cxb")])
+sfx_cum_streams = Array[AudioStream]([ExtResource("78_rpfgv"), ExtResource("79_wlpdl"), ExtResource("80_hk7gf"), ExtResource("81_tbjol"), ExtResource("82_pvnpy"), ExtResource("83_g58xx"), ExtResource("84_7lj5e"), ExtResource("85_s2tb1"), ExtResource("86_uuhmx"), ExtResource("87_sdxy5")])
+metadata/_custom_type_script = "uid://k8jhy5qtimfk"
+
+[node name="HSfxAudioStreamPlayer2DSub" type="AudioStreamPlayer2D" parent="."]
+bus = &"Sfx"
+script = ExtResource("3_yca1i")
+sfx_normal_streams = Array[AudioStream]([ExtResource("4_20fwj"), ExtResource("5_05omy"), ExtResource("6_2ikp8"), ExtResource("7_5132w"), ExtResource("8_03acr"), ExtResource("9_fa4vs"), ExtResource("10_dyiuj"), ExtResource("11_1k5uq"), ExtResource("12_cisj0"), ExtResource("13_i8khw"), ExtResource("14_tgbsp"), ExtResource("15_vc7yx"), ExtResource("16_cxs4i"), ExtResource("17_qisa8"), ExtResource("18_nln40"), ExtResource("19_c23xs")])
+sfx_hard_streams = Array[AudioStream]([ExtResource("20_trqux"), ExtResource("21_5sdeo"), ExtResource("22_nyy1m"), ExtResource("23_aikpl"), ExtResource("24_7kct0"), ExtResource("25_24ywi"), ExtResource("26_poy8v"), ExtResource("27_8uywe"), ExtResource("28_gipea"), ExtResource("29_27f77"), ExtResource("30_lttxt"), ExtResource("31_17i0s"), ExtResource("32_hbs72"), ExtResource("33_mywyy")])
+sfx_fella_in_streams = Array[AudioStream]([ExtResource("34_uivih"), ExtResource("35_txn0d"), ExtResource("36_ou8ds"), ExtResource("37_781bl"), ExtResource("38_4xr6x")])
+sfx_fella_out_streams = Array[AudioStream]([ExtResource("39_sdn8f"), ExtResource("40_j1r5f"), ExtResource("41_twhk0"), ExtResource("42_mpqtk"), ExtResource("43_frsw5"), ExtResource("44_2lllp"), ExtResource("45_ru1of"), ExtResource("46_a5txg")])
+sfx_kiss_streams = Array[AudioStream]([ExtResource("47_kmend"), ExtResource("48_g4l2s"), ExtResource("49_xpe1w"), ExtResource("50_smj0k"), ExtResource("51_d84s2"), ExtResource("52_7rp8t"), ExtResource("53_7g8ie"), ExtResource("54_pd44k"), ExtResource("55_e1xm1"), ExtResource("56_snapk"), ExtResource("57_c2qpw"), ExtResource("58_6kv7s"), ExtResource("59_ko5kx"), ExtResource("60_iagwx"), ExtResource("61_44iwf")])
+sfx_hand_streams = Array[AudioStream]([ExtResource("62_s4p86"), ExtResource("63_ti1am"), ExtResource("64_ivatf"), ExtResource("65_dtmkn"), ExtResource("66_un02n"), ExtResource("67_3ogxo"), ExtResource("68_bthir"), ExtResource("69_eqol1"), ExtResource("70_ss64q"), ExtResource("71_mqmxm"), ExtResource("72_wuj1l"), ExtResource("73_y7om6"), ExtResource("74_oac80"), ExtResource("75_6f0m7"), ExtResource("76_v5kmo"), ExtResource("77_25cxb")])
+sfx_cum_streams = Array[AudioStream]([ExtResource("78_rpfgv"), ExtResource("79_wlpdl"), ExtResource("80_hk7gf"), ExtResource("81_tbjol"), ExtResource("82_pvnpy"), ExtResource("83_g58xx"), ExtResource("84_7lj5e"), ExtResource("85_s2tb1"), ExtResource("86_uuhmx"), ExtResource("87_sdxy5")])
+metadata/_custom_type_script = "uid://k8jhy5qtimfk"
+
+[node name="OMTMarker11" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 77)
+rotation = 1.5800501
+shape = SubResource("CapsuleShape2D_xfhf7")
+script = ExtResource("88_wec21")
+npc_type = 1
+scene_name = "102"
+h_type = 1
+
+[node name="OMTMarker12" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -69.00001)
+rotation = 1.5800501
+shape = SubResource("CapsuleShape2D_h88pn")
+script = ExtResource("88_wec21")
+npc_type = 1
+scene_name = "102"
+h_type = 7

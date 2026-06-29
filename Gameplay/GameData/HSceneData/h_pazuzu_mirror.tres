@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://cn0emv674xgdn"]
+
+[ext_resource type="Texture2D" uid="uid://d01otgoclqnok" path="res://resources/ui/EventCoverImage/Hpreview_pazuzu_1.png" id="1_ay8nd"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="2_23qke"]
+
+[resource]
+script = ExtResource("2_23qke")
+scene_description = "SCENE_COWGIRL"
+scene_name = "scene2"
+dialog_title = "pazuzu_mirror"
+stage_name = "stage_d_mirror"
+partner = 3
+preview_texture = ExtResource("1_ay8nd")
+is_position = Vector2(1054, 286)
+unlock_chapter = 5
+ahen_keys = PackedStringArray("SCENE_PAZUZU_AHEN_6", "SCENE_PAZUZU_AHEN_7", "SCENE_PAZUZU_AHEN_8", "SCENE_PAZUZU_AHEN_9", "SCENE_PAZUZU_AHEN_10")

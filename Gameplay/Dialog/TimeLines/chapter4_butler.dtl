@@ -1,0 +1,172 @@
+join butler right
+[music path="res://sound/music/loop/mellow.ogg" fade="1.0" volume="0.0" bus="Music"]
+butler: 안녕하십니까. 즐거운 탐색 되셨나요? #id:213
+butler: 마침 새로운 상품을 입고하였습니다. 확인해 보시겠습니까? #id:214
+- 새로 들어온 물품들을 보여 줘. #id:215
+do TransitionScreen.dialog_transition()
+join reina left
+reina: ...저희가 원하는 건 없어요. #id:216
+leave reina
+join mai left
+mai: 그러게.. 저기, 혹시 물품 중에 핸드.. #id:217
+leave mai
+join reina left
+emotion reina Shy
+reina: 잠시만요 마이 씨! 그 전에.. #id:218
+leave butler
+update reina leftmost [move_time="0.5"]
+join mai center [mirrored="true"]
+emotion mai Dislike
+mai: 응? 왜 그래? #id:219
+emotion reina Serious
+reina: 분명 집사는 코니알의 부하.. 비슷한 거겠죠? 그렇다면 지갑이라던가 핸드폰에 관한 얘기를 꺼내도 될지.. #id:21a
+- 코니알의 귀에 들어가면 위험해. #id:21b
+emotion mai Flat
+mai: 그러네.. 선수를 뺏기면 파주주를 들여올 방법이 없어져. #id:21c
+emotion reina Idle
+reina: 적어도 지갑과 핸드폰이 있는 범위를 줄일 수 있으면 좋을 텐데.. #id:21d
+- 직접적으로 물어보는 건 피해야 할 거 같아. #id:21e
+- 집사의 관심사를 통해 정보를 캐내자. #id:21f
+reina: 관심사라면.. 물건을 모으고 마력을 주입하는 취미 말이죠? #id:220
+emotion mai Idle
+mai: 몇번이고 모은 물건들이 불태워 지는데도 못 고친 버릇이라고 했어. #id:221
+reina: 그리고 물건에 마력이 주입될 확률은 낮은 편이라고.. #id:222
+- 그렇다면 마력을 주입하는데 실패한 물건은.. #id:223
+emotion reina Serious
+reina: 버리는 걸 매우 아까워 하는 성격 같으니.. 이 전차 안 어딘가에 모아놓지 않았을까요? #id:224
+reina: 방금 상품들을 확인했을 땐 핸드폰과 지갑은 없었으니까 분명 그곳에 있을 거에요. #id:225
+emotion mai Dislike
+mai: 그치만.. 전차 내부라면 코니알이 이미 알고 있을 거 같은데.. #id:226
+emotion reina Idle
+reina: 집사가 잡동사니를 모으는 걸 코니알은 탐탁치 않아 해요. 집사도 그걸 알고 있죠. #id:227
+reina: 아마 집사도 코니알이 눈치채지 못하는 곳에 숨겨서 몰래 모으고 있을 가능성이 커요. #id:228
+mai: 그렇구나! 집사에게 그 위치를 알아내면 되는 거지? #id:229
+- 나한테 생각이 있어. #id:22a
+leave --All--
+[wait time="0.5"]
+do TransitionScreen.dialog_transition()
+do CutSceneManager.show_cutscene("CutsceneTalkButler")
+[style name="fullscene_style"]
+# #join butler rightmost 
+[music path="res://sound/music/loop/easygoing.ogg" fade="0.0" volume="0.0" bus="Music"]
+butler: 안녕하십니까. 무언가 얘기를 나누시던데.. #id:22b
+join reina leftmost
+emotion reina Smile
+reina: 아, 티켓으로 교환할 상품들을 상의했어요. 좋은 물건들이 많으니까요. #id:22c
+butler: 감사합니다. 만족하셨으니 다행이네요. #id:22d
+leave reina
+join mai leftmost
+emotion mai Flat
+mai: 있잖아. 이 물건들 외에 다른 종류는 없어? #id:22e
+butler: 다른 종류라면? #id:22f
+emotion mai Dislike
+mai: 예를 들어.. 어디든지 이동할 수 있는 문이라던가.. 시간을 멈추는 타이머라던가.. 역시 그 정도는 무리겠지? #id:230
+butler: ..그건 역시 제 능력으로는.. 지금으로썬 힘들다고 생각합니다. #id:231
+mai: 지금으로썬? 불가능은 아니란 거야? #id:232
+butler: 희박하지만 계속해서 마력을 주입하다보면 하나쯤은.. #id:233
+mai: 으음~ 그렇구나.. 솔직히 말하면 여기 물건들중엔 맘에 드는 게 없어서. #id:234
+butler: 그.. 그렇습니까.. #id:235
+emotion mai Smile
+update mai [extra_data="show Etc/Sweat"]
+mai: 가격도 너무 비싸고. 그에 비해 효과는 약한 걸. 역시 잡동사니여서 어쩔 수 없는 걸까나? 하핫! #id:236
+mai: (..이렇게 말하면 된다고 했지?) #id:237
+butler: .... #id:238
+butler: 여러분들은 모르시겠지만.. 이 상품들을 내놓기까지 뒤에선 수많은 실패작들이 존재합니다. #id:239
+butler: 만족시켜드리지 못해 죄송하지만.. 이 물건들은 그중 엄선된 상품으로써 충분히 그 역할을 다 할 것이라 생각합니다만.. #id:23a
+leave mai
+join reina leftmost
+reina: 마법을 주입하는 건.. 성공 확률이 상당히 낮다고 했죠? #id:23b
+butler: 저는 코니알님만큼 마력에 익숙하지 않으니까요. #id:23c
+emotion reina Serious
+reina: 그렇다면.. 상품화가 안 된.. 실패작들은 어떻게 한 거죠? #id:23d
+butler: 그건.. 모두 폐기하였습니다. #id:23e
+reina: 정말인가요? #id:23f
+butler: 네. 코니알 님께서 잡동사니 더미가 한번 더 눈앞에 보이기만 하면 저까지 함께 불태워 버린다 하셨기에.. #id:240
+emotion reina Idle
+reina: 그렇군요.. 아쉽게 됐네요. 한번 보고 싶었거든요. 집사 님의 노력의 산물.. #id:241
+butler: ..... #id:242
+emotion reina Smile
+reina: 분명 집사 씨가 모아 온 것들은 코니알에겐 쓰레기로밖에 보이지 않을 테지만. 저희 같은 인간에게는 충분히 전해지거든요. #id:243
+emotion reina Shy
+reina: 한번의 성공을 위해 노력해온 과정들. 그것을 확인하고 싶었어요. #id:244
+butler: 그치만.. 그건. #id:245
+emotion reina Serious
+reina: 아무리 실패작이라 해도 애착이 생기는 법이에요. 특히 집사님에게는. #id:246
+reina: ..폐기하지 않았죠? 잡동사니들. #id:247
+butler: ..그게.. 어째서 그것들에 관심을 가지시는 건지 모르겠습니다. 아무 쓸모도 없어진 것들입니다만. #id:248
+- 확인해 보고 싶어. #id:249
+	- 집사의 컬렉션. #id:24a
+butler: ..! #id:24b
+butler: 컬렉션.. #id:24c
+do CutSceneManager.hide_cutscene("CutsceneTalkButler")
+[style]
+leave reina
+join mai left
+join butler right
+mai: (..통한 거 같은데?) #id:24d
+butler: ..... #id:24e
+butler: 그 장소는 확실히 이 전차 어딘가에 있습니다. #id:24f
+emotion mai Serious
+mai: 역시! #id:250
+butler: 하지만 역시 알려 드릴 수 없습니다. 제.. '컬렉션'들이 전차 칸 하나를 차지한다는 사실을 코니알님이 알게 되면. #id:251
+butler: 이번에야말로 꼼짝없이 화형될 것이기 때문입니다. 그것들과 함께.. #id:252
+leave mai
+join reina left
+emotion reina Serious
+reina: 그건 걱정하지 않으셔도 돼요. 저희도 집사님의 컬렉션이 불타는 건 원하지 않으니까요. #id:253
+leave reina
+join mai left
+mai: 나도 집사랑 더 친해지고 싶어. 어쩌면 우리가 그 컬렉션을 지켜낼 수 있게 도울 수도 있잖아? #id:254
+butler: 여러분들이 코니알님의 성격을 이길 수 없을 거 같습니다만. #id:255
+butler: ..아니. 역시 죄송합니다. 직접적으로 알려 드릴 수는 없습니다. #id:256
+emotion mai Surprised
+mai: 이럴 수가.. #id:257
+butler: 대신.. '그 곳'을 찾아갈 수 있는 서비스를 제공하겠습니다. #id:258
+leave mai
+join reina left
+emotion reina Suprised
+reina: 정말인가요? #id:259
+butler: 네. 뿐만 아니라 지금까지 개방된 전차 칸들을 마음대로 지정해 이동이 가능해집니다. #id:25a
+reina: 그런.. 대단한 능력이에요. 지금까지는 무작위로 탐색을 나섯는데.. #id:25b
+- 그 정도의 능력이면.. 무척 비싸겠네. #id:25c
+butler: 주입에 성공한다면 적어도 티켓 2000개의 값어치를 할 테죠. 제 기술을 존중하신다면 충분히 지불할 수 있는 비용일 것입니다. #id:25d
+emotion reina Serious
+reina: 티켓 2000개.. 모을 수밖에 없네요. #id:25e
+butler: 그리고 여러분들이 지금까지 탐색한 전차의 정보들이 필요합니다. #id:25f
+leave reina
+join mai left
+mai: 정보? 그런 건 일일히 기록하지 않았는데.. #id:260
+butler: 네, 그럴 필요 없습니다. 여러분들이 지니고 있던 물품들에 노선의 정보들이 새겨져 있을 테니까요. #id:261
+butler: 제가 모은 잡동사니가 아닌, 그 물품에 마력을 주입하면 됩니다. 충분한 기능을 하려면 적어도 '20개'의 이변을 감지해야 합니다. #id:262
+emotion mai Flat
+mai: 20개라.. 지금까지 얼마나 찾아냈지? #id:263
+butler: 수가 부족해도 교환샵의 상품들을 이용하면 금방 충족할 수 있으실 겁니다. #id:264
+- 티켓 2000개와 이변 20개.. #id:265
+leave mai
+join reina left
+reina: ..쉽지는 않겠지만 열심히 해봐야겠어요. #id:266
+butler: 그 장소를 찾는 방법은 모든 준비를 마치신 후에 설명해 드리지요. 그때까진 지금처럼 탐색을 즐겨 주십시오. #id:267
+butler: 탐지한 이변의 갯수는 저에게 말을 걸어주시면 알려 드리겠습니다. 또 도움이 필요하시면 말씀해주시길. #id:268
+emotion reina Smile
+reina: 알겠습니다. 고마워요. 집사 님. #id:269
+- 도와줘서 고마워. #id:26a
+butler: ..저야말로. 인간들에게 응원을 받을 줄은 몰랐습니다. 코니알님은 그것들을 그저 쓰레기라고만 생각하셨으니까요.. #id:26b
+butler: 아무튼.. 여기 있는동안 좀 더 즐거우시길 바랍니다. #id:26c
+leave butler
+[clear time="1.0" text="false" portraits="false" background="false" positions="false" style="false"]
+emotion reina Shy
+reina: 집사 씨.. #id:26d
+join mai right [mirrored="true"]
+mai: 생각보다 나쁜 성격은 아닌 거 같아. #id:26e
+- 코니알의 밑에서 고생이 많아 보여. #id:26f
+reina: 비슷한 처지인 회사원으로써 응원하고 싶어져요. #id:270
+mai: ..그럼 일단 작전대로 된 건가? #id:271
+- 분실물들이 전차 안에 있다는 것과 #id:272
+- 그곳을 찾아 낼 수 있는 방법을 알았으니까. #id:273
+emotion reina Idle
+reina: 새로운 목표가 생긴 셈이네요. 티켓 2000개와 이변 20개.. 모두 모으면 집사 씨에게 말을 걸어 보죠. #id:274
+emotion mai Flat
+mai: 파주주.. 그때까지 잘 버틸 수 있겠지? #id:275
+- 어서 서둘러야겠어. #id:276
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_add_read_history("chapter4_butler")

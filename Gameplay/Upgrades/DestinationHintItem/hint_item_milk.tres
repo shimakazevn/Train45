@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ShopHint" load_steps=4 format=3 uid="uid://bc37etpo5b2ug"]
+
+[ext_resource type="Resource" uid="uid://c3jrr2vlonlek" path="res://Gameplay/GameData/RouteHint/hint_milk.tres" id="1_8l8eo"]
+[ext_resource type="Texture2D" uid="uid://den1bgbepdflc" path="res://resources/ui/icons/hint_icon_2.png" id="2_tumer"]
+[ext_resource type="Script" uid="uid://cgvgo5syo8hpt" path="res://Gameplay/Upgrades/DestinationHintItem/shop_hint_item.gd" id="2_v2pmm"]
+
+[resource]
+script = ExtResource("2_v2pmm")
+hint_info = ExtResource("1_8l8eo")
+icon = ExtResource("2_tumer")
+id = "milk"
+price = Array[int]([1000])
+max_quantity = 1
+cost = 0
+name = "DESTINATION_HINT_MILK_TITLE"
+description = "HINT_ITEM_WITH_REINA"

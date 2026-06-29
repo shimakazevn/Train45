@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://buqs5f8gt5ofg"]
+
+[ext_resource type="Texture2D" uid="uid://c4p24fasyrxv2" path="res://resources/ui/icons/icons18.png" id="1_tiy4s"]
+[ext_resource type="Script" uid="uid://mkaxgrunbvhi" path="res://Gameplay/Upgrades/ability_upgrade.gd" id="2_mm0ft"]
+
+[resource]
+script = ExtResource("2_mm0ft")
+icon = ExtResource("1_tiy4s")
+id = "collect_area_up"
+price = Array[int]([330])
+max_quantity = 1
+cost = 8
+name = "COLLECT_AREA_UP"
+description = "COLLECT_AREA_UP_DESCRIPTION"

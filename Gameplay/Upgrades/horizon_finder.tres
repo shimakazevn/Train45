@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityGet" load_steps=4 format=3 uid="uid://djyvitr6c6ene"]
+
+[ext_resource type="PackedScene" uid="uid://dv7enmc8nnwjk" path="res://Gameplay/Upgrades/horizon_finder_controller.tscn" id="1_f3eqi"]
+[ext_resource type="Texture2D" uid="uid://bvck31fh5nbpb" path="res://resources/ui/icons/icons9.png" id="2_7d3n0"]
+[ext_resource type="Script" uid="uid://f3crvy5px2r7" path="res://Gameplay/Upgrades/ability_get.gd" id="3_ct02k"]
+
+[resource]
+script = ExtResource("3_ct02k")
+ability_controller_scene = ExtResource("1_f3eqi")
+icon = ExtResource("2_7d3n0")
+id = "horizon_finder"
+price = Array[int]([700])
+max_quantity = 1
+cost = 14
+name = "HORIZON_FINDER"
+description = "HORIZON_FINDER_DESCRIPTION"

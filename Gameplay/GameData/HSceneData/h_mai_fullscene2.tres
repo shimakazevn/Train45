@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://dsvjk145dlf02"]
+
+[ext_resource type="Texture2D" uid="uid://bd4jygab66l66" path="res://resources/ui/EventCoverImage/Hpreview_mai_11.png" id="1_v8c57"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="2_nvqd6"]
+
+[resource]
+script = ExtResource("2_nvqd6")
+is_disabled = false
+main_love_event = true
+scene_description = "SCENE_FULL_DOGGY"
+scene_name = "scene103"
+dialog_title = "e_mai_full_doggy"
+stage_name = "stage_48"
+partner = 1
+love_ability = 7
+preview_texture = ExtResource("1_v8c57")
+is_position = Vector2(0, 0)
+unlock_chapter = 0
+ahen_keys = PackedStringArray("SCENE_MAI_AHEN_1", "SCENE_MAI_AHEN_2", "SCENE_MAI_AHEN_3", "SCENE_MAI_AHEN_4", "SCENE_MAI_AHEN_5", "SCENE_MAI_AHEN_6", "SCENE_MAI_AHEN_7", "SCENE_MAI_AHEN_8", "SCENE_MAI_AHEN_9", "SCENE_MAI_AHEN_10")

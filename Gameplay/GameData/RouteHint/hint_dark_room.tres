@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://bpucglvjfhhqp"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_ukm8l"]
+[ext_resource type="Texture2D" uid="uid://bqiisc0k08fe4" path="res://resources/ui/icons/hint_icon_3.png" id="2_k6kre"]
+
+[resource]
+script = ExtResource("1_ukm8l")
+id = "dark_room"
+title = "DESTINATION_HINT_DARK_ROOM_TITLE"
+texture = ExtResource("2_k6kre")
+description = "DESTINATION_HINT_DARK_ROOM_INFO"
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

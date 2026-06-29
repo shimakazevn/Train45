@@ -1,0 +1,117 @@
+[gd_scene load_steps=20 format=3]
+
+[ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
+[ext_resource type="PackedScene" uid="uid://xm3jf22phtyd" path="res://scene/component/anomaly_event_component.tscn" id="6_gvche"]
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="9_62jqa"]
+[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_2kt0v"]
+[ext_resource type="Texture2D" uid="uid://brupkv5fmw1gu" path="res://resources/anomaly/anomaly_uppershirt.png" id="10_e1mfo"]
+[ext_resource type="Resource" uid="uid://dsvjk145dlf02" path="res://Gameplay/GameData/HSceneData/h_mai_fullscene2.tres" id="12_vlow7"]
+[ext_resource type="PackedScene" uid="uid://lg6623mk53cw" path="res://scene/component/teleport_component.tscn" id="26_1r73j"]
+[ext_resource type="Texture2D" uid="uid://du0ewe3ii4vjn" path="res://resources/bg_train_wall.png" id="27_50oqc"]
+[ext_resource type="PackedScene" uid="uid://dnc5rb3rrpan3" path="res://scene/UI/clear_text.tscn" id="31_82fnd"]
+[ext_resource type="PackedScene" uid="uid://bxk6xej0qykv7" path="res://scene/component/stage_handler.tscn" id="32_gilft"]
+[ext_resource type="Script" uid="uid://dsomb6g1hlvem" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="33_50oqc"]
+[ext_resource type="Script" uid="uid://dxlagu4dbag77" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="34_w1jdk"]
+[ext_resource type="PackedScene" uid="uid://bvt4gj56eqbp3" path="res://Gameplay/train_standard.tscn" id="35_iyww2"]
+[ext_resource type="PackedScene" uid="uid://djbwoq5ul6rbk" path="res://scene/game_object/player/player.tscn" id="38_dr17e"]
+[ext_resource type="PackedScene" uid="uid://dsch54fxvgg58" path="res://Gameplay/door.tscn" id="41_i5sgb"]
+
+[sub_resource type="Resource" id="Resource_7xtoy"]
+script = ExtResource("34_w1jdk")
+duration = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v61mu"]
+size = Vector2(1920, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3yiyt"]
+size = Vector2(36.5, 39)
+
+[node name="Stage_48" type="Node2D" node_paths=PackedStringArray("player", "current_npc", "doors", "teleports")]
+script = ExtResource("1_5frgf")
+player = NodePath("TrainStandard/Entity/Player")
+current_npc = NodePath("TrainStandard/Entity/CurrentNPC")
+doors = [NodePath("frontDoor"), NodePath("Exit")]
+teleports = [NodePath("TeleportComponent")]
+stage_type = 1
+
+[node name="TeleportComponent" parent="." instance=ExtResource("26_1r73j")]
+entry_direction = 3
+path_to_new_scene = "res://Gameplay/Levels/base_00.tscn"
+entry_door_name = "TeleportComponent"
+
+[node name="ClearText" parent="." instance=ExtResource("31_82fnd")]
+
+[node name="StageHandler" parent="." instance=ExtResource("32_gilft")]
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+position = Vector2(321, 180)
+script = ExtResource("33_50oqc")
+priority = 10
+follow_mode = 2
+follow_target = NodePath("../TrainStandard/Entity/Player")
+snap_to_pixel = true
+tween_resource = SubResource("Resource_7xtoy")
+follow_offset = Vector2(0, -150)
+follow_damping = true
+follow_damping_value = Vector2(0.3, 0.3)
+draw_limits = true
+limit_target = NodePath("../CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(961, 180)
+shape = SubResource("RectangleShape2D_v61mu")
+
+[node name="TrainStandard" parent="." instance=ExtResource("35_iyww2")]
+
+[node name="Anomaly" type="Area2D" parent="TrainStandard"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("9_62jqa")
+bubble = ExtResource("10_2kt0v")
+
+[node name="AnomalyCollision" type="CollisionShape2D" parent="TrainStandard/Anomaly"]
+unique_name_in_owner = true
+z_index = 30
+position = Vector2(589, 28)
+shape = SubResource("RectangleShape2D_3yiyt")
+
+[node name="Sprite2D" type="Sprite2D" parent="TrainStandard/Anomaly"]
+z_index = 2
+texture_filter = 1
+position = Vector2(578, 11)
+texture = ExtResource("10_e1mfo")
+centered = false
+
+[node name="AnomalyEventComponent" parent="TrainStandard/Anomaly" instance=ExtResource("6_gvche")]
+position = Vector2(630, 49)
+h_scene_info = ExtResource("12_vlow7")
+
+[node name="Entity" type="Node2D" parent="TrainStandard"]
+y_sort_enabled = true
+
+[node name="CurrentNPC" parent="TrainStandard/Entity" instance=ExtResource("6_ajpmm")]
+position = Vector2(993, 326)
+
+[node name="Player" parent="TrainStandard/Entity" instance=ExtResource("38_dr17e")]
+z_index = 3
+position = Vector2(43, 338)
+
+[node name="frontDoor" parent="." instance=ExtResource("41_i5sgb")]
+position = Vector2(-24, 356)
+entry_direction = 1
+transition_type = "zelda"
+push_distance = 100
+
+[node name="Exit" parent="." instance=ExtResource("41_i5sgb")]
+position = Vector2(2016, 352)
+entry_direction = 3
+transition_type = "zelda"
+push_distance = 100
+path_to_new_scene = "res://Gameplay/Levels/event_OL_00.tscn"
+entry_door_name = "frontDoor"
+
+[node name="BgTrainWall" type="Sprite2D" parent="."]
+texture = ExtResource("27_50oqc")
+centered = false

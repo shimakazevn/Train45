@@ -1,0 +1,209 @@
+# #jump test
+# jump sfx_test
+join konial center
+[music path="res://sound/music/loop/easygoing.ogg" fade="5.0" volume="0.0" bus="Music"]
+konial: 딩동댕~ #id:13d9
+konial: 정답이야! 어렵지 않지? 실전에서는 실패하면 시작 지점으로 돌아온다는 걸 기억해! #id:13da
+update konial 1 [move_time="0.5"]
+join reina 3 [animation="Fade In Up" wait="true" mirrored="true"]
+emotion reina Serious
+reina: 이게 정말 전차 수리에 도움이 되는 걸까요?.. #id:13db
+emotion konial Smile
+konial: 그럼! 당연하지. 그건 그렇고. 탐색하는 동안 기분이 어땠어? 두근두근 한다거나. 숨이 찬다거나? #id:13dc
+emotion reina Idle
+reina: ..? 딱히 없었습니다만.. 그정도로 힘든 일은 아니에요. #id:13dd
+leave reina
+join mai 3 [animation="Fade In Up" wait="true" mirrored="true"]
+emotion mai Laugh
+mai: 난 재밌었어! 보물찾기 하는 느낌이네. #id:13de
+emotion konial Dislike
+konial: 그래에?.. [br] ..역시 두고 봐야 하나? #id:13df
+emotion mai Idle
+mai: 저기, 역장! 아까 말한 선물 말인데.. #id:13e0
+emotion konial Idle
+konial: 아, 그래, 분명 약속했지. #id:13e1
+join talk_asset center [z_index="100" extra_data="set Images/KonChan"]
+konial: ..자! 45번 전차의 마스코트, 코니알 인형! 아직 시제품이지만. #id:13e2
+mai: 꺄아 귀여워! #id:13e3
+konial: 여기! 레이나에게도 줄게! #id:13e4
+leave mai
+join reina 3 [animation="Fade In Up" wait="true" mirrored="true"]
+emotion reina Smile
+update reina [extra_data="show Etc/Sweat"]
+reina: 아.. 감사합니다. ..보통 마스코트의 모델을 실제 사람으로 하진 않을텐데.. #id:13e5
+konial: 어째서? 이렇게나 귀엽고 섹시한 역장이 있는데, 달리 어떤 생물을 모델로 쓴단 말이야? #id:13e6
+- 엄청난 자기애.. #id:13e7
+konial: 그리고 너에겐.. 내가 직접 '사용법'을 알려 줄게! #id:13e8
+leave talk_asset
+- 사용법? 나한테? #id:13e9
+update reina [extra_data="hide Etc/Sweat"]
+emotion reina Idle
+reina: 이 인형 말인가요? 푹신푹신한 거 외에 다른 용도가 있나요? #id:13ea
+leave reina
+join mai 3 [animation="Fade In Up" wait="true" mirrored="true"]
+label sfx_test
+mai: 그러고 보니, 인형 밑에 무언가 마개가 있네. #id:13eb
+konial: 발견했구나? 그걸 뽑으면.. #id:13ec
+[sound path="res://sound/sfx/pop_kon-chan.mp3" volume="5.0" bus="Sfx"]
+뽁! #id:13ed
+leave mai
+join reina 3 [animation="Fade In Up" wait="true" mirrored="true"]
+emotion reina Suprised
+reina: 꺅! ..끈적한 게 흘러 나오고 있어요! #id:13ee
+konial: 키히히.. 그럼 바로 써 볼까? #id:13ef
+[clear time="3.0" text="false" portraits="false" background="false" positions="false" style="false"]
+leave --All--
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_anim_change_this_npc("scene1_1", {ch.konial})
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(2, 100)
+코니알은 나를 그대로 잡아 자리에 앉힌다. #id:13f0
+엄청난 힘에 그대로 바지가 벗겨지고.. #id:13f1
+찌거억.. #id:13f2
+!! #id:13f3
+konial: 으응~ 순식간에 들어가네. 좋은 윤활제를 사용하기 잘했어. #id:13f4
+join reina 4 [animation="Fade In Up" wait="true" mirrored="true" extra_data="show Etc/Blur"]
+emotion reina Suprised
+reina: ..?! 이건.. #id:13f5
+join mai 0 [animation="Fade In Up" wait="true"]
+emotion mai Dislike
+mai: ..와아. #id:13f6
+konial: 그래, 단순한 인형이 아니야. 보시는 대로! 휴대용 오나홀! #id:13f7
+찌걱 찌걱.. #id:13f8
+konial: 이름은 콘쨩 알파. 내부에 러브젤이 포함돼 있어 간편하게 쓸 수 있지. #id:13f9
+reina: 이.. 이런 기념품을 나눠줘도 되는 건가요? #id:13fa
+reina: 그리고.. 어째서 당연하단듯 시연을.. #id:13fb
+- 히.. 힘이 너무 강해서 뿌리칠 수가 없어.. #id:13fc
+do GameEvents.emit_anim_change_this_npc("scene1_2", {ch.konial})
+슥.. 슥.. #id:13fd
+konial: 으으응~ 몸에 힘 풀라고, 온 감각은 자지에 집중해. #id:13fe
+konial: 그리고 특별히 내 질주름을 99프로 이상 구현해냈지. 그 감상은? #id:13ff
+슥슥.. 슥.. 슥.. #id:1400
+konial: 키히히. 표정만 봐도 알겠네. 너희들도 잘 보고 있지? #id:1401
+emotion reina Shy
+reina: 이..이런 건.. 괜찮은 건지.. #id:1402
+update mai [extra_data="show Etc/Sweat"]
+mai: ..엄청 기분 좋아 보이네.. 표정 좀 봐. #id:1403
+reina: 이런 용품을 나눠 줬다는 건.. 그런.. 컨셉의 비디오 촬영? #id:1404
+mai: 야한 컨셉 기획물 같은거 말이지? 전차에서 그런게 가능한가? #id:1405
+emotion mai Serious
+mai: ..어쨌든 이 인형도 오나홀.. 인 거지? #id:1406
+reina: ..네, 여자인 저희는 아무래도.. 가 아니고..! ..거기 둘은 언제까지 문질문질 하고 있으신 건가요..? #id:1407
+konial: 그치만~ 아직도 이렇게나 크고 단단한걸~ 시원하게 빼 주지 않으면 클레임 걸릴지도 모르니까! #id:1408
+konial: 그리고 너희들에게 준 인형은 다른 타입이니 걱정할 필요 없어~ 밑의 마개를 빼고 안쪽부터 까뒤집어볼래? #id:1409
+emotion mai Idle
+update mai [extra_data="hide Etc/Sweat"]
+mai: 뒤집어? 손가락을 넣고.. 이렇게 말인가? #id:140a
+emotion reina Idle
+reina: 안쪽이 끈적해요.. 그치만 단단한 거 같은.. 앗! #id:140b
+join talk_asset center [z_index="100" extra_data="set Images/Dildo"]
+... #id:140c
+emotion mai Surprised
+mai: 자.. 자지가 됐어! 하하핫! 웃긴다 이거! #id:140d
+emotion reina Serious
+reina: 마이 양, 소리가 커요.. #id:140e
+konial: 그건 콘짱 베타! 휴대용 딜도야. [br]휴대용이라 작아 보이지만 전자레인지에 돌리면 30센티까지 커져. #id:140f
+konial: 남녀 구분없이 이정도로 섬세한 서비스를 제공하고 있다는 사실! #id:1410
+leave --All--
+konial: 하지만 이건 환영 선물일 뿐이야. 너희들이 나를 도와준다면 더 좋은 보상이 있겠지? #id:1411
+konial: 이렇게.. 내 질을 본딴 오나홀로.. 본인이 직접 흔들어 주는 것보다 좋은 거.. 어떤 건지 상상할 수 있겠어? #id:1412
+konial: 키히히.. 불알도 잔뜩 올라왔네. 이제 갈 거 같아? #id:1413
+konial: 응.. 언제든 싸 버려. 질 주름 하나하나. 나와 똑같게 재현한 내부니까. #id:1414
+konial: 속도와 리듬도, 섹스할 때와 같은 느낌으로 신경쓰고 있으니까. 이건 이미 섹스와 다를게 없는걸. #id:1415
+konial: 더 놀라운 건 감각도 나와 연결돼 있다는 거야. 믿겨져? 오나홀을 통해.. 자지의 굵기와 온도가 나에게 전부 전해지고 있어.. #id:1416
+konial: 움찔거리는 걸 보니 곧 한계구나? 슬슬.. 페이스를 올려 줄게. #id:1417
+join reina 4 [animation="Fade In Up" wait="true" mirrored="true"]
+join mai 0 [animation="Fade In Up" wait="true"]
+reina: ...꿀꺽. #id:1418
+update mai [extra_data="show Etc/Blur"]
+emotion mai Dislike
+mai: ... #id:1419
+mai: (스윽..) #id:141a
+mai: (문질문질) #id:141b
+reina: ... ..?? #id:141c
+emotion reina Suprised
+reina: 아사쿠라 씨!? 뭘 문지르고 있는 건가요? #id:141d
+emotion mai Surprised
+mai: !!어, 어? ..아 아니! 이런 장난감 딜도는 처음 받아 보니까! #id:141e
+mai: 갑자기 야한 기분이 들거나 한게 아니라고! 그냥.. 비비면 어떤 느낌일까 궁금해서..! #id:141f
+emotion reina Shy
+reina: ..으으 아무리 그래도 전차 안에서는 조금.. #id:1420
+emotion mai Dislike
+mai: ..그 그치만 뭔가 기분이 이상해지는걸. 이런 평범한 전차 안에서 이 풍경은.. #id:1421
+mai: 그리고 레이나 너도.. 쟤들한테서 시선을 때지 못하잖아! 숨도 거칠어져서는.. #id:1422
+reina: 으읏! 그런 게 아니에요..! 이 상황에선 누구라도.. #id:1423
+emotion mai Smile
+mai: 헤헤. 부끄러워 하긴.. 귀엽네. 레이나. #id:1424
+emotion reina Angry
+reina: 보..보지 마세요.. #id:1425
+label test #id:193d
+reina: 하지만 확실히.. 뭔가 이상해요. 이 전차.. #id:1426
+leave --All-- [animation="Fade Out" wait="true"]
+set {npc.type} = 2
+[signal arg="scene1"]
+do CutSceneManager.show_cutscene("CutsceneKonialOnahole")
+[style name="fullscene_style"]
+konial: 키히히. 오나홀 안이 정액으로 가득해서 넘쳐 버렸네. 대단한걸. #id:1427
+konial: 첫 만남은 이정도로 끝나겠지만. 다음번에는 뭘 하게 될까? 기대되지 않아? 가슴? 입? 아니면, 오나홀이 아닌.. 실제 보지라던가. 키히히! #id:1428
+konial: 으응~ 그치만. #id:1429
+(쪽) #id:142a
+코니알이 얼굴을 가까이 하고, 숨이 닿을 정도의 거리에서 속삭인다. #id:142b
+konial: 첫 키스정돈, 저 둘에게 양보할게. 너의 발기 자지. 뚫어져라 보고 있어. #id:142c
+konial: 45번 전차 안에서는.. 뭐든 가능하니까. 한번 노력해 봐. 밖에서는 상상도 못할 것들을 하게 해줄게. 너만 노력한다면! 키히히! #id:142d
+- 뭐든.. 가능해? #id:142e
+- 네 정체는 대체 뭐야? #id:142f
+konial: 키히히, 알고싶지 않아도 알게 될 거야. 지금은 그것보다 더 중요한게 있잖아? #id:1430
+konial: 전차 탐색, 잘 부탁할게? #id:1431
+do CutSceneManager.hide_cutscene("CutsceneKonialOnahole")
+do TransitionScreen.dialog_transition()
+[style]
+do GameEvents.emit_anim_change_this_npc("idle", {ch.konial})
+join konial 1
+잠시 후.. #id:1432
+emotion konial Smile
+konial: 자! 이렇게 여러분들의 환영 이벤트가 끝났습니다! 어땠어? #id:1433
+join reina 3 [animation="Fade In Up" wait="true" mirrored="true"]
+update reina [extra_data="hide Etc/Blur"]
+emotion reina Shy
+reina: 어떻냐니.. 그게.. 조금 당황했달까. #id:1434
+leave reina
+join mai 3 [animation="Fade In Up" wait="true" mirrored="true"]
+emotion mai Idle
+mai: 어.. 그치? 되게 자극적이네. 응. #id:1435
+emotion konial Idle
+konial: 너희 둘은 구경만 해서 아쉬운 마음인 거 이해해. 그치만 걱정하지 마! #id:1436
+konial: 이 전차는 정차 없이 끝없이 운행하는, 말하자면 밀실이지. 너희들이 무슨 짓을 하던 외부에 들킬 일도 없고 퍼질 염려 안해도 돼. #id:1437
+emotion konial Sadistic
+konial: ..아직 자제력이 남은 거 같지만. #id:1438
+leave mai
+join reina 3 [animation="Fade In Up" wait="true" mirrored="true"]
+reina: ..!! (손으로 치마를 가린다) #id:1439
+emotion konial Idle
+konial: 그럼 설명은 여기까지! 이제부터 시작이야. 우선은 몸풀기로 5번째 칸까지 이변을 찾아나가면 돼. #id:143a
+konial: 도착 지점에서는 내가 기다리고 있을게. #id:143b
+konial: 아, 그리고 한가지 더. 이변 중에서는 변이가 심하게 일어나 손쓸 수 없는 '오염된 칸'이 존재해. #id:143c
+konial: 그런 경우 이변을 탐지하는게 아닌 어떻게든 다음 칸으로 빠져나가야 해. #id:143d
+konial: 위에 보이는 역 안내 화면이 평소와 다르다면 그 칸은 '오염된 칸'이니 알아둬! #id:143e
+emotion reina Idle
+reina: '오염된 칸'이라니.. 이 전차는 대체..? #id:143f
+leave reina
+join mai 3 [animation="Fade In Up" wait="true" mirrored="true"]
+mai: 으음.. 일단은 계속 하는 수밖엔. 끝냈을 때 보상이 궁금하기도 하고.. #id:1440
+leave mai
+update konial 2 [move_time="0.5"]
+konial: 그럼! 슬슬 시간이 됐으려나? #id:1441
+do GameEvents.emit_camera_shake(true)
+[sound path="res://sound/sfx/Breaking.mp3" volume="0.0" bus="Sfx"]
+(...끼기기긱..) #id:1442
+날카로운 금속음과 진동이 울리기 시작한다. #id:1443
+- 전차가 흔들리고 있어! #id:1444
+konial: 역시! 알맞게 진행되는구나. #id:1445
+(쿠구궁.. 끼이익!) #id:1446
+konial: 그럼 다시 한번.. #id:1447
+emotion konial Smile
+konial: 45번 전차에 탑승한 걸 환영해! #id:1448
+leave konial [wait="true"]
+[wait time="1.0"]
+do GameEvents.emit_set_chapter(1)
+do GameEvents.emit_game_complete()
+do GameEvents.emit_camera_shake(false)

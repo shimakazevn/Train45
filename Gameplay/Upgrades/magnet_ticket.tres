@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityGet" load_steps=4 format=3 uid="uid://djd7p77hurwmi"]
+
+[ext_resource type="Texture2D" uid="uid://cbbi46vgr7mf2" path="res://resources/ui/icons/icons4.png" id="1_d4p8i"]
+[ext_resource type="PackedScene" uid="uid://owq0qayk2n3" path="res://Gameplay/Upgrades/magnet_ticket_controller.tscn" id="1_yl2dt"]
+[ext_resource type="Script" uid="uid://f3crvy5px2r7" path="res://Gameplay/Upgrades/ability_get.gd" id="3_h8ucq"]
+
+[resource]
+script = ExtResource("3_h8ucq")
+ability_controller_scene = ExtResource("1_yl2dt")
+icon = ExtResource("1_d4p8i")
+id = "magnet_ticket"
+price = Array[int]([0])
+max_quantity = 1
+cost = 6
+name = "MAGNET_TICKET"
+description = "MAGNET_TICKET_DESCRIPTION"

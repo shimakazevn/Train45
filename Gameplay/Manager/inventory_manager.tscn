@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://jds1tl6a4y0a"]
+
+[ext_resource type="Script" uid="uid://cdx5yv0bc0mcg" path="res://Gameplay/inventory_manager.gd" id="1_nbrqf"]
+[ext_resource type="PackedScene" uid="uid://b0lm0c02t78oq" path="res://Gameplay/Ui/inventory.tscn" id="2_bhhsv"]
+[ext_resource type="Script" uid="uid://5qkvq2dkymhk" path="res://Gameplay/Manager/equipment.gd" id="3_n0onh"]
+
+[node name="InventoryManager" type="Node" groups=["inventorymanager"]]
+process_mode = 3
+script = ExtResource("1_nbrqf")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="Inventory" parent="CanvasLayer" node_paths=PackedStringArray("inventory_manager", "equipment") instance=ExtResource("2_bhhsv")]
+unique_name_in_owner = true
+visible = false
+inventory_manager = NodePath("../..")
+equipment = NodePath("../../Equipment")
+
+[node name="Equipment" type="Node" parent="."]
+script = ExtResource("3_n0onh")

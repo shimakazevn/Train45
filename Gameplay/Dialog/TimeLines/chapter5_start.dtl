@@ -1,0 +1,124 @@
+join mai left
+join reina leftmost
+do GameEvents.hide_dialog_love_ui()
+mai: 아! 집사에게 부탁할 게 있었지? #id:499
+[music path="res://sound/music/loop/easygoing.ogg" fade="0.0" volume="0.0" bus="Music"]
+join butler (human) right [mirrored="true"]
+butler(human): 부탁할 것? 말씀해 주세요. #id:49a
+emotion reina Smile
+reina: 네, 그 전에.. 칸칸네비를 설치해 주신 덕분에 수월하게 탐색할 수 있었어요. #id:49b
+- 집사의 컬렉션들도 모두 잘 봤어. #id:49c
+- 대단하던걸. #id:49d
+emotion mai Laugh
+mai: 맞아. 하나같이 관리가 잘 돼 있던걸? #id:49e
+emotion butler(human) Smile
+butler(human): 아.. 맘에 드셨다니 다행입니다.. 다만 코니알 님에게는 비밀로.. #id:49f
+mai: 응, 물론이지. 그저 잡동사니일 거라 생각했는데 실제로 보니 생각이 바뀌었어. #id:4a0
+- 귀중하게 여기는 걸 불타게 둘 순 없지. #id:4a1
+- 언제까지고 비밀로 할게. #id:4a2
+butler(human): ..감사합니다. 여러분들을 만나 다행이라고 생각합니다. 봐 주는 사람이 없다면 마이님의 말대로 한낱 잡동사니들일 뿐이죠. #id:4a3
+emotion butler(human) Laugh
+butler(human): 하지만 여러분들 덕분에 헛된 일이 아니었다고 다시금 믿을 수 있게 됐습니다. 달리 도울 일이 있다면 언제든.. 말해 주세요. #id:4a4
+- 사실 안 그래도 부탁할 게 있는데.. #id:4a5
+emotion reina Serious
+reina: 네, 실은 이 다음 목적지가 생겼어요. 하지만 정확한 길을 모르겠어서.. 도움을 받을 수 있을까요? #id:4a6
+emotion mai Dislike
+mai: 또 한번 칸칸네비 같은 걸 만들어내면 될 거 같은데 말야.. #id:4a7
+emotion butler(human) Surprise
+butler(human): 아.. 그게. #id:4a8
+emotion mai Idle
+mai: 뭔가 사정이 있는 거야? #id:4a9
+emotion butler(human) Serious
+butler(human): 그게.. 티켓을 제 마음대로 사용해버린 이후로 코니알님의 감시가 심해진 느낌입니다. #id:4aa
+butler(human): 다행히 이번엔 사람의 모습이 되는 것으로 넘어갔지만.. 다음은 어떨 지.. #id:4ab
+emotion reina Idle
+reina: 아.. 그러고 보니 칸칸네비를 만드는 데 2000개의 티켓을 사용했죠. #id:4ac
+- 코니알이 그걸 알아채고.. #id:4ad
+- 집사를 화형시킬 뻔 했어. #id:4ae
+reina: 다음은 이번처럼 넘어가지 않을 거에요. #id:4af
+- 집사에게 위험을 지게 할 순 없지. #id:4b0
+emotion mai Idle
+mai: 맞아. 집사는 코니알의 편인데 벌써 이정도로 도움을 받았으니까. 이 이상은 우리끼리 해결해내는 수밖에 없겠네. #id:4b1
+butler(human): 네.. 면목 없습니다.. #id:4b2
+emotion reina Smile
+reina: 신경 쓰실 필요 없어요. 이미 상품 덕분에 탐색이 상당히 편해졌으니까요. #id:4b3
+[clear time="1.0" text="false" portraits="false" background="false" positions="false" style="false"]
+leave butler
+update reina right [mirrored="true" move_time="1.0"]
+- 그렇다면.. 이제 어떻게 해야 하지? #id:4b4
+emotion mai Dislike
+mai: 다행인건 이 전차 안에 파주주가 있다는 거야. #id:4b5
+emotion reina Idle
+reina: 수많은 전차칸들 중 하나지만.. 지갑을 찾아낸 것처럼 이번에도 가능할 거에요. #id:4b6
+mai: 다시 칸칸네비를 사용한다면 되지 않을까? 집사가 그랬잖아, 무수히 많은 종착점이 있다고. #id:4b7
+reina: 그러네요. 저희가 찾지 못한 종착점 중 한 곳에 있을 가능성이 커요. 하지만 종착점에 도착하려면 알맞은 노선을 배치해야 하는데.. #id:4b8
+mai: 첫번째 칸부터 일일히 시도해 보면 되지 않을까? 휴대폰 잠금을 푸는 것처럼 말이야. #id:4b9
+- 그건 너무 오래 걸릴 거 같아.. #id:4ba
+- 맞는 종착점이 나온다는 보장도 없고. #id:4bb
+emotion reina Serious
+reina: 으음.. 뭔가 힌트라도 있으면 좋을 텐데요.. #id:4bc
+leave --All--
+[wait time="0.5"]
+[style name="fullscene_style"]
+do CutSceneManager.show_cutscene("CutsceneButlerHuman")
+emotion butler(human) Idle
+butler(human): 힌트라면 존재할 수 있습니다. #id:4bd
+update mai rightmost [animation="Bounce" length="1.0" mirrored="true" move_time="1.0" move_ease="out"]
+emotion mai Surprised
+mai: 으왓! 깜짝이야! #id:4be
+- 힌트가 있어? #id:4bf
+emotion butler(human) Smile
+butler(human): 네. 칸칸네비를 통해 종착점은 칸의 번호를 연결하는 것 외에도.. 키워드를 연결해서 만들어 내는 방법도 있습니다. #id:4c0
+butler(human): 혹시.. 찾는 칸의 특징을 알고 있으십니까? #id:4c1
+emotion mai Serious
+mai: 특징? 특징이라고 해도.. 가본적이 없으니까.. 앗! #id:4c2
+mai: 분명 말했었지? 파주주가. #id:4c3
+emotion reina Suprised
+reina: 맞아요! 본인이 있는 장소에 대해 설명해 줬어요. 혹시 기억하시겠나요? 그 장소는.. #id:4c4
+- 초록 불빛, 까마귀 소리랑.. #id:4c5
+- 반대로 움직이는 전차와 묶여 있는 파주주. #id:4c6
+reina: 맞아요, 분명 그렇게 말했어요. #id:4c7
+emotion butler(human) Idle
+butler(human): 전해들은 정보들이 확실하다면 그 이변의 생김새를 바탕으로 노선을 맞춰갈 수 있습니다. #id:4c8
+butler(human): 칸칸네비에 등록된 노선에는 각각 명칭이 붙은 걸 보셨을 겁니다. #id:4c9
+emotion mai Idle
+mai: 맞아. 마치 역 이름 같았어. #id:4ca
+butler(human): 네. 아까 들은 정보들을 바탕으로 노선도를 등록한다면 원하는 종착점에 도착할 것입니다. #id:4cb
+emotion reina Idle
+reina: 그렇군요. 숫자의 배열 뿐 아니고 명칭을 통해서도 유추할 수 있는 거였어요. #id:4cc
+butler(human): 만약 예상하는 명칭의 노선이 없으면 아직 발견하지 못한 이변일 가능성이 큽니다. 이 때는 충분한 탐색을 통해 이변을 등록해 놓은 뒤 시도하는 것이 좋겠지요. #id:4cd
+mai: 파주주에게 들었던 키워드.. 이것들과 관련된 노선들을 시도해 보면 된다는 거지? #id:4ce
+emotion butler(human) Smile
+butler(human): 네. 순서는 상관 없이 모든 노선이 등록되기만 하면 됩니다. 종착점에 대한 힌트들은 칸칸네비 화면에 등록되니 확인해 보십시오. #id:4cf
+do CutSceneManager.hide_cutscene("CutsceneButlerHuman")
+[wait time="0.5"]
+[style]
+join mai leftmost
+join reina left
+join butler (human) right [mirrored="true"]
+- 이번에도 도움을 받았네. #id:4d0
+butler(human): ..신경쓰지 않아도 됩니다. 저 또한 비슷한 입장이 됐으니.. 앞으로는 더 편하게 대해 주세요. #id:4d1
+emotion mai Laugh
+mai: 하핫, 이제 우리처럼 티켓을 모으는 신세지? #id:4d2
+emotion reina Smile
+reina: 이전의 모습도 귀여웠지만.. 이 쪽도 아름답네요. #id:4d3
+update butler [extra_data="show Etc/Blur"]
+emotion butler(human) Panic
+butler(human): 여러모로 어색하고 불편하지만, 이 모습이 더 보기 좋으시다면.. #id:4d4
+emotion butler(human) Surprise
+butler(human): ..당신은 어떠신가요? #id:4d5
+- 전부 내 스타일이야. #id:4d6
+- 너무 꼴려. #id:4d7
+emotion butler(human) Panic
+butler(human): .. #id:4d8
+butler(human): 전 이만 가보겠습니다. #id:4d9
+leave butler
+emotion mai Idle
+mai: 가버렸네.. #id:4da
+reina: 아무래도 좋은 편을 만든 거 같아요. #id:4db
+- 그럼 우리도 파주주를 찾으러 가자. #id:4dc
+do TransitionScreen.dialog_transition()
+# #do GameEvents.emit_add_read_history("route_buy_mode")
+# #[signal arg="route_buy_mode"]
+do GameEvents.emit_add_route_hint("dark_room")
+do GameEvents.emit_add_read_history("chapter5_start")

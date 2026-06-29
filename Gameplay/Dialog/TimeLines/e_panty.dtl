@@ -1,0 +1,142 @@
+do GameEvents.emit_cutscene_play("e_panty_cut1")
+팬티가 날아다닌다.. #id:c21
+잠깐.. 팬티? #id:c22
+join reina left
+reina: 아, 저거 제 팬티에요. #id:c23
+- 레이나의 팬티?! #id:c24
+reina: ..엄청 놀라시네요. 날아다니는 팬티 정도는 익숙해지신 줄 알았는데. #id:c25
+- 날아다니는 것 정도는 상관 없는데. #id:c26
+- 레이나는 저런 팬티 안 입지 않아? #id:c27
+emotion reina Shy
+reina: 읏, 확실히.. 평소에 입는 디자인은 아니에요. #id:c28
+reina: 평소에는 뭐랄까.. 지금처럼 좀더 평범한 걸 입는데.. #id:c29
+reina: 그게.. 기분에 따라 바꿔 입는걸 좋아해서. #id:c2a
+reina: 저건 좋은 날에 입는 팬티에요.. #id:c2b
+emotion reina Serious
+reina: 최근에는 그다지 좋은 일이 없어서 입을 일 없었지만요. #id:c2c
+- 오늘 기분은 어땠는데? #id:c2d
+reina: 전날에 잔업에 야근이 있어서.. 오늘 아침 컨디션은 좋지 않았어요. #id:c2e
+- 그러니까 지금 입은 레이나의 팬티는 #id:c2f
+- 안 좋은 기분일 때 입는 거? #id:c30
+emotion reina Idle
+reina: 네, 네. 꽤나 수수한 디자인의.. #id:c31
+- 꽤나.. 자극적인 취미를 가졌네. #id:c32
+emotion reina Suprised
+reina: 읏! ..남들에게 피해주는 것도 아니고 저 혼자만의 취미였는데.. 당신이 알아버린 거에요. #id:c33
+- 하지만 아쉽네. #id:c34
+- 기분 좋을때의 팬티.. 보고 싶었는데. #id:c35
+emotion reina Angry
+reina: 제 팬티라면 여러번 보셨잖아요.. 하지만 저도 이럴 줄 알았으면 좀 더 예쁜 팬티를.. 이 아니고. #id:c36
+reina: 그, 그렇게 기꺼이 팬티를 보여줄 리 없잖아요. 더군다나 이쁜 팬티는 지금 바깥에.. #id:c37
+do GameEvents.emit_cutscene_play("e_panty_hide")
+reina: ..응? #id:c38
+- 창 밖에 날아다니던 게 사라졌네. #id:c39
+emotion reina Idle
+reina: 그러네요. 감지를 끝내서 사라진 걸까요? ..으읏?! #id:c3a
+- 왜 그래? 괜찮아? #id:c3b
+emotion reina Suprised
+reina: 아뇨, 방금.. 무언가 착, 하고. 제 하반신에 붙었어요. #id:c3c
+emotion reina Shy
+update reina [extra_data="show Etc/Blur"]
+reina: 무척 조여오는데.. 아앙! #id:c3d
+reina: 아읏! 으으.. 살을 파고 들어서.. 아파요. #id:c3e
+- 내가 확인해볼게. #id:c3f
+- 치마 올려볼래? #id:c40
+reina: 네,넷? 아.. 알겠어요. 그럼.. #id:c41
+레이나는 고통으로 움츠리면서도 두 손으로 치맛자락을 잡아 천천히 들어올린다. #id:c42
+leave reina
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("RESET")
+do GameEvents.game_state_change(1)
+do GameEvents.anim_change("scene23_1")
+do GameEvents.emit_camera_order_change(0, 100)
+[background scene="res://scene/dialogic_blur_bg.tscn" arg="res://resources/cutscene/cutscene_reina_panty.png" fade="0.0"]
+두툼한 허벅지 위로. 레이스 팬티가 드러난다. #id:c43
+억지로 입혀진 듯한 사이즈의 팬티끈이 레이나의 부드러운 살에 조여들고 있다. #id:c44
+emotion reina Shy
+reina: 이건, 밖에 날아다니던 제.. 팬티에요. #id:c45
+- 레이나 것 치곤 작아 보여.. #id:c46
+- 혹시.. #id:c47
+emotion reina Suprised
+reina: 아아, 아니에요! 살 찌거나 해서 안 맞은 게 아니에요. #id:c48
+reina: 예전에 구매하고.. 한번도 입은 적 없거든요. 아마 사이즈를 잘못 주문하고 확인하지 못한 거겠죠.. #id:c49
+reina: 기분 좋을때 입으려고 사둔 건데.. 좋았던 적이 없었으니까. #id:c4a
+- 관능적이지만 귀여운 프릴의 조화.. #id:c4b
+- 한 치수 작은 사이즈라 살의 굴곡이 더 자극적이야.. #id:c4c
+emotion reina Angry
+reina: 이 상황에 품평이라니.. 저기.. 너무 빤히 쳐다보시면 부끄러워요. #id:c4d
+- 그치만 너무 아깝잖아. #id:c4e
+- 이런 이쁜 팬티를 입은 레이나를 아무도 모른다니. #id:c4f
+reina: 누, 누구한테 보여주기 위한 의도는 아니었으니까요. #id:c50
+emotion reina Idle
+reina: 그래도.. 네. 당신이라면.. 보여지는 거 나쁘지 않을지도.. #id:c51
+reina: 보여지기만 하는데도 시선이 닿는 감촉이 느껴지는 거 같아요.. #id:c52
+reina: 이.. 이왕 보시는 거면.. 더 가까이 오셔도 좋아요.. 숨결이 닿을 정도로 가까이.. #id:c53
+emotion reina Shy
+reina: ..흐읏! ..숨을 내쉴 때마다 찌릿한 느낌.. #id:c54
+보지살을 겨우 가릴 만큼의 면적을 가진 팬티는 이미 본연의 기능을 하지 못하고 틈새로 끈적한 액체가 흘러 나온다. #id:c55
+reina: 아.. 보여진 것만으로 애액이 잔뜩 넘쳐서 허벅지 사이로 흐르고 있어요.. #id:c56
+reina: 아흣.. 질척한 팬티가 잔뜩 조여들어서 괴로워요.. #id:c57
+emotion reina Smile
+reina: 괜찮으시다면.. 제 이곳.. 편해질 수 있게 도와주실 수 있나요..? #id:c58
+leave reina
+do TransitionScreen.dialog_transition()
+[clear time="0.0" text="false" portraits="false" music="false" positions="false" style="false"]
+do GameEvents.anim_change("scene23_1")
+reina: 천천히.. 내려서.. 아, 실처럼 늘어지고 있어요.. #id:c59
+reina: 참으려고 했는데, 몸은 그렇지 않은가봐요. #id:c5a
+reina: 저기.. 보기만 하는걸로 만족하시는 건가요..? #id:c5b
+reina: 좀 더 마음대로 하셔도 돼요. 원하는 게 있다면.. 부디. #id:c5c
+reina: ..네. 자지. 넣어 주세요. 충분히 젖어 버렸으니.. #id:c5d
+do GameEvents.anim_change("scene23_2")
+reina: 아읏! 하아앙.. #id:c5e
+reina: 안쪽까지 바로 들어와버려서.. 그렇게 급했던 건가요..? #id:c5f
+reina: 아앙..아아..하아 #id:c60
+reina: 후후.. 네. 들어오는 것 만으로.. 서있기 힘들어요.. #id:c61
+reina: 좀더 빠르게.. 앞뒤로 움직여 주시겠어요?.. #id:c62
+reina: 하아..하아.. #id:c63
+reina: 얼마든지 박아 주세요.. 아읏..읏.. 시원해질 때까지.. 몇 번이고. #id:c64
+reina: 안쪽에 싸도 되니까.. 좀 더 깊게 넣어주세요. 앗.. 하아.. #id:c65
+reina: 네.. 그렇게. 아앗!..아.. #id:c66
+reina: 아..아앙.. 싸고 싶어지면 언제든지.. #id:c67
+reina: 저도 이대로면.. 아.. 한번 더 갈 거 같아요.. 아앙.. #id:c68
+reina: 빼지 말고.. 그대로 깊숙히.. 하아.. 안에 싸 주세요. #id:c69
+reina: ..좋아해요. 정말 좋아.. 당신을 정말 좋아하니까.. #id:c6a
+reina: 당신의 씨.. 전부 받고 싶어요. 하앙.. 하아.. #id:c6b
+reina: 그러니 제 자궁 안에.. 당신의 정액 가득 내 주세요.. #id:c6c
+do GameEvents.anim_change("scene23_3")
+[wait time="9.0"]
+reina: 아앗!.. 아.. 하아.. #id:c6d
+reina: 이렇게나 많이.. 하아.. 하아.. #id:c6e
+reina: 그렇게나 흥분하셨나요?.. #id:c6f
+reina: 하지만 도저히 작아질 기미가 없네요. 이 자지.. #id:c70
+do GameEvents.anim_change("scene23_4")
+reina: 저기.. 좀 더 할까요? 모든 정액 짜낼 때까지. #id:c71
+[signal arg="scene23"]
+reina: 으으.. 하아.. 하아. #id:c72
+reina: 뱃속이 뜨거운 걸로 가득.. #id:c73
+reina: 저도 이렇게 많이 간 적 처음이에요.. 지금도 서 있기 힘들어서.. #id:c74
+reina: 괜찮다면 잠시 앉아서 쉬도록 할까요. 정리하는 거 도와드릴 테니. #id:c75
+do TransitionScreen.dialog_transition()
+do GameEvents.game_state_change(0)
+do GameEvents.emit_cutscene_play("e_panty_reset")
+do GameEvents.anim_change("idle")
+join reina left
+emotion reina Shy
+... #id:c76
+reina: 하아.. 몸이 너무 뜨거워져서 녹는 줄 알았어요.. #id:c77
+reina: 부끄러웠지만.. 너무 좋아서. 중독될 거 같아요. #id:c78
+reina: 네, 저는 무척이나. 이런 기분은 처음이에요. #id:c79
+- 하지만 레이나의 팬티.. #id:c7a
+emotion reina Idle
+reina: 어머, 애액 범벅인 데다.. 끈이 끊어졌네요.. 너무 거칠었나 봐요. #id:c7b
+- 미안! 레이나가 아끼는 걸 텐데. #id:c7c
+emotion reina Shy
+reina: 아뇨, 사과하실 필요 없어요. 애초에 사이즈도 다르고.. #id:c7d
+reina: 원래 입던 팬티는 어느 새 저 의자 위에 놓여져 있으니까.. #id:c7e
+reina: 당신이 봐 준 걸로 충분해요. #id:c7f
+emotion reina Smile
+reina: 으음, 그 대신.. 나중에 이 곳에서 나가게 되면 새로 하나 골라 주세요. #id:c80
+reina: 지금보다 더 야한 속옷으로.. 아시겠죠? #id:c81
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_npc_level_up(0)

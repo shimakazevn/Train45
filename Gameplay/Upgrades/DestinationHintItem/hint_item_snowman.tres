@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ShopHint" load_steps=4 format=3 uid="uid://w2tv37csc0tk"]
+
+[ext_resource type="Resource" uid="uid://c1dc35qh80pyc" path="res://Gameplay/GameData/RouteHint/hint_snowman.tres" id="1_7yb0c"]
+[ext_resource type="Texture2D" uid="uid://den1bgbepdflc" path="res://resources/ui/icons/hint_icon_2.png" id="2_u427j"]
+[ext_resource type="Script" uid="uid://cgvgo5syo8hpt" path="res://Gameplay/Upgrades/DestinationHintItem/shop_hint_item.gd" id="3_0ofn1"]
+
+[resource]
+script = ExtResource("3_0ofn1")
+hint_info = ExtResource("1_7yb0c")
+icon = ExtResource("2_u427j")
+id = "snowman"
+price = Array[int]([1400])
+max_quantity = 1
+cost = 0
+name = "DESTINATION_HINT_SNOWMAN_TITLE"
+description = "HINT_ITEM_WITH_EQUIPMENT"

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxkurmyuqfk02"]
+
+[ext_resource type="Script" uid="uid://cxkj1vucft863" path="res://Gameplay/Upgrades/unvisit_finder_controller.gd" id="1_ovyp6"]
+[ext_resource type="PackedScene" uid="uid://di61f2wa7jwxn" path="res://Gameplay/Upgrades/unvisit_finder.tscn" id="2_ipm7v"]
+
+[node name="UnvisitFinderController" type="Node2D"]
+script = ExtResource("1_ovyp6")
+unvisit_finder = ExtResource("2_ipm7v")

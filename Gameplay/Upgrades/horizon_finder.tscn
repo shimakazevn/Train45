@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5ddt7ssskr3i"]
+
+[ext_resource type="Texture2D" uid="uid://dkwa6fll6wm31" path="res://resources/ui/anomaly_finder.png" id="1_3miqg"]
+[ext_resource type="Script" uid="uid://c4oxxlg3wfpjc" path="res://Gameplay/Upgrades/horizon_finder.gd" id="2_yma33"]
+
+[node name="HorizonFinder" type="NinePatchRect"]
+light_mask = 0
+z_index = 3
+clip_contents = true
+offset_right = 32.0
+offset_bottom = 120.0
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 19
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_yma33")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 120.0
+texture = ExtResource("1_3miqg")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 19
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(1920, 120)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 1, 1, 0.478431)

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://c6lcmgo5qhpf0"]
+
+[ext_resource type="Texture2D" uid="uid://4u6pnd86hxsm" path="res://resources/ui/icons/icons14.png" id="1_jrijo"]
+[ext_resource type="Script" uid="uid://mkaxgrunbvhi" path="res://Gameplay/Upgrades/ability_upgrade.gd" id="2_vss2j"]
+
+[resource]
+script = ExtResource("2_vss2j")
+icon = ExtResource("1_jrijo")
+id = "ero_gauge_comsume_up"
+price = Array[int]([650])
+max_quantity = 1
+cost = 3
+name = "ERO_GAUGE_COMSUME_UP"
+description = "ERO_GAUGE_COMSUME_UP_DESCRIPTION"

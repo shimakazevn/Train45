@@ -1,0 +1,698 @@
+[gd_scene load_steps=51 format=3]
+
+[ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://b5supx1x5cd2y" path="res://Gameplay/Levels/npc_anomaly.gd" id="2_fyq3t"]
+[ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="9_62jqa"]
+[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_2kt0v"]
+[ext_resource type="Texture2D" uid="uid://v4iise5q34ek" path="res://Gameplay/Levels/ano_reina_breast.png" id="13_lyvfe"]
+[ext_resource type="Script" uid="uid://c8jgf25nv4oa4" path="res://Gameplay/Levels/npc_h_anomaly_component.gd" id="14_batyu"]
+[ext_resource type="Script" uid="uid://c42e2hbfgia71" path="res://scene/game_object/player/h_moan_stream.gd" id="15_s6xge"]
+[ext_resource type="AudioStream" uid="uid://doxj3xkreja7v" path="res://sound/voice/scene_voice/SCENE_REINA_AHEN_1.ogg" id="16_ohf14"]
+[ext_resource type="AudioStream" uid="uid://cvi4fov04k5p2" path="res://sound/voice/scene_voice/SCENE_REINA_AHEN_2.ogg" id="17_syup6"]
+[ext_resource type="Texture2D" uid="uid://duva4mnpevjja" path="res://resources/ui/heart.png" id="18_07nih"]
+[ext_resource type="Texture2D" uid="uid://bisawr6dhlsb2" path="res://resources/ui/keyboard_icon/keyboard_icon11.png" id="19_ngwj7"]
+[ext_resource type="Texture2D" uid="uid://d05jjmxu4w3sd" path="res://resources/ui/keyboard_icon/keyboard_icon12.png" id="20_a86ny"]
+[ext_resource type="PackedScene" uid="uid://c5cqnjwgn5mkw" path="res://scene/UI/action_progress.tscn" id="21_g0oe4"]
+[ext_resource type="Texture2D" uid="uid://bx5xe5vkg1hri" path="res://Gameplay/Levels/ano_mai_breast.png" id="22_uving"]
+[ext_resource type="AudioStream" uid="uid://dvleks15ctgj7" path="res://sound/voice/scene_voice/SCENE_MAI_AHEN_1.ogg" id="23_ftsf8"]
+[ext_resource type="AudioStream" uid="uid://c8skw87cfyq7p" path="res://sound/voice/scene_voice/SCENE_MAI_AHEN_2.ogg" id="24_k0roo"]
+[ext_resource type="PackedScene" uid="uid://lg6623mk53cw" path="res://scene/component/teleport_component.tscn" id="26_1r73j"]
+[ext_resource type="Texture2D" uid="uid://du0ewe3ii4vjn" path="res://resources/bg_train_wall.png" id="27_50oqc"]
+[ext_resource type="PackedScene" uid="uid://dnc5rb3rrpan3" path="res://scene/UI/clear_text.tscn" id="31_82fnd"]
+[ext_resource type="PackedScene" uid="uid://bxk6xej0qykv7" path="res://scene/component/stage_handler.tscn" id="32_gilft"]
+[ext_resource type="Script" uid="uid://dsomb6g1hlvem" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="33_50oqc"]
+[ext_resource type="Script" uid="uid://dxlagu4dbag77" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="34_w1jdk"]
+[ext_resource type="PackedScene" uid="uid://bvt4gj56eqbp3" path="res://Gameplay/train_standard.tscn" id="35_iyww2"]
+[ext_resource type="PackedScene" uid="uid://djbwoq5ul6rbk" path="res://scene/game_object/player/player.tscn" id="38_dr17e"]
+[ext_resource type="PackedScene" uid="uid://dsch54fxvgg58" path="res://Gameplay/door.tscn" id="41_i5sgb"]
+
+[sub_resource type="Resource" id="Resource_7xtoy"]
+script = ExtResource("34_w1jdk")
+duration = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v61mu"]
+size = Vector2(1920, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3yiyt"]
+size = Vector2(85.25, 53.25)
+
+[sub_resource type="Curve" id="Curve_xisp3"]
+_data = [Vector2(0, 0.17142), 0.0, 0.0, 0, 0, Vector2(0.11373, 0.773064), 0.0, 0.0, 0, 0, Vector2(0.896516, 0.514463), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cskg"]
+size = Vector2(78, 272)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ja3k2"]
+light_mode = 1
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_reei6"]
+frames = 2
+frame_0/texture = ExtResource("19_ngwj7")
+frame_1/texture = ExtResource("20_a86ny")
+frame_1/duration = 1.0
+
+[sub_resource type="Animation" id="Animation_2j52v"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_l21r1"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10]
+}
+
+[sub_resource type="Animation" id="Animation_1257d"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [18]
+}
+
+[sub_resource type="Animation" id="Animation_fq1ci"]
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_in8xg"]
+length = 4.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 2.4, 2.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [11, 12, 13, 14, 15, 16, 17]
+}
+
+[sub_resource type="Animation" id="Animation_c25xn"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_reei6"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tjgyu"]
+_data = {
+&"action": SubResource("Animation_2j52v"),
+&"action_climax": SubResource("Animation_l21r1"),
+&"after_cum": SubResource("Animation_1257d"),
+&"after_find": SubResource("Animation_fq1ci"),
+&"cum": SubResource("Animation_in8xg"),
+&"in": SubResource("Animation_c25xn"),
+&"not_find": SubResource("Animation_reei6")
+}
+
+[sub_resource type="Curve" id="Curve_6ygdt"]
+_data = [Vector2(0, 0.17142), 0.0, 0.0, 0, 0, Vector2(0.11373, 0.773064), 0.0, 0.0, 0, 0, Vector2(0.896516, 0.514463), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Animation" id="Animation_43mih"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_ont3o"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10]
+}
+
+[sub_resource type="Animation" id="Animation_ja3k2"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [17]
+}
+
+[sub_resource type="Animation" id="Animation_6ygdt"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_1cskg"]
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.8, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [11, 12, 13, 14, 15, 16]
+}
+
+[sub_resource type="Animation" id="Animation_xisp3"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_f3yhk"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_reei6"]
+_data = {
+&"action": SubResource("Animation_43mih"),
+&"action_climax": SubResource("Animation_ont3o"),
+&"after_cum": SubResource("Animation_ja3k2"),
+&"after_find": SubResource("Animation_6ygdt"),
+&"cum": SubResource("Animation_1cskg"),
+&"in": SubResource("Animation_xisp3"),
+&"not_find": SubResource("Animation_f3yhk")
+}
+
+[node name="Stage_35" type="Node2D" node_paths=PackedStringArray("player", "current_npc", "doors", "teleports", "npc_anomaly")]
+script = ExtResource("1_5frgf")
+player = NodePath("TrainStandard/Entity/Player")
+current_npc = NodePath("TrainStandard/Entity/CurrentNPC")
+doors = [NodePath("frontDoor"), NodePath("Exit")]
+teleports = [NodePath("TeleportComponent")]
+stage_type = 1
+npc_anomaly = NodePath("NpcAnomaly")
+
+[node name="NpcAnomaly" type="Node" parent="." node_paths=PackedStringArray("anomaly", "current_npc")]
+script = ExtResource("2_fyq3t")
+anomaly_name = "partner_anomaly"
+anomaly_anim_name = "idle_anomaly2"
+anomaly = NodePath("../TrainStandard/Anomaly")
+current_npc = NodePath("../TrainStandard/Entity/CurrentNPC")
+
+[node name="TeleportComponent" parent="." instance=ExtResource("26_1r73j")]
+entry_direction = 3
+path_to_new_scene = "res://Gameplay/Levels/base_00.tscn"
+entry_door_name = "TeleportComponent"
+
+[node name="ClearText" parent="." instance=ExtResource("31_82fnd")]
+
+[node name="StageHandler" parent="." instance=ExtResource("32_gilft")]
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+position = Vector2(321, 180)
+script = ExtResource("33_50oqc")
+priority = 10
+follow_mode = 2
+follow_target = NodePath("../TrainStandard/Entity/Player")
+snap_to_pixel = true
+tween_resource = SubResource("Resource_7xtoy")
+follow_offset = Vector2(0, -150)
+follow_damping = true
+follow_damping_value = Vector2(0.3, 0.3)
+draw_limits = true
+limit_target = NodePath("../CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(961, 180)
+shape = SubResource("RectangleShape2D_v61mu")
+
+[node name="TrainStandard" parent="." instance=ExtResource("35_iyww2")]
+
+[node name="Anomaly" type="Area2D" parent="TrainStandard"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("9_62jqa")
+bubble = ExtResource("10_2kt0v")
+
+[node name="AnomalyCollision" type="CollisionShape2D" parent="TrainStandard/Anomaly"]
+unique_name_in_owner = true
+z_index = 30
+position = Vector2(931.375, 221.375)
+shape = SubResource("RectangleShape2D_3yiyt")
+
+[node name="Entity" type="Node2D" parent="TrainStandard"]
+y_sort_enabled = true
+
+[node name="CurrentNPC" parent="TrainStandard/Entity" instance=ExtResource("6_ajpmm")]
+position = Vector2(993, 326)
+
+[node name="Player" parent="TrainStandard/Entity" instance=ExtResource("38_dr17e")]
+z_index = 3
+position = Vector2(43, 338)
+
+[node name="ReinaHAnomalySprite" type="Sprite2D" parent="TrainStandard/Entity"]
+visible = false
+texture_filter = 1
+texture = ExtResource("13_lyvfe")
+hframes = 5
+vframes = 4
+frame = 3
+metadata/_aseprite_wizard_source_file_hash_ = "b7d1f3b5816f6372025be60a1c25a2e3"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true
+}
+
+[node name="NpcHAnomalyComponent" type="Node2D" parent="TrainStandard/Entity/ReinaHAnomalySprite" node_paths=PackedStringArray("current_npc", "ghost_sprite", "ghost_anim", "player", "moan_stream")]
+script = ExtResource("14_batyu")
+current_npc = NodePath("../../CurrentNPC")
+ghost_sprite = NodePath("..")
+ghost_anim = NodePath("../AnimationPlayer")
+player = NodePath("../../Player")
+moan_stream = NodePath("HMoanStream")
+
+[node name="HMoanStream" type="AudioStreamPlayer" parent="TrainStandard/Entity/ReinaHAnomalySprite/NpcHAnomalyComponent"]
+bus = &"Character"
+script = ExtResource("15_s6xge")
+streams = Array[AudioStream]([ExtResource("16_ohf14"), ExtResource("17_syup6")])
+
+[node name="LoveEffect" type="CPUParticles2D" parent="TrainStandard/Entity/ReinaHAnomalySprite/NpcHAnomalyComponent"]
+position = Vector2(3, -118)
+amount = 5
+texture = ExtResource("18_07nih")
+lifetime = 3.0
+randomness = 0.1
+emission_shape = 3
+emission_rect_extents = Vector2(15, 5)
+direction = Vector2(0, -20)
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 30.0
+radial_accel_min = 5.0
+radial_accel_max = 5.0
+tangential_accel_min = 10.0
+tangential_accel_max = 10.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_xisp3")
+
+[node name="HArea" type="Area2D" parent="TrainStandard/Entity/ReinaHAnomalySprite/NpcHAnomalyComponent"]
+visible = false
+collision_layer = 262144
+collision_mask = 8192
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrainStandard/Entity/ReinaHAnomalySprite/NpcHAnomalyComponent/HArea"]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_1cskg")
+debug_color = Color(0.390956, 0.606467, 0.214678, 0.42)
+
+[node name="KeyboardIcon" type="TextureRect" parent="TrainStandard/Entity/ReinaHAnomalySprite/NpcHAnomalyComponent"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_ja3k2")
+offset_left = -85.0
+offset_top = -130.0
+offset_right = -53.0
+offset_bottom = -114.0
+pivot_offset = Vector2(16, 8)
+texture = SubResource("AnimatedTexture_reei6")
+
+[node name="ActionProgressBase" parent="TrainStandard/Entity/ReinaHAnomalySprite/NpcHAnomalyComponent" instance=ExtResource("21_g0oe4")]
+position = Vector2(-65.945, -102.57001)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TrainStandard/Entity/ReinaHAnomalySprite"]
+libraries = {
+&"": SubResource("AnimationLibrary_tjgyu")
+}
+
+[node name="MaiHAnomalySprite" type="Sprite2D" parent="TrainStandard/Entity"]
+texture_filter = 1
+texture = ExtResource("22_uving")
+hframes = 5
+vframes = 4
+frame = 17
+metadata/_aseprite_wizard_source_file_hash_ = "5b581a12e790701fffe56b6bf23c7f5b"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true
+}
+
+[node name="NpcHAnomalyComponent" type="Node2D" parent="TrainStandard/Entity/MaiHAnomalySprite" node_paths=PackedStringArray("current_npc", "ghost_sprite", "ghost_anim", "player", "moan_stream")]
+script = ExtResource("14_batyu")
+current_npc = NodePath("../../CurrentNPC")
+npc_type = 1
+ghost_sprite = NodePath("..")
+ghost_anim = NodePath("../AnimationPlayer")
+player = NodePath("../../Player")
+moan_stream = NodePath("HMoanStream")
+
+[node name="HMoanStream" type="AudioStreamPlayer" parent="TrainStandard/Entity/MaiHAnomalySprite/NpcHAnomalyComponent"]
+bus = &"Character"
+script = ExtResource("15_s6xge")
+streams = Array[AudioStream]([ExtResource("23_ftsf8"), ExtResource("24_k0roo")])
+
+[node name="LoveEffect" type="CPUParticles2D" parent="TrainStandard/Entity/MaiHAnomalySprite/NpcHAnomalyComponent"]
+position = Vector2(3, -118)
+amount = 5
+texture = ExtResource("18_07nih")
+lifetime = 3.0
+randomness = 0.1
+emission_shape = 3
+emission_rect_extents = Vector2(15, 5)
+direction = Vector2(0, -20)
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 30.0
+radial_accel_min = 5.0
+radial_accel_max = 5.0
+tangential_accel_min = 10.0
+tangential_accel_max = 10.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_6ygdt")
+
+[node name="KeyboardIcon" type="TextureRect" parent="TrainStandard/Entity/MaiHAnomalySprite/NpcHAnomalyComponent"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_ja3k2")
+offset_left = -84.945
+offset_top = -101.0
+offset_right = -52.945
+offset_bottom = -85.0
+pivot_offset = Vector2(16, 8)
+texture = SubResource("AnimatedTexture_reei6")
+
+[node name="ActionProgressBase" parent="TrainStandard/Entity/MaiHAnomalySprite/NpcHAnomalyComponent" instance=ExtResource("21_g0oe4")]
+position = Vector2(-66.945, -75)
+
+[node name="HArea" type="Area2D" parent="TrainStandard/Entity/MaiHAnomalySprite/NpcHAnomalyComponent"]
+visible = false
+collision_layer = 262144
+collision_mask = 8192
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrainStandard/Entity/MaiHAnomalySprite/NpcHAnomalyComponent/HArea"]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_1cskg")
+debug_color = Color(0.390956, 0.606467, 0.214678, 0.42)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TrainStandard/Entity/MaiHAnomalySprite"]
+libraries = {
+&"": SubResource("AnimationLibrary_reei6")
+}
+
+[node name="frontDoor" parent="." instance=ExtResource("41_i5sgb")]
+position = Vector2(-24, 356)
+entry_direction = 1
+transition_type = "zelda"
+push_distance = 100
+
+[node name="Exit" parent="." instance=ExtResource("41_i5sgb")]
+position = Vector2(2016, 352)
+entry_direction = 3
+transition_type = "zelda"
+push_distance = 100
+path_to_new_scene = "res://Gameplay/Levels/event_OL_00.tscn"
+entry_door_name = "frontDoor"
+
+[node name="BgTrainWall" type="Sprite2D" parent="."]
+texture = ExtResource("27_50oqc")
+centered = false

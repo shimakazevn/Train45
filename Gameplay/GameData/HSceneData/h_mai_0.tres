@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://b2aa08pjbox0s"]
+
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_4qapp"]
+[ext_resource type="Texture2D" uid="uid://5k0yccqxn3id" path="res://resources/ui/EventCoverImage/Hpreview_mai_8.png" id="1_xhg4k"]
+
+[resource]
+script = ExtResource("1_4qapp")
+main_love_event = true
+scene_description = "SCENE_SUMATA"
+scene_name = "scene2"
+dialog_title = "e_bra"
+stage_name = "stage_3"
+partner = 1
+preview_texture = ExtResource("1_xhg4k")
+is_position = Vector2(511, 216)
+ahen_keys = PackedStringArray("SCENE_MAI_AHEN_1", "SCENE_MAI_AHEN_2")

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7mbvaed3qrgv"]
+
+[ext_resource type="Texture2D" uid="uid://bf1a3e47mms85" path="res://Gameplay/Levels/ghost_hug.png" id="1_t8wjf"]
+[ext_resource type="Script" uid="uid://bm04y7xeq5w4w" path="res://Gameplay/Levels/hug_ghost_seat.gd" id="2_6pdkk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6pdkk"]
+size = Vector2(20, 330)
+
+[node name="HugGhostSample1" type="Sprite2D"]
+self_modulate = Color(0, 0.983334, 1, 0.572549)
+z_index = 4
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_t8wjf")
+hframes = 5
+vframes = 4
+frame = 7
+script = ExtResource("2_6pdkk")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 32768
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_6pdkk")
+debug_color = Color(0.308494, 0.589464, 0.896527, 0.419608)

@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnc5rb3rrpan3"]
+
+[ext_resource type="Script" uid="uid://dx5a2vawpn2m8" path="res://scene/UI/clear_text.gd" id="1_2yl8f"]
+
+[node name="ClearText" type="CanvasLayer"]
+script = ExtResource("1_2yl8f")
+
+[node name="Clear_Text" type="Label" parent="."]
+visible = false
+offset_left = 21.0
+offset_top = 332.0
+offset_right = 61.0
+offset_bottom = 355.0
+text = "Clear = false"
+
+[node name="Anomaly_Text" type="Label" parent="."]
+visible = false
+offset_left = 21.0
+offset_top = 311.0
+offset_right = 116.0
+offset_bottom = 334.0
+text = "anomaly = false"

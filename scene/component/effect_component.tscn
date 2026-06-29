@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckidnaefgo24u"]
+
+[ext_resource type="Script" uid="uid://bn8cwcgb3b5et" path="res://Gameplay/NPC/EffectComponent.gd" id="1_acub0"]
+[ext_resource type="PackedScene" uid="uid://dxbagtp8sfmss" path="res://scene/component/vignette.tscn" id="2_2m3sb"]
+
+[node name="EffectComponent" type="Node2D"]
+script = ExtResource("1_acub0")
+
+[node name="Vignette" parent="." instance=ExtResource("2_2m3sb")]
+layer = 2

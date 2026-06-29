@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityGet" load_steps=4 format=3 uid="uid://c6fllickjj26v"]
+
+[ext_resource type="PackedScene" uid="uid://wnfbw4aj1bhy" path="res://Gameplay/Upgrades/love_bracelet_controller.tscn" id="1_4i8ws"]
+[ext_resource type="Texture2D" uid="uid://7k2geb4eipdo" path="res://resources/ui/icons/icons15.png" id="2_4i8ws"]
+[ext_resource type="Script" uid="uid://f3crvy5px2r7" path="res://Gameplay/Upgrades/ability_get.gd" id="3_dqdi0"]
+
+[resource]
+script = ExtResource("3_dqdi0")
+ability_controller_scene = ExtResource("1_4i8ws")
+icon = ExtResource("2_4i8ws")
+id = "love_bracelet"
+price = Array[int]([0])
+max_quantity = 1
+cost = 45
+name = "LOVE_BRACELET"
+description = "LOVE_BRACELET_DESCRIPTION"

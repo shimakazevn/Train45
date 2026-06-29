@@ -1,0 +1,102 @@
+{
+	"res://Gameplay/Levels/stage_1.tscn": [
+		{
+			"name": "ticket800"
+		}
+	],
+	"res://Gameplay/Levels/stage_11.tscn": [
+		{
+			"name": "milk"
+		}
+	],
+	"res://Gameplay/Levels/stage_12.tscn": [
+		{
+			"name": "stuckdoor"
+		}
+	],
+	"res://Gameplay/Levels/stage_16.tscn": [
+		{
+			"name": "ticket1000"
+		}
+	],
+	"res://Gameplay/Levels/stage_27.tscn": [
+		{
+			"name": "route_coin1"
+		}
+	],
+	"res://Gameplay/Levels/stage_30.tscn": [
+		{
+			"name": "route_coin1"
+		}
+	],
+	"res://Gameplay/Levels/stage_31.tscn": [
+		{
+			"name": "route_coin1"
+		}
+	],
+	"res://Gameplay/Levels/stage_40.tscn": [
+		{
+			"name": "route_coin1"
+		}
+	],
+	"res://Gameplay/Levels/stage_41.tscn": [
+		{
+			"name": "ticket1500"
+		}
+	],
+	"res://Gameplay/Levels/stage_44.tscn": [
+		{
+			"name": "route_coin1"
+		}
+	],
+	"res://Gameplay/Levels/stage_49.tscn": [
+		{
+			"name": "ticket1200"
+		}
+	],
+	"res://Gameplay/Levels/stage_52.tscn": [
+		{
+			"name": "mirror"
+		}
+	],
+	"res://Gameplay/Levels/stage_d_clock.tscn": [
+		{
+			"name": "time_limiter"
+		}
+	],
+	"res://Gameplay/Levels/stage_d_ghost.tscn": [
+		{
+			"name": "ghost_skip"
+		}
+	],
+	"res://Gameplay/Levels/stage_d_handfan.tscn": [
+		{
+			"name": "magnet_ticket"
+		}
+	],
+	"res://Gameplay/Levels/stage_d_locker.tscn": [
+		{
+			"name": "ghost_ano_h"
+		}
+	],
+	"res://Gameplay/Levels/stage_d_lowspeed.tscn": [
+		{
+			"name": "unvisit_finder"
+		}
+	],
+	"res://Gameplay/Levels/stage_d_partner_anomaly.tscn": [
+		{
+			"name": "npc_ano_h"
+		}
+	],
+	"res://Gameplay/Levels/stage_d_snowman.tscn": [
+		{
+			"name": "daruma_chan"
+		}
+	],
+	"res://Gameplay/Levels/stage_d_ticket_check.tscn": [
+		{
+			"name": "multiple_choice"
+		}
+	]
+}

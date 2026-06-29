@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityGet" load_steps=4 format=3 uid="uid://jf1um36bje8y"]
+
+[ext_resource type="PackedScene" uid="uid://bkyb77eso2tce" path="res://Gameplay/Upgrades/ticket_bonus_controller.tscn" id="1_o324d"]
+[ext_resource type="Texture2D" uid="uid://3l1siyw3rfar" path="res://resources/ui/icons/icons13.png" id="2_8emi8"]
+[ext_resource type="Script" uid="uid://f3crvy5px2r7" path="res://Gameplay/Upgrades/ability_get.gd" id="3_yufxq"]
+
+[resource]
+script = ExtResource("3_yufxq")
+ability_controller_scene = ExtResource("1_o324d")
+icon = ExtResource("2_8emi8")
+id = "ticket_bonus"
+price = Array[int]([390])
+max_quantity = 1
+cost = 8
+name = "TICKET_BONUS"
+description = "TICKET_BONUS_DESCRIPTION"

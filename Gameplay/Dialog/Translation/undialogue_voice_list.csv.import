@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://g74n68w4oss5"
+
+[deps]
+
+files=["res://Gameplay/Dialog/Translation/undialogue_voice_list.en.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.cn.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.jp.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.ko.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.zh.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.情緒.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.vi.translation"]
+
+source_file="res://Gameplay/Dialog/Translation/undialogue_voice_list.csv"
+dest_files=["res://Gameplay/Dialog/Translation/undialogue_voice_list.en.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.cn.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.jp.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.ko.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.zh.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.情緒.translation", "res://Gameplay/Dialog/Translation/undialogue_voice_list.vi.translation"]
+
+[params]
+
+compress=true
+delimiter=0

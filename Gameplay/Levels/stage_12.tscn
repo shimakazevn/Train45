@@ -1,0 +1,1395 @@
+[gd_scene load_steps=55 format=3]
+
+[ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://3mc5em6jwwyj" path="res://Gameplay/Levels/h_scene_cut_scene_component.gd" id="2_hf2vb"]
+[ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
+[ext_resource type="PackedScene" uid="uid://xm3jf22phtyd" path="res://scene/component/anomaly_event_component.tscn" id="6_gvche"]
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="9_62jqa"]
+[ext_resource type="Texture2D" uid="uid://bwwur0n55c6vf" path="res://resources/anomaly/bg_train_anomaly_eye_screen.png" id="9_pa3uq"]
+[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_2kt0v"]
+[ext_resource type="Script" uid="uid://cc5mkn17mlvbv" path="res://Gameplay/Levels/EyeBody.gd" id="10_fte81"]
+[ext_resource type="Texture2D" uid="uid://bd2sjmqdxi0uv" path="res://resources/anomaly/anomaly_eye.png" id="11_1lcd4"]
+[ext_resource type="PackedScene" uid="uid://mjvl860yvplh" path="res://Gameplay/item_box.tscn" id="12_aamxw"]
+[ext_resource type="Resource" uid="uid://5bmejr5gxnga" path="res://Gameplay/GameData/HSceneData/h_reina_1.tres" id="15_lyvfe"]
+[ext_resource type="Script" uid="uid://co0jy7fm5urg1" path="res://Gameplay/Levels/dummy_component.gd" id="16_62jqa"]
+[ext_resource type="Resource" uid="uid://cns2x70l2y0kg" path="res://Gameplay/GameData/RouteHint/hint_stuckdoor.tres" id="23_batyu"]
+[ext_resource type="PackedScene" uid="uid://lg6623mk53cw" path="res://scene/component/teleport_component.tscn" id="26_1r73j"]
+[ext_resource type="Texture2D" uid="uid://du0ewe3ii4vjn" path="res://resources/bg_train_wall.png" id="27_50oqc"]
+[ext_resource type="PackedScene" uid="uid://dnc5rb3rrpan3" path="res://scene/UI/clear_text.tscn" id="31_82fnd"]
+[ext_resource type="PackedScene" uid="uid://bxk6xej0qykv7" path="res://scene/component/stage_handler.tscn" id="32_gilft"]
+[ext_resource type="Script" uid="uid://dsomb6g1hlvem" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="33_50oqc"]
+[ext_resource type="Script" uid="uid://dxlagu4dbag77" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="34_w1jdk"]
+[ext_resource type="PackedScene" uid="uid://bvt4gj56eqbp3" path="res://Gameplay/train_standard.tscn" id="35_iyww2"]
+[ext_resource type="PackedScene" uid="uid://djbwoq5ul6rbk" path="res://scene/game_object/player/player.tscn" id="38_dr17e"]
+[ext_resource type="PackedScene" uid="uid://dsch54fxvgg58" path="res://Gameplay/door.tscn" id="41_i5sgb"]
+[ext_resource type="Texture2D" uid="uid://boscghfq7s2y7" path="res://Gameplay/NPC/ol_nomal.png" id="47_2ikp8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8111p"]
+
+[sub_resource type="Animation" id="Animation_kxro6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrainStandard/Entity/OL_Dummy:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrainStandard/Entity/OL_Dummy:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(880, 326)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrainStandard/Entity/CurrentNPC:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TrainStandard/Entity/Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(43, 338)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TrainStandard/Entity/OL_Dummy/Sprite2D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TrainStandard/EyeScreen/EyeBody:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(548, 280)]
+}
+
+[sub_resource type="Animation" id="Animation_l6mpo"]
+resource_name = "e_bottom_eye_cutscene_1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrainStandard/Entity/OL_Dummy:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrainStandard/Entity/OL_Dummy:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(826, 360)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrainStandard/Entity/CurrentNPC:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TrainStandard/Entity/Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(876, 349)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TrainStandard/Entity/OL_Dummy/Sprite2D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TrainStandard/Entity/Player")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["left"],
+"method": &"on_direction_change"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TrainStandard/EyeScreen/EyeBody:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(633, 279)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HSceneCutScene")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"original_npc_position_sync"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_db8tu"]
+resource_name = "e_bottom_eye_cutscene_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrainStandard/Entity/OL_Dummy:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrainStandard/Entity/OL_Dummy:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(717, 352)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrainStandard/Entity/CurrentNPC:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TrainStandard/Entity/Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(790, 349)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TrainStandard/Entity/OL_Dummy/Sprite2D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TrainStandard/Entity/Player")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["left"],
+"method": &"on_direction_change"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TrainStandard/EyeScreen/EyeBody:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(633, 279)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TrainStandard/Entity/OL_Dummy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["find1"],
+"method": &"anim_change"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HSceneCutScene")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"original_npc_position_sync"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_o46br"]
+resource_name = "e_bottom_eye_cutscene_3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrainStandard/Entity/OL_Dummy:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrainStandard/Entity/OL_Dummy:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(548, 352)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrainStandard/Entity/CurrentNPC:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TrainStandard/Entity/Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(790, 349)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TrainStandard/Entity/OL_Dummy/Sprite2D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TrainStandard/Entity/Player")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["left"],
+"method": &"on_direction_change"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TrainStandard/EyeScreen/EyeBody:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(570, 279)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TrainStandard/Entity/OL_Dummy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["idle"],
+"method": &"anim_change"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HSceneCutScene")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"original_npc_position_sync"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_j4fba"]
+resource_name = "e_bottom_eye_cutscene_4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrainStandard/Entity/OL_Dummy:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrainStandard/Entity/OL_Dummy:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(812, 352)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrainStandard/Entity/CurrentNPC:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TrainStandard/Entity/Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(869, 349)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TrainStandard/Entity/OL_Dummy/Sprite2D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TrainStandard/EyeScreen/EyeBody:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(718, 279)]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TrainStandard/Entity/OL_Dummy")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["idle"],
+"method": &"anim_change"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HSceneCutScene")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"original_npc_position_sync"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_qlxwo"]
+resource_name = "e_bottom_eye_cutscene_5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrainStandard/Entity/OL_Dummy:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrainStandard/Entity/OL_Dummy:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(716, 254)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrainStandard/Entity/CurrentNPC:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TrainStandard/Entity/Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(869, 349)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TrainStandard/Entity/OL_Dummy/Sprite2D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TrainStandard/Entity/Player")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["left"],
+"method": &"on_direction_change"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TrainStandard/EyeScreen/EyeBody:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(718, 279)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TrainStandard/Entity/OL_Dummy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["find3"],
+"method": &"anim_change"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_fyuk6"]
+resource_name = "e_bottom_eye_cutscene_6"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrainStandard/EyeScreen/EyeBody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.366667, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(802, 283), Vector2(509, 280), Vector2(802, 283)]
+}
+
+[sub_resource type="Animation" id="Animation_58bwp"]
+resource_name = "e_bottom_eye_cutscene_7"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrainStandard/Entity/OL_Dummy:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrainStandard/Entity/OL_Dummy:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(716, 345)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrainStandard/Entity/CurrentNPC:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TrainStandard/Entity/Player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(869, 349)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TrainStandard/Entity/OL_Dummy/Sprite2D:flip_h")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("TrainStandard/Entity/Player")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["left"],
+"method": &"on_direction_change"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("TrainStandard/EyeScreen/EyeBody:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(718, 279)]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("TrainStandard/Entity/OL_Dummy")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": ["idle"],
+"method": &"anim_change"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HSceneCutScene")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"original_npc_position_sync"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_58bwp"]
+_data = {
+&"RESET": SubResource("Animation_kxro6"),
+&"e_bottom_eye_cutscene_1": SubResource("Animation_l6mpo"),
+&"e_bottom_eye_cutscene_2": SubResource("Animation_db8tu"),
+&"e_bottom_eye_cutscene_3": SubResource("Animation_o46br"),
+&"e_bottom_eye_cutscene_4": SubResource("Animation_j4fba"),
+&"e_bottom_eye_cutscene_5": SubResource("Animation_qlxwo"),
+&"e_bottom_eye_cutscene_6": SubResource("Animation_fyuk6"),
+&"e_bottom_eye_cutscene_7": SubResource("Animation_58bwp")
+}
+
+[sub_resource type="Resource" id="Resource_7xtoy"]
+script = ExtResource("34_w1jdk")
+duration = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v61mu"]
+size = Vector2(1920, 360)
+
+[sub_resource type="Animation" id="Animation_7pieo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ukiqa"]
+resource_name = "idle"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.5, 0.6, 2.9, 3, 3.1, 3.2, 3.4, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 0, 0, 0, 1, 2, 3, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.4, 2.1, 3, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 4), Vector2(0, 0), Vector2(0, 4)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_s05vk"]
+_data = {
+&"RESET": SubResource("Animation_7pieo"),
+&"idle": SubResource("Animation_ukiqa")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yade"]
+size = Vector2(66, 27)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ln0md"]
+
+[sub_resource type="Animation" id="Animation_l54ss"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_aua0c"]
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [30, 31, 32, 33]
+}
+
+[sub_resource type="Animation" id="Animation_swk48"]
+length = 1.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.05, 1.3, 1.55),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [14, 15, 16, 17, 18]
+}
+
+[sub_resource type="Animation" id="Animation_fh8dc"]
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.7, 0.9, 1.1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [19, 20, 21, 22, 23, 24]
+}
+
+[sub_resource type="Animation" id="Animation_y33mk"]
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.4, 1.6, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [25, 26, 27, 28, 29]
+}
+
+[sub_resource type="Animation" id="Animation_slrm2"]
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.7, 0.9, 1.1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [62, 63, 64, 65, 66, 67]
+}
+
+[sub_resource type="Animation" id="Animation_tht31"]
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 1.4, 1.6, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [68, 69, 70, 71, 72]
+}
+
+[sub_resource type="Animation" id="Animation_q55q8"]
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_0yspt"]
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [34, 35, 36, 37, 38, 39, 40]
+}
+
+[sub_resource type="Animation" id="Animation_p4m7h"]
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [41, 42, 43, 44, 45, 46, 47]
+}
+
+[sub_resource type="Animation" id="Animation_c8f01"]
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [48, 49, 50, 51, 52, 53, 54]
+}
+
+[sub_resource type="Animation" id="Animation_bgam4"]
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [55, 56, 57, 58, 59, 60, 61]
+}
+
+[sub_resource type="Animation" id="Animation_ln0md"]
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10, 11, 12, 13]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iguuh"]
+_data = {
+&"RESET": SubResource("Animation_l54ss"),
+&"chibi_idle": SubResource("Animation_aua0c"),
+&"find1": SubResource("Animation_swk48"),
+&"find2": SubResource("Animation_fh8dc"),
+&"find3": SubResource("Animation_y33mk"),
+&"find_anomaly1": SubResource("Animation_slrm2"),
+&"find_anomaly2": SubResource("Animation_tht31"),
+&"idle": SubResource("Animation_q55q8"),
+&"idle_anomaly1": SubResource("Animation_0yspt"),
+&"idle_anomaly2": SubResource("Animation_p4m7h"),
+&"idle_anomaly3": SubResource("Animation_c8f01"),
+&"idle_anomaly4": SubResource("Animation_bgam4"),
+&"idle_dog": SubResource("Animation_ln0md")
+}
+
+[node name="Stage_12" type="Node2D" node_paths=PackedStringArray("player", "current_npc", "doors", "teleports")]
+material = SubResource("ShaderMaterial_8111p")
+script = ExtResource("1_5frgf")
+player = NodePath("TrainStandard/Entity/Player")
+current_npc = NodePath("TrainStandard/Entity/CurrentNPC")
+doors = [NodePath("frontDoor"), NodePath("Exit")]
+teleports = [NodePath("TeleportComponent")]
+stage_type = 1
+
+[node name="HSceneCutScene" type="AnimationPlayer" parent="." node_paths=PackedStringArray("current_npc_entitiy", "reina_dummy")]
+libraries = {
+&"": SubResource("AnimationLibrary_58bwp")
+}
+autoplay = "RESET"
+script = ExtResource("2_hf2vb")
+current_npc_entitiy = NodePath("../TrainStandard/Entity/CurrentNPC")
+reina_dummy = NodePath("../TrainStandard/Entity/OL_Dummy")
+
+[node name="TeleportComponent" parent="." instance=ExtResource("26_1r73j")]
+entry_direction = 3
+path_to_new_scene = "res://Gameplay/Levels/base_00.tscn"
+entry_door_name = "TeleportComponent"
+
+[node name="ClearText" parent="." instance=ExtResource("31_82fnd")]
+
+[node name="StageHandler" parent="." instance=ExtResource("32_gilft")]
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+position = Vector2(321, 180)
+script = ExtResource("33_50oqc")
+priority = 10
+follow_mode = 2
+follow_target = NodePath("../TrainStandard/Entity/Player")
+snap_to_pixel = true
+tween_resource = SubResource("Resource_7xtoy")
+follow_offset = Vector2(0, -150)
+follow_damping = true
+follow_damping_value = Vector2(0.3, 0.3)
+draw_limits = true
+limit_target = NodePath("../CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(961, 180)
+shape = SubResource("RectangleShape2D_v61mu")
+
+[node name="TrainStandard" parent="." instance=ExtResource("35_iyww2")]
+
+[node name="EyeScreen" type="Sprite2D" parent="TrainStandard"]
+clip_children = 1
+texture_filter = 1
+texture = ExtResource("9_pa3uq")
+centered = false
+offset = Vector2(22, 274)
+
+[node name="EyeBody" type="Node2D" parent="TrainStandard/EyeScreen" node_paths=PackedStringArray("level")]
+position = Vector2(548, 280)
+script = ExtResource("10_fte81")
+level = NodePath("../../..")
+
+[node name="Eye" type="Sprite2D" parent="TrainStandard/EyeScreen/EyeBody"]
+self_modulate = Color(1, 1, 1, 0.435294)
+texture_filter = 1
+texture = ExtResource("11_1lcd4")
+hframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TrainStandard/EyeScreen/EyeBody/Eye"]
+libraries = {
+&"": SubResource("AnimationLibrary_s05vk")
+}
+autoplay = "idle"
+
+[node name="Anomaly" type="Area2D" parent="TrainStandard/EyeScreen/EyeBody"]
+position = Vector2(-548, -280)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("9_62jqa")
+bubble = ExtResource("10_2kt0v")
+
+[node name="AnomalyEventComponent" parent="TrainStandard/EyeScreen/EyeBody/Anomaly" instance=ExtResource("6_gvche")]
+position = Vector2(553, 234)
+h_scene_info = ExtResource("15_lyvfe")
+
+[node name="AnomalyCollision" type="CollisionShape2D" parent="TrainStandard/EyeScreen/EyeBody/Anomaly"]
+unique_name_in_owner = true
+z_index = 30
+position = Vector2(549, 279.5)
+shape = SubResource("RectangleShape2D_7yade")
+
+[node name="Entity" type="Node2D" parent="TrainStandard"]
+y_sort_enabled = true
+
+[node name="CurrentNPC" parent="TrainStandard/Entity" instance=ExtResource("6_ajpmm")]
+position = Vector2(992, 345)
+
+[node name="Player" parent="TrainStandard/Entity" instance=ExtResource("38_dr17e")]
+z_index = 3
+position = Vector2(43, 338)
+
+[node name="OL_Dummy" type="CharacterBody2D" parent="TrainStandard/Entity"]
+visible = false
+z_index = 3
+position = Vector2(880, 326)
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("16_62jqa")
+
+[node name="Sprite2D" type="Sprite2D" parent="TrainStandard/Entity/OL_Dummy"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_ln0md")
+position = Vector2(-25, -128)
+texture = ExtResource("47_2ikp8")
+hframes = 9
+vframes = 9
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": true,
+"layer_section": true,
+"output_section": true,
+"slice_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "801ce8748ad738010399677ee66079c3"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TrainStandard/Entity/OL_Dummy"]
+libraries = {
+&"": SubResource("AnimationLibrary_iguuh")
+}
+autoplay = "idle"
+
+[node name="frontDoor" parent="." instance=ExtResource("41_i5sgb")]
+position = Vector2(-24, 356)
+entry_direction = 1
+transition_type = "zelda"
+push_distance = 100
+
+[node name="Exit" parent="." instance=ExtResource("41_i5sgb")]
+position = Vector2(2016, 352)
+entry_direction = 3
+transition_type = "zelda"
+push_distance = 100
+path_to_new_scene = "res://Gameplay/Levels/event_OL_00.tscn"
+entry_door_name = "frontDoor"
+
+[node name="BgTrainWall" type="Sprite2D" parent="."]
+texture = ExtResource("27_50oqc")
+centered = false
+
+[node name="ItemBox" parent="." instance=ExtResource("12_aamxw")]
+position = Vector2(1440, 205)
+hint = ExtResource("23_batyu")

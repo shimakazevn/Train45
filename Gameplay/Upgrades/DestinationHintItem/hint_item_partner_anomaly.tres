@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ShopHint" load_steps=4 format=3 uid="uid://b7vv7spjfdtqp"]
+
+[ext_resource type="Resource" uid="uid://bt1yrbgcw6g1e" path="res://Gameplay/GameData/RouteHint/hint_npc_h.tres" id="1_3eee0"]
+[ext_resource type="Texture2D" uid="uid://b5n01t2yxnclu" path="res://resources/ui/icons/hint_icon_1.png" id="2_3eee0"]
+[ext_resource type="Script" uid="uid://cgvgo5syo8hpt" path="res://Gameplay/Upgrades/DestinationHintItem/shop_hint_item.gd" id="3_38tnc"]
+
+[resource]
+script = ExtResource("3_38tnc")
+hint_info = ExtResource("1_3eee0")
+icon = ExtResource("2_3eee0")
+id = "partner_anomaly"
+price = Array[int]([300])
+max_quantity = 1
+cost = 0
+name = "DESTINATION_HINT_PARTNER_ANOMALY_TITLE"
+description = "HINT_ITEM_WITH_EQUIPMENT"

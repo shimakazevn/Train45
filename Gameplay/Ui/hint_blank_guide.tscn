@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1w8ff2ouxdp0"]
+
+[ext_resource type="Shader" uid="uid://bubj6omgdrqwc" path="res://Gameplay/HintBlankBox.gdshader" id="1_iwdi3"]
+[ext_resource type="Texture2D" uid="uid://c47alptoabaor" path="res://resources/ui/gui/KanKanNavi/set_route_rect.png" id="2_lt5x2"]
+
+[sub_resource type="Gradient" id="Gradient_wjlyo"]
+colors = PackedColorArray(0.888085, 0, 0.375029, 1, 1, 1, 0.25098, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0apaf"]
+gradient = SubResource("Gradient_wjlyo")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gxsiu"]
+shader = ExtResource("1_iwdi3")
+shader_parameter/color_gradient = SubResource("GradientTexture2D_0apaf")
+shader_parameter/size_effect = 0.65
+shader_parameter/speed = -0.3
+shader_parameter/highlight_strength = 1.6
+shader_parameter/color_mode_toggle = true
+shader_parameter/is_horizontal = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_iwdi3"]
+font_color = Color(1, 1, 1, 0.647059)
+outline_color = Color(0, 0, 0, 1)
+
+[node name="HintBlankGuide" type="TextureRect"]
+self_modulate = Color(0, 0, 0, 0.580392)
+material = SubResource("ShaderMaterial_gxsiu")
+texture = ExtResource("2_lt5x2")
+
+[node name="Label" type="Label" parent="."]
+self_modulate = Color(1, 1, 1, 0.756863)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.5
+offset_top = -15.5
+offset_right = 29.5
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(9.8, 9.8)
+pivot_offset = Vector2(20.5, 11.5)
+text = "?"
+label_settings = SubResource("LabelSettings_iwdi3")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxk6xej0qykv7"]
+
+[ext_resource type="Script" uid="uid://cvkin1yyfah33" path="res://Gameplay/Levels/StageHandler.gd" id="1_iiubw"]
+
+[node name="StageHandler" type="Node" groups=["stagehandler"]]
+script = ExtResource("1_iiubw")

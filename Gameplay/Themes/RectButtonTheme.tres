@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cquj348djfesi"]
+
+[ext_resource type="Texture2D" uid="uid://cqsek4fpmjvff" path="res://resources/ui/gui/button_rect_hover.png" id="1_je8ns"]
+[ext_resource type="Texture2D" uid="uid://uih5fpj2f361" path="res://resources/ui/gui/button_rect_active.png" id="2_1upq6"]
+[ext_resource type="Texture2D" uid="uid://b0ivtt3x3p1hs" path="res://resources/ui/gui/button_rect.png" id="3_4vk53"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_57nk1"]
+texture = ExtResource("1_je8ns")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6bewf"]
+texture = ExtResource("1_je8ns")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b1ttf"]
+texture = ExtResource("3_4vk53")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r820w"]
+texture = ExtResource("2_1upq6")
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxTexture_57nk1")
+Button/styles/hover = SubResource("StyleBoxTexture_6bewf")
+Button/styles/normal = SubResource("StyleBoxTexture_b1ttf")
+Button/styles/pressed = SubResource("StyleBoxTexture_r820w")

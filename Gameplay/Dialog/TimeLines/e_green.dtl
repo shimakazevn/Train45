@@ -1,0 +1,170 @@
+do GameEvents.emit_cutscene_play("e_green_cutscene_1")
+녹색 불빛이 불길하게 깜박거린다. #id:a5d
+join reina 1
+reina: 찾았네요, 이상 현상. 대충 이런 느낌이군요. #id:a5e
+reina: 터무니없을 정도로 기이한 현상 뿐만 아니라.. #id:a5f
+reina: 이렇게 신경써서 보지 않으면 알아채기 힘든 이상현상도 존재해요. #id:a60
+reina: 그냥 넘어가 버리면 다시 처음으로 이동한다니.. 이곳에서 탈출할 수 있는 걸까요? #id:a61
+emotion reina Shy 
+reina: 그 역장의 말대로 영원히 이곳을 배회하게 된다면.. #id:a62
+emotion reina Suprised 
+reina: 아!.. 죄송해요. 줄곧 망상에 빠지는 터라. #id:a63
+emotion reina Idle 
+reina: ..하지만 그래도.. 적어도 혼자가 아니니까. 무서움은 덜 느껴져요. #id:a64
+reina: 실제로 방금도 저 혼자였다면 다시 처음 칸으로 돌아갔을 거에요. #id:a65
+emotion reina Smile 
+reina: 당신의 눈썰미로 찾아낸 거에요. 감사합니다. #id:a66
+reina: 저도 폐가 되지 않게 뭐든 도울 것이 있다면 말해주세요. #id:a67
+reina: 당신처럼 이변을 잘 찾진 못하지만.. #id:a68
+- 보고있는 것만으로 힘이 되니까. #id:a69
+emotion reina Suprised 
+reina: 네? 보고 있는 것만으로..? 아아.. 그렇군요. #id:a6a
+reina: 그래서였군요, 절 흘끔흘끔 훔쳐보던 시선들. #id:a6b
+emotion reina Idle 
+reina: 아, 이제는 별로 신경 안 써요. #id:a6c
+reina: 이전에도 전철에 오르면, 가슴이라던가, 엉덩이.. 뚫어질듯 보여져서.. #id:a6d
+reina: 처음에는 불편했지만 이젠 아무렇지 않아요. #id:a6e
+reina: 어쩔때는 실수인 척 손이 닿은 적도 있고.. 뒤에서 움켜쥐어진 적도 있으니. #id:a6f
+emotion reina Smile 
+reina: 여기선 그런 것들을 신경 쓸 필요 없으니 더 좋을 수도. #id:a70
+- 그러고 보니.. #id:a71
+- 처음 만났을 때 나한테 무언가 말하려 했지? #id:a72
+emotion reina Shy 
+reina: 처음이요? 아! 이 전차에 막 올랐을때 말이군요. #id:a73
+reina: 그게.. 저희, 같은 전차를 자주 타죠? #id:a74
+reina: 그때마다.. 줄곧 몰래 절 지켜 보신 걸 알고 있었거든요. #id:a75
+- ...! 아.. 아니, 그건. #id:a76
+	- 여.. 여러 가지로 시선을 땔 수 없어서..! #id:a77
+	- 용서해 주세요! #id:a78
+reina: ..? 어쨰서 당황하시는..? 아! 그런 의도는 아니었어요. #id:a79
+emotion reina Smile 
+reina: 워낙 남들의 시선을 많이 느끼다보니.. 저를 바라보는 목적 정도는 구분할 수 있거든요. #id:a7a
+reina: 당신은 음흉한 목적이라기보다.. 뭐랄까.. 네. #id:a7b
+reina: 그렇게 기분 나쁘지 않았어요. #id:a7c
+reina: 어째선지 당신의 시선이 느껴진 날은 치한을 당하지 않았으니까요. #id:a7d
+- ..... #id:a7e
+reina: 물론 제 기분 탓일지도 모르지만요. 당신이 전차에 보이는 날은 좀 더 마음이 편했달까.. #id:a7f
+과거에 몇번 치한을 막아 준 거.. 약간은 눈치채고 있었구나. #id:a80
+알아주길 바라고 한 건 아니지만.. 어쩐지 조금 기쁘다. #id:a81
+reina: 그러니까 저를 바라보는 것 정도는.. 얼마든지 상관 없으니까요. #id:a82
+reina: 조심스럽게 대하지 않으셔도 돼요. 물론 원하신다면요.. #id:a83
+- 그.. 그럼. 조금만.. #id:a84
+reina: ... #id:a85
+update reina [extra_data="show Etc/Blur, show Etc/Sweat"]
+reina: ...(엄청 쳐다보고 있어..) #id:a86
+update reina 2 [ mirrored="false" move_time="1"]
+emotion reina Shy 
+reina: 어.. 역시 좀 부끄럽네요. #id:a87
+reina: 그런데 어째서 저 같은 걸.. #id:a88
+reina: 그저 평범한 회사원일 뿐인데. 뚫어져라 볼 가치가 있을지.. #id:a89
+...본인의 외모에 대한 자각이 없구나. #id:a8a
+- 솔직히 하루 종일도 볼 수 있어.. #id:a8b
+- 체력이 채워지는 느낌이랄까. #id:a8c
+reina: 아.. 의미는 잘 모르겠지만.. #id:a8d
+reina: 조금이라도 기분전환이 되신다면 다행이에요. #id:a8e
+do TransitionScreen.dialog_transition()
+emotion reina Idle 
+reina: (...) #id:a8f
+레이나의 폭력적인 몸매를 보고 있으니 시간이 흐르는 것조차 알아채지 못한다. #id:a90
+평소라면 훔쳐보는 것조차 절대 상상도 못할 거대한 가슴을. 숨이 닿을 정도 거리에서, 시야에 가득 채운다. #id:a91
+보는 것만으로 바지를 뚫을 듯이 발기한 자지를 억누르지만.. #id:a92
+터질듯이 벌어진 셔츠 단추의 틈새를 보고, 뇌에서 강하게 참고 있던 한 마디가 나도 모르게 튀어나온다. #id:a93
+- ..가슴.. 몇 컵이야? #id:a94
+emotion reina Suprised 
+reina: ..네..? 저의..? #id:a95
+...순간의 정적이 흐른다. 내 온몸에 털이 곤두서는 이유는, 그녀의 굳은 표정을 봐서도 있지만.. #id:a96
+..방금 누가.. 내가 한 말이라고? #id:a97
+아무리 강한 시각적 자극에 뇌 일부가 망가졌다고 해도.. 나는 나를 잘 안다. #id:a98
+오늘 처음 대화한 여성에게.. 가슴 사이즈를 묻긴 커녕, 눈도 마주치지 못하는 성격이니까.. #id:a99
+하지만.. 이미 입밖으로 내뱉은 말은 레이나의 귀를 거치고 말았다. #id:a9a
+여기까진가.. 나도 레이나에게 수많은 치한중 하나로 기억되겠지.. #id:a9b
+그래도.. 이런 거유를 뇌에 각인시킬 수 있었으니까 됐나.. 집에 돌아갈 때까지 잊지 말... #id:a9c
+emotion reina Serious 
+reina: ..K컵이에요. #id:a9d
+- ...? #id:a9e
+reina: ..네.. 너무 커서 이상하죠? #id:a9f
+- 그게 아니라.. 어째서. #id:aa0
+emotion reina Idle 
+reina: 네? 그야.. 물어보셨으니까.. #id:aa1
+reina: 물론 엄청 놀라서 부끄럽지만.. 딱히 말하지 않을 이유는 없었으니까요.. #id:aa2
+레이나의 얼굴은 이미 토마토처럼 붉어져 시선을 바닥에 내리 깔고 있었다. #id:aa3
+나의 터무니없는 요구를.. 쥐어 짜내듯 대답해 줬다는 사실에. #id:aa4
+나는, 어쩌면 조금 더.. 라는 욕심이 뇌를 가득 채운다. #id:aa5
+- ..한번만.. 만져봐도 될까? #id:aa6
+- 미.. 미안, 실례했어. #id:aa7
+	..라고, 평소라면 분명 이렇게 말했을 것이다. #id:aa8
+	그치만 어째선지.. 지금의 나는 달랐다. 어떤 이유에선지. 순수한 성욕이 이성을 압도하는 듯 했다. #id:aa9
+emotion reina Shy 
+reina: ...제가 잘못 들은 건지.. #id:aaa
+- 가슴.. 주물러보고 싶어. #id:aab
+emotion reina Suprised 
+reina: ..! 제 가슴을요..? #id:aac
+나는 반사적으로 내 뺨에 날아올 손바닥을 기다리며 눈을 질끔 감는다. #id:aad
+하지만 잠깐의 머뭇거림 후, 다가온 것은 전혀 의외의 상황이었다. #id:aae
+emotion reina Shy 
+reina: (스윽..) #id:aaf
+레이나가 한 걸음. 나에게 가까이 다가온다. #id:ab0
+reina: 저기.. 괜찮으세요? 눈을 어째서 감고 계신거죠..? #id:ab1
+- 뺘.. 뺨을 맞을 거 같아서. #id:ab2
+reina: 제.. 제가요? 아니에요. 그게.. 좀 놀라서요. #id:ab3
+reina: 하지만 분명 보는 것까진 큰 느낌 없어서 상관 없긴 했는데.. 만지는건.. 그게.. #id:ab4
+reina: ...그게.. #id:ab5
+emotion reina Smile 
+reina: ..옷.. 위라면 상관 없어요. #id:ab6
+reina: 그렇게 궁금하시다면. 원하시는 대로.. #id:ab7
+leave reina 1
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("RESET")
+do GameEvents.anim_change("scene7_1")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(0, 100)
+reina: ..어떠신가요? #id:ab8
+reina: 남에게 만져지는 건 처음이에요.. #id:ab9
+reina: 숨결이 거칠어 진 게 느껴져요.. 조금 부끄럽네요. #id:aba
+reina: 저는 커봤자 무거워서 불편할 뿐이지만.. 남자들은 큰 걸 좋아하는군요. #id:abb
+do GameEvents.anim_change("scene7_5")
+reina: ...! #id:abc
+reina: 그렇게 움켜쥐고 주무르시면..앗.. #id:abd
+reina: 이렇게 본격적으로 가슴 만져진 적 처음이에요.. #id:abe
+reina: 아읏! ..아.. 아뇨, 아픈 게 아니고.. 좀 놀랐어요. #id:abf
+reina: 옷 위로 손가락이 파고 들 정도로 꽉 잡으셔서.. #id:ac0
+reina: 이렇게 집요하게 만져지니까.. 느낌이 이상하지만.. #id:ac1
+reina: 그게.. 나쁘진 않은 거 같아요. #id:ac2
+reina: 크고 뜨거운 손이 분명하게 느껴져요.. #id:ac3
+reina: ..앗.. 네.. 좀 더 세게 하셔도 상관 없어요. #id:ac4
+reina: 으응.. 아프지 않으니까요. #id:ac5
+넘칠 정도의 거유는 옷 위에서도 손 모양을 따라 형체가 변한다. #id:ac6
+정말로 이렇게 쉽게.. 가슴을 주무르는 걸 허락해 줄 줄은.. #id:ac7
+몸을 움찔거릴 뿐, 나에게 몸을 맡긴 그녀를 보고 약간의 의문이 드는 순간, 코니알이라는 이름의 역장이 한 말이 떠오른다. #id:ac8
+이 전차.. 분명 특별한 무언가가 있다고 했지. 혹시 그것 때문에? #id:ac9
+하지만 너무나도 부드러운 가슴의 감촉 덕분에, 그 이상의 생각은 들지 않았다. #id:aca
+지금은.. 이 K컵의 젖을.. 마음껏 주무르고 싶은 마음 뿐이었다. #id:acb
+do GameEvents.anim_change("scene7_2")
+reina: 읏?..! #id:acc
+reina: 하아.. 옷 안으로 손이.. #id:acd
+reina: 정말.. 직접 만지는 건 안된다고 했는데..! #id:ace
+reina: 아읏! 손.. 뜨거워요.. #id:acf
+reina: 꺄앗..! 아.. 그게. #id:ad0
+reina: 스치는 바람에.. 유.. 유두가.. #id:ad1
+reina: 저도 모르게 너무 단단해져서.. 살짝만 스쳐도 자극이 너무 커요.. #id:ad2
+reina: 아앗! 아.. 안 돼요. 그렇게 손가락으로 유두 괴롭히면.. #id:ad3
+reina: 이상한 기분.. 돼 버려요.. 흐읏! #id:ad4
+reina: 거친 숨결이 목덜미에 닿으면서.. 점점 강하게 쥐면.. 더 부끄러워져요.. #id:ad5
+reina: 하아.. 하아.. 원래는 조금만 허락하려 했는데.. #id:ad6
+reina: 그렇게 좋아하는 표정 지으면.. 어쩔 수 없어져요.. #id:ad7
+reina: 하읏.. 원하는 만큼.. 가지고 놀아 주세요.. #id:ad8
+[signal arg="scene7"]
+reina: ...가슴 만으로 이렇게나 오래.. #id:ad9
+reina: 저.. 저는. 싫은 기분은 아니었어요. #id:ada
+reina: 맨 가슴에 직접 닿는 경험은 처음이라.. #id:adb
+- 무척 기분 좋았어.. #id:adc
+reina: ..표정만 봐도 알 거 같아요. 기세에 밀려 허락했지만.. 기뻐하는 모습을 보니.. #id:add
+reina: 이렇게나 큰 가슴도, 싫은 점만 있는 건 아니네요. #id:ade
+- 이 다음에도 부탁해도 될까? #id:adf
+reina: 다..다음에도 말인가요? #id:ae0
+reina: 그게.. 어떨지.. 저는 크게 상관 없지만.. #id:ae1
+reina: ..이 이상은, 좀 더 사이라던가.. 좋아지면.. 생각해 볼게요. #id:ae2
+reina: 그때까진 열심히 탐색 해 나가도록 하죠. #id:ae3
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+do GameEvents.emit_npc_level_up(0)

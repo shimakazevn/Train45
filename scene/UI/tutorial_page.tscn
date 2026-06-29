@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl47gap0d3lwr"]
+
+[ext_resource type="Script" uid="uid://cpus7xmdoninr" path="res://TutorialPage.gd" id="1_b6dus"]
+[ext_resource type="Resource" uid="uid://djdvlhoeqcbiq" path="res://Gameplay/GameData/Tutorials/tuto_base_h_action.tres" id="2_pqbq8"]
+[ext_resource type="Script" uid="uid://b6i8g363pwpkc" path="res://scene/UI/tuto_manager.gd" id="2_rv8vn"]
+[ext_resource type="PackedScene" uid="uid://bdyu05qoclb3v" path="res://Gameplay/GameData/Tutorials/tuto_page.tscn" id="2_vjxaf"]
+
+[node name="TutorialPage" type="Control" node_paths=PackedStringArray("tuto_page")]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b6dus")
+tuto_page = NodePath("CanvasLayer/TutoPage")
+test_tuto = ExtResource("2_pqbq8")
+
+[node name="TutoManager" type="Node" parent="." node_paths=PackedStringArray("tutorial_page")]
+script = ExtResource("2_rv8vn")
+tutorial_page = NodePath("..")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.682353)
+
+[node name="TutoPage" parent="CanvasLayer" node_paths=PackedStringArray("tuto_manager") instance=ExtResource("2_vjxaf")]
+tuto_manager = NodePath("../../TutoManager")

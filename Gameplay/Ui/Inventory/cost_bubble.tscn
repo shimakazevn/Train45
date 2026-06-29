@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://fqq42l3fwe5v"]
+
+[ext_resource type="Texture2D" uid="uid://da4anvskxj16n" path="res://resources/ui/Inventory/cost_bubble_0.png" id="1_sdw53"]
+
+[node name="CostBubble" type="TextureRect"]
+texture_filter = 2
+custom_minimum_size = Vector2(7, 7)
+texture = ExtResource("1_sdw53")
+expand_mode = 4
+stretch_mode = 5

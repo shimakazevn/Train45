@@ -1,0 +1,17 @@
+[gd_scene load_steps=7 format=3 uid="uid://b7fx43t54d3gy"]
+
+[ext_resource type="Texture2D" uid="uid://c2a74lrcmoax3" path="res://resources/life_bubble1.png" id="1_4dqo2"]
+[ext_resource type="Texture2D" uid="uid://djpu5lme27w4i" path="res://resources/life_bubble2.png" id="2_bjmqk"]
+[ext_resource type="Script" uid="uid://cp7kvyq07u1a6" path="res://scene/UI/life_ball_icon.gd" id="2_po45b"]
+[ext_resource type="Texture2D" uid="uid://d11hqmh8frmqp" path="res://resources/life_bubble3.png" id="3_po45b"]
+[ext_resource type="Texture2D" uid="uid://dpmurjprv6jlb" path="res://resources/life_bubble4.png" id="4_xcuhg"]
+[ext_resource type="Texture2D" uid="uid://7ns75sdqg1xl" path="res://resources/life_bubble5.png" id="5_rjk7l"]
+
+[node name="LifeBall" type="TextureRect"]
+texture_filter = 1
+custom_minimum_size = Vector2(16, 16)
+texture = ExtResource("1_4dqo2")
+expand_mode = 2
+script = ExtResource("2_po45b")
+textures = Array[CompressedTexture2D]([ExtResource("1_4dqo2"), ExtResource("2_bjmqk"), ExtResource("3_po45b"), ExtResource("4_xcuhg"), ExtResource("5_rjk7l")])
+base_frame_time = 0.2

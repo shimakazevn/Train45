@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=3 format=3 uid="uid://dncnhchtct4se"]
+
+[ext_resource type="Script" uid="uid://clvpdm1ps7wwf" path="res://Gameplay/GameData/QuestData/quest_npc.gd" id="1_wve65"]
+[ext_resource type="Script" uid="uid://c5pycwl0nmslk" path="res://Gameplay/GameData/QuestData/quest.gd" id="2_43d2c"]
+
+[resource]
+script = ExtResource("2_43d2c")
+id = "quest_6_2"
+description = "코니알의 호감도 1달성 이후 발생 이벤트
+전차를 멈추기 위해 기관실로 이동
+"
+npcs = Array[ExtResource("1_wve65")]([])
+total_love = -1
+ticket = -1
+route = -1
+collect_destinations = -1
+collect_items = -1
+complete_count = -1
+talk = "QUEST_GOAL_TEXT_8"

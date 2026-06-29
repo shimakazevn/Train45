@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://tw403pgf8np6"]
+
+[ext_resource type="Script" uid="uid://goabc6cw63uh" path="res://Gameplay/Dialog/Character/custom_layered_portrait.gd" id="1_uubi5"]
+[ext_resource type="Texture2D" uid="uid://yxwakdl4q0pa" path="res://resources/ch/illust/mai/mai_body.png" id="2_7kx2x"]
+[ext_resource type="Texture2D" uid="uid://bgjpce1ejna1c" path="res://resources/ch/illust/mai/mai_idle.png" id="4_xbxi1"]
+[ext_resource type="Texture2D" uid="uid://dfn0ltodfvsh" path="res://resources/ch/illust/mai/mai_dislike.png" id="5_frm3a"]
+[ext_resource type="Texture2D" uid="uid://ck0nq53ds828y" path="res://resources/ch/illust/mai/mai_flat.png" id="5_m47yb"]
+[ext_resource type="Texture2D" uid="uid://ca4shdh2424f5" path="res://resources/ch/illust/mai/mai_ecchi.png" id="6_dismi"]
+[ext_resource type="Texture2D" uid="uid://dabdrumf2q2om" path="res://resources/ch/illust/mai/mai_suprised.png" id="7_xng0k"]
+[ext_resource type="Texture2D" uid="uid://cs4pksmwa3sx3" path="res://resources/ch/illust/mai/mai_serious.png" id="8_ej56o"]
+[ext_resource type="Texture2D" uid="uid://b87pxptnlndba" path="res://resources/ch/illust/mai/mai_smile.png" id="8_rp5tb"]
+[ext_resource type="Texture2D" uid="uid://dhwu56hqer70s" path="res://resources/ch/illust/mai/mai_etc_blur.png" id="10_bjpnc"]
+[ext_resource type="Texture2D" uid="uid://bbmjh83ycbg0o" path="res://resources/ch/illust/mai/mai_laugh.png" id="10_m47yb"]
+[ext_resource type="Texture2D" uid="uid://diswhvtdhlqbu" path="res://resources/ch/illust/mai/mai_etc_sweat.png" id="11_b23v4"]
+
+[node name="LayeredPortrait" type="CanvasGroup"]
+script = ExtResource("1_uubi5")
+npc_name = "mai"
+
+[node name="Base" type="Sprite2D" parent="."]
+texture_filter = 2
+texture = ExtResource("2_7kx2x")
+
+[node name="Face" type="Node2D" parent="."]
+
+[node name="Idle" type="Sprite2D" parent="Face"]
+texture_filter = 2
+position = Vector2(-48, -625)
+texture = ExtResource("4_xbxi1")
+
+[node name="Flat" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-48, -625)
+texture = ExtResource("5_m47yb")
+
+[node name="Dislike" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-48, -625)
+texture = ExtResource("5_frm3a")
+
+[node name="Ecchi" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-48, -625)
+texture = ExtResource("6_dismi")
+
+[node name="Surprised" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-48, -625)
+texture = ExtResource("7_xng0k")
+
+[node name="Serious" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-48, -625)
+texture = ExtResource("8_ej56o")
+
+[node name="Smile" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-48, -625)
+texture = ExtResource("8_rp5tb")
+
+[node name="Laugh" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-48, -625)
+texture = ExtResource("10_m47yb")
+
+[node name="Etc" type="Node2D" parent="."]
+
+[node name="Blur" type="Sprite2D" parent="Etc"]
+visible = false
+texture_filter = 2
+position = Vector2(-48, -625)
+texture = ExtResource("10_bjpnc")
+
+[node name="Sweat" type="Sprite2D" parent="Etc"]
+visible = false
+texture_filter = 2
+position = Vector2(-48, -625)
+texture = ExtResource("11_b23v4")

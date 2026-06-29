@@ -1,0 +1,161 @@
+[gd_scene load_steps=19 format=3 uid="uid://bdyu05qoclb3v"]
+
+[ext_resource type="Texture2D" uid="uid://bdx54kkvfvfu3" path="res://resources/ui/gui/window.png" id="1_mnmay"]
+[ext_resource type="Script" uid="uid://l8f6g1xspdi4" path="res://Gameplay/GameData/Tutorials/tuto_page.gd" id="1_suf8p"]
+[ext_resource type="Texture2D" uid="uid://deitumb7a8clp" path="res://resources/ui/gui/arrow_next.png" id="2_2tuw4"]
+[ext_resource type="Texture2D" uid="uid://ht8yonan4uba" path="res://resources/ui/gui/arrow_next_hover.png" id="3_6xo63"]
+[ext_resource type="Texture2D" uid="uid://j7va5k46jjx7" path="res://resources/ui/gui/arrow_prev.png" id="3_upk4f"]
+[ext_resource type="Texture2D" uid="uid://byqnr6yhut0ka" path="res://resources/ui/gui/arrow_next_active.png" id="4_4h1ge"]
+[ext_resource type="Theme" uid="uid://cquj348djfesi" path="res://Gameplay/Themes/RectButtonTheme.tres" id="5_f6p3u"]
+[ext_resource type="Texture2D" uid="uid://brlaruyyg2sxr" path="res://resources/ui/gui/arrow_prev_hover.png" id="6_76xcp"]
+[ext_resource type="Texture2D" uid="uid://dwvx8wfulotdv" path="res://resources/ui/gui/arrow_prev_active.png" id="7_p6snw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_aj8oq"]
+font_size = 10
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ml3u"]
+texture = ExtResource("2_2tuw4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2nf00"]
+texture = ExtResource("4_4h1ge")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ody6a"]
+texture = ExtResource("3_6xo63")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y0rw2"]
+texture = ExtResource("3_6xo63")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xluv8"]
+texture = ExtResource("3_upk4f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wg4bh"]
+texture = ExtResource("7_p6snw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7hj6j"]
+texture = ExtResource("6_76xcp")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_spl1w"]
+texture = ExtResource("6_76xcp")
+
+[node name="TutoPage" type="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = -155.0
+offset_right = 252.0
+offset_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_suf8p")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 499.0
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_mnmay")
+region_rect = Rect2(0, 0, 300, 300)
+patch_margin_left = 84
+patch_margin_top = 84
+patch_margin_right = 84
+patch_margin_bottom = 84
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 20
+
+[node name="Description" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "여기에 튜토리얼 설명이 들어갑니다"
+label_settings = SubResource("LabelSettings_aj8oq")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Texture" type="TextureRect" parent="MarginContainer"]
+unique_name_in_owner = true
+texture_filter = 2
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+expand_mode = 2
+stretch_mode = 5
+
+[node name="ArrowNext" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 259.5
+offset_top = -30.0
+offset_right = 415.5
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+theme_override_styles/normal = SubResource("StyleBoxTexture_6ml3u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2nf00")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ody6a")
+theme_override_styles/focus = SubResource("StyleBoxTexture_y0rw2")
+
+[node name="ArrowPrev" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.5
+offset_top = -30.0
+offset_right = -150.5
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+theme_override_styles/normal = SubResource("StyleBoxTexture_xluv8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wg4bh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7hj6j")
+theme_override_styles/focus = SubResource("StyleBoxTexture_spl1w")
+
+[node name="ConfirmButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 141.0
+offset_right = 80.0
+offset_bottom = 181.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(80, 0)
+theme = ExtResource("5_f6p3u")
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+text = "CLOSE_BUTTON"
+
+[connection signal="pressed" from="ArrowNext" to="." method="_on_arrow_next_pressed"]
+[connection signal="pressed" from="ArrowPrev" to="." method="_on_arrow_prev_pressed"]

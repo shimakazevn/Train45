@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhh1j2reim7e4"]
+
+[ext_resource type="Script" uid="uid://dq1jlum8ljjmy" path="res://Gameplay/Dialog/TextbubbleLayer/text_bubble_layer.gd" id="1_b37je"]
+
+[node name="TextBubbleLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_b37je")

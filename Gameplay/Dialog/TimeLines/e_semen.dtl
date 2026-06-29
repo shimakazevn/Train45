@@ -1,0 +1,153 @@
+do GameEvents.emit_cutscene_play("e_semen_cut1")
+똑..똑.. #id:e63
+join mai 1
+emotion mai Flat 
+mai: ... #id:e64
+emotion mai Surprised 
+mai: 앗! 뭐야, 뭐가 머리 위로 떨어졌어. #id:e65
+emotion mai Serious 
+mai: 하얗고 질척한데, 이거.. 설마. #id:e66
+update mai [animation="Shake X" length="0.2" extra_data="show Etc/Sweat"]
+emotion mai Surprised 
+mai: 꺄아악! 새똥이야?! #id:e67
+mai: 아아! 더러워! 저기, 티슈 있어? 어서 어서! #id:e68
+emotion mai Serious 
+mai: 으아아.. 흐르고 있어! 흐아앙.. #id:e69
+- 진정해 마이. #id:e6a
+- 전철 안이니까.. 새똥은 아닐 거야. #id:e6b
+mai: 으으.. 천장이 막혀 있으니까.. 그렇긴 하지.. #id:e6c
+mai: 그럼 더 이상하잖아. 이건 대체.. 우읍?! #id:e6d
+mai: 입에 드러가써.. 퉤, 퉤. 으에에.. #id:e6e
+mai: 으.. #id:e6f
+emotion mai Flat 
+update mai [extra_data="hide Etc/Sweat"]
+mai: ...으음? #id:e70
+mai: 이거, 음음, 뭔가 익숙한데.. 어쩐지 나쁘지 않네 이거. #id:e71
+mai: 중독될 거 같아. 씁쓸한 게. 으무움.. #id:e72
+mai: 으음.. ... 앗! #id:e73
+emotion mai Ecchi 
+mai: 어. 보고 있었지. 하하.. #id:e74
+- 뭔지 모를 걸 함부로 맛 보는건 좋지 않아.. #id:e75
+emotion mai Idle 
+mai: 맞아, 하지만.. 아무래도 알듯 말듯 하단 말야. #id:e76
+mai: 비리고 쓴게.. 뭐였지. 저기, 뭔지 알겠어? 한번 맛볼래? 자.. #id:e77
+- 으악! #id:e78
+- 갑자기 입에 넣지 마! #id:e79
+emotion mai Smile 
+mai: 하하하! 그렇게 질겁하다니, 장난이야. #id:e7a
+- 이거.. 누가 봐도 '그거' 니까. #id:e7b
+emotion mai Idle 
+mai: 어? '그거' 라고? 그게 뭔데? #id:e7c
+천진난만하게 웃는 마이의 귀에 속삭인다. #id:e7d
+mai: ..... #id:e7e
+emotion mai Serious 
+mai: 정액? #id:e7f
+mai: ..생선의 정액 요리 말하는 거? #id:e80
+mai: 사람의 거? 어.. 어째서 이게 천장에서 떨어지는데..? #id:e81
+- 보나마나 코니알이 장난친 거겠지. #id:e82
+- 이런 짓궂은 걸 좋아하니까. #id:e83
+mai: ...그러고 보니 생각보다 끈적하고.. 냄새도 비리고. #id:e84
+emotion mai Flat 
+mai: ..저기, 역시 티슈 있어? ..흐에엥.. #id:e85
+마침 주머니에 남은 꼬깃꼬깃한 티슈 몇 장을 마이에게 건낸다. 마이는 울먹이며 머리에 묻은 정액(?)을 닦는다 #id:e86
+mai: 으에에.. 잘 안 닦이잖아.. #id:e87
+mai: 저기. 나좀 도와 줘. 머리 위는 안보여서.. #id:e88
+- 에엣, 그게. #id:e89
+do GameEvents.emit_cutscene_play("e_semen_cut2")
+emotion mai Surprised 
+mai: 정말! 기겁하지 말라니까! 어디까지 도망가는 거야. #id:e8a
+mai: 정액은 익숙하지 않아? 남자잖아. #id:e8b
+- 아니, 생판 남의 건 예외야.. #id:e8c
+- 마이야말로 내 정액 좋아하잖아. #id:e8d
+mai: 나도 누군지 모를 사람의 정액은 예외거든! 네 거라 가능했던 거란 말야. #id:e8e
+emotion mai Flat 
+mai: 정말.. 난 이름도 모를 사람의 정액을 뒤집어 써버린 거잖아. #id:e8f
+mai: 영문도 모른 채 남의 아기씨를 얼굴 한가득 받아 버렸어.. #id:e90
+- 우읏. #id:e91
+mai: 어때? 남자로써 가만히 보고 있는거야~? 이대로면 아래쪽까지 흘러 버린다고? #id:e92
+- 마이.. 그런 식으로 질투를 유발하다니. #id:e93
+mai: 자신 외의 남의 정액으로.. 나를 마킹시키는 것을 두고만 볼거야? #id:e94
+emotion mai Dislike 
+mai: 헤헷~ 엉덩이쪽은 손이 안 닿으니까~ 네가 도와주지 않으면..? #id:e95
+나 이외의 다른 녀석의 흔적이 남는다는 상상 만으로, 마음속의 독점욕을 건드리기 시작한다. #id:e96
+마이는 나를 테스트하듯 온 몸에 흐르는 흰 액체를 더 이상 손대지 않은 채 짓궂은 미소를 지으며 나의 반응을 바라보고만 있다. #id:e97
+- (티슈로 깨끗히 닦아 준다.) #id:e98
+	emotion mai Ecchi 
+	mai: 알기 쉽다니까 너는, 자! 구석구석 깨끗하게 닦아 줘! #id:e99
+	결국 티슈를 한뭉치 쓴 후에 겨우 모든 정액을 닦아낼 수 있었다. #id:e9a
+	emotion mai Idle 
+	mai: 좋아. 이제 더 묻은 곳 없겠지? 수고했어! #id:e9b
+	mai: 냄새는 좀 남아있지만.. 어쩔 수 없나. #id:e9c
+	- 아니, 냄새도 확실하게 없애야지. #id:e9d
+	mai: 오? 어떻게? 향수라던가 없잖.. #id:e9e
+- (닦아주지 않는다.) #id:e9f
+	궂이 닦아내지 않아도 마이가 나의 소유라는 것을 확실하게 표시할 방법이 있다. #id:ea0
+	나는 천천히, 마이에게 다가간다. #id:ea1
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("e_semen_cut3")
+emotion mai Serious 
+update mai [extra_data="show Etc/Blur"]
+mai: ..으읍?! #id:ea2
+leave mai
+마이의 고개를 양 손으로 거칠게 잡아 내 얼굴로 이끈다. #id:ea3
+갑작스런 딥 키스에 마이는 깜짝 놀라 내 어깨를 강하게 쥔다. #id:ea4
+mai: 츄..츄읏..읍..우웃.. #id:ea5
+mai: 프하.. 뭐야, 질투한 거야? #id:ea6
+mai: 이렇게.. 격하게.. 응웃.. 츄.. #id:ea7
+mai: 응.. 쥬우웁.. 이렇게나 커져선.. #id:ea8
+mai: 무척 강하게 껴안고선.. 갑자기 뭐야. #id:ea9
+mai: 헤헤, 설마 이 모습을 보고 흥분한 거야? #id:eaa
+- 아니, 나의 냄새로 덮으려는 거야. #id:eab
+- 다른 남자들이 확실히 알 수 있도록. #id:eac
+mai: ..! #id:ead
+mai: ...헤..헤헤.. 그렇구나. 내 온몸에 다른 수컷의 냄새마저 모두 덮힐 정도로.. #id:eae
+mai: 잔뜩.. 잔뜩 뿌려 줄 생각이구나. 너무 남자답잖아. #id:eaf
+mai: 좋아.. 너의 크고 듬직한 자지로.. #id:eb0
+mai: 다른 허접 정액 따위 흔적조차 남지 않게. 내 몸에 전부 뒤덮어 줘.. #id:eb1
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("RESET")
+do GameEvents.anim_change("scene4_1")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(1, 100)
+mai: ..으응..쥬웁.. #id:eb2
+mai: 더.. 더 키스해줘. 모든 생각이 날아가게. #id:eb3
+mai: 후후.. 응. 뜨거운게. 배에 닿고 있어. #id:eb4
+mai: 이렇게 커진 건 처음 봐.. 정말 진심이구나? #id:eb5
+mai: 뜨거운 자지에서.. 누구에게도 날 넘기지 않겠다는 각오가 느껴져.. #id:eb6
+mai: 으응.. 좋아. 원하는 대로 해 줘.. #id:eb7
+mai: 잔뜩 젖은 보지 안에 네 단단한 자지로. 자궁 깊은 곳에. #id:eb8
+mai: 한 가득 너의 정액으로 채워 줘.. #id:eb9
+mai: 그럼 난 평생.. 너의 것이니까. #id:eba
+leave mai
+[signal arg="scene4"]
+mai: ..하아 하아 #id:ebb
+mai: 키스로, 침이 얽혀 거미줄처럼 늘어지고 있어. #id:ebc
+mai: 대단해.. 이렇게나 많이 싸다니.. #id:ebd
+mai: 이 정도의 양이면.. 절대 흔적 사라질 리 없잖아.. #id:ebe
+mai: 너의 침도, 정액도, 땀도 모두 받아들여서.. 마치 하나가 된 거 같아. #id:ebf
+mai: 으응. 너의 냄새. 절대 사라지지 않을 거야. #id:ec0
+mai: 물론 시간이 지나면 약해지겠지만.. 그때는 지금처럼 격렬히 너의 흔적을 남겨 줘. #id:ec1
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+do GameEvents.emit_cutscene_play("e_semen_cut4")
+join mai left 
+... #id:ec2
+emotion mai Smile 
+mai: 아아~ 이번에도 기분 좋았어. #id:ec3
+mai: 너무 꽉 끌어안아서 어깨가 결리지만. #id:ec4
+- 그땐 엄청 흥분해서.. #id:ec5
+emotion mai Laugh 
+mai: 응, 그래도 제법 설래던 걸. 헤헤. #id:ec6
+emotion mai Idle 
+mai: 아, 맞다! #id:ec7
+mai: 위에서 떨어진 거 사실 정액이 아니야. #id:ec8
+- 응? 그럼 뭐였어? #id:ec9
+mai: 연유에 무언가를 첨가해서 최대한 비슷하게 따라한 거 같아. 달콤했으니까. #id:eca
+mai: 그 역장 녀석.. 우리를 놀리려고 장난을 친 거겠지? #id:ecb
+emotion mai Laugh 
+mai: 후훗, 그래도 너 덕분에 이젠 확실하게 구분할 수 있겠어. #id:ecc
+mai: 고마워~ 여러가지로. 자, 그럼 계속 가 볼까? #id:ecd
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("RESET")
+do GameEvents.anim_change("idle")
+do GameEvents.emit_npc_level_up(1)

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://b7g2jye67v1we"]
+
+[ext_resource type="Texture2D" uid="uid://hl1la5wxltpu" path="res://resources/ui/EventCoverImage/Hpreview_reina_5.png" id="1_a8tdg"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_bj5jd"]
+
+[resource]
+script = ExtResource("1_bj5jd")
+main_love_event = true
+scene_description = "SCENE_KISSING_FACING"
+scene_name = "scene2"
+dialog_title = "e_reverse_train"
+stage_name = "stage_7"
+love_ability = 3
+preview_texture = ExtResource("1_a8tdg")
+is_position = Vector2(841, 225)
+ahen_keys = PackedStringArray("SCENE_REINA_AHEN_KISS_1", "SCENE_REINA_AHEN_KISS_2", "SCENE_REINA_AHEN_KISS_3", "SCENE_REINA_AHEN_KISS_4", "SCENE_REINA_AHEN_KISS_5")

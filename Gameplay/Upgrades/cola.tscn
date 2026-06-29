@@ -1,0 +1,108 @@
+[gd_scene load_steps=10 format=3 uid="uid://uqcr4rm4f0an"]
+
+[ext_resource type="Texture2D" uid="uid://dfpocj27sdqqp" path="res://resources/ui/icons/icons20.png" id="1_cdkvr"]
+[ext_resource type="Script" uid="uid://b3b5rywwvf286" path="res://Gameplay/Upgrades/cola.gd" id="2_cn0sx"]
+[ext_resource type="PackedScene" uid="uid://b3efipd6nv61v" path="res://Gameplay/Upgrades/choice_circle.tscn" id="3_2j0at"]
+
+[sub_resource type="Animation" id="Animation_ioqb3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_0y4jo"]
+resource_name = "shake"
+length = 0.4
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.731293, 0.260054, 1.09781, 0.532325, 0.90059]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qm65f"]
+_data = {
+&"RESET": SubResource("Animation_ioqb3"),
+&"shake": SubResource("Animation_0y4jo")
+}
+
+[sub_resource type="Animation" id="Animation_7tcwn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_euwtb"]
+resource_name = "bome"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x4n3s"]
+_data = {
+&"RESET": SubResource("Animation_7tcwn"),
+&"bome": SubResource("Animation_euwtb")
+}
+
+[node name="Cola" type="Sprite2D"]
+clip_children = 2
+position = Vector2(-4.50949, -7.00063)
+scale = Vector2(0.59, 0.59)
+texture = ExtResource("1_cdkvr")
+offset = Vector2(10.4336, 12.331)
+script = ExtResource("2_cn0sx")
+choice_circle = ExtResource("3_2j0at")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qm65f")
+}
+
+[node name="WhiteRect" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -19.0
+offset_top = -14.0
+offset_right = 40.0
+offset_bottom = 43.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="WhiteRect"]
+libraries = {
+&"": SubResource("AnimationLibrary_x4n3s")
+}
+speed_scale = 0.2

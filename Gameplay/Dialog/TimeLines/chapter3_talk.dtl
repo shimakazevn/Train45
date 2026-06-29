@@ -1,0 +1,33 @@
+join reina left 
+reina: 아직 나오지 않은 거죠? 마이가 그 소리를 들었다는 곳은. #id:17d
+## 디버그용 테스트
+#[Debug] 대화를 종료하고 다음 챕터로 넘어갈까요? #id:17e
+#- 네 #id:17f
+#	do GameEvents.emit_set_chapter(4)
+#	do GameEvents.emit_game_complete()
+#	[end_timeline]
+#- 아니오 #id:180
+## 
+join mai right [mirrored="true" ]
+emotion mai Flat 
+mai: 응.. 그치만 어느정도 느낌이 비슷해 지고 있어. #id:17e
+- 느낌이라고? #id:17f
+emotion reina Suprised 
+reina: 지금까지로 보면.. 전차 칸을 옮길 때마다 전혀 새로운 장소가 나타나는데.. 이 전차에 어느정도 연속성이 있다는 건가요? #id:180
+mai: 글쎄.. 그렇다기보단 감 일까나. #id:181
+reina: 감 이요? #id:182
+emotion mai Idle 
+mai: 응, 가챠 게임을 할때, 열장의 뒤집어진 카드 중에서 유독 느낌이 좋은 카드가 있잖아? #id:183
+mai: 난 그런 걸 꽤 잘 맞춰. 친구들의 가챠 버튼을 대신해서 눌러주면 대부분이 레어가 뽑히거든. #id:184
+- 나중에 내 것도 부탁할게 #id:185
+emotion mai Smile 
+mai: 응! 맡겨 줘! ..어쨌든 이 전차도 그런 느낌으로 찾고 있단 말이지. #id:186
+emotion mai Idle 
+mai: 앞으로 세번 후면 당첨이다! 라는 마음으로, 꽝, 꽝, 꽝. 그리고 이번 칸이 당첨이야. 내 생각에는. #id:187
+emotion reina Idle 
+reina: 그렇군요.. 평소라면 믿기 힘들지만.. 이런 이상한 장소라면. #id:188
+- 나도 마이를 믿고 있으니까 #id:189
+- 이번이 당첨이길 빌자. #id:18a
+mai: 응. 한번 꼼꼼히 찾아 보자! #id:18b
+do GameEvents.emit_quest_process("chapter3_talk1")
+[end_timeline]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://b27qlbgw3yg2s"]
+
+[ext_resource type="Script" uid="uid://goabc6cw63uh" path="res://Gameplay/Dialog/Character/custom_layered_portrait.gd" id="1_uubi5"]
+[ext_resource type="Texture2D" uid="uid://q752lrb0kq3u" path="res://resources/ch/illust/pazuzu/pazuzu_body.png" id="2_r7gbb"]
+[ext_resource type="Texture2D" uid="uid://dscl80wj6lr1d" path="res://resources/ch/illust/pazuzu/pazuzu_idle.png" id="4_nwqmq"]
+[ext_resource type="Texture2D" uid="uid://bu2teo38cktt0" path="res://resources/ch/illust/pazuzu/pazuzu_seriouse.png" id="5_4f3t4"]
+[ext_resource type="Texture2D" uid="uid://buqj58k4l20cg" path="res://resources/ch/illust/pazuzu/pazuzu_ecchi.png" id="6_ubuow"]
+[ext_resource type="Texture2D" uid="uid://0wjtc3si15h8" path="res://resources/ch/illust/pazuzu/pazuzu_suprised.png" id="7_t35jg"]
+[ext_resource type="Texture2D" uid="uid://cb5nltu75xieo" path="res://resources/ch/illust/pazuzu/pazuzu_smile.png" id="8_n81s5"]
+[ext_resource type="Texture2D" uid="uid://dmlhx25o4yii0" path="res://resources/ch/illust/pazuzu/pazuzu_etc_blur.png" id="10_7l51r"]
+[ext_resource type="Texture2D" uid="uid://ckc0dtv3m4kp2" path="res://resources/ch/illust/pazuzu/pazuzu_etc_sweat.png" id="11_o4o0s"]
+
+[node name="LayeredPortrait" type="CanvasGroup"]
+script = ExtResource("1_uubi5")
+npc_name = "pazuzu"
+
+[node name="Base" type="Sprite2D" parent="."]
+texture_filter = 2
+texture = ExtResource("2_r7gbb")
+
+[node name="Face" type="Node2D" parent="."]
+
+[node name="Idle" type="Sprite2D" parent="Face"]
+texture_filter = 2
+position = Vector2(19, -520)
+texture = ExtResource("4_nwqmq")
+
+[node name="Seriouse" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(19, -520)
+texture = ExtResource("5_4f3t4")
+
+[node name="Ecchi" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(19, -520)
+texture = ExtResource("6_ubuow")
+
+[node name="Suprised" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(19, -520)
+texture = ExtResource("7_t35jg")
+
+[node name="Smile" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(19, -520)
+texture = ExtResource("8_n81s5")
+
+[node name="Etc" type="Node2D" parent="."]
+
+[node name="Blur" type="Sprite2D" parent="Etc"]
+visible = false
+texture_filter = 2
+position = Vector2(19, -520)
+texture = ExtResource("10_7l51r")
+
+[node name="Sweat" type="Sprite2D" parent="Etc"]
+visible = false
+texture_filter = 2
+position = Vector2(19, -520)
+texture = ExtResource("11_o4o0s")

@@ -1,0 +1,125 @@
+[background arg="res://resources/nobel_bg/bg_train_sunset.jpg" fade="1.0"]
+[wait time="2.0"]
+- ...이곳은? #id:12e
+join reina left
+join mai right [mirrored="true"]
+emotion mai Serious 
+mai: 오오! 정신 차렸다! #id:12f
+emotion reina Suprised 
+reina: 괜찮으신가요? 기절하셨었어요. 그.. 코니알에게 당한 이후에. #id:130
+emotion mai Idle 
+mai: 와아~ 대단했지? 역시 역장이라고 하는 그 녀석. 심상치 않아. #id:131
+emotion reina Serious 
+reina: 그보다 사람이라고 할 수 있을지.. 평범하지 않아 보여요. #id:132
+- 내가 기절한 이후에 무슨 일 있었어? #id:133
+reina: 이곳을 나갈 수 있는 방법에 대해 들었어요.. 많이 이상하지만.. #id:134
+mai: 맞아! 완전 어이 없었지. 들어 봐! #id:135
+do TransitionScreen.dialog_transition()
+기절한 동안 코니알이 말한 탈출 방법에 대해 전해 들었다. #id:136
+1000만 장이라는 갯수의 티켓을 모아야 한다는 것도.. #id:137
+emotion reina Idle 
+reina: 당신은.. 이 말이 사실이라고 보시나요? #id:138
+- 당연히 거짓말이야. #id:139
+	mai: 그렇지? 아무리 생각해도 터무니없어. 이것도 컨셉 플레이? #id:13a
+	reina: 하지만 단순한 장난이라기엔 넘어갈 수 없는 부분이 많아요. 밖의 풍경이라던가.. 전차가 계속해서 움직인다던가. #id:13b
+	mai: 핸드폰 시계도 이상해졌어. #id:13c
+- 믿을 수 밖에. #id:13d
+	reina: 그렇죠. 상식적으로 믿기진 않지만. #id:13e
+reina: 그리고 코니알이 했던 말이 계속 신경쓰여요. 이 전차에는 누구의 도움도 받을 수 없다.. #id:13f
+mai: 전차가 계속해서 움직이고 있는 한 나가거나 들어오는건 무리니까. #id:140
+reina: 맞아요. 코니알이 한 말이 모두 거짓말이라도 저희가 확인할 방법은 없어요. #id:141
+emotion reina Suprised 
+reina: ..아! 혹시 마이 양의 핸드폰으로 구조 요청을 보내는 건? #id:142
+emotion mai Flat 
+mai: 응, 그거. 물론 탐색하는 틈틈히 계속 연락을 돌려 봤어. 그치만 '구조'에 관한 대화는 전부 이상한 내용으로 발송되는 거 있지? #id:143
+mai: 덕분에 내 이미지도 완전 망쳐 버렸어.. #id:144
+emotion reina Shy 
+reina: 그렇군요.. #id:145
+- 이 전차 안엔 우리밖에 없는 걸까? #id:146
+emotion reina Idle 
+reina: 적어도 지금까지 탐색하면서 다른 사람은 본 적 없어요. #id:147
+mai: 나도 마찬가지.. ..맞다! 아까 모두에게 말해 줄 게 있다고 했었지? #id:148
+reina: 그러고보니.. 이전과 다르게 침착했었죠. 마이 양. #id:149
+emotion mai Laugh 
+mai: 헤헤, 그 상황에서는 말하면 안 될 거 같았거든. 코니알이 눈치채지 못 한 게 있을 거 같아. #id:14a
+emotion reina Suprised 
+reina: 눈치채지 못한 것? #id:14b
+emotion mai Idle 
+mai: 응. 사실 코니알과 만나기 직전 칸에서 무언가 소리를 들었어. 아마 사람 소리였던 거 같아. 다급해 보였어. #id:14c
+- 같이 오면서 전혀 듣지 못했는데.. #id:14d
+mai: 넌 탐색에 집중하고 있었으니까. 대부분의 이변을 혼자 찾아냈잖아? 덕분에 멍하니 출입문에 기대고 있었더니.. #id:14e
+emotion reina Angry 
+reina: 출입문에 기대는 건 위험해요 마이 양.. #id:14f
+emotion mai Dislike 
+mai: 앗, 미 미안.. 그치만 열릴 리 없으니 봐줘. 헤헤.. 아무튼 기댄 문 '밖'에서 소리가 들려 온 거 있지? #id:150
+emotion reina Idle 
+reina: 문 너머라면.. 전차 바깥 말인가요? #id:151
+mai: 맞아. 틈새에 귀를 대니 더 확실하게 들렸어. #id:152
+reina: 하지만 이 전차는 계속 빠른 속도로 움직이고 있을 텐데.. #id:153
+mai: 그치? 나도 이변의 하나일까 생각했지만. #id:154
+- 그때 내가 찾아낸 이변은 다른 거였어. #id:155
+emotion mai Flat 
+mai: 그러니까 말야. 이제와서 생각해 보니 계속 마음에 걸려. #id:156
+emotion reina Serious 
+reina: 이건.. 어쩌면 정말 중요한 정보인 거 같아요. 그 목소리를 찾아내는게 우선이겠네요. 지금으로썬. #id:157
+- 수상한 모습을 보이면 코니알이 의심할거야. #id:158
+- 탐색은 계속해서 진행하도록 하자. #id:159
+emotion mai Dislike 
+mai: 코니알이 알아채기 전에 찾아내야 한다는 거네.. 가능할까? #id:15a
+- 탐색은 나한테 맡겨. #id:15b
+- 너희에겐 그 목소리를 찾는 걸 맡길게. #id:15c
+emotion mai Ecchi 
+mai: 오.. 좀 멋진걸. 그치? #id:15d
+emotion reina Smile 
+reina: ..네. 안심이 되네요. 확실히 당신이 있었기에 지금까지 탐색이 순조로웠으니까요. #id:15e
+emotion mai Laugh 
+mai: 맞아! 나 혼자였다면 어땠을지.. 상상만 해도.. #id:15f
+reina: 지금부터라도 도움이 될 수 있게 뭐든 부탁해 주세요. #id:160
+- 이미 보답은 많이 받았어 #id:161
+- 자의는 아닐지 몰라도.. #id:162
+emotion reina Suprised 
+reina: 네? ..아.. 전차 안에서.. 했던 일들 말인가요? 그게 정념에 취해서.. 어쩔 수 없이 한 일이라 생각한 건가요? #id:163
+emotion mai Idle 
+mai: 응? 난 완전 좋았는데. #id:164
+reina: ..... #id:165
+emotion mai Laugh 
+mai: 그게 말이지. 나라도 아무리 성욕이 쌓여도 아무하고나 하진 않는걸. 오히려 더 까다롭달까. #id:166
+mai: 근데 너하고 하는건 좋아! 자위보다 몇배는 기분 좋거든. 딱히 정념 때문에 어쩔수 없이 하는 거 아니야. #id:167
+emotion reina Shy 
+reina: ..사실 저도.. 처음엔 탐색에 열심히인 모습에 보답하고자 할 뿐이었는데.. #id:168
+reina: 하다보니 기분이 점점 좋아졌어요. 정념이 몸안에 쌓여서 변하고 있는 거라고 생각했지만. #id:169
+reina: ..혼자 할 때와는 너무 다른 느낌이라서. #id:16a
+emotion mai Ecchi 
+mai: 뭐야! 레이나 짱.. 혼자 있을때 자위한 거야? #id:16b
+emotion reina Suprised 
+update reina [extra_data="show Etc/Blur"]
+reina: 한 번이에요..! 딱 한번이지만..! #id:16c
+emotion reina Serious 
+reina: ..당신이랑 하면 조금 더 두근거린달까.. 그러니까 전차에 퍼진 정념 때문만은 아닐 거라 생각해요. 확인할 방법은 없지만.. #id:16d
+emotion mai Idle 
+mai: 그래! 뭣하면 전차에서 나간 후에 확인해 보면 되지! 나간 후에도 서로 만날 수 있잖아? 꽤나 가까이 살고 있는거 같고. #id:16e
+emotion reina Idle 
+update reina [extra_data="hide Etc/Blur"]
+reina: 아.. 그렇네요. 정념의 영향인지 어떤지는 이곳에서 나간다면 증명할 수 있겠네요. #id:16f
+- 고마워.. #id:170
+- 어서 이 전차에서 나가야겠어. #id:171
+emotion mai Laugh 
+mai: 헤헤. 기대하라고. 절대 정념 따위에 휘둘리지 않으니까. #id:172
+emotion mai Idle 
+mai: 하지만 적어도 여기 있는 동안은 그 녀석이 말한 대로 즐기면 될 거라 생각해. #id:173
+reina: 네. 코니알이 한 말을 신경쓴다면. 걱정하지 마세요. 이 전차에 타기 전부터 저는.. #id:174
+reina: ... #id:175
+emotion reina Shy 
+reina: ..아무튼! 어서 탐색을 재개하죠! ..마이 양, 그 목소리가 들린다는 전차의 위치는.. #id:176
+emotion mai Flat 
+mai: 코니알과 만나기 직전이니까.. 생각보다 깊은 곳에 있을 거야. #id:177
+reina: 그렇군요.. 이번에도 멀리까지 탐색해야 할 거 같아요. 잘 준비해서 출발하죠. #id:178
+leave --All-- [animation="Fade Out" wait="true"]
+[wait time="2.0"]
+..전차 내에 퍼진 '정념'이라는 기운을 흡수할수록 성적 욕구가 강해진다. #id:179
+내가 레이나와 마이랑 야한 짓을 할 수 있을 정도로 친해진 건 그 정념 때문 ..이라고 코니알이 말해 줬지. #id:17a
+그걸 신경쓰고 있다고 느껴서인가? 그녀들은 부인했다. 만약 이곳에서 나가더라도.. 모두와 같은 관계를 유지할 수 있을까? 정념이 없어도.. #id:17b
+확인할 방법은 오직 하나. 여기서 나가는 것. 그때까지 열심히 해보자. #id:17c
+do GameEvents.emit_add_read_history("chapter3_start")
+do TransitionScreen.dialog_transition()
+[end_timeline]

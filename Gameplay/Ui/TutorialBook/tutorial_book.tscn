@@ -1,0 +1,310 @@
+[gd_scene load_steps=28 format=3 uid="uid://c4tr1lhqif534"]
+
+[ext_resource type="Script" uid="uid://cnqhxgt005s6v" path="res://Gameplay/Ui/TutorialBook/tutorial_book.gd" id="1_isud1"]
+[ext_resource type="Texture2D" uid="uid://bdx54kkvfvfu3" path="res://resources/ui/gui/window.png" id="2_ciy6e"]
+[ext_resource type="PackedScene" uid="uid://bvddyffn8losd" path="res://scene/blur_bg.tscn" id="3_3eavq"]
+[ext_resource type="PackedScene" uid="uid://jlj0b8fulp4g" path="res://Gameplay/Ui/TutorialBook/tutorial_book_list_button.tscn" id="3_jc2j4"]
+[ext_resource type="Texture2D" uid="uid://do48bj4bro1rq" path="res://resources/ui/tuto_image/tuto_find1.png" id="4_ciy6e"]
+[ext_resource type="Texture2D" uid="uid://ht8yonan4uba" path="res://resources/ui/gui/arrow_next_hover.png" id="5_v5eyh"]
+[ext_resource type="Texture2D" uid="uid://conovqby0tflg" path="res://resources/ui/Shop/shop_alpha.png" id="5_vgfsk"]
+[ext_resource type="Texture2D" uid="uid://byqnr6yhut0ka" path="res://resources/ui/gui/arrow_next_active.png" id="6_3eavq"]
+[ext_resource type="Theme" uid="uid://cc7or6yyevi6a" path="res://resources/theme/tutorial_book.tres" id="6_lw8d0"]
+[ext_resource type="Texture2D" uid="uid://cmghb2yaabqt8" path="res://resources/ui/controller_icons/xbox-LB-16.png" id="7_cublv"]
+[ext_resource type="Script" uid="uid://nnjff5ms5xn6" path="res://scene/component/controller_button_component.gd" id="8_bfefk"]
+[ext_resource type="Texture2D" uid="uid://brlaruyyg2sxr" path="res://resources/ui/gui/arrow_prev_hover.png" id="8_lw8d0"]
+[ext_resource type="Texture2D" uid="uid://bmyk6ptsbc2rd" path="res://resources/ui/controller_icons/xbox-RB-16.png" id="9_d8ht3"]
+[ext_resource type="Texture2D" uid="uid://dwvx8wfulotdv" path="res://resources/ui/gui/arrow_prev_active.png" id="9_qlh8l"]
+[ext_resource type="Texture2D" uid="uid://c62k040pkqcnw" path="res://resources/ui/gui/button_close_hover.png" id="9_v5eyh"]
+[ext_resource type="Texture2D" uid="uid://5b3c173sc147" path="res://resources/ui/gui/button_close_active.png" id="10_v5eyh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_isud1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ciy6e"]
+line_spacing = -2.65
+paragraph_spacing = 7.56
+font_size = 12
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d8ht3"]
+texture = ExtResource("6_3eavq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bfefk"]
+texture = ExtResource("5_v5eyh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cublv"]
+texture = ExtResource("5_v5eyh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hryjg"]
+texture = ExtResource("9_qlh8l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yjrrx"]
+texture = ExtResource("8_lw8d0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bh708"]
+texture = ExtResource("8_lw8d0")
+
+[sub_resource type="LabelSettings" id="LabelSettings_6qbvs"]
+font_size = 13
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lw8d0"]
+texture = ExtResource("10_v5eyh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vgfsk"]
+texture = ExtResource("9_v5eyh")
+
+[node name="TutorialBook" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_isud1")
+tuto_list_button = ExtResource("3_jc2j4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 12
+
+[node name="ScreenBlurRect" parent="CanvasLayer" instance=ExtResource("3_3eavq")]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 27.0
+offset_right = 496.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ciy6e")
+region_rect = Rect2(0, 0, 300, 300)
+patch_margin_left = 84
+patch_margin_top = 84
+patch_margin_right = 84
+patch_margin_bottom = 84
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+clip_children = 2
+offset_left = 64.0
+offset_top = 39.0
+offset_right = 224.0
+offset_bottom = 317.0
+texture = ExtResource("5_vgfsk")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/TextureRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_bottom = 9
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/TextureRect2/MarginContainer"]
+clip_contents = false
+layout_mode = 2
+theme = ExtResource("6_lw8d0")
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/TextureRect2/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 0
+
+[node name="TutoListContainer" type="VBoxContainer" parent="CanvasLayer/TextureRect2/MarginContainer/ScrollContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TutorialBookListButton" parent="CanvasLayer/TextureRect2/MarginContainer/ScrollContainer/MarginContainer/TutoListContainer" instance=ExtResource("3_jc2j4")]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_isud1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_isud1")
+
+[node name="TutorialBookListButton2" parent="CanvasLayer/TextureRect2/MarginContainer/ScrollContainer/MarginContainer/TutoListContainer" instance=ExtResource("3_jc2j4")]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_isud1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_isud1")
+
+[node name="TutorialBookListButton3" parent="CanvasLayer/TextureRect2/MarginContainer/ScrollContainer/MarginContainer/TutoListContainer" instance=ExtResource("3_jc2j4")]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_isud1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_isud1")
+
+[node name="TutorialBookListButton4" parent="CanvasLayer/TextureRect2/MarginContainer/ScrollContainer/MarginContainer/TutoListContainer" instance=ExtResource("3_jc2j4")]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_isud1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_isud1")
+
+[node name="TutorialBookListButton5" parent="CanvasLayer/TextureRect2/MarginContainer/ScrollContainer/MarginContainer/TutoListContainer" instance=ExtResource("3_jc2j4")]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_isud1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_isud1")
+
+[node name="TutorialBookListButton6" parent="CanvasLayer/TextureRect2/MarginContainer/ScrollContainer/MarginContainer/TutoListContainer" instance=ExtResource("3_jc2j4")]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_isud1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_isud1")
+
+[node name="TutorialBookListButton7" parent="CanvasLayer/TextureRect2/MarginContainer/ScrollContainer/MarginContainer/TutoListContainer" instance=ExtResource("3_jc2j4")]
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_isud1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_isud1")
+
+[node name="PadContainer" type="Control" parent="CanvasLayer"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 551.0
+offset_top = 176.0
+offset_right = 591.0
+offset_bottom = 216.0
+
+[node name="PadUiIcon2" type="TextureRect" parent="CanvasLayer/PadContainer"]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 16.0
+texture = ExtResource("7_cublv")
+script = ExtResource("8_bfefk")
+metadata/_custom_type_script = "uid://nnjff5ms5xn6"
+
+[node name="PadUiIcon3" type="TextureRect" parent="CanvasLayer/PadContainer"]
+layout_mode = 0
+offset_top = 116.0
+offset_right = 20.0
+offset_bottom = 132.0
+texture = ExtResource("9_d8ht3")
+script = ExtResource("8_bfefk")
+metadata/_custom_type_script = "uid://nnjff5ms5xn6"
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+offset_left = 233.0
+offset_top = 39.0
+offset_right = 567.0
+offset_bottom = 313.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+
+[node name="TutoTexture" type="TextureRect" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+texture = ExtResource("4_ciy6e")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="DescriptionScroll" type="ScrollContainer" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme = ExtResource("6_lw8d0")
+horizontal_scroll_mode = 0
+
+[node name="TutoDiscription" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer/DescriptionScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "a
+a
+a
+a
+a
+a
+"
+label_settings = SubResource("LabelSettings_ciy6e")
+autowrap_mode = 2
+
+[node name="Arrows" type="Control" parent="CanvasLayer"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 396.0
+offset_top = 312.0
+offset_right = 396.0
+offset_bottom = 312.0
+
+[node name="ArrowNext" type="Button" parent="CanvasLayer/Arrows"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -12.0
+offset_right = 172.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.12, 0.12)
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_d8ht3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_d8ht3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bfefk")
+theme_override_styles/focus = SubResource("StyleBoxTexture_cublv")
+
+[node name="ArrowPrev" type="Button" parent="CanvasLayer/Arrows"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -12.0
+offset_right = 120.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.12, 0.12)
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_hryjg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hryjg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yjrrx")
+theme_override_styles/focus = SubResource("StyleBoxTexture_bh708")
+
+[node name="CurrentPage" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 375.0
+offset_top = 301.0
+offset_right = 415.0
+offset_bottom = 325.0
+text = "3/3"
+label_settings = SubResource("LabelSettings_6qbvs")
+horizontal_alignment = 1
+
+[node name="ExitButton" type="Button" parent="CanvasLayer"]
+unique_name_in_owner = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -69.0
+offset_top = 10.0
+offset_right = -29.0
+offset_bottom = 50.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxTexture_lw8d0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vgfsk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vgfsk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vgfsk")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_vgfsk")
+theme_override_styles/focus = SubResource("StyleBoxTexture_vgfsk")

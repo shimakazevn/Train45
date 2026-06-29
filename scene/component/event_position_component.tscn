@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbr2j2kcop6ix"]
+
+[ext_resource type="Script" uid="uid://sye1exyj8087" path="res://scene/component/event_position_component.gd" id="1_0oqt1"]
+
+[node name="EventPositionComponent" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_0oqt1")

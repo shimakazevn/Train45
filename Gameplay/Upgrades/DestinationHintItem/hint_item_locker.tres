@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ShopHint" load_steps=4 format=3 uid="uid://dg63dun2gwcjf"]
+
+[ext_resource type="Resource" uid="uid://dopxglyjckoiw" path="res://Gameplay/GameData/RouteHint/hint_locker.tres" id="1_t8mmy"]
+[ext_resource type="Texture2D" uid="uid://den1bgbepdflc" path="res://resources/ui/icons/hint_icon_2.png" id="2_mayaj"]
+[ext_resource type="Script" uid="uid://cgvgo5syo8hpt" path="res://Gameplay/Upgrades/DestinationHintItem/shop_hint_item.gd" id="3_nxyyl"]
+
+[resource]
+script = ExtResource("3_nxyyl")
+hint_info = ExtResource("1_t8mmy")
+icon = ExtResource("2_mayaj")
+id = "locker"
+price = Array[int]([150])
+max_quantity = 1
+cost = 0
+name = "DESTINATION_HINT_LOCKER_TITLE"
+description = "HINT_ITEM_WITH_EQUIPMENT"

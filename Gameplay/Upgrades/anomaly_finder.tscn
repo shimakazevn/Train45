@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://cfweg71klgsvr"]
+
+[ext_resource type="Texture2D" uid="uid://dkwa6fll6wm31" path="res://resources/ui/anomaly_finder.png" id="1_dolbv"]
+[ext_resource type="Shader" uid="uid://cce3bht4fpud3" path="res://Gameplay/Upgrades/anomaly_finder_rect.gdshader" id="3_cr62t"]
+[ext_resource type="Script" uid="uid://djmohej8jbrfv" path="res://Gameplay/Upgrades/anomaly_finder.gd" id="3_jb2d1"]
+[ext_resource type="Texture2D" uid="uid://dfrlknfg0o6p3" path="res://resources/ui/white_finder_rect.png" id="5_171hl"]
+
+[sub_resource type="Gradient" id="Gradient_b4r6n"]
+colors = PackedColorArray(0, 0, 0, 0.294118, 1, 1, 1, 0.27451)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ynw1r"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_a3q8l"]
+seamless = true
+color_ramp = SubResource("Gradient_b4r6n")
+noise = SubResource("FastNoiseLite_ynw1r")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nwbai"]
+shader = ExtResource("3_cr62t")
+shader_parameter/textureNoise = SubResource("NoiseTexture2D_a3q8l")
+shader_parameter/radius = 0.404
+shader_parameter/effectControl = 0.187
+shader_parameter/burnSpeed = 0.01
+shader_parameter/shape = 1.0
+
+[node name="AnomalyFinder" type="NinePatchRect"]
+z_index = 3
+texture_filter = 1
+offset_right = 200.0
+offset_bottom = 200.0
+texture = ExtResource("1_dolbv")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 19
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("3_jb2d1")
+
+[node name="ColorRect2" type="NinePatchRect" parent="."]
+light_mask = 0
+material = SubResource("ShaderMaterial_nwbai")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_171hl")
+patch_margin_left = 50
+patch_margin_top = 35
+patch_margin_right = 50
+patch_margin_bottom = 35

@@ -1,0 +1,3 @@
+집사 호감도 2 이벤트 #id:e3
+do GameEvents.emit_npc_level_up({ch.butler})
+[end_timeline]

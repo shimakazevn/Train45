@@ -1,0 +1,11 @@
+if {npc.type} == {ch.pazuzu}:
+	pazuzu: 이곳에서 아직 하실 일이 남으신 건가요?.. #id:16d6
+	pazuzu: 여길 지나도 저희가 찾는 장소는 나오지 않아요.. 불결한 정념만이 가득할 뿐이죠.. #id:16d7
+	pazuzu: 제가 시작 지점으로.. 돌려보내 드릴게요.. #id:16d8
+	do GameEvents.emit_game_complete()
+elif {npc.type} == {ch.reina}:
+	reina: 이곳도 종착점 중 하나인 거 같아요. 하지만 별 다를 건 없는 거 같네요. #id:16d9
+	reina: 앞에 파주주가 있으니 말을 걸어 보죠. #id:16da
+elif {npc.type} == {ch.mai}:
+	mai: 여기가 종착점인가? 특별한 느낌은 느껴지지 않네. #id:16db
+	mai: 파주주에게 원래 장소로 다시 보내달라고 할까? #id:16dc

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=3 format=3 uid="uid://ddmnispe4va0a"]
+
+[ext_resource type="Script" uid="uid://clvpdm1ps7wwf" path="res://Gameplay/GameData/QuestData/quest_npc.gd" id="1_3umey"]
+[ext_resource type="Script" uid="uid://c5pycwl0nmslk" path="res://Gameplay/GameData/QuestData/quest.gd" id="2_pirer"]
+
+[resource]
+script = ExtResource("2_pirer")
+id = "quest_4_3"
+description = "지갑을 찾은 이후 추가 퀘스트"
+route = 30
+collect_destinations = 5
+talk = "QUEST_GOAL_TEXT_4_2"

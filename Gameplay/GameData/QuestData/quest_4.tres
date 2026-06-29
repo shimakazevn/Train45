@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=3 format=3 uid="uid://y3qc46dvmjod"]
+
+[ext_resource type="Script" uid="uid://clvpdm1ps7wwf" path="res://Gameplay/GameData/QuestData/quest_npc.gd" id="1_7hoid"]
+[ext_resource type="Script" uid="uid://c5pycwl0nmslk" path="res://Gameplay/GameData/QuestData/quest.gd" id="2_4tkrt"]
+
+[resource]
+script = ExtResource("2_4tkrt")
+id = "quest_4"
+description = "챕터 4 클리어 조건
+칸칸네비를 제작하기 위해 재료를 모아와야합니다
+이변 20개 이상 발견
+티켓 2000개"
+npcs = Array[ExtResource("1_7hoid")]([])
+total_love = -1
+ticket = 2000
+route = 20
+collect_destinations = -1
+collect_items = -1
+complete_count = -1
+talk = "QUEST_GOAL_TEXT_3"

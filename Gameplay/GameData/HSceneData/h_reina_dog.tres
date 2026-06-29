@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://mci577d54vou"]
+
+[ext_resource type="Texture2D" uid="uid://dlmaiqwvrpv5v" path="res://resources/ui/EventCoverImage/Hpreview_reina_7.png" id="1_1iqqc"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_arxrq"]
+
+[resource]
+script = ExtResource("1_arxrq")
+scene_description = "SCENE_DOG"
+scene_name = "scene4"
+dialog_title = "e_dog_strap"
+stage_name = "stage_d_dogstrap"
+preview_texture = ExtResource("1_1iqqc")
+is_position = Vector2(1564, 261)
+ahen_keys = PackedStringArray("SCENE_REINA_AHEN_6", "SCENE_REINA_AHEN_7", "SCENE_REINA_AHEN_8", "SCENE_REINA_AHEN_9", "SCENE_REINA_AHEN_10")

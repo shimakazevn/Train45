@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c7tthty2e1w31"]
+
+[ext_resource type="Script" uid="uid://bstn8uqwi0345" path="res://Gameplay/auto_shirink_component.gd" id="1_m2ujw"]
+
+[node name="AutoShirinkComponent" type="Node"]
+script = ExtResource("1_m2ujw")

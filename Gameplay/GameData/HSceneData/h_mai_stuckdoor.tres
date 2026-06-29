@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://dvvqe45fkrgk5"]
+
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_7oxo5"]
+[ext_resource type="Texture2D" uid="uid://cx3b653bc2h35" path="res://resources/ui/EventCoverImage/Hpreview_mai_5.png" id="1_eg7bu"]
+
+[resource]
+script = ExtResource("1_7oxo5")
+scene_description = "SCENE_DOOR_STUCK"
+scene_name = "scene102"
+dialog_title = "e_stuck_door"
+stage_name = "stage_d_stuckdoor"
+partner = 1
+preview_texture = ExtResource("1_eg7bu")
+ahen_keys = PackedStringArray("SCENE_MAI_AHEN_4", "SCENE_MAI_AHEN_5", "SCENE_MAI_AHEN_6", "SCENE_MAI_AHEN_7", "SCENE_MAI_AHEN_8", "SCENE_MAI_AHEN_9", "SCENE_MAI_AHEN_10")

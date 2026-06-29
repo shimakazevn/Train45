@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=3 format=3 uid="uid://bire5lc60laab"]
+
+[ext_resource type="Script" uid="uid://clvpdm1ps7wwf" path="res://Gameplay/GameData/QuestData/quest_npc.gd" id="1_wg6yt"]
+[ext_resource type="Script" uid="uid://c5pycwl0nmslk" path="res://Gameplay/GameData/QuestData/quest.gd" id="2_d2c5k"]
+
+[resource]
+script = ExtResource("2_d2c5k")
+id = "quest_3"
+description = "챕터 3 클리어시 조건 체크
+8번째 칸에 도달해서 파주주를 처음 만나는 퀘스트"
+total_love = 5
+collect_items = 5
+complete_count = 4
+talk = "QUEST_GOAL_TEXT_2_1"

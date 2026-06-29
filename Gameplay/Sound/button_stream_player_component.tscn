@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bj1jpntptaqij"]
+
+[ext_resource type="Script" uid="uid://b7ffmcude0qot" path="res://Gameplay/button_stream_player_component.gd" id="1_1khp3"]
+
+[node name="ButtonStreamPlayerComponent" type="AudioStreamPlayer"]
+bus = &"Sfx"
+script = ExtResource("1_1khp3")

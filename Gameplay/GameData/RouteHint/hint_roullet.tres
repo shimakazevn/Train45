@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://6n1uj3jkj6x4"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_lacyl"]
+[ext_resource type="Texture2D" uid="uid://den1bgbepdflc" path="res://resources/ui/icons/hint_icon_2.png" id="2_i22xu"]
+
+[resource]
+script = ExtResource("1_lacyl")
+id = "roullet"
+title = "DESTINATION_HINT_ROULLET_TITLE"
+texture = ExtResource("2_i22xu")
+description = "DESTINATION_HINT_ROULLET_INFO"
+partner_type = 1
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

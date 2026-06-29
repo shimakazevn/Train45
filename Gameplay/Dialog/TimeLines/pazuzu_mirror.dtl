@@ -1,0 +1,179 @@
+do GameEvents.emit_cutscene_play("e_pazuzu_mirror_cut1")
+..파주주가 사로잡힌 이후, 전차의 어느 칸. #id:18bb
+... #id:18bc
+... #id:18bd
+join pazuzu center 
+emotion pazuzu Ecchi 
+pazuzu: ..우으.. #id:18be
+emotion pazuzu Idle 
+pazuzu: ...으힛?! 여.. 여긴? #id:18bf
+emotion pazuzu Suprised 
+pazuzu: 어두워서 아무것도 보이지 않아요.. 우웃?! #id:18c0
+emotion pazuzu Ecchi 
+pazuzu: 하아앗.. 다리에 힘이.. 마, 맞아요.. 분명 아까 전.. 정체 불명의 괴물에게 엉망진창.. #id:18c1
+pazuzu: 라.. 라마슈투.. 제가 잔뜩 당하는 걸 보면서.. 꼴 좋다는 듯이 웃고 있었어요.. #id:18c2
+pazuzu: 겨우 녀석을 찾아냈다 생각했는데.. 이렇게 어처구니없이 실패해 버리다니.. #id:18c3
+emotion pazuzu Idle 
+pazuzu: 하, 하지만 절대 포기하지 않아요..! 지금까지 해 온 것처럼 몇번이고 전차를 찾아 낼 거니까.. #id:18c4
+pazuzu: ..응? ..그러고 보니, 이 곳은.. #id:18c5
+pazuzu: 규칙적인 진동.. 먹먹한 소음.. 온통 어두웠던 주변도.. 눈이 적응되니까 보이기 시작해요.. #id:18c6
+emotion pazuzu Suprised 
+update pazuzu rightmost [mirrored="true" move_time="2.0"]
+do GameEvents.emit_cutscene_play("e_pazuzu_mirror_cut2")
+pazuzu: ..흐.. 흐아앗?! #id:18c7
+pazuzu: 설마.. 전차 내부? 전차 안으로 들어온 건가요? #id:18c8
+pazuzu: 트, 틀림 없어요. 창 밖에 매달려서 본 안쪽의 풍경이랑.. 똑같아요.. #id:18c9
+emotion pazuzu Idle 
+pazuzu: 어째서? 저를 내부로 들여보낸 이유가.. #id:18ca
+konial: ..엥엥거리는 걸 보니 정신을 차렸나 보네? #id:18cb
+pazuzu: ..! 이 목소리는.. 라, 라마슈투! #id:18cc
+pazuzu: 어디.. 어디 있는 거에요! 모습을 드러내세요! 지금 당장.. #id:18cd
+konial: 키히히, 티 타임 중이라. 방송으로 말하는 중이거든. #id:18ce
+konial: 그리고 그다지 천사와 같은 공기 마시고 싶지 않아. 구역질 난다고. #id:18cf
+pazuzu: 으읏.. 하, 하지만. 말과는 다르게.. 절 전차로 들여온 이유가 뭐죠..? #id:18d0
+konial: 응? 이유? #id:18d1
+pazuzu: .....그, 그게. 호..혹시. #id:18d2
+emotion pazuzu Smile 
+pazuzu: ..보, 보고 싶었던 건.. #id:18d3
+konial: .... #id:18d4
+konial: ..하아? #id:18d5
+pazuzu: 라, 라마슈투.. 사실 절 알고 있잖아요. 그, 그쵸..? #id:18d6
+pazuzu: 아까는 인간 여러분들이 있어 티를 내지 못했으니까. 이런 곳에서 이야기 하려고.. 저를.. #id:18d7
+pazuzu: 저, 저를 기억하고.. 있으니까.. 우..으흐.. #id:18d8
+konial: .... #id:18d9
+emotion pazuzu Ecchi 
+pazuzu: 하, 하지만.. 이건 어디까지나 공무에요.. 사적인 감정을 일에 집어넣을 수는.. #id:18da
+pazuzu: 그래도.. 그래도 약간은.. 대화 정도라면.. #id:18db
+konial: ..제멋대로 이야기를 진행시키지 말아 줄래? #id:18dc
+emotion pazuzu Idle 
+pazuzu: 에..? 그치만.. #id:18dd
+konial: 생각보다 더 정신이 나간 녀석이었네. 도대체 누가 누구를 알고 있다는 거야? #id:18de
+konial: 너같은 기분나쁜 녀석 모른다고 몇번을 말하게 하는 거야! 천사따위 날파리와 동급 혹은 그 이하 정도 인식이니까. #id:18df
+pazuzu: 으으..라마슈투.. #id:18e0
+konial: 그래, 그 라마슈투라는 이름! 도대체 어디서 듣고 온 거야? #id:18e1
+pazuzu: 어.. 어디라니. 그야 당신은 원래부터.. #id:18e2
+konial: 원래 같은건 없어. 그 이름을 아는 거 보니 말도 못할 정도로 오래 전의 악연인가 보네. #id:18e3
+konial: 미안하지만 그동안 무척 많은 일이 있었거든. 하급 천사따위 기억에 남을 자리도 없을 정도로. #id:18e4
+emotion pazuzu Suprised 
+pazuzu: 읏..! 거짓말.. 정말 아무것도.. 저에 대한 건.. #id:18e5
+konial: 그래. 너를 이 전차칸으로 처넣은 이유도 특별 대우같은 게 아냐. #id:18e6
+konial: 이 칸은 전차의 최 후미 예비 칸. 전력도 들지 않는 수리 불가 칸이란 말이지. #id:18e7
+konial: 나도 이 칸을 찾는데 꽤나 고생했어. 한동안 버려졌으니까. 정념도 희미하게 남아있는 탓에 추적하기도 어려워. #id:18e8
+konial: 그런 외진 칸 안에, 해충을 가둬 놓은 거야. 바깥에 풀어 줘 봐야 빛을 쫓아 몇번이고 달려들 테니까. #id:18e9
+emotion pazuzu Idle 
+pazuzu: 저, 저는 해충이 아니에요..! 확실히 몇번이고 다시 찾아올 거지만.. #id:18ea
+konial: 아무렴. 그래도 내 45번 전차에 해충과 같이 탑승해 있는 건 영 꺼림칙하단 말이지. 그래서. #id:18eb
+konial: ..이 전차칸을 '분리'할 거야. #id:18ec
+pazuzu: ..부.. 분리? #id:18ed
+konial: 그래. 어차피 쓸모도 없는 예비 칸이거든. 온갖 필요없는 것들을 묶어서 바깥에 버리는 거지. #id:18ee
+konial: 원래라면 집사 녀석의 장난감들을 이 칸에 집어넣어 폐기할 용도로 두던 칸이지만.. 쓸모가 생겨서 말이야. #id:18ef
+konial: 하아, 어쩄든. 이제 알겠지? 이 칸은 네 힘으론 절대 탈출 못해. 죽을 때까지 이 단칸 전차에 갇혀 있으면 되는 거야. #id:18f0
+pazuzu: 그, 그럴리가.. 이 전차.. 아니, '이것'의 일부를 분리할 수 있을리 없어요.. 분명히.. #id:18f1
+konial: 일반적으로는 그렇지. 비용을 좀 지불하면 안 될 건 없다고? 키히히. #id:18f2
+konial: 시간도 좀 걸리고 귀찮은 작업이야. 지금이라도 때 버리고 싶지만.. 준비가 끝날 때까진 네 녀석도 승객 취급은 해 줄게. #id:18f3
+pazuzu: ..? 누.. 누군가 들어왔어요. 어두워서 보이지 않지만.. #id:18f4
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("e_pazuzu_mirror_cut3")
+konial: 키히히! 버려질 때까지 꽤나 무료할 테니까. 이 녀석들이 마음껏 상대해 줄거야. #id:18f5
+emotion pazuzu Suprised 
+pazuzu: 상대라니.. 아까 그 괴물처럼 하.. 하려는 건가요..?! #id:18f6
+konial: 그래, 비록 연구중인 시제품이라 제어하기 힘들 수 있지만. 덕분에 지루할 틈 없을 걸. 한시도 놔 주지 않을 거야. #id:18f7
+konial: 티켓을 더 양산하기 위해 만든 인간 모조품이지. 이래봬도 꽤나 좋은 녀석을 모델로 썼으니까 꽤나 기분 좋을걸? #id:18f8
+konial: 뭐, 실제로 그 녀석의 자지 꽤나 쓸만했으니까. 정액도 잔뜩 나오고 단단하고. 크기부터 굵기까지 완벽하게 재현해냈어. #id:18f9
+emotion pazuzu Seriouse 
+pazuzu: ..에..? #id:18fa
+emotion pazuzu Idle 
+pazuzu: 그..! 그렇다면 라마슈투.. 당신도? ..당신도 그 인간의 자.. 자지를..? #id:18fb
+konial: 자! 티 타임이 끝나서 말이야. 이만 일하러 가 봐야겠네! #id:18fc
+pazuzu: 자, 잠깐만요..! 대, 대답을..! 당신도 이.. 인간과..?! #id:18fd
+konial: 그럼 전차 칸의 분리 준비가 끝나면 직접 알려 주러 올게! 그때라면 다시 만날 수 있겠네. 정신이 남아 있다면 말이지. 키히히! #id:18fe
+pazuzu: 라마슈투..! 잠깐! #id:18ff
+..... #id:1900
+..... #id:1901
+update pazuzu center [move_time="2.0"]
+pazuzu: ..조, 조용해 졌어요.. #id:1902
+pazuzu: 그나저나 분명.. 이 모조품.. 이전에 만난 인간분과 똑같이 생겼네요.. #id:1903
+pazuzu: 주변에 있던 인간 여성들과 티켓을 만든다는 것은 알았지만.. #id:1904
+emotion pazuzu Seriouse 
+pazuzu: ..... 라마슈투하고도? #id:1905
+pazuzu: ..... #id:1906
+emotion pazuzu Suprised 
+update pazuzu rightmost [move_time="1.0"]
+do GameEvents.emit_cutscene_play("e_pazuzu_mirror_cut4")
+pazuzu: ...하앗?! #id:1907
+pazuzu: 우, 움직이잖아.. 자, 잠깐만요.. #id:1908
+pazuzu: 저.. 다, 다가오시는 건가요? 이 일단 말로.. 으으..?! #id:1909
+pazuzu: 히, 히이잇..?! #id:190a
+leave pazuzu
+do TransitionScreen.dialog_transition()
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="0.1"]
+[wait time="2.0" hide_text="true" ]
+pazuzu: 하.. 하앗, 하읏.. #id:190b
+do GameEvents.emit_anim_change_this_npc("scene2_2", {ch.pazuzu})
+do GameEvents.game_state_change(1)
+do GameEvents.emit_cutscene_play("e_pazuzu_mirror_cut5")
+pazuzu: 아.. 으응.. 흣..! 아앙! #id:190c
+pazuzu: 하앗.. 후우.. ..... #id:190d
+pazuzu: ..... #id:190e
+pazuzu: 저기.. #id:190f
+pazuzu: ..말 해보세요. ..네? #id:1910
+[clear time="1.0" text="false" portraits="false" music="false" positions="false" style="false"]
+pazuzu: 그 때도.. 이 곳을 찔렀나요..? #id:1911
+pazuzu: 어떤 자세로, 어떤 속도로.. 얼마나 깊이. ..전부 말하세요.. #id:1912
+pazuzu: 후읏.. 아.. 읏.. 으응..! #id:1913
+pazuzu: ..기분 좋았나요..? #id:1914
+pazuzu: 라마슈투의 보지.. #id:1915
+pazuzu: ..흐읏, 그녀에게 박아댔던 거처럼. 한치의 틀림도 없이 제게 해 보세요.. 으응.. #id:1916
+pazuzu: 할 수 있죠..? 모조품이니까. 그때의 기억 가지고 있을 거 아니에요..? #id:1917
+pazuzu: 그때는 어떤 표정을 하고 있었나요? 항상 제게 보인 것처럼.. 경멸하고 있었나요? 비웃고 있었나요? #id:1918
+pazuzu: 흐읍.. 후우.. 인간인 당신의.. 기분 좋은듯 바보같은 표정을 보면서.. 자지를 물고 있었나요..? #id:1919
+pazuzu: 아.. 아응.. 이렇게.. 앗, 아.. #id:191a
+pazuzu: 이렇게 하면.. 꽤나 깊은 곳까지 찔러오는군요.. 이건.. 꽤나 좋을..지도. #id:191b
+pazuzu: 우웃..! 라, 라마슈투는.. 잔뜩 기분 좋아했나요..? #id:191c
+pazuzu: 움찔움찔 하고 있어요.. 읏.. 으읏.. #id:191d
+pazuzu: 이거.. 사정하려는 신호인 거죠..? 흐읏, 으읏.. #id:191e
+pazuzu: 아직.. 부족해요. 아직 싸버리면 안 돼요.. 더 알아야 한다고요.. #id:191f
+pazuzu: ..참으세요.. 마음대로 사정해버리면 안 돼요.. #id:1920
+pazuzu: 라마슈투가 내게 준.. 선물이잖아요. 그렇죠..? 우..우흐흐.. 흐읏.. #id:1921
+pazuzu: 이.. 이렇게 더 빠르게..엣..! #id:1922
+do GameEvents.emit_anim_change_this_npc("scene2_3", {ch.pazuzu})
+[wait time="7.0" hide_text="true" ]
+pazuzu: 으옷..?! 아읏..! 안쪽에.. 가득..! #id:1923
+pazuzu: ..하아.. 읏.. 으.. #id:1924
+do GameEvents.emit_anim_change_this_npc("scene2_4", {ch.pazuzu})
+pazuzu: 싸.. 싸지 말라고.. 분명 말 했는데.. 이 정도로는.. 하앗.. #id:1925
+pazuzu: ..... 이 정도로는 알 수 없다고요.. 라마슈투에 대해.. #id:1926
+pazuzu: ..하으.. 으읏.. ..자.. 다시.. 세워 보세요.. 어서.. #id:1927
+pazuzu: 으응.. ..서지 않아. ..망가진 건가요..? #id:1928
+pazuzu: ..그럴 수가. 겨우 이.. 이 정도로. #id:1929
+pazuzu: ..... #id:192a
+pazuzu: ..... #id:192b
+pazuzu: ..다음. #id:192c
+pazuzu: ..다음 차례에요. 아직 모조품은 많으니.. 우히.. #id:192d
+pazuzu: ..잘.. 잘만 하면, 그녀의.. 애액이 묻은 자지를 찾을 수도 있으니까. ..으히.. 으히힛.. #id:192e
+pazuzu: 그러니까.. 최대한 많이 섹스.. 해 줘야 한다고요.. 아시겠죠.. 인간의 모조품. #id:192f
+set {npc.type} = {ch.pazuzu}
+[signal arg="scene2"]
+pazuzu: 후읏.. 으으으.. 가득.. 가득이에요.. #id:1930
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("e_pazuzu_mirror_cut6")
+emotion pazuzu Ecchi 
+pazuzu: 아아.. 좀 더 알고 싶었는데. 전부 망가져 버린 거 같아요.. #id:1931
+emotion pazuzu Seriouse 
+pazuzu: 더 움직일 수 있죠? ..네? 자지.. 아직 부족하단 말이에요. #id:1932
+pazuzu: 아직 부족.. 한.. #id:1933
+join pazuzu center 
+emotion pazuzu Seriouse 
+... #id:1934
+emotion pazuzu Suprised 
+pazuzu: ..으읏?! #id:1935
+pazuzu: 히야앗..?! 제가 무슨 짓을.. 지금까지 그.. 그런..?! #id:1936
+pazuzu: 저.. 정신 차려야 해요..! 제, 제 본분을 잊으면 안된다고요..! #id:1937
+pazuzu: 라, 라마슈투는 제가 상대해야 할 적..! 이.. 이건 제가 인도해야 할 인간의 모조품이잖아요..?! #id:1938
+emotion pazuzu Ecchi 
+pazuzu: ..이 전차의 이상한 기운에 휩쓸릴 뻔 했어요.. 하마터면.. #id:1939
+pazuzu: 이렇게나 강한 힘일 줄은 몰랐네요.. 이 정도라면 인간 분들에겐 엄청난 영향을 끼칠 게 분명한데.. #id:193a
+emotion pazuzu Idle 
+pazuzu: ..과연.. 믿고 기다릴 수 있을까요..? 절 구하러 올 수 있는 거겠죠..? #id:193b
+do GameEvents.emit_game_complete()
+[end_timeline]

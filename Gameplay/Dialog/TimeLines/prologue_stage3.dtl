@@ -1,0 +1,10 @@
+전차의 왼쪽에 도착하자 코니알의 음성이 흘러 나온다. #id:13d1
+konial: 잘 기억했어? 그럼 시작할게! #id:13d2
+konial: 이전과 다른 부분을 발견했다면 그 앞으로 이동해. #id:13d3
+konial: 스페이스 바(엔터 키)를 쭉 누르면 게이지가 오를 거야. #id:13d4
+konial: 게이지가 가득 차면 자신 주변의 일정 범위 안을 감지할 수 있어. [br] 감지 범위는 게이지가 오르는 동안 주변 영역이 변하는 곳이야. #id:13d5
+konial: 지금은 경험이 없어서 적은 범위밖에 감지 못할 테니 이변 위에 가까이 위치해야 하는 거 명심해! #id:13d6
+konial: 이번엔 몇 번이고 실패해도 되니까 잔뜩 시도해 봐~ #id:13d7
+konial: 자, 그럼 시작해보자! #id:13d8
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_quest_process("prologue_find_start")

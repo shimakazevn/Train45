@@ -1,0 +1,92 @@
+[gd_scene load_steps=14 format=3 uid="uid://bvniu0kmofvp0"]
+
+[ext_resource type="Script" uid="uid://goabc6cw63uh" path="res://Gameplay/Dialog/Character/custom_layered_portrait.gd" id="1_glklp"]
+[ext_resource type="Texture2D" uid="uid://dhwsy53pwi0nj" path="res://resources/ch/illust/konial/konial_body.png" id="2_640b6"]
+[ext_resource type="Texture2D" uid="uid://bhn1bu08dltjv" path="res://resources/ch/illust/konial/konial_idle.png" id="4_gw1fm"]
+[ext_resource type="Texture2D" uid="uid://bvtvsfjyfqblh" path="res://resources/ch/illust/konial/konial_dislike.png" id="5_dl5ry"]
+[ext_resource type="Texture2D" uid="uid://brrx1r6fr31wv" path="res://resources/ch/illust/konial/konial_sadistic.png" id="6_4x34n"]
+[ext_resource type="Texture2D" uid="uid://j57eenkyraed" path="res://resources/ch/illust/konial/konial_suprised.png" id="7_i7myh"]
+[ext_resource type="Texture2D" uid="uid://diia7mj2x0tm3" path="res://resources/ch/illust/konial/konial_smile.png" id="8_5xdbv"]
+[ext_resource type="Texture2D" uid="uid://daf84g5hvjblb" path="res://resources/ch/illust/konial/konial_cry1.png" id="8_640b6"]
+[ext_resource type="Texture2D" uid="uid://nqevpyt4joqu" path="res://resources/ch/illust/konial/konial_cry2.png" id="9_mqp11"]
+[ext_resource type="Texture2D" uid="uid://dx2bwgifkhvsh" path="res://resources/ch/illust/konial/konial_etc_blur.png" id="10_aw3rh"]
+[ext_resource type="Texture2D" uid="uid://cb3gexgng3iiu" path="res://resources/ch/illust/konial/konial_cry3.png" id="10_gw1fm"]
+[ext_resource type="Texture2D" uid="uid://dbnkojgac3175" path="res://resources/ch/illust/konial/konial_cry4.png" id="11_dl5ry"]
+[ext_resource type="Texture2D" uid="uid://w40irlhngu7w" path="res://resources/ch/illust/konial/konial_etc_sweat.png" id="11_q4clv"]
+
+[node name="LayeredPortrait" type="CanvasGroup"]
+script = ExtResource("1_glklp")
+npc_name = "konial"
+
+[node name="Base" type="Sprite2D" parent="."]
+texture_filter = 2
+texture = ExtResource("2_640b6")
+
+[node name="Face" type="Node2D" parent="."]
+
+[node name="Idle" type="Sprite2D" parent="Face"]
+texture_filter = 2
+position = Vector2(-75, -557)
+texture = ExtResource("4_gw1fm")
+
+[node name="Dislike" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-75, -557)
+texture = ExtResource("5_dl5ry")
+
+[node name="Sadistic" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-75, -557)
+texture = ExtResource("6_4x34n")
+
+[node name="Surprised" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-75, -557)
+texture = ExtResource("7_i7myh")
+
+[node name="Smile" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-75, -557)
+texture = ExtResource("8_5xdbv")
+
+[node name="Cry1" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-75, -557)
+texture = ExtResource("8_640b6")
+
+[node name="Cry2" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-75, -557)
+texture = ExtResource("9_mqp11")
+
+[node name="Cry3" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-75, -557)
+texture = ExtResource("10_gw1fm")
+
+[node name="Cry4" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-75, -557)
+texture = ExtResource("11_dl5ry")
+
+[node name="Etc" type="Node2D" parent="."]
+
+[node name="Blur" type="Sprite2D" parent="Etc"]
+visible = false
+texture_filter = 2
+position = Vector2(-75, -557)
+texture = ExtResource("10_aw3rh")
+
+[node name="Sweat" type="Sprite2D" parent="Etc"]
+visible = false
+texture_filter = 2
+position = Vector2(-75, -557)
+texture = ExtResource("11_q4clv")

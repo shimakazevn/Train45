@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://dr3qqo4v8wvf4"]
+
+[ext_resource type="Texture2D" uid="uid://d4fds8h1ylk5v" path="res://resources/ui/EventCoverImage/Hpreview_butler_1.png" id="1_6unnq"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_etpy7"]
+
+[resource]
+script = ExtResource("1_etpy7")
+scene_description = "SCENE_FIRST_SEX"
+scene_name = "scene2"
+dialog_title = "butler_love_1"
+partner = 4
+love_ability = 1
+preview_texture = ExtResource("1_6unnq")
+is_position = Vector2(740, 270)
+unlock_chapter = 5
+ahen_keys = PackedStringArray("SCENE_BUTLER_AHEN_1", "SCENE_BUTLER_AHEN_2", "SCENE_BUTLER_AHEN_3", "SCENE_BUTLER_AHEN_4", "SCENE_BUTLER_AHEN_5", "SCENE_BUTLER_AHEN_6", "SCENE_BUTLER_AHEN_7", "SCENE_BUTLER_AHEN_8", "SCENE_BUTLER_AHEN_9", "SCENE_BUTLER_AHEN_10")

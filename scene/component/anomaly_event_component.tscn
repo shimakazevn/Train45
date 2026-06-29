@@ -1,0 +1,162 @@
+[gd_scene load_steps=21 format=3 uid="uid://xm3jf22phtyd"]
+
+[ext_resource type="Script" uid="uid://drrbi5ewr8n80" path="res://scene/component/anomaly_event_component.gd" id="1_vcbgc"]
+[ext_resource type="Texture2D" uid="uid://q5ckcnbq3gjr" path="res://resources/ui/GameScreen/h_event_bubble_base.png" id="2_3a1ts"]
+[ext_resource type="Texture2D" uid="uid://c5dv2njyhfl01" path="res://resources/ui/icons/sd_icon/reina.png" id="3_3a1ts"]
+[ext_resource type="Texture2D" uid="uid://bc8vajefmu6l" path="res://resources/ui/hp_icon_base.png" id="4_hkpaf"]
+[ext_resource type="Texture2D" uid="uid://b6ymw5nwptv8v" path="res://resources/ui/hp_icon_active.png" id="5_oj6cp"]
+[ext_resource type="FontFile" uid="uid://b420coqgx7cq0" path="res://resources/font/TsunagiGothic.ttf" id="6_m44c3"]
+[ext_resource type="Texture2D" uid="uid://dsrvwj7now1g3" path="res://resources/ui/keyboard_icon/keyboard_icon5.png" id="7_m44c3"]
+[ext_resource type="Texture2D" uid="uid://b80fcgxonfxdk" path="res://resources/ui/keyboard_icon/keyboard_icon6.png" id="8_fj1g3"]
+[ext_resource type="PackedScene" uid="uid://c8spg168xguc2" path="res://Gameplay/Ui/controller_button_component.tscn" id="9_fj1g3"]
+[ext_resource type="Texture2D" uid="uid://qi2pnjq3nnb1" path="res://resources/ui/controller_icons/xbox-A.png" id="10_vvryb"]
+[ext_resource type="Script" uid="uid://c67vgxet3mm8y" path="res://Gameplay/ui_state_player.gd" id="11_5ksyu"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_waj1q"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3a1ts"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m00lj"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hkpaf"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_v0x0y"]
+light_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_fj1g3"]
+font = ExtResource("6_m44c3")
+outline_size = 4
+outline_color = Color(0.360784, 0.278431, 0.305882, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m44c3"]
+light_mode = 1
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_vvryb"]
+frames = 2
+frame_0/texture = ExtResource("7_m44c3")
+frame_1/texture = ExtResource("8_fj1g3")
+frame_1/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_farfq"]
+size = Vector2(33, 282)
+
+[node name="AnomalyEventComponent" type="Area2D" node_paths=PackedStringArray("sfx") groups=["eventcomponent"]]
+z_index = 1200
+z_as_relative = false
+material = SubResource("CanvasItemMaterial_waj1q")
+collision_layer = 16
+collision_mask = 1024
+script = ExtResource("1_vcbgc")
+sfx = NodePath("UiSoundStreamPlayer")
+
+[node name="HEventBubble" type="TextureRect" parent="."]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_3a1ts")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -22.0
+offset_right = 22.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 43)
+texture = ExtResource("2_3a1ts")
+expand_mode = 1
+
+[node name="NpcIcon" type="TextureRect" parent="HEventBubble"]
+unique_name_in_owner = true
+light_mask = 0
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_m00lj")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -19.0
+offset_right = 19.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_3a1ts")
+expand_mode = 1
+
+[node name="LoveLevelBase" type="TextureRect" parent="HEventBubble"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_hkpaf")
+layout_mode = 0
+offset_left = 32.0
+offset_top = -3.0
+offset_right = 57.0
+offset_bottom = 19.0
+texture = ExtResource("4_hkpaf")
+expand_mode = 1
+
+[node name="LoveLevelFill" type="TextureRect" parent="HEventBubble/LoveLevelBase"]
+unique_name_in_owner = true
+use_parent_material = true
+layout_mode = 0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 20.0
+texture = ExtResource("5_oj6cp")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="HEventBubble/LoveLevelBase"]
+unique_name_in_owner = true
+material = SubResource("CanvasItemMaterial_v0x0y")
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -11.0
+offset_right = 12.5
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_fj1g3")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="KeyboardIcon" type="TextureRect" parent="HEventBubble"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_m44c3")
+layout_mode = 0
+offset_left = 6.0
+offset_top = 39.0
+offset_right = 38.0
+offset_bottom = 55.0
+texture = SubResource("AnimatedTexture_vvryb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, 24)
+shape = SubResource("RectangleShape2D_farfq")
+debug_color = Color(0.502751, 0.573206, 0.263723, 0.42)
+
+[node name="ControllerButtonComponent" parent="." instance=ExtResource("9_fj1g3")]
+offset_left = -25.0
+offset_top = 6.0
+offset_right = -15.0
+offset_bottom = 16.0
+texture = ExtResource("10_vvryb")
+
+[node name="UiSoundStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0
+bus = &"Sfx"
+script = ExtResource("11_5ksyu")
+metadata/_custom_type_script = "uid://c67vgxet3mm8y"

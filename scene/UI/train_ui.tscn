@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqsvbfwmhicx5"]
+
+[ext_resource type="Texture2D" uid="uid://513a7f6fknmj" path="res://resources/ui/arrow.png" id="1_qdpir"]
+
+[sub_resource type="Animation" id="Animation_72r3b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_a4r6c"]
+resource_name = "idle"
+length = 0.9
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hv44h"]
+_data = {
+&"RESET": SubResource("Animation_72r3b"),
+&"idle": SubResource("Animation_a4r6c")
+}
+
+[node name="TrainUI" type="Control"]
+z_index = 100
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qdpir")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hv44h")
+}
+autoplay = "idle"

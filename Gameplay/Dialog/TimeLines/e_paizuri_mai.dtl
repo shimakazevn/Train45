@@ -1,0 +1,109 @@
+join mai left 
+emotion mai Dislike 
+mai: 이 녀석.. 드디어 몰아세웠다! #id:bd3
+mai: 조심해서 한번에 덮치는 거야. 알았지? #id:bd4
+mai: 셋 하면 잡는 거야. 하나.. #id:bd5
+mai: 둘!! #id:bd6
+- 셋에 잡는다며! #id:bd7
+- 심지어 놓쳤어! #id:bd8
+emotion mai Surprised 
+mai: 이럴 수가! 헛점을 노린 일격이었는데! #id:bd9
+emotion mai Flat 
+mai: 몸집은 작지만 생각보다 영악한 녀석인걸. #id:bda
+- 그러게. 마이와 비슷한 수준의 지능이야. #id:bdb
+emotion mai Idle 
+mai: 그치? 만만찮은 녀석. 인정해야겠어. #id:bdc
+mai: 그런데.. 어디로 숨은 거지? 너무 작아서 움직임을 놓쳤어. #id:bdd
+- 마이.. #id:bde
+- 너 옷에 불룩거리는 건.. #id:bdf
+emotion mai Serious 
+mai: .. 내 옷? #id:be0
+mai: ...읏 #id:be1
+emotion mai Smile 
+update mai [extra_data="show Etc/Sweat, show Etc/Blur"]
+mai: 아하하하핫! 뭐야 이거! 간지러워! #id:be2
+mai: 꺄하핫! 오.. 옷 안에 들어가서.. 하하하! #id:be3
+- 잠깐만 기다려! #id:be4
+- 옷 안에 손을 넣어서 꺼내줄게. #id:be5
+mai: 아..아하핫! 손까지 들어와서 더 간지럽잖아! #id:be6
+mai: 그 와중에 가슴 주무르지 말라고! 아하하하! #id:be7
+- 자.. 잡았다! #id:be8
+emotion mai Surprised 
+mai: 아읏?! 그건 내 젖꼭지잖아! 하아..! #id:be9
+emotion mai Laugh 
+mai: 하하하!.. 조.. 조금 잠잠해 졌어.. #id:bea
+- 가슴 사이에 껴 버렸네. #id:beb
+mai: 하아.. 하.. 정말이야. 아직 발버둥치지만.. #id:bec
+emotion mai Idle 
+mai: 아, 좋은 생각이 있어! 이번에도 셋을 셀게. #id:bed
+mai: 셋 하면 날 꽈악 안아주는 거야! 그 힘으로 순식간에 잡는 거지! #id:bee
+- ? #id:bef
+emotion mai Dislike 
+update mai [extra_data="hide Etc/Sweat, hide Etc/Blur"]
+mai: 자, 하나.. 둘.. #id:bf0
+mai: ..셋! #id:bf1
+마이는 두 팔을 나에게 감아 그대로 껴안는다. 엄청난 중량의 가슴이 서로의 틈에서 찌부러지듯 형태를 바꾼다. #id:bf2
+그 순간, 상의에 깊게 파인 가슴골 사이로 삐져나온 작은 생물체가 뿌직 하는 소리와 함께 잠잠해진다. #id:bf3
+emotion mai Smile 
+mai: 하하핫! 됐다! 기절시켰어. 어때 내 작전? #id:bf4
+- 유압으로 찌그러트린거야? #id:bf5
+mai: 정답! 내 가슴, 무겁지만 부드러워서 죽진 않을걸. #id:bf6
+- 마이의 가슴.. 엄청 크고 부드러웠어.. #id:bf7
+emotion mai Laugh 
+mai: 뭐, 그건 서비스! #id:bf8
+mai: 이 녀석도 기절했지만 행복한 표정이지? #id:bf9
+emotion mai Idle 
+mai: 응? 넌 왜 이 녀석을 부럽다는 듯 보는 거야? #id:bfa
+- 나도 저 사이에 껴보고 싶어.. #id:bfb
+emotion mai Ecchi 
+mai: 어? ..흐응~ 그렇구나. #id:bfc
+mai: 그러고 보니, 가슴으로는 한번도 해본 적 없었지? #id:bfd
+mai: 그럼 앉아 볼래? 해 줄게. 파이즈리.. #id:bfe
+leave mai
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene6_1")
+do GameEvents.game_state_change(1)
+mai: 엄청 커졌네? 하아.. 야한 냄새도 나고. #id:bff
+mai: 만만치 않게 큰 내 가슴 정도여야 전부 끼울 수 있겠어. #id:c00
+mai: 이 커다란 젖 틈으로 넣어보고 싶어? ..너의 자지. #id:c01
+mai: 부드럽고 묵직한 양쪽 가슴을 모으면.. 빈틈 없이 좁아졌지? #id:c02
+mai: 여기로 넣는 거야. 밑에서부터.. #id:c03
+mai: 으응.. 두껍고 큰 자지.. 가슴 사이에 전부 들어왔어. #id:c04
+mai: 헤헤.. 가슴 위로 귀두가 튀어 나왔네. #id:c05
+mai: 출렁 출렁.. 엄청 부드럽지? 하지만 이렇게 하면.. #id:c06
+do GameEvents.anim_change("scene6_2")
+mai: (꾸욱) 안쪽이 무척 좁아져서.. 무척 기분 좋아질거야. #id:c07
+mai: 으응~ 올라올 때도 자지가 빠지지 않을 정도로 강하게 압박하고 있어. #id:c08
+mai: 이렇게.. 자지가 따라서 당겨 올라오고.. 에잇! #id:c09
+mai: 철썩 하고 단숨에 내려 버리면? 하하핫.. 움찔했어. 놀란 거야? #id:c0a
+mai: 좀 더 기분좋아질 수 있게 해줄게. 우물우물.. 베에.. #id:c0b
+mai: 이렇게 침과 너의 자지즙이 섞이면.. 더 끈적끈적 미끌미끌해지지? #id:c0c
+mai: 이제부터.. 기분이 날아갈 정도의 파이즈리.. 시작할게? #id:c0d
+[signal arg="scene6"]
+mai: 아.. 얼굴에 한가득 정액 범벅.. 엄청난걸. #id:c0e
+mai: 입에도 흘러내려서.. 진한 맛이 느껴져. 그정도로 기분 좋았던 거야? #id:c0f
+mai: 분명 보지 속이라고 착각한 거지? 그래서 그동안 모아둔 정액.. 얼굴에 가득 뿌려 준 거야? #id:c10
+mai: 자궁 안이었다면 백프로 임신이지만.. 아쉽게도 진짜가 아닌 젖가슴 보지였어~ #id:c11
+mai: 그치만 이정도의 양을 질내사정 당하면.. 나도 정신이 날아가 버렸을지도.. #id:c12
+mai: 특히 이 정액.. 엄청나게 진한 냄새라. 약간 중독돼 버릴거 같네.. 계속 맡고 싶지만.. #id:c13
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+join mai leftmost 
+... #id:c14
+mai: 아직 갈 길이 머니까. 또 힘내서 출발해야 하지 않겠어? #id:c15
+emotion mai Dislike 
+mai: ..근데, 뭘 여전히 늘어져 있는 거야? 어서 자지 집어 넣고! 출발하자구우~ #id:c16
+mai: 뭐? 다리에 힘이 빠져? 정말.. 파이즈리일 뿐인데 말야. 그렇게 기분 좋았어? #id:c17
+mai: 가슴이 그렇게 좋아? 뭐.. 다음에도 못해줄 건 없지만. 그때도 이렇게 축 쳐져 있으면 안 된다고. #id:c18
+- 파이즈리는 처음이라.. #id:c19
+- 특히 유압이 그정도로 강한 것일 줄은. #id:c1a
+emotion mai Idle 
+mai: 으음.. 자극이 너무 쌨네. 에잇, 그래. #id:c1b
+mai: 자! 그렇게 좋아하는 가슴. 기운 차릴 때까지 빌려 줄게. 원하는 만큼 주물러. #id:c1c
+mai: 이걸로 힘이 된다면. 얼마든지 만져도 좋아! 헤헤.. #id:c1d
+mai: 대신 앞으로의 탐색도.. 잘 부탁해? #id:c1e
+그렇게 한동안 마이의 큰 가슴을 주무르며 시간을 보냈다. #id:c1f
+엄청난 힐링이 된 거 같아.. 앞으로도 열심히 하자. #id:c20
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_npc_level_up(1)
+[end_timeline]

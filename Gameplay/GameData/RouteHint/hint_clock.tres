@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://cnmvaqr4x6ww8"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_r21dc"]
+[ext_resource type="Texture2D" uid="uid://d0wen13sy6s5x" path="res://resources/ui/icons/icons_large4.png" id="2_572st"]
+
+[resource]
+script = ExtResource("1_r21dc")
+id = "clock"
+title = "DESTINATION_HINT_CLOCK_TITLE"
+texture = ExtResource("2_572st")
+description = "DESTINATION_HINT_CLOCK_INFO"
+partner_type = -1
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

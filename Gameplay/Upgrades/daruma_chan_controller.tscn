@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://12uq2x8p5vly"]
+
+[ext_resource type="Script" uid="uid://b5aokbbhoa6sy" path="res://Gameplay/Upgrades/daruma_controller.gd" id="1_2hqxb"]
+[ext_resource type="PackedScene" uid="uid://jcjjebryw4ps" path="res://Gameplay/Upgrades/daruma_chan.tscn" id="2_baov8"]
+
+[node name="DarumaChanController" type="Node2D"]
+script = ExtResource("1_2hqxb")
+daruma_packed = ExtResource("2_baov8")

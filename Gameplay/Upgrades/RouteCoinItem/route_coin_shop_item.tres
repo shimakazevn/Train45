@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CurrencyShopItem" load_steps=3 format=3 uid="uid://c22esv5gcuv2s"]
+
+[ext_resource type="Texture2D" uid="uid://su0njg1aer0y" path="res://resources/ui/icons/icons25.png" id="1_3tgr3"]
+[ext_resource type="Script" uid="uid://cwqaw5t2gcey4" path="res://Gameplay/Upgrades/RouteCoinItem/currency_item.gd" id="2_3tgr3"]
+
+[resource]
+script = ExtResource("2_3tgr3")
+currency_type = 0
+value = 1
+max_count = 5
+icon = ExtResource("1_3tgr3")
+id = "item_route_coin_1"
+price = Array[int]([1200])
+max_quantity = 1
+cost = 0
+name = "ROUTE_COIN"
+description = "ROUTE_COIN_DESCRIPTION"
+metadata/_custom_type_script = "uid://cwqaw5t2gcey4"

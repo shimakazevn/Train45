@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://55vu0hqqy0qx"]
+
+[ext_resource type="FontFile" uid="uid://tyk5ssctmkcm" path="res://resources/font/GowunBatang-Bold.ttf" id="1_qkjl7"]
+
+[resource]
+default_font = ExtResource("1_qkjl7")

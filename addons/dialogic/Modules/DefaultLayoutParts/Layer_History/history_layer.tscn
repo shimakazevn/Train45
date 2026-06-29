@@ -1,0 +1,135 @@
+[gd_scene load_steps=13 format=3 uid="uid://lx24i8fl6uo"]
+
+[ext_resource type="Script" uid="uid://cmrexusy3vshg" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/history_layer.gd" id="1_4mqm3"]
+[ext_resource type="PackedScene" uid="uid://cuoywrmvda1yg" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_History/example_history_item.tscn" id="2_x1xgk"]
+[ext_resource type="Texture2D" uid="uid://bdx54kkvfvfu3" path="res://resources/ui/gui/window.png" id="3_emvma"]
+[ext_resource type="Texture2D" uid="uid://b0ivtt3x3p1hs" path="res://resources/ui/gui/button_rect.png" id="4_emvma"]
+[ext_resource type="Texture2D" uid="uid://c62k040pkqcnw" path="res://resources/ui/gui/button_close_hover.png" id="5_ovrmr"]
+[ext_resource type="Texture2D" uid="uid://fnbbeyb3mb4n" path="res://resources/ui/gui/button_close.png" id="6_m8xvh"]
+[ext_resource type="Texture2D" uid="uid://d61mfdgypfjn" path="res://resources/ui/controller_icons/xbox-B.png" id="7_ovrmr"]
+[ext_resource type="Script" uid="uid://nnjff5ms5xn6" path="res://scene/component/controller_button_component.gd" id="8_m8xvh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hdvb"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0, 0, 0, 0.776471)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b4f2t"]
+texture = ExtResource("4_emvma")
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_thb7h"]
+texture = ExtResource("5_ovrmr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0x1sy"]
+texture = ExtResource("6_m8xvh")
+
+[node name="ExampleHistoryScene" type="Control"]
+layout_direction = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_4mqm3")
+HistoryItem = ExtResource("2_x1xgk")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 70.0
+offset_top = 58.0
+offset_right = 1271.0
+offset_bottom = 614.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.27, 0.27)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_emvma")
+patch_margin_left = 88
+patch_margin_top = 87
+patch_margin_right = 89
+patch_margin_bottom = 90
+
+[node name="HistoryBox" type="ScrollContainer" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 74.0
+offset_top = 65.0
+offset_right = -74.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1hdvb")
+horizontal_scroll_mode = 0
+
+[node name="HistoryLog" type="VBoxContainer" parent="HistoryBox"]
+unique_name_in_owner = true
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 1
+
+[node name="ShowHistory" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -632.0
+offset_top = 328.0
+offset_right = -528.0
+offset_bottom = 356.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_b4f2t")
+
+[node name="HideHistory" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -117.0
+offset_top = 39.0
+offset_right = -77.0
+offset_bottom = 79.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxTexture_thb7h")
+theme_override_styles/normal = SubResource("StyleBoxTexture_0x1sy")
+
+[node name="PadUiIcon" type="TextureRect" parent="HideHistory"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 25.0
+offset_right = 36.0
+offset_bottom = 35.0
+texture = ExtResource("7_ovrmr")
+expand_mode = 1
+script = ExtResource("8_m8xvh")
+metadata/_custom_type_script = "uid://nnjff5ms5xn6"
+
+[connection signal="pressed" from="ShowHistory" to="." method="_on_show_history_pressed"]
+[connection signal="pressed" from="HideHistory" to="." method="_on_hide_history_pressed"]

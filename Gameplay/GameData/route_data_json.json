@@ -1,0 +1,662 @@
+{
+	"route_info": {
+		"stage_0": {
+			"route_num": 1.0,
+			"chapter": 1.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_WHITE",
+			"info": "ROUTE_INFO_WHITE"
+		},
+		"stage_1": {
+			"route_num": 2.0,
+			"chapter": 1.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_CROW",
+			"info": "ROUTE_INFO_CROW"
+		},
+		"stage_2": {
+			"route_num": 3.0,
+			"chapter": 1.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_BUTTON",
+			"info": "ROUTE_INFO_BUTTON"
+		},
+		"stage_3": {
+			"route_num": 4.0,
+			"chapter": 1.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_BRA",
+			"info": "ROUTE_INFO_BRA"
+		},
+		"stage_32": {
+			"route_num": 5.0,
+			"chapter": 1.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_WINDOWGHOST",
+			"info": "ROUTE_INFO_WINDOWGHOST"
+		},
+		"stage_34": {
+			"route_num": 6.0,
+			"chapter": 1.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_PARTNER_ANOMALY1",
+			"info": "ROUTE_INFO_PARTNER_ANOMALY1"
+		},
+		"stage_44": {
+			"route_num": 7.0,
+			"chapter": 1.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_CAUTIONSTICKER",
+			"info": "ROUTE_INFO_CAUTIONSTICKER"
+		},
+		"stage_5": {
+			"route_num": 8.0,
+			"chapter": 1.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_FLIGHT",
+			"info": "ROUTE_INFO_FLIGHT"
+		},
+		"stage_6": {
+			"route_num": 9.0,
+			"chapter": 1.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_ESCAPE",
+			"info": "ROUTE_INFO_ESCAPE"
+		},
+		"stage_7": {
+			"route_num": 10.0,
+			"chapter": 1.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_REVERSE",
+			"info": "ROUTE_INFO_REVERSE"
+		},
+		"stage_10": {
+			"route_num": 11.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_EXTENSION",
+			"info": "ROUTE_INFO_EXTENSION"
+		},
+		"stage_11": {
+			"route_num": 12.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_SHADOW",
+			"info": "ROUTE_INFO_SHADOW"
+		},
+		"stage_12": {
+			"route_num": 13.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_GAZE",
+			"info": "ROUTE_INFO_GAZE"
+		},
+		"stage_13": {
+			"route_num": 14.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_TUNNEL",
+			"info": "ROUTE_INFO_TUNNEL"
+		},
+		"stage_14": {
+			"route_num": 15.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_FLOOD",
+			"info": "ROUTE_INFO_FLOOD"
+		},
+		"stage_4": {
+			"route_num": 16.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_NOPANTIES",
+			"info": "ROUTE_INFO_NOPANTIES"
+		},
+		"stage_8": {
+			"route_num": 17.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_ACCELERATION",
+			"info": "ROUTE_INFO_ACCELERATION"
+		},
+		"stage_9": {
+			"route_num": 18.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_LOWSPEED",
+			"info": "ROUTE_INFO_LOWSPEED"
+		},
+		"stage_53": {
+			"route_num": 19.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_WATCHER",
+			"info": "ROUTE_INFO_WATCHER"
+		},
+		"stage_37": {
+			"route_num": 20.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_PARTNER_ANOMALY4",
+			"info": "ROUTE_INFO_PARTNER_ANOMALY4"
+		},
+		"stage_49": {
+			"route_num": 21.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_XXX",
+			"info": "ROUTE_INFO_XXX"
+		},
+		"stage_30": {
+			"route_num": 22.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_SWAY",
+			"info": "ROUTE_INFO_SWAY"
+		},
+		"stage_29": {
+			"route_num": 23.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_DEFORME",
+			"info": "ROUTE_INFO_DEFORME"
+		},
+		"stage_51": {
+			"route_num": 24.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_FLASHLIGHT",
+			"info": "ROUTE_INFO_FLASHLIGHT"
+		},
+		"stage_40": {
+			"route_num": 25.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_VERTICALEXPANSION",
+			"info": "ROUTE_INFO_VERTICALEXPANSION"
+		},
+		"stage_43": {
+			"route_num": 26.0,
+			"chapter": 2.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_SEATEYE",
+			"info": "ROUTE_INFO_SEATEYE"
+		},
+		"stage_15": {
+			"route_num": 27.0,
+			"chapter": 3.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_CONDENSATION",
+			"info": "ROUTE_INFO_CONDENSATION"
+		},
+		"stage_18": {
+			"route_num": 28.0,
+			"chapter": 3.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_EXITAD",
+			"info": "ROUTE_INFO_EXITAD"
+		},
+		"stage_19": {
+			"route_num": 29.0,
+			"chapter": 3.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_BRAILLEBLOCK",
+			"info": "ROUTE_INFO_BRAILLEBLOCK"
+		},
+		"stage_20": {
+			"route_num": 30.0,
+			"chapter": 3.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_DOLL",
+			"info": "ROUTE_INFO_DOLL"
+		},
+		"stage_27": {
+			"route_num": 31.0,
+			"chapter": 3.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_SLINGSHOT",
+			"info": "ROUTE_INFO_SLINGSHOT"
+		},
+		"stage_36": {
+			"route_num": 32.0,
+			"chapter": 3.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_PARTNER_ANOMALY3",
+			"info": "ROUTE_INFO_PARTNER_ANOMALY3"
+		},
+		"stage_41": {
+			"route_num": 33.0,
+			"chapter": 3.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_GIANTKONIAL",
+			"info": "ROUTE_INFO_GIANTKONIAL"
+		},
+		"stage_35": {
+			"route_num": 34.0,
+			"chapter": 3.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_PARTNER_ANOMALY2",
+			"info": "ROUTE_INFO_PARTNER_ANOMALY2"
+		},
+		"stage_56": {
+			"route_num": 35.0,
+			"chapter": 3.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_DROP",
+			"info": "ROUTE_INFO_DROP"
+		},
+		"stage_21": {
+			"route_num": 36.0,
+			"chapter": 3.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_YUKIONNA",
+			"info": "ROUTE_INFO_YUKIONNA"
+		},
+		"stage_50": {
+			"route_num": 37.0,
+			"chapter": 3.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_HUG",
+			"info": "ROUTE_INFO_HUG"
+		},
+		"stage_38": {
+			"route_num": 38.0,
+			"chapter": 4.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_PARTNER_ANOMALY5",
+			"info": "ROUTE_INFO_PARTNER_ANOMALY5"
+		},
+		"stage_55": {
+			"route_num": 39.0,
+			"chapter": 4.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_VEIL",
+			"info": "ROUTE_INFO_VEIL"
+		},
+		"stage_23": {
+			"route_num": 40.0,
+			"chapter": 4.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_FELLATION",
+			"info": "ROUTE_INFO_FELLATION"
+		},
+		"stage_24": {
+			"route_num": 41.0,
+			"chapter": 4.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_BONDAGE",
+			"info": "ROUTE_INFO_BONDAGE"
+		},
+		"stage_33": {
+			"route_num": 42.0,
+			"chapter": 4.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_DICKWALKER",
+			"info": "ROUTE_INFO_DICKWALKER"
+		},
+		"stage_54": {
+			"route_num": 43.0,
+			"chapter": 4.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_OUTFIT",
+			"info": "ROUTE_INFO_OUTFIT"
+		},
+		"stage_17": {
+			"route_num": 44.0,
+			"chapter": 4.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_PRIORITYSEAT",
+			"info": "ROUTE_INFO_PRIORITYSEAT"
+		},
+		"stage_25": {
+			"route_num": 45.0,
+			"chapter": 5.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_BUNNYGIRL",
+			"info": "ROUTE_INFO_BUNNYGIRL"
+		},
+		"stage_26": {
+			"route_num": 46.0,
+			"chapter": 5.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_REI_KOKYO",
+			"info": "ROUTE_INFO_REI_KOKYO"
+		},
+		"stage_28": {
+			"route_num": 47.0,
+			"chapter": 5.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_DIVE",
+			"info": "ROUTE_INFO_DIVE"
+		},
+		"stage_31": {
+			"route_num": 48.0,
+			"chapter": 5.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_ALNICO",
+			"info": "ROUTE_INFO_ALNICO"
+		},
+		"stage_39": {
+			"route_num": 49.0,
+			"chapter": 5.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_PARTNER_ANOMALY6",
+			"info": "ROUTE_INFO_PARTNER_ANOMALY6"
+		},
+		"stage_16": {
+			"route_num": 50.0,
+			"chapter": 6.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_VIBRATOR",
+			"info": "ROUTE_INFO_VIBRATOR"
+		},
+		"stage_22": {
+			"route_num": 51.0,
+			"chapter": 6.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_BUTTOCKS",
+			"info": "ROUTE_INFO_BUTTOCKS"
+		},
+		"stage_42": {
+			"route_num": 52.0,
+			"chapter": 6.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_PANCHIRA",
+			"info": "ROUTE_INFO_PANCHIRA"
+		},
+		"stage_45": {
+			"route_num": 53.0,
+			"chapter": 6.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_TENTACLE1",
+			"info": "ROUTE_INFO_TENTACLE1"
+		},
+		"stage_46": {
+			"route_num": 54.0,
+			"chapter": 6.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_TENTACLE2",
+			"info": "ROUTE_INFO_TENTACLE2"
+		},
+		"stage_47": {
+			"route_num": 55.0,
+			"chapter": 6.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_TENTACLE3",
+			"info": "ROUTE_INFO_TENTACLE3"
+		},
+		"stage_48": {
+			"route_num": 56.0,
+			"chapter": 6.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_TOPLESS",
+			"info": "ROUTE_INFO_TOPLESS"
+		},
+		"stage_52": {
+			"route_num": 57.0,
+			"chapter": 6.0,
+			"enable": true,
+			"title": "ROUTE_TITLE_DESTROYED",
+			"info": "ROUTE_INFO_DESTROYED"
+		}
+	},
+	"destination_info": {
+		"stage_d_cat": {
+			"route_list_type": "number",
+			"cost_reward": 7.0,
+			"route_list": [
+				7.0,
+				22.0,
+				24.0,
+				32.0
+			],
+			"partial_match_count": null,
+			"hint_id": "cat",
+			"title": "DESTINATION_D_CAT",
+			"limit_event": null
+		},
+		"stage_complete_ep5": {
+			"route_list_type": "name",
+			"cost_reward": null,
+			"route_list": [
+				"stage_1",
+				"stage_2",
+				"stage_7",
+				"stage_24"
+			],
+			"partial_match_count": null,
+			"hint_id": "dark_room",
+			"title": "DESTINATION_D_COMPLETE_EP5",
+			"limit_event": "chapter5_complete"
+		},
+		"stage_complete_ep6": {
+			"route_list_type": "number",
+			"cost_reward": null,
+			"route_list": [
+				45.0,
+				54.0,
+				8.0,
+				31.0
+			],
+			"partial_match_count": null,
+			"hint_id": "engine_room",
+			"title": "DESTINATION_D_COMPLETE_EP6",
+			"limit_event": null
+		},
+		"stage_d_ghost": {
+			"route_list_type": "name",
+			"cost_reward": 8.0,
+			"route_list": [
+				"stage_12",
+				"stage_13",
+				"stage_20",
+				"stage_32"
+			],
+			"partial_match_count": null,
+			"hint_id": "ghost",
+			"title": "DESTINATION_D_GHOST",
+			"limit_event": null
+		},
+		"stage_d_handfan": {
+			"route_list_type": "number",
+			"cost_reward": 6.0,
+			"route_list": [
+				18.0,
+				19.0,
+				20.0,
+				21.0
+			],
+			"partial_match_count": null,
+			"hint_id": "hand_fan",
+			"title": "DESTINATION_D_HANDFAN",
+			"limit_event": null
+		},
+		"stage_d_onsen": {
+			"route_list_type": "name",
+			"cost_reward": 7.0,
+			"route_list": [
+				"stage_0",
+				"stage_14",
+				"stage_15"
+			],
+			"partial_match_count": null,
+			"hint_id": "onsen",
+			"title": "DESTINATION_D_ONSEN",
+			"limit_event": null
+		},
+		"stage_d_rulet": {
+			"route_list_type": "name",
+			"cost_reward": 7.0,
+			"route_list": [
+				"stage_25",
+				"stage_26",
+				"stage_27"
+			],
+			"partial_match_count": null,
+			"hint_id": "roullet",
+			"title": "DESTINATION_D_RULET",
+			"limit_event": null
+		},
+		"stage_complete_ep4": {
+			"route_list_type": "number",
+			"cost_reward": null,
+			"route_list": [
+				3.0,
+				4.0,
+				5.0
+			],
+			"partial_match_count": null,
+			"hint_id": "storage",
+			"title": "DESTINATION_D_COMPLETE_EP4",
+			"limit_event": "chapter4_complete3"
+		},
+		"stage_d_stuckdoor": {
+			"route_list_type": "number",
+			"cost_reward": 5.0,
+			"route_list": [
+				3.0,
+				5.0,
+				7.0
+			],
+			"partial_match_count": null,
+			"hint_id": "stuckdoor",
+			"title": "DESTINATION_D_STUCKDOOR",
+			"limit_event": null
+		},
+		"stage_d_milk": {
+			"route_list_type": "number",
+			"cost_reward": 7.0,
+			"route_list": [
+				4.0,
+				5.0,
+				8.0,
+				12.0
+			],
+			"partial_match_count": null,
+			"hint_id": "milk",
+			"title": "DESTINATION_D_MILK",
+			"limit_event": null
+		},
+		"stage_d_dogstrap": {
+			"route_list_type": "number",
+			"cost_reward": 7.0,
+			"route_list": [
+				6.0,
+				17.0,
+				23.0,
+				28.0
+			],
+			"partial_match_count": null,
+			"hint_id": "dogstrap",
+			"title": "DESTINATION_D_DOGSTRAP",
+			"limit_event": null
+		},
+		"stage_d_reina_swimsuit": {
+			"route_list_type": "number",
+			"cost_reward": 7.0,
+			"route_list": [
+				30.0,
+				28.0,
+				10.0
+			],
+			"partial_match_count": null,
+			"hint_id": "reina_bikini",
+			"title": "DESTINATION_D_REINABIKINI",
+			"limit_event": null
+		},
+		"stage_d_clock": {
+			"route_list_type": "number",
+			"cost_reward": 6.0,
+			"route_list": [
+				10.0,
+				5.0,
+				40.0
+			],
+			"partial_match_count": null,
+			"hint_id": "clock",
+			"title": "DESTINATION_D_CLOCK",
+			"limit_event": null
+		},
+		"stage_d_snowman": {
+			"route_list_type": "number",
+			"cost_reward": 9.0,
+			"route_list": [
+				9.0,
+				16.0,
+				29.0
+			],
+			"partial_match_count": null,
+			"hint_id": "snowman",
+			"title": "DESTINATION_D_SNOWMAN",
+			"limit_event": null
+		},
+		"stage_d_ticket_check": {
+			"route_list_type": "number",
+			"cost_reward": 9.0,
+			"route_list": [
+				50.0,
+				23.0,
+				47.0
+			],
+			"partial_match_count": null,
+			"hint_id": "ticket_check",
+			"title": "DESTINATION_D_TICKET_CHECK",
+			"limit_event": null
+		},
+		"stage_d_mirror": {
+			"route_list_type": "number",
+			"cost_reward": 12.0,
+			"route_list": [
+				33.0,
+				36.0,
+				41.0
+			],
+			"partial_match_count": null,
+			"hint_id": "mirror",
+			"title": "DESTINATION_D_MIRROR",
+			"limit_event": null
+		},
+		"stage_d_locker": {
+			"route_list_type": "number",
+			"cost_reward": 6.0,
+			"route_list": [
+				1.0,
+				2.0,
+				13.0,
+				8.0
+			],
+			"partial_match_count": null,
+			"hint_id": "locker",
+			"title": "DESTINATION_D_LOCKER",
+			"limit_event": null
+		},
+		"stage_d_lowspeed": {
+			"route_list_type": "name",
+			"cost_reward": 8.0,
+			"route_list": [
+				"stage_17",
+				"stage_19",
+				"stage_9"
+			],
+			"partial_match_count": null,
+			"hint_id": "lowspeed",
+			"title": "DESTINATION_D_LOWSPEED",
+			"limit_event": null
+		},
+		"stage_d_partner_anomaly": {
+			"route_list_type": "name",
+			"cost_reward": 6.0,
+			"route_list": [
+				"stage_34",
+				"stage_36",
+				"stage_35",
+				"stage_38",
+				"stage_39"
+			],
+			"partial_match_count": 3.0,
+			"hint_id": "partner_anomaly",
+			"title": "DESTINATION_D_PARTNER_ANOMALY",
+			"limit_event": null
+		}
+	}
+}

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ShopHint" load_steps=4 format=3 uid="uid://clq7eubtg01sl"]
+
+[ext_resource type="Resource" uid="uid://bw7u8ypt8xqfi" path="res://Gameplay/GameData/RouteHint/hint_ghost.tres" id="1_om7ba"]
+[ext_resource type="Script" uid="uid://cgvgo5syo8hpt" path="res://Gameplay/Upgrades/DestinationHintItem/shop_hint_item.gd" id="1_tolx6"]
+[ext_resource type="Texture2D" uid="uid://b5n01t2yxnclu" path="res://resources/ui/icons/hint_icon_1.png" id="2_ns1gq"]
+
+[resource]
+script = ExtResource("1_tolx6")
+hint_info = ExtResource("1_om7ba")
+icon = ExtResource("2_ns1gq")
+id = "ghost"
+price = Array[int]([200])
+max_quantity = 1
+cost = 0
+name = "DESTINATION_HINT_GHOST_TITLE"
+description = "HINT_ITEM_WITH_EQUIPMENT"

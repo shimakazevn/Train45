@@ -1,0 +1,120 @@
+join reina left 
+do GameEvents.emit_cutscene_play("e_window_cut1")
+뽀득..뽀득.. #id:1025
+emotion reina Suprised 
+reina: !! #id:1026
+reina: 네? 아 아니에요. 아무것도. #id:1027
+reina: 아무것도 안 하고 있었어요. #id:1028
+emotion reina Shy 
+reina: 그냥 밖의 경치를 좀.. #id:1029
+reina: 이곳엔 아무것도 없네요. 그냥 넘어가도 될 거 같아요. #id:102a
+reina: 어서 가시죠? 자.. #id:102b
+emotion reina Suprised 
+reina: 읏?! 왜 멈춰서는 건가요. #id:102c
+- 유리창 위로 무언가 떠오르고 있어. #id:102d
+reina: 네? 그럴 리가.. #id:102e
+유리창에 김이 서리면서.. 사람 모양의 형체가 떠오른다. #id:102f
+어디서 많이 본 실루엣인데. #id:1030
+emotion reina Idle 
+reina: ..... #id:1031
+reina: 이게 뭘까요. #id:1032
+reina: 아니요. 사람 형체는 아니에요. 어떻게 봐도. #id:1033
+reina: 네. 이건 사람이라던가 그런 게 아니에요. #id:1034
+emotion reina Shy 
+reina: .. 그럼 왜 그렇게 닦고 있었냐고요? #id:1035
+reina: 역시 보고 계셨군요.. #id:1036
+reina: 그.. 그건. #id:1037
+reina: ..아. 전 귀신을 엄청 무서워 하니까요. 소름 끼치는 형체라.. #id:1038
+reina: 하지만.. 아무리 닦아도 지워지지 않아요. #id:1039
+- 안쪽이 아니고 바깥에서 생긴 자국인가? #id:103a
+창문에 생긴 형체를 자세히 바라본다. #id:103b
+..얼굴 부분에.. 립스틱 자국? 분명 이 컬러라면. #id:103c
+- 레이나의 입술 색과 똑같네. #id:103d
+emotion reina Suprised 
+reina: 에, 에..? #id:103e
+reina: 어.. 어떻게 바로 알아채는 건가요.. #id:103f
+reina: 저에 관한 건 어째서 그렇게 자세히.. #id:1040
+emotion reina Idle 
+reina: ..눈썰미가 좋네요. 역시.. #id:1041
+reina: 그게. 네, 아마.. 제 자국이 맞는 거 같아요. #id:1042
+reina: 사실은.. 이전에 출근에 지각을 해버려서 엄청 달려서 전철에 오르려고 했어요. #id:1043
+emotion reina Shy 
+reina: 탑승 직전 문이 닫히는 바람에 그만.. 유리창에 부딫혀서.. 그렇게 생긴 자국이에요. #id:1044
+reina: ..저답지 않죠? 그치만 어쩔 수 없었어요.. #id:1045
+- 그때의 자국이 어째서 지금 생긴거지? #id:1046
+emotion reina Angry 
+reina: 분명 코니알의 장난이겠죠. #id:1047
+reina: 부끄러운 기억을 떠올리게 한 데다가 당신에게 보여지기까지 하다니.. 너무 짓궂어요. #id:1048
+유리창에 선명하게 남은 레이나의 실루엣은 그때의 모습을 떠올리게 한다. #id:1049
+특히 중앙에 커다랗게 생긴 두 덩어리의 흔적.. 가슴이 강하게 눌리면 저렇게까지 넓게 퍼지는구나. 속으로 감탄한다. #id:104a
+- 이건.. 레이나만이 만들 수 있는 #id:104b
+- 가장 압도적인 행위 예술이야. #id:104c
+- 유리창을 때서 집으로 가져가야겠어. #id:104d
+emotion reina Serious 
+update reina [extra_data="show Etc/Blur"]
+reina: 그, 그만 놀리세요. 그땐 엄청 세게 부딫혔으니까. #id:104e
+reina: 확실히.. 가슴.. 쿠션이 있어서 다치진 않았지만 정말 부끄러웠다고요. #id:104f
+- 덕분에 이렇게 엄청난 실루엣이 생긴 거구나. #id:1050
+- 그때 상황을 재현할 수 있어? #id:1051
+emotion reina Suprised 
+reina: 그때 당시요? 별로 좋은 기억은 아니었지만.. #id:1052
+do GameEvents.emit_cutscene_play("e_window_cut2")
+emotion reina Idle 
+reina: 대충 이런 느낌이었죠.. 유리에 찰싹 붙고. #id:1053
+reina: 가슴도 이렇게 누르면 이렇게나 넓게 퍼져서. #id:1054
+reina: 자국에 딱 맞네요.. 이제 납득할 수 있겠죠? #id:1055
+- 내가 보기엔 이것보다 좀 더 딱 붙어서.. #id:1056
+장난기가 발동한 나는 어색하게 유리창에 몸을 가져다 대는 레이나의 뒤에 서서 몸을 겹친다. #id:1057
+do GameEvents.emit_cutscene_play("e_window_cut3")
+emotion reina Shy 
+reina: 아앗, 정말.. #id:1058
+reina: 읏, 그렇게 밀어 붙이면.. 더 이상은 숨 막혀요. #id:1059
+출입문과 나 사이에 밀착한 레이나는 불평을 하면서도 무언가 기대하는 눈치로 엉덩이를 밀착해 온다. #id:105a
+reina: 당신 때문에 가슴이 더 눌려서.. 예전의 실루엣보다도 넓게 퍼졌어요. #id:105b
+emotion reina Smile 
+reina: ..원하신다면. 이대로 해 버릴까요. #id:105c
+reina: 투명한 유리창에 한껏 기대서 하는 섹스.. 어떠신가요. #id:105d
+reina: 다행히 유리창 너머엔 아무도 없으니까 부끄러운 게 덜 할 거 같아요. #id:105e
+leave reina
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("RESET")
+do GameEvents.anim_change("scene101_1")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(0, 100)
+reina: 아.. 맨가슴이 유리창에 닿아서 조금 차갑네요. #id:105f
+reina: 소름돋아서 유두도 단단하게 서버렸어요. #id:1060
+reina: 그대로 창에 문질러져서.. 아읏.. #id:1061
+reina: 혹시라도 누군가 밖에서 이 모습을 볼 수도 있다고 생각하니까.. 기분이 이상해요. #id:1062
+reina: 하아.. 엉덩이에 닿는 당신 자지도 점점 커지는 게 느껴져요. #id:1063
+reina: 이 상황에 흥분하는 건.. 저 뿐만이 아닌 거죠? #id:1064
+reina: 읏.. 뒤에서 자지 문지르는 거 무척 좋아하시네요.. #id:1065
+reina: 으응, 더이상 애태우는 거.. 싫어요. 그러니까. #id:1066
+reina: 그대로 뒤에서.. 자지 넣어주세요.. #id:1067
+[signal arg="scene101"]
+reina: 아..아읏..하.. #id:1068
+reina: 왠지 다른 때보다 기분 좋았어요.. 배덕감.. 이라는 걸까요. #id:1069
+reina: 이 유리창 앞에 설 때마다 지각해서 부딫힌 기억으로 부끄러웠는데. #id:106a
+reina: 이젠 그런 생각조차 안 날 정도로 강렬한 추억이 생긴 거 같아요. #id:106b
+reina: 하지만.. 그때마다 이때의 섹스가 생각나 버리면.. #id:106c
+reina: 나도 모르게 젖어 버리는 게 아닐까.. 하는 걱정이 드네요. #id:106d
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+do GameEvents.emit_cutscene_play("e_window_cut1")
+join reina left 
+... #id:106e
+emotion reina Smile 
+reina: 하아.. 이번 이변도 클리어네요. #id:106f
+reina: 당신.. 무척 능숙해 졌어요. 탐색이랑.. 섹스도. #id:1070
+reina: 언젠가 전차가 멈추면 이 출입문도 활짝 열리겠죠? #id:1071
+reina: 나가게 되면 반드시 깨끗히 지울 거에요. 이 자국.. 남들이 보는 건 부끄러우니까. #id:1072
+- 왠지 아깝네.. #id:1073
+- 그래도 레이나라면 몇개든 찍어낼 수 있으니까. #id:1074
+emotion reina Angry 
+reina: 무슨 도장처럼 얘기하지 말아 주세요.. #id:1075
+emotion reina Smile 
+reina: 하지만 그러네요. 당신이 지금처럼 도와준다면 가능할 지도. ..호텔..이라던가. 욕실 이라던가. #id:1076
+reina: 아, 그때는 밖에 카메라를 두고 녹화라도 해 볼까요? 우리들이 어떤 모습으로 보여지는지 확인할 수 있게. #id:1077
+reina: ..후훗, 농담이에요. 절반 정도는. #id:1078
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("e_window_cut_reset")
+do GameEvents.emit_npc_level_up(0)

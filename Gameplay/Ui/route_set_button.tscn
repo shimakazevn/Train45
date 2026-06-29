@@ -1,0 +1,160 @@
+[gd_scene load_steps=19 format=3 uid="uid://bgy82kv6vful3"]
+
+[ext_resource type="Texture2D" uid="uid://c47alptoabaor" path="res://resources/ui/gui/KanKanNavi/set_route_rect.png" id="1_5ytiw"]
+[ext_resource type="Script" uid="uid://6hpi7qjl4drs" path="res://Gameplay/Ui/route_set_slot.gd" id="2_0heb1"]
+[ext_resource type="FontFile" uid="uid://drk4ye7wq0wjq" path="res://resources/font/ShipporiGothicB2-Bold.ttf" id="3_0heb1"]
+[ext_resource type="Script" uid="uid://cniwwave0xf3g" path="res://Gameplay/Ui/route_set_animate_component.gd" id="3_l5sa4"]
+[ext_resource type="FontFile" uid="uid://b420coqgx7cq0" path="res://resources/font/TsunagiGothic.ttf" id="4_l5sa4"]
+[ext_resource type="PackedScene" uid="uid://bj1jpntptaqij" path="res://Gameplay/Sound/button_stream_player_component.tscn" id="6_l5sa4"]
+[ext_resource type="Texture2D" uid="uid://c5dv2njyhfl01" path="res://resources/ui/icons/sd_icon/reina.png" id="7_i5ogw"]
+[ext_resource type="Shader" uid="uid://bybk1yymm2va8" path="res://Gameplay/Levels/item_box_outline.gdshader" id="8_gc8i7"]
+[ext_resource type="Texture2D" uid="uid://drluiyj0tcesn" path="res://resources/ui/route_button_item_box1.png" id="9_g36gc"]
+[ext_resource type="Script" uid="uid://u7yyr1et57c2" path="res://Gameplay/Ui/route_button_item_box_icon.gd" id="10_ohxcg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r28ld"]
+texture = ExtResource("1_5ytiw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0heb1"]
+texture = ExtResource("1_5ytiw")
+modulate_color = Color(0.652473, 0.652473, 0.652472, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l5sa4"]
+texture = ExtResource("1_5ytiw")
+modulate_color = Color(0.790787, 0.790787, 0.790787, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i5ogw"]
+font_size = 14
+font_color = Color(1, 0.992157, 0.992157, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i2i5o"]
+font_color = Color(0.176471, 0.14902, 0.14902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_l5sa4"]
+font = ExtResource("4_l5sa4")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_6u1ue"]
+font_color = Color(1, 0.226815, 0.990512, 1)
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j133y"]
+shader = ExtResource("8_gc8i7")
+shader_parameter/Smooth = false
+shader_parameter/width = 5.0
+shader_parameter/outline_color = Vector4(1, 1, 1, 0.8)
+shader_parameter/pixel_size = 5
+shader_parameter/width_speed = 1.0
+
+[node name="RouteSetButton" type="Button"]
+custom_minimum_size = Vector2(323, 301)
+pivot_offset = Vector2(161, 150)
+theme_override_styles/normal = SubResource("StyleBoxTexture_r28ld")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0heb1")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l5sa4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_0heb1")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0heb1")
+theme_override_styles/focus = SubResource("StyleBoxTexture_0heb1")
+script = ExtResource("2_0heb1")
+
+[node name="RouteSetAnimateComponent" type="Node" parent="." node_paths=PackedStringArray("is_owner")]
+script = ExtResource("3_l5sa4")
+is_owner = NodePath("..")
+
+[node name="RouteNum" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 46.0
+offset_top = -2.0
+offset_right = 63.0
+offset_bottom = 21.24812
+scale = Vector2(3.99, 3.99)
+theme_override_colors/font_color = Color(0.898039, 0.85098, 0.835294, 1)
+theme_override_fonts/font = ExtResource("3_0heb1")
+theme_override_font_sizes/font_size = 17
+text = "1"
+label_settings = SubResource("LabelSettings_i5ogw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RouteTitle" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.5
+offset_top = -86.5
+offset_right = -46.5
+offset_bottom = -6.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.895, 2.895)
+theme_override_colors/font_color = Color(0.898039, 0.85098, 0.835294, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("3_0heb1")
+theme_override_font_sizes/font_size = 15
+text = "namename"
+label_settings = SubResource("LabelSettings_i2i5o")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ButtonStreamPlayerComponent" parent="." instance=ExtResource("6_l5sa4")]
+
+[node name="UnlockLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 62.0
+offset_top = 117.0
+offset_right = 63.0
+offset_bottom = 167.0
+label_settings = SubResource("LabelSettings_l5sa4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EventTexture" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -136.0
+offset_top = 5.0
+offset_right = -35.0
+offset_bottom = 106.0
+grow_horizontal = 0
+texture = ExtResource("7_i5ogw")
+expand_mode = 1
+
+[node name="EventLoveLevel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.677
+anchor_top = 0.179
+anchor_right = 0.677
+anchor_bottom = 0.179
+offset_left = 51.329
+offset_top = 1.121
+offset_right = 61.329
+offset_bottom = 25.121
+scale = Vector2(2.76, 2.76)
+text = "0"
+label_settings = SubResource("LabelSettings_6u1ue")
+horizontal_alignment = 1
+
+[node name="ItemBoxIcon" type="TextureRect" parent="." node_paths=PackedStringArray("route_slot")]
+visible = false
+texture_filter = 1
+material = SubResource("ShaderMaterial_j133y")
+layout_mode = 0
+offset_left = 178.0
+offset_top = 227.0
+offset_right = 292.0
+offset_bottom = 341.0
+texture = ExtResource("9_g36gc")
+script = ExtResource("10_ohxcg")
+route_slot = NodePath("..")

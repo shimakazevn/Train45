@@ -1,0 +1,119 @@
+join reina center
+reina: 방송은 이 근처에서 나오는 거 같아요. #id:1393
+leave reina
+join mai center
+emotion mai Dislike 
+mai: 정말 거슬리는 소리네! 내용도 이상하고. 어서 따지러 가자. #id:1394
+leave --All--
+다음 칸으로 나아가려는 순간.. #id:1395
+'따진다고? 하하핫!' #id:1396
+방송에서 들리던 그 목소리가 등 뒤에서 울린다. #id:1397
+do GameEvents.emit_position_change(2, 1199, 332)
+do GameEvents.emit_quest_process("konial_look")
+do GameEvents.emit_npc_flip(2, true)
+do GameEvents.emit_direction_change("left")
+'나 코니알을 찾았어?' #id:1398
+join mai right [mirrored="true"]
+mai: 코니알? 네가? #id:1399
+leave mai
+join reina right [mirrored="true"]
+emotion reina Serious 
+reina: ..코니알이라면 분명 방송에서 말한.. #id:139a
+- 당신이 역장? #id:139b
+'그래, 반가워 승객들!' #id:139c
+leave --All--
+join konial 2 [animation="Fade In Up" wait="true"]
+konial: 이 전차의 주인, 코니알이야. #id:139d
+.... #id:139e
+update konial 1 [move_time="0.5"]
+join mai 3 [animation="Fade In Up" wait="true" mirrored="true"]
+mai: ..무슨 이벤트 같은 거야? 할로윈? #id:139f
+leave mai
+join reina 3 [animation="Fade In Up" wait="true" mirrored="true"show Etc/Blur"]
+emotion reina Shy 
+reina: 엄청.. 굉장한 코스프레 복장이에요.. #id:13a0
+update konial
+emotion konial Smile 
+konial: 키힛, 그거 웃기네. #id:13a1
+아랑곳 않고 우리들을 한번씩 훑어본다. #id:13a2
+update konial
+emotion konial Idle 
+konial: 으음.. 남자 한명과 여자 둘인가. 수가 적지만.. 네가 좀 더 노력해 주면 되겠지 뭐! #id:13a3
+나를 손가락으로 가리키며 생긋 웃는다. #id:13a4
+update reina [extra_data="hide Etc/Blur"]
+emotion reina Idle 
+reina: ..저기.. 죄송하지만 저희, 이 전차에 잘못 타 버려서. 혹시 다음은 어느 역인지 알 수 있을까요? #id:13a5
+update konial
+emotion konial Dislike 
+konial: 뭐? 방송 제대로 안 듣는 거야? 계속 말했잖아. 다음 역은 없다고. #id:13a6
+- ..? #id:13a7
+leave reina
+join mai 3 [animation="Fade In Up" wait="true" mirrored="true" ]
+emotion mai Serious  
+mai: 뭐야, 장난이지? 결국 어느 역에던 설 거 아니야? #id:13a8
+update konial
+emotion konial Idle 
+konial: 승객의 안전을 책임지는 역장이 장난같은 걸 치겠어? 정차할 예정은 없어. 평생 말이야. #id:13a9
+- 말도 안되는.. #id:13aa
+- 아르바이트에 늦는데.. #id:13ab
+update konial
+emotion konial Smile 
+konial: 문이라면 열어 줄게. 달리는 전차에서 뛰어 내리던가. #id:13ac
+... #id:13ad
+update konial
+emotion konial Idle 
+konial: 이제 조용해졌네! 하지만 걱정하지 마. 그저 나를 조금만 도와주면 되거든. #id:13ae
+leave mai
+join reina 3 [animation="Fade In Up" wait="true" mirrored="true"]
+reina: 돕는다고요? #id:13af
+konial: 그래! 사실 이 전차. 상당히 불안정하거든. 정차하지 못하는 것도 내가 컨트롤 할수 있는 범위 밖이기 때문이고. #id:13b0
+reina: 그렇다는 건.. 저희가 고장난 전차에 올라 타버렸다는 건가요? #id:13b1
+konial: 말하자면 그렇지. 브레이크도 어느샌가 사라져 버렸어. #id:13b2
+leave reina
+join mai 3 [animation="Fade In Up" wait="true" mirrored="true"]
+emotion mai Dislike 
+mai: ..사라져? #id:13b3
+konial: 어쨌든! 모든게 안정됐다는 걸 확인하면 무사히 원래 승강장에서 내릴 수 있게 해 줄게. #id:13b4
+- 그래서.. 어떤 걸 도와야.. #id:13b5
+mai: 맞아. 난 전차에 대해선 하나도 모르는데. #id:13b6
+leave mai
+join reina 3 [animation="Fade In Up" wait="true" mirrored="true"]
+reina: 저도.. 사무 업무를 할 뿐이라. #id:13b7
+konial: 키히히, 걱정 마. 바보도 할 수 있는 일이니까. 너희. 틀린 그림 찾기 해 봤지? #id:13b8
+konial: 지금부터 할 것도 같은 거야. #id:13b9
+reina: 틀린 그림 찾기.. 잡지 부록에서 종종 나오던 거 말하는 건가요? #id:13ba
+konial: 그래, 하지만 이번엔 '전차 칸' 전부가 대상이지만. #id:13bb
+- 전차 칸? #id:13bc
+konial: 아까 말했듯 전차 내부는 불완전해. 지금처럼 시작 지점과 몇몇 칸들은 정상적으로 보이지만. #id:13bd
+konial: 시작 지점을 지나고부터는 이변을 포함한 전차 칸이 마구잡이로 나오게 된다는 거지. #id:13be
+emotion reina Serious 
+reina: 마구잡이로 나온다니.. #id:13bf
+konial: 말 그대로 마구잡이로! 그중에는 정상적인 칸도 있지만, 그렇지 않은 칸은 특이한 이변이 발생해. #id:13c0
+konial: 보자마자 알 수 있는 이변도 있고, 집중하지 않으면 놓치기 쉬운 이변도 있어. 그 이변들을 모두 체험한 뒤 나에게 보고하면 된다는 거지! #id:13c1
+reina: ..그렇군요. 전차의 테스트 뿐이라면 어려운 일은 아니지만.. #id:13c2
+leave reina
+join mai 3 [animation="Fade In Up" wait="true" mirrored="true"]
+mai: 으음~.. 귀찮긴 하지만.. 그렇게 안 하면 전차가 멈추지 않는다는 거지. #id:13c3
+konial: 맞아. 말은 이렇게 해도 분명 재밌을 거라니까? #id:13c4
+- 어차피 내릴 수 없다면.. #id:13c5
+- 재밌을 거 같아. #id:13c6
+leave mai
+join reina 3 [animation="Fade In Up" wait="true" mirrored="true" extra_data="show Etc/Sweat"]
+emotion reina Idle  
+reina: 뭔가 이용당하는 느낌이긴 해도.. 달리 내릴 방법이 없으니까요.. #id:13c7
+leave reina
+join mai 3 [animation="Fade In Up" wait="true" mirrored="true"]
+mai: 그치? 어차피 집으로 가는 길이었으니까. 조금 늦어도 상관 없어. #id:13c8
+emotion konial Smile 
+konial: 키히히! 좋아 좋아! 그럼 우선 맛보기로 체험해보자! #id:13c9
+emotion konial Idle 
+konial: 지금부터 이 칸의 어딘가에 환영 선물을 숨겨놓을 거야. 너희는 그동안 전차의 생김새를 기억해 놔! #id:13ca
+konial: 전차 칸의 제일 왼쪽에 도착하면 내가 신호를 줄 테니 전차 칸에서 이전과 달라진 점을 찾아내면 돼. #id:13cb
+konial: 처음이라 어렵진 않을 테니 긴장하진 말고. 선물을 확인하면 깜짝 놀랄 걸. #id:13cc
+mai: 우와..뭔가 본격적이네. #id:13cd
+konial: 나 코니알은 언제나 승객의 즐거움을 추구하니까! 자, 그럼 시작해 볼까? 잘 살펴보면서 왼쪽으로 돌아가! #id:13ce
+- ..알바는 이미 늦어 버렸으니. #id:13cf
+- ..어쨌든 지나온 길로 되돌아가자. #id:13d0
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_position_change(2, 1199, -30)
+do GameEvents.emit_quest_process("prologue_find_ready")

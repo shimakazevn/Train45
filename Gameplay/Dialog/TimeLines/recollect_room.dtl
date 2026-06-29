@@ -1,0 +1,21 @@
+이 곳에서는 감상한 이벤트를 다시 재생할 수 있습니다. #id:144a
+어떤 인물의 이벤트를 재생할까요? #id:144b
+do GameEvents.stop_skip_on_next_choice()
+- 레이나 #id:144c
+	do GameEvents.emit_quest_process("recollect_reina")
+	[end_timeline]
+- 마이 #id:144d
+	do GameEvents.emit_quest_process("recollect_mai")
+	[end_timeline]
+- 코니알 #id:144e
+	do GameEvents.emit_quest_process("recollect_konial")
+	[end_timeline]
+- 집사 #id:144f
+	do GameEvents.emit_quest_process("recollect_butler")
+	[end_timeline]
+- 파주주 #id:1450
+	do GameEvents.emit_quest_process("recollect_pazuzu")
+	[end_timeline]
+- 나가기 #id:1451
+	do GameEvents.emit_quest_process("recollect_exit")
+	[end_timeline]

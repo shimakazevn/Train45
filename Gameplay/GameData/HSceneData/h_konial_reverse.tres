@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://4s48y8g632kf"]
+
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_oj1oh"]
+[ext_resource type="Texture2D" uid="uid://bpbxo6irukt30" path="res://resources/ui/EventCoverImage/Hpreview_konial_0.png" id="1_vfyew"]
+
+[resource]
+script = ExtResource("1_oj1oh")
+scene_description = "SCENE_FULL_NELSON"
+scene_name = "scene2"
+dialog_title = "prologue_stage4"
+partner = 2
+preview_texture = ExtResource("1_vfyew")
+is_position = Vector2(1040, 216)
+unlock_chapter = 6
+ahen_keys = PackedStringArray("SCENE_KONIAL_AHEN_1", "SCENE_KONIAL_AHEN_2", "SCENE_KONIAL_AHEN_3", "SCENE_KONIAL_AHEN_4", "SCENE_KONIAL_AHEN_5")

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Tutos" load_steps=6 format=3 uid="uid://c8qp3x1flhnhq"]
+
+[ext_resource type="Script" uid="uid://e4im8cmlv638" path="res://Gameplay/GameData/Tutorials/tutos.gd" id="1_rfoct"]
+[ext_resource type="Script" uid="uid://cgivho4o0eoma" path="res://Gameplay/GameData/Tutorials/tuto.gd" id="2_4iswj"]
+[ext_resource type="Texture2D" uid="uid://v6w6n6lt80qd" path="res://resources/ui/tuto_image/tuto_konial_h.png" id="3_rfoct"]
+
+[sub_resource type="Resource" id="Resource_3w6lj"]
+script = ExtResource("2_4iswj")
+texture = ExtResource("3_rfoct")
+description = "TUTO_KONIAL_H_1"
+metadata/_custom_type_script = "uid://cgivho4o0eoma"
+
+[sub_resource type="Resource" id="Resource_rfoct"]
+script = ExtResource("2_4iswj")
+texture = ExtResource("3_rfoct")
+description = "TUTO_KONIAL_H_2"
+metadata/_custom_type_script = "uid://cgivho4o0eoma"
+
+[resource]
+script = ExtResource("1_rfoct")
+id = "tuto_konial_h"
+title = "TUTO_TITLE_KONIAL_H"
+tuto_pages = Array[ExtResource("2_4iswj")]([SubResource("Resource_3w6lj"), SubResource("Resource_rfoct")])

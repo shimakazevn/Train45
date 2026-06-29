@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://w8vt6etih2de"]
+
+[ext_resource type="Texture2D" uid="uid://b85dip1o2vo0x" path="res://resources/ui/EventCoverImage/Hpreview_mai_9.png" id="1_7l3ql"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_poc7w"]
+
+[resource]
+script = ExtResource("1_poc7w")
+main_love_event = true
+scene_description = "SCENE_FELLATIO"
+scene_name = "scene1"
+dialog_title = "e_fella"
+stage_name = "stage_23"
+partner = 1
+love_ability = 1
+preview_texture = ExtResource("1_7l3ql")
+is_position = Vector2(733, 223)
+ahen_keys = PackedStringArray("SCENE_MAI_AHEN_FELLATIO_1", "SCENE_MAI_AHEN_FELLATIO_2", "SCENE_MAI_AHEN_FELLATIO_3", "SCENE_MAI_AHEN_FELLATIO_4", "SCENE_MAI_AHEN_FELLATIO_5")

@@ -1,0 +1,30 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "1703",
+&"color": Color(0.927083, 0.674791, 0.422499, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+&"default_portrait": "mai",
+&"description": "아사쿠라 마이",
+&"display_name": "마이",
+&"mirror": false,
+&"nicknames": ["Mai"],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"mai": {
+"export_overrides": {
+"image": "\"res://resources/ch/illust/mai.png\""
+},
+"ignore_char_scale": false,
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": "res://Gameplay/Dialog/Character/mai_portrait.tscn"
+}
+},
+&"scale": 1.0
+}

@@ -1,0 +1,35 @@
+if {npc.type} == {ch.reina}:
+	join reina center 
+	reina: <찾아냈군요, 그럼 다음 칸으로 넘어가죠./그런 곳에 있었군요.. 알아채지 못했어요./아직까진 순조로운 거 같네요. 어서 가시죠.> #id:1596
+	[end_timeline]
+elif {npc.type} == {ch.mai}:
+	join mai center 
+	mai: <좋아, 다음으로 가볼까~/제법인데? 계속해서 가자/전혀 몰랐는데.. 대단하네.> #id:1597
+	[end_timeline]
+
+
+label chibi #id:1598
+if {npc.type} == {ch.reina}:
+	reina: 아.. 저 자신이 이변이었다니. 스스로는 절대 알지 못했을 거에요. #id:1599
+	reina: ..이거, 원래대로 돌아갈 수 있는 거겠죠? #id:159a
+	- 안 돌아오더라도 걱정 마. #id:159b
+	- 주머니에 넣고 다닐게. #id:159c
+	reina: 네..? 그건 곤란해요.. #id:159d
+	[end_timeline]
+elif {npc.type} == {ch.mai}:
+	mai: 뭐?! 내가 이상한 거였어? #id:159e
+	- 작은 마이도 귀엽네 #id:159f
+	mai: 하핫! 당연하지. #id:15a0
+	mai: 이 모습도 나름 괜찮을 거 같은데? 작았을 때 생각도 나고. 그때는 모든 게 이렇게 커 보였구나. #id:15a1
+	mai: 저기! 목마 태워 줘. 목마! #id:15a2
+	[end_timeline]
+
+label partner_anomaly #id:15a3
+if {npc.type} == {ch.reina}:
+	reina: 네? 이변이 저한테 발생했다고요..? #id:15a4
+	reina: ..꺄앗! 전혀 몰랐어요.. #id:15a5
+	reina: ..너무 빤히 보면 부끄러우니까, 먼저 출발해 주세요.. #id:15a6
+elif {npc.type} == {ch.mai}:
+	mai: 이변이 나한테 있었다고? #id:15a7
+	mai: 으앗?! 이게 뭐야, 하하핫! #id:15a8
+	mai: 너무 자연스러워서 몰랐네.. 어쨌든 찾아내서 다행이야! #id:15a9

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://c3jrr2vlonlek"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_jn1p5"]
+[ext_resource type="Texture2D" uid="uid://b71xkdktvpgit" path="res://resources/ui/icons/icons_large2.png" id="2_obtoo"]
+
+[resource]
+script = ExtResource("1_jn1p5")
+id = "milk"
+title = "DESTINATION_HINT_MILK_TITLE"
+texture = ExtResource("2_obtoo")
+description = "DESTINATION_HINT_MILK_INFO"
+partner_type = 0
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

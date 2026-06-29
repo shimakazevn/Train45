@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba1ql8qn2xbof"]
+
+[ext_resource type="Script" uid="uid://cu6qrv8l63jsq" path="res://Gameplay/Upgrades/anomaly_finder_controller.gd" id="1_q5gf1"]
+[ext_resource type="PackedScene" uid="uid://cfweg71klgsvr" path="res://Gameplay/Upgrades/anomaly_finder.tscn" id="2_rn2s7"]
+
+[node name="AnomalyFinderController" type="Node2D"]
+script = ExtResource("1_q5gf1")
+anomaly_finder = ExtResource("2_rn2s7")

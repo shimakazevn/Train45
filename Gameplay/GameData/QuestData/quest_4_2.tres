@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=3 format=3 uid="uid://dxrx03eqayjec"]
+
+[ext_resource type="Script" uid="uid://clvpdm1ps7wwf" path="res://Gameplay/GameData/QuestData/quest_npc.gd" id="1_nr2rt"]
+[ext_resource type="Script" uid="uid://c5pycwl0nmslk" path="res://Gameplay/GameData/QuestData/quest.gd" id="2_fhpce"]
+
+[resource]
+script = ExtResource("2_fhpce")
+id = "quest_4"
+description = "칸칸네비 제작 후 퀘스트 갱신
+파주주의 지갑을 찾아낼 종착점으로 이동해야 한다.
+이후, 추가 퀘스트 진행"
+npcs = Array[ExtResource("1_nr2rt")]([])
+total_love = -1
+ticket = -1
+route = -1
+collect_destinations = -1
+collect_items = -1
+complete_count = -1
+talk = "QUEST_GOAL_TEXT_4"

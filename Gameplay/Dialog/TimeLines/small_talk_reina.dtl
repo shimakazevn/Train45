@@ -1,0 +1,330 @@
+- [if {MetaProgression.has_read_event("t_this")} 이곳에 대해(완료)/이곳에 대해] | [if {npc.love} >= {GameEvents.get_need_love("t_this")}] [else="hide" alt_text="hide"] #id:14d1
+	reina: 이건 꿈속인 걸까요? #id:14d2
+	reina: 오히려 꿈 속이면 차라리 좋을 거 같아요. #id:14d3
+	emotion reina Smile
+	reina: 이대로면 지각 확정이니까요. 꿈이라면 출근하지 않아도 상관 없으니.. #id:14d4
+	- ..꿈은 아닌 거 같아. 당황스럽긴 하지만. #id:14d5
+	- 하지만 전차 고장 때문이니까 회사에 사정을 설명하면? #id:14d6
+	emotion reina Serious
+	reina: ..저희 회사는 개인 사정은 고려해 주지 않아서. #id:14d7
+	reina: 저번에도 출근하던 중 건너편의 오토바이에 치인 적 있어요. 그날은 손가락과 팔에 깁스를 하고 출근했죠. #id:14d8
+	emotion reina Idle
+	reina: 손이 불편해서 정시에 일을 끝내지 못해 야근했어요. #id:14d9
+	- ..차라리 꿈인 게 낫겠네. #id:14da
+	update reina [extra_data="show Etc/Blur"]
+	emotion reina Shy
+	reina: 당신은 생각보다 동요하지 않네요. 그.. 그런 상황에서도.. #id:14db
+	- 어.. 그런 상황? #id:14dc
+	reina: 아, 아까 코니알이라는 사람에게.. 엄청난 걸 당하시길래.. #id:14dd
+	reina: ..죄송해요. 함부러 보는 건 실례인 걸 알지만. 저도 모르게. #id:14de
+	emotion reina Idle
+	reina: 보통 남자들은 언제든지 그렇게 크..크게 만드는 게 가능한가요? #id:14df
+	- 분명.. 평소였다면 긴장해서 시들었을텐데. #id:14e0
+	- 아까는 어째선지 커져 버려서.. 평소보단 아니지만. #id:14e1
+	emotion reina Suprised
+	reina: 그, 그렇군요.. 평소에는.. 그 정도보다 더.. #id:14e2
+	emotion reina Idle
+	reina: ..... #id:14e3
+	- 레이나? #id:14e4
+	emotion reina Suprised
+	reina: ..! ..네? ..아.. 죄송해요! 잠깐 딴 생각을 하느라.. #id:14e5
+	- 딴 생각을 하는 타이밍이 심상치 않은데. #id:14e6
+	emotion reina Serious
+	update reina [extra_data="hide Etc/Blur"]
+	reina: ..아무튼, 이 전차가 일반적이지 않다는 건 잘 알겠어요. #id:14e7
+	reina: 전차가 고장이라도 노선을 계속해서 달리면.. 결국 외부에서 눈에 띌 테니 조치할 수 있겠죠. #id:14e8
+	emotion reina Idle
+	reina: 지금 당장은 전차 안에서 가능한 일들을 해 나가는 수밖에 없겠네요. #id:14e9
+	emotion reina Smile
+	reina: 저도 가능한 협조할 테니 필요한 게 있으시면 무엇이든 부탁해 주세요. #id:14ea
+	- 잘 부탁할게. 레이나. #id:14eb
+	reina: 네..! 잘 부탁드려요. #id:14ec
+	if {MetaProgression.has_read_event("t_this") == false}:
+		do GameEvents.emit_get_npc_exp({GameEvents.get_talk_add_exp("t_this")}, 0)
+		do GameEvents.emit_add_read_history("t_this")
+	[end_timeline]
+- [if {MetaProgression.has_read_event("t_drink")} 술(완료)/술] | [if {npc.love} >= {GameEvents.get_need_love("t_drink")}] [else="hide" alt_text="hide"] #id:14ed
+	emotion reina Smile
+	reina: 저는 좋아하는 편이에요. 술 마시는 거.. #id:14ee
+	emotion reina Idle
+	reina: 처음 마신 건 회사에 갓 입사하고 나서, 회식 때였어요. 부장님이나 선배들이 권해서 어쩔 수 없었죠. 몇 병은 마셔댄 거 같아요. #id:14ef
+	- 그 녀석들의 속이 뻔히 보이네.. #id:14f0
+	- 그럴땐 취하지 않도록 조심해. #id:14f1
+	reina: 음.. 확실히 제가 취할 때까지 술을 시키던 거 같았지만, #id:14f2
+	reina: 다른 분들은 결국 회식 도중에 취해 쓰러져 버려서.. 제가 직접 마지막 한 분까지 택시를 태워 집으로 배웅해 줬어요. #id:14f3
+	emotion reina Serious
+	reina: 그 때부터 술에 맛이 들린 거 같네요. 요즘도 한 두잔씩 마시는 걸 좋아해요. 그 날 이후 술을 권하는 사람이 전부 사라져서 혼자지만.. #id:14f4
+	- 레이나는 술에 강한가 봐. #id:14f5
+	- 한번도 취한 적 없어? #id:14f6
+	emotion reina Idle
+	reina: 다른 사람이랑 마실 때 취한 적은 단 한번도 없어요. 남자와 있을땐 어째선지 긴장돼서.. #id:14f7
+	emotion reina Shy
+	reina: ..그치만. #id:14f8
+	emotion reina Smile
+	reina: 당신과 있을 때면.. 약간은 괜찮은 거 같기도. 왠지 편하게 대해주신달까. #id:14f9
+	- 그건 다행이네. #id:14fa
+	- 탐색하면서 힘들어하면 어쩌나 생각했어. #id:14fb
+	emotion reina Suprised
+	reina: 아니에요, 아까 제 가슴을 만지실 때도.. 물론 처음엔 긴장했지만. #id:14fc
+	emotion reina Smile
+	reina: 그렇게 나쁘지 않았어요. 따듯하고.. 기분 좋았으니까요. #id:14fd
+	reina: ..... #id:14fe
+	emotion reina Shy
+	reina: ..흠흠. 그러니까..! 나가면 당신과 마이 양과 셋이서 술 마시러 가지 않으시겠어요? #id:14ff
+	reina: 여러분들이라면 긴장 안하고 즐겁게 마실 수 있을 거 같은 생각이 들어요. #id:1500
+	emotion reina Smile
+	reina: 저, 좋은 집 잔뜩 알고 있으니까요. 분명 후회하지 않을 거에요. #id:1501
+	if {MetaProgression.has_read_event("t_drink") == false}:
+		do GameEvents.emit_get_npc_exp({GameEvents.get_talk_add_exp("t_drink")}, 0)
+		do GameEvents.emit_add_read_history("t_drink")
+	[end_timeline]
+- [if {MetaProgression.has_read_event("t_change")} 변화(완료)/변화] | [if {npc.love} >= {GameEvents.get_need_love("t_change")}] [else="hide" alt_text="hide"] #id:1502
+	emotion reina Shy
+	reina: 아.. 오셨군요. 혹시 어디 아픈 곳은 없나요? 평소와 컨디션이 다르다던가. #id:1503
+	- 여느 때처럼 건강해. #id:1504
+	emotion reina Idle
+	reina: 그렇담 다행이에요. #id:1505
+	reina: 저는.. 이곳에 온 이후로 약간씩 바뀌고 있다는 느낌이 들어요. #id:1506
+	emotion reina Serious
+	reina: 좀 더 적극적이 된달까, 지금까진 마음 밖으로 표현하는 걸 꺼렸는데.. #id:1507
+	reina: 참을성이 사라지고 조급해 지는 것 같아요. 하고 싶은 말이 쏟아져 나와 입이 막혀 버리는 듯한.. #id:1508
+	reina: 싫거나 한 기분은 아니지만.. 지금까진 이런 적 없었으니까요. #id:1509
+	- 코니알에게 상태를 봐 달라고 할까? #id:150a
+	- 도움을 받을 수 있는 건 코니알밖에 없으니까. #id:150b
+	emotion reina Suprised
+	reina: 코, 코니알이요? 왠지 일이 더 커질 거 같은데. 괜찮.. #id:150c
+	join konial right [mirrored="true"]
+	konial: 헤에, 이건 그거네. #id:150d
+	reina: 꺄악! 갑자기 튀어나오면..! #id:150e
+	konial: 키히히, 승객이 앓는 소리를 해서 보러 왔더니. 별것도 아니잖아. #id:150f
+	emotion reina Angry
+	reina: 별 게 아니라고요? #id:1510
+	konial: 그래, 이봐 너. #id:1511
+	- 나 말이야? #id:1512
+	emotion konial Sadistic
+	konial: 네가 좀 더 신경쓰면 만사 해결될 일이니까. 이해했어? #id:1513
+	emotion reina Serious
+	reina: 몸이 이상한 건 전데요.. #id:1514
+	emotion konial Dislike
+	konial: 답답하긴! 그 원인은 저 녀석한테 있다는 뜻이야. 이대로 레이나 쨩이 죽어 버리는 건 싫지? #id:1515
+	konial: 너.. 지금 정도로는 부족하다는 얘기야. 좀 더 팍 팍 하라고. 팍 팍. 무슨 말인지 알아? #id:1516
+	- 이해했어. #id:1517
+		emotion konial Idle
+		konial: 키히히, 그래. 이렇게까지 설명하는데 모를 수가 없지. #id:1518
+		konial: 자! 코니알 님께서 처방을 내렸으니 명심하도록! 난 이만~ #id:1519
+	- 무슨 말인지 잘.. #id:151a
+		emotion konial Dislike
+		konial: 이 등신아! 넌 평생 그렇게 살아라. #id:151b
+		konial: 하아. 피곤해졌어. 난 갈래. #id:151c
+	leave konial
+	emotion reina Idle
+	reina: ..뭐였죠. 자기 할 말만 하고 가 버렸어요. #id:151d
+	reina: 아무튼, 당신도 몸에 이상이 생기면 바로 말 해 주세요. 물론 약이나 관련 지식 같은 건 없지만.. #id:151e
+	emotion reina Shy
+	reina: 나으실 때까지 옆에서 돌봐 드릴게요. #id:151f
+	if {MetaProgression.has_read_event("t_change") == false}:
+		do GameEvents.emit_get_npc_exp({GameEvents.get_talk_add_exp("t_change")}, 0)
+		do GameEvents.emit_add_read_history("t_change")
+	[end_timeline]
+
+- [if {MetaProgression.has_read_event("t_masterb")} 자위(완료)/자위] | [if {npc.love} >= {GameEvents.get_need_love("t_masterb")}] [else="hide" alt_text="hide"] #id:157a
+	emotion reina Shy
+	update reina [extra_data="show Etc/Blur"]
+	reina: ...아, 돌아 오셨군요. 수고하셨어요. #id:157b
+	- 무슨 일 있었어? #id:157c
+	- 얼굴이 붉은데. #id:157d
+	emotion reina Suprised
+	reina: 네? 아뇨, 그게.. 운동을 좀 했어요. 혼자 있으려니 찌뿌둥해서. #id:157e
+	reina: 그것 때문에 숨이 좀 차고 땀이 나는 것 뿐이니 신경쓰지 마세요. #id:157f
+	emotion reina Idle
+	reina: ..... #id:1580
+	reina: ..그건 그렇고, 요즘 탐색에 동행한 지 오래 된 거 같지 않나요? 최근 탐색도 마이 양이랑 가 버리곤.. 물론 이곳을 지키는 것도 중요하지만요. #id:1581
+	emotion reina Smile
+	reina: 몸을 좀 움직이고 싶달까, 탐색을 통해. 그러니 다음 번엔 저랑 함께하면 어떨지, 탐색 말이에요. #id:1582
+	- 미안, 신경 못 써줬네. #id:1583
+	- 그럼 지금 바로 출발할까? #id:1584
+	emotion reina Suprised
+	reina: 지, 지금 바로요? 지금은 좀.. 다리에 힘이 풀려 있어서.. 10분만 기다려 주시겠어요? #id:1585
+	join konial right [mirrored="true"]
+	konial: 아 레이나! 여기 있었구나. #id:1586
+	emotion reina Idle
+	update reina [extra_data="hide Etc/Blur"]
+	reina: ..코니알? 또 무슨 일인가요. #id:1587
+	konial: 뭐야, 정색하긴. 나는 걱정돼서 찾아온 거라고. #id:1588
+	emotion reina Serious
+	reina: 걱정? 저는 아무렇지도 않습니다만.. #id:1589
+	konial: 그래~? 아까 구석자리로 슬금슬금 가선 한참을 미동이 없길래. #id:158a
+	konial: 나중 가선 질척거리는 소리도 들려오는 거 있지. #id:158b
+	konial: 이변이 그 자리에 일어난 줄 알았는데, 아니었구나. #id:158c
+	emotion reina Suprised
+	reina: 네? 어.. 언제부터 들으셨던.. #id:158d
+	emotion konial Smile
+	konial: 아무튼 별 일 아니니 다행이야! 나는 바쁘니 이만! #id:158e
+	leave konial
+	reina: 저기, 코니알? #id:158f
+	emotion reina Shy
+	reina: ... #id:1590
+	- ... #id:1591
+	emotion reina Serious
+	reina: ..네 맞아요.. ..요즘 많이 참아 버려서 어쩔 수 없이 혼자.. #id:1592
+	emotion reina Angry
+	reina: 최근엔 저랑 함께해주지 않으시니까요.. 외로워져서.. 애초에 제게 이런 기분 좋은 거 알려 주신 건 당신이니까.. #id:1593
+	reina: 어느정도 책임.. 있는 거 아시죠? ..같이 동행 해 주셔야겠어요. #id:1594
+	if {MetaProgression.has_read_event("t_masterb") == false}:
+		do GameEvents.emit_get_npc_exp({GameEvents.get_talk_add_exp("t_masterb")}, 0)
+		do GameEvents.emit_add_read_history("t_masterb")
+	[end_timeline]
+
+- [if {MetaProgression.has_read_event("t_onsen")} 온천(완료)/온천] | [if {npc.love} >= {GameEvents.get_need_love("t_onsen")}] [else="hide" alt_text="hide"] #id:1520
+	emotion reina Idle
+	[sound path="res://sound/sfx/Boing.MP3" volume="12.0"]
+	reina: ...(꾸욱)(꾸욱) #id:1521
+	join mai right [mirrored="true" extra_data="show Etc/Blur"]
+	emotion mai Laugh
+	mai: 아아앙~ 거기~ #id:1522
+	[sound path="res://sound/sfx/Boing.MP3" volume="12.0"]
+	reina: ..(꾸우욱) #id:1523
+	emotion mai Smile
+	mai: 흐앙~! 너무 좋아! 좀 더.. #id:1524
+	emotion reina Shy
+	reina: ..마이 양. 저까지 부끄러워지니까 그만.. #id:1525
+	- ..뭐 하고 있어? #id:1526
+	reina: 아, 오셨군요. #id:1527
+	emotion mai Idle
+	update mai [extra_data="hide Etc/Blur"]
+	mai: 하아~ 있잖아, 레이나가 이렇게나 능숙할 줄 몰랐어. 내 약한 부분 잔뜩 알고 있다니까? #id:1528
+	reina: 주어를 생략하지 말아 주세요. 그게, 마사지를 해 드리고 있었거든요. #id:1529
+	emotion reina Serious
+	reina: 특히 마이 양은 종아리가 많이 뭉쳐 있으니까. 이렇게.. #id:152a
+	emotion mai Surprised
+	mai: 하으응?! #id:152b
+	- 기분 좋아 보여. #id:152c
+	- 마사지 꽤 능숙해 보이는걸. #id:152d
+	emotion reina Idle
+	reina: 원래는 제가 스스로 근육을 풀어 주려고 배우기 시작했는데 어쩌다 보니.. #id:152e
+	reina: 남들에게 해 주는 것도 나쁘지 않네요. 마이 양은 특히 리액션이 좋아요. (꾸욱..) #id:152f
+	[sound path="res://sound/sfx/Boing.MP3" volume="12.0"]
+	emotion mai Smile
+	mai: 으히잇! 아파..! ..그치만 좋아! #id:1530
+	- 레이나도 꽤나 근육 뭉쳐있을거 같아. #id:1531
+	- 늘 힐을 신고 있으니까. #id:1532
+	emotion reina Smile
+	reina: 네, 그야 뭐.. 회사원이니까요. 같은 자세로 일하다 보면 어깨나 목이 자주 굳어요. #id:1533
+	emotion mai Ecchi
+	mai: 하아. 하아. 좋아.. 그럼 이제 교대할까? 내가 레이나의 뭉친 곳 말랑말랑하게 풀어줄게! #id:1534
+	reina: 저, 저를요? ..후훗, 그럼 사양하지 않을게요. #id:1535
+	emotion mai Idle
+	mai: 기대하라고~ 마사지 스킬은 없지만 손 힘은 꽤 쓸만하니까. 봐봐, 이렇게.. #id:1536
+	[sound path="res://sound/sfx/Boing2.MP3" volume="12.0"]
+	mai: (꾸우욱..) #id:1537
+	..... #id:1538
+	emotion reina Idle
+	reina: ... #id:1539
+	emotion mai Serious
+	[sound path="res://sound/sfx/Boing2.MP3" volume="12.0"]
+	mai: (꾸..욱) ..어..어라? #id:153a
+	emotion mai Serious
+	mai: 다시 한번.. 으.. 으그그그읏! #id:153b
+	reina: ..? 마이 양? #id:153c
+	reina: 지금 혹시 주무르고 있는 중인가요..? #id:153d
+	emotion mai Serious
+	mai: 으그극! 뭐야 이거.. #id:153e
+	mai: 레이나의 어깨 완전 돌덩이야. #id:153f
+	emotion reina Suprised
+	reina: 네, 네엣? #id:1540
+	emotion mai Flat
+	mai: ..너도 와서 만져 봐. 이런 건 처음이야. #id:1541
+	- ... #id:1542
+	- 대단해, 완전 단단한데. #id:1543
+	update reina [extra_data="show Etc/Blur"]
+	emotion reina Shy
+	reina: 에에? 자, 잠시만요. 너무 만지지 마세요.. 부끄러워요. #id:1544
+	reina: 확실히 한동안 신경써서 풀어주지 못했던 건 사실이에요. 업무로 너무나 바빠서.. #id:1545
+	- 이건 마사지 정도로 풀어줄 수 있는 게 아닌데. #id:1546
+	emotion reina Serious
+	update reina [extra_data="hide Etc/Blur"]
+	reina: 네, 처음엔 마사지 샵도 자주 갔는데 점점 만족하지 못하게 되어서. #id:1547
+	reina: 사실.. 한달에 한번은 온천에 가거든요. 뜨거운 물에 몸을 담그면 뭉친 근육이 모두 풀려요. #id:1548
+	emotion reina Idle
+	reina: 전차에 오르지 않았다면 이번 주말에 온천에 들를 예정이었는데 그러지 못한 탓에.. #id:1549
+	emotion mai Idle
+	mai: 그렇구나, 온천.. 온천이라. #id:154a
+	mai: ..아! 잠깐 기다려봐! #id:154b
+	do TransitionScreen.dialog_transition()
+	..... #id:154c
+	emotion reina Suprised
+	reina: ..? 마이 양, 이건? #id:154d
+	reina: 많이 낡았지만.. 광고 전단이네요. #id:154e
+	mai: 좀 전에 탐색하면서 주웠어! 이 전차에서 온천 칸을 운영했었나 봐. #id:154f
+	reina: 예? 정말인가요? #id:1550
+	- 잘만 하면 이 온천 칸을 찾아낼 수 있지 않을까? #id:1551
+	- 칸칸네비를 사용한다면. #id:1552
+	emotion reina Idle
+	reina: 그렇군요, 집사가 말한대로 키워드를 조합해서 노선을 배치한다면. #id:1553
+	reina: 특별한 종착점에 온천 칸이 있을 수도 있겠어요. #id:1554
+	emotion reina Serious
+	reina: 하지만 저 때문에 폐를 끼칠 수는.. #id:1555
+	- 늘 하던 탐색에 겸사겸사 하면 되니까. #id:1556
+	- 컨디션이 좋아진다면 탐색의 효율도 좋아지니까. #id:1557
+	emotion mai Smile
+	mai: 맞아, 만약 찾게 되면 느긋하게 즐기고 오도록 해! #id:1558
+	emotion reina Suprised
+	reina: 에, 마이 양은 안 가시는 건가요? #id:1559
+	emotion mai Idle
+	mai: 나는 뜨거운 거 별로 안 좋아하기도 하고, 레이나가 잔뜩 근육 풀어 줘서 이미 컨디션 최고야. #id:155a
+	mai: 여기서 기다리고 있을 테니까, 돌아오면 나머지 마사지도 부탁할게? #id:155b
+	emotion reina Smile
+	reina: 네, 네! 얼마든지요. #id:155c
+	leave mai
+	- 레이나와 단 둘이 온천 데이트.. #id:155d
+	- 제대로 전단지를 확인한 뒤 출발하자. #id:155e
+	reina: 어쩐지.. 다른 때보다 기대되네요. 전차에 온천이 있다는 게 상상은 안 되지만. #id:155f
+	reina: 반드시 찾을 수 있으면 좋겠어요. 온천 칸.. #id:1560
+	if {MetaProgression.has_read_event("t_onsen") == false}:
+		do GameEvents.emit_get_npc_exp({GameEvents.get_talk_add_exp("t_onsen")}, 0)
+		do GameEvents.emit_add_route_hint("onsen")
+		do GameEvents.emit_add_read_history("t_onsen")
+	[end_timeline]
+
+- [if {MetaProgression.has_read_event("t_cook")} 요리(완료)/요리] | [if {npc.love} >= {GameEvents.get_need_love("t_cook")}] [else="hide" alt_text="hide"] #id:1561
+	reina: 혹시 좋아하는 음식 있으신가요? #id:1562
+	- 비프 웰링턴 #id:1563
+	- 우니동 #id:1564
+	- 북경오리 #id:1565
+	emotion reina Smile
+	reina: 그렇군요. 알겠습니다. #id:1566
+	reina: 그럼 이제 출발하시죠. 이상 현상을 찾아야.. #id:1567
+	reina: ... #id:1568
+	emotion reina Idle
+	reina: ... #id:1569
+	- ..왜 물었어? #id:156a
+	emotion reina Shy
+	reina: ..네? ..아니에요. 잊어 주세요. #id:156b
+	reina: ... #id:156c
+	reina: ... #id:156d
+	emotion reina Idle
+	reina: 그게.. 여기서 나가게 되면 기념으로 요리해 드릴까 해서.. 몇개월 전부터 주말엔 취미로 요리를 하고 있었거든요. #id:156e
+	reina: 재미를 붙여서 지금은 삶거나 끓이는 요리는 능숙해졌습니다. 근데 당신이 좋아하는 요리는.. 배운적 없어요. #id:156f
+	reina: 무리해서 만들어도 엉망이 되겠죠. 그럴 바엔 확실하게 연습해서 완벽하게 만들어 낼 수 있을 때 대접하려고.. #id:1570
+	emotion reina Angry
+	reina: 그.. 제가 해준 요리는 숯덩이라도 먹을 수 있다 같은 뻔한 얘기는 하지 말아 주세요. #id:1571
+	reina: 저도 욕심이 있으니까 부끄럽지 않은 요리를 선보이고 싶어요. #id:1572
+	- 능숙해질 때까진 얼마나 걸려? #id:1573
+	emotion reina Idle
+	reina: 아마.. 3년 정도. #id:1574
+	reina: 그 전까진.. 배달 요리로 어떻게든.. #id:1575
+	- 요리는 아무래도 괜찮아. #id:1576
+	- 다른 걸 맛보면 되니까. #id:1577
+	emotion reina Smile
+	reina: 다른.. 거? ..아, ..후훗. 그런가요. 그걸로 충분한가요? 당신이 좋아하는 요리를 완벽하게 해낼 때 까지. #id:1578
+	reina: 다른 걸로 참아 주실 수 있으시다면. 얼마든지 맛보여 드릴게요. #id:1579
+	if {MetaProgression.has_read_event("t_cook") == false}:
+		do GameEvents.emit_get_npc_exp({GameEvents.get_talk_add_exp("t_cook")}, 0)
+		do GameEvents.emit_add_route_hint("dogstrap")
+		do GameEvents.emit_add_read_history("t_cook")
+	[end_timeline]
+
+
+
+- 뒤로 가기 #id:1595
+	jump basetalk/reina #id:14

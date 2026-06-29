@@ -1,0 +1,597 @@
+[gd_scene load_steps=56 format=3]
+
+[ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://ciskb2ln32cix" path="res://Gameplay/Levels/base_event_component.gd" id="2_dupl0"]
+[ext_resource type="PackedScene" uid="uid://bxik3k1yxg833" path="res://Gameplay/NPC/butler.tscn" id="3_vhit3"]
+[ext_resource type="PackedScene" uid="uid://d0mobvya0ewag" path="res://Gameplay/NPC/konial.tscn" id="4_wb0dw"]
+[ext_resource type="Script" uid="uid://cctiyd25bjek5" path="res://Gameplay/Levels/base_npc_positions.gd" id="5_bpix1"]
+[ext_resource type="PackedScene" uid="uid://xm3jf22phtyd" path="res://scene/component/anomaly_event_component.tscn" id="6_gvche"]
+[ext_resource type="Resource" uid="uid://d4d3pymghauxp" path="res://Gameplay/GameData/HSceneData/h_butler_0.tres" id="7_fudp0"]
+[ext_resource type="Resource" uid="uid://dr3qqo4v8wvf4" path="res://Gameplay/GameData/HSceneData/h_butler_1.tres" id="8_bhyh5"]
+[ext_resource type="Resource" uid="uid://cgjrbahalddii" path="res://Gameplay/GameData/HSceneData/h_konial_0.tres" id="9_g4t3a"]
+[ext_resource type="Resource" uid="uid://bhq3tyllr0li2" path="res://Gameplay/GameData/HSceneData/h_konial_2.tres" id="10_lygut"]
+[ext_resource type="Resource" uid="uid://gwv0rs1e1l33" path="res://Gameplay/GameData/HSceneData/h_konial_3.tres" id="11_p0pvg"]
+[ext_resource type="Script" uid="uid://c13ixtp3ljtmk" path="res://Gameplay/Levels/next_quest_component.gd" id="12_eqa4d"]
+[ext_resource type="Texture2D" uid="uid://bc8vajefmu6l" path="res://resources/ui/hp_icon_base.png" id="13_w4m01"]
+[ext_resource type="Texture2D" uid="uid://b6ymw5nwptv8v" path="res://resources/ui/hp_icon_active.png" id="14_6uqe7"]
+[ext_resource type="FontFile" uid="uid://b420coqgx7cq0" path="res://resources/font/TsunagiGothic.ttf" id="15_ll8yw"]
+[ext_resource type="Script" uid="uid://dmogloteijnyc" path="res://Gameplay/Levels/h_scene_window_component.gd" id="16_qitrf"]
+[ext_resource type="Script" uid="uid://g145f6y5swqv" path="res://Gameplay/Levels/recollection_rect.gd" id="17_16j4g"]
+[ext_resource type="PackedScene" uid="uid://bqs8wetwsdsvr" path="res://Gameplay/h_scene_switch_button.tscn" id="18_0rqms"]
+[ext_resource type="Texture2D" uid="uid://bdx54kkvfvfu3" path="res://resources/ui/gui/window.png" id="19_u1jql"]
+[ext_resource type="Texture2D" uid="uid://deitumb7a8clp" path="res://resources/ui/gui/arrow_next.png" id="20_mogqn"]
+[ext_resource type="Texture2D" uid="uid://ht8yonan4uba" path="res://resources/ui/gui/arrow_next_hover.png" id="21_6rsnw"]
+[ext_resource type="Texture2D" uid="uid://byqnr6yhut0ka" path="res://resources/ui/gui/arrow_next_active.png" id="22_ei1pc"]
+[ext_resource type="Texture2D" uid="uid://dfwm6piy1cnk3" path="res://resources/ui/controller_icons/xbox-Y.png" id="23_dpcdc"]
+[ext_resource type="Script" uid="uid://nnjff5ms5xn6" path="res://scene/component/controller_button_component.gd" id="24_qnb12"]
+[ext_resource type="Script" uid="uid://dnirv8kd0mgxr" path="res://Gameplay/Levels/h_window_select_frame.gd" id="25_wemlk"]
+[ext_resource type="PackedScene" uid="uid://lg6623mk53cw" path="res://scene/component/teleport_component.tscn" id="26_1r73j"]
+[ext_resource type="Script" uid="uid://bbd1432djqgb3" path="res://Gameplay/Levels/hint_bubble_component.gd" id="27_4aibe"]
+[ext_resource type="Shader" uid="uid://bqknggdn8m3nm" path="res://Gameplay/Levels/unshaded.gdshader" id="28_ctg4c"]
+[ext_resource type="Texture2D" uid="uid://faoef3dpoykn" path="res://resources/ui/Inventory/scalable_window_6.png" id="29_bcj0i"]
+[ext_resource type="AudioStream" uid="uid://cew1wchab5v2k" path="res://sound/sfx/ui/inven_item_equip.wav" id="30_0xmkh"]
+[ext_resource type="PackedScene" uid="uid://dnc5rb3rrpan3" path="res://scene/UI/clear_text.tscn" id="31_82fnd"]
+[ext_resource type="PackedScene" uid="uid://bxk6xej0qykv7" path="res://scene/component/stage_handler.tscn" id="32_gilft"]
+[ext_resource type="Script" uid="uid://dsomb6g1hlvem" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="33_50oqc"]
+[ext_resource type="Script" uid="uid://dxlagu4dbag77" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="34_w1jdk"]
+[ext_resource type="PackedScene" uid="uid://bvt4gj56eqbp3" path="res://Gameplay/train_standard.tscn" id="35_iyww2"]
+[ext_resource type="PackedScene" uid="uid://baub7ftcte2oe" path="res://Gameplay/NPC/gyaru.tscn" id="36_dt07b"]
+[ext_resource type="PackedScene" uid="uid://bjn4cyp2l8xve" path="res://Gameplay/NPC/ol.tscn" id="37_8r0be"]
+[ext_resource type="PackedScene" uid="uid://djbwoq5ul6rbk" path="res://scene/game_object/player/player.tscn" id="38_dr17e"]
+[ext_resource type="Script" uid="uid://c5sj7yvtjqc5b" path="res://Gameplay/Levels/Trophy.gd" id="39_jn0fv"]
+[ext_resource type="Texture2D" uid="uid://cdgactp5475tj" path="res://resources/ch/ghost/doll.png" id="40_e4ua1"]
+[ext_resource type="PackedScene" uid="uid://dsch54fxvgg58" path="res://Gameplay/door.tscn" id="41_i5sgb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3itdv"]
+size = Vector2(140.25, 333)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hve8r"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p056b"]
+light_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_oyjl4"]
+font = ExtResource("15_ll8yw")
+font_size = 14
+outline_size = 4
+outline_color = Color(0.360784, 0.278431, 0.305882, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qa67x"]
+texture = ExtResource("20_mogqn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0irll"]
+texture = ExtResource("21_6rsnw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7dd00"]
+texture = ExtResource("22_ei1pc")
+
+[sub_resource type="LabelSettings" id="LabelSettings_t2umr"]
+font_size = 8
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qa67x"]
+font_size = 8
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2yumr"]
+shader = ExtResource("28_ctg4c")
+
+[sub_resource type="LabelSettings" id="LabelSettings_q308d"]
+font = ExtResource("15_ll8yw")
+font_size = 21
+outline_size = 9
+outline_color = Color(0.376471, 0.352941, 0.4, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4pcb"]
+size = Vector2(82, 320.5)
+
+[sub_resource type="Resource" id="Resource_7xtoy"]
+script = ExtResource("34_w1jdk")
+duration = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v61mu"]
+size = Vector2(1920, 360)
+
+[node name="Base_0" type="Node2D" node_paths=PackedStringArray("player", "doors", "teleports")]
+script = ExtResource("1_5frgf")
+player = NodePath("TrainStandard/Entity/Player")
+doors = [NodePath("Exit"), NodePath("frontDoor")]
+teleports = [NodePath("TeleportComponent")]
+stage_type = 0
+
+[node name="BaseEventComponent" type="Node" parent="." node_paths=PackedStringArray("entity", "butler_position", "butler_human_position", "konial_position")]
+script = ExtResource("2_dupl0")
+entity = NodePath("../TrainStandard/Entity")
+butler_packed = ExtResource("3_vhit3")
+konial_packed = ExtResource("4_wb0dw")
+butler_position = NodePath("../BaseEvents/ButlerPosition")
+butler_human_position = NodePath("../BaseEvents/ButlerHumanPosition")
+konial_position = NodePath("../BaseEvents/KonialPosition")
+
+[node name="BaseNpcPositions" type="Node2D" parent="." node_paths=PackedStringArray("positions", "npcs")]
+position = Vector2(1116, 0)
+script = ExtResource("5_bpix1")
+positions = [NodePath("Pos1"), NodePath("Pos2"), NodePath("Pos3"), NodePath("Pos4"), NodePath("Pos5")]
+npcs = [NodePath("../TrainStandard/Entity/OL"), NodePath("../TrainStandard/Entity/Gyaru")]
+
+[node name="Pos1" type="Marker2D" parent="BaseNpcPositions"]
+position = Vector2(58, 360)
+
+[node name="Pos2" type="Marker2D" parent="BaseNpcPositions"]
+position = Vector2(196, 360)
+
+[node name="Pos3" type="Marker2D" parent="BaseNpcPositions"]
+position = Vector2(325, 360)
+
+[node name="Pos4" type="Marker2D" parent="BaseNpcPositions"]
+position = Vector2(462, 360)
+
+[node name="Pos5" type="Marker2D" parent="BaseNpcPositions"]
+position = Vector2(598, 360)
+
+[node name="BaseEvents" type="Node2D" parent="."]
+
+[node name="ButlerLove0Event" type="Node2D" parent="BaseEvents"]
+position = Vector2(938, 191)
+
+[node name="AnomalyEventComponent" parent="BaseEvents/ButlerLove0Event" instance=ExtResource("6_gvche")]
+h_scene_info = ExtResource("7_fudp0")
+no_display_dialog_love = true
+
+[node name="ButlerLove1Event" type="Node2D" parent="BaseEvents"]
+position = Vector2(1040, 171)
+
+[node name="AnomalyEventComponent" parent="BaseEvents/ButlerLove1Event" instance=ExtResource("6_gvche")]
+h_scene_info = ExtResource("8_bhyh5")
+no_display_dialog_love = true
+
+[node name="KonialLove0Event" type="Node2D" parent="BaseEvents"]
+position = Vector2(447, 133)
+
+[node name="AnomalyEventComponent" parent="BaseEvents/KonialLove0Event" instance=ExtResource("6_gvche")]
+h_scene_info = ExtResource("9_g4t3a")
+no_display_dialog_love = true
+
+[node name="KonialLove1Event" type="Node2D" parent="BaseEvents"]
+position = Vector2(559, 133)
+
+[node name="AnomalyEventComponent" parent="BaseEvents/KonialLove1Event" instance=ExtResource("6_gvche")]
+h_scene_info = ExtResource("10_lygut")
+no_display_dialog_love = true
+
+[node name="KonialLove2Event" type="Node2D" parent="BaseEvents"]
+position = Vector2(673, 133)
+
+[node name="AnomalyEventComponent" parent="BaseEvents/KonialLove2Event" instance=ExtResource("6_gvche")]
+h_scene_info = ExtResource("11_p0pvg")
+no_display_dialog_love = true
+
+[node name="ButlerPosition" type="Marker2D" parent="BaseEvents"]
+position = Vector2(798, 273)
+
+[node name="ButlerHumanPosition" type="Marker2D" parent="BaseEvents"]
+position = Vector2(798, 322)
+
+[node name="KonialPosition" type="Marker2D" parent="BaseEvents"]
+position = Vector2(345, 275)
+
+[node name="Chapter2ButlerMeet" type="Area2D" parent="BaseEvents"]
+position = Vector2(724, 336)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseEvents/Chapter2ButlerMeet"]
+position = Vector2(1, -147)
+shape = SubResource("RectangleShape2D_3itdv")
+
+[node name="Chapter4ButlerMeet" type="Area2D" parent="BaseEvents"]
+position = Vector2(706, 343)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseEvents/Chapter4ButlerMeet"]
+position = Vector2(1, -147)
+shape = SubResource("RectangleShape2D_3itdv")
+
+[node name="Chapter4ButlerMeet2" type="Area2D" parent="BaseEvents"]
+position = Vector2(742, 336)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseEvents/Chapter4ButlerMeet2"]
+position = Vector2(1, -147)
+shape = SubResource("RectangleShape2D_3itdv")
+
+[node name="Chapter4_2ButlerMeet" type="Area2D" parent="BaseEvents"]
+z_index = 1
+position = Vector2(260, 336)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseEvents/Chapter4_2ButlerMeet"]
+position = Vector2(1, -147)
+shape = SubResource("RectangleShape2D_3itdv")
+
+[node name="Chapter5ButlerMeet" type="Area2D" parent="BaseEvents"]
+z_index = 1
+position = Vector2(750, 336)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseEvents/Chapter5ButlerMeet"]
+position = Vector2(44.875, -147)
+shape = SubResource("RectangleShape2D_3itdv")
+
+[node name="ButlerLoveQuestStart" type="Area2D" parent="BaseEvents"]
+z_index = 1
+position = Vector2(1666, 336)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseEvents/ButlerLoveQuestStart"]
+position = Vector2(44.875, -147)
+shape = SubResource("RectangleShape2D_3itdv")
+
+[node name="BeforeEndingWarning" type="Area2D" parent="BaseEvents"]
+z_index = 1
+position = Vector2(716, 350)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BaseEvents/BeforeEndingWarning"]
+position = Vector2(44.875, -147)
+shape = SubResource("RectangleShape2D_3itdv")
+
+[node name="NextQuestComponent" type="Node2D" parent="BaseEvents"]
+z_index = 1
+position = Vector2(333, 93)
+script = ExtResource("12_eqa4d")
+
+[node name="LoveLevelBase" type="TextureRect" parent="BaseEvents/NextQuestComponent"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_hve8r")
+offset_right = 25.0
+offset_bottom = 22.0
+texture = ExtResource("13_w4m01")
+expand_mode = 1
+
+[node name="LoveLevelFill" type="TextureRect" parent="BaseEvents/NextQuestComponent/LoveLevelBase"]
+unique_name_in_owner = true
+use_parent_material = true
+layout_mode = 0
+offset_top = 2.0
+offset_right = 25.0
+offset_bottom = 20.0
+texture = ExtResource("14_6uqe7")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="BaseEvents/NextQuestComponent/LoveLevelBase"]
+unique_name_in_owner = true
+material = SubResource("CanvasItemMaterial_p056b")
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -20.0
+offset_right = 13.5
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "?"
+label_settings = SubResource("LabelSettings_oyjl4")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSceneWindowComponent" type="CanvasLayer" parent="." node_paths=PackedStringArray("recollect_rect") groups=["h_scene_window_component"]]
+layer = 4
+script = ExtResource("16_qitrf")
+recollect_rect = NodePath("HSceneSwitchWindow")
+
+[node name="HSceneSwitchWindow" type="TextureRect" parent="HSceneWindowComponent" node_paths=PackedStringArray("h_scene_window_component", "Npcs", "player")]
+offset_right = 641.0
+offset_bottom = 48.0
+script = ExtResource("17_16j4g")
+h_scene_window_component = NodePath("..")
+recollection_button = ExtResource("18_0rqms")
+Npcs = [NodePath("../../TrainStandard/Entity/OL"), NodePath("../../TrainStandard/Entity/Gyaru"), null, null, null]
+player = NodePath("../../TrainStandard/Entity/Player")
+
+[node name="ColorRect" type="NinePatchRect" parent="HSceneWindowComponent/HSceneSwitchWindow"]
+self_modulate = Color(1, 1, 1, 0.784314)
+layout_mode = 0
+offset_left = -8.0
+offset_top = -9.0
+offset_right = 2479.0
+offset_bottom = 210.0
+scale = Vector2(0.265, 0.265)
+texture = ExtResource("19_u1jql")
+region_rect = Rect2(0, 0, 300, 300)
+patch_margin_left = 90
+patch_margin_top = 93
+patch_margin_right = 91
+patch_margin_bottom = 98
+
+[node name="RecollectionScrollContainer" type="ScrollContainer" parent="HSceneWindowComponent/HSceneSwitchWindow"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = -8.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+vertical_scroll_mode = 0
+
+[node name="RecollectionContainer" type="HBoxContainer" parent="HSceneWindowComponent/HSceneSwitchWindow/RecollectionScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 7
+alignment = 1
+
+[node name="HSceneSwitchButton" parent="HSceneWindowComponent/HSceneSwitchWindow/RecollectionScrollContainer/RecollectionContainer" instance=ExtResource("18_0rqms")]
+layout_mode = 2
+
+[node name="FoldButton" type="Button" parent="HSceneWindowComponent/HSceneSwitchWindow"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 0
+offset_left = 544.0
+offset_top = -39.0
+offset_right = 692.0
+offset_bottom = 141.0
+rotation = -1.5708
+scale = Vector2(0.135, 0.135)
+pivot_offset = Vector2(74, 90)
+focus_mode = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_qa67x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0irll")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7dd00")
+theme_override_styles/focus = SubResource("StyleBoxTexture_qa67x")
+toggle_mode = true
+
+[node name="PadUiIcon" type="TextureRect" parent="HSceneWindowComponent/HSceneSwitchWindow"]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 44.0
+offset_right = 632.0
+offset_bottom = 52.0
+texture = ExtResource("23_dpcdc")
+expand_mode = 1
+script = ExtResource("24_qnb12")
+metadata/_custom_type_script = "uid://nnjff5ms5xn6"
+
+[node name="Label" type="Label" parent="HSceneWindowComponent/HSceneSwitchWindow"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -105.0
+offset_top = 49.0
+offset_right = -37.0
+offset_bottom = 73.0
+grow_horizontal = 0
+text = "H_LIST_FOLD"
+label_settings = SubResource("LabelSettings_t2umr")
+horizontal_alignment = 2
+
+[node name="SelectFrame" type="Control" parent="HSceneWindowComponent/HSceneSwitchWindow"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 8.0
+offset_bottom = 3.0
+mouse_filter = 2
+script = ExtResource("25_wemlk")
+
+[node name="TextureRect" type="TextureRect" parent="HSceneWindowComponent/HSceneSwitchWindow/SelectFrame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 37.0
+offset_top = 8.0
+offset_right = 214.0
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.08, 0.08)
+mouse_filter = 2
+texture = ExtResource("21_6rsnw")
+
+[node name="TextureRect2" type="TextureRect" parent="HSceneWindowComponent/HSceneSwitchWindow/SelectFrame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = 8.0
+offset_right = 167.0
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.08, 0.08)
+mouse_filter = 2
+texture = ExtResource("21_6rsnw")
+flip_h = true
+
+[node name="Label" type="Label" parent="HSceneWindowComponent/HSceneSwitchWindow/SelectFrame"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 37.0
+offset_right = 32.0
+offset_bottom = 50.0
+text = "BUTTON_SELECT"
+label_settings = SubResource("LabelSettings_qa67x")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TeleportComponent" parent="." instance=ExtResource("26_1r73j")]
+
+[node name="HintBubbleComponent" type="Control" parent="." node_paths=PackedStringArray("hint_label", "hint_area", "typing_sound")]
+z_index = 5
+layout_mode = 3
+anchors_preset = 0
+offset_left = 848.0
+offset_top = 83.0
+offset_right = 888.0
+offset_bottom = 123.0
+mouse_filter = 2
+script = ExtResource("27_4aibe")
+hint_label = NodePath("HintLabel")
+hint_area = NodePath("HintArea")
+typing_sound = NodePath("AudioStreamPlayer")
+
+[node name="HintLabel" type="RichTextLabel" parent="HintBubbleComponent"]
+self_modulate = Color(0, 0, 0, 1)
+material = SubResource("ShaderMaterial_2yumr")
+clip_contents = false
+layout_mode = 0
+offset_top = 51.0
+offset_right = 104.0
+offset_bottom = 75.0
+scale = Vector2(0.54, 0.54)
+mouse_filter = 2
+bbcode_enabled = true
+text = "힌트 패널aaaaq"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="NinePatchRect" type="NinePatchRect" parent="HintBubbleComponent/HintLabel"]
+show_behind_parent = true
+texture_filter = 2
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -14.0
+offset_right = 24.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(104, 55)
+texture = ExtResource("29_bcj0i")
+patch_margin_left = 49
+patch_margin_top = 21
+patch_margin_right = 32
+patch_margin_bottom = 45
+
+[node name="Label" type="Label" parent="HintBubbleComponent/HintLabel/NinePatchRect"]
+use_parent_material = true
+layout_mode = 1
+offset_left = -5.77777
+offset_top = -8.22222
+offset_right = 50.2222
+offset_bottom = 18.7778
+text = "Hint!"
+label_settings = SubResource("LabelSettings_q308d")
+
+[node name="HintArea" type="Area2D" parent="HintBubbleComponent"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HintBubbleComponent/HintArea"]
+position = Vector2(-61, 135)
+shape = SubResource("RectangleShape2D_g4pcb")
+debug_color = Color(0.557246, 0.701387, 0.275526, 0.42)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="HintBubbleComponent"]
+stream = ExtResource("30_0xmkh")
+volume_db = 5.0
+bus = &"Sfx"
+
+[node name="ClearText" parent="." instance=ExtResource("31_82fnd")]
+
+[node name="StageHandler" parent="." instance=ExtResource("32_gilft")]
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+position = Vector2(321, 180)
+script = ExtResource("33_50oqc")
+priority = 10
+follow_mode = 2
+follow_target = NodePath("../TrainStandard/Entity/Player")
+snap_to_pixel = true
+tween_resource = SubResource("Resource_7xtoy")
+follow_offset = Vector2(0, -150)
+follow_damping = true
+follow_damping_value = Vector2(0.3, 0.3)
+draw_limits = true
+limit_target = NodePath("../CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(961, 180)
+shape = SubResource("RectangleShape2D_v61mu")
+
+[node name="TrainStandard" parent="." instance=ExtResource("35_iyww2")]
+
+[node name="Entity" type="Node2D" parent="TrainStandard"]
+y_sort_enabled = true
+
+[node name="Gyaru" parent="TrainStandard/Entity" instance=ExtResource("36_dt07b")]
+position = Vector2(1523, 337)
+
+[node name="OL" parent="TrainStandard/Entity" instance=ExtResource("37_8r0be")]
+position = Vector2(1187, 347)
+
+[node name="Player" parent="TrainStandard/Entity" instance=ExtResource("38_dr17e")]
+visible = false
+z_index = 3
+position = Vector2(132, 338)
+
+[node name="Trophy" type="Node2D" parent="TrainStandard" node_paths=PackedStringArray("trophy")]
+position = Vector2(638, 229)
+script = ExtResource("39_jn0fv")
+trophy = [NodePath("Trophy1"), NodePath("Trophy2")]
+
+[node name="Trophy1" type="Sprite2D" parent="TrainStandard/Trophy"]
+visible = false
+texture = ExtResource("40_e4ua1")
+hframes = 2
+
+[node name="Trophy2" type="Sprite2D" parent="TrainStandard/Trophy"]
+visible = false
+position = Vector2(40, 0)
+texture = ExtResource("40_e4ua1")
+hframes = 2
+
+[node name="frontDoor" parent="." instance=ExtResource("41_i5sgb")]
+position = Vector2(-35, 356)
+entry_direction = 1
+transition_type = "fade_to_black"
+push_distance = 100
+
+[node name="Exit" parent="." instance=ExtResource("41_i5sgb")]
+position = Vector2(2016, 369)
+entry_direction = 3
+transition_type = "zelda"
+push_distance = 100
+path_to_new_scene = "res://Gameplay/Levels/stage_00.tscn"
+entry_door_name = "frontDoor"
+
+[connection signal="body_entered" from="BaseEvents/Chapter2ButlerMeet" to="BaseEventComponent" method="_on_chapter_2_butler_meet_body_entered"]
+[connection signal="body_entered" from="BaseEvents/Chapter4ButlerMeet" to="BaseEventComponent" method="_on_chapter_4_butler_meet_body_entered"]
+[connection signal="body_entered" from="BaseEvents/Chapter4ButlerMeet2" to="BaseEventComponent" method="_on_chapter_4_butler_meet_2_body_entered"]
+[connection signal="body_entered" from="BaseEvents/Chapter4_2ButlerMeet" to="BaseEventComponent" method="_on_chapter_4_2_butler_meet_body_entered"]
+[connection signal="body_entered" from="BaseEvents/Chapter5ButlerMeet" to="BaseEventComponent" method="_on_chapter_5_butler_meet_body_entered"]
+[connection signal="body_entered" from="BaseEvents/ButlerLoveQuestStart" to="BaseEventComponent" method="_on_butler_love_quest_start_body_entered"]
+[connection signal="body_entered" from="BaseEvents/BeforeEndingWarning" to="BaseEventComponent" method="_on_before_ending_warning_body_entered"]
+[connection signal="toggled" from="HSceneWindowComponent/HSceneSwitchWindow/FoldButton" to="HSceneWindowComponent/HSceneSwitchWindow" method="_on_fold_button_toggled"]
+[connection signal="body_entered" from="HintBubbleComponent/HintArea" to="HintBubbleComponent" method="_on_hint_area_body_entered"]

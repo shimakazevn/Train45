@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://1yj1llbf6upd"]
+
+[ext_resource type="Script" uid="uid://goabc6cw63uh" path="res://Gameplay/Dialog/Character/custom_layered_portrait.gd" id="1_gkfrq"]
+[ext_resource type="Texture2D" uid="uid://bdbdfuupmimx0" path="res://resources/ch/illust/butler/butler_body.png" id="2_l0yhb"]
+[ext_resource type="Texture2D" uid="uid://cooto1rriejhp" path="res://resources/ch/illust/butler/butler_idle.png" id="4_utdt1"]
+[ext_resource type="Texture2D" uid="uid://briawjtsqa5ah" path="res://resources/ch/illust/butler/butler_laugh.png" id="5_8ewcn"]
+[ext_resource type="Texture2D" uid="uid://btpi5568h0wp1" path="res://resources/ch/illust/butler/butler_panic.png" id="6_13w26"]
+[ext_resource type="Texture2D" uid="uid://c2s6nu5cetviq" path="res://resources/ch/illust/butler/butler_serious.png" id="7_nvfm1"]
+[ext_resource type="Texture2D" uid="uid://c4tadfl0sn481" path="res://resources/ch/illust/butler/butler_smile.png" id="8_la266"]
+[ext_resource type="Texture2D" uid="uid://khmf8oudw7p7" path="res://resources/ch/illust/butler/butler_surprise.png" id="9_63eic"]
+[ext_resource type="Texture2D" uid="uid://dcmbic1pawm2e" path="res://resources/ch/illust/butler/butler_etc_blur.png" id="11_qtbdm"]
+
+[node name="LayeredPortrait" type="CanvasGroup"]
+texture_filter = 2
+script = ExtResource("1_gkfrq")
+npc_name = "butler"
+
+[node name="Base" type="Sprite2D" parent="."]
+texture = ExtResource("2_l0yhb")
+
+[node name="Face" type="Node2D" parent="."]
+position = Vector2(21, 20)
+
+[node name="Idle" type="Sprite2D" parent="Face"]
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("4_utdt1")
+
+[node name="Laugh" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("5_8ewcn")
+
+[node name="Panic" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("6_13w26")
+
+[node name="Serious" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("7_nvfm1")
+
+[node name="Smile" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("8_la266")
+
+[node name="Surprise" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("9_63eic")
+
+[node name="Etc" type="Node2D" parent="."]
+
+[node name="Blur" type="Sprite2D" parent="Etc"]
+visible = false
+texture_filter = 2
+position = Vector2(-23, -569)
+texture = ExtResource("11_qtbdm")

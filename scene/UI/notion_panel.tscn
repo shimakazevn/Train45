@@ -1,0 +1,182 @@
+[gd_scene load_steps=8 format=3 uid="uid://cjb8gfiuxb4m8"]
+
+[ext_resource type="Script" uid="uid://5csyk2yd56cs" path="res://scene/UI/notion_panel.gd" id="1_7jxxm"]
+[ext_resource type="Texture2D" uid="uid://7k2geb4eipdo" path="res://resources/ui/icons/icons15.png" id="2_sv4mv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sv4mv"]
+
+[sub_resource type="Animation" id="Animation_y1jvf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotionPanel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotionPanel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jae76"]
+resource_name = "in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotionPanel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.31864, 1),
+"update": 0,
+"values": [Vector2(0, 50), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotionPanel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.297302, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sbybd"]
+resource_name = "out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotionPanel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.329877, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotionPanel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.31864, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -50)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ve2qv"]
+_data = {
+&"RESET": SubResource("Animation_y1jvf"),
+&"in": SubResource("Animation_jae76"),
+&"out": SubResource("Animation_sbybd")
+}
+
+[node name="NotionBox" type="Control" node_paths=PackedStringArray("notion", "notion_texture")]
+process_mode = 3
+custom_minimum_size = Vector2(200, 30)
+layout_direction = 3
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -180.0
+offset_bottom = -150.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+script = ExtResource("1_7jxxm")
+notion = NodePath("NotionPanel/HBoxContainer/Notion")
+notion_texture = NodePath("NotionPanel/HBoxContainer/NotionTexture")
+
+[node name="NotionPanel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(200, 22)
+layout_direction = 3
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 35.0
+offset_bottom = 57.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_sv4mv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NotionPanel"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_ve2qv")
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NotionPanel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 7.0
+offset_top = -15.0
+offset_right = 274.0
+offset_bottom = 15.0
+grow_vertical = 2
+theme_override_constants/separation = 1
+
+[node name="Notion" type="Label" parent="NotionPanel/HBoxContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 11
+text = "여기 알림이 표시됩니다aaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="NotionPanel/HBoxContainer/Notion"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -8.5
+offset_right = 451.0
+offset_bottom = 9.5
+grow_vertical = 2
+color = Color(0, 0, 0, 0.482353)
+
+[node name="NotionTexture" type="TextureRect" parent="NotionPanel/HBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+texture = ExtResource("2_sv4mv")
+expand_mode = 2

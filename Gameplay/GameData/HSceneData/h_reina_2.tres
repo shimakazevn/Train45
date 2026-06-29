@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://dpdvxwcbmbxd6"]
+
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_cs4qp"]
+[ext_resource type="Texture2D" uid="uid://dd3o6qh1x817c" path="res://resources/ui/EventCoverImage/Hpreview_reina_6.png" id="1_j21sd"]
+
+[resource]
+script = ExtResource("1_cs4qp")
+main_love_event = true
+scene_description = "SCENE_WINDOW_DOGGY"
+scene_name = "scene101"
+dialog_title = "e_window"
+stage_name = "stage_15"
+love_ability = 4
+preview_texture = ExtResource("1_j21sd")
+ahen_keys = PackedStringArray("SCENE_REINA_AHEN_5", "SCENE_REINA_AHEN_6", "SCENE_REINA_AHEN_7", "SCENE_REINA_AHEN_8", "SCENE_REINA_AHEN_9", "SCENE_REINA_AHEN_10")

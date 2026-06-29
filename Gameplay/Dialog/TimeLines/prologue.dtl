@@ -1,0 +1,214 @@
+[background arg="res://resources/nobel_bg/bg_train_sunset.jpg" fade="0.0"]
+# jump sfx_test
+# #jump test
+# #프롤로그를 생략하시겠습니까? #id:12fc
+# #- 아니오 #id:12fd
+# #- 생략한다 #id:12fe
+# #	jump end_prologue
+[music path="res://sound/music/loop/easygoing.ogg" fade="4.0" volume="0.0" bus="Music"]
+이 열차는 각 역 정차입니다. 다음 역은 --역입니다. #id:12db
+수많은 사람들이 들어찬 작은 전차칸 안, ‪‪그중 나 역시 옴짝달싹할수 없는 상태로 끼어 있다. #id:12dc
+이래서 저녁 시간대는 피한건데.. #id:12dd
+'주간 알바가 감기로 출근하지 못한다고 하니 이번에도 부탁할게~' 아침에 도착한 엄마의 문자를 떠올린다. #id:12de
+집에서 몇 역정도 떨어진 곳에 위치한 작은 편의점. 엄마가 퇴직금으로 인수한 곳이다. #id:12df
+입지도 좋지 않고 다소 멀지만 모아둔 금액으로는 그정도가 한계였다나. 덕분에 손님도 알바도 찾지 않는 장소가 되었다. #id:12e0
+백수인 나는 이전에도 몇번 알바생의 사정으로 대신 일을 봐 준 적이 있다. #id:12e1
+하지만 항상 야간 알바였으니 몰랐다. 출퇴근 시간의 전차는 이정도로 사람이 붐비는구나.. #id:12e2
+전차 입구에서부터 떠밀리듯 탑승한 탓에, 자세 또한 엉성하게 고정되어 버렸다. 고쳐잡으려 해도 맘대로 움직이지 않는다. #id:12e3
+억지로 힘을 주면 가능하겠지만 적어도 전차 안에서는 불필요한 접촉이 되지 않게 조심해야겠지. #id:12e4
+몇번이나 역무원에게 끌려가는 남자들을 본 적 있다. 대부분은 주머니의 물건을 꺼낸다거나. 핸드폰을 보려고 손을 움직이다 생긴 누명이지만.. #id:12e5
+'저 사람은..' 자연스레 들어온 시야 안에 수상하게 꾸물대는 중년의 아저씨가 보인다. #id:12e6
+본인의 고간에 손을 얹은 채 무언가를 보고 주물거리고 있어.. #id:12e7
+남들은 알아채지 못할 정도로 미묘하지만 분명 눈에 띄는 수상쩍음이다. 관찰력 하나만큼은 누구보다 좋았으니까. #id:12e8
+일상과 다른 모습에는 누구보다 예민하게 반응하는 성격 탓에 지금처럼 보기 싫은 풍경도 자주 보게 되곤 한다. #id:12e9
+중년 아저씨의 시선을 따라가자 예상대로 여성 한명이 출입문 앞에 서 있다. #id:12ea
+join reina 2 [animation="Slide In Left" length="2.0"]
+의욕 없고 소극적이지만 여성적인 분위기를 풍기는, 쉽게 말해 먹이가 되기 쉬운 사람을 치한들은 쉽게 찾아낸다. #id:12eb
+저 여성 또한 전철에서 몇번인가 본 적 있다. 확실히 엄청난 외모와 몸매에 전차 내 남성들의 시선이 집중되곤 한다. #id:12ec
+본인은 그 눈빛을 모르는지 창밖을 멍하니 보고있지만.. 이대로면 그대로 당할 예정인 건 두말할 것도 없다. #id:12ed
+label sfx_test
+'게헤헤..' 아저씨는 기분 나쁜 웃음을 흘리며 인파를 헤치고 여성에게 다가간다. #id:12ee
+[sound path="res://sound/sfx/Chime-Announce.mp3" volume="0.0" bus="Sfx"]
+'이번 역은 --역, 문이 열립니다. 주의해 주세요.' #id:12ef
+'잠시만요, 내리겠습니다!' #id:12f0
+'게에엑?!' #id:12f1
+하차는 다음 역이었지만, 나는 일부러 큰 소리를 내며 아저씨의 등을 밀며 출입문으로 향한다. #id:12f2
+do TransitionScreen.dialog_transition()
+[background arg="res://resources/nobel_bg/bg_platform_sunset.jpg" fade="0.0"]
+[clear time="0.0" text="false" music="false" background="false" positions="false" style="false"]
+do SoundManager.bg_stop()
+[sound path="res://sound/sfx/traindoor.mp3" volume="0.0" bus="Sfx"]
+내 뒤의 인파로 인한 불가항력임을 최대한 연기하면서 아저씨를 끌어안다시피 잡아채고 완전히 전차 밖으로 나온다. #id:12f3
+'뭐..뭐야! 나..나는 여기서 내리는 게..' 아저씨의 역정을 뒤로하고 모르는 척 멀리 빠져 나간다. #id:12f4
+수많은 인파의 물결 속을 생각없이 걸으면서 후회가 몰려온다. #id:12f5
+그 여성은 이전에도 같은 전차를 탈 때마다 지금처럼 치한을 당하거나 당하기 직전이었다. #id:12f6
+나는 그 모습을 외면하지 못하고 지금처럼 몰래 치한을 때 놓은 것이다. 지금까지 몇 번이나.. #id:12f7
+말이라도 한 번 걸어볼까 하는 마음이었지만.. 지금처럼 몰래 지켜보고 있는게 전부이다. #id:12f8
+엄마한테 알바 늦는다고 문자해야겠네.. 주머니를 뒤적이며 폰을 찾는다. #id:12f9
+..... #id:12fa
+..없어. #id:12fb
+분명 바지 주머니에 넣어 놓은 핸드폰이 보이지 않는다. 전차 안에서 잊어버린 건가? #id:12fc
+되돌아가서 찾을까 생각했지만 이 인파를 역주행하기는 무리다. #id:12fd
+하는 수 없지.. 돌아오는 길에 분실물 센터에서 찾기로 마음먹고 한숨을 쉬며 환승 구역으로 향한다. #id:12fe
+do TransitionScreen.dialog_transition()
+[background arg="res://resources/nobel_bg/bg_gate.jpg" fade="0.0"]
+잠시 후, 중간 통로. #id:12ff
+'목적지행 열차를 타려면..' 낯선 역에서 내려버린 탓에 벽에 붙은 노선도를 보며 방향을 잡고 있다. #id:1300
+'저기~' 누군가 손가락으로 등을 콕콕 찌른다. #id:1301
+join mai 2 [animation="Slide In Left" length="2.0"]
+뒤돌아 본 곳에는 낯선 여성이 나를 보며 미소를 짓는다. #id:1302
+흔히 보이는 갸루.. 라고 하기엔 레벨이 높다. 잘 관리된 긴 금발, 엄청나게 큰 가슴, 연예인인가? #id:1303
+- ..저 말인가요? #id:1304
+평생 대화할 일 없을 거 같은 사람이 먼저 말을 걸어오면 대게 그렇듯 경계하며 대답한다. #id:1305
+mai: 응, 곤란해 보여서. 가려는 곳이 어디야? #id:1306
+- ..일단은 --역입니다만. #id:1307
+갑작스런 호의에 본능적으로 경계를 더한다. #id:1308
+emotion mai Smile
+mai: 아! 거기라면 내가 타는 전차 반대 편이네. 난 ==역으로 가거든. #id:1309
+..==역.. 내가 살고 있는 역이다. #id:130a
+emotion mai Idle
+mai: 내가 대려다 줄 테니, 대신.. 전화 한 통만 빌려줄래? 내 핸드폰, 마침 배터리가 다 돼서.. #id:130b
+반사적으로 당황한다. #id:130c
+- 그..그게, 금전이라면 하는수 없이 빌려주겠지만.. #id:130d
+- 핸드폰은 가지고 있지 않아서.. #id:130e
+mai: 으응? 핸드폰이 없어? ..아아! 곤란한 건 하지 않을게, 전화 한 통만 쓰면 되니까! #id:130f
+갑자기 가까이 다가오며 근처까지 숨이 닿는다. 좋은 냄새.. 하지만 실제로 없는 걸 건네 줄 순 없다. #id:1310
+- 저..정말 없으니까요. #id:1311
+emotion mai Laugh
+mai: 그렇구나.. 어쩔 수 없지. 다른 사람을 찾아야겠네. [br]곤란하게 해서 미안해~ #id:1312
+emotion mai Idle
+mai: 아, --역은 저 쪽 두번째 왼쪽 개찰구를 통과하면 돼! [br]나는 전화를 빌려야 해서 같이 가 줄수 없지만.. #id:1313
+- 괜찮습니다, 그럼 이만.. #id:1314
+emotion mai Laugh
+mai: 응! 그래도 고마워! #id:1315
+leave mai
+쾌활하게 배웅하는 그녀를 뒤로 하고 목적지를 향한다. 만약 폰이 있었다면 가는동안 더 얘기할 수 있었을까? #id:1316
+라인이라던가 교환할 수도 있었으려나.. ..더 생각해 봐야 소용없다는 것을 깨닫고 걸음을 빨리 한다. #id:1317
+do TransitionScreen.dialog_transition()
+[background arg="res://resources/nobel_bg/bg_platform_sunset.jpg" fade="0.0"]
+잠시 후, 승강장 앞 #id:1318
+들은 대로 개찰구를 통과하고 승강장을 향한다. 평소와 다를 것 없는 풍경. #id:1319
+다만 묘한 이질감이 승강장을 향할수록 강해진다. #id:131a
+이전까지는 질릴 정도로 타인과 부딫히고 밀리며 지나 왔지만, 개찰구를 지난 이후부터 그 많던 인파가 하나도 보이지 않는다. #id:131b
+휑 하고 불어오는 바람을 그대로 맞아 소름돋는 느낌이 더해지는 순간, 노이즈 낀 방송음이 들려온다. #id:131c
+#[NS]방송알람음
+'..다음은.. ..번 전차.. ..번.. 입니다. 승차시에는..' #id:131d
+'앗!' 전차가 곧 도착한다는 알림 방송이다. 나는 반사적으로 빠른 걸음에서 뛰다시피 승강장을 향한다. #id:131e
+do TransitionScreen.dialog_transition()
+[background arg="res://resources/nobel_bg/bg_train_sunset.jpg" fade="0.0"]
+헉..헉.. #id:131f
+가까스로 뛰어 전차 안에 들어온다. 숨을 고르고 주변을 둘러 본다. #id:1320
+승강장에서와 마찬가지로 전차 안 역시 텅 비어 있다. #id:1321
+묘한 기분이 더 강해지는 탓에 아직 닫히지 않은 문 밖을 바라보며 역 간판을 찾는다. #id:1322
+'자..잠깐만요!' #id:1323
+밖을 보는 중 누군가 전차를 향해 달려오고 있는 게 보인다. #id:1324
+'문이 닫힙니다.' [br]문이 닫힐 동안 도착할 수 없을게 분명하다. #id:1325
+그럼에도 하이힐을 신은 여성은 포기하지 않고 이쪽을 향해 뛰어오며 소리친다. #id:1326
+'..핸드폰!' #id:1327
+..핸드폰? #id:1328
+점점 커지는 여성의 얼굴을 확인한다. #id:1329
+..아까 전 치한 당할 뻔한 그 여성. #id:132a
+나는 반사적으로 거의 닫힌 문에 어깨를 들이민다. #id:132b
+#[NS]쿵 
+쿵 하는 소리와 통증이 몰려오고. 문이 다시 열리기 시작한다. #id:132c
+[style name="fullscene_style"]
+join talk_asset (MeetReina) center
+# #join reina center [animation="Slide In Left" length="2.0"]
+emotion reina Shy
+reina: 하아..하아.. 고.. 고맙습니다. #id:132d
+reina: 이제야 따라잡았어요.. #id:132e
+- 괜찮아요? #id:132f
+- 핸드폰? #id:1330
+emotion reina Suprised
+reina: ..아, 네! 맞아요. 핸드폰. 핸드폰을 떨어트리는 걸 봐서.. #id:1331
+- 떨어트린 걸 주워서 전해주려고?.. #id:1332
+emotion reina Idle
+reina: ..그게, 사실은. #id:1333
+reina: 바닥이 아닌 전차 출입구 사이에 떨어져 버려서. 줍지 못했어요. #id:1334
+reina: 하지만 알려 드려야 할 거 같아서.. 따라 온 거에요. #id:1335
+- ..? #id:1336
+그 말에 당황한 나는 다음 말을 잇지 못한다. 그 말을 전하려고 여기까지? #id:1337
+- 하지만 어째서 이 전차까지.. #id:1338
+- 원래 이 전차를 타나요? #id:1339
+reina: 아뇨.. 이쪽 노선은 처음 와 봤어요. #id:133a
+reina: 그치만 어째선지 지금이 아니면 기회가 없을 거 같아서.. #id:133b
+emotion reina Smile
+reina: 그리고.. 보답이라고 할까.. 그 동안의.. #id:133c
+그 동안? 몇번인가 마주쳤지만 분명 오늘이 첫 대화일 것이다. #id:133d
+- 보답? #id:133e
+- 날 알고 있는..? #id:133f
+reina: 그게.. 아는 사이라고 할까.. 항상 같은 전차를 타니까요. 저번에도.. #id:1340
+다음 말이 나오려는 순간, 전차 문이 완전하게 닫혀 버리고, 출발하는 반동에 정신이 든다. #id:1341
+[sound path="res://sound/sfx/traindoor.mp3" volume="0.0" bus="Sfx"]
+do SoundManager.bg_play("res://sound/sfx/train_tracks_loop_01.wav")
+leave talk_asset
+- 아아앗! #id:1342
+[style]
+join reina right
+emotion reina Suprised
+reina: 어머, 문이.. #id:1343
+- 미안해요, 나 때문에.. #id:1344
+emotion reina Smile
+reina: 아니에요. 어차피 시간은 여유 있으니 다음 역에 내려서 돌아가면 되니까요. #id:1345
+나를 보며 옅은 미소를 짓는다. #id:1346
+reina: 그리고 이 전차, 사람이 없어서 좋네요. 이 시간에 이렇게나 비어 있다니.. #id:1347
+나와 같은 이질감을 느낀건지 함께 주위를 둘러 본다. #id:1348
+emotion reina Idle
+reina: ..응? 누군가 또 있네요. #id:1349
+leave reina
+그녀의 시선을 따라 도착한 전차 칸의 끝에는 누군가 한명 더 앉아 있다. #id:134a
+..어? 어! #id:134b
+맑고 높은 톤의 여성의 목소리. 분명 좀 전에 들었던 그 목소리이다. #id:134c
+- 당신은.. #id:134d
+emotion mai Smile
+[style name="fullscene_style"]
+join talk_asset (MeetMai) center
+mai: 와아! 다시 만났네? #id:134e
+구리빛 피부의 갸루녀.. 통로에서 폰을 빌리던 그 여성이다. #id:134f
+- 어째서 여기에? #id:1350
+emotion mai Idle
+mai: 아아 맞아! 들어 봐! #id:1351
+mai: 사실은 그 이후 폰 빌리는거 포기하고 집으로 돌아가려 했거든. #id:1352
+emotion mai Serious
+mai: 근데 승강장으로 향하면서 배터리가 조금씩 차는거 있지? 그대로 전차에 오르니까 폰이 켜졌다니까? 요즘 전차는 다 이런가? #id:1353
+- 그럴 리가.. 그것보다.. #id:1354
+emotion mai Idle
+mai: ..... #id:1355
+emotion mai Serious
+mai: ..어? #id:1356
+[style]
+leave talk_asset
+join mai left
+emotion mai Serious
+... #id:193c
+mai: 근데 왜 여기 있어? 분명 나와 반대 역으로 가야 한다고 했는데. #id:1357
+- 아마 우리 둘중 하나는.. #id:1358
+mai: ..잘못 탄 거야? #id:1359
+emotion mai Surprised
+mai: 그럴 리가! 매번 가는 길이라 착각할 리 없는데. 어떻게 된 거지? #id:135a
+[clear time="3.0" text="false" portraits="false" background="false" positions="false" style="false"]
+혼란 속에서 전차 내 스피커가 울리고, 한 음성이 흘러나온다. #id:135b
+leave --All-- [animation="Fade Out Down" length="0.3"]
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="1.5"]
+[wait time="3.0"]
+[style name="fullscene_style"]
+join talk_asset (MeetKonial) center [animation="Fade In" length="4.0"]
+'아-아' #id:135c
+'승차 해 주셔서 감사합니다. 본 전차의 첫 승객분들!' #id:135d
+'차내에서는 매너 모드로 설정해 주시고, 통화는 삼가 주세요.' #id:135e
+'문 근처는 기대지 말아 주세요. 열릴 일은 없지만.' #id:135f
+'다음 역은 없으며.. 환승 또한 불가능합니다.' #id:1360
+'본 전차의 이름은 45번 전차. 저는 45번 전차의 역장, 코니알입니다.' #id:1361
+'끝없는 여정길에서.. 여러분들을 평생 안전하게 모시겠습니다!' #id:1362
+label end_prologue #id:1363
+do TransitionScreen.dialog_transition()
+[clear time="0.0" text="false" music="false" positions="false" style="false"]
+[style]
+..... #id:1364
+전차 내의 스피커에서 노이즈 낀 음성이 반복된다. #id:1365
+평소하곤 다른 기분나쁜 음성이 단번에 잘못된 장소라는 사실을 인지시킨다. #id:1366
+그리고.. 전차가 출발한 지 10여 분이 넘게 지났는데, 정차는 커녕 속도 역시 그대로이다. #id:1367
+이정도로 긴 역이 있었나? 수상함이 점점 커져온다. #id:1368
+이 칸에 탄 건.. 나와 저 둘 뿐인가? #id:1369
+..일단 둘의 생각을 들어 보자 #id:136a
+do GameEvents.emit_quest_process("prologue_dialog_end")

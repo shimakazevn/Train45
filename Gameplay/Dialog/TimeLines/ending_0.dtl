@@ -1,0 +1,340 @@
+leave --All--
+# #jump test
+다른 하나의 선택지.. 이 때를 위한 건가? #id:5da
+# #
+# #[debug] 대화 스킵할까요? #id:5ee
+# #- 네 #id:5ef
+# #	do GameEvents.emit_cutscene_play("ep6_cut3")
+# #	do GameEvents.emit_cutscene_play("ep6_cut6")
+# #	jump debug_skip
+# #- 아니오 #id:5f0
+# #
+join talk_asset center [z_index="100" extra_data="set Images/KonChan"]
+나는 품 안에서 코니알이 건네 준 물건을 꺼낸다. #id:5db
+join pazuzu rightmost [mirrored="true"]
+emotion pazuzu Seriouse
+pazuzu: ..뭐죠 그건? #id:5dc
+join reina leftmost
+emotion reina Suprised
+reina: 아..! 맞아요! 그게 있었어요. #id:5dd
+do CutSceneManager.hide_cutscene("CutsceneMeetReina")
+leave reina
+join mai leftmost
+emotion mai Surprised
+mai: 콘짱 오메가! #id:5de
+pazuzu: 콘..짱..? ..그랬군요.. 라마슈투가 마지막까지.. #id:5df
+pazuzu: ..그건 위험해요. 어서 제게 맡기세요. ..인간이 가지고 있을만한 물건이 아니에요. #id:5e0
+- 위험한지 어떤지는.. #id:5e1
+- 직접 확인해볼게. #id:5e2
+(꾸욱) #id:5e3
+인형을 가져다 컨트롤 패널 위에 올린다. #id:5e4
+.... #id:5e5
+leave mai
+join reina leftmost
+emotion reina Suprised
+reina: 아무 반응이 없어요. #id:5e6
+leave reina
+join mai leftmost
+emotion mai Serious
+mai: 뭔가 잘못된 건.. #id:5e7
+leave --All--
+do GameEvents.emit_camera_shake(true)
+[sound path="res://sound/sfx/Breaking.mp3" volume="0.0"]
+키기기기긱! #id:5e8
+- 엄청 흔들리잖아?! #id:5e9
+reina: 조.. 조심하세요! ..꺄앗! #id:5ea
+mai: 전차에 탑승했을때 흔들리던 거랑 같아?! #id:5eb
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("ep6_cut3")
+do GameEvents.emit_camera_shake(false)
+do SoundManager.bg_stop()
+[music path="res://sound/music/darker/Dark Adventure Loop.ogg" fade="3.0" volume="0.0" bus="Music"]
+[wait time="4.0"]
+join mai leftmost
+emotion mai Flat
+mai: 으으.. 뭐.. 뭐지 이건? #id:5ec
+join pazuzu rightmost [mirrored="true"]
+emotion pazuzu Seriouse
+pazuzu: ...당신들.. 무슨 짓을 한 건가요.. 악마의 꽴에 넘어가 버리다니.. #id:5ed
+emotion pazuzu Ecchi
+pazuzu: ..제.. 제 잘못이에요. 인간들을 믿는 게 아니었는데.. #id:5ee
+leave mai
+join reina leftmost
+emotion reina Shy
+reina: 이게 대체 무슨 상황인지.. #id:5ef
+emotion pazuzu Seriouse
+pazuzu: 전차가 폭주하기 시작했어요.. 라마슈투의 마지막 발악이겠죠.. 죄송하지만 지금부터는 ..모두의 안전을 보장하기 힘들어요.. #id:5f0
+leave reina
+join mai leftmost
+emotion mai Flat
+mai: 안전이라고? 어차피 돌아가면 죽는거잖아. #id:5f1
+pazuzu: ..그래서.. 그래서 이런 짓에 동조한 건가요? 인과에 저항하려고? #id:5f2
+emotion mai Dislike
+mai: 으읏.. #id:5f3
+- 맞아. 인과같은건 몰라. #id:5f4
+- 단지 레이나와 마이와 계속 함께하고 싶을 뿐이야. #id:5f5
+pazuzu: 겨우 그것 떄문에요? 라마슈투가 무슨 말을 하던가요? 당신들은 이 불경한 전차에서 평생을 보낼 생각인가요? #id:5f6
+pazuzu: 생명의 흐름은 멈춰 있어선 안돼요. 이건.. 부자연스러운 거라고요.. 어째서 저에게 협조하지 않는 건가요? 코니알을.. 단죄하고 싶지 않으신 건가요? #id:5f7
+leave mai
+join reina leftmost
+emotion reina Serious
+reina: ..파주주. 당신은 코니알을 붙잡는 거 외엔 처음부터 안중에 없었어요. #id:5f8
+reina: 저희는 그저 도구에 불과했어요. 코니알과 당신은 다르지 않아요. 남을 이용하는데 거리낌 없죠. #id:5f9
+pazuzu: ..라마슈투와.. 제가.. 같다고요?.. #id:5fa
+emotion pazuzu Ecchi
+pazuzu: ..하아 ..애초에 이 전차 안에 아무도 타지 않았다면 좋았을텐데.. #id:5fb
+pazuzu: 라마슈투와 둘 뿐이라면.. 이런 귀찮은 일도 없었을 거에요.. #id:5fc
+emotion pazuzu Seriouse
+pazuzu: 아니면.. 이제부터라도 그렇게 만들어 버릴까요? #id:5fd
+leave reina
+join mai leftmost
+emotion mai Serious
+mai: 그 말은.. 설마 우리들을.. #id:5fe
+pazuzu: 환생하지 못하고 길을 해매는 영혼들은 하나같이 당신들처럼 말해요.. 나만이라도.. 이번 한번만.. 살려 달라고.. #id:5ff
+pazuzu: 다른 영혼들은 어찌되든 상관 없다는 것처럼요. 정말 이기적이죠..? 당신들 역시 처음부터 사실을 말한다면 같은 반응이었겠죠.. 그래서 침묵한 거에요. #id:600
+pazuzu: 하지만 결국 코앞에서 진실을 알게 되어 버렸네요. 하지만 당신들은 더 심해요. #id:601
+pazuzu: 다른 생명의 흐름이 어찌 되든 상관 없이.. 본인들을 위해 악마와 손을 잡았죠.. 정말.. 정말로 이기적.. #id:602
+- 이기적이어도 상관 없어. #id:603
+	- 다같이 돌아가기 위해서는 뭐든 할 거야. #id:604
+leave pazuzu
+leave reina
+join mai left
+emotion mai Dislike
+mai: 얼굴도 본 적 없는 천사나 악마의 대의 같은건 몰라. 죽으라고 죽는 사람이 어디 있겠어? #id:605
+join reina right [mirrored="true"]
+emotion reina Serious
+reina: 당신들에겐 인간 따위가 어떻게 느껴질지는 알 수 없어도.. 저희는 나름대로 선택을 하며 살아가고 있어요. #id:606
+reina: 이길 수는 없어도.. 본능대로 발버둥치는 거에요. #id:607
+leave mai
+leave reina
+join pazuzu center
+emotion pazuzu Ecchi
+pazuzu: 불경해요.. 너무 불경해요..! 이대로 두면 안되겠어요.. #id:608
+emotion pazuzu Idle
+pazuzu: 당신들은 환생해서는 안 돼요.. 그랬다간 혼란의 씨앗을 퍼트릴 거에요.. 지금 제 손으로 싹을 잘라버리겠어요.. 지금 당장.. #id:609
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="2.0"]
+[clear time="1.0" text="false" portraits="false" background="false" positions="false" style="false"]
+- ... #id:60a
+'키히히! 아주 맘에 들어!' #id:60b
+- ..! #id:60c
+leave pazuzu
+[wait time="0.5"]
+do CutSceneManager.show_cutscene("CutsceneKonialEngineRoom")
+[style name="fullscene_style"]
+do GameEvents.emit_cutscene_play("ep6_cut4")
+[clear time="2.0" text="false" portraits="false" music="false" positions="false" style="false"]
+# #join konial center
+[music path="res://sound/music/im the piano man.ogg" fade="5.0" volume="0.0" bus="Music" loop="false"]
+konial: 이제야 맘에 드네. 너희들. #id:60d
+update konial leftmost [move_time="1.0"]
+# #join reina center [mirrored="true"]
+# #join mai right [mirrored="true"]
+emotion mai Surprised
+emotion reina Suprised
+reina: 코니알 씨! #id:60e
+mai: 코니알! #id:60f
+konial: 그래 그렇게 하란 말이야. 항상 나 자신만 생각해. 악마적으로. 남들따위 어떻게 되던 신경쓸 이유 없잖아? 손해보고 살지 말란 말이야. #id:610
+emotion konial Smile
+konial: 그래야 살아남을 수 있는 거야. 지금처럼. ..뭐, 내가 할 말은 아닌 거 같지만! #id:611
+leave reina
+leave mai
+# #join pazuzu right [mirrored="true"]
+# #update konial left [move_time="1.0"]
+emotion pazuzu Seriouse
+pazuzu: 라마슈투. ..어떻게 구속을 푼 거죠? #id:612
+emotion konial Idle
+konial: 키힛.. 그 구속 마법은 악마에게만 통하는 거지? 미안하지만 난 더 이상 악마가 아니게 됐거든. #id:613
+pazuzu: ..? 그게 무슨.. #id:614
+konial: 저 녀석들에게 준 콘짱 오메가에 내 모든 힘과 권능을 주입했어. 지금은 껍데기뿐인 인간과 다름 없지! 그러니 '악마'를 구속하는 마법도 적용되지 않는단 말씀. #id:615
+pazuzu: 뭐.. 무슨.. ..그래요.. 악마는 간사한 종족이었죠. 그래서 아직까지 수배중인 거고요.. #id:616
+pazuzu: 하지만 이번엔.. 어째서 도망치지 않은 거죠? 구속을 풀고.. 눈 앞에 나타나다니. #id:617
+emotion konial Sadistic
+konial: 키히히.. 역장이 전차를 두고 어디를 갈 수 있겠어? #id:618
+emotion konial Dislike
+konial: 그리고.. 손님이 있으면 끝까지 모시는 게 내 역할이니까. #id:619
+# #leave pazuzu
+# #update konial center [move_time="0.5"]
+konial: 이제는 하차할 시간이야. 너희들! 지금 당장 문 앞에 바짝 붙어. 내리는 문은 오른쪽이다? #id:61a
+do CutSceneManager.hide_cutscene("CutsceneKonialEngineRoom")
+[style]
+join reina leftmost
+emotion reina Suprised
+reina: ..문.. 문 앞에요? #id:61b
+- 둘 다 이리로 바짝 붙어! #id:61c
+join mai left
+emotion mai Flat
+mai: 이.. 이렇게? #id:61d
+leave --All--
+join pazuzu right [mirrored="true"]
+emotion pazuzu Smile
+update pazuzu [extra_data="show Etc/Sweat"]
+pazuzu: 내.. 내린다고요? 그게 무슨.. 이곳은 림보에요..! 이곳에서 내린다면.. #id:61e
+leave pazuzu
+join konial center
+emotion konial Smile
+konial: 키히히! 아니.. #id:61f
+emotion konial Idle
+konial: 내리는 건 우리들이야. #id:620
+leave konial
+[sound path="res://sound/sfx/tentacle.mp3" volume="0.0"]
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("ep6_cut5")
+- 코니알! #id:621
+reina: 바.. 방금 무언가가 둘을 대려갔어요.. #id:622
+[sound path="res://sound/sfx/traindoor.mp3" volume="-20.0" bus="Sfx"]
+키이잉.. 치이익!! #id:623
+mai: 으읏?! 뭐야 이 연기? 문이 잠겼어! #id:624
+덜컹! #id:625
+- 속도가.. 점점 빨라지고 있는데.. #id:626
+mai: 다시 출발한다고? 어디로? #id:627
+(치직.. 다음 역은.. --역입니다. 다음 역은..) #id:628
+reina: ..! 이 방송은.. #id:629
+- 우리가 탔던 역 이름이야! #id:62a
+reina: 코니알이 정말 약속을 지킨 건가요? 그치만 저 둘은 대체 어디로.. #id:62b
+mai: 모두..! 창 밖을 봐! #id:62c
+- ..? #id:62d
+reina: ..아..! 저건.. #id:62e
+둘의 시선이 창밖을 향하고, 나 역시 시선을 따라간다. #id:62f
+그곳엔.. #id:630
+do TransitionScreen.dialog_transition()
+[background scene="dialogic_blur_bg.tscn" arg="res://resources/cutscene/cutscene_train.png" fade="0.0"]
+[wait time="4.0"]
+reina: 저기 떠 있는 건.. 전차가 틀림 없어요. #id:631
+mai: 어째서 다른 전차가 있는 거지? #id:632
+- 아냐.. 저건 다른 전차가 아니야. #id:633
+	- 우리가 지금까지 타고 있던.. 45번 전차야. #id:634
+mai: 뭐?! 45번 전차는 이곳이잖아? ..설마? #id:635
+reina: 네.. 맞아요. 코니알이 이 기관실과 승객칸을.. 분리한 거 같아요.. #id:636
+- 우리를 탈출시키기 위해.. #id:637
+mai: 왜? 코니알도 같이 타면 안되는 거였어? #id:638
+- 내 생각엔.. #id:639
+- 파주주 때문이겠지.. #id:63a
+reina: 파주주는 지금까지 코니알을 끈질기게 추격했으니.. 같이 탈출하면 저희가 더 위험해졌을 거라 생각했을 거에요. #id:63b
+mai: 말도 안돼.. 그 코니알이.. #id:63c
+[clear time="3.0" text="false" portraits="false" music="false" positions="false" style="false"]
+join reina right [mirrored="true"]
+reina: 승객칸만 남아서는 움직일 수 없을텐데.. 무슨 생각일지.. #id:63d
+- 결국 우린 무사히 탈출한 걸까? #id:63e
+emotion reina Shy
+reina: 모르겠어요.. 그치만 어째선지.. 모든게 일단락된 거 같아요. #id:63f
+join mai center
+emotion mai Flat
+mai: 결국은 이 선택이 옳았던 거 같아. 만약 파주주를 따라 레버를 당겼으면.. 정말로 죽어 버렸을까? #id:640
+emotion reina Serious
+reina: 마..맞아요. 그것도 이상해요. 우리는 이미 이승에서 죽은 상태라고 했는데. #id:641
+emotion mai Serious
+mai: 뭐? 그럼 일본으로 돌아가도.. 관 안에 들어가 있을수도 있잖아! #id:642
+- 아니, 그럴 일은 없어. #id:643
+- 코니알이 나에게 몰래 부탁한 게 있거든. #id:644
+emotion reina Suprised
+reina: 뭐.. 뭐죠? 코니알이 부탁? #id:645
+- 어떻게 가능한지 모르겠지만.. #id:646
+- 우리는 이 전차에 탑승하기 한참 전으로 돌아갈거야. #id:647
+mai: 한참 전이라면.. 서로 만나기 전으로 말이야? #id:648
+reina: 네? 싫어요! 어떻게 여기까지 함께 했는데.. #id:649
+emotion mai Serious
+mai: 그런 얘기는 없었잖아! 잠깐 기다려.. 다른 방법이.. #id:64a
+- 걱정하지 마. #id:64b
+	- 이번에는 모두 놓치지 않을게. #id:64c
+leave --All--
+label test #id:179d
+그 순간 점점 빨라지던 전차의 움직임이 멈추고. #id:64d
+눈부시게 밝은 빛이 전차 칸을 감싸며 우린 정신을 잃었다. #id:64e
+[clear time="2.0" text="false" portraits="false" background="false" positions="false" style="false"]
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="3.0"]
+[wait time="6.0"]
+[style name="fullscene_style"]
+한편.. 45번 전차의 어느 승객실 #id:64f
+do GameEvents.emit_cutscene_play("ep6_cut6")
+[clear time="3.0" text="false" portraits="false" music="false" positions="false" style="false"]
+콜록, 콜록! #id:650
+# #join pazuzu leftmost [extra_data="show Etc/Sweat"]
+emotion pazuzu Ecchi
+# #join konial rightmost [mirrored="true" extra_data="show Etc/Sweat"]
+emotion konial Dislike
+do CutSceneManager.show_cutscene("CutsceneKonialTired")
+konial: 아~.. 역시 아프네. 힘이 사라지면 이런 느낌이구나. #id:651
+pazuzu: ..크흣.. 라마슈투.. #id:652
+emotion konial Idle
+konial: 이제 단 둘이 남았네? 네가 그렇게 원하던 상황 아니야? #id:653
+emotion pazuzu Seriouse
+pazuzu: ..어째서 저 인간들을 보낸 거야..? 무슨 거래를 한 거지..? #id:654
+konial: 거래라.. 설명해도 모르겠지만. 꽤나 큰 대가를 받았지. #id:655
+pazuzu: 저들에게 무슨 짓을 했는지 모르겠지만.. 네 죗값을 모두 치른 후 반드시 찾아낼 거야. #id:656
+konial: 그래? 안될 걸? 나에게 했던 것처럼 저 녀석들에게 흔적을 남기려 했다면.. 이미 늦었어. #id:657
+konial: 그동안 나를 찾은 방법 말이야. 이 성물 안에 있지? #id:658
+emotion pazuzu Idle
+pazuzu: 무.. 무슨 뜻이야..? #id:659
+emotion konial Dislike
+konial: 이제야 알았어. 오랜 기간 잠적한 나를 이렇게 쉽게 찾은 이유. #id:65a
+konial: 이 전차에 담긴 성물.. 그 안에 위치를 추적할 수 있는 마법을 걸어 놨을 줄이야. #id:65b
+pazuzu: ..... #id:65c
+konial: 어째서 이렇게까지? 라는 생각이었지만.. 아카데미 때부터 그랬지. 음침한 녀석. #id:65d
+emotion pazuzu Suprised
+do CutSceneManager.show_cutscene("CutscenePazuzuAngry")
+pazuzu: 다.. 닥쳐! ..난 그때와 달라.. 신이라고.. 너같은 악마 따위.. #id:65e
+emotion konial Idle
+join talk_asset center [extra_data="set Images/PazuzuPicture"]
+konial: 그래? 그렇다면 이건? #id:65f
+pazuzu: 흐읏..! 그게 왜 너한테.. #id:660
+konial: 내가 묻고 싶어. 내가 왜 이 사진에 찍힌 거지? 어째서 이렇게 날 쫓아 다니는지 모르겠네. 뭐, 이만큼 매력적인 악마도 따로 없긴 하지만. #id:661
+emotion konial Smile
+konial: 소름 끼치는 천사까지 꼬이는 건 사양이라서~ #id:662
+emotion pazuzu Ecchi
+pazuzu: 라..라마슈투.. 이.. ..그래.. 뭣도 모를 예전부터.. 널 몰래 따라다닌 건 인정할게.. #id:663
+pazuzu: 하.. 하지만 넌 눈꼽만큼도 신경쓰지 않았잖아? ..마치 벌레보듯 대했지.. 어떤 선물을 해도.. 아무 반응 없이.. #id:664
+emotion pazuzu Suprised
+leave talk_asset
+pazuzu: 끝내 네게 들은 한 마디.. 기억 해? 난 똑똑히 떠올리고 있어. #id:665
+pazuzu: ..'소름 끼쳐' 라고. #id:666
+pazuzu: ..그 이후로! 나.. 난 널 용서하지 않겠다 약속했어. 네 모든 미래를 망쳐 버리겠다 결심했지. #id:667
+emotion pazuzu Smile
+pazuzu: 금지된 성물을 훔쳐 네 저택 창고에 숨겨 누명을 씌우고, 떠돌이 생활을 하며 이런 큰 사건을 벌일 때까지 말이야. #id:668
+emotion konial Surprised
+konial: ...겨우 그딴 이유로 지금까지? #id:669
+konial: ..그 인간 녀석들이 없어서 다행이야. 이런 유치한 이유를 들으면 신을 어떻게 생각하겠어? #id:66a
+emotion konial Dislike
+konial: 하아.. 역시 나라니까. 내 보는 눈은 처음부터 정확했어. #id:66b
+konial: 역시 넌 소름 끼치는 녀석이야. 파주주. #id:66c
+emotion pazuzu Suprised
+pazuzu: ..! ..이.. 라마슈투..! #id:66d
+konial: 그리고 아까 말했지? 저 인간 녀석을 찾아내겠다고. 미안하지만 그건 불가능해. 저 녀석들은 과거로 도망쳤거든. #id:66e
+pazuzu: ..과거로? #id:66f
+konial: 그래. 네가 그렇게 좋아하는 인과를 몇바퀴는 뒤틀어서 말이야. 덕분에 내가 평생 모은 티켓을 탈탈 털었어. #id:670
+konial: 티켓을 모두 소모해서 감지할 에너지 조차 남지 않은 이상.. 다른 신들은 절대로 전차를 찾을 수 없어. #id:671
+pazuzu: 모.. 모두 소모했다고..? 제정신이야? #id:672
+emotion konial Idle
+konial: 키히히.. 저 인간들이 탄 전차 기관실은 목적지에 도착한 후 힘을 다하겠지. #id:673
+konial: 하지만 반대로.. 이 승객칸은? 너무 많은 잉여 정념이 주입되었어. 그야말로 폭주 상태. #id:674
+konial: 너도 알겠지만 승객칸은 혼자 주행할 수 없어. 정념을 어디로도 해소할 수 없는 전차의 타겟은 어디일까? #id:675
+emotion pazuzu Smile
+pazuzu: ..뭐.. 설마.. #id:676
+emotion konial Smile
+konial: 키히히.. 그래. 45번 전차의 유일하게 남은 승객은 우리 둘뿐이야. #id:677
+emotion pazuzu Suprised
+pazuzu: 마.. 말도 안돼.. 라마슈투.. 넌 미쳤어.. #id:678
+konial: 왜? 원하는 대로 나와 오랬동안 함께 할 수 있게 됐잖아? 절대 해소되지 않는 전차의 욕구를 받아내야 하지만~ #id:679
+pazuzu: 내.. 내가 아니어도.. 다른 신들이 이곳을 못 찾을 줄 알아..? 이런 큰 에너지라면.. #id:67a
+konial: 너도 잘 알텐데. 림보의 어느 한 곳에 표류하는 전차의 위치를 찾아내기가 얼마나 어려운지. #id:67b
+konial: 너처럼 위치를 추적해내지 않은 이상.. 수천.. 수만 년이 걸릴 지 모르겠네. #id:67c
+emotion konial Sadistic
+konial: 네 말대로 결국은 우릴 찾아내겠지만.. 그 전에 우리 정신이 온전히 남아 있으려나? 그떄쯤이면 오히려 찾아내지 않길 바라지 않을까? 키히히! #id:67d
+pazuzu: 라마슈투..! 넌.. 절대 용서받지 못할 거야.. 절대로..! #id:67e
+emotion konial Idle
+konial: 시끄럽네 정말. 자, 저 시끄러운 입을 막아 버리렴? #id:67f
+do CutSceneManager.hide_cutscene("CutscenePazuzuAngry")
+pazuzu: 라마..읍.. 으읏..?! #id:680
+leave pazuzu
+emotion konial Smile
+konial: 그렇게 쳐다 보지 마~ 나도 함께할거니까. #id:681
+emotion konial Idle
+konial: 하아. 뭐. 그 녀석에 비하면 기분 좋을 리 없지만. #id:682
+konial: 키스.. 꽤나 좋았으니까. 여운이 길게 남겠어. #id:683
+konial: 또.. 만날 수 있으려나? #id:684
+do CutSceneManager.hide_cutscene("CutsceneKonialTired")
+leave konial
+label debug_skip #id:685
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="6.0"]
+[wait time="5.0"]
+[signal arg="go_epilogue"]
+[end_timeline]

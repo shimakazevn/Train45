@@ -1,0 +1,121 @@
+[gd_scene load_steps=11 format=3 uid="uid://jcjjebryw4ps"]
+
+[ext_resource type="Script" uid="uid://dp41j0oasd8j7" path="res://daruma_chan.gd" id="1_fnmgs"]
+[ext_resource type="Texture2D" uid="uid://cguxhd45mhbsn" path="res://resources/item/item_darumachan.png" id="2_fnmgs"]
+[ext_resource type="Shader" uid="uid://bqknggdn8m3nm" path="res://Gameplay/Levels/unshaded.gdshader" id="3_8aacv"]
+[ext_resource type="FontFile" uid="uid://b420coqgx7cq0" path="res://resources/font/TsunagiGothic.ttf" id="4_sar7d"]
+[ext_resource type="Texture2D" uid="uid://faoef3dpoykn" path="res://resources/ui/Inventory/scalable_window_6.png" id="5_rm0qg"]
+
+[sub_resource type="Animation" id="Animation_2hayv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_8autj"]
+resource_name = "idle"
+length = 1.2
+loop_mode = 1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00333333, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8aacv"]
+_data = {
+&"RESET": SubResource("Animation_2hayv"),
+&"idle": SubResource("Animation_8autj")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2f33f"]
+shader = ExtResource("3_8aacv")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gecaj"]
+size = Vector2(170, 389)
+
+[node name="DarumaChan" type="Node2D"]
+script = ExtResource("1_fnmgs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -34)
+texture = ExtResource("2_fnmgs")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8aacv")
+}
+autoplay = "idle"
+
+[node name="HintLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(0, 0, 0, 1)
+material = SubResource("ShaderMaterial_2f33f")
+clip_contents = false
+offset_left = 49.0
+offset_top = -115.0
+offset_right = 196.0
+offset_bottom = -71.0
+scale = Vector2(0.625, 0.625)
+pivot_offset = Vector2(-16, 75.2)
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("4_sar7d")
+text = "DARUMA_CHAN_MSG"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="NinePatchRect" type="NinePatchRect" parent="HintLabel"]
+show_behind_parent = true
+texture_filter = 2
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -14.0
+offset_right = 24.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(104, 55)
+texture = ExtResource("5_rm0qg")
+patch_margin_left = 49
+patch_margin_top = 21
+patch_margin_right = 32
+patch_margin_bottom = 45
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -23.5)
+shape = SubResource("RectangleShape2D_gecaj")
+debug_color = Color(0.63, 0, 0.7, 0.133333)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://cfyert6lgo5ix"]
+
+[ext_resource type="Texture2D" uid="uid://ckrkj4g8lldon" path="res://resources/ui/EventCoverImage/Hpreview_konial_2.png" id="1_5kuj8"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_hq6w8"]
+
+[resource]
+script = ExtResource("1_hq6w8")
+scene_description = "SCENE_ONAHLE_HJ"
+scene_name = "scene1"
+partner = 2
+love_ability = 1
+preview_texture = ExtResource("1_5kuj8")
+is_position = Vector2(668, 200)
+unlock_chapter = 6
+ahen_keys = PackedStringArray("SCENE_KONIAL_AHEN_6", "SCENE_KONIAL_AHEN_8", "SCENE_KONIAL_AHEN_9")

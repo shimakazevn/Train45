@@ -1,0 +1,1258 @@
+[gd_scene load_steps=96 format=3]
+
+[ext_resource type="PackedScene" uid="uid://ckh7c1u2imenh" path="res://Gameplay/train_main_menu.tscn" id="1_o6ooy"]
+[ext_resource type="Script" uid="uid://dq10ahvgsrkpf" path="res://Main.gd" id="1_w4m01"]
+[ext_resource type="PackedScene" uid="uid://bxe7ke7bkgu2r" path="res://Gameplay/options_menu.tscn" id="2_6uqe7"]
+[ext_resource type="Texture2D" uid="uid://rr8lu4gjg321" path="res://resources/ui/titleback.png" id="2_y0kpv"]
+[ext_resource type="PackedScene" uid="uid://bkgp65imvcd0s" path="res://Gameplay/load_menu.tscn" id="3_6uqe7"]
+[ext_resource type="Script" uid="uid://dpqmqijva6pxx" path="res://Gameplay/BackGround.gd" id="4_ll8yw"]
+[ext_resource type="Texture2D" uid="uid://bxlm0f6xrw3k2" path="res://resources/ui/title_jp.png" id="5_qitrf"]
+[ext_resource type="Script" uid="uid://dktcbpj7ucwlr" path="res://Gameplay/train_standard.gd" id="12_0rqms"]
+[ext_resource type="Shader" uid="uid://clgu81gxvp1y2" path="res://scene/shader/parallax.gdshader" id="13_u1jql"]
+[ext_resource type="Texture2D" uid="uid://bvv1tkssw1by1" path="res://resources/bg_0.png" id="14_mogqn"]
+[ext_resource type="Texture2D" uid="uid://003g6qjlo7jb" path="res://resources/bg_1.png" id="15_6rsnw"]
+[ext_resource type="Texture2D" uid="uid://c4jsnyssx0b0f" path="res://resources/bg_2.png" id="16_ei1pc"]
+[ext_resource type="Texture2D" uid="uid://bmbrtsht5bwjx" path="res://resources/bg_3.png" id="17_dpcdc"]
+[ext_resource type="Texture2D" uid="uid://bd21n5c4ukqyb" path="res://resources/bg_4.png" id="18_qnb12"]
+[ext_resource type="Texture2D" uid="uid://st3bf80681tl" path="res://resources/bg_5.png" id="19_wemlk"]
+[ext_resource type="Texture2D" uid="uid://br3ysr26iw1jd" path="res://resources/bg_floor.png" id="20_1r73j"]
+[ext_resource type="Texture2D" uid="uid://2c1wv5xmxoly" path="res://resources/bg_floor2.png" id="21_4aibe"]
+[ext_resource type="Texture2D" uid="uid://dgkt5na1k6s3b" path="res://resources/bg_floorshadow.png" id="22_ctg4c"]
+[ext_resource type="Texture2D" uid="uid://bj4pj21hs4pfg" path="res://resources/bg/real_life_bg.png" id="23_bcj0i"]
+[ext_resource type="Script" uid="uid://bkoadd8rxuaih" path="res://scene/PointLight2D.gd" id="24_0xmkh"]
+[ext_resource type="Texture2D" uid="uid://dma7rtd6v2cq0" path="res://resources/train_screen_empty.png" id="25_82fnd"]
+[ext_resource type="PackedScene" uid="uid://bubj7avlvnh62" path="res://Gameplay/train_screen.tscn" id="26_gilft"]
+[ext_resource type="Texture2D" uid="uid://du0ewe3ii4vjn" path="res://resources/bg_train_wall.png" id="27_50oqc"]
+[ext_resource type="PackedScene" uid="uid://8mky14d7t3vi" path="res://Gameplay/train_wall_normal.tscn" id="28_w1jdk"]
+[ext_resource type="Script" uid="uid://bwkxsibmbgi6k" path="res://scene/ParallaxBackground.gd" id="29_iyww2"]
+[ext_resource type="Texture2D" uid="uid://br0jejak2snt6" path="res://resources/dust.png" id="30_dt07b"]
+[ext_resource type="Texture2D" uid="uid://bvtog8fm1a2b5" path="res://resources/bg/extra_humans/extra_human_0.png" id="31_8r0be"]
+[ext_resource type="Texture2D" uid="uid://crpc2aj2hrf4h" path="res://resources/bg/extra_humans/extra_human_1.png" id="32_dr17e"]
+[ext_resource type="Texture2D" uid="uid://ye023yx37qat" path="res://resources/bg/extra_humans/extra_human_2.png" id="33_jn0fv"]
+[ext_resource type="Texture2D" uid="uid://dms7orrbirjvk" path="res://resources/bg/extra_humans/extra_human_3.png" id="34_e4ua1"]
+[ext_resource type="Texture2D" uid="uid://bsom7x1uv5l" path="res://resources/bg/extra_humans/extra_human_4.png" id="35_i5sgb"]
+[ext_resource type="Texture2D" uid="uid://xmx4jjktqarq" path="res://resources/bg/extra_humans/extra_human_5.png" id="36_en7fd"]
+[ext_resource type="Texture2D" uid="uid://cddm14npeoqom" path="res://resources/ui/gui/mainmenu/btn_select_normal.png" id="36_qitrf"]
+[ext_resource type="Texture2D" uid="uid://cv6lkoxhhohp1" path="res://resources/bg/extra_humans/extra_human_6.png" id="37_3nnti"]
+[ext_resource type="Texture2D" uid="uid://wca85abikwxx" path="res://resources/ui/gui/mainmenu/btn_select_hover.png" id="37_16j4g"]
+[ext_resource type="Texture2D" uid="uid://baydcsu3hxahg" path="res://resources/ui/gui/mainmenu/btn_select_click.png" id="38_0rqms"]
+[ext_resource type="Texture2D" uid="uid://b2s2flai6qf8d" path="res://resources/bg/extra_humans/extra_human_7.png" id="38_6v5kv"]
+[ext_resource type="PackedScene" uid="uid://bj1jpntptaqij" path="res://Gameplay/Sound/button_stream_player_component.tscn" id="39_u1jql"]
+[ext_resource type="Texture2D" uid="uid://b146yabutbpfl" path="res://resources/bg/extra_humans/extra_human_8.png" id="39_y3bhp"]
+[ext_resource type="Texture2D" uid="uid://d2j1m5vnfds1s" path="res://resources/bg/extra_humans/extra_human_9.png" id="40_4qwsm"]
+[ext_resource type="AudioStream" uid="uid://dhyb0uhsr1fbg" path="res://sound/sfx/ui/main_menu_button_focus.wav" id="40_mogqn"]
+[ext_resource type="AudioStream" uid="uid://c4btucivr586t" path="res://sound/sfx/ui/main_menu_new_game.wav" id="41_6rsnw"]
+[ext_resource type="Texture2D" uid="uid://cl44s8en1ds7p" path="res://resources/bg/extra_humans/extra_human_10.png" id="41_r4j6u"]
+[ext_resource type="Texture2D" uid="uid://ckutm5h1t4q1m" path="res://resources/logo/elniko.png" id="44_ei1pc"]
+[ext_resource type="Texture2D" uid="uid://cr7521kqiawlk" path="res://resources/logo/mango_party.png" id="45_dpcdc"]
+[ext_resource type="Script" uid="uid://b0l85d1fnmnm8" path="res://Gameplay/title_call_player.gd" id="46_qnb12"]
+[ext_resource type="AudioStream" uid="uid://d116oa42k3a4b" path="res://sound/voice/scene_voice/SCENE_CALL_KONIAL_ELNIKO.ogg" id="47_wemlk"]
+[ext_resource type="AudioStream" uid="uid://b5ori46xspssa" path="res://sound/voice/scene_voice/SCENE_CALL_MAI_ELNIKO.ogg" id="48_1r73j"]
+[ext_resource type="AudioStream" uid="uid://cmt6sa0wxfqee" path="res://sound/voice/scene_voice/SCENE_CALL_REINA_ELNIKO.ogg" id="49_4aibe"]
+[ext_resource type="AudioStream" uid="uid://bfqpfhfffreqj" path="res://sound/voice/scene_voice/SCENE_CALL_KONIAL_MANGOPARTY.ogg" id="50_ctg4c"]
+[ext_resource type="AudioStream" uid="uid://cetxdu0eqajpt" path="res://sound/voice/scene_voice/SCENE_CALL_MAI_MANGOPARTY.ogg" id="51_bcj0i"]
+[ext_resource type="AudioStream" uid="uid://c1qe7tqho4uev" path="res://sound/voice/scene_voice/SCENE_CALL_REINA_MANGOPARTY.ogg" id="52_0xmkh"]
+[ext_resource type="PackedScene" uid="uid://rye76hy4dovq" path="res://scene/UI/confirm_box.tscn" id="81_hk7gf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nyxl4"]
+shader = ExtResource("13_u1jql")
+shader_parameter/speed = 0.005
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3qf8e"]
+shader = ExtResource("13_u1jql")
+shader_parameter/speed = 0.02
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_og3nq"]
+shader = ExtResource("13_u1jql")
+shader_parameter/speed = 0.06
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lwyyv"]
+shader = ExtResource("13_u1jql")
+shader_parameter/speed = 0.1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a7e71"]
+shader = ExtResource("13_u1jql")
+shader_parameter/speed = 0.15
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lsajs"]
+shader = ExtResource("13_u1jql")
+shader_parameter/speed = 0.25
+
+[sub_resource type="Gradient" id="Gradient_ve04u"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sn7k6"]
+gradient = SubResource("Gradient_ve04u")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5rjke"]
+shader = ExtResource("13_u1jql")
+shader_parameter/speed = 0.25
+
+[sub_resource type="Gradient" id="Gradient_j6rtj"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6cn2r"]
+gradient = SubResource("Gradient_j6rtj")
+fill_from = Vector2(0, 0.193732)
+fill_to = Vector2(0, 1)
+
+[sub_resource type="Animation" id="Animation_02d82"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wxkuq"]
+resource_name = "idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, -1), Vector2(0, 2), Vector2(0, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"train_vibe_emit"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mun87"]
+_data = {
+&"RESET": SubResource("Animation_02d82"),
+&"idle": SubResource("Animation_wxkuq")
+}
+
+[sub_resource type="Gradient" id="Gradient_7x3k2"]
+offsets = PackedFloat32Array(0, 0.726457)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u6ucd"]
+gradient = SubResource("Gradient_7x3k2")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_sic71"]
+offsets = PackedFloat32Array(0, 0.747292)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_i3o14"]
+gradient = SubResource("Gradient_sic71")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.504274, 0.478632)
+
+[sub_resource type="Gradient" id="Gradient_edaoa"]
+offsets = PackedFloat32Array(0, 0.726457)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_w2vwm"]
+gradient = SubResource("Gradient_edaoa")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_pmerd"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.271375, 1), 0.0, 0.0, 0, 0, Vector2(0.732342, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_q8yis"]
+curve = SubResource("Curve_pmerd")
+
+[sub_resource type="Gradient" id="Gradient_xprvf"]
+colors = PackedColorArray(3, 3, 3, 1, 0.918415, 0.49731, 3.85046e-07, 0.321569)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ac4ch"]
+gradient = SubResource("Gradient_xprvf")
+
+[sub_resource type="Curve" id="Curve_4s7rs"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.208178, 1), 0.0, 0.0, 0, 0, Vector2(0.72119, 1), 0.0289856, 0.0289856, 0, 0, Vector2(0.977695, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_5yc10"]
+curve = SubResource("Curve_4s7rs")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ux4dy"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 100.0
+angle_max = 180.0
+direction = Vector3(1, 1, 0)
+spread = 68.182
+initial_velocity_min = 2.0
+initial_velocity_max = 5.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.3
+scale_max = 0.4
+scale_curve = SubResource("CurveTexture_5yc10")
+scale_over_velocity_max = 689.39
+color = Color(1, 1, 1, 0.815686)
+color_ramp = SubResource("GradientTexture1D_ac4ch")
+alpha_curve = SubResource("CurveTexture_q8yis")
+
+[sub_resource type="Animation" id="Animation_mu4gs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tbnvj"]
+resource_name = "fade_in"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(8, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_x4geo"]
+resource_name = "fade_out"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pnh0p"]
+_data = {
+&"RESET": SubResource("Animation_mu4gs"),
+&"fade_in": SubResource("Animation_tbnvj"),
+&"fade_out": SubResource("Animation_x4geo")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yf2j8"]
+texture = ExtResource("36_qitrf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8sd1j"]
+texture = ExtResource("37_16j4g")
+modulate_color = Color(0.87, 0.87, 0.87, 0.807843)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_loaoi"]
+texture = ExtResource("38_0rqms")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_umssa"]
+texture = ExtResource("36_qitrf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_su2hb"]
+
+[sub_resource type="Theme" id="Theme_7oahh"]
+Button/styles/disabled = SubResource("StyleBoxTexture_yf2j8")
+Button/styles/focus = SubResource("StyleBoxTexture_8sd1j")
+Button/styles/hover = SubResource("StyleBoxTexture_loaoi")
+Button/styles/normal = SubResource("StyleBoxTexture_umssa")
+Button/styles/pressed = SubResource("StyleBoxTexture_su2hb")
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2r7xf"]
+light_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_80rkj"]
+font_size = 6
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_vdhub"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Elniko:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MangoParty:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_kj6bd"]
+resource_name = "logo"
+length = 14.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Elniko:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.53333, 2.53333, 5.266667, 6.233327),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MangoParty:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(7.3333263, 8.1333275, 11.2, 12.199971),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ColorRect:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(13.133305, 14.133305),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TitleCallPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.5, 8.533334),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"call_elniko"
+}, {
+"args": [],
+"method": &"call_mangoparty"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dgklk"]
+_data = {
+&"RESET": SubResource("Animation_vdhub"),
+&"logo": SubResource("Animation_kj6bd")
+}
+
+[node name="Main" type="Node2D" node_paths=PackedStringArray("recollect_button", "confirm_box")]
+script = ExtResource("1_w4m01")
+option_menu = ExtResource("2_6uqe7")
+load_menu = ExtResource("3_6uqe7")
+recollect_button = NodePath("CanvasLayer/MarginContainer/VBoxContainer/Recollect")
+confirm_box = NodePath("ConfirmBox")
+
+[node name="BackGround" type="Node2D" parent="."]
+position = Vector2(-684, 0)
+script = ExtResource("4_ll8yw")
+
+[node name="TrainMainMenu" parent="BackGround" instance=ExtResource("1_o6ooy")]
+unique_name_in_owner = true
+
+[node name="TrainEnding" type="Node2D" parent="BackGround" node_paths=PackedStringArray("train_sprite")]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("12_0rqms")
+train_sprite = NodePath("train")
+
+[node name="BackGround" type="Node2D" parent="BackGround/TrainEnding"]
+z_index = -3
+
+[node name="bg1" type="Sprite2D" parent="BackGround/TrainEnding/BackGround"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_nyxl4")
+texture = ExtResource("14_mogqn")
+centered = false
+
+[node name="bg2" type="Sprite2D" parent="BackGround/TrainEnding/BackGround"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_3qf8e")
+texture = ExtResource("15_6rsnw")
+centered = false
+
+[node name="bg3" type="Sprite2D" parent="BackGround/TrainEnding/BackGround"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_og3nq")
+texture = ExtResource("16_ei1pc")
+centered = false
+
+[node name="bg4" type="Sprite2D" parent="BackGround/TrainEnding/BackGround"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_lwyyv")
+texture = ExtResource("17_dpcdc")
+centered = false
+
+[node name="bg5" type="Sprite2D" parent="BackGround/TrainEnding/BackGround"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_a7e71")
+texture = ExtResource("18_qnb12")
+centered = false
+
+[node name="bg6" type="Sprite2D" parent="BackGround/TrainEnding/BackGround"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_lsajs")
+texture = ExtResource("19_wemlk")
+centered = false
+
+[node name="PointLight2D3" type="PointLight2D" parent="BackGround/TrainEnding/BackGround"]
+position = Vector2(957, 157)
+scale = Vector2(29.6899, 4.88989)
+color = Color(1, 0.656122, 0.454082, 1)
+energy = 1.39
+range_z_min = -4
+range_z_max = -3
+texture = SubResource("GradientTexture2D_sn7k6")
+
+[node name="bgFloor" type="Sprite2D" parent="BackGround/TrainEnding"]
+modulate = Color(2, 2, 2, 1)
+position = Vector2(0, 180)
+texture = ExtResource("20_1r73j")
+centered = false
+
+[node name="bgFloor2" type="Sprite2D" parent="BackGround/TrainEnding"]
+visible = false
+self_modulate = Color(2.3, 2.3, 2.1, 1)
+position = Vector2(0, 180)
+texture = ExtResource("21_4aibe")
+centered = false
+
+[node name="bgFloorShadow" type="Sprite2D" parent="BackGround/TrainEnding"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_5rjke")
+position = Vector2(0, 180)
+texture = ExtResource("22_ctg4c")
+centered = false
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="BackGround/TrainEnding"]
+color = Color(0.83, 0.7304, 0.80012, 1)
+energy = 0.29
+blend_mode = 1
+
+[node name="PointLight2D3" type="PointLight2D" parent="BackGround/TrainEnding"]
+position = Vector2(962, 179)
+scale = Vector2(29.9375, 6.08)
+color = Color(0.975513, 0.855764, 0.763505, 1)
+energy = 0.79
+range_z_min = 3
+range_z_max = 3
+texture = SubResource("GradientTexture2D_6cn2r")
+
+[node name="PointLight2D4" type="PointLight2D" parent="BackGround/TrainEnding"]
+position = Vector2(961, 179)
+scale = Vector2(29.9688, 6.08)
+color = Color(0.806883, 0.431785, 0.118247, 1)
+energy = 0.9
+range_z_max = -1
+texture = SubResource("GradientTexture2D_6cn2r")
+
+[node name="train" type="Sprite2D" parent="BackGround/TrainEnding"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("23_bcj0i")
+centered = false
+vframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BackGround/TrainEnding/train"]
+libraries = {
+&"": SubResource("AnimationLibrary_mun87")
+}
+autoplay = "idle"
+
+[node name="PointLight2D" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(664.356, 188.792)
+scale = Vector2(5.64989, 3.44989)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 1.07
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D2" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(1306, 188.396)
+scale = Vector2(5.64989, 3.44989)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 1.07
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+
+[node name="DoorLight" type="Node2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(936.356, 127.633)
+scale = Vector2(2.72989, 2.56988)
+
+[node name="PointLight2D3" type="PointLight2D" parent="BackGround/TrainEnding/train/DoorLight"]
+position = Vector2(0, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D4" type="PointLight2D" parent="BackGround/TrainEnding/train/DoorLight"]
+position = Vector2(33.3347, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D5" type="PointLight2D" parent="BackGround/TrainEnding/train/DoorLight"]
+position = Vector2(234.206, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D6" type="PointLight2D" parent="BackGround/TrainEnding/train/DoorLight"]
+position = Vector2(267.541, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D7" type="PointLight2D" parent="BackGround/TrainEnding/train/DoorLight"]
+position = Vector2(-235.044, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D9" type="PointLight2D" parent="BackGround/TrainEnding/train/DoorLight"]
+position = Vector2(-314.664, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D10" type="PointLight2D" parent="BackGround/TrainEnding/train/DoorLight"]
+position = Vector2(331.751, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D8" type="PointLight2D" parent="BackGround/TrainEnding/train/DoorLight"]
+position = Vector2(-201.709, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D11" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(999, 323.236)
+scale = Vector2(4.32989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D14" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(1646, 323.236)
+scale = Vector2(4.32989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D15" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+visible = false
+position = Vector2(1883, 349)
+scale = Vector2(4.32989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D16" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(364, 323.236)
+scale = Vector2(4.32989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D17" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(109, 323.236)
+scale = Vector2(3.20989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D12" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(705, 323.236)
+scale = Vector2(4.76989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D13" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(1329, 323.236)
+scale = Vector2(4.76989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D18" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(1218, -19)
+scale = Vector2(1.5, 1)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 1.72
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_i3o14")
+
+[node name="PointLight2D19" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(1403, -19)
+scale = Vector2(1.5, 1)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 1.72
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_i3o14")
+
+[node name="PointLight2D20" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(1802, -19)
+scale = Vector2(1.5, 1)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 1.72
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_i3o14")
+
+[node name="PointLight2D21" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(783, -19)
+scale = Vector2(1.5, 1)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 1.72
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_i3o14")
+
+[node name="PointLight2D22" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(588, -19)
+scale = Vector2(1.5, 1)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 1.72
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_i3o14")
+
+[node name="PointLight2D23" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(133, -19)
+scale = Vector2(1.5, 1)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 1.72
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_i3o14")
+
+[node name="PointLight2D24" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(1, 67)
+scale = Vector2(2.12988, 1.92989)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 0.79
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+
+[node name="PointLight2D25" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+visible = false
+position = Vector2(1920, 67)
+scale = Vector2(2.12988, 1.92989)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 0.79
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_u6ucd")
+
+[node name="PointLight2D26" type="PointLight2D" parent="BackGround/TrainEnding/train"]
+position = Vector2(1862.5, 349)
+scale = Vector2(1.73438, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_w2vwm")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="Train_screen_empty" type="Sprite2D" parent="BackGround/TrainEnding/train"]
+z_index = -1
+texture = ExtResource("25_82fnd")
+centered = false
+
+[node name="CanvasGroup" type="CanvasGroup" parent="BackGround/TrainEnding/train"]
+self_modulate = Color(1.7, 1.7, 1.7, 1)
+z_index = -1
+position = Vector2(344, 28)
+
+[node name="TrainScreen" parent="BackGround/TrainEnding/train/CanvasGroup" instance=ExtResource("26_gilft")]
+position = Vector2(3, 0)
+
+[node name="TrainScreen2" parent="BackGround/TrainEnding/train/CanvasGroup" instance=ExtResource("26_gilft")]
+position = Vector2(641, 0)
+
+[node name="TrainScreen3" parent="BackGround/TrainEnding/train/CanvasGroup" instance=ExtResource("26_gilft")]
+position = Vector2(1282, 0)
+
+[node name="BgTrainWall" type="Sprite2D" parent="BackGround/TrainEnding"]
+texture = ExtResource("27_50oqc")
+centered = false
+
+[node name="TrainWall_normal" parent="BackGround/TrainEnding" instance=ExtResource("28_w1jdk")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="BackGround/TrainEnding"]
+follow_viewport_enabled = true
+scroll_ignore_camera_zoom = true
+script = ExtResource("29_iyww2")
+
+[node name="layer1" type="ParallaxLayer" parent="BackGround/TrainEnding/ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="layer2" type="ParallaxLayer" parent="BackGround/TrainEnding/ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="layer3" type="ParallaxLayer" parent="BackGround/TrainEnding/ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="layer4" type="ParallaxLayer" parent="BackGround/TrainEnding/ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="layer5" type="ParallaxLayer" parent="BackGround/TrainEnding/ParallaxBackground"]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="layer6" type="ParallaxLayer" parent="BackGround/TrainEnding/ParallaxBackground"]
+motion_scale = Vector2(1.2, 1.2)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="BackGround/TrainEnding"]
+texture_filter = 1
+position = Vector2(686, 182)
+scale = Vector2(1, 0.76)
+amount = 10
+texture = ExtResource("30_dt07b")
+lifetime = 10.0
+fixed_fps = 7
+process_material = SubResource("ParticleProcessMaterial_ux4dy")
+
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="BackGround/TrainEnding"]
+texture_filter = 1
+position = Vector2(99, 182)
+scale = Vector2(0.56, 0.76)
+amount = 10
+texture = ExtResource("30_dt07b")
+lifetime = 10.0
+fixed_fps = 7
+process_material = SubResource("ParticleProcessMaterial_ux4dy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="BackGround/TrainEnding"]
+texture_filter = 1
+position = Vector2(1330, 182)
+scale = Vector2(0.87999, 0.76)
+amount = 10
+texture = ExtResource("30_dt07b")
+lifetime = 10.0
+fixed_fps = 7
+process_material = SubResource("ParticleProcessMaterial_ux4dy")
+
+[node name="GPUParticles2D5" type="GPUParticles2D" parent="BackGround/TrainEnding"]
+texture_filter = 1
+position = Vector2(986, 182)
+scale = Vector2(0.87999, 0.76)
+amount = 10
+texture = ExtResource("30_dt07b")
+lifetime = 10.0
+fixed_fps = 7
+process_material = SubResource("ParticleProcessMaterial_ux4dy")
+
+[node name="GPUParticles2D6" type="GPUParticles2D" parent="BackGround/TrainEnding"]
+texture_filter = 1
+position = Vector2(1629, 182)
+scale = Vector2(0.87999, 0.76)
+amount = 10
+texture = ExtResource("30_dt07b")
+lifetime = 10.0
+fixed_fps = 7
+process_material = SubResource("ParticleProcessMaterial_ux4dy")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="BackGround/TrainEnding"]
+texture_filter = 1
+position = Vector2(1874, 182)
+scale = Vector2(0.4, 0.76)
+amount = 10
+texture = ExtResource("30_dt07b")
+lifetime = 10.0
+fixed_fps = 7
+process_material = SubResource("ParticleProcessMaterial_ux4dy")
+
+[node name="ExtraHumans" type="Node2D" parent="BackGround/TrainEnding"]
+z_index = 1
+position = Vector2(519, 237)
+
+[node name="Extra" type="Sprite2D" parent="BackGround/TrainEnding/ExtraHumans"]
+self_modulate = Color(1, 1, 1, 0.427451)
+texture = ExtResource("31_8r0be")
+
+[node name="Extra12" type="Sprite2D" parent="BackGround/TrainEnding/ExtraHumans"]
+self_modulate = Color(1, 1, 1, 0.427451)
+position = Vector2(873, -6)
+texture = ExtResource("31_8r0be")
+flip_h = true
+
+[node name="Extra2" type="Sprite2D" parent="BackGround/TrainEnding/ExtraHumans"]
+self_modulate = Color(1, 1, 1, 0.427451)
+position = Vector2(613, -32)
+texture = ExtResource("32_dr17e")
+
+[node name="Extra3" type="Sprite2D" parent="BackGround/TrainEnding/ExtraHumans"]
+self_modulate = Color(1, 1, 1, 0.427451)
+position = Vector2(342, -20)
+texture = ExtResource("33_jn0fv")
+
+[node name="Extra4" type="Sprite2D" parent="BackGround/TrainEnding/ExtraHumans"]
+self_modulate = Color(1, 1, 1, 0.427451)
+position = Vector2(746, 1)
+texture = ExtResource("34_e4ua1")
+flip_h = true
+
+[node name="Extra5" type="Sprite2D" parent="BackGround/TrainEnding/ExtraHumans"]
+self_modulate = Color(1, 1, 1, 0.427451)
+position = Vector2(1185, -30)
+texture = ExtResource("35_i5sgb")
+flip_h = true
+
+[node name="Extra6" type="Sprite2D" parent="BackGround/TrainEnding/ExtraHumans"]
+self_modulate = Color(1, 1, 1, 0.427451)
+position = Vector2(1027, -36)
+texture = ExtResource("36_en7fd")
+flip_h = true
+
+[node name="Extra7" type="Sprite2D" parent="BackGround/TrainEnding/ExtraHumans"]
+self_modulate = Color(1, 1, 1, 0.427451)
+position = Vector2(109, -29)
+texture = ExtResource("37_3nnti")
+flip_h = true
+
+[node name="Extra8" type="Sprite2D" parent="BackGround/TrainEnding/ExtraHumans"]
+self_modulate = Color(1, 1, 1, 0.427451)
+position = Vector2(689, -17)
+texture = ExtResource("38_6v5kv")
+
+[node name="Extra9" type="Sprite2D" parent="BackGround/TrainEnding/ExtraHumans"]
+self_modulate = Color(1, 1, 1, 0.427451)
+position = Vector2(207, -1)
+texture = ExtResource("39_y3bhp")
+
+[node name="Extra10" type="Sprite2D" parent="BackGround/TrainEnding/ExtraHumans"]
+self_modulate = Color(1, 1, 1, 0.427451)
+position = Vector2(440, -32)
+texture = ExtResource("40_4qwsm")
+
+[node name="Extra11" type="Sprite2D" parent="BackGround/TrainEnding/ExtraHumans"]
+self_modulate = Color(1, 1, 1, 0.427451)
+position = Vector2(-333, -2)
+texture = ExtResource("41_r4j6u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="BackGround"]
+
+[node name="ColorRect" type="ColorRect" parent="BackGround/CanvasLayer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BackGround/CanvasLayer"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_pnh0p")
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 167.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 7
+alignment = 1
+
+[node name="Load" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(200, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_7oahh")
+text = "MAIN_LOAD"
+
+[node name="ButtonStreamPlayerComponent" parent="CanvasLayer/MarginContainer/VBoxContainer/Load" instance=ExtResource("39_u1jql")]
+focus = Array[AudioStream]([ExtResource("40_mogqn")])
+
+[node name="Play" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(200, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_7oahh")
+text = "MAIN_START"
+
+[node name="ButtonStreamPlayerComponent" parent="CanvasLayer/MarginContainer/VBoxContainer/Play" instance=ExtResource("39_u1jql")]
+focus = Array[AudioStream]([ExtResource("40_mogqn")])
+pressed = Array[AudioStream]([ExtResource("41_6rsnw")])
+
+[node name="Recollect" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+visible = false
+texture_filter = 2
+custom_minimum_size = Vector2(200, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_7oahh")
+text = "MAIN_RECOLLECT"
+
+[node name="ButtonStreamPlayerComponent" parent="CanvasLayer/MarginContainer/VBoxContainer/Recollect" instance=ExtResource("39_u1jql")]
+focus = Array[AudioStream]([ExtResource("40_mogqn")])
+
+[node name="Option" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(200, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_7oahh")
+text = "MAIN_OPTION"
+
+[node name="ButtonStreamPlayerComponent" parent="CanvasLayer/MarginContainer/VBoxContainer/Option" instance=ExtResource("39_u1jql")]
+focus = Array[AudioStream]([ExtResource("40_mogqn")])
+
+[node name="QA" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(200, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_7oahh")
+text = "QA"
+
+[node name="ButtonStreamPlayerComponent" parent="CanvasLayer/MarginContainer/VBoxContainer/QA" instance=ExtResource("39_u1jql")]
+focus = Array[AudioStream]([ExtResource("40_mogqn")])
+
+[node name="Exit" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+texture_filter = 2
+custom_minimum_size = Vector2(200, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_7oahh")
+text = "MAIN_EXIT"
+
+[node name="ButtonStreamPlayerComponent" parent="CanvasLayer/MarginContainer/VBoxContainer/Exit" instance=ExtResource("39_u1jql")]
+focus = Array[AudioStream]([ExtResource("40_mogqn")])
+
+[node name="Ver" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+material = SubResource("CanvasItemMaterial_2r7xf")
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_top = -27.0
+offset_right = -4.0
+offset_bottom = -3.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "0.7.0"
+label_settings = SubResource("LabelSettings_80rkj")
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer2"]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -243.0
+offset_top = -8.0
+offset_right = 238.0
+offset_bottom = 218.0
+grow_horizontal = 2
+texture = ExtResource("2_y0kpv")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -217.0
+offset_top = -20.0
+offset_right = 199.51733
+offset_bottom = 215.0
+grow_horizontal = 2
+texture = ExtResource("5_qitrf")
+expand_mode = 1
+
+[node name="LogoCanvasLayer" type="CanvasLayer" parent="."]
+layer = 3
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="LogoCanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LogoAnim" type="AnimationPlayer" parent="LogoCanvasLayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_dgklk")
+}
+
+[node name="Elniko" type="TextureRect" parent="LogoCanvasLayer"]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 109.0
+offset_top = 70.0
+offset_right = -106.0
+offset_bottom = -69.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("44_ei1pc")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="MangoParty" type="TextureRect" parent="LogoCanvasLayer"]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 65.0
+offset_right = -96.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("45_dpcdc")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="TitleCallPlayer" type="AudioStreamPlayer" parent="LogoCanvasLayer"]
+bus = &"Character"
+script = ExtResource("46_qnb12")
+voice_elniko = Array[AudioStream]([ExtResource("47_wemlk"), ExtResource("48_1r73j"), ExtResource("49_4aibe")])
+voice_mangoparty = Array[AudioStream]([ExtResource("50_ctg4c"), ExtResource("51_bcj0i"), ExtResource("52_0xmkh")])
+
+[node name="ConfirmBox" parent="." instance=ExtResource("81_hk7gf")]
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/Recollect" to="." method="_on_recollect_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/QA" to="." method="_on_qa_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

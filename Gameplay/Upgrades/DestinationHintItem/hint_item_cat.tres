@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ShopHint" load_steps=4 format=3 uid="uid://c0gyk34ubgnkx"]
+
+[ext_resource type="Resource" uid="uid://cjrudr2abgfnh" path="res://Gameplay/GameData/RouteHint/hint_cat.tres" id="1_2tt1r"]
+[ext_resource type="Texture2D" uid="uid://b5n01t2yxnclu" path="res://resources/ui/icons/hint_icon_1.png" id="2_nlcr0"]
+[ext_resource type="Script" uid="uid://cgvgo5syo8hpt" path="res://Gameplay/Upgrades/DestinationHintItem/shop_hint_item.gd" id="3_b3dtm"]
+
+[resource]
+script = ExtResource("3_b3dtm")
+hint_info = ExtResource("1_2tt1r")
+icon = ExtResource("2_nlcr0")
+id = "cat"
+price = Array[int]([1000])
+max_quantity = 1
+cost = 0
+name = "DESTINATION_HINT_CAT_TITLE"
+description = "HINT_ITEM_WITH_MAI"

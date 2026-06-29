@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=2 format=3 uid="uid://cp8atf3r48gi2"]
+
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_6e60n"]
+
+[resource]
+script = ExtResource("1_6e60n")
+is_disabled = true
+scene_description = "SCENE_FULL_NELSON"
+scene_name = "scene3"
+dialog_title = "butler_love_2"
+partner = 4
+love_ability = 2
+unlock_chapter = 5
+ahen_keys = PackedStringArray("SCENE_BUTLER_AHEN_1", "SCENE_BUTLER_AHEN_2", "SCENE_BUTLER_AHEN_3", "SCENE_BUTLER_AHEN_4", "SCENE_BUTLER_AHEN_5", "SCENE_BUTLER_AHEN_6", "SCENE_BUTLER_AHEN_7", "SCENE_BUTLER_AHEN_8", "SCENE_BUTLER_AHEN_9", "SCENE_BUTLER_AHEN_10")

@@ -1,0 +1,163 @@
+do GameEvents.emit_cutscene_play("e_nopan_cutscene_1")
+join reina 1
+emotion reina Serious 
+reina: 이 그림 속 여자. 비키니 밑을 안 입고 있어요. #id:ae4
+reina: 대부분 야한 느낌으로 변하는 거 같네요. 이 점에 유의하면서 찾으면 더 수월하겠어요. #id:ae5
+do GameEvents.emit_cutscene_play("e_nopan_cutscene_2")
+emotion reina Idle 
+reina: 근데 아까부터 어딘가 불편해 보이는데.. 걸음이 이상해 지신 거 같아요. #id:ae6
+- 아니, 신경 쓰지 마.. #id:ae7
+- 완전 괜찮으니까. #id:ae8
+emotion reina Suprised 
+reina: 손으로 가리시는 이유가.. 아. #id:ae9
+reina: 당신의 바지.. 엄청나게 부풀어 올랐어요.. #id:aea
+reina: 그, 그러네요. 여기 있는 광고들.. 하나같이 자극적이니까. #id:aeb
+emotion reina Smile 
+reina: 저는 상관 없으니까. 그렇게 가리지 않으셔도.. #id:aec
+reina: 하지만.. 이런 상태면 아무래도 신경 쓰이겠죠. #id:aed
+reina: 그럼 가라앉을 때까지 조금 쉬었다 가도록 할까요? #id:aee
+- 이.. 이건, 광고 따위 때문이 아니고.. #id:aef
+- 레이나 때문에.. #id:af0
+emotion reina Suprised 
+reina: 네.. 네? 저 때문이요? 저는 아무것도 하지 않았는데.. #id:af1
+- 전에 가슴을 마구 주물렀던 기억이 사라지지 않아서.. #id:af2
+거대한 유방의 감촉이 뇌리에 자꾸 남아서.. 솔직히 이제는 한계이다. #id:af3
+시선을 조금만 돌려도 레이나의 얼굴이나 가슴, 엉덩이가 한눈에 가득 차 버리니까.. 솔직히 말하면 발기가 풀릴 틈이 없다. #id:af4
+레이나는 나와 내 텐트친 바지를 보며, 곤란하면서도 무언가 안쓰러운 표정을 짓는다. #id:af5
+emotion reina Shy 
+reina: 저.. 저 때문에 이렇게나.. 자..자지, 발기.. 하시다니.. ..죄송해요. #id:af6
+레이나의 입에서 나온 자극적인 단어에 그만 움찔한다. #id:af7
+- 저.. 레이나. 방금 그 말. #id:af8
+- 좀 더 해줄 수 있을까? #id:af9
+reina: 방금이요? ..아아. 그게.. #id:afa
+reina: ..자지.. 말인가요? #id:afb
+얌전하고 조신한 레이나의 여린 목소리로 뱉은 야한 단어는, 그것만으로 나에게 엄청나게 큰 자극으로 다가온다. #id:afc
+reina: 앗..! 방금, 당신의 그곳이.. 움찔 하고. #id:afd
+- 레이나의 목소리를 듣고 있으니 진정되는 거 같아.. #id:afe
+emotion reina Idle 
+reina: 저.. 정말인가요? ..무슨 말이든 좋은가요? #id:aff
+reina: ..그게.. 그렇다면 어떤 말을 해야 할지.. #id:b00
+레이나는 이 발기의 책임이 정말로 본인에게 있다고 생각하는 건지. 한참을 고민하며 나에게 건낼 말을 고르고 있는듯 하다. #id:b01
+emotion reina Serious 
+update reina [extra_data="show Etc/Blur"]
+reina: 다.. 당신의 자지.. 그렇게 커져 버린 건.. 제 몸 때문인데도.. #id:b02
+reina: 저는 그것도 모르고 야한 모습으로 괴롭게 해 드렸어요.. #id:b03
+reina: 커다란 가슴이라던가.. 엉덩이라던가 자각 없이 내놓고 다니는 바람에.. #id:b04
+reina: 마치 유혹하는 것처럼 보여서, 당신의 커다란 손에 마구 움켜 쥐어져도 할 말 없을 정도로.. #id:b05
+reina: 남자들의 자지.. 크게 만들 뿐인 야한 몸을 가져서.. 죄송해요. #id:b06
+emotion reina Shy 
+reina: ..... 어떠신가요? #id:b07
+- 최고야.. #id:b08
+reina: ..하지만 분명 작아져야 할 텐데 이건.. #id:b09
+reina: 오히려 전보다 훨씬 커져 버렸어요.. #id:b0a
+- 야한 말에 뇌가 잠깐 과부하된 거니까. #id:b0b
+- 조금 기다리면 될 거야.. #id:b0c
+emotion reina Smile 
+reina: 네, 그러시다면.. 여기 앉아서 잠시 쉬었다 가죠. #id:b0d
+- 혹시.. 쉬는 동안. #id:b0e
+- 저번의 그거. 또 해도 될까? #id:b0f
+emotion reina Idle 
+reina: 저번의..? 아아. 가슴.. 말인가요. 후훗. #id:b10
+reina: 그걸로 진정되신다면. 잠깐 정도는 상관 없어요. #id:b11
+emotion reina Smile 
+reina: ..이리로 오세요. #id:b12
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("RESET")
+do GameEvents.anim_change("scene7_5")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(0, 100)
+update reina leftmost [move_time="2.0"]
+reina: ..으응.. #id:b13
+reina: ..그동안 많이 괴로웠군요. 저는 그것도 모르고.. #id:b14
+reina: 가슴 만지는 거, 그렇게 기분 좋으신가요? #id:b15
+reina: 저는.. 처음엔 이상한 기분이었는데. #id:b16
+reina: 이제는 점점 익숙해지고 있어요. 간질간질하는 느낌이.. 나쁘지 않네요. #id:b17
+emotion reina Suprised 
+reina: 당신의 커다란 손이.. 아앗! #id:b18
+reina: 엉덩이에 크고 뜨거운 게 닿고 있어요.. #id:b19
+reina: ..후훗. 도저히 작아질 기미가 안 보이네요. #id:b1a
+emotion reina Shy 
+reina: 슬슬 출발하지 않으면 마이 양이 걱정할 텐데.. #id:b1b
+스윽, 레이나가 자리를 고쳐 앉자 그녀의 엉덩이가 밀착하며 비벼진다. #id:b1c
+이미 한계에 다다른 자지는 살짝 건드리는 것만으로 사정감이 최고조로 올라온다. #id:b1d
+- 저.. 저기 레이나. #id:b1e
+- 여기서 잠깐 기다려 줄래? 나 이젠 한계라.. #id:b1f
+이미 쿠퍼액으로 질척거리는 상태라, 이대로면 바지에 사정할 게 분명하다. #id:b20
+젖을 주무르게 허락해준 레이나지만, 그녀의 등에 한가득 정액 범벅이 되는 건 다른 얘기이다. #id:b21
+저 멀리 구석에서 손으로 해결하고자, 다리 사이에 앉은 레이나에게서 빠져 나오려는 순간. #id:b22
+emotion reina Idle 
+reina: .... #id:b23
+그녀는 더욱 더, 내 고간에 본인의 부드럽고 큰 엉덩이를 붙여 온다. #id:b24
+- 레.. 레이나? #id:b25
+이윽고, 몸을 살짝 돌리며 그녀의 작은 손이, 내 허벅지를 따라 올라온다. #id:b26
+바지 위인데도 자지에 가득 몰린 혈류 때문인지. 그녀의 손가락 하나 하나가 느껴진다. #id:b27
+금방이라도 터질듯한 물건을 다루듯이, 내 바지 위를 조심스럽게 쓰다듬는다. #id:b28
+엄청난 용기를 낸 것처럼, 레이나는 얼굴을 붉게 물들인 채 떨리는 입을 땐다. #id:b29
+emotion reina Shy 
+reina: ...이 자지. 도저히 작아지지 않는 건.. #id:b2a
+reina: ..저한테 흥분했기 때문이죠? #id:b2b
+reina: 그러니까.. 저한테도 책임이 있으니까. #id:b2c
+emotion reina Smile 
+reina: 그게.. 혼자서 해결하는 것보다.. 제가 도와드리는 편이.. 빠를테니까.. #id:b2d
+뜻밖의 제안에 나는 그녀를 빤히 바라볼 수밖에 없었다. #id:b2e
+emotion reina Suprised 
+reina: 무..물론 처음인 데다, 손으로 해 드리는 거 뿐이라.. 기분 안 좋을수도 있지만.. #id:b2f
+emotion reina Serious 
+reina: 그리고, 저도.. 호기심이랄까. 한번 보고 싶어요.. 당신의.. 자지. #id:b30
+나는 홀린 듯이 자리에서 일어난다. #id:b31
+바지의 지퍼를 풀자, 레이나의 코앞에 커질대로 커진 나의 자지가 드러난다. #id:b32
+emotion reina Suprised 
+reina: 흐읏..! #id:b33
+레이나의 숨이 잠깐 멈추며 눈이 동그래진다. #id:b34
+부끄러워하면서도 시선을 돌리지 않은 채 빤히 바라보는 탓에, 그녀의 더운 숨결이 귀두 끝에 닿는 게 느껴진다. #id:b35
+reina: 이건.. 이렇게나 커져 있었군요.. 저는 그런 것도 모르고.. #id:b36
+reina: 가까이만 있어도 뜨거운 열기가 느껴져요.. #id:b37
+reina: 정말.. 만져 봐도 되는 건가요? #id:b38
+- 만지는 순간 사정해버릴수도 있지만.. #id:b39
+emotion reina Suprised 
+reina: 아아.. 그렇다면.. 최대한 조심스럽게.. #id:b3a
+leave reina 1
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene5_2")
+reina: 어.. 어떠신가요? 아프진 않으신가요? #id:b3b
+reina: 엄청 뜨거워요.. 괜찮으신거죠? #id:b3c
+reina: 그럼 이대로.. 움직이면 될까요? 앞 뒤로 문질문질하며.. #id:b3d
+reina: 잔뜩 끈적해져서.. 손쉽게 미끄러져요.. #id:b3e
+reina: 제 손과 자지가 비벼지면서.. 어쩐지 음란한 소리가 나고 있어요.. #id:b3f
+reina: 아.. 기둥 뿐만 아니라. 이 밑쪽의.. 고환도 움찔거리는데.. #id:b40
+reina: 이쪽도.. 만져 드릴까요? #id:b41
+do GameEvents.anim_change("scene5_1")
+reina: 이렇게, 손으로 굴리듯이?.. #id:b42
+reina: 어떠신가요? 기분 좋으신가요? #id:b43
+reina: 으응.. 하아. #id:b44
+reina: 그게.. 조금 재밌는 거 같기도. #id:b45
+reina: 하지만 역시, 이 쪽이 더 좋으신 거죠? #id:b46
+do GameEvents.anim_change("scene5_2")
+reina: 자지, 훨씬 단단해 졌어요.. #id:b47
+reina: 이대로 계속 문지르면.. 나오는 거죠? ..당신의 정액. #id:b48
+reina: 더 세게..? 이렇게 말인가요? #id:b49
+reina: ..하읏.. 그동안 잔뜩 참아왔는데, 신경쓰지 못해서 죄송해요. #id:b4a
+reina: 사실 저도 조금은 흥미가 생겨서.. 사죄한다는 핑계를 댄 건지도 몰라요. #id:b4b
+reina: 그러니 사정하고 싶어지면.. 얼마든지 저에게 뿌려 주세요. 조금.. 무섭긴 하지만. #id:b4c
+[signal arg="scene5"]
+reina: ..아아.. 얼굴에 가득.. 진하고 끈적한 게.. #id:b4d
+reina: 미안해 할 필요 없어요. 제게 뿌려주시는 쪽을 더 좋아하실 거 같아서.. #id:b4e
+reina: 그러면.. 이젠 좀 개운해 지셨나요? #id:b4f
+- 덕분에, 무리한 부탁을 해서 미안. #id:b50
+- 무척 기분 좋았어.. #id:b51
+reina: 후훗, 다행이에요. 자지.. 같은 건 처음 봐서. 만족하실 지 걱정이었는데. #id:b52
+reina: 아까는 저도 몸이 무척 뜨거워지고, 어쩐지 그게.. 궁금해져서.. #id:b53
+reina: 당신과 전차를 탐색해 갈 수록.. 기분이 이상해 지는 거 같아요. 이전엔 이러지 않았는데. #id:b54
+- 나도 마찬가지야. #id:b55
+- 전차에 오르고부터.. #id:b56
+- 야한 기분이 사라지지 않아. #id:b57
+reina: 왠지 평범한 장소가 아니라는 생각이 들어요.. #id:b58
+reina: 하지만.. 당신과 했던 게 그렇게 싫지는 않으니까요. #id:b59
+reina: 일단은 코니알.. 역장의 말대로 계속해서 탐색해 나가면 될 거 같아요. #id:b5a
+- 전차도 언젠가 멈출 수밖에 없으니까. #id:b5b
+reina: 네, 그때까지 잘 부탁 드릴게요. #id:b5c
+reina: 그리고, 만약 또 하고 싶어지면.. 혼자 해결하려 하지 말고. #id:b5d
+reina: 언제든 제게 말해 주세요. #id:b5e
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+do GameEvents.emit_npc_level_up(0)

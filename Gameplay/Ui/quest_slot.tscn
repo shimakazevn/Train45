@@ -1,0 +1,85 @@
+[gd_scene load_steps=6 format=3 uid="uid://n6jyw51qxcax"]
+
+[ext_resource type="Script" uid="uid://dpusfcwcnxv2e" path="res://Gameplay/Ui/quest_slot.gd" id="1_xyngc"]
+[ext_resource type="Texture2D" uid="uid://c5dv2njyhfl01" path="res://resources/ui/icons/sd_icon/reina.png" id="2_40kyh"]
+[ext_resource type="Texture2D" uid="uid://c0ythqdqh21pl" path="res://resources/ui/gui/check_false.png" id="3_rfj0a"]
+[ext_resource type="PackedScene" uid="uid://c7tthty2e1w31" path="res://Gameplay/Ui/auto_shirink_component.tscn" id="4_1hfj6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_onuob"]
+
+[node name="QuestSlot" type="Panel"]
+use_parent_material = true
+custom_minimum_size = Vector2(150, 18)
+offset_right = 150.0
+offset_bottom = 18.0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_onuob")
+script = ExtResource("1_xyngc")
+
+[node name="QuestInfoContainer" type="HBoxContainer" parent="."]
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -9.0
+offset_right = 150.0
+offset_bottom = 9.0
+grow_vertical = 2
+
+[node name="Check" type="TextureRect" parent="QuestInfoContainer"]
+texture_filter = 2
+use_parent_material = true
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("3_rfj0a")
+expand_mode = 2
+
+[node name="Icon" type="TextureRect" parent="QuestInfoContainer"]
+texture_filter = 2
+use_parent_material = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_40kyh")
+expand_mode = 1
+
+[node name="Info" type="Label" parent="QuestInfoContainer"]
+texture_filter = 2
+use_parent_material = true
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 10
+text = "호감도 1 이상ㅁㅁㅁ"
+
+[node name="AutoShirinkComponent" parent="QuestInfoContainer/Info" instance=ExtResource("4_1hfj6")]
+max_font_size = 10
+min_font_size = 8
+fixed_ref_width = 220.0
+
+[node name="CurrentValue" type="Label" parent="QuestInfoContainer"]
+texture_filter = 2
+use_parent_material = true
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_font_sizes/font_size = 9
+text = "(현재 0)"
+
+[node name="ColorRect" type="ColorRect" parent="QuestInfoContainer/CurrentValue"]
+show_behind_parent = true
+z_index = -1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -271.0
+offset_top = -9.0
+offset_right = 3.0
+offset_bottom = 9.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0, 0, 0, 0.619608)

@@ -1,0 +1,92 @@
+[gd_scene load_steps=6 format=3 uid="uid://dq27sehklxxjt"]
+
+[ext_resource type="Texture2D" uid="uid://ddf8dwkp4gvuy" path="res://resources/ui/gui/KanKanNavi/hint_panel.png" id="1_yoii8"]
+[ext_resource type="Script" uid="uid://g145f6y5swqv" path="res://Gameplay/Levels/recollection_rect.gd" id="2_t2neu"]
+[ext_resource type="PackedScene" uid="uid://ccx3jh2nagbkr" path="res://Gameplay/Ui/Recollection/recollection_button.tscn" id="3_fq6jh"]
+[ext_resource type="FontFile" uid="uid://b420coqgx7cq0" path="res://resources/font/TsunagiGothic.ttf" id="4_w60ff"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8laux"]
+font = ExtResource("4_w60ff")
+font_size = 56
+outline_size = 19
+outline_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+
+[node name="RecollectionRect" type="TextureRect" node_paths=PackedStringArray("Npcs")]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -854.0
+offset_top = -450.0
+offset_right = 854.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.315, 0.315)
+pivot_offset = Vector2(854, 450)
+texture = ExtResource("1_yoii8")
+script = ExtResource("2_t2neu")
+recollection_button = ExtResource("3_fq6jh")
+Npcs = [null, null, null, null, null]
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+clip_contents = true
+layout_mode = 2
+offset_left = 79.0
+offset_top = 50.0
+offset_right = 1628.0
+offset_bottom = 853.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="RecollectionScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+follow_focus = true
+scroll_vertical_custom_step = 400.0
+horizontal_scroll_mode = 0
+
+[node name="RecollectionContainer" type="GridContainer" parent="MarginContainer/RecollectionScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 2
+
+[node name="RecollectionButton" parent="MarginContainer/RecollectionScrollContainer/RecollectionContainer" instance=ExtResource("3_fq6jh")]
+layout_mode = 2
+
+[node name="RecollectionButton2" parent="MarginContainer/RecollectionScrollContainer/RecollectionContainer" instance=ExtResource("3_fq6jh")]
+layout_mode = 2
+
+[node name="RecollectionButton3" parent="MarginContainer/RecollectionScrollContainer/RecollectionContainer" instance=ExtResource("3_fq6jh")]
+layout_mode = 2
+
+[node name="RecollectionButton4" parent="MarginContainer/RecollectionScrollContainer/RecollectionContainer" instance=ExtResource("3_fq6jh")]
+layout_mode = 2
+
+[node name="RecollectionButton5" parent="MarginContainer/RecollectionScrollContainer/RecollectionContainer" instance=ExtResource("3_fq6jh")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -505.0
+offset_top = -5.55554
+offset_right = 505.0
+offset_bottom = 69.4445
+grow_horizontal = 2
+grow_vertical = 0
+text = "BASE_H_SCENE_EXIT"
+label_settings = SubResource("LabelSettings_8laux")
+horizontal_alignment = 1

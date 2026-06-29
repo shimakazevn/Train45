@@ -1,0 +1,177 @@
+do GameEvents.emit_position_change(-1, 227, 338)
+do GameEvents.emit_direction_change("right")
+konial: 오.. 오옷! #id:112e
+#
+###출시 버전에서 이 항목은 지웁니다
+#[Debug] 대화를 스킵하고 다음 챕터로 넘어갈까요? #id:114a
+#- 네 #id:114b
+#	jump debug_end
+#- 아니오 #id:114c
+###
+#
+konial: 거.. 거기. 좀 더..! 아읏! #id:112f
+- 안대를 벗긴다. #id:1130
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_anim_change_this_npc("weak", {ch.konial})
+do GameEvents.emit_position_change({ch.konial}, 345, 330)
+konial: 아흣.. ..으응.. #id:1131
+konial: 하아.. 하아.. #id:1132
+konial: ... #id:1133
+join konial rightmost [mirrored="true" ]
+emotion konial Surprised 
+... #id:1134
+konial: 너.. 너! 이 구속을 풀지 않고 가버리다니?! 기관실의 위치를 알려주면 풀어주는 거 아니였어? #id:1135
+- ..그런 약속은 없었는데.. #id:1136
+konial: 기브 앤 테이크 몰라?! 이래서 인간이란.. #id:1137
+join reina leftmost 
+emotion reina Shy 
+reina: 코니알의 입에서 그런 단어를 들을 줄이야. #id:1138
+join mai left  
+emotion mai Dislike 
+mai: 코니알 넌 누구보다 받기만 한 녀석이잖아.. #id:1139
+emotion konial Dislike 
+konial: ..아니 그 이전에.. ..어째서 다시 돌아온 거지? #id:113a
+- 전에 말한 게 마음에 걸려서. #id:113b
+emotion konial Idle 
+konial: 전에? ..아하~ 그거? #id:113c
+emotion reina Idle 
+reina: 무척 의미심장했죠. 파주주와 바깥의 상황에 대해.. #id:113d
+reina: 이곳에서 떠나기 전에 모든 의문을 해소하고 싶어요. #id:113e
+emotion konial Smile 
+konial: 키히히. 이제와서 내가 말하는 것들을 믿을 수 있겠어? 내가 무슨 거짓말을 칠 줄 알고? 전차에서 내리면 자연히 알게 될 걸. #id:113f
+emotion mai Idle 
+mai: 응, 사실이야. 코니알이 하는 말은 곧이곧대로 믿지 않을거야. 네가 말했지? 이곳에서 나가지 않는 이상 그 무엇도 진실인지 확인할 수 없다고. #id:1140
+emotion konial Idle 
+konial: 잘 아네. 이제 확인해 볼 수 있잖아? 너희들이 그렇게 원하던 거 아냐? ..파주주 그 녀석이 모두를 구하러 온 덕분에 말야. #id:1141
+- 그게 문제야. #id:1142
+- 이 전차 안에선 누구도 믿을 수 없는 거. #id:1143
+konial: ..... #id:1144
+emotion reina Serious 
+reina: 그 말대로.. 이 전차 안에선 누구든 거짓말을 할 수 있어요. 그건 파주주 또한 마찬가지겠죠. #id:1145
+konial: 키히히! 그 말은 파주주가 너희를 구출하려는 거 외에 다른 속셈이 있다는 거야? #id:1146
+emotion konial Smile 
+konial: ...키히히히! #id:1147
+emotion reina Suprised 
+reina: ... #id:1148
+konial: 키히히..미안. 무지한 걸 비웃으면 안되는 건데. 그치? #id:1149
+emotion konial Sadistic 
+konial: 하아.. 코니알 님이 특별히 알려줄게. #id:114a
+emotion konial Idle 
+konial: 천사는 거짓말을 할 수 없어. 절대로. #id:114b
+- ..거짓말을? #id:114c
+konial: 그래. 이건 인간들의 신념같은게 아냐. 종족의 특징이지. 천사들은 남들을 속인다는 개념 자체가 존재하지 않아. #id:114d
+konial: 덕분에 상대를 기망하고 속이는 악마들과는 대척점으로 보이게 된 거지. 실제로는 그렇게 사이 나쁘지 않다고? #id:114e
+emotion mai Dislike 
+mai: 파주주는 누군가를 속이지 못한다. 따라서 파주주가 우리를 구하려는 것도 사실이다.. 라는 거 아냐? #id:114f
+- 하지만.. 그 말을 하는 코니알은.. 악마니까. #id:1150
+- 악마는 남을 속이는데 익숙하고. #id:1151
+mai: 그..그렇다면 코니알이 거짓말을 하는 걸 수도.. 어디까지가 거짓말인지.. 점점 혼란스럽잖아.. #id:1152
+konial: 키히히.. 그래. 결국 판단하는 것은 인간들의 몫. 맘껏 고민해 보렴? #id:1153
+- ... #id:1154
+emotion reina Idle 
+reina: 제 생각은.. 파주주를 믿지 못하면 결국 이 전차 밖으론 나갈 수 없다는 거에요. #id:1155
+reina: 지금으로썬 파주주를 따르는 게 유일한 탈출 방법이니까.. #id:1156
+emotion mai Idle 
+mai: 하지만 뭔가 꺼림칙해. 정말 우리를 원래 있던 곳으로 돌려 보내 줄까? #id:1157
+emotion mai Flat 
+mai: 내 직감이지만.. 섣부르게 행동하면 안 될 거 같아. 적어도 확실한 정보가 있다면.. #id:1158
+..코니알이 말했던.. 바깥의 진실. #id:1159
+갑자기 나타난 파주주의 구원.. 어떤것도 확실하게 믿을 수 없지만.. #id:115a
+지금은 선택을 해야 한다. #id:115b
+do GameEvents.stop_skip_on_next_choice()
+- 내가 가진 '무기'를 사용한다. #id:115c
+- 파주주를 따라 기관실로 이동한다.(대화 종료) #id:115d
+	reina: 네. 코니알과 이야기할수록 혼란스러워질 거에요. #id:115e
+	mai: 으음.. 고민해봐야 소용 없겠지.. 어서 파주주에게 가자. #id:115f
+	do TransitionScreen.dialog_transition()
+	do GameEvents.anim_change("idle")
+	do GameEvents.emit_position_change({ch.konial}, 345, 275)
+	[end_timeline]
+emotion mai Serious 
+mai: 무기? #id:1160
+- 코니알, 네가 말했지? #id:1161
+- 내가 가진 무기를 사용하라고. #id:1162
+emotion reina Suprised 
+reina: 무기라면.. 그때의 심문을 한번 더..? #id:1163
+reina: 하지만 팔찌의 정념은 더이상 코니알에게 전달되지 않는다고 했는데.. #id:1164
+emotion konial Idle 
+konial: 키히히, 그래. 처음 심문 이후론 아~무런 느낌도 없었는걸? #id:1165
+- 하지만 팔찌는 이전처럼 빛나고 있어. #id:1166
+- 전달되지 못한 정념이 나에게 쌓여 있다는 뜻이겠지. #id:1167
+emotion konial Dislike 
+update konial [extra_data="show Etc/Sweat"]
+konial: ... #id:1168
+- 이제부터 직접 이 정념을 전달해 줄게. #id:1169
+emotion konial Surprised 
+konial: 서.. 설마 또 심문하겠다는거야? 키..키히히.. 소용 없어. 자.. 잠깐. #id:116a
+konial: 더이상 말할 것도 없다고. 나..날 어디로 옮기는 거야! #id:116b
+leave --All-- 
+do TransitionScreen.dialog_transition()
+# 최초 idle 위치 지정을 위해 잠시 옯김
+do GameEvents.emit_position_change({ch.konial}, 345, 275)
+do GameEvents.emit_anim_change_this_npc("scene3_1", {ch.konial})
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change({ch.konial}, 100)
+do GameEvents.emit_without_npc_hide(true,{ch.konial})
+konial: 하아.. 뭐야 이거. 기분 나빠. #id:116c
+konial: 내가 이런 치욕스러운 자세로 인간 밑에 깔리다니.. 이런다고 내가 너흴 도울수 있을 줄 알아? #id:116d
+konial: 뭐.. 뭘 보지에 겨냥하고 있는 거야? 그런 천한 자지를 내게 박아대겠다고? 꿈도 꾸지 마! 하아.. #id:116e
+konial: 뭐..? 전혀 젖지 않았어. 이깟 상황에 흥분할 리가! 저항하면 되지 않느냐고? 키히히.. 내가 조금만 힘을 쓰면 너따위는.. #id:116f
+konial: 그러니까.. 하아. 자비를 배푸는 동안 내려온다면.. 오옷?! #id:1170
+do GameEvents.emit_anim_change_this_npc("scene3_2", {ch.konial})
+konial: 앗.. 아앙. 하아.. 오옷. 옷..! #id:1171
+konial: 으긋.. 앗.. 체중을 써서.. 그렇게 격렬하게 내리찍으면.. 오오옷.. #id:1172
+konial: 아앗.. 하아.. 그만.. 이 자세.. 너무 깊어.. #id:1173
+konial: 너무.. 으읏.. 깊이까지 들어오고 있어.. 아긋.. 하아..! 아앙! #id:1174
+konial: 하아앗.. 하아. 이게.. 윽.. 인간들의 세.. 섹스읏.. 으읏! #id:1175
+konial: 전혀.. 전혀 기분좋지 않으니까앗..! 하앗.. #id:1176
+konial: 으오옷?! 아앗.. 하아.. 아앙! 어째서 더 격렬해지는.. 으읏.. 하앗! #id:1177
+konial: 으응..! 그.. 그래엣.. 인정할게엣! 조금.. 조금 기분 좋으니까앗! #id:1178
+konial: 뭐..뭐엇.. 수..숨기고 있는 거..? 아앗.. 앙.. #id:1179
+konial: 그러니까아.. 없다고 했잖...오오옷?! 아앙! 앗.. 으읏.. 읏..! #id:117a
+konial: 마.. 말할게엣! 말할테니..이힉?! 흐읏.. 더 박아대면 나는..흐읏 #id:117b
+konial: 그러니까 이제 그만.. 안에.. 가드흑 싸줘어.. 읏.. #id:117c
+konial: 으읏.. ..뭐? 거짓말이면.. 밖에? #id:117d
+konial: 아..아읏.. 안돼! 반드시 안에.. 인간 정자.. 받고 싶어.. 자궁 가득.. 앙.. #id:117e
+konial: 부탁해엣.. 전부 말할테니.. 아는것들 전부..! #id:117f
+set {npc.type} = {ch.konial}
+[signal arg="scene3"]
+konial: 오옷.. 오오옷.. #id:1180
+join reina left 
+emotion reina Suprised 
+reina: 기.. 기절했어요. #id:1181
+- 정신을 차릴때까지 기다리자. #id:1182
+do TransitionScreen.dialog_transition()
+konial: ..으으.. #id:1183
+- 정신이 들어? #id:1184
+join konial rightmost [mirrored="true" ]
+emotion konial Surprised 
+update konial [extra_data="show Etc/Blur"]
+... #id:1185
+konial: ..? 하앗?! #id:1186
+konial: 기.. 기절했던 거야? 인간 따위에 져서? #id:1187
+- 이걸로 1:1이네. #id:1188
+emotion konial Dislike 
+konial: 뭐?! ..크흠. #id:1189
+emotion konial Idle 
+konial: 그..그래. 인정할게. 너희끼리 소꿉놀이나 했던 건 아니구나? #id:118a
+konial: 제법 기분좋게 하는 법을 알고 있네..이힛?! #id:118b
+emotion konial Surprised 
+(풀썩) #id:118c
+konial: ..다.. 다리에 힘이 풀려서.. #id:118d
+konial: 뭐야! 그런 눈으로 내려보지 말라고! 자지 때문이 아니니까! #id:118e
+join mai leftmost 
+emotion mai Ecchi 
+mai: 아직 여운이 남았나보네? #id:118f
+konial: 닥쳐! 하아.. 약속은 약속이지.. 이렇게까지 하는 건 이해가 안 가지만. #id:1190
+emotion konial Dislike 
+konial: ..어서 궁금한 걸 물어봐. 시시한 거면 각오해. #id:1191
+emotion reina Shy 
+reina: ..여전히 고압적이지만.. 원하는 정보를 얻을 수 있을 거 같네요. 준비되면 코니알과 대화해 보도록 해요. #id:1192
+#코니알과의 대화로 다음 호감도 레벨 업 가능
+label debug_end #id:1193
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+do GameEvents.emit_position_change({ch.konial}, 345, 275)
+do GameEvents.emit_without_npc_hide(false,{ch.konial})
+[end_timeline]

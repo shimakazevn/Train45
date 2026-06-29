@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BoxMapItem" load_steps=3 format=3 uid="uid://ckt8p8664cd5"]
+
+[ext_resource type="Texture2D" uid="uid://bqiisc0k08fe4" path="res://resources/ui/icons/hint_icon_3.png" id="1_17hng"]
+[ext_resource type="Script" uid="uid://bjricme3texhy" path="res://Gameplay/Upgrades/BoxMapItem/box_map_item.gd" id="2_j8xni"]
+
+[resource]
+script = ExtResource("2_j8xni")
+stage_min = 41
+stage_max = 100
+icon = ExtResource("1_17hng")
+id = "box_map_3"
+price = Array[int]([4000])
+max_quantity = 1
+cost = 0
+name = "BOX_MAP_ITEM_3_TITLE"
+description = "BOX_MAP_ITEM_3_INFO"

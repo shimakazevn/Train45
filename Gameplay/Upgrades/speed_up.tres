@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://nm2xt6a7fd1e"]
+
+[ext_resource type="Texture2D" uid="uid://3vym2ykx66c6" path="res://resources/ui/icons/icons2.png" id="1_exs00"]
+[ext_resource type="Script" uid="uid://mkaxgrunbvhi" path="res://Gameplay/Upgrades/ability_upgrade.gd" id="1_j48ae"]
+
+[resource]
+script = ExtResource("1_j48ae")
+icon = ExtResource("1_exs00")
+id = "speed_up"
+price = Array[int]([320])
+max_quantity = 1
+cost = 10
+name = "SPEED_UP"
+description = "SPEED_UP_DESCRIPTION"

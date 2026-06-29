@@ -1,0 +1,221 @@
+[gd_scene load_steps=16 format=3 uid="uid://ekuev2fv7aaj"]
+
+[ext_resource type="Script" uid="uid://b357cjjw0ckbx" path="res://Autoloads/cut_scene_manager.gd" id="1_6ysty"]
+[ext_resource type="Texture2D" uid="uid://vxgmc8l8wpwk" path="res://resources/cutscene/PixelCutscene/CutsceneMeetReina.png" id="2_b86pl"]
+[ext_resource type="Script" uid="uid://dxwjjykodefgm" path="res://Autoloads/cutscene_asset.gd" id="3_4rp2y"]
+[ext_resource type="Texture2D" uid="uid://x2divwamo6x1" path="res://resources/cutscene/PixelCutscene/CutsceneMeetMai.png" id="4_eiury"]
+[ext_resource type="Texture2D" uid="uid://baxpgoditms7x" path="res://resources/cutscene/PixelCutscene/CutscenePartnerMeetSomting.png" id="5_gsdf7"]
+[ext_resource type="Texture2D" uid="uid://3v8ebgws45el" path="res://resources/cutscene/PixelCutscene/CutsceneButlerHuman.png" id="5_y452i"]
+[ext_resource type="Texture2D" uid="uid://byn1xoyf0d8cp" path="res://resources/cutscene/PixelCutscene/CutsceneButlerKonial.png" id="6_qldaw"]
+[ext_resource type="Texture2D" uid="uid://b5udt00jurdd4" path="res://resources/cutscene/PixelCutscene/CutsceneTalkButler.png" id="6_xhh5p"]
+[ext_resource type="Texture2D" uid="uid://bbc72pth8dy0u" path="res://resources/cutscene/PixelCutscene/CutsceneKonialDark.png" id="7_eehvv"]
+[ext_resource type="Texture2D" uid="uid://cvgecfoc6kqyl" path="res://resources/cutscene/PixelCutscene/CutsceneMeetKonial.png" id="7_elv1n"]
+[ext_resource type="Texture2D" uid="uid://b0qm0tlewy3gl" path="res://resources/cutscene/PixelCutscene/CutsceneKonialEngineRoom.png" id="8_1bywx"]
+[ext_resource type="Texture2D" uid="uid://dlugg4rlupx4y" path="res://resources/cutscene/PixelCutscene/CutsceneMeetPazuzu.png" id="8_jvx6m"]
+[ext_resource type="Texture2D" uid="uid://djmaiqviytwm0" path="res://resources/cutscene/PixelCutscene/CutsceneKonialOnahole.png" id="9_gsdf7"]
+[ext_resource type="Texture2D" uid="uid://cmm1oidp3cdh3" path="res://resources/cutscene/PixelCutscene/CutsceneKonialTired.png" id="10_xhh5p"]
+[ext_resource type="Texture2D" uid="uid://q1cx68jyoigs" path="res://resources/cutscene/PixelCutscene/CutscenePazuzuAngry.png" id="15_l2brq"]
+
+[node name="CutSceneManager" type="Node" node_paths=PackedStringArray("cutscene_container")]
+script = ExtResource("1_6ysty")
+cutscene_container = NodePath("CanvasLayer/CutSceneContainer")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CutSceneContainer" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CutsceneMeetReina" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+visible = false
+layout_mode = 0
+offset_left = 379.0
+offset_top = 11.0
+offset_right = 601.0
+offset_bottom = 347.0
+texture = ExtResource("2_b86pl")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+in_anim = 4
+out_anim = 3
+
+[node name="CutsceneMeetMai" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+visible = false
+layout_mode = 0
+offset_left = 29.0
+offset_top = 11.0
+offset_right = 251.0
+offset_bottom = 347.0
+texture = ExtResource("4_eiury")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+in_anim = 3
+out_anim = 4
+
+[node name="CutscenePartnerMeetSomting" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -180.0
+offset_right = 252.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_gsdf7")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+in_anim = 2
+out_anim = 2
+
+[node name="CutsceneTalkButler" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.5
+offset_top = -180.0
+offset_right = 214.5
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_xhh5p")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+in_anim = 1
+out_anim = 2
+
+[node name="CutsceneMeetKonial" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.0
+offset_top = -145.0
+offset_right = 252.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_elv1n")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+in_anim = 1
+out_anim = 2
+
+[node name="CutsceneMeetPazuzu" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -159.0
+offset_top = -172.5
+offset_right = 191.0
+offset_bottom = 172.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_jvx6m")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+in_anim = 1
+out_anim = 2
+
+[node name="CutsceneButlerHuman" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+visible = false
+layout_mode = 0
+offset_left = 86.0
+offset_top = 16.0
+offset_right = 563.0
+offset_bottom = 323.0
+texture = ExtResource("5_y452i")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+in_anim = 1
+out_anim = 2
+
+[node name="CutsceneButlerKonial" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+visible = false
+layout_mode = 0
+offset_left = 103.0
+offset_right = 580.0
+offset_bottom = 360.0
+texture = ExtResource("6_qldaw")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+in_anim = 1
+out_anim = 2
+
+[node name="CutsceneKonialDark" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+visible = false
+layout_mode = 0
+offset_left = 78.0
+offset_right = 558.0
+offset_bottom = 360.0
+texture = ExtResource("7_eehvv")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+
+[node name="CutsceneKonialEngineRoom" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+visible = false
+layout_mode = 0
+offset_left = 328.0
+offset_top = 20.0
+offset_right = 567.0
+offset_bottom = 324.0
+texture = ExtResource("8_1bywx")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+in_anim = 4
+out_anim = 3
+
+[node name="CutsceneKonialOnahole" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+visible = false
+layout_mode = 0
+offset_left = 158.0
+offset_right = 480.0
+offset_bottom = 360.0
+texture = ExtResource("9_gsdf7")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+
+[node name="CutsceneKonialTired" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+visible = false
+layout_mode = 0
+offset_left = 341.0
+offset_top = 25.0
+offset_right = 596.0
+offset_bottom = 316.0
+texture = ExtResource("10_xhh5p")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+in_anim = 4
+out_anim = 3
+
+[node name="CutscenePazuzuAngry" type="TextureRect" parent="CanvasLayer/CutSceneContainer"]
+visible = false
+layout_mode = 0
+offset_left = 29.0
+offset_top = 23.0
+offset_right = 264.0
+offset_bottom = 313.0
+texture = ExtResource("15_l2brq")
+stretch_mode = 2
+script = ExtResource("3_4rp2y")
+in_anim = 3
+out_anim = 4

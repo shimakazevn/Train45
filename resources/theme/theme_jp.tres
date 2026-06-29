@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ctl1lgtghomuo"]
+
+[ext_resource type="FontFile" uid="uid://dtpapa2ymmbbo" path="res://resources/font/NotoSansCJKjp-Regular.otf" id="1_lhknl"]
+
+[resource]
+default_font = ExtResource("1_lhknl")

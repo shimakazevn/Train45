@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://5bmejr5gxnga"]
+
+[ext_resource type="Texture2D" uid="uid://y8x5m1djs6cf" path="res://resources/ui/EventCoverImage/Hpreview_reina_1.png" id="1_eg1mq"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_sd81j"]
+
+[resource]
+script = ExtResource("1_sd81j")
+main_love_event = true
+scene_description = "SCENE_DOGGYSTYLE"
+scene_name = "scene1"
+dialog_title = "e_bottom_eye"
+stage_name = "stage_12"
+love_ability = 2
+preview_texture = ExtResource("1_eg1mq")
+is_position = Vector2(788, 276)
+ahen_keys = PackedStringArray("SCENE_REINA_AHEN_2", "SCENE_REINA_AHEN_3", "SCENE_REINA_AHEN_4", "SCENE_REINA_AHEN_5", "SCENE_REINA_AHEN_6")

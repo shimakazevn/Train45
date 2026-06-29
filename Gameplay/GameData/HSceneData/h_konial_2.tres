@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://bhq3tyllr0li2"]
+
+[ext_resource type="Texture2D" uid="uid://xgtkocr2u68g" path="res://resources/ui/EventCoverImage/Hpreview_konial_1.png" id="1_dunxy"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_opkh6"]
+
+[resource]
+script = ExtResource("1_opkh6")
+scene_description = "SCENE_MATING_PRESS"
+scene_name = "scene3"
+dialog_title = "konial_love_1"
+partner = 2
+love_ability = 1
+preview_texture = ExtResource("1_dunxy")
+is_position = Vector2(490, 231)
+unlock_chapter = 6
+ahen_keys = PackedStringArray("SCENE_KONIAL_AHEN_2", "SCENE_KONIAL_AHEN_3", "SCENE_KONIAL_AHEN_5")

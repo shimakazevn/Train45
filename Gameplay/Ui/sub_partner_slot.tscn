@@ -1,0 +1,115 @@
+[gd_scene load_steps=12 format=3 uid="uid://deukiem5nhbtf"]
+
+[ext_resource type="Texture2D" uid="uid://b730bacmmvgj0" path="res://resources/ui/gui/circle_frame.png" id="1_64gf7"]
+[ext_resource type="Script" uid="uid://dpnmwjl5ai5in" path="res://Gameplay/Ui/sub_partner_slot.gd" id="1_nwpfh"]
+[ext_resource type="Texture2D" uid="uid://c5dv2njyhfl01" path="res://resources/ui/icons/sd_icon/reina.png" id="2_nwpfh"]
+[ext_resource type="Texture2D" uid="uid://bc8vajefmu6l" path="res://resources/ui/hp_icon_base.png" id="3_4lcw8"]
+[ext_resource type="Texture2D" uid="uid://c8y3q2j4mw7g8" path="res://resources/ui/hp_icon_white.png" id="4_xrbro"]
+[ext_resource type="PackedScene" uid="uid://dbf7oaeamae16" path="res://scene/UI/love_progress_bar.tscn" id="5_5omsf"]
+[ext_resource type="Texture2D" uid="uid://b6ymw5nwptv8v" path="res://resources/ui/hp_icon_active.png" id="6_jniq1"]
+[ext_resource type="FontFile" uid="uid://b420coqgx7cq0" path="res://resources/font/TsunagiGothic.ttf" id="7_87kl2"]
+[ext_resource type="Texture2D" uid="uid://x8nf4sxtl22g" path="res://resources/ui/gui/DialogScreen/gauge base.png" id="8_mlueo"]
+[ext_resource type="Texture2D" uid="uid://d3qndir0h64ok" path="res://resources/ui/gui/DialogScreen/gauge_active_03.png" id="9_wb8q8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_il7u4"]
+font = ExtResource("7_87kl2")
+font_size = 31
+outline_size = 10
+outline_color = Color(0.288164, 0.252246, 0.263354, 1)
+
+[node name="SubPartnerSlot" type="Control"]
+custom_minimum_size = Vector2(68, 30)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 68.0
+offset_bottom = 30.0
+script = ExtResource("1_nwpfh")
+
+[node name="VisualBox" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubNpcFrame" type="TextureRect" parent="VisualBox"]
+clip_children = 2
+z_index = -1
+texture_filter = 2
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 1
+offset_right = 25.0
+offset_bottom = 25.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("1_64gf7")
+expand_mode = 1
+
+[node name="CurrentPartnerUI" type="TextureRect" parent="VisualBox/SubNpcFrame"]
+texture_filter = 2
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.5
+offset_top = -12.5
+offset_right = 12.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture = ExtResource("2_nwpfh")
+expand_mode = 1
+
+[node name="SubLove" type="PanelContainer" parent="VisualBox"]
+self_modulate = Color(1, 1, 1, 0)
+texture_filter = 2
+layout_mode = 1
+offset_left = 3.0
+offset_top = -23.0
+offset_right = 61.0
+offset_bottom = 27.0
+scale = Vector2(0.255, 0.255)
+pivot_offset = Vector2(27.8395, 35.679)
+size_flags_horizontal = 0
+size_flags_vertical = 8
+mouse_filter = 2
+
+[node name="WhiteBar" type="TextureProgressBar" parent="VisualBox/SubLove"]
+texture_filter = 2
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 59.0
+fill_mode = 3
+texture_under = ExtResource("3_4lcw8")
+texture_progress = ExtResource("4_xrbro")
+texture_progress_offset = Vector2(0, 5)
+
+[node name="LoveProgressBar" parent="VisualBox/SubLove" instance=ExtResource("5_5omsf")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_under = null
+texture_progress = ExtResource("6_jniq1")
+
+[node name="LoveLevel" type="Label" parent="VisualBox/SubLove"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 31
+text = "1"
+label_settings = SubResource("LabelSettings_il7u4")
+
+[node name="EroGaugeProgress" type="TextureProgressBar" parent="VisualBox"]
+layout_mode = 1
+offset_left = 24.0
+offset_top = 17.0
+offset_right = 224.0
+offset_bottom = 41.0
+scale = Vector2(0.2, 0.2)
+value = 50.0
+texture_under = ExtResource("8_mlueo")
+texture_progress = ExtResource("9_wb8q8")
+texture_progress_offset = Vector2(6, 6)

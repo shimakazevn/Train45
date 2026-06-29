@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://inqk8r0xgkxe"
+
+[deps]
+
+files=["res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.en.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.jp.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.ko.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.zh.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.cn.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.vi.translation"]
+
+source_file="res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.csv"
+dest_files=["res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.en.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.jp.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.ko.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.zh.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.cn.translation", "res://Gameplay/Dialog/Translation/Ui/UI_Text_Translations.vi.translation"]
+
+[params]
+
+compress=true
+delimiter=0

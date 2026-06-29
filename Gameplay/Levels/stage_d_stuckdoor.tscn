@@ -1,0 +1,685 @@
+[gd_scene load_steps=51 format=3]
+
+[ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://7y7hhjsu6fds" path="res://Gameplay/Levels/stuck_door_event_component.gd" id="2_syup6"]
+[ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
+[ext_resource type="PackedScene" uid="uid://xm3jf22phtyd" path="res://scene/component/anomaly_event_component.tscn" id="6_gvche"]
+[ext_resource type="Script" uid="uid://dktcbpj7ucwlr" path="res://Gameplay/train_standard.gd" id="12_0rqms"]
+[ext_resource type="Texture2D" uid="uid://bvv1tkssw1by1" path="res://resources/bg_0.png" id="14_mogqn"]
+[ext_resource type="Texture2D" uid="uid://003g6qjlo7jb" path="res://resources/bg_1.png" id="15_6rsnw"]
+[ext_resource type="Texture2D" uid="uid://r14p0yia2rvt" path="res://resources/bg/stuck_door/stuck_door_floor.png" id="15_07nih"]
+[ext_resource type="Texture2D" uid="uid://c4jsnyssx0b0f" path="res://resources/bg_2.png" id="16_ei1pc"]
+[ext_resource type="Texture2D" uid="uid://bmbrtsht5bwjx" path="res://resources/bg_3.png" id="17_dpcdc"]
+[ext_resource type="Texture2D" uid="uid://bclibcrm6mlss" path="res://resources/bg/stuck_door/stuck_door.png" id="18_ngwj7"]
+[ext_resource type="Texture2D" uid="uid://bd21n5c4ukqyb" path="res://resources/bg_4.png" id="18_qnb12"]
+[ext_resource type="Texture2D" uid="uid://st3bf80681tl" path="res://resources/bg_5.png" id="19_wemlk"]
+[ext_resource type="Texture2D" uid="uid://2c1wv5xmxoly" path="res://resources/bg_floor2.png" id="21_4aibe"]
+[ext_resource type="Texture2D" uid="uid://dgkt5na1k6s3b" path="res://resources/bg_floorshadow.png" id="22_ctg4c"]
+[ext_resource type="Script" uid="uid://bkoadd8rxuaih" path="res://scene/PointLight2D.gd" id="24_0xmkh"]
+[ext_resource type="Texture2D" uid="uid://dma7rtd6v2cq0" path="res://resources/train_screen_empty.png" id="25_82fnd"]
+[ext_resource type="PackedScene" uid="uid://lg6623mk53cw" path="res://scene/component/teleport_component.tscn" id="26_1r73j"]
+[ext_resource type="PackedScene" uid="uid://bubj7avlvnh62" path="res://Gameplay/train_screen.tscn" id="26_gilft"]
+[ext_resource type="Texture2D" uid="uid://du0ewe3ii4vjn" path="res://resources/bg_train_wall.png" id="27_50oqc"]
+[ext_resource type="PackedScene" uid="uid://8mky14d7t3vi" path="res://Gameplay/train_wall_normal.tscn" id="28_w1jdk"]
+[ext_resource type="Script" uid="uid://bwkxsibmbgi6k" path="res://scene/ParallaxBackground.gd" id="29_iyww2"]
+[ext_resource type="Resource" uid="uid://dvvqe45fkrgk5" path="res://Gameplay/GameData/HSceneData/h_mai_stuckdoor.tres" id="30_a86ny"]
+[ext_resource type="Texture2D" uid="uid://br0jejak2snt6" path="res://resources/dust.png" id="30_dt07b"]
+[ext_resource type="PackedScene" uid="uid://dnc5rb3rrpan3" path="res://scene/UI/clear_text.tscn" id="31_82fnd"]
+[ext_resource type="PackedScene" uid="uid://bxk6xej0qykv7" path="res://scene/component/stage_handler.tscn" id="32_gilft"]
+[ext_resource type="Script" uid="uid://dsomb6g1hlvem" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="33_50oqc"]
+[ext_resource type="Script" uid="uid://dxlagu4dbag77" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="34_w1jdk"]
+[ext_resource type="PackedScene" uid="uid://djbwoq5ul6rbk" path="res://scene/game_object/player/player.tscn" id="38_dr17e"]
+[ext_resource type="PackedScene" uid="uid://dsch54fxvgg58" path="res://Gameplay/door.tscn" id="41_i5sgb"]
+
+[sub_resource type="Resource" id="Resource_7xtoy"]
+script = ExtResource("34_w1jdk")
+duration = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v61mu"]
+size = Vector2(1920, 360)
+
+[sub_resource type="Gradient" id="Gradient_ve04u"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b1ot1"]
+gradient = SubResource("Gradient_ve04u")
+fill_to = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_j6rtj"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8wici"]
+gradient = SubResource("Gradient_j6rtj")
+fill_from = Vector2(0, 0.193732)
+fill_to = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_7x3k2"]
+offsets = PackedFloat32Array(0, 0.726457)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3frck"]
+gradient = SubResource("Gradient_7x3k2")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_sic71"]
+offsets = PackedFloat32Array(0, 0.747292)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g3lbc"]
+gradient = SubResource("Gradient_sic71")
+width = 128
+height = 128
+fill = 1
+fill_from = Vector2(0.504274, 0.478632)
+
+[sub_resource type="Gradient" id="Gradient_edaoa"]
+offsets = PackedFloat32Array(0, 0.726457)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n15tv"]
+gradient = SubResource("Gradient_edaoa")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="Curve" id="Curve_gbfif"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.271375, 1), 0.0, 0.0, 0, 0, Vector2(0.732342, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_q8yis"]
+curve = SubResource("Curve_gbfif")
+
+[sub_resource type="Gradient" id="Gradient_pn2hk"]
+colors = PackedColorArray(3, 3, 3, 1, 0.918415, 0.49731, 3.85046e-07, 0.321569)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ac4ch"]
+gradient = SubResource("Gradient_pn2hk")
+
+[sub_resource type="Curve" id="Curve_cye15"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.208178, 1), 0.0, 0.0, 0, 0, Vector2(0.72119, 1), 0.0289856, 0.0289856, 0, 0, Vector2(0.977695, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_5yc10"]
+curve = SubResource("Curve_cye15")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mh8ss"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 100.0
+angle_max = 180.0
+direction = Vector3(1, 1, 0)
+spread = 68.182
+initial_velocity_min = 2.0
+initial_velocity_max = 5.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.3
+scale_max = 0.4
+scale_curve = SubResource("CurveTexture_5yc10")
+scale_over_velocity_max = 689.39
+color = Color(1, 1, 1, 0.815686)
+color_ramp = SubResource("GradientTexture1D_ac4ch")
+alpha_curve = SubResource("CurveTexture_q8yis")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hkbfc"]
+size = Vector2(20, 383.5)
+
+[node name="StageDStuckDoor" type="Node2D" node_paths=PackedStringArray("player", "current_npc", "doors", "teleports")]
+script = ExtResource("1_5frgf")
+player = NodePath("TrainStandard/Entity/Player")
+current_npc = NodePath("TrainStandard/Entity/CurrentNPC")
+doors = [NodePath("frontDoor"), NodePath("Exit")]
+teleports = [NodePath("TeleportComponent")]
+stage_type = 4
+extra_info = "d_stuckdoor"
+
+[node name="StuckDoorEventComponent" type="Node" parent="."]
+script = ExtResource("2_syup6")
+
+[node name="TeleportComponent" parent="." instance=ExtResource("26_1r73j")]
+entry_direction = 3
+path_to_new_scene = "res://Gameplay/Levels/base_00.tscn"
+entry_door_name = "TeleportComponent"
+
+[node name="ClearText" parent="." instance=ExtResource("31_82fnd")]
+visible = false
+
+[node name="StageHandler" parent="." instance=ExtResource("32_gilft")]
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+position = Vector2(321, 180)
+script = ExtResource("33_50oqc")
+priority = 10
+follow_mode = 2
+follow_target = NodePath("../TrainStandard/Entity/Player")
+snap_to_pixel = true
+tween_resource = SubResource("Resource_7xtoy")
+follow_offset = Vector2(0, -150)
+follow_damping = true
+follow_damping_value = Vector2(0.3, 0.3)
+draw_limits = true
+limit_target = NodePath("../CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(961, 180)
+shape = SubResource("RectangleShape2D_v61mu")
+
+[node name="TrainStandard" type="Node2D" parent="." node_paths=PackedStringArray("train_sprite") groups=["Train"]]
+script = ExtResource("12_0rqms")
+train_sprite = NodePath("train")
+
+[node name="BackGround" type="Node2D" parent="TrainStandard"]
+z_index = -3
+
+[node name="bg1" type="Sprite2D" parent="TrainStandard/BackGround"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("14_mogqn")
+centered = false
+
+[node name="bg2" type="Sprite2D" parent="TrainStandard/BackGround"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("15_6rsnw")
+centered = false
+
+[node name="bg3" type="Sprite2D" parent="TrainStandard/BackGround"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("16_ei1pc")
+centered = false
+
+[node name="bg4" type="Sprite2D" parent="TrainStandard/BackGround"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("17_dpcdc")
+centered = false
+
+[node name="bg5" type="Sprite2D" parent="TrainStandard/BackGround"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("18_qnb12")
+centered = false
+
+[node name="bg6" type="Sprite2D" parent="TrainStandard/BackGround"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("19_wemlk")
+centered = false
+
+[node name="PointLight2D3" type="PointLight2D" parent="TrainStandard/BackGround"]
+position = Vector2(957, 157)
+scale = Vector2(29.6899, 4.88989)
+color = Color(1, 0.656122, 0.454082, 1)
+energy = 1.39
+range_z_min = -4
+range_z_max = -3
+texture = SubResource("GradientTexture2D_b1ot1")
+
+[node name="bgFloor" type="Sprite2D" parent="TrainStandard"]
+modulate = Color(2, 2, 2, 1)
+position = Vector2(0, 180)
+texture = ExtResource("15_07nih")
+centered = false
+
+[node name="bgFloor2" type="Sprite2D" parent="TrainStandard"]
+visible = false
+self_modulate = Color(2.3, 2.3, 2.1, 1)
+position = Vector2(0, 180)
+texture = ExtResource("21_4aibe")
+centered = false
+
+[node name="bgFloorShadow" type="Sprite2D" parent="TrainStandard"]
+texture_repeat = 2
+position = Vector2(0, 180)
+texture = ExtResource("22_ctg4c")
+centered = false
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="TrainStandard"]
+light_mask = 513
+color = Color(0.73362, 0.819888, 0.834824, 1)
+blend_mode = 1
+
+[node name="PointLight2D3" type="PointLight2D" parent="TrainStandard"]
+position = Vector2(962, 179)
+scale = Vector2(29.9375, 6.08)
+color = Color(0.975513, 0.855764, 0.763505, 1)
+energy = 0.79
+range_z_min = 3
+range_z_max = 3
+texture = SubResource("GradientTexture2D_8wici")
+
+[node name="PointLight2D4" type="PointLight2D" parent="TrainStandard"]
+position = Vector2(961, 179)
+scale = Vector2(29.9688, 6.08)
+color = Color(0.806883, 0.431785, 0.118247, 1)
+energy = 0.9
+range_z_max = -1
+texture = SubResource("GradientTexture2D_8wici")
+
+[node name="train" type="Sprite2D" parent="TrainStandard"]
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("18_ngwj7")
+centered = false
+
+[node name="PointLight2D" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(664.356, 188.792)
+scale = Vector2(5.64989, 3.44989)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 1.07
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D2" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(1306, 188.396)
+scale = Vector2(5.64989, 3.44989)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 1.07
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+
+[node name="DoorLight" type="Node2D" parent="TrainStandard/train"]
+position = Vector2(936.356, 127.633)
+scale = Vector2(2.72989, 2.56988)
+
+[node name="PointLight2D3" type="PointLight2D" parent="TrainStandard/train/DoorLight"]
+position = Vector2(0, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D4" type="PointLight2D" parent="TrainStandard/train/DoorLight"]
+position = Vector2(33.3347, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D5" type="PointLight2D" parent="TrainStandard/train/DoorLight"]
+position = Vector2(234.206, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D6" type="PointLight2D" parent="TrainStandard/train/DoorLight"]
+position = Vector2(267.541, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D7" type="PointLight2D" parent="TrainStandard/train/DoorLight"]
+position = Vector2(-235.044, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D9" type="PointLight2D" parent="TrainStandard/train/DoorLight"]
+position = Vector2(-314.664, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D10" type="PointLight2D" parent="TrainStandard/train/DoorLight"]
+position = Vector2(331.751, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D8" type="PointLight2D" parent="TrainStandard/train/DoorLight"]
+position = Vector2(-201.709, 18.0242)
+scale = Vector2(1.065, 1.41)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.8
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+
+[node name="PointLight2D11" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(999, 323.236)
+scale = Vector2(4.32989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D14" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(1646, 323.236)
+scale = Vector2(4.32989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D15" type="PointLight2D" parent="TrainStandard/train"]
+visible = false
+position = Vector2(1883, 349)
+scale = Vector2(4.32989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D16" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(364, 323.236)
+scale = Vector2(4.32989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D17" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(109, 323.236)
+scale = Vector2(3.20989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D12" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(705, 323.236)
+scale = Vector2(4.76989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D13" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(1329, 323.236)
+scale = Vector2(4.76989, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="PointLight2D18" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(1218, -19)
+scale = Vector2(1.5, 1)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 1.72
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_g3lbc")
+
+[node name="PointLight2D19" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(1403, -19)
+scale = Vector2(1.5, 1)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 1.72
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_g3lbc")
+
+[node name="PointLight2D20" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(1802, -19)
+scale = Vector2(1.5, 1)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 1.72
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_g3lbc")
+
+[node name="PointLight2D21" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(783, -19)
+scale = Vector2(1.5, 1)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 1.72
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_g3lbc")
+
+[node name="PointLight2D22" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(588, -19)
+scale = Vector2(1.5, 1)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 1.72
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_g3lbc")
+
+[node name="PointLight2D23" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(133, -19)
+scale = Vector2(1.5, 1)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 1.72
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_g3lbc")
+
+[node name="PointLight2D24" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(1, 67)
+scale = Vector2(2.12988, 1.92989)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 0.79
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+
+[node name="PointLight2D25" type="PointLight2D" parent="TrainStandard/train"]
+visible = false
+position = Vector2(1920, 67)
+scale = Vector2(2.12988, 1.92989)
+color = Color(0.997989, 0.973408, 0.969791, 1)
+energy = 0.79
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_3frck")
+
+[node name="PointLight2D26" type="PointLight2D" parent="TrainStandard/train"]
+position = Vector2(1862.5, 349)
+scale = Vector2(1.73438, 2.56988)
+color = Color(0.913549, 0.704323, 0.492545, 1)
+energy = 0.47
+range_z_min = 0
+range_z_max = 2
+texture = SubResource("GradientTexture2D_n15tv")
+script = ExtResource("24_0xmkh")
+energy_offset = 0.47
+
+[node name="Train_screen_empty" type="Sprite2D" parent="TrainStandard/train"]
+z_index = -1
+texture = ExtResource("25_82fnd")
+centered = false
+
+[node name="CanvasGroup" type="CanvasGroup" parent="TrainStandard/train"]
+self_modulate = Color(1.7, 1.7, 1.7, 1)
+z_index = -1
+position = Vector2(344, 28)
+
+[node name="TrainScreen" parent="TrainStandard/train/CanvasGroup" instance=ExtResource("26_gilft")]
+position = Vector2(3, 0)
+
+[node name="TrainScreen2" parent="TrainStandard/train/CanvasGroup" instance=ExtResource("26_gilft")]
+position = Vector2(641, 0)
+
+[node name="TrainScreen3" parent="TrainStandard/train/CanvasGroup" instance=ExtResource("26_gilft")]
+position = Vector2(1282, 0)
+
+[node name="BgTrainWall" type="Sprite2D" parent="TrainStandard"]
+texture = ExtResource("27_50oqc")
+centered = false
+
+[node name="TrainWall_normal" parent="TrainStandard" instance=ExtResource("28_w1jdk")]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="TrainStandard"]
+follow_viewport_enabled = true
+scroll_ignore_camera_zoom = true
+script = ExtResource("29_iyww2")
+
+[node name="layer1" type="ParallaxLayer" parent="TrainStandard/ParallaxBackground"]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="layer2" type="ParallaxLayer" parent="TrainStandard/ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="layer3" type="ParallaxLayer" parent="TrainStandard/ParallaxBackground"]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="layer4" type="ParallaxLayer" parent="TrainStandard/ParallaxBackground"]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="layer5" type="ParallaxLayer" parent="TrainStandard/ParallaxBackground"]
+motion_mirroring = Vector2(1920, 0)
+
+[node name="layer6" type="ParallaxLayer" parent="TrainStandard/ParallaxBackground"]
+motion_scale = Vector2(1.2, 1.2)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="TrainStandard"]
+texture_filter = 1
+position = Vector2(686, 182)
+scale = Vector2(1, 0.76)
+amount = 10
+texture = ExtResource("30_dt07b")
+lifetime = 10.0
+fixed_fps = 7
+process_material = SubResource("ParticleProcessMaterial_mh8ss")
+
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="TrainStandard"]
+texture_filter = 1
+position = Vector2(99, 182)
+scale = Vector2(0.56, 0.76)
+amount = 10
+texture = ExtResource("30_dt07b")
+lifetime = 10.0
+fixed_fps = 7
+process_material = SubResource("ParticleProcessMaterial_mh8ss")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="TrainStandard"]
+texture_filter = 1
+position = Vector2(1330, 182)
+scale = Vector2(0.87999, 0.76)
+amount = 10
+texture = ExtResource("30_dt07b")
+lifetime = 10.0
+fixed_fps = 7
+process_material = SubResource("ParticleProcessMaterial_mh8ss")
+
+[node name="GPUParticles2D5" type="GPUParticles2D" parent="TrainStandard"]
+texture_filter = 1
+position = Vector2(986, 182)
+scale = Vector2(0.87999, 0.76)
+amount = 10
+texture = ExtResource("30_dt07b")
+lifetime = 10.0
+fixed_fps = 7
+process_material = SubResource("ParticleProcessMaterial_mh8ss")
+
+[node name="GPUParticles2D6" type="GPUParticles2D" parent="TrainStandard"]
+texture_filter = 1
+position = Vector2(1629, 182)
+scale = Vector2(0.87999, 0.76)
+amount = 10
+texture = ExtResource("30_dt07b")
+lifetime = 10.0
+fixed_fps = 7
+process_material = SubResource("ParticleProcessMaterial_mh8ss")
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="TrainStandard"]
+texture_filter = 1
+position = Vector2(1874, 182)
+scale = Vector2(0.4, 0.76)
+amount = 10
+texture = ExtResource("30_dt07b")
+lifetime = 10.0
+fixed_fps = 7
+process_material = SubResource("ParticleProcessMaterial_mh8ss")
+
+[node name="Entity" type="Node2D" parent="TrainStandard"]
+y_sort_enabled = true
+
+[node name="CurrentNPC" parent="TrainStandard/Entity" instance=ExtResource("6_ajpmm")]
+position = Vector2(829, 339)
+npc_flip = true
+
+[node name="Player" parent="TrainStandard/Entity" instance=ExtResource("38_dr17e")]
+z_index = 3
+position = Vector2(43, 338)
+
+[node name="frontDoor" parent="." instance=ExtResource("41_i5sgb")]
+position = Vector2(-24, 356)
+entry_direction = 1
+transition_type = "zelda"
+push_distance = 100
+
+[node name="Exit" parent="." instance=ExtResource("41_i5sgb")]
+position = Vector2(2180, 352)
+entry_direction = 3
+transition_type = "zelda"
+push_distance = 100
+path_to_new_scene = "res://Gameplay/Levels/event_OL_00.tscn"
+entry_door_name = "frontDoor"
+
+[node name="BgTrainWall" type="Sprite2D" parent="."]
+texture = ExtResource("27_50oqc")
+centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1568, 337)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(342, -162)
+shape = SubResource("RectangleShape2D_hkbfc")
+
+[node name="AnomalyEventComponent" parent="." instance=ExtResource("6_gvche")]
+position = Vector2(1015, 161)
+h_scene_info = ExtResource("30_a86ny")

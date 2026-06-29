@@ -1,0 +1,197 @@
+do GameEvents.emit_cutscene_play("e_swimsuit_cut1")
+join mai left
+(계속되는 탐색.. 벌써 몇번인지도 모를 정도로 전차 안을 돌아다니고 있다.) #id:f97
+- 하아.. 마이, 잠깐. #id:f98
+do GameEvents.emit_cutscene_play("e_swimsuit_cut2")
+mai: 응? 왜 그래? 죽을거같은 표정으로 말야. #id:f99
+- 요즘 들어 탐색 페이스가.. #id:f9a
+- 눈에 띄게 빨라진 거 같아. #id:f9b
+mai: 그야 네가 열심히 해주는 덕분이지. 대부분의 이변은 너가 찾아내니까. #id:f9c
+emotion mai Smile
+mai: 내가 하는거라 봐야 앞서서 문을 열어 놓고 위험한 게 있는지 미리 들여다 보는 정도? #id:f9d
+확실히.. 어느정도 노하우가 쌓인 우리들은 각자의 장점을 살려 효율적인 탐색을 진행하고 있었다. 하지만.. #id:f9e
+- 그게.. 지나치게 효율적이랄까. #id:f9f
+- 내 몸이 프로세스를 따라가지 못하겠어.. #id:fa0
+emotion mai Serious
+mai: 에? 아. 그러고 보니.. 땀 범벅이잖아! 그렇게나 힘들어? #id:fa1
+mai: 이거 참, 운동 부족이라고! 어디 봐봐. #id:fa2
+- 전차에 타고부터는 평생 살아온 것보다 더 움직인 거 같아.. #id:fa3
+- 마이는 아무렇지도 않아..? #id:fa4
+emotion mai Idle
+mai: 이 정도 쯤이야 가뿐하지! 건강한 신체를 타고났으니까. 감기도 걸린 적 없어. #id:fa5
+emotion mai Flat
+mai: 하지만.. 그래, 고생했구나. #id:fa6
+do GameEvents.emit_cutscene_play("e_swimsuit_cut3")
+마이가 다가 와 팔을 벌려 안아준다. 잔뜩 흘린 땀 따위는 신경쓰지 않는 듯이. #id:fa7
+꾸욱 하고 커다란 가슴이 눌린다. 매우 따듯하고.. 마음이 편해진다. #id:fa8
+mai: 항상 구석구석 탐색하고, 위험한 상황에도 우릴 지켜 줬어. 얼마나 믿음직한지 몰라. #id:fa9
+mai: 사실 좀 무서웠거든. 물론 너희들과 만나서 즐거웠지만.. 집으로 돌아갈 수 있을까 하고. #id:faa
+emotion mai Laugh
+mai: 그때마다 네가.. 안심시켜 줬으니까. 지금까지 버틸 수 있었어. #id:fab
+mai: 그치만 넌.. 그렇지 않지? 아무리 힘들어도 혼자 버텨온 거야. 지금처럼. #id:fac
+mai: ...으흠. 그러니까! 원하는 게 있으면 언제든 말 해 달라고! 헤헤. #id:fad
+emotion mai Smile
+mai: 아, 그래! 아니면 내가 업어 줄까? 자, 사양하지 말고. #id:fae
+mai: 나는 다리, 너는 눈을 맡는 거야. 이러면 최강이잖아? 단숨에 파바박 클리어 할 게 분명해! #id:faf
+- ...아니 사양할게 #id:fb0
+- 남자로서의 존엄성이 무너질 거 같아. #id:fb1
+포기하지 않고 날 업으려는 마이를 설득하다 결국 잠시 쉬어가기로 했다. #id:fb2
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("e_swimsuit_cut1")
+emotion mai Idle
+mai: 이제 좀 나아졌어? 생각해보니 이렇게 앉아서 쉰 적이 몇 번 없는 거 같아. #id:fb3
+emotion mai Flat
+mai: 그리고 너만큼은 아니지만 땀도 나서 찝찝해.. #id:fb4
+mai: 이럴 땐 역시.. #id:fb5
+- 얼음이 담긴 음료수 #id:fb6
+	emotion mai Smile
+	mai: 하아~ 좋지. 배탈나니까 얼음은 빼지만.. #id:fb7
+	mai: 그러고보니 전차에 타고부터 갈증이 사라졌어. 방금 전까지 전혀 몰랐네. #id:fb8
+- 목욕 후의 시원한 선풍기 바람 #id:fb9
+	emotion mai Smile
+	mai: 뭘 좀 아는데? 지금 너라면 특히 원할 거 같아. #id:fba
+	mai: 정말 더운 날에는 차가운 물로 욕조를 채우고 반신욕하곤 하거든. 으으. 상상만 해도 시원해~ #id:fbb
+mai: 더운 날엔 여러가지 있겠지만.. 역시 그거지. #id:fbc
+마이가 바로 옆의 포스터를 가리킨다 #id:fbd
+- 이건.. 바닷가? #id:fbe
+emotion mai Idle
+mai: 정답! 한여름 해변이 뭐니뭐니해도 제일이야! #id:fbf
+mai: 해가 쨍쨍하면 태닝도 잘 먹고, 맛있는 음식도 많고.. 물에서 노는 것도 정말 좋아하거든! #id:fc0
+- 헤에.. 그렇구나. #id:fc1
+emotion mai Surprised
+mai: 헤에. 라니! 서.. 설마. 그 소문의 '인 도어'파? 처음 봤어! #id:fc2
+- 희귀한 동물 보듯이 대하지 마. #id:fc3
+- 단지 해수욕장이라던가.. 마이처럼 즐길 자신이.. #id:fc4
+mai: 에에? 일 년에 한번 뿐이잖아! 모래사장인데? 불꽃놀도 있다고? #id:fc5
+바닷가라.. 마지막으로 가 본 게 언제더라.. #id:fc6
+- 애니에선 자주 보긴 하는데.. #id:fc7
+- 그 있잖아. 수박 깨기 라던지. #id:fc8
+emotion mai Serious
+mai: 응? 수박 깨기? 그런 걸 하던가? 그게 뭐야? 어떻게 하는데? #id:fc9
+- 아, 아니. 잊어 줘. #id:fca
+emotion mai Flat
+mai: 아아.. 하지만 아쉽네. 나중에 바닷가에 놀러 가게 되면.. #id:fcb
+mai: 귀여운 수영복도 잔뜩 보여줄 생각이었는데. #id:fcc
+- ...! #id:fcd
+emotion mai Idle
+mai: ..어? 뭐야. 갑자기 눈에서 빛이 나네. 전까지는 흐리멍텅한 죽은 눈을 하고 있다가.. #id:fce
+mai: 수영복에 반응하는 거야? 그야.. 바닷가에 가면 당연하잖아? 비키니라던가. #id:fcf
+mai: 나 사실 엄청 많거든, 비키니. 입을 기회는 여름 뿐이니까 특히 기다려져. #id:fd0
+- 보.. 보고싶어! #id:fd1
+- 마이의 비키니 차림! #id:fd2
+emotion mai Smile
+mai: 하하하! 으응, 나도 보여주고 싶은 걸. 넌 항상 이쁘다고 해 주니까.. 비키니 차림은 어떨까 하고.. #id:fd3
+emotion mai Idle
+mai: 그러니까~ 이곳에서 나가면.. 같이 가자. 바닷가. #id:fd4
+mai: 종일 해변에서 놀다가.. 맛있는 것도 먹고, 저녁이면 불꽃놀이도 보고.. 그 다음엔.. #id:fd5
+update mai [extra_data="show Etc/Blur"]
+mai: 단 둘이 밤새도록 네 커다란 자지로.. 아침까지 하는 섹스.. 서로의 체온을 확인하면서. #id:fd6
+emotion mai Laugh
+mai: 땀 범벅이 되겠지만.. 바닷가니까 상관 없잖아. 어때? 이래도 해변이 내키지 않아? #id:fd7
+- 아뇨.. 무척 좋아졌습니다. #id:fd8
+- 내 최고의 계절은 이제부터 여름이야. #id:fd9
+emotion mai Idle
+mai: 헤헤.. 그러니까. 잔뜩 힘내보자고. 어서 이 전차에서 나가야 하지 않겠어? #id:fda
+어느 새 코앞까지 다가온 마이의 숨결이 닿는다. 이어서, 자연스럽게 그녀의 입술이 닿는다. #id:fdb
+leave mai
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="2.0"]
+mai: 으음.. 츄읍.. 응.. #id:fdc
+mai: 응.. 습관이 돼 버린 거 같아. 틈만 나면 키스하는 거.. #id:fdd
+mai: 하지만.. 너와 함께 할 여름을 생각하니.. 츄.. 음.. 어쩔 수 없잖아.. #id:fde
+달콤한 한숨과 함께 혀를 섞으며 내 손은 마이의 상의를 천천히 파고든다. #id:fdf
+무거운 중량감의 가슴을 받쳐들며 부드럽게 살이 파묻히는 감각을 느낀다.. #id:fe0
+한 손으로 다 들어오지 않는 젖가슴을 담는 브라의 감촉을.. #id:fe1
+- ..응? #id:fe2
+- 뭔가 부드러운 천의 느낌. #id:fe3
+join mai left
+mai: 으음.. 으응? 뭐가..? #id:fe4
+- 평소하고 다른 속옷 감촉인데. #id:fe5
+- 혹시 브래지어 바꿔 입었어? #id:fe6
+mai: 뭐? 그럴 리가.. 난 항상 입던 건데. #id:fe7
+마이가 본인의 옷 안으로 손을 넣어 주물거린다. #id:fe8
+emotion mai Dislike
+mai: 잠시만.. 어디.. 응? #id:fe9
+mai: ..그러네, 뭔가 이질적인 느낌. 응? 이건? 잠깐만, 밑에도 뭔가.. #id:fea
+자리에서 일어나 상의를 벗는다. 옷이 말려 올라가며 커다란 가슴 방지턱이 따라 올라가다 중력에 의해 덜컹 하고 출렁인다. #id:feb
+이어서 핫팬츠의 단추도 풀어 벗어 던지자.. #id:fec
+[clear time="2.0" text="false" portraits="false" music="false" positions="false" style="false"]
+leave mai
+do TransitionScreen.dialog_transition()
+[background scene="res://scene/dialogic_blur_bg.tscn" arg="res://resources/cutscene/cutscene_swimsuit.png" fade="0.0"]
+mai: 에에?! #id:fed
+mai: 뭐야? 이 비키니?! 내가 이런 걸 입었던가? #id:fee
+- 이.. 이게 마이의 비키니. #id:fef
+mai: 아냐, 난 이렇게 면적이 작은 비키니는 안 입거든? 나쁘지 않지만.. 갑자기 어떻게? #id:ff0
+- 아마도.. 이것도 이변이 아닐까? #id:ff1
+mai: 이변? 이변이라면 진작에 찾은 게 아니었어? 이것까지 이변으로 치는 건가? #id:ff2
+mai: 하마터면 영문도 모르고 시작 지점으로 돌아갈 뻔 했네.. 응. 역시 너 제법이네, 이런 것까지 알아채다니! #id:ff3
+- 난 그냥 가슴을 주무르고 싶어서.. #id:ff4
+- 어쨌든 잘 됐어. #id:ff5
+mai: 와아.. 그런데 왠지 기분이 묘한 걸, 해변에서나 가능한 걸 이런 전차 안에서 입게 될 줄이야. #id:ff6
+mai: 하지만 내가 산 수영복보다 천의 면적도 작고.. 사이즈도 좀 끼는 거 같은.. #id:ff7
+mai: 과감하지만 아무래도 해변에서 입기엔 무리가 있네. 헤헤. #id:ff8
+- 해변에서 입지 못하는 비키니라.. #id:ff9
+mai: ..응, 혹시 같은 생각 중이야? #id:ffa
+mai: 그래, 말하자면.. 섹스할 때 입는 이벤트 복장.. 이랄까. #id:ffb
+mai: 봐봐. 땀에 젖으면 이렇게.. 천이 투명해져서 모두 보이고 말지? #id:ffc
+mai: 팬티 쪽도 질척해지면 그대로 티가 나버려.. 젖은 얼룩으로 안쪽이 훤히 보인다구. #id:ffd
+mai: 게다가 무척 쉽게 벗겨져서.. 조금만 격렬히 움직여도 나의 부끄러운 곳 잔뜩 보일 거야. #id:ffe
+mai: 궁금하다면.. 지금 당장 확인 해 볼까? #id:fff
+do TransitionScreen.dialog_transition()
+[clear time="0.0" text="false" portraits="false" music="false" positions="false" style="false"]
+do GameEvents.emit_cutscene_play("RESET")
+do GameEvents.anim_change("scene22_1")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(1, 100)
+mai: 헤헤, 성격 급하다니까. 하앗. ..아. #id:1000
+mai: 이럴 때만 무척 난폭해져서는, 깜짝 놀랐어. #id:1001
+mai: 어때? 이제 어떡할거야..? 손목 꽉 쥐고 한껏 부푼 자지.. 문지르고만 있을 거야? #id:1002
+mai: 팬티 부분.. 조금만 젖이면 바로 집어넣을수 있을 정도로 얇으니까. #id:1003
+mai: 애액도 잔뜩 흘러서 부끄러운 곳 전부 보이고 있어.. #id:1004
+mai: 그러니까.. 원하는대로. 해도 된다고? #id:1005
+do GameEvents.anim_change("scene22_2")
+mai: 앗, 아.. 앙.. 흐으. #id:1006
+mai: 으읏! 이거 좋아.. 격렬해.. #id:1007
+mai: 몸을 가누지 못할 정도로.. 하아. 강하게 박아대고 있어.. #id:1008
+mai: 기분 좋아?.. 나는.. 읏, 깊은 곳까지 자지 찔러대서.. #id:1009
+mai: 종일 움직이느라 힘이 없다면서.. 읏! ..거짓말쟁이. #id:100a
+mai: 하아.. 으긋! ..이렇게나. 기운 넘치잖아. 너도, 자지도.. 하앗.. #id:100b
+mai: 섹스할 때는.. 왜 이렇게 달라지는거야..! 아앙..! #id:100c
+mai: 이래서야.. 절대 잊을 수 없잖아.. 온통 자지 생각만 날 거라고.. 하아. #id:100d
+mai: 아앗.. 아. 으읏. 약한 곳 집요하게 찌르는 거, 좋아. #id:100e
+mai: 땀으로 범벅이어서 비키니가 아무 소용 없어져 버렸어.. 아읏! #id:100f
+mai: 몇 번이고 좋으니까..! 잔뜩, 잔뜩 해버리자..! #id:1010
+[signal arg="scene22"]
+mai: 하아.. 읏! ..여전히 대단하네에.. 하아.. #id:1011
+mai: 어쩐지, 섹스하는 거 엄청 능숙해지지 않았어? #id:1012
+mai: 처음은.. 이렇지 않았는데 말야.. 입으로만 해 줘도 금방 싸버렸는데.. #id:1013
+mai: 그나저나 정신없이 마구 해버렸네.. 이러면 비키니는 어떻게 되던 상관 없었을지도.. #id:1014
+mai: 그만큼 나 자체를 좋아해줬다는 뜻이니까. 상관 없나? #id:1015
+mai: 하지만 꼭 약속해야해, 이곳에서 나간다면.. 바다 보러 가기로. #id:1016
+mai: 너에게만 보여줄 수 있는 이쁜 수영복들이 많으니까. 헤헤. #id:1017
+do TransitionScreen.dialog_transition()
+join mai left
+... #id:1018
+emotion mai Laugh
+mai: 하아암~ 이젠 나도 지쳤어.. 섹스 후엔 늘 이런다니까. #id:1019
+mai: 조금만 앉아 있다가.. 응? 이건 뭐지.. #id:101a
+emotion mai Idle
+mai: 오오, 다른 색 비키니네? 이것도 귀여운걸~ #id:101b
+mai: 난 이미 한벌 있으니까.. 그래! 이건 레이나 걸로 할까? #id:101c
+emotion mai Ecchi
+mai: 들어 봐, 레이나의 비키니 차림.. 보고 싶지 않아? 난 무척 보고싶어! #id:101d
+emotion mai Smile
+mai: 그러니까.. 자, 이건 너에게 맡길게! 레이나, 부끄러움이 많으니까 이런 거 입지 않으려고 할 거야. #id:101e
+mai: 하지만 네가 어떻게든 밀어붙이면 분명 입어줄 테니까. 사진이든 뭐든 찍어서 보여주라고! #id:101f
+emotion mai Dislike
+mai: 꼭이다? 어땠는지 꼭 알려주는거야? #id:1020
+흥분한 마이에게서 여분의 비키니를 받았다. #id:1021
+검은색의 자그마한 비키니를 입은 레이나.. 보고싶지 않을 리 없잖아. #id:1022
+하지만 마이 말대로 모두가 있을 때는 입어주지 않겠지. #id:1023
+또 다른 종착점을 레이나와 탐색한다면.. 가능할까? #id:1024
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_add_route_hint("reina_bikini")
+do GameEvents.emit_cutscene_play("RESET")
+do GameEvents.anim_change("idle")
+do GameEvents.emit_npc_level_up(1)
+[end_timeline]

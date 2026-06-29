@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://cise8fitnour5"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_lolew"]
+[ext_resource type="Texture2D" uid="uid://b5n01t2yxnclu" path="res://resources/ui/icons/hint_icon_1.png" id="2_vhsu8"]
+
+[resource]
+script = ExtResource("1_lolew")
+id = "lowspeed"
+title = "DESTINATION_HINT_LOWSPEED_TITLE"
+texture = ExtResource("2_vhsu8")
+description = "DESTINATION_HINT_LOWSPEED_INFO"
+partner_type = -1
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

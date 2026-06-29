@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://c5cqnjwgn5mkw"]
+
+[ext_resource type="Texture2D" uid="uid://caai3wovnk4rs" path="res://resources/ui/FreeAction/main_gage_base.png" id="1_mjx07"]
+[ext_resource type="Script" uid="uid://inw4e1qc06yb" path="res://scene/component/action_progress_base.gd" id="2_27unp"]
+[ext_resource type="Texture2D" uid="uid://xudrtcc46m3" path="res://resources/ui/FreeAction/main_gage_empty.png" id="3_t0esp"]
+[ext_resource type="Texture2D" uid="uid://dbh14fsm3tk4t" path="res://resources/ui/FreeAction/main_gage_fill.png" id="4_jielf"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mjx07"]
+light_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_27unp"]
+light_mode = 1
+
+[sub_resource type="Animation" id="Animation_spk51"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_yylxb"]
+resource_name = "stroke"
+length = 1.4
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0cr0v"]
+_data = {
+&"RESET": SubResource("Animation_spk51"),
+&"stroke": SubResource("Animation_yylxb")
+}
+
+[node name="ActionProgressBase" type="Sprite2D"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_mjx07")
+scale = Vector2(0.41, 0.41)
+texture = ExtResource("1_mjx07")
+hframes = 7
+script = ExtResource("2_27unp")
+
+[node name="ActionProgressBar" type="TextureProgressBar" parent="."]
+unique_name_in_owner = true
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_27unp")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -167.5
+offset_top = -30.0
+offset_right = -13.5
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+step = 0.5
+value = 50.0
+texture_under = ExtResource("3_t0esp")
+texture_progress = ExtResource("4_jielf")
+texture_progress_offset = Vector2(1, 1)
+
+[node name="ActionProgressAnim" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_0cr0v")
+}
+autoplay = "stroke"

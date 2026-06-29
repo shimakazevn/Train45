@@ -1,0 +1,164 @@
+[gd_scene load_steps=8 format=3 uid="uid://w2tpup8dkx8p"]
+
+[ext_resource type="Script" uid="uid://3kpyrrml702d" path="res://Gameplay/Upgrades/ability.gd" id="1_bdmmf"]
+[ext_resource type="Script" uid="uid://cgycssu3k5d47" path="res://Gameplay/Upgrades/ability_button.gd" id="2_13wqg"]
+[ext_resource type="Theme" uid="uid://v21ts4c26wik" path="res://resources/ui/Shop/shop_theme.tres" id="2_sur7n"]
+[ext_resource type="Texture2D" uid="uid://bng3wrypjm5nt" path="res://resources/ui/Shop/shop_button.png" id="3_qq4nr"]
+[ext_resource type="Shader" uid="uid://d22eib0qwgame" path="res://Gameplay/current_partner_ui.gdshader" id="5_wx526"]
+[ext_resource type="Script" uid="uid://bj2vgpydwu5rv" path="res://Gameplay/highlight_shader.gd" id="6_s6qsn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gej0i"]
+shader = ExtResource("5_wx526")
+shader_parameter/Line_Smoothness = 0.041
+shader_parameter/Line_Width = 0.044
+shader_parameter/Brightness = 3.0
+shader_parameter/Rotation_deg = 0.235004
+shader_parameter/Distortion = 1.927
+shader_parameter/Speed = 0.5
+shader_parameter/Position = 0.0
+shader_parameter/Position_Min = 0.2
+shader_parameter/Position_Max = 0.57
+shader_parameter/Alpha = 1.0
+
+[node name="Ability" type="HBoxContainer"]
+offset_right = 234.0
+offset_bottom = 23.0
+script = ExtResource("1_bdmmf")
+
+[node name="AbilityNamePanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(157, 23)
+layout_mode = 2
+theme = ExtResource("2_sur7n")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="AbilityNamePanel"]
+layout_mode = 0
+offset_right = 1194.0
+offset_bottom = 139.0
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("3_qq4nr")
+patch_margin_left = 28
+patch_margin_right = 24
+patch_margin_bottom = 31
+
+[node name="MarginContainer" type="MarginContainer" parent="AbilityNamePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.124
+anchor_bottom = 1.0
+offset_top = -1.852
+offset_right = 152.0
+offset_bottom = -4.0
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+
+[node name="AbilityName" type="Label" parent="AbilityNamePanel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_sur7n")
+theme_override_font_sizes/font_size = 11
+text = "Ability_nameaaaaaaaaa"
+
+[node name="StockLable" type="Label" parent="AbilityNamePanel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_sur7n")
+theme_override_font_sizes/font_size = 12
+text = "0/5"
+
+[node name="Button" type="Button" parent="AbilityNamePanel" node_paths=PackedStringArray("ability")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 215.0
+offset_bottom = 19.0
+theme = ExtResource("2_sur7n")
+theme_override_font_sizes/font_size = 12
+alignment = 0
+script = ExtResource("2_13wqg")
+ability = NodePath("../..")
+
+[node name="HighlightShader" type="ColorRect" parent="AbilityNamePanel"]
+self_modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_gej0i")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_s6qsn")
+
+[node name="PricePanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(61, 23)
+layout_mode = 2
+mouse_filter = 2
+theme = ExtResource("2_sur7n")
+
+[node name="MarginContainer" type="MarginContainer" parent="PricePanel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -10.5
+offset_right = -13.0
+offset_bottom = 7.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 10
+
+[node name="Price" type="Label" parent="PricePanel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_sur7n")
+theme_override_font_sizes/font_size = 12
+text = "Priceaaaaaa"
+horizontal_alignment = 2
+
+[node name="QuantityPanel" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(33, 30)
+layout_mode = 2
+theme = ExtResource("2_sur7n")
+
+[node name="MarginContainer" type="MarginContainer" parent="QuantityPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+
+[node name="Quantity" type="Label" parent="QuantityPanel/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_sur7n")
+theme_override_font_sizes/font_size = 12
+text = "99"
+
+[node name="StepPanel" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(80, 30)
+layout_mode = 2
+theme = ExtResource("2_sur7n")
+
+[node name="MarginContainer" type="MarginContainer" parent="StepPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.5
+offset_right = -20.0
+offset_bottom = -7.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+
+[connection signal="pressed" from="AbilityNamePanel/Button" to="." method="_on_button_pressed"]

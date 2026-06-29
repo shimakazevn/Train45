@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d18k43y247jlf"]
+
+[ext_resource type="Script" uid="uid://begc1acmhkiqq" path="res://Gameplay/qa/voice_qa_button.gd" id="1_btn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qav5"]
+
+[node name="VoiceQaButton" type="Button"]
+custom_minimum_size = Vector2(0, 22)
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 9
+theme_override_styles/pressed = SubResource("StyleBoxFlat_7qav5")
+alignment = 0
+autowrap_mode = 2
+script = ExtResource("1_btn")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

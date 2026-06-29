@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://n42d1p3g1lio"]
+
+[ext_resource type="Script" uid="uid://dw0mj10fmnylx" path="res://Gameplay/Upgrades/cola_finder_controller.gd" id="1_shm8i"]
+[ext_resource type="PackedScene" uid="uid://uqcr4rm4f0an" path="res://Gameplay/Upgrades/cola.tscn" id="2_n56ux"]
+
+[node name="ColaFinderController" type="Node2D"]
+script = ExtResource("1_shm8i")
+cola = ExtResource("2_n56ux")

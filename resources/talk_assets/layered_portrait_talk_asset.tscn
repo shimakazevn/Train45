@@ -1,0 +1,80 @@
+[gd_scene load_steps=9 format=3 uid="uid://kx7fktf6ef4p"]
+
+[ext_resource type="Script" uid="uid://dovhuvij8nxpr" path="res://resources/talk_assets/layered_portrait_talk_asset.gd" id="1_ngoks"]
+[ext_resource type="Texture2D" uid="uid://bgb7wvj0j04xn" path="res://resources/talk_assets/talkassets1.png" id="2_psfxg"]
+[ext_resource type="Texture2D" uid="uid://bdx54kkvfvfu3" path="res://resources/ui/gui/window.png" id="3_psfxg"]
+[ext_resource type="Texture2D" uid="uid://dipigqh1qqhib" path="res://resources/talk_assets/talkassets2.png" id="4_oqhko"]
+[ext_resource type="Texture2D" uid="uid://ykjnjtqv1uc" path="res://resources/talk_assets/talkassets3.png" id="5_m8j33"]
+[ext_resource type="Texture2D" uid="uid://br7kg2eeaga4l" path="res://resources/talk_assets/talkassets4.png" id="6_dtl65"]
+[ext_resource type="Texture2D" uid="uid://bplt156p5fq58" path="res://resources/talk_assets/talkassets5.png" id="7_dao2d"]
+[ext_resource type="Texture2D" uid="uid://dii7kjprh4ut2" path="res://resources/ui/icons/icons8.png" id="8_m8j33"]
+
+[node name="LayeredPortrait" type="CanvasGroup"]
+script = ExtResource("1_ngoks")
+
+[node name="Layer1" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+texture = ExtResource("2_psfxg")
+centered = false
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Layer1"]
+self_modulate = Color(1, 1, 1, 0.94902)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -305.0
+offset_top = -233.0
+offset_right = 306.0
+offset_bottom = 257.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.645, 0.645)
+pivot_offset = Vector2(305, 210)
+texture = ExtResource("3_psfxg")
+region_rect = Rect2(0, 0, 300, 300)
+patch_margin_left = 87
+patch_margin_top = 90
+patch_margin_right = 91
+patch_margin_bottom = 89
+
+[node name="Images" type="Node2D" parent="."]
+
+[node name="KonChan" type="Sprite2D" parent="Images"]
+visible = false
+texture_filter = 1
+texture = ExtResource("2_psfxg")
+centered = false
+
+[node name="PazuzuWallet" type="Sprite2D" parent="Images"]
+visible = false
+texture_filter = 1
+texture = ExtResource("4_oqhko")
+centered = false
+
+[node name="PazuzuPicture" type="Sprite2D" parent="Images"]
+visible = false
+texture_filter = 1
+texture = ExtResource("5_m8j33")
+centered = false
+
+[node name="BrokedPhone" type="Sprite2D" parent="Images"]
+visible = false
+texture_filter = 1
+texture = ExtResource("6_dtl65")
+centered = false
+
+[node name="Dildo" type="Sprite2D" parent="Images"]
+visible = false
+texture_filter = 1
+texture = ExtResource("7_dao2d")
+centered = false
+
+[node name="Condom" type="Sprite2D" parent="Images"]
+visible = false
+texture_filter = 1
+position = Vector2(17, 20)
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("8_m8j33")
+centered = false

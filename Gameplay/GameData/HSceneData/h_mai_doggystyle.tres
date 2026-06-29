@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://b2rritybhxk4w"]
+
+[ext_resource type="Texture2D" uid="uid://dxp5gv5k063xv" path="res://resources/ui/EventCoverImage/Hpreview_mai_7.png" id="1_dbsam"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="2_hyide"]
+
+[resource]
+script = ExtResource("2_hyide")
+is_disabled = true
+scene_description = "SCENE_DOGGYSTYLE"
+scene_name = "scene7"
+partner = 1
+preview_texture = ExtResource("1_dbsam")
+ahen_keys = PackedStringArray("SCENE_MAI_AHEN_KISS_1", "SCENE_MAI_AHEN_KISS_2", "SCENE_MAI_AHEN_KISS_3", "SCENE_MAI_AHEN_KISS_4", "SCENE_MAI_AHEN_KISS_5")

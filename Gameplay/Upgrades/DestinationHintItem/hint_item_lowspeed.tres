@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ShopHint" load_steps=4 format=3 uid="uid://b3uww8iugffjk"]
+
+[ext_resource type="Resource" uid="uid://cise8fitnour5" path="res://Gameplay/GameData/RouteHint/hint_low_speed.tres" id="1_tuv17"]
+[ext_resource type="Texture2D" uid="uid://b5n01t2yxnclu" path="res://resources/ui/icons/hint_icon_1.png" id="2_tuv17"]
+[ext_resource type="Script" uid="uid://cgvgo5syo8hpt" path="res://Gameplay/Upgrades/DestinationHintItem/shop_hint_item.gd" id="3_wm88d"]
+
+[resource]
+script = ExtResource("3_wm88d")
+hint_info = ExtResource("1_tuv17")
+icon = ExtResource("2_tuv17")
+id = "lowspeed"
+price = Array[int]([150])
+max_quantity = 1
+cost = 0
+name = "DESTINATION_HINT_LOWSPEED_TITLE"
+description = "HINT_ITEM_WITH_EQUIPMENT"

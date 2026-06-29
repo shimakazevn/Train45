@@ -1,0 +1,166 @@
+join mai 1
+do GameEvents.emit_cutscene_play("e_fella_cut1")
+mai: 톡..토톡.. #id:9de
+마이가 두 엄지로 타자를 치고 있다. 무척 현란하고 빠르게 움직인다. #id:9df
+- 타자 속도.. 엄청 빠르네. #id:9e0
+mai: 응? 그런가.. #id:9e1
+mai: 내 주변 친구들은 다 이정도 속도는 기본인 걸. #id:9e2
+mai: 소문으로는, 어떤 사람은 말하는 속도보다 메세지를 빨리 보낼 수 있대. 대단하지 않아? #id:9e3
+emotion mai Laugh 
+mai: 나는 그 정도는 아니니까.. 평범한 거지. #id:9e4
+- 나도 키보드라면 자신 있는데. #id:9e5
+emotion mai Idle 
+mai: 컴퓨터 말이지? 와아.. 난 컴퓨터 무지 약해. #id:9e6
+mai: 키보드는 특히 더하다니까? 어떻게 열손가락으로 글을 쓸 수 있는지 정말 신기해. #id:9e7
+- 보통 키보드 속도가 더 빠르지 않아? #id:9e8
+mai: 그래? 난 컴퓨터는 잘 안하다 보니.. 대부분 핸드폰으로 할 수 있어. 오래 앉아있지 못하는 성격이기도 하고. #id:9e9
+mai: 너는 완전 컴퓨터 파? 이런 건 완전 반대구나. #id:9ea
+emotion mai Serious 
+mai: 컴퓨터는 들고 다닐 수 없잖아. 밖에서 심심할 때는? #id:9eb
+- ..애초에 집 밖으로 나가지 않으니까. #id:9ec
+mai: 에에? 그렇구나.. 무척 심심하겠네.. #id:9ed
+emotion mai Idle 
+mai: 전철에선 폰으로 인터넷도 자유롭게 할 수 있어서 좋아. #id:9ee
+mai: 특히 매일 왔다갔다 하면서 시간을 알차게 쓸 수 있거든. #id:9ef
+mai: 전철 인터넷은 속도도 빨라. 이것 봐. 잘 터지지? #id:9f0
+- ..뭐? #id:9f1
+- 통신.. 먹통 아니었어? #id:9f2
+mai: 아니? 지금까지 친구들이랑 계속 톡하던 중이었는데. #id:9f3
+- ...그렇다면. #id:9f4
+- 그걸로 구조 요청을 보내면 되지 않을까? #id:9f5
+mai: ... #id:9f6
+emotion mai Surprised 
+update mai [extra_data="show Etc/Sweat"]
+mai: 아!! #id:9f7
+mai: 어째서 그런 생각을 못했지.. #id:9f8
+emotion mai Serious 
+mai: 하, 하지만 아직 위급 상황은 아니랄까.. 더 어두워지고 버틸 수 없어지면 그때 보내볼까 해서.. #id:9f9
+mai: 어 어쨌든! 지금 상황을 알려줘 볼게. 분명 구하러 올 거야. #id:9fa
+마이가 엄청난 속도로 이곳 저곳 메시지를 보낸다. #id:9fb
+do TransitionScreen.dialog_transition()
+수십 분 후. 망연자실한 표정으로 나에게 다가온다 #id:9fc
+mai: 이상해.. #id:9fd
+mai: 정말 이상해. #id:9fe
+mai: 분명 친구랑 엄마에게 도와달라고 보냈어. 답장도 바로 오고 통신도 양호해. 문제는 답장이 말이야.. #id:9ff
+mai: 전혀 엉뚱한 내용으로 답을 보내왔어. #id:a00
+mai: 친구한테서는 "신상 무좀약이 입고됐으니 사러 가자고? 마이가 원한다면.." 이라고.. #id:a01
+mai: 엄마한테선 "사슴을 애완동물로 기르고 싶다니, 그건 좀.." 이라고 답장왔어. #id:a02
+emotion mai Surprised 
+mai: 이게 무슨 뜻이야! 아무래도 이곳과 관련된 메세지를 보내면 전혀 엉뚱한 내용으로 발송되는 거 같아. #id:a03
+- 역시.. 무언가 방해가 있구나. #id:a04
+emotion mai Flat 
+mai: 어쩔 수 없지. 최대한 우리 힘으로 탈출하는 수 밖엔. #id:a05
+- 당분간은 코니알의 요청을 따르는 것 외에는. #id:a06
+- 뾰족한 수가 없겠어. #id:a07
+mai: 그러게. 아직까지 힘든 건 없지만 말이야. #id:a08
+emotion mai Serious 
+update mai [extra_data="hide Etc/Sweat"]
+mai: 너는.. 이상현상을 찾는 거 외에는 딱히 할만한 게 없는 거네. 탈출할 때 까진.. #id:a09
+- 나? 나는 딱히.. #id:a0a
+솔직히 말하면 마이의 출렁거리는 가슴과 엉덩이를 보면 시간이 지나는 것도 모르겠다. #id:a0b
+오히려 전차에서 나가고 싶지 않달까.. #id:a0c
+mai: 정말 안타깝잖아. 이런 때일수록 취미를 통해 정신건강을 챙겨야 한다고 했어. #id:a0d
+emotion mai Idle 
+mai: ..응! 좋아. 이렇게 나만 즐길 수는 없지. #id:a0e
+mai: 적어도 내가 폰을 하는 동안에는.. 내 입 쓸래? #id:a0f
+- ...이.. 입?! #id:a10
+emotion mai Smile 
+mai: 그래. 내 입 말이야. 아.. #id:a11
+그 말을 하며 마이는 붉은 입술을 벌려 입안을 보여준다. #id:a12
+타액 가득한 혓바닥과 안쪽까지 드러난 목구멍이 자아를 가진 듯 꿈틀댄다. 입천장에서 고여있던 침이 실을 이루며 바닥으로 떨어진다. #id:a13
+아무리 갸루라도.. 이정도로 개방적일 수 있는 건가? #id:a14
+emotion mai Laugh 
+mai: 여기는 티비나 만화책도 없고.. #id:a15
+emotion mai Dislike 
+mai: 내.. 내 핸드폰은 안 된다? 프라이버시 라는 거 알지? #id:a16
+mai: 여성의 핸드폰을 마음대로 빌려 줄 순 없다고. #id:a17
+mai: 그러니 남은 건 이 정도뿐일까.. 그동안 난 하던 대로 폰 가지고 놀면 되니까. #id:a18
+emotion mai Ecchi 
+mai: 왜? 별로 안 내켜? 남자들은 툭하면 자위하지 않아? #id:a19
+emotion mai Idle 
+mai: 아 그러면 혼자 손으로 해결할래? 못 본 척 할테니까! #id:a1a
+입을 환하게 벌린 채 이야기하느라 넘치는 타액이 입술에서 흘러나와 턱을 따라 흘러 그녀의 가슴에 떨어진다. #id:a1b
+그녀는 개의치 않는 듯 핸드폰과 나를 번갈아 보며 혓바닥을 꿈틀거린다. #id:a1c
+이 이상은 묻지 않겠다는 듯 타액 범벅인 입을 닫기 직전, 나는 터질듯한 바지춤을 붙잡으며 다급히 외친다. #id:a1d
+- 아 아니! ..부..부탁합니다! #id:a1e
+- 입으로 하게 해 주세요! #id:a1f
+emotion mai Flat 
+mai: 헤헤, 뭐야. 오락가락하기는. #id:a20
+mai: 좋아 그럼 바지 내려볼래? 여기 앉아 있을 테니. #id:a21
+leave mai
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("RESET")
+do GameEvents.anim_change("scene1_1")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(1, 100)
+mai: (...톡 토톡..) 헤헤. #id:a22
+mai: (토톡..) 아! 다 됐어? 잠시만. 이 답장만 하고~ #id:a23
+mai: (..톡토톡..) 됐다.. 그럼.. #id:a24
+mai: 탐색하는 데 열심히였으니까. 힐링 타임도 있어야겠지~ #id:a25
+mai: 딱히 즐겁게 할 수 있는게 생각나지 않아서 말이야. #id:a26
+mai: 대신 몇번이고 내 입으로 빼도 좋으니까. 물론 다음 칸으로 서두르면 좋겠지만. #id:a27
+mai: 잠시 기다려 봐. 침을 모으고.. #id:a28
+mai: 우물우물.. #id:a29
+mai: 움움.. 쟈아~.. #id:a2a
+mai: 아아~ #id:a2b
+mai: 이고헤 자지 너어 저.. #id:a2c
+mai: 대힌 네가 직접 흔드는 거아? 나 폰 해야 하니까.. #id:a2d
+mai: 싸고 시퍼지면 입에 싸.. 폰에 묻으면 안대. #id:a2e
+눈앞에 최상급의 갸루가 입을 벌린 채, 내 자지가 들어오기를 기다리고 있다. #id:a2f
+이 사실만으로도 사정해버릴 거 같았지만. 그녀의 축축한 입안을 마음껏 쓸 수 있다는 사실에 필사적으로 참아낸다. #id:a30
+천천히. 떨리는 마음으로 그녀의 입구멍 안으로 자지를 집어 넣는다. #id:a31
+[signal arg="scene1"]
+mai: 우움.. 톡 토톡.. #id:a32
+mai: 이 강아지 영상 귀여워~ 정말이지 치유된다니까. #id:a33
+mai: ... 웅? 다 끝나써? 아아 끝나꾸나. #id:a34
+mai: 벌써 시간이 이렇게 지났네..웃! #id:a35
+mai: ..입안에 정액 가득해. #id:a36
+mai: 뱉고 오기 귀찮은데.. #id:a37
+mai: (꿀꺽) #id:a38
+- 저.. 전부 삼켰어? #id:a39
+mai: 하아~ 이상한 느낌. #id:a3a
+mai: 응, 왜 그래? #id:a3b
+- 저기 마이는.. #id:a3c
+- 이런 거에 익숙해? #id:a3d
+mai: 이런 거? 펠라치오 말하는 거야? #id:a3e
+mai: 으응.. 영상이라던가 친구들 얘기로는 많이 들었는데 실제로는 처음 해보는 걸. #id:a3f
+mai: 왜? 서툴러서 기분 안 좋았어? #id:a40
+- 아니, 기분은 무척 좋았지만. #id:a41
+- 거부감이 전혀 없어서.. #id:a42
+mai: 그런가? 자지를 입 안에 넣을 뿐이니까. 어려울 것도 없거든. 핸드폰 보면서도 충분히 할 수 있고. #id:a43
+mai: 혀로 구석구석 핥는 거 재밌기도 하고, 턱은 좀 아프지만.. 네가 기분 좋으니까 그 정도는 참을 수 있어. 헤헷. #id:a44
+방금까지 내 자지를 빨아대던 마이는 언제 그랬냐는 듯 핸드폰의 영상에 집중하기 시작한다. #id:a45
+mai: 꺄아~ 이 앞발 좀 봐! 털뭉치 한번 만져보고 싶어! #id:a46
+mai: 하아~ 이번 영상도 좋았어. 아아~! 연관 영상의 이 썸네일, 안 눌러볼 수 없잖아! #id:a47
+- 그럼 영상 보는 동안.. #id:a48
+- 한번 더 써도 될까? 마이의 입.. #id:a49
+mai: 어? 그래, 좋아~ #id:a4a
+그 이후로도 마이의 입을 도구처럼 사용해 쌓인 정액을 모두 빼낸다. #id:a4b
+지금껏 경험해보지 못한 자극에 평소보다 많은 양이 나왔는데도 마이는 불평하지 않고 계속해서 내 자지를 받아준다. #id:a4c
+영상에 그만큼 심취해서인지는 모르겠지만.. #id:a4d
+do TransitionScreen.dialog_transition()
+join mai center 
+emotion mai Flat 
+한참이 지난 후.. 불알이 텅텅 빌 정도로 빼냈다. 시간이 얼마나 지난 거지? #id:a4e
+mai: ... #id:a4f
+- 마이.. 이제 출발해야겠어.. #id:a50
+- 시간이 꽤 지나서. #id:a51
+mai: 어 응? #id:a52
+mai: 너무 오래 있었다고? 우리 얼마나 쉬었지? #id:a53
+- 30분 정도. #id:a54
+emotion mai Serious 
+mai: ..뭐어?! 벌써 그렇게 지났어? #id:a55
+emotion mai Smile 
+mai: 히잉.. 더 놀고 싶어. 저기. 내 입 더 쓸래? 자 아~ #id:a56
+- 으읏. 아 안돼. #id:a57
+- 벌써 마이의 입으로 5발은 뺐으니까.. #id:a58
+emotion mai Surprised 
+mai: 5번이나?! 언제 그렇게 많이 쓴 거야. #id:a59
+emotion mai Dislike 
+mai: 하아, 그래~ 아쉽지만. 정말 출발해야겠네. #id:a5a
+mai: 다음에 또 쉬고 싶어지면 언제든 말하도록 해! #id:a5b
+emotion mai Idle 
+mai: 절대 내가 놀고 싶어서가 아니니까. 그땐 지금처럼 내 입 빌려줄게! #id:a5c
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+do GameEvents.emit_npc_level_up(1)

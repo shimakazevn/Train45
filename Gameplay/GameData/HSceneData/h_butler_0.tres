@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://d4d3pymghauxp"]
+
+[ext_resource type="Texture2D" uid="uid://caib6owe4hh0u" path="res://resources/ui/EventCoverImage/Hpreview_butler_0.png" id="1_08qme"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_ee3e5"]
+
+[resource]
+script = ExtResource("1_ee3e5")
+scene_description = "SCENE_FELLATIO"
+scene_name = "scene1"
+dialog_title = "butler_love_0"
+partner = 4
+preview_texture = ExtResource("1_08qme")
+is_position = Vector2(798, 242)
+unlock_chapter = 5
+ahen_keys = PackedStringArray("SCENE_BUTLER_AHEN_FELLATIO_1", "SCENE_BUTLER_AHEN_FELLATIO_2", "SCENE_BUTLER_AHEN_FELLATIO_3", "SCENE_BUTLER_AHEN_FELLATIO_4", "SCENE_BUTLER_AHEN_FELLATIO_5")

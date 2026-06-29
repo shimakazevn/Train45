@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv7enmc8nnwjk"]
+
+[ext_resource type="Script" uid="uid://c1appkl48drm3" path="res://Gameplay/Upgrades/horizon_finder_controller.gd" id="1_m62rd"]
+[ext_resource type="PackedScene" uid="uid://c5ddt7ssskr3i" path="res://Gameplay/Upgrades/horizon_finder.tscn" id="2_mafds"]
+
+[node name="HorizonFinderController" type="Node2D"]
+script = ExtResource("1_m62rd")
+horizon_finder = ExtResource("2_mafds")

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ShopHint" load_steps=4 format=3 uid="uid://cxkiv8jnvxtax"]
+
+[ext_resource type="Resource" uid="uid://cns2x70l2y0kg" path="res://Gameplay/GameData/RouteHint/hint_stuckdoor.tres" id="1_hng8m"]
+[ext_resource type="Texture2D" uid="uid://b5n01t2yxnclu" path="res://resources/ui/icons/hint_icon_1.png" id="2_ikhfs"]
+[ext_resource type="Script" uid="uid://cgvgo5syo8hpt" path="res://Gameplay/Upgrades/DestinationHintItem/shop_hint_item.gd" id="2_y7gd8"]
+
+[resource]
+script = ExtResource("2_y7gd8")
+hint_info = ExtResource("1_hng8m")
+icon = ExtResource("2_ikhfs")
+id = "stuckdoor"
+price = Array[int]([1500])
+max_quantity = 1
+cost = 0
+name = "DESTINATION_HINT_STUCKDOOR_TITLE"
+description = "HINT_ITEM_WITH_MAI"

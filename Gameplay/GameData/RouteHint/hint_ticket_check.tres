@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://be734s3i1e4ps"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_efcxv"]
+[ext_resource type="Texture2D" uid="uid://03oo81e0vwqm" path="res://resources/ui/icons/icons_large5.png" id="2_efcxv"]
+
+[resource]
+script = ExtResource("1_efcxv")
+id = "ticket_check"
+title = "DESTINATION_HINT_TICKET_CHECK_TITLE"
+texture = ExtResource("2_efcxv")
+description = "DESTINATION_HINT_TICKET_CHECK_INFO"
+partner_type = -1
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

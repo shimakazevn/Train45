@@ -1,0 +1,101 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=21 format=3 uid="uid://cgnnkuee3gvx5"]
+
+[ext_resource type="PackedScene" uid="uid://cqpb3ie51rwl5" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_Default/default_layout_base.tscn" id="1_73qox"]
+[ext_resource type="PackedScene" uid="uid://c1k5m0w3r40xf" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_FullBackground/full_background_layer.tscn" id="1_gwfnd"]
+[ext_resource type="Script" uid="uid://dsllg5aqjmdoi" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_qtvw5"]
+[ext_resource type="PackedScene" uid="uid://cy1y14inwkplb" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Portraits/vn_portrait_layer.tscn" id="3_ymf75"]
+[ext_resource type="PackedScene" uid="uid://uhs3lgb344cm" path="res://Gameplay/Dialog/InputCatcher/custom_full_advance_input_layer.tscn" id="4_1mk3e"]
+[ext_resource type="PackedScene" uid="uid://btpybp6cyiq2w" path="res://resources/Dialogic_Style/VisualNovelTextbox/custom_vn_textbox_layer.tscn" id="5_kwmge"]
+[ext_resource type="PackedScene" uid="uid://dsbwnp5hegnu3" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Glossary/glossary_popup_layer.tscn" id="6_p64bx"]
+[ext_resource type="PackedScene" uid="uid://chvr8odk3rhoo" path="res://resources/Dialogic_Style/CenteredChoices/custom_centered_choices.tscn" id="7_yl5r6"]
+[ext_resource type="PackedScene" uid="uid://cvgf4c6gg0tsy" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_TextInput/text_input_layer.tscn" id="8_k6ac8"]
+[ext_resource type="PackedScene" uid="uid://s65ghl56dlny" path="res://OverlayHistory/custom_overlay_history.tscn" id="10_73qox"]
+[ext_resource type="Script" uid="uid://wac3q5cb4ieh" path="res://addons/dialogic/Resources/dialogic_style.gd" id="10_vvilt"]
+
+[sub_resource type="Resource" id="Resource_147ra"]
+script = ExtResource("2_qtvw5")
+scene = ExtResource("1_73qox")
+overrides = {
+"canvas_layer": "3.0",
+"global_font_size": "13.0"
+}
+
+[sub_resource type="Resource" id="Resource_234og"]
+script = ExtResource("2_qtvw5")
+scene = ExtResource("1_gwfnd")
+
+[sub_resource type="Resource" id="Resource_rhw2g"]
+script = ExtResource("2_qtvw5")
+scene = ExtResource("3_ymf75")
+
+[sub_resource type="Resource" id="Resource_nvrg1"]
+script = ExtResource("2_qtvw5")
+scene = ExtResource("4_1mk3e")
+
+[sub_resource type="Resource" id="Resource_sjr36"]
+script = ExtResource("2_qtvw5")
+scene = ExtResource("5_kwmge")
+overrides = {
+"box_color_custom": "Color(1, 1, 1, 1)",
+"box_color_use_global": "false",
+"box_margin_bottom": "0.0",
+"box_panel": "\"custom_vn_textbox_layer.tres\"",
+"box_size": "Vector2(640, 118)",
+"name_label_box_modulate": "Color(0, 0, 0, 0)",
+"name_label_box_panel": "\"vn_textbox_name_label_panel.tres\"",
+"name_label_box_use_global_color": "false",
+"name_label_custom_font_size": "14.0",
+"name_label_use_global_color": "false",
+"name_label_use_global_font_size": "false",
+"next_indicator_size": "Vector2(7, 7)",
+"text_size": "13.0",
+"text_use_global_size": "false"
+}
+
+[sub_resource type="Resource" id="Resource_71eab"]
+script = ExtResource("2_qtvw5")
+scene = ExtResource("6_p64bx")
+
+[sub_resource type="Resource" id="Resource_dv1ph"]
+script = ExtResource("2_qtvw5")
+scene = ExtResource("7_yl5r6")
+overrides = {
+"boxes_fill_width": "false",
+"boxes_min_size": "Vector2(444, 30)",
+"boxes_offset": "Vector2(0, -40)",
+"boxes_stylebox_focused": "\"choice_panel_focus.tres\"",
+"boxes_stylebox_normal": "\"choice_panel_normal.tres\"",
+"font_size_custom": "13.0",
+"font_size_use_global": "false"
+}
+
+[sub_resource type="Resource" id="Resource_exwfj"]
+script = ExtResource("2_qtvw5")
+scene = ExtResource("8_k6ac8")
+
+[sub_resource type="Resource" id="Resource_mqr7a"]
+script = ExtResource("2_qtvw5")
+scene = ExtResource("10_73qox")
+overrides = {
+"font_custom_size": "12.0",
+"font_use_global_size": "false",
+"show_all_choices": "false",
+"show_join_and_leave": "false"
+}
+
+[resource]
+script = ExtResource("10_vvilt")
+name = "Novel_Style"
+layer_list = Array[String](["10", "11", "12", "13", "14", "15", "16", "17"])
+layer_info = {
+"": SubResource("Resource_147ra"),
+"10": SubResource("Resource_234og"),
+"11": SubResource("Resource_rhw2g"),
+"12": SubResource("Resource_nvrg1"),
+"13": SubResource("Resource_sjr36"),
+"14": SubResource("Resource_71eab"),
+"15": SubResource("Resource_dv1ph"),
+"16": SubResource("Resource_exwfj"),
+"17": SubResource("Resource_mqr7a")
+}
+metadata/_latest_layer = "17"

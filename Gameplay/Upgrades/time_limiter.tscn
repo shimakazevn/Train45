@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://blwox2glnohxd"]
+
+[ext_resource type="Script" uid="uid://d2h766e3802tq" path="res://Gameplay/Upgrades/time_limiter.gd" id="1_pr0hj"]
+[ext_resource type="Texture2D" uid="uid://br0pdxyg0o4d7" path="res://resources/ui/icons/icons1.png" id="2_q8pa3"]
+
+[node name="TimeLimiter" type="TextureProgressBar"]
+offset_right = 48.0
+offset_bottom = 48.0
+value = 50.0
+fill_mode = 5
+texture_under = ExtResource("2_q8pa3")
+texture_progress = ExtResource("2_q8pa3")
+tint_under = Color(1, 0.33, 0.33, 1)
+script = ExtResource("1_pr0hj")

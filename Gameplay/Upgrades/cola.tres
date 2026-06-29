@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityGet" load_steps=4 format=3 uid="uid://fdp31vbmug2a"]
+
+[ext_resource type="PackedScene" uid="uid://n42d1p3g1lio" path="res://Gameplay/Upgrades/cola_finder_controller.tscn" id="1_d62t8"]
+[ext_resource type="Texture2D" uid="uid://dfpocj27sdqqp" path="res://resources/ui/icons/icons20.png" id="2_w8bc3"]
+[ext_resource type="Script" uid="uid://f3crvy5px2r7" path="res://Gameplay/Upgrades/ability_get.gd" id="3_ylg26"]
+
+[resource]
+script = ExtResource("3_ylg26")
+ability_controller_scene = ExtResource("1_d62t8")
+icon = ExtResource("2_w8bc3")
+id = "cola_finder"
+price = Array[int]([480])
+max_quantity = 1
+cost = 12
+name = "COLA_FINDER"
+description = "COLA_FINDER_DESCRIPTION"

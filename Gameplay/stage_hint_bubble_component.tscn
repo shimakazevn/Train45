@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwjakt2ht2n4v"]
+
+[ext_resource type="Script" uid="uid://c72texdt6ufme" path="res://stage_hint_bubble_component.gd" id="1_02b84"]
+[ext_resource type="Shader" uid="uid://bqknggdn8m3nm" path="res://Gameplay/Levels/unshaded.gdshader" id="2_aepow"]
+[ext_resource type="FontFile" uid="uid://b420coqgx7cq0" path="res://resources/font/TsunagiGothic.ttf" id="3_uo8e0"]
+[ext_resource type="Texture2D" uid="uid://faoef3dpoykn" path="res://resources/ui/Inventory/scalable_window_6.png" id="4_4pu36"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fg6lq"]
+shader = ExtResource("2_aepow")
+
+[sub_resource type="LabelSettings" id="LabelSettings_axsha"]
+font = ExtResource("3_uo8e0")
+font_size = 21
+outline_size = 9
+outline_color = Color(0.376471, 0.352941, 0.4, 1)
+
+[node name="StageHintBubbleComponent" type="Control" node_paths=PackedStringArray("hint_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_02b84")
+hint_label = NodePath("HintLabel")
+
+[node name="HintLabel" type="RichTextLabel" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+material = SubResource("ShaderMaterial_fg6lq")
+clip_contents = false
+layout_mode = 0
+offset_left = -2.0
+offset_top = 49.0
+offset_right = 67.0
+offset_bottom = 71.0
+scale = Vector2(0.54, 0.54)
+mouse_filter = 2
+text = "힌트 패널"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+vertical_alignment = 1
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="NinePatchRect" type="NinePatchRect" parent="HintLabel"]
+show_behind_parent = true
+texture_filter = 2
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -14.0
+offset_right = 24.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(104, 55)
+texture = ExtResource("4_4pu36")
+patch_margin_left = 49
+patch_margin_top = 21
+patch_margin_right = 32
+patch_margin_bottom = 45
+
+[node name="Label" type="Label" parent="HintLabel/NinePatchRect"]
+use_parent_material = true
+layout_mode = 1
+offset_left = -5.77777
+offset_top = -8.22222
+offset_right = 50.2222
+offset_bottom = 18.7778
+text = "Hint!"
+label_settings = SubResource("LabelSettings_axsha")

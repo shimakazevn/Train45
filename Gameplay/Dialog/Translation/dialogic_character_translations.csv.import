@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dd1ko1x651jcf"
+
+[deps]
+
+files=["res://Gameplay/Dialog/Translation/dialogic_character_translations.ko.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.jp.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.zh.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.cn.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.en.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.vi.translation"]
+
+source_file="res://Gameplay/Dialog/Translation/dialogic_character_translations.csv"
+dest_files=["res://Gameplay/Dialog/Translation/dialogic_character_translations.ko.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.jp.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.zh.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.cn.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.en.translation", "res://Gameplay/Dialog/Translation/dialogic_character_translations.vi.translation"]
+
+[params]
+
+compress=true
+delimiter=0

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://ci03xcu3tjkdd"]
+
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_28lmv"]
+[ext_resource type="Texture2D" uid="uid://cpaiscn2q647w" path="res://resources/ui/EventCoverImage/Hpreview_reina_11.png" id="1_40yup"]
+
+[resource]
+script = ExtResource("1_28lmv")
+is_disabled = true
+scene_description = "SCENE_SITTING"
+scene_name = "scene6"
+preview_texture = ExtResource("1_40yup")
+is_position = Vector2(1355, 220)
+ahen_keys = PackedStringArray("SCENE_REINA_AHEN_3", "SCENE_REINA_AHEN_4", "SCENE_REINA_AHEN_5", "SCENE_REINA_AHEN_6", "SCENE_REINA_AHEN_7", "SCENE_REINA_AHEN_8", "SCENE_REINA_AHEN_9", "SCENE_REINA_AHEN_10")

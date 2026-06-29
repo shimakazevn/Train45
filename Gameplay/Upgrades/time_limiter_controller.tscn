@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://t1708winp1fq"]
+
+[ext_resource type="Script" uid="uid://bqrb75idjmxff" path="res://Gameplay/Upgrades/time_limiter_controller.gd" id="1_4hqcs"]
+[ext_resource type="PackedScene" uid="uid://blwox2glnohxd" path="res://Gameplay/Upgrades/time_limiter.tscn" id="2_65ig2"]
+
+[node name="TimeLimiterController" type="Node2D"]
+script = ExtResource("1_4hqcs")
+time_limiter = ExtResource("2_65ig2")

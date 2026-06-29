@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://cgjrbahalddii"]
+
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_hwa62"]
+[ext_resource type="Texture2D" uid="uid://7a2kbwikl708" path="res://resources/ui/EventCoverImage/Hpreview_konial_3.png" id="1_ojnyy"]
+
+[resource]
+script = ExtResource("1_hwa62")
+scene_description = "SCENE_FELLATIO"
+scene_name = "scene101"
+dialog_title = "konial_love_0"
+partner = 2
+preview_texture = ExtResource("1_ojnyy")
+unlock_chapter = 6
+ahen_keys = PackedStringArray("SCENE_KONIAL_AHEN_FELLATIO_1", "SCENE_KONIAL_AHEN_FELLATIO_2", "SCENE_KONIAL_AHEN_FELLATIO_3", "SCENE_KONIAL_AHEN_FELLATIO_4", "SCENE_KONIAL_AHEN_FELLATIO_5")

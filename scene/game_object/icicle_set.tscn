@@ -1,0 +1,303 @@
+[gd_scene load_steps=16 format=3 uid="uid://7cadsh7lflxf"]
+
+[ext_resource type="Script" uid="uid://e7s4hcnnruk7" path="res://scene/game_object/icicle_set.gd" id="1_jnx7x"]
+[ext_resource type="Texture2D" uid="uid://c5b0cpjvpvwlk" path="res://resources/anomaly/anomaly_icicle_warning.png" id="1_y0clb"]
+[ext_resource type="Texture2D" uid="uid://c03yupv8qvei4" path="res://resources/anomaly/anomaly_icicle.png" id="2_5bgq6"]
+[ext_resource type="Script" uid="uid://bb0p5s165qwxi" path="res://Gameplay/Levels/Icicle.gd" id="3_0krm0"]
+[ext_resource type="Script" uid="uid://csjphjedusivh" path="res://Gameplay/Levels/IcicleArea.gd" id="4_ppcf2"]
+[ext_resource type="AudioStream" uid="uid://dahi2uhi52w1r" path="res://sound/sfx/ice-broken.mp3" id="6_dnbxl"]
+
+[sub_resource type="Animation" id="Animation_xxxvc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ylp4h"]
+resource_name = "ready"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.6, 3.8, 3.9),
+"transitions": PackedFloat32Array(0.392292, 1, 3.03143, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.6, 2.7, 2.8, 2.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 0, 1, 0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Icicle")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_down"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_761yt"]
+_data = {
+&"RESET": SubResource("Animation_xxxvc"),
+&"ready": SubResource("Animation_ylp4h")
+}
+
+[sub_resource type="Animation" id="Animation_dun1v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -397)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../IcicleArea/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_oygxc"]
+resource_name = "broke"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -60)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../IcicleArea/CollisionShape2D:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../AudioStreamPlayer2D")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_o7soi"]
+resource_name = "down"
+length = 0.5
+step = 0.005
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(2.54912, 1),
+"update": 0,
+"values": [Vector2(0, -397), Vector2(0, -100)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../IcicleArea/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.33, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+
+[sub_resource type="Animation" id="Animation_wi2vi"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jhaqo"]
+_data = {
+&"RESET": SubResource("Animation_dun1v"),
+&"broke": SubResource("Animation_oygxc"),
+&"down": SubResource("Animation_o7soi"),
+&"idle": SubResource("Animation_wi2vi")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yow5w"]
+size = Vector2(28, 39.2018)
+
+[node name="Icicle_Set" type="Node2D" groups=["icicle"]]
+script = ExtResource("1_jnx7x")
+
+[node name="Icicle_Warning" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_y0clb")
+hframes = 2
+
+[node name="WarningPlayer" type="AnimationPlayer" parent="Icicle_Warning"]
+libraries = {
+&"": SubResource("AnimationLibrary_761yt")
+}
+
+[node name="Icicle" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -397)
+texture = ExtResource("2_5bgq6")
+hframes = 5
+script = ExtResource("3_0krm0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Icicle"]
+libraries = {
+&"": SubResource("AnimationLibrary_jhaqo")
+}
+
+[node name="IcicleArea" type="Area2D" parent="." node_paths=PackedStringArray("icicle_set")]
+position = Vector2(0, -243)
+collision_layer = 0
+collision_mask = 256
+script = ExtResource("4_ppcf2")
+icicle_set = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IcicleArea"]
+position = Vector2(-4, 46.3991)
+shape = SubResource("RectangleShape2D_yow5w")
+disabled = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(849, -41)
+stream = ExtResource("6_dnbxl")
+max_distance = 4000.0
+bus = &"Sfx"
+
+[connection signal="area_entered" from="IcicleArea" to="IcicleArea" method="_on_area_entered"]

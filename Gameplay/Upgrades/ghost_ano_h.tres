@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityGet" load_steps=4 format=3 uid="uid://0hn5i30a7qy5"]
+
+[ext_resource type="PackedScene" uid="uid://btfii6ks7ev1e" path="res://Gameplay/Upgrades/ghost_ano_h_controller.tscn" id="1_b0ran"]
+[ext_resource type="Texture2D" uid="uid://p3885y3gabgf" path="res://resources/ui/icons/icons23.png" id="2_b0ran"]
+[ext_resource type="Script" uid="uid://f3crvy5px2r7" path="res://Gameplay/Upgrades/ability_get.gd" id="3_iustn"]
+
+[resource]
+script = ExtResource("3_iustn")
+ability_controller_scene = ExtResource("1_b0ran")
+icon = ExtResource("2_b0ran")
+id = "ghost_ano_h"
+price = Array[int]([0])
+max_quantity = 1
+cost = 4
+name = "GHOST_ANO_H"
+description = "GHOST_ANO_H_DESCRIPTION"

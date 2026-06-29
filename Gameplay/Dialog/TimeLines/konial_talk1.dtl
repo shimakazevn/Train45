@@ -1,0 +1,191 @@
+do GameEvents.hide_dialog_love_ui()
+konial: 으읏.. 으힛?!.. #id:1266
+join reina left 
+reina: 이 모습도 점점 익숙해 지는거 같아요.. 어서 풀어 주죠. #id:1267
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_position_change(-1, 227, 338)
+do GameEvents.emit_direction_change("right")
+do GameEvents.emit_anim_change_this_npc("weak", {ch.konial})
+do GameEvents.emit_position_change({ch.konial}, 345, 330)
+join konial rightmost [mirrored="true" ]
+emotion konial Dislike 
+konial: ..으읏.. 하아.. #id:1268
+emotion konial Surprised 
+konial: ..무슨 뜸을 그렇게 들여? 알몸으로 기다리느라.. 푸엣취! #id:1269
+- 파주주에 대해.. #id:126a
+reina: 파주주와 당신은 잘 아는 사이였던 거 같은데.. #id:126b
+emotion konial Idle 
+konial: ..아아. 그 녀석? 사실 잘 몰라. 키히히. 아카데미에서 같은 클래스였을걸. #id:126c
+emotion reina Suprised 
+reina: 네? 그치만 그 지갑 속에 같이 찍은 사진은.. #id:126d
+emotion konial Dislike 
+konial: 사진? 내가 그런 하급 천사랑 사진을 왜? #id:126e
+reina: ..그렇다는 건.. 이 사진.. 다시 보니 이상하네요. #id:126f
+join talk_asset [extra_data="set Images/PazuzuPicture"]
+- 함께 찍었다기보단.. #id:1270
+- '찍힌' 거 같네. #id:1271
+konial: 아카데미도 짧게 다니느라 기억은 안 나지만.. 그래. 유독 기분나쁘게 눈에 자주 띄는 녀석이 있었어. #id:1272
+konial: 어딜 가든 날파리처럼 주위를 맴돌았지. 이름조차 몰랐지만.. 이번에 전차를 박살내는 바람에 떠올랐어. #id:1273
+konial: 파주주.. 그 녀석이.. #id:1274
+konial: 그 녀석이 날 아카데미에서 내쫓은 거야. #id:1275
+join mai leftmost 
+emotion mai Flat 
+mai: ..파주주가? 어째서? 이름도 몰랐다며. #id:1276
+leave talk_asset
+konial: 내가 어떻게 알겠어? 뭔가 아니꼬운 점이 있었나보지. 처음엔 공물 따위를 책상 위에 몰래 올려두더니, 작은 성물부터 점점 양이 많아졌어. #id:1277
+emotion reina Suprised 
+reina: 천사가 악마에게? ..그래서 그것들은 어떻게.. #id:1278
+emotion konial Idle 
+konial: 물론 전부 불태워.. 버리고 싶지만.. 신의 성물이니까. 모른 척 돌려 놓았어. 천사 따위가 이유없이 재물을 건넬 리 없으니까. #id:1279
+konial: 몽땅 처분해버린 이후로 그 녀석이 날 귀찮게 하는 일은 없었어. 이제 음습한 괴롭힘에서 해방됐다 생각했지. #id:127a
+konial: 하지만 그 이후.. 그 이후.. #id:127b
+emotion konial Surprised 
+konial: ..... #id:127c
+konial: ...그래. 그 녀석이었어.. 이제 알겠네. #id:127d
+emotion konial Smile 
+konial: ..키힛.. 키히힛..! 파주주.. 그런 이름이었구나.. #id:127e
+- ..코니알? #id:127f
+emotion konial Idle 
+konial: 그 사건이 있고 다음 해.. 단 한 개. 딱 한 가지의 성물이 저택 창고에서 발견됐어. #id:1280
+konial: 지니고 있는 것만으로 중죄가 되는 신의 성물을.. 그 녀석이 우리 저택에 꽁꽁 숨겨 놓았던 거야. 당연히 신계에서는 대사건이 되고 우리 부모는 죄를 물어 숙청되었어. #id:1281
+konial: 집으로 조사관이 들이닥치기 전.. 아버지가 나를 그 성물과 함께 멀리 보내버리는 덕분에 목숨은 건졌지만.. 아카데미는 그대로 제적되었지. #id:1282
+konial: 그렇게 한순간에 천애고아가 되 버린 거야. 남은거라곤 성물과 멍청한 새 한마리뿐. 완전 바닥에서부터 이 '사업'을 일궈낸 거지. #id:1283
+emotion reina Serious 
+reina: 그 새라는건.. 집사를 말하는 거군요. 그렇다면 성물은 지금 어디에.. #id:1284
+emotion konial Sadistic 
+konial: 키히히. 지금 보고 있잖아? 아니.. 들어와 있다고 해야 하나? #id:1285
+emotion mai Serious 
+mai: 뭐? 그렇단 건.. #id:1286
+- 이 45번 전차가.. 성물? #id:1287
+emotion konial Idle 
+konial: 정확히는 성물을 담는 그릇이지만. 전차가 성물의 힘을 온전히 받고 있으니 정답이야. #id:1288
+konial: 성물의 이름까진 밝히고 싶지 않지만.. 이 성물은 인간들의 정념을 먹고, 그 대가로 티켓을 만들어 내. #id:1289
+konial: 수십 년간 수많은 인간들을 실어 나르면서 쌓인 정념이 배인 45번 전차는 성물의 그릇으로 더할 나위 없잖아? #id:128a
+konial: 그래서 누구도 알지 못하게 전차를 탈취해낸 것일 텐데.. 들켜 버렸네. #id:128b
+emotion reina Idle 
+reina: 잠깐만요.. 파주주는 분명 이 전차를 손쉽게 찾아냈다고 했어요. 몇번이고 되돌아 왔고요. #id:128c
+emotion konial Dislike 
+konial: 그게 이상한 점이야. 내가 평생을 바쳐 배운 위장 마법인데.. 그깟 하급 신은 절대 찾아낼 수 없을게 분명해. #id:128d
+konial: 그래.. ..파주주 그 녀석.. #id:128e
+konial: 나를 스토킹하고 있는 거야.. 아카데미 때부터 지금까지. #id:128f
+emotion mai Surprised 
+mai: 에?.. ..뭐야 그게. 징그러워.. #id:1290
+konial: 그게 아니면 설명이 안된다고. 전차를 탈취한지 얼마 안되서 위치를 찾아낸 거나. 하필이면 날 알고 있는 녀석이 날 붙잡으러 온 거나. #id:1291
+- 그게 사실이라면.. #id:1292
+- 파주주의 목적은 우리들의 구출이 아닌.. #id:1293
+emotion reina Suprised 
+reina: 파주주는 처음부터 코니알을 노리고 전차에 탑승한 거라면, 저희들의 구출은 뒷전일 수 있는건가요? #id:1294
+emotion mai Serious 
+mai: 에이.. 설마. 천사잖아? 그건 천사답지 않은데.. #id:1295
+emotion konial Idle 
+konial: 그래, 마침 좋은 타이밍이네. 인간들의 보편적인 인식은 그렇지? 키히히.. #id:1296
+emotion mai Flat 
+mai: 코니알 너도 저번에 얘기했잖아. 천사는 거짓말을 할 수 없다고.. #id:1297
+konial: 그건 사실이야. 하지만 거짓말을 할수 없다는게 '무조건 진실만을 말한다'가 될 수 있을까? #id:1298
+emotion reina Serious 
+reina: 그게 무슨.. 말장난 같은 건가요? #id:1299
+konial: 키히히.. 그럼 한번 잘 생각해 봐. 지금까지 파주주가 너희를 원래 있던곳으로 되돌려 주겠다고 약속한 적 있어? #id:129a
+- .... #id:129b
+emotion mai Dislike 
+mai: ..없었던가? 기억이 안 나.. 이곳에서 나가게 해 준다고 했으니 그럴 거라 믿고만 있었지.. #id:129c
+emotion reina Suprised 
+reina: 아니에요, 저희는 분명 파주주에게.. ..앗! #id:129d
+- 전차 밖으로 내보내 준다고 했지만. #id:129e
+- 그 도착점이 어디인 지 들은 적 없어. #id:129f
+emotion reina Idle 
+reina: 도착지에 대해 물을 때마다 파주주는.. #id:12a0
+emotion konial Idle 
+konial: 무시하거나 화제를 돌렸겠지. 거짓말은 한 적 없어. #id:12a1
+emotion reina Serious 
+reina: 그.. 그럼 파주주가 저희를 어디로 데려간다는 건가요? 일본이 아니라면.. #id:12a2
+emotion konial Smile 
+konial: 내가 어떻게 알아? 뭣하면 나랑 같이 지옥으로 향하던가. #id:12a3
+emotion mai Dislike 
+mai: 무슨 소리야! 우린 피해자잖아. #id:12a4
+reina: 코니알 씨는.. 돌아가면 엄청 큰 죄를 묻는다고 했어요.. 그건 두렵지 않나요? #id:12a5
+emotion konial Idle 
+konial: 두렵냐고? 키히히.. 인간의 기준으로 생각하지 말아줄래? 적어도 존재의 소멸은 확정이지. 하지만 무섭거나 하진 않아. #id:12a6
+konial: 짜증날 뿐이지. 악착같이 숨어 지내면서 살아왔거든. 그런데 결국 가문을 무너트린 녀석에게 목숨마저 잃게 된다니. 정말 짜증나. #id:12a7
+- 그럼.. 복수하고 싶은 거야? #id:12a8
+konial: 복수? 키히히. 그런다고 뭐가 돌아오는데? 귀찮고 힘들 뿐이야. 내 모든 건 빼앗겼어. 티켓도, 전차도, 쓸모 없는 집사는 내가 버린거지만. #id:12a9
+konial: ..이제 미련은 없.. #id:12aa
+emotion konial Dislike 
+konial: ... #id:12ab
+- ..? 왜 바라보는거야? #id:12ac
+konial: ..아니, 아무것도. #id:12ad
+emotion konial Idle 
+konial: 조금.. 있었던 거 같네. 하고 싶은 거. #id:12ae
+- 뭐야? 하고 싶은 건.. #id:12af
+konial: .... #id:12b0
+emotion konial Dislike 
+update konial [extra_data="show Etc/Blur"]
+konial: ..기분좋은 섹스.. 처음이었거든. #id:12b1
+emotion reina Suprised 
+reina: ..어머. #id:12b2
+emotion mai Ecchi 
+mai: 에에? 뭐야 그 소녀 얼굴. #id:12b3
+emotion konial Surprised 
+konial: 교.. 교미 따위를 하는 건 인간 뿐이라고! 네 녀석이 박아대지만 않았어도 이따위 것 모르고 살았을 텐데.. #id:12b4
+emotion konial Dislike 
+konial: 하지만.. 그래.. 아주 조금.. 기분 좋았어.. 그래서 떠나기 전에 한번 더.. 섹스란 거 해볼 수 있었으면 좋았을 텐데. #id:12b5
+- 그 쯤이야.. #id:12b6
+- 잠시 기다려봐. #id:12b7
+emotion konial Surprised 
+konial: 거.. 거리낌 없이 자지 세우지 말라고! 기분이란 게 있잖아! 이대로 해도 전혀 좋지 않을게 분명해! #id:12b8
+emotion mai Dislike 
+mai: 까다롭긴.. 그럼 코니알이 말하는 기분은 어떻게 맞추는데? #id:12b9
+emotion konial Surprised 
+konial: 모..몰라! 악마는 선천적으로 성욕을 못 느끼니까! ..하지만 그.. 팔찌라는 걸 사용할 때.. 생전 처음 느끼는 기분이 들었어. #id:12ba
+konial: 숨이 가쁘고 엄청나게 쾌락이 몰려오면서.. 한동안 움직이지 못할 정도로 말이야. #id:12bb
+emotion reina Suprised 
+reina: 오르가즘.. 인가요. 그게 처음이라니.. #id:12bc
+emotion mai Idle 
+mai: 인간의 몸에만 쌓이는 정념을 팔찌를 통해 코니알에게 주입하면서 쾌락도 같이 느낄수 있게 됐다는 건가? #id:12bd
+- 그럼 이번에도 팔찌에 정념을 쌓은채 섹스하면. #id:12be
+- 한번 더 기분 좋아질 수 있는 거지? #id:12bf
+konial: ..뭐.. 한번 더 정념을 모아 온다고? #id:12c0
+konial: 어째서 그렇게까지? 한시 빨리 탈출하고 싶지 않아? #id:12c1
+- 어쩌면 다시 만날 수 없을 테니까. #id:12c2
+- 섹스가 유일하게 원하는 거라면 얼마든. #id:12c3
+emotion reina Angry 
+reina: 물론 저희를 속인 건 용서 못해요. #id:12c4
+emotion reina Smile 
+reina: 하지만.. 이 행복을 얼마 느껴보지 못한 채 끝나는 건.. 안타까우니까. #id:12c5
+emotion mai Idle 
+mai: 맞아. 더 기분 좋게 섹스할 수 있는 방법도 많단 말이야. #id:12c6
+mai: 코니알 네가 마음을 열고 이 녀석에게 몸을 몸을 맡긴다면 몇 배는 기분 좋아질걸? #id:12c7
+emotion konial Surprised 
+konial: 도.. 동정하지 마! 그냥 네 녀석들을 마지막까지 나를 위한 도구로 쓰고 싶다는 뜻이었으니까. #id:12c8
+- 부끄러워 하긴. #id:12c9
+emotion konial Dislike 
+konial: 누가 부끄러워 한다는 거야! 인간 따위가 기어오르다니.. 하아.. 뭐 됐어. 맘껏 조롱하라고. #id:12ca
+konial: ..... #id:12cb
+konial: ..파.. 팔찌에 정념을 모아온다는 거. 정말이야? #id:12cc
+- 그래 가득 채워 올게. #id:12cd
+- 시간은 좀 걸리겠지만. #id:12ce
+konial: ..꿀꺽. #id:12cf
+emotion konial Surprised 
+konial: ..어.. 어서 눈앞에서 사라지지 않고 뭐해! 전혀 기대 안되니까! 다시는 돌아오지 말라고! #id:12d0
+leave konial
+- 우리도 슬슬 출발하자. #id:12d1
+emotion mai Laugh 
+mai: 완전 츤데레가 다 됐네. #id:12d2
+emotion reina Smile 
+reina: 어쩐지 신선하네요. #id:12d3
+- 코니알과 대화하면서 더 고민되기 시작했어. #id:12d4
+emotion reina Serious 
+reina: 맞아요.. 파주주라는 인물을 더 믿을수가 없게 됐어요. 이것도 코니알의 계략이라는 가능성도 있을까요? #id:12d5
+emotion mai Flat 
+mai: 그렇게 따지면 아무것도 믿을 수 없게 돼 버려. #id:12d6
+- 앞으로는 우리의 선택에 달렸어. #id:12d7
+mai: 응. 파주주를 따라 당장 전차 밖으로 탈출하거나.. #id:12d8
+reina: 또 다른 방법을 찾는 것.. 코니알의 소원도 이뤄 주면서요. #id:12d9
+- 뭐든 후회 없이 가도록 하자. #id:12da
+#강제로 이벤트 레벨 지정, 대화창에서 호감도 레벨업하는 특수 상황
+do GameEvents.emit_forcefix_current_event_love_level(1)
+do GameEvents.emit_npc_level_up({ch.konial})
+do GameEvents.emit_add_read_history("konial_talk1")
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+do GameEvents.emit_position_change({ch.konial}, 345, 275)
+[end_timeline]

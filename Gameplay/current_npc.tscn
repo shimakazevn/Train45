@@ -1,0 +1,11 @@
+[gd_scene load_steps=5 format=3 uid="uid://sl6d2h0edxf8"]
+
+[ext_resource type="Script" uid="uid://dd2hppo2kkys8" path="res://Gameplay/current_npc.gd" id="1_qvuib"]
+[ext_resource type="PackedScene" uid="uid://bjn4cyp2l8xve" path="res://Gameplay/NPC/ol.tscn" id="2_76q34"]
+[ext_resource type="PackedScene" uid="uid://baub7ftcte2oe" path="res://Gameplay/NPC/gyaru.tscn" id="3_gly2o"]
+[ext_resource type="PackedScene" uid="uid://d0mobvya0ewag" path="res://Gameplay/NPC/konial.tscn" id="4_8df1s"]
+
+[node name="CurrentNPC" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_qvuib")
+Npcs = Array[PackedScene]([ExtResource("2_76q34"), ExtResource("3_gly2o"), ExtResource("4_8df1s")])

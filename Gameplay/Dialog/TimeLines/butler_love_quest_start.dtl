@@ -1,0 +1,41 @@
+join butler(human) center 
+butler(human): ..아, 잠깐 시간 내 주실 수 있으십니까? #id:1783
+emotion butler(human) Serious 
+butler(human): 실은 인간 모습으로 변한 뒤로 좀 곤란한 일이.. #id:1784
+- 곤란한 일? #id:1785
+butler(human): 네. 이전 모습일 때의 감각이 상당히.. 무뎌진 거 같습니다. #id:1786
+butler(human): 전차칸에 퍼진 분실물을 회수하는 것도 제 업무였습니다만, 이런 모습으로는.. #id:1787
+emotion butler(human) Panic 
+butler(human): 움직이는 것도 어색하고, 이변을 가까이 하면 자, 자꾸 이상한 기분이 들어서.. #id:1788
+- 인간이 되면서 이변의 영향을 받게 된 건가? #id:1789
+emotion butler(human) Serious 
+butler(human): 그런 거 같습니다. 이래서는 상품 수급에 차질이 생길 텐데.. #id:178a
+- 그럼 겸사겸사 탐색하면서 찾아 볼게. #id:178b
+emotion butler(human) Surprise 
+butler(human): 저, 정말입니까? 하지만.. #id:178c
+- 이제는 비슷한 처지니까. #id:178d
+- 상품이 있어야 더 빨리 티켓을 모을 수 있으니까. #id:178e
+emotion butler(human) Smile 
+butler(human): 그럼.. 사양하지 않겠습니다. 감사합니다. #id:178f
+butler(human): 항상 도움만 받는군요.. 면목 없습니다. #id:1790
+- 그 분실물들은 어디서 찾아? #id:1791
+emotion butler(human) Idle 
+butler(human): 일반적으로는 전차칸을 탐색하다보면 발견할 수 있습니다. #id:1792
+butler(human): 탐색했던 전차칸이라도 분실물이 발견될 수 있으니 한번 더 확인해 보시면 좋을 듯 합니다. #id:1793
+emotion butler(human) Smile 
+butler(human): 그리고 획득한 분실물은 제게 가져올 필요 없이 바로 사용하셔도 됩니다. #id:1794
+- 정말? 티켓을 받고 판매해야 하는 거 아냐? #id:1795
+- 코니알에게 줄 티켓은? #id:1796
+butler(human): 원래라면 그렇지만.. 어차피 여러분에게 필요한 물건이니까요. #id:1797
+emotion butler(human) Surprise 
+butler(human): 코니알 님에게 바칠 티켓은.. 아! #id:1798
+emotion butler(human) Smile 
+butler(human): 그럼, 분실물이 있을 거라 생각되는 칸의 정보를 교환해 드릴 테니, 위치를 알고 싶으시면 들러 주세요. #id:1799
+butler(human): 상품들의 가격보다 저렴하게 교환 해 드리겠습니다. #id:179a
+- 알겠어. 고마워! #id:179b
+emotion butler(human) Smile 
+butler(human): 감사합니다. ..몸 조심히 다녀오시길. #id:179c
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_add_read_history("butler_love_quest_start")
+[signal arg="butler_h"]
+[end_timeline]

@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dx38vqnwbp246"]
+
+[ext_resource type="Texture2D" uid="uid://botbgwaxa41mu" path="res://resources/ui/icons/icons10.png" id="1_h7sax"]
+[ext_resource type="Shader" uid="uid://bxnlp6cvqlj5c" path="res://Gameplay/item_effect_outline.gdshader" id="1_u3d0i"]
+[ext_resource type="Script" uid="uid://3iihqjjr3b44" path="res://Gameplay/item_effect_icon.gd" id="2_u3d0i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6mvjw"]
+shader = ExtResource("1_u3d0i")
+shader_parameter/Smooth = true
+shader_parameter/width = 7.8270003717825
+shader_parameter/outline_color = Vector4(1, 1, 1, 0.485)
+shader_parameter/pixel_size = 3
+shader_parameter/width_speed = 1.00000004424012
+
+[sub_resource type="LabelSettings" id="LabelSettings_yfvls"]
+font_size = 17
+outline_size = 4
+outline_color = Color(0.14563522, 0.0022438136, 0.0051462995, 1)
+
+[node name="ItemEffectIcon" type="TextureRect"]
+material = SubResource("ShaderMaterial_6mvjw")
+offset_left = 69.0
+offset_top = 16.0
+offset_right = 90.0
+offset_bottom = 37.0
+texture = ExtResource("1_h7sax")
+expand_mode = 1
+script = ExtResource("2_u3d0i")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.68
+anchor_top = 0.71500003
+anchor_right = 0.68
+anchor_bottom = 0.71500003
+offset_left = -3.2799988
+offset_top = -11.014999
+offset_right = 8.72
+offset_bottom = 13.776668
+text = "+"
+label_settings = SubResource("LabelSettings_yfvls")

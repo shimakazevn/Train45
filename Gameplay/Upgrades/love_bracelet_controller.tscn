@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://wnfbw4aj1bhy"]
+
+[ext_resource type="Script" uid="uid://o6dpe4nda3eg" path="res://Gameplay/Upgrades/love_bracelet_controller.gd" id="1_g6nuk"]
+[ext_resource type="PackedScene" uid="uid://dfga76a27kpun" path="res://Gameplay/Upgrades/love_bracelet.tscn" id="2_baeyk"]
+
+[node name="LoveBraceletController" type="Node2D"]
+script = ExtResource("1_g6nuk")
+love_bracelet = ExtResource("2_baeyk")

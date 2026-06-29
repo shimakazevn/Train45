@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://btfii6ks7ev1e"]
+
+[ext_resource type="Script" uid="uid://ol5ne4qre7i6" path="res://Gameplay/Upgrades/ghost_ano_h_controller.gd" id="1_8t3td"]
+
+[node name="GhostAnoHController" type="Node2D"]
+script = ExtResource("1_8t3td")

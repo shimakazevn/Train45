@@ -1,0 +1,93 @@
+join mai left 
+emotion mai Dislike 
+do GameEvents.emit_cutscene_play("e_stand_sign_cut1")
+mai: 으응~ 이 일도 꽤 힘든 걸. #id:ece
+mai: 이렇게 많이 움직인 건 오랜만이야. #id:ecf
+mai: 너는 어떄? 계속 가도 되겠지? #id:ed0
+emotion mai Idle 
+mai: ..표정을 보니 그렇지도 않나. 꽤 오래 걷긴 했지만. #id:ed1
+mai: 나는 원래 움직이는 걸 좋아했으니 아직 쌩쌩해! #id:ed2
+- 예상은 했지만 엄청 활동적이야. #id:ed3
+mai: 응. 운동 자주 하거든. 체력도 좋은 편이고. #id:ed4
+mai: 예전엔 발레를 했어. 꽤나 유망했다? 부모님이 억지로 시키긴 했지만.. #id:ed5
+emotion mai Smile 
+mai: 덕분에 나중엔 그 반동으로 노는 걸 무지 좋아하게 되 버렸지. 하핫! #id:ed6
+mai: 그래도 가만히 있으면 답답하니까. 집에서 요가라던지 스트레칭은 열심히 하는 편이야. #id:ed7
+mai: 봐봐, 아직 이정도로 유연하다니까? #id:ed8
+마이가 가볍게 한쪽 다리를 머리 위까지 올린다. #id:ed9
+emotion mai Idle 
+mai: 어때, 대단하지 않아? 이런 거 처음 보지? #id:eda
+- 의외네. 발레라니.. #id:edb
+mai: 으음.. 그런 얘기 자주 들어. #id:edc
+mai: 하긴, 나같은 갸루한테는 안 어울리긴 하지. #id:edd
+mai: 나도 그렇게 생각했어. 같이 발레 하던 주변 친구들은 모두 착했거든. 얌전하고. #id:ede
+mai: 발레 자체는 싫지 않았지만.. 부담이 됐달까. 잘 지내진 못했던 거 같아. #id:edf
+emotion mai Flat 
+mai: 그만둔 걸 후회하진 않는데. 만약 그때 계속해서 발레를 배웠다면.. #id:ee0
+emotion mai Idle 
+mai: 지금보다 덤벙대는 성격은 좀 줄었으려나? 여성스럽게 말이야. 레이나처럼. 히히. #id:ee1
+- 나는 지금의 개성있는 마이가 좋아. #id:ee2
+- 발레리나 갸루 속성은 희귀하니까. #id:ee3
+emotion mai Laugh 
+mai: 뭐? 하하! 그게 뭐야. #id:ee4
+emotion mai Idle 
+mai: ..그래도 무슨 뜻인지 알겠어. #id:ee5
+mai: 어쨌든 지나버린 일이고 그건 네가 좋아하는 나의 모습과는 거리가 있으니까. #id:ee6
+mai: 응. 안 되지. 네가 날 좋아해주지 않으면 아무 소용 없는 걸. #id:ee7
+emotion mai Serious 
+mai: ..앗! #id:ee8
+mai: 또 하나 떠올랐어. 유연한 몸의 장점. #id:ee9
+emotion mai Smile 
+mai: ..다양한 체위! #id:eea
+- 체위? #id:eeb
+mai: 하하하! 무슨 표정이야. 아까보다 반응이 좋은걸? #id:eec
+emotion mai Idle 
+mai: 말 그대로야. 몸이 유연하면 엄청 다양한 자세로 할 수 있어. #id:eed
+mai: 이전에 여성 잡지에서 봤거든. 별의 별 특이한 체위가 48가지나 있더라. #id:eee
+mai: 집에서 연습해 봤는데 50가지나 가능했어! ..2개는 내가 개발한 거고. #id:eef
+mai: 그리고.. 평소에는 안 닿는 부분까지 들어온대. #id:ef0
+emotion mai Ecchi 
+mai: 궁금하면.. 한번 해 볼까? #id:ef1
+mai: 나도 실전은 해본 적 없으니까. 기분 좋을거라 장담은 못하지만. #id:ef2
+- 직접 해보지 않으면 모르겠지. #id:ef3
+emotion mai Laugh 
+mai: 응, 맞는 말이야. 좋아! 어서 이리 오라고~ 내 유연함 똑똑히 보여 줄 테니까. #id:ef4
+leave mai
+do GameEvents.emit_cutscene_play("RESET")
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene3_1")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(1, 100)
+mai: 응. 이렇게. 다리를 들어서.. #id:ef5
+mai: 어때, 무겁진 않아? #id:ef6
+- 마이의 균형감각 덕분에.. #id:ef7
+- 전혀 무겁게 느껴지지 않아. #id:ef8
+mai: 그치? 잡아주지 않아도 서있을 수 있지만.. 이렇게 하면 더 깊이 박을 수 있으니까. #id:ef9
+mai: 다리가 활짝 열려서 입구를 알기 편하지? #id:efa
+mai: 확실히 이 자세라면.. 더 바짝 밀착할 수 있겠어. #id:efb
+mai: 어떻게 해. 벌써부터 기대되기 시작하잖아.. 분명 기분 좋을거야. #id:efc
+mai: 저기. 이제 참을 수 없을 거 같아.. #id:efd
+mai: 어서 자지 넣어줄래? 나 유연해서, 거칠게 해도 되니까.. #id:efe
+mai: 잔뜩 기분 좋아지자? #id:eff
+[signal arg="scene3"]
+mai: 하아..아아..읏.. #id:f00
+mai: 어.. 엄청 깊이 들어오는구나.. 자궁 입구까지 닿은 거 같아.. #id:f01
+mai: 무척 기분 좋네 이거.. 중독되겠어. #id:f02
+mai: 하.. 하지만 확실히 아무나 할수 있는 자세는 아니구나.. 꽤나 유연성이 필요하겠어. #id:f03
+mai: 너도 고마워 하라고? 이렇게 유연한 몸을 경험해 보긴 힘들 테니까. #id:f04
+- 허억.. 응.. 대단해. #id:f05
+mai: 에에?! 너 왜 그렇게 땀 범벅이야?! 어디 아파? #id:f06
+- 여.. 여러 가지로 힘이.. 다해서. #id:f07
+잔뜩 사정한 후의 탈력감으로 인해 다리의 힘이 풀린다. 섹스중의 흥분감이 그녀의 거친 움직임과 무게를 버텨주고 있던 것만 같다. #id:f08
+mai: 뭐어? 그렇게 힘들었어? 정말.. 항상 느끼지만, 운동 부족이야. #id:f09
+- 선 채로 하는 건 자극이 엄청 강해.. #id:f0a
+- 마이의 보지가 너무 기분 좋은 게 잘못이니까.. #id:f0b
+mai: 마구 피스톤질 할때만큼은 팔팔했는데 끝나자 마자 이렇게 되다니. #id:f0c
+mai: 이것보다 훨씬 고 난이도의 체위가 49개나 남았어. 모두 클리어할때까지 절대 놔 주지 않을 거야! #id:f0d
+mai: 남은 49개 모두 마스터 할 때까지 잔뜩 섹스할 거니까. 각오해 두라고? #id:f0e
+이번의 체위는.. 이전과는 다르게 자극하는 위치나 깊이가 새로워져서 낯선 쾌감이 몰려왔다. #id:f0f
+마이와 함께라면 매번 지금처럼 새로운 섹스를 할 수 있는 거구나. #id:f10
+그러기 위해선.. 역시 체력.. 키워 둬야겠어. #id:f11
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+do GameEvents.emit_npc_level_up(1)

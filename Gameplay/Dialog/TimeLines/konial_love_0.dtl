@@ -1,0 +1,269 @@
+do GameEvents.emit_position_change(-1, 227, 338)
+do GameEvents.emit_direction_change("right")
+join pazuzu rightmost [mirrored="true" ]
+emotion pazuzu Seriouse 
+pazuzu: 돌아오셨군요.. #id:1079
+#[debug] 대화 스킵할까요? #id:1090
+#- 네 #id:1091
+#	do GameEvents.emit_anim_change_this_npc("weak", {ch.konial})
+#	do GameEvents.emit_position_change({ch.konial}, 345, 330)
+#	do GameEvents.game_state_change(0)
+#	애니 변경 #id:1092
+#	jump debug_skip
+#- 아니오 #id:1093
+#스킵 안함 #id:1094
+- 팔찌의 기운이 가득 차서 돌아왔어. #id:107a
+pazuzu: 네, 마침 라마슈투에게도 변화가 생긴 참이에요. 평소보다.. 더 흥분한 것처럼 보이거든요.. #id:107b
+konial: 오..오옷.. 으으.. #id:107c
+join reina left 
+emotion reina Shy 
+reina: 그.. 그러네요. 그런데도 여전히 입을 다물고 있는 건가요? #id:107d
+pazuzu: 네.. 탐색하시는 동안 여러 방법으로 정보를 물었지만.. 성과가 없었어요.. 원래 예정대로.. 여러분들에게 맡길 수 밖에 없겠어요.. #id:107e
+join mai leftmost 
+emotion mai Flat 
+mai: 응, 그럼 이제부터 어떤 걸 하면 되는거야? #id:107f
+emotion pazuzu Idle 
+pazuzu: 그건.. 여러분들에게 맡길게요.. 현재 라마슈투는 팔찌를 통해 충분한 정념이 주입되었어요.. #id:1080
+pazuzu: 인간의 자지로도.. 절정하고 임신할 수 있는 체질로 변한 거죠.. 저희에게 요구했던 것처럼.. 라마슈투에게도 자지의 맛을 보여준다면.. #id:1081
+emotion mai Serious 
+mai: 자지로 코니알을 함락시킨다..? 야한 만화처럼? #id:1082
+emotion reina Serious 
+reina: 그 정도로 간단하게 코니알에게 정보를 캐낼 수 있을까요? #id:1083
+- 나는 그 정도 기술은 없는데.. #id:1084
+pazuzu: 물론 평범한 인간이라면 힘들지 몰라요.. 하지만 당신이라면.. 당신의 자지라면 달라요.. #id:1085
+pazuzu: 비록 당신을 본딴 괴물들이었지만.. 경험해 본 바로는 당신은 코니알을 상대하기에 충분해요.. #id:1086
+emotion pazuzu Smile 
+pazuzu: 아마 그건 레이나 님과 마이 님이.. 더 잘 알고 있을 거에요.. #id:1087
+emotion reina Shy 
+reina: 아.. 자지..에 관한 이야기라면. 네. 맞아요. #id:1088
+reina: 처음에는 어색하고 서툴렀지만, 지금까지 수도 없이 섹스하면서.. 이제는 제 약한 곳을 너무 쉽게 찾아 찔러 오거든요. #id:1089
+reina: 항상 몇번이고 절정하게 돼요. 평소에도 자지 생각이 날 정도로 기분 좋으니까.. 코니알에게도 충분히 통할 거에요. #id:108a
+emotion mai Laugh 
+mai: 나도 그래! 몇번이고 연속해서 박아대도 지치지도 않고, 정액도 잔뜩 잔뜩 나오고.. #id:108b
+mai: 섹스 후에 껴안고 있으면 뭐든 해주고 싶어질 정도야. ..읏, 생각만 했는데도 약간 젖어 버렸어. #id:108c
+emotion reina Shy 
+reina: ..어쩌면 다른 어떤 방법보다도 이 전차에 가장 알맞은 심문일지도 모르겠네요. #id:108d
+pazuzu: 라마슈투에게 당한 대로 갚아준다.. 라는 의미에서도 이보다 좋은 방법은 없어요.. #id:108e
+emotion pazuzu Seriouse 
+pazuzu: 그럼 저는 잠시 자리를 비워 드릴게요.. #id:108f
+emotion mai Idle 
+mai: 응? 지켜보고 있지 않아도 되겠어? #id:1090
+pazuzu: 이런 건.. 분위기도 많은 영향을 주니까요.. 라마슈투가 제 얼굴을 보면 역효과가 나올 지 몰라요.. #id:1091
+emotion reina Idle 
+reina: 확실히.. 코니알은 저희를 인간이라 얕잡아 보니까요. 저희끼리 있어야 방심시킬 수 있겠어요. #id:1092
+- 그럼 다녀올게. #id:1093
+emotion pazuzu Idle 
+pazuzu: 네..! 부디 본때를 보여주세요.. #id:1094
+konial: 으응... 오오옷.. #id:1095
+reina: ..그럼 안대를 벗기고 장치를 끌게요. #id:1096
+leave pazuzu
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_anim_change_this_npc("weak", {ch.konial})
+do GameEvents.emit_position_change({ch.konial}, 345, 330)
+... #id:1097
+konial: 우웃?! ....하아..하아.. #id:1098
+- 코니알, 정신이 들어? #id:1099
+konial: ..너.. 네.. 네 녀석들 짓이야? ..불청객을 들인 건.. #id:109a
+- 약속을 지키지 않은 건 네가 먼저야. #id:109b
+- 위험에 처한 파주주를 구한 것 뿐이야. #id:109c
+	konial: 위험에 처해..? 저 녀석이 얼마나 위험한지 모르고 있구나..? #id:109d
+konial: 이렇게까지 해서 내 계획을 엉망으로 만들어 놓다니.. #id:109e
+emotion reina Serious 
+reina: 코니알 당신이 제안한 건 모두 거짓말이었어요. 저희를 평생 이 전차 안에 가둘 셈이었죠? #id:109f
+konial: 평생이라고 한 적 없어. 할당량은 분명 말했을 텐데? #id:10a0
+emotion mai Flat 
+mai: 그건 너무 터무니없는 액수였잖아? 죽을 때까지 모아도 채울 수 없는 숫자야! #id:10a1
+konial: ..키히히.. 그래서 전차로 대려온 건데? 이곳에선 죽거나 늙지 않고 섹스만 하며 살 수 있으니까. 좋지 않아? ..현실로 돌아가면 분명 후회할 걸. #id:10a2
+- 그 말은 이제 통하지 않아. #id:10a3
+emotion reina Idle 
+reina: 맞아요. 강제로 정념 따위를 주입하지 않아도.. 저는 진심으로 좋아하고 있으니까요. #id:10a4
+emotion mai Idle 
+mai: 장소 따위는 상관 없어. 다른 곳에서 우연히 만났더라도 지금처럼 엄청 사랑하게 됐을 거야. #id:10a5
+konial: ..키히히.. 증명할 방법도 없는 걸? 그게 정신 승리라는 거야. 억지 부리는 거 외에는 아무것도 못하지. 정말 미개하잖아? #id:10a6
+emotion reina Serious 
+reina: ..역시 대화로는 안되겠어요. #id:10a7
+emotion mai Dislike  
+mai: 응, 그럼 증명해줄게. 억지가 아니라는 거! #id:10a8
+- 레이나, 마이. #id:10a9
+- 코니알의 안대를 다시 씌워. #id:10aa
+leave --All-- 
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="1.0"]
+konial: 키히히.. 뭘 하려는.. #id:10ab
+konial: ..? #id:10ac
+konial: ..흐읏. 하아.. 뭐야 이 냄새. #id:10ad
+konial: ..킁킁.. 하아.. 읏.. #id:10ae
+konial: 뜨거운 열기가 닿고 있어.. 하아.. 엄청나게 자극적인 냄새랑 같이.. #id:10af
+konial: 키.. 키히히.. 무슨 장난감을 가져 온 건지는 몰라도.. #id:10b0
+konial: 이.. 이정도로 원하는 걸 얻을 수 있을 거 같아? #id:10b1
+reina: 장난감.. 따위가 아니에요. #id:10b2
+mai: 헤헤.. 네가 그렇게 깔보던.. #id:10b3
+- 내 발기한 자지. #id:10b4
+# 최초 idle 위치 지정을 위해 잠시 옯김
+do GameEvents.emit_position_change({ch.konial}, 345, 275)
+konial: 하아..?! 이.. 코앞에 있는 게..? #id:10b5
+do GameEvents.emit_anim_change_this_npc("scene101_5", {ch.konial})
+do GameEvents.game_state_change(1)
+[clear time="1.0" text="false" portraits="false" music="false" positions="false" style="false"]
+konial: 이.. 이렇게 컷다고? 그럴 리가.. #id:10b6
+reina: 바로 앞에 마주하는 건 처음일 테니까요. #id:10b7
+konial: 마..말도 안돼! 네 모습을 본딴 괴물들보다 냄새도 훨씬 진하고.. #id:10b8
+konial: 보고 싶.. 아니! 하아.. 그럴 리 없어. 젠장! 냄새는 또 왜 이리 야.. 야한 거야! #id:10b9
+mai: 그야 좀 전까지 우리랑 잔뜩 섹스 했거든. 정액이랑 애액이 뒤섞여서 자극적이지? #id:10ba
+konial: 흐읏.. 그.. 그런 더러운 걸 누구의 앞에 가져다 대는 거야?! 저리 치우지 못해..! #id:10bb
+- 그런거 치곤.. #id:10bc
+- 너무 열심히 맡고 있는데. #id:10bd
+konial: 뭐?! 날 뭘로 보는.. 거야! 하아..하아.. #id:10be
+reina: 자지를 따라 고개가 흔들리는데요.. #id:10bf
+konial: 하찮은 인간의 허접 자지 따위 들이대서 어쩌자고? ..킁킁.. 하아.. #id:10c0
+konial: (... 이 안대 너머에.. 저 녀석의 자지가..) #id:10c1
+konial: (..보..보고 싶어.. 보고싶어보고싶어) #id:10c2
+konial: (뜨거운 기운이 닿을 정도로 가까운데.. 혀.. 혀를 내밀면 닿을까..?) #id:10c3
+konial: (..! 무..무슨 생각을! 이 코니알 님이.. 자지 따위에?) #id:10c4
+konial: (파주주.. 그 녀석이 정념을 주입한 건가? 하아..) #id:10c5
+konial: (키히히.. 그래 봤자 이 이상은 무슨 일도.. 일어나지 않아.) #id:10c6
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="1.0"]
+konial: (그래.. 난 코니알.. 이 전차의..) #id:10c7
+konial: (45번 전차의.. 역장..) #id:10c8
+... #id:10c9
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_anim_change_this_npc("scene101_2", {ch.konial})
+[clear time="0.0" text="false" portraits="false" music="false" positions="false" style="false"]
+konial: 츄릅..하아.. 할짝.. 츄웃.. #id:10ca
+konial: 츄우.. 쮸웁.. #id:10cb
+reina: ..어머.. #id:10cc
+mai: 엄청나게 빨고 있네.. #id:10cd
+konial: 츄릅.. 츄.. 하아.. 응.. #id:10ce
+konial: 냄새.. 진해.. 하아.. #id:10cf
+- 이제 말할 생각이 든 거야? #id:10d0
+- 인과를 되돌릴 방법을 알려 줘. #id:10d1
+konial: 하아.. 이..인과아?.. 츄릅.. #id:10d2
+- 말해주면 마음껏 맛보게 해줄게. #id:10d3
+konial: 흐읏.. 츄웃.. 저.. 정마알..? #id:10d4
+konial: 녜..마..말하..말할게.. 큿..? #id:10d5
+konial: 흐읏! 하아.. 이.. 무슨..? 내가 무슨 말을..! #id:10d6
+mai: 아깝다! 거의 다 됐는데.. #id:10d7
+konial: 마..말도 안돼.. 하아.. 내가 자지 따위에..? 츄웁.. #id:10d8
+- 어쩔수 없네 #id:10d9
+- 다음 단계로 가자 #id:10da
+konial: 뭐..? 다.. 다음..? ..꿀꺽 #id:10db
+konial: 다음이라니.. 흐읍..! #id:10dc
+do GameEvents.emit_anim_change_this_npc("scene101_6", {ch.konial})
+konial: 우웁..! 웃.. 읏.. #id:10dd
+konial: (커.. 커다란 게 단숨에..!) #id:10de
+konial: 우웃! 읍..읍.. #id:10df
+konial: (요..용서 못해.. 인간 주제... 헤에..) #id:10e0
+konial: (이..인간 주제..에..) #id:10e1
+konial: (이런 늠름하고.. 멋진 자지라니..) #id:10e2
+- 으읏..! #id:10e3
+reina: 왜.. 왜 그러시죠? #id:10e4
+mai: 이빨 세운거야?! #id:10e5
+- 안쪽에서 혀를 엄청 굴리기 시작했어! #id:10e6
+mai: 에엣.. 거짓말. #id:10e7
+reina: 정말로.. 함락된 건가요? #id:10e8
+konial: 읍..으흠..흣!(웃기지 마..! 인간 자지 따위에 질 거 같아?) #id:10e9
+konial: 으읏..읍..으음!(단지 허락도 없이 입에 침입한 불청객에게 본때를 보여주는 거야!) #id:10ea
+- 아..알겠으니까. #id:10eb
+- 좀더 세게 빨아줄 수 있어? #id:10ec
+konial: ..쪼오옥..흐읍(..이렇게..?) #id:10ed
+konial: ..으읍..읏!(..! 뭐야 방금.. 내가 어째서?!) #id:10ee
+reina: 이거.. 효과가 있는 거 같아요. 설마 했는데.. #id:10ef
+mai: ..근데 정말 잘 빠네.. 역시 악마는 달라.. #id:10f0
+konial: ..츄룹..흡..읏..!(..시..시끄러워!) #id:10f1
+- 그럼 이제.. 본격적으로 시작해보자. #id:10f2
+konial: ..츄웃.. 으음.. 읍..(..보.. 본격적으로..? 뭘 하려는..) #id:10f3
+set {npc.type} = {ch.konial}
+[signal arg="scene101"]
+konial: 으읍..으..브으.. #id:10f4
+reina: ..이렇게 거칠게도 할 수 있군요.. #id:10f5
+mai: 코니알.. 완전 가버렸는데.. 뭔가 말할 수나 있으려나? #id:10f6
+- 코니알, 이제 말할 마음이 생겼어? #id:10f7
+- 아니면 좀 더 할까? #id:10f8
+konial: ..흐으.. 으.. 녜..네헤.. 마..말할게헤.. 케헥.. #id:10f9
+reina: 일단은 좀 진정된 후에 듣도록 하죠.. #id:10fa
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_position_change({ch.konial}, 345, 330)
+do GameEvents.emit_anim_change_this_npc("weak", {ch.konial})
+do GameEvents.game_state_change(0)
+do GameEvents.emit_player_visible(true)
+join mai rightmost [mirrored="true" ]
+join reina leftmost 
+konial: ... #id:10fb
+konial: ..뭘 그렇게 보는 거야..? 설마 정말로 대답할 거라.. #id:10fc
+- ..다시 안대를. #id:10fd
+konial: 키힛?! 아.. 알겠어! ..그게.. #id:10fe
+konial: ..저..전차를 멈추면.. 원래의 인과로 돌아갈 수 있어.. 콜록. #id:10ff
+- 그치만 어떻게? #id:1100
+konial: ..... #id:1101
+konial: 기관실.. 전차의 맨 앞 칸.. ..그곳의 레버를 당겨. 위치는.. 여기. #id:1102
+reina: 제.. 제가 펜과 종이를 가져 올게요! #id:1103
+do TransitionScreen.dialog_transition()
+emotion mai Flat 
+mai: 또 다른 종착점.. 거짓말은 아니지? #id:1104
+emotion reina Suprised 
+reina: 어째서 갑자기 모든 걸 말해주는 거죠? #id:1105
+- 장난을 친 거라면.. #id:1106
+join konial center 
+emotion konial Surprised 
+konial: ..뭐.. 아.. 아니야! ..네 녀석들이 파주주를 끌어들인 덕에 내 계획은 엉망이 됐어. #id:1107
+konial: 더 이상은 티켓을 모으는 것도, 도망치는 것도 불가능해. 네 녀석들 얼굴도 꼴보기 싫어.. 이 짓도 이젠 끝이야. #id:1108
+emotion konial Dislike 
+konial: 그리고.. 인간의 허접 자지 따위에 패배한 허접 악마니까.. 더는 살아갈 자존심도 없어. #id:1109
+emotion mai Laugh 
+mai: 지긴 했지만 허접 자지는 아니니까 기죽지 마! #id:110a
+emotion reina Idle 
+reina: ..그나저나 당신은.. 돌아가면 큰 벌을 받는다 들었어요. #id:110b
+emotion konial Idle 
+konial: 키히히.. 알아. 그게 무서울까봐? #id:110c
+- 어째서 그렇게까지 큰 일을 벌인거야? #id:110d
+konial: 이러나 저러나 비참한 미래였을걸. 큰 도박 한번 저지른 거지. 결국 인간 따위에게 지고 말았지만.. 키히히. #id:110e
+- ..우리는 이만 돌아가 볼게. #id:110f
+- 파주주가 기다리고 있을 거야. #id:1110
+emotion konial Dislike 
+konial: ... #id:1111
+konial: 너희들.. 파주주를 엄청 신뢰하고 있구나? #id:1112
+emotion mai Flat 
+mai: ..무슨 뜻이야? #id:1113
+emotion konial Idle 
+konial: ..아무것도? 키히히. #id:1114
+emotion reina Idle 
+reina: ..가도록 하죠. #id:1115
+leave reina
+leave mai
+- 잘 있어. 코니알. #id:1116
+emotion konial Dislike 
+konial: .... #id:1117
+konial: ..너. 묻고 싶은 게 있어. #id:1118
+- ? #id:1119
+konial: ..이 곳을 탈출해서 원래 인과를 마주하게 돼도.. ..정말로 후회하지 않을 자신 있어? #id:111a
+- 모르겠어. #id:111b
+- 직접 봐야 알겠지. #id:111c
+emotion konial Idle 
+konial: ..키히히. 당연하지. 그건 신들도 모르는 거야. 그렇게 보면 인간이나 신이나 다를게 없어. 오로지 자기 앞길만 생각하지. #id:111d
+konial: 파주주.. 그 녀석도 마찬가지야. 나나 너희들과 똑같아. #id:111e
+- 무슨 뜻이야? #id:111f
+konial: 아무것도. 그 녀석을 따르기로 한 이상, 끝을 봐. #id:1120
+konial: ..만약 ..만약이지만. 그 끝에 후회가 있을 거 같다면. 내가 너희들을 도울 마음이 조금이라도 들게 해.. 그때는 생각해 볼게. #id:1121
+- ..귀찮은 성격이 됐네.. #id:1122
+- 어떻게 하면 되는데? #id:1123
+emotion konial Surprised 
+konial: 아아 몰라! 히로인이 공략 루트까지 손수 떠먹여 주는 거 봤어? #id:1124
+emotion konial Dislike 
+update konial [extra_data="show Etc/Blur"]
+konial: ..네 '무기'를 써 보던가. 효과가 대단했잖아? #id:1125
+- ..무기.. #id:1126
+reina: 저..! 아직 시간이 필요하신가요? #id:1127
+mai: 어서 오라고! 파주주가 온대! #id:1128
+- 정말로 작별이야. 코니알. #id:1129
+emotion konial Surprised 
+konial: ? 이대로 간다고? 이거 풀어 주는거 아니야? #id:112a
+- 죗값 똑똑히 치르도록 해. #id:112b
+leave konial
+konial: 자.. 잠깐! 적어도 안대는 벗겨.. 오오옷?! #id:112c
+label debug_skip #id:112d
+do GameEvents.emit_add_read_history("konial_love_0")
+do GameEvents.emit_add_route_hint("engine_room")
+do GameEvents.emit_npc_level_up(2)
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_position_change({ch.konial}, 345, 275)
+do GameEvents.anim_change("idle")
+[end_timeline]

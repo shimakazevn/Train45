@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnmiurhil6t6y"]
+
+[ext_resource type="Script" uid="uid://b0lptv6lr6085" path="res://love_bonus.gd" id="1_fluu1"]
+
+[node name="LoveBonus" type="Node2D"]
+script = ExtResource("1_fluu1")

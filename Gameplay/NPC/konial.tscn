@@ -1,0 +1,226 @@
+[gd_scene load_steps=20 format=3]
+
+[ext_resource type="Script" uid="uid://1o0wftqtsnin" path="res://Gameplay/npc.gd" id="1_q7elp"]
+[ext_resource type="PackedScene" uid="uid://cbr2j2kcop6ix" path="res://scene/component/event_position_component.tscn" id="2_ajpmm"]
+[ext_resource type="Script" uid="uid://dutlwymcmyyqo" path="res://Gameplay/NPC/full_scene_component.gd" id="3_tu8tj"]
+[ext_resource type="PackedScene" uid="uid://cepl2jt2a37wn" path="res://Gameplay/Ui/talk_bubble.tscn" id="5_fyapv"]
+[ext_resource type="PackedScene" uid="uid://bw0vtqx7qojkw" path="res://Gameplay/npc_camera.tscn" id="6_11rsg"]
+[ext_resource type="PackedScene" uid="uid://c6hfkbqcmad6q" path="res://scene/test_cam.tscn" id="7_14cof"]
+[ext_resource type="PackedScene" uid="uid://jj3k74cbkdan" path="res://scene/component/free_action_component.tscn" id="8_fyq3t"]
+[ext_resource type="Script" uid="uid://dqu43pa1ex8ar" path="res://Gameplay/NPC/bind_konial_ahen_player.gd" id="10_tu8tj"]
+[ext_resource type="Script" uid="uid://dxlagu4dbag77" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="34_w1jdk"]
+[ext_resource type="Texture2D" uid="uid://cuxoucd54oxjp" path="res://Gameplay/NPC/konial_nomal.png" id="46_05omy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fgmsc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0aa0x"]
+size = Vector2(77, 218)
+
+[sub_resource type="Animation" id="Animation_dcvil"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_d0vdi"]
+length = 0.72
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [13, 14, 15, 16]
+}
+
+[sub_resource type="Animation" id="Animation_8nc1q"]
+length = 8.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 2.3, 2.6, 5.1, 6.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [17, 18, 19, 20, 21, 22, 23, 24, 25]
+}
+
+[sub_resource type="Animation" id="Animation_4mtcd"]
+resource_name = "idle"
+length = 1.44
+loop_mode = 1
+step = 0.17
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.18, 0.36, 0.54, 0.72, 0.9, 1.08, 1.26),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_vvdsb"]
+length = 1.25
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11, 12]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_drlti"]
+_data = {
+&"RESET": SubResource("Animation_dcvil"),
+&"bind": SubResource("Animation_d0vdi"),
+&"human": SubResource("Animation_8nc1q"),
+&"idle": SubResource("Animation_4mtcd"),
+&"weak": SubResource("Animation_vvdsb")
+}
+
+[sub_resource type="Resource" id="Resource_0gswm"]
+script = ExtResource("34_w1jdk")
+duration = 2.0
+transition = 4
+
+[node name="Konial" type="CharacterBody2D" node_paths=PackedStringArray("npc_sprite", "npc_camera", "text_bubble") groups=["npc"]]
+z_index = 3
+collision_layer = 16
+collision_mask = 0
+script = ExtResource("1_q7elp")
+npc_name = 2
+npc_sprite = NodePath("Sprite2D")
+npc_camera = NodePath("NPCCamera")
+text_bubble = NodePath("TextBubble")
+
+[node name="EventPositionComponent" parent="." instance=ExtResource("2_ajpmm")]
+
+[node name="SubAnimContainer" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_fgmsc")
+position = Vector2(0, -116)
+texture = ExtResource("46_05omy")
+hframes = 6
+vframes = 5
+metadata/_aseprite_wizard_source_file_hash_ = "f2b4d26f524368906aff01323f3ce3ce"
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true
+}
+
+[node name="FullAnimComponent" type="Node2D" parent="."]
+script = ExtResource("3_tu8tj")
+
+[node name="SubFullSceneCanvas" type="Node2D" parent="."]
+script = ExtResource("3_tu8tj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-1.5, -99)
+shape = SubResource("RectangleShape2D_0aa0x")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_drlti")
+}
+autoplay = "idle"
+
+[node name="TextBubble" parent="." instance=ExtResource("5_fyapv")]
+
+[node name="NPCCamera" parent="." node_paths=PackedStringArray("follow_targets") instance=ExtResource("6_11rsg")]
+position = Vector2(0, -62)
+follow_targets = [NodePath("../CameraPosition")]
+tween_resource = SubResource("Resource_0gswm")
+
+[node name="CameraPosition" type="Area2D" parent="."]
+position = Vector2(0, -62)
+
+[node name="FreeActionComponent" parent="." node_paths=PackedStringArray("npc", "normal_anim", "normal_sprite") instance=ExtResource("8_fyq3t")]
+npc = NodePath("..")
+normal_anim = NodePath("../AnimationPlayer")
+normal_sprite = NodePath("../Sprite2D")
+scene_progress = 1
+
+[node name="TestCam" parent="." instance=ExtResource("7_14cof")]
+
+[node name="BindKonialAhenPlayer" type="AudioStreamPlayer2D" parent="."]
+max_distance = 300.0
+attenuation = 0.5
+bus = &"Sfx"
+script = ExtResource("10_tu8tj")

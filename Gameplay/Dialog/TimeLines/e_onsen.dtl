@@ -1,0 +1,178 @@
+[signal arg="cutscene_onsen_0"]
+[wait time="3.0"]
+join reina leftmost
+emotion reina Idle
+reina: 이.. 이건. #id:b5f
+reina: 물이 가득 채워져 있네요.. 잠시 확인해 볼게요. #id:b60
+emotion reina Suprised
+update reina [extra_data="show Etc/Sweat"]
+[sound path="res://sound/sfx/Take_a_bath_Water_Drop.mp3" volume="5.0" bus="Sfx"]
+reina: (찰박) ..꺗! 뜨거워! #id:b61
+- 괜찮아? 화상 입은거야? #id:b62
+- 손 내밀어 봐, 확인해줄게. #id:b63
+reina: 네.. 괜찮아요. 조금 놀란 것 뿐이라.. #id:b64
+emotion reina Idle
+reina: 그정도로 뜨겁진 않아요. 적당한 따듯함이네요. #id:b65
+reina: 그리고 유황 냄새가 은은하게 나는 게.. 설마했던 온천이 맞는 거 같아요. #id:b66
+reina: 어떻게 전차 안에 이런 시설을 만들어 놓은 건지.. 이변의 영향인 걸까요? #id:b67
+- 그 포스터에 적힌 대로면.. #id:b68
+- 전차가 정상적으로 운영할 때도 존재한 거 같아. #id:b69
+- 결국 현실적인 문제로 금방 취소됐다지만. #id:b6a
+reina: 그렇겠죠.. 습기라던지 누전이라던지 생각할 게 많으니까요. #id:b6b
+emotion reina Smile
+update reina [extra_data="hide Etc/Sweat"]
+reina: ..저기, 모처럼이니까 잠시 피로를 풀고 갈까요? #id:b6c
+reina: 저희들, 탐색 때문에 지금까지 계속 걷거나 서 있었잖아요. 마이 양이 없는 건 아쉽지만.. #id:b6d
+- 괜찮을까? 나 온천욕 해본 적 없는데.. #id:b6e
+emotion reina Suprised
+reina: 정말인가요? ..사실 저도 무척 오랜만이에요. #id:b6f
+emotion reina Idle
+reina: 하지만 상상한 것처럼 물이 뜨겁지도 않고, 발 정도만 담구는 거라면 분명 기분 좋을 거에요. #id:b70
+reina: 일단 그 전에 발을 씻고.. #id:b71
+(어딘가 설레보이는 레이나를 보며 온천욕 준비를 마친다) #id:b72
+do TransitionScreen.dialog_transition()
+[signal arg="cutscene_onsen_1"]
+[sound path="res://sound/sfx/Take_a_bath_Water_Drop.mp3" volume="10.0" bus="Sfx"]
+[wait time="3.0"]
+emotion reina Shy
+reina: 읏, 하아아.. #id:b73
+reina: 물 온도는 적당해요. 발만 담궈도 이렇게 기분 좋네요. #id:b74
+reina: 종일 힐과 스타킹을 신고 있으면 혈액순환도 안 되고 피로해지거든요. #id:b75
+reina: 마치 오아시스를 만난 거 같아요.. #id:b76
+emotion reina Smile
+reina: 이 정도면 걱정말고 들어오셔도 될 거에요. 뜨겁지 않으니까요. #id:b77
+- 그래, 그럼.. #id:b78
+(레이나를 따라 온천수에 발을 담근..) #id:b79
+- ...아. #id:b7a
+	- 앗 뜨거!!!! #id:b7b
+[sound path="res://sound/sfx/fall_at_bath.mp3" volume="5.0" bus="Sfx"]
+(콰당탕) #id:b7c
+emotion reina Suprised
+update reina [extra_data="show Etc/Sweat"]
+reina: 괘.. 괜찮으세요?! 머리 안 다치셨어요? #id:b7d
+- 오.. 온천수가 이렇게 뜨거운 거였구나. #id:b7e
+- 익어버리는 줄 알았어.. #id:b7f
+reina: 그.. 그런가요? 죄송해요. 처음이라는 걸 생각해야 했는데.. #id:b80
+- 처음이 아니라도 이건 허용치 이상인걸.. #id:b81
+- 레이나는 뜨거운 걸 잘 참는구나. #id:b82
+reina: 저는 그냥 평범한 정도라 생각해서.. 정말로 그렇게 뜨거운가요? #id:b83
+- 난 괜찮으니.. 레이나 많이 즐겨. #id:b84
+- 모처럼이니까 난 걱정하지 말고. #id:b85
+emotion reina Shy
+reina: 하지만.. 어떻게.. 그럼.. #id:b86
+reina: 조.. 조금만 더 담그고 있을 테니까.. 앉아서 쉬고 계시겠어요? #id:b87
+do TransitionScreen.dialog_transition()
+[wait time="3.0"]
+emotion reina Smile
+reina: ...하아.. #id:b88
+reina: 그.. 좀 아쉽네요. 이 기분을 함께 느끼면 좋을텐데. #id:b89
+reina: 다음에는 유명한 노천 온천을 같이 가도록 해요. 그곳의 온도는 이정도로 높지 않으니까요. #id:b8a
+reina: 그곳은 정말.. #id:b8b
+emotion reina Shy
+update reina [extra_data="show Etc/Blur"]
+reina: ..하아아~.. 어머.. #id:b8c
+reina: 죄송해요.. 너무 기분이 풀려서 아저씨같은 한숨을.. #id:b8d
+reina: ..저기.. 정말 안 들어오실 건가요? #id:b8e
+- 레이나의 피로가 풀리는 걸로 충분해. #id:b8f
+reina: 그런가요.. 저만 너무 기분 좋아지는 거 같아서.. #id:b90
+emotion reina Smile
+reina: 사실 조금 긴장했거든요.. 저, '혼욕'은 처음이니까. #id:b91
+- ..혼욕? #id:b92
+reina: 네, 남자와 같이 온천욕은 해본 적이 없어서.. 만약 들어오셨다면 당신이 처음이었을 거에요. #id:b93
+- 그 말은.. 내가 입욕하면.. #id:b94
+- 온천에서 이것저것 가능하단 얘기? #id:b95
+emotion reina Suprised
+reina: 네..? 그.. 그런 뜻은 아니었어요! 그저 조금 두근두근 했달까.. #id:b96
+reina: 물론 원하신다면 얼마든.. 하지만 무리하면 안돼요! 발끝도 담구지 못했잖아요. #id:b97
+- ..레이나를 위해서라면.. #id:b98
+	- 며.. 몇번이고 삶아지겠어! #id:b99
+reina: 자.. 잠깐만요! 위험해요! #id:b9a
+update reina leftmost [move_time="0.5"]
+(풍덩!) #id:b9b
+[sound path="res://sound/sfx/take_bath.mp3" volume="8.0" bus="Sfx"]
+[wait time="2.0"]
+do TransitionScreen.dialog_transition()
+[signal arg="cutscene_onsen_2"]
+[wait time="3.0"]
+reina: 이.. 이런.. 정신 차리세요! #id:b9c
+- ..뜨거워.. #id:b9d
+- 하지만 온천 러브러브를 위해서라면.. #id:b9e
+emotion reina Shy
+reina: ..정말.. 제 옷도 다 젖어 버렸어요. #id:b9f
+reina: 어쩔 수 없네요. 원래는 발까지만 담굴 예정이었는데.. #id:ba0
+reina: 하지만 똑바로 몸을 씻고 다시 들어오도록 해요. #id:ba1
+leave reina
+(온천을 나와 레이나와 함께 몸을 씻은 후 다시 들어온다.) #id:ba2
+[sound path="res://sound/sfx/take_bath.mp3" volume="0.0" bus="Sfx"]
+[wait time="2.0"]
+do TransitionScreen.dialog_transition()
+[signal arg="cutscene_onsen_3"]
+(..여전히 뜨거웠지만 처음보다는 버틸만 하다.) #id:ba3
+reina: ..하아아... #id:ba4
+reina: 발만 담궈도 좋았는데.. 이건 정말.. #id:ba5
+reina: 근데 정말 괜찮으신 거 맞죠? 어지러우면 말해 주세요. #id:ba6
+- 처음보단 훨씬 나은거 같아. #id:ba7
+- 온천의 묘미를 알 거 같기도.. #id:ba8
+reina: 후훗, 다행이에요. 뜨거움을 이겨내지 못했다면 이 즐거움도 느낄 수 없었겠죠. #id:ba9
+reina: 견딜 수 없는 괴로움이라 생각해도.. 들어와 보니 별 거 아니죠? #id:baa
+reina: 고민하며 망설이던 이전의 자신이 부끄러울 정도로.. 아무것도 아닌 거였어요. #id:bab
+- 평소라면 시도조차 안 했을 테지만.. #id:bac
+- 레이나를 위해서.. #id:bad
+reina: ..그 동기가 엉큼하긴 해도.. 저를 위해서라니. 조금은 기뻐요. #id:bae
+reina: 야한 게.. 그렇게나 좋은가요? 뜨거운 물에 단숨에 뛰어들 정도로.. #id:baf
+- 단순히 야한 게 좋은 게 아니야. #id:bb0
+- 레이나와 함께하는 게 좋은 거지. #id:bb1
+reina: ..또 그렇게 분위기를 잡으시네요.. 이쪽도 이렇게나 크게 만들고서..앗.. #id:bb2
+reina: 엄청나게 단단해요.. 평소보다.. 설마.. 온천에서의 혈액순환으로..? #id:bb3
+reina: 대단하네요.. 설마 이런 효과가 있을 줄은.. #id:bb4
+reina: 이렇게나 크게 하면 그냥 나갈 수는 없겠네요.. 그렇죠? #id:bb5
+reina: 하지만 온천 안에서는 위험하니.. 이쪽으로 오세요. #id:bb6
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene3_1")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(0, 100)
+reina: 하아.. 엄청난 열기.. 이걸 원하신 건가요? #id:bb7
+reina: 뜨거운 온천과 바깥의 공기가 대비돼서.. 유두도 단단해졌어요.. #id:bb8
+reina: 몸 이곳저곳 무척 따듯해요.. 자지도 평소보다 뜨거워져서.. #id:bb9
+reina: 이걸로 잔뜩.. 몸속 휘저어 주시겠어요? #id:bba
+do GameEvents.anim_change("scene3_2")
+reina: 앗, 아.. 하앗.. 뜨.. 뜨거워요.. 평소보다 더.. #id:bbb
+reina: 제 보지 안도 무척 뜨겁다고요? 자지가 녹는 거 같으신가요? #id:bbc
+reina: 그야.. 지금까지 온천에 몸을 담구고 있었으니까요.. 하앗.. 으응.. #id:bbd
+reina: 아앗.. 앙.. 그쪽, 더 찔러 주세요.. 제 약한 부분.. #id:bbe
+reina: 뜨거운 자지로 사정없이.. 아앗.. #id:bbf
+reina: 기분이 이상해요.. 평소보다 더.. 열기 때문인지.. #id:bc0
+reina: 정신이 몽롱해져서.. 날아가 버릴 거 같아요.. #id:bc1
+reina: 네, 좀 더.. 하앗.. 마음껏 박아 주세요.. #id:bc2
+[signal arg="scene3"]
+reina: 아흣.. 하아.. 너무 뜨거워요.. 안쪽에 가득.. #id:bc3
+reina: 당신도 만족하셨나요?.. 줄곧 원하신 거잖아요.. 온천에서의.. #id:bc4
+reina: 땀도 무척이나 흘려서.. 약간 몽롱하네요.. 하아.. #id:bc5
+reina: 확실하게 씻고 나서.. 개운하게 돌아가도록 하죠.. #id:bc6
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+[signal arg="cutscene_onsen_4"]
+join reina leftmost
+emotion reina Smile
+reina: 하아.. 정말 상쾌하네요. 설마 전차 안에서 온천욕을 즐길 수 있을 줄 몰랐어요. #id:bc7
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="3.0"]
+reina: 이곳은 노선을 등록하면 언제든 다시 방문할 수 있겠어요. 다음엔 마이 양도 함께 오도록 하죠. #id:bc8
+reina: 그리고 그때는 셋이서.. 응? #id:bc9
+[sound path="res://sound/sfx/fall_at_bath.mp3" volume="5.0" bus="Sfx"]
+(쿠당탕) #id:bca
+emotion reina Suprised
+reina: ?! 괘.. 괜찮으세요? #id:bcb
+- 어.. 어지러.. #id:bcc
+- 눈앞이 핑핑 돌아.. #id:bcd
+reina: 앗..! 더운 곳에서 지..지나치게 시간을 보낸 거 같아요! 마실 물을 가져올 테니 잠시 기다려 주세요! #id:bce
+leave reina [animation="Slide Out Right" length="1.0"]
+(다급히 뛰어가는 레이나의 뒷모습을 보며 눈이 감긴다.) #id:bcf
+(..몇 분 후, 레이나가 끼얹은 물에 정신을 차렸지만.) #id:bd0
+join reina center
+emotion reina Shy
+update reina [extra_data="show Etc/Blur"]
+reina: 다.. 다음엔 이정도로 격렬하게 하는 건.. 자제하도록 해요. #id:bd1
+(그렇게, 레이나의 부축을 받으며 시작 지점으로 돌아갔다.) #id:bd2
+do SteamManager.unlock(AchievementManager.ACH.DEST_ONSEN)
+do GameEvents.emit_game_complete()
+[end_timeline]

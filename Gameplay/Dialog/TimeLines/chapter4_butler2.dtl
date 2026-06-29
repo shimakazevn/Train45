@@ -1,0 +1,136 @@
+join butler right
+# jump sfx_test
+[music path="res://sound/music/loop/easygoing.ogg" fade="0.0" volume="0.0" bus="Music"]
+butler: 돌아오셨군요. 부탁하실 일이라도? #id:277
+- 요청한 것들을 모두 가져왔어. #id:278
+butler: 음, 그렇습니까. 생각보다 빠르시군요. 그럼 한번 확인해 보겠습니다. #id:279
+do GameEvents.emit_set_ticket("minus", 2000)
+butler: 우선 티켓 2000개.. 확실하게 모아 오셨군요. 고생하셨습니다. #id:27a
+# #
+# #[debug] 대화 스킵할까요? #id:27e
+# #- 네 #id:27f
+# #	do GameEvents.emit_add_read_history("item_navi")
+# #	jump debug_skip
+# #- 아니오 #id:280
+# #
+join mai left [animation="Fade In Up" wait="true"]
+mai: 아껴가면서 모은 거야. 근데 이정도로 많은 티켓이 필요해? 다른 물품들은 이정도로 비싸진 않았는데. #id:27b
+butler: 그만큼 높은 수준의 기술이 필요하기 때문이고.. 또 하나의 이유가 있지만 이건 곧 알게 되실 겁니다. #id:27c
+butler: 그리고.. 나머지로 요청드린 것은..? #id:27d
+- 확실하게 20종류의 이변을 감지하고 왔어. #id:27e
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+reina: 하지만 이것을 어떻게 증명하죠? 전에 집사님의 말씀으로는 지닌 물품에 기운이 담긴다고 하셨는데. #id:27f
+butler: 네 맞습니다. 지금까지 거쳐온 전차 칸은 각각 미묘하게 다른 기운의 정념을 가지고 있습니다. #id:280
+butler: 냄새가 옷에 배는 것처럼 그곳을 지나온 것들에 기운이 스며들게 되는 거죠. #id:281
+butler: 따라서 여러분이 처음부터 지녔던 물품들 중 어떤 거라도 상관 없습니다. #id:282
+- 어떤 거라도 상관 없다면.. #id:283
+	- 레이나의 스타킹 #id:284
+		emotion reina Suprised
+		reina: 제 스타킹 말인가요..?! 안될 건 없지만.. 정말 괜찮으신가요? 종일 입고 다닌 건데.. #id:285
+		reina: 아.. 아니. 아무래도 안될 거 같아요.. 적어도 세탁해서 드리는 걸로.. #id:286
+		butler: 저는 상관 없긴 합니다만.. 세탁이 가능한 전차칸이 있었는지 모르겠군요. #id:287
+		emotion reina Shy
+		reina: ... 그럼 다른 걸로 하는게 좋겠어요.. #id:288
+	- 마이의 브라 #id:289
+		leave reina
+		join mai left
+		emotion mai Surprised
+		mai: 어째서?! 노브라로 다니면 가슴 쳐진다고. #id:28a
+		emotion mai Ecchi
+		mai: ..아~ 혹시 그런 모습을 보고 싶어서? 그런 거라면 언제든지 말하면 된다고~ 히히. #id:28b
+		butler: 물건은 마력을 주입 후 다시 돌려 드릴 예정입니다만.. #id:28c
+		emotion mai Idle
+		mai: ..그렇다는데? 아쉽게 됐어. #id:28d
+		leave mai
+		join reina left
+	- 나의.. 털? #id:28e
+		leave reina
+		reina: 털이라면.. 어느 쪽이죠? #id:28f
+		butler: 어느 쪽이던 상관없습니다. #id:290
+		join mai left [animation="Fade In Up" wait="true"]
+		mai: 위 아래 상관 없어? #id:291
+		butler: 상관 없습니다. 계속 지니고 있던 거니까요. 하지만 잃어버리지 않게 조심해 주십시오. #id:292
+		- 상관 없어. 꽤 길게 자라는 편이니까.. #id:293
+		mai: 그치? 나도 조금 놀랐어. #id:294
+		leave mai
+		join reina left [animation="Fade In Up" wait="true"]
+		emotion reina Angry
+		reina: 네.. 확실히 길게..가 아니고. 무슨 소리를 하시는 건가요. #id:295
+reina: ... 막상 결정하려니 고민이 되네요. #id:296
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Flat
+mai: 말 그대로 어떤 것이든 된다니까 결정하기 더 어려운 걸. #id:297
+butler: 음. 그렇다면 주제넘지만 제가 추천을 드려도 되겠습니까? #id:298
+- 그게 좋겠어. #id:299
+butler: 제가 주입해 드릴 능력은 '지도'의 기능을 하는 것이기 때문에 되도록이면 쉽게 들고 다닐 수 있는 물품이 좋습니다. #id:29a
+butler: 되도록이면 넓은 판의 형태가 이상적이겠지요. #id:29b
+reina: 그럼 더더욱 스타킹이나 브래지어는 안 되겠군요.. 물론 털도. #id:29c
+butler: 혹시 마이 님이 줄곧 들고 계시던 그건 어떠십니까? #id:29d
+emotion mai Serious
+mai: 응? 아, 이 스마트폰 말하는거야? #id:29e
+butler: 네, 휴대하기도 좋고 장기간 들고 있기에 불편함이 없어 보입니다만. #id:29f
+emotion reina Serious
+reina: 하지만 괜찮을까요? 그동안의 사진이라던가 전화번호들이 전부 사라지는 게 아닌가요? #id:2a0
+emotion mai Laugh
+mai: 으음.. 그건 아쉽지만. 모두를 위해서라면 어쩔 수 없지. 여기서 나가지 못하면 아무 소용도 없는 것들이니까! #id:2a1
+butler: 그.. 스마트폰 이라는 것은 혹시 무언가 기록해두는 장치인 겁니까? #id:2a2
+emotion mai Idle
+mai: 맞아. 본 적 없구나? 멀리 있는 상대와 대화하거나 영상을 볼 수도 있어. #id:2a3
+butler: 그렇군요.. 똑같진 않지만 책같은 기록 매체에 능력을 주입한 적 있습니다. #id:2a4
+butler: 결과로 책의 내용이 덮어써지는 게 아닌 끝 페이지가 여러 장 추가된 형태로 변했습니다. #id:2a5
+butler: 스마트폰도 어쩌면 그런 식으로 마력이 주입될 가능성이 있겠지요. 시도해 봐야 하는 거지만.. #id:2a6
+emotion mai Surprised
+mai: 정말? 그럼 다행이네! 어서 확인해 보자. #id:2a7
+emotion mai Idle
+mai: 자! 내 스마트폰. 잘 부탁할게. #id:2a8
+butler: 네. 최선을 다 해 보겠습니다. #id:2a9
+butler: 그리고 아까 제게 주신 2000개의 티켓의 힘을 전부.. 이 물건에 집어넣을 것입니다. #id:2aa
+emotion reina Suprised
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+reina: ..? 그래도 되는 건가요? #id:2ab
+butler: 물론 모든 티켓은 코니알 님에게 온전히 전해 드려야 하는게 맞지만.. 어쩐지 여러분들과 이야기하다 보니 제 욕심이 생긴 거 같습니다. #id:2ac
+butler: 여러분을 돕는다는 핑계일 수도 있겠군요. 어쩌면.. 이 정도 수준의 상품을 만들어 낼 기회는 없을 거 같으니까 말입니다. #id:2ad
+- 만약 들킨다 해도.. #id:2ae
+- 우리가 어떻게든 해 볼게. #id:2af
+butler: 코니알 님을 상대로 해볼 수 있는 건 없을 테지만..감사합니다. #id:2b0
+butler: 그럼 시작하도록 하겠습니다. 잠시 기다려 주십시오. #id:2b1
+do TransitionScreen.dialog_transition()
+[clear time="1.0" text="false" portraits="false" background="false" positions="false" style="false"]
+label sfx_test
+.. 잠시 후. #id:2b2
+[sound path="res://sound/sfx/magic_power.mp3" volume="0.0" bus="Sfx"]
+[wait time="2.0"]
+butler: ..완료하였습니다. #id:2b3
+emotion reina Smile
+reina: 고생하셨어요. 집사 씨. 어떤가요? #id:2b4
+butler: ..솔직히 놀라울 정도로 성공적이었습니다. 받으십시오. 마이 양. #id:2b5
+do GameEvents.emit_add_read_history("item_navi")
+leave reina
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Smile
+mai: 오오 고마워! #id:2b6
+- 고생했어 집사. #id:2b7
+butler: 아닙니다.. 저도 그동안 억누른 욕구를 모두 발산해 버렸습니다. #id:2b8
+emotion mai Surprised
+mai: 오옷? 액정이 깨끗해! 기스도 없어졌잖아? #id:2b9
+butler: 네. 깨진 자국에 손이 베이실 거 같아 틈을 매우고 투명 마법 코팅을 추가했습니다. #id:2ba
+emotion mai Serious
+mai: 정말이네? 보호 필름이 새로 씌워졌어. 대단해! #id:2bb
+butler: 그리고 원래 목적인 새로운 기능은 내부에 추가했습니다. 확인해 보시겠습니까? #id:2bc
+emotion mai Idle
+[sound path="res://sound/sfx/Smartphone-UI_Sound.mp3" volume="4.0" bus="Sfx"]
+mai: 내부에? 어디 보자.. 아! 어플리케이션이 추가됐네? #id:2bd
+- 이름이.. '칸칸네비'? #id:2be
+butler: 네. 45번 전차의 전차칸들의 정보를 담은 어플리케이션..? 입니다. 자세한 것은 그것을 작동시킨 후에 설명 해 드리겠습니다. #id:2bf
+emotion reina Shy
+leave mai
+join reina left [animation="Fade In Up" wait="true"]
+reina: ..칸칸네비.. 묘한 네이밍이네요.. #id:2c0
+label debug_skip #id:2c1
+do GameEvents.emit_add_read_history("chapter4_butler2")
+do TransitionScreen.dialog_transition()
+[signal arg="kankannavi"]
+leave --All--

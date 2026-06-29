@@ -1,0 +1,121 @@
+do GameEvents.hide_dialog_love_ui()
+join butler (human) left
+emotion butler(human) Panic
+butler(human): 코니알 님?! 이게 무슨.. #id:595
+# #
+# #[Debug] 대화를 스킵하고 다음 챕터로 넘어갈까요? #id:5a6
+# #- 네 #id:5a7
+# #	jump debug_end
+# #- 아니오 #id:5a8
+# #
+join pazuzu right [mirrored="true"]
+emotion pazuzu Seriouse
+pazuzu: ... #id:596
+update pazuzu center [move_time="1.0"]
+pazuzu: ..당신은? #id:597
+- 우연히 같이 탄 승객이야. #id:598
+update butler leftmost [move_time="1.0"]
+join reina left
+emotion reina Suprised
+reina: 마.. 맞아요. 이 지점을 지키느라 같이 행동하지 못했어요. #id:599
+emotion butler(human) Surprise
+butler(human): ..? #id:59a
+- (지금은 조용히 있어야 안전해) #id:59b
+update pazuzu rightmost [move_time="1.0"]
+join mai left [mirrored="true"]
+update reina center [move_time="1.0"]
+emotion mai Dislike
+mai: (..코니알을 붙잡으러 온 신..이야.. 집사가 코니알과 한 패였다는게 들통나면 큰 일 나니까. 우리 장단에 맞춰 줘.) #id:59c
+butler(human): 이.. 이 전차의 위치를 찾아 낸 겁니까? 도대체 어떻게.. #id:59d
+emotion butler(human) Serious
+butler(human): ..일단 알겠습니다.. #id:59e
+leave butler
+update mai leftmost [mirrored="true" move_time="1.0"]
+update reina left [move_time="1.0"]
+pazuzu: 피..피해자가 한 명 더 있었군요.. 요..용서할 수 없어요. 라마슈투.. #id:59f
+emotion reina Suprised
+reina: ..그것보다. 어째서 코니알이 저런 모습으로? #id:5a0
+pazuzu: 보시다시피.. 자백을 위한 시..심문 중이에요.. 코니알이 제게 했던 것과 같은 방식으로.. #id:5a1
+pazuzu: 심문을 할땐.. 본인이 생각하는 가장 두려운 방법을 쓰기 마련이에요.. 몇번이고 절정시키는 게 라마슈투에겐 가장 당하기 싫은 심문법이었겠죠.. #id:5a2
+emotion pazuzu Idle
+pazuzu: 하지만 문제가 있어요.. 당신이.. 도와 줘야 할 거 같아요.. #id:5a3
+- 나 말이야? #id:5a4
+pazuzu: 네.. 지금까지 여러 방법으로 시도해 봤지만.. 도통.. 절정하지 않아요.. 가장 효과가 좋았던 건.. 처..처음의 당신을 본딴 괴물들이었죠.. #id:5a5
+emotion mai Flat
+mai: 아까 전 괴물들한테 당할 때.. 몇번이고 절정했었지? #id:5a6
+pazuzu: 맞아요.. 하지만 괴물들은 얼마 지나지 않아 형체를 유지하지 못한 채 녹아 버렸어요.. #id:5a7
+emotion reina Shy
+reina: 그렇다는 건 이제 코니알이 만들어 낸 괴물들은 없고.. 원본만 남은 건가요? #id:5a8
+- 그 원본은 나고.. #id:5a9
+- 내가 직접 코니알의 자백을 받아 내라? #id:5aa
+emotion pazuzu Smile
+pazuzu: ..네.. 마..맞아요! 왠만해선 여러분들의 도움을 더는 바..받지 않으려 했는데.. #id:5ab
+- 돌아 갈 수 있는 유일한 방법이라면.. #id:5ac
+[music path="res://sound/music/loop/mellow.ogg" fade="0.0" volume="0.0" bus="Music"]
+emotion reina Angry
+reina: ... #id:5ad
+emotion mai Serious
+mai: ? 레이나. 표정이 안 좋아. 왜 그래? #id:5ae
+emotion reina Suprised
+reina: 네? 아, 아니에요! 그냥.. #id:5af
+emotion mai Ecchi
+mai: ..아아~ 설마 코니알마저 상대하면 레이나를 상대해 줄 시간이 적어질까 봐? #id:5b0
+emotion reina Shy
+update reina [extra_data="show Etc/Blur"]
+reina: 아니! ..그게.. 그게.. ..네.. 맞아요. ..이전처럼은 힘들 테니까.. #id:5b1
+- 그건 걱정 하지 마. #id:5b2
+- 난 몇번이고 싸도 얼마든지 세울 수 있어. #id:5b3
+- 레이나와 마이의 약한 곳을 잔뜩 아니까. #id:5b4
+emotion mai Smile
+mai: 하하핫! 들었지? #id:5b5
+emotion reina Serious
+reina: 아.. 네. 그렇게 말하신다면.. 다행이에요. #id:5b6
+emotion pazuzu Idle
+pazuzu: 혀..협조 해 주셔서 감사해요.. #id:5b7
+- 그럼 지금부터.. #id:5b8
+- 코니알을 심문하면 되는 거야? #id:5b9
+pazuzu: 제.. 제가 확인해 본 결과.. 지금으로썬 라마슈투가 입을 열지 않을 거에요.. #id:5ba
+pazuzu: 아마 잔뜩 절정시키는 것 외엔.. 진짜 정보는 불지 않겠죠. 진심..을 끌어 낼 방법이 필요해요.. #id:5bb
+- 진심이라면.. #id:5bc
+pazuzu: ..이 전차의 환경은.. 여러분들도 알다시피 정념이라는 기운으로 가득 차 있어요.. #id:5bd
+pazuzu: 이미 경험하신 것처럼 정념을 흡수하면 성욕이 다른 욕구를 밀어낼 정도로 강해져요. ..이 정념을..라마슈투에게도 같은 방법으로 흡수시킬 거에요.. #id:5be
+emotion reina Idle
+update reina [extra_data="hide Etc/Blur"]
+reina: ..그 정념이 코니알에게도 효과가 있을까요? #id:5bf
+emotion pazuzu Seriouse
+pazuzu: 정념은 오직 인간에게만 흡수될 수 있었어요. [br]..지금까지는요.. #id:5c0
+pazuzu: 여러분들에게 ..이 팔찌를 드릴게요.. #id:5c1
+파주주에게서 '구리 팔찌' 를 받았다. #id:5c2
+pazuzu: 이..이 팔찌는 라마슈투의 의식과 연결되어 있어요.. #id:5c3
+pazuzu: 팔찌를 착용한 채로 탐색을 진행하는 동안.. 여..여러분들이 얻은 정념들은 모두 라마슈투에게 전달될 거에요.. #id:5c4
+pazuzu: 계속해서 정념이 쌓여가면.. 아무리 라마슈투라고 해도 견디지 못 할 테죠.. #id:5c5
+pazuzu: 그.. 그렇게 한계에 다다를 때.. 뒤틀린 인과를 바로잡게 할 예정이에요.. #id:5c6
+emotion reina Suprised
+reina: 코니알 본인이 썻던 방식 그대로 돌려 받게 하자는 거군요. #id:5c7
+emotion pazuzu Idle
+pazuzu: 지금은.. 이 방법밖엔 어..없어요.. 확답만 받아내면.. 더 이상 괴롭히지 않을 거에요.. #id:5c8
+emotion mai Flat
+mai: 나쁜 짓을 하는 거 같지만.. 네 생각은 어때? #id:5c9
+- 탈출하기 위해선 어쩔 수 없지. #id:5ca
+- 코니알은 벌을 받아야 해. #id:5cb
+- 별로 내키지 않지만.. #id:5cc
+emotion pazuzu Ecchi
+pazuzu: 라.. 라마슈투는 당신들을 납치해서.. 평생을 가둔 채 이용하려고 했어요.. #id:5cd
+pazuzu: 돌아가면 더..더 큰 벌을 받을 거에요.. 지금 하려는 것과는.. 비교도 안 될 만큼.. #id:5ce
+- 어쩔 수 없지. #id:5cf
+- ..그럼 이제 탐색을 시작하면 될까? #id:5d0
+emotion pazuzu Idle
+pazuzu: 네.. 네. 출발 전에 팔찌를 꼭 장착하는 걸.. 잊지 마세요. #id:5d1
+pazuzu: 실시간으로 팔찌를 통해 진척을 화..확인 할 수 있으니까. 모두 채워지면 이곳으로 돌아 오시면 돼요. #id:5d2
+emotion reina Serious
+reina: 알겠습니다. 목적은 바뀌었지만.. 지금까지 했던 것처럼 탐색을 진행하면 될 거 같아요. #id:5d3
+emotion mai Idle
+mai: 맞아. 이제는 완전 익숙해 졌지? 후딱 끝내 버리고 집으로 돌아가자. #id:5d4
+- 출발하도록 하자. #id:5d5
+파주주에게서 구리 팔찌를 얻었습니다. 팔찌를 착용하고 이변을 탐지할 때마다 코니알에게 정념이 전달됩니다. #id:5d6
+정념이 한계치까지 모이면 시작 지점으로 되돌아와 코니알과 대화합시다. #id:5d7
+label debug_end #id:5d8
+do GameEvents.emit_get_item_event("love_bracelet")
+do GameEvents.emit_add_read_history("chapter6_start")
+[signal arg="tuto_konial_h"]
+[end_timeline]

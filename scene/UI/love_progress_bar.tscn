@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbf7oaeamae16"]
+
+[ext_resource type="Texture2D" uid="uid://qhhsn67o2iwr" path="res://resources/ui/heart_empty.png" id="1_epine"]
+[ext_resource type="Texture2D" uid="uid://duva4mnpevjja" path="res://resources/ui/heart.png" id="2_b1w8w"]
+
+[node name="LoveProgressBar" type="TextureProgressBar"]
+texture_filter = 1
+offset_left = 24.0
+offset_top = -9.0
+offset_right = 53.0
+offset_bottom = 18.0
+value = 50.0
+fill_mode = 3
+texture_under = ExtResource("1_epine")
+texture_progress = ExtResource("2_b1w8w")

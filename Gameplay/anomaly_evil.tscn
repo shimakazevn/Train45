@@ -1,0 +1,222 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Texture2D" uid="uid://b5dabgwvrc2ku" path="res://Gameplay/ghost_evil.png" id="1_1nkpb"]
+[ext_resource type="Script" uid="uid://bq3nsb3wqndyn" path="res://Gameplay/Levels/anomaly_evil.gd" id="1_o6ooy"]
+[ext_resource type="AudioStream" uid="uid://b6lyp2k00o5mv" path="res://sound/sfx/damage_to_succubus.mp3" id="3_y0kpv"]
+
+[sub_resource type="Animation" id="Animation_n3gah"]
+resource_name = "evil1"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_2wjj3"]
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_pwojh"]
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6hxfe"]
+_data = {
+&"evil1": SubResource("Animation_n3gah"),
+&"evil2": SubResource("Animation_2wjj3"),
+&"evil3": SubResource("Animation_pwojh")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hh4qn"]
+blend_mode = 1
+
+[sub_resource type="Animation" id="Animation_werga"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../DamageSfx:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_lwyjt"]
+resource_name = "hit"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.729412), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../DamageSfx:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2wjj3"]
+_data = {
+&"RESET": SubResource("Animation_werga"),
+&"hit": SubResource("Animation_lwyjt")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh4qn"]
+size = Vector2(236, 350)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwyjt"]
+size = Vector2(202, 366)
+
+[node name="Evil" type="Node2D"]
+script = ExtResource("1_o6ooy")
+
+[node name="EvilSprite2d" type="Sprite2D" parent="."]
+clip_children = 2
+texture_filter = 1
+texture = ExtResource("1_1nkpb")
+hframes = 3
+vframes = 3
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": true
+}
+metadata/_aseprite_wizard_source_file_hash_ = "510377566bdde52a38a6b1029107c491"
+
+[node name="Anim" type="AnimationPlayer" parent="EvilSprite2d"]
+libraries = {
+&"": SubResource("AnimationLibrary_6hxfe")
+}
+autoplay = "evil1"
+
+[node name="HitEffect" type="ColorRect" parent="EvilSprite2d"]
+self_modulate = Color(1, 1, 1, 0)
+material = SubResource("CanvasItemMaterial_hh4qn")
+offset_left = -169.0
+offset_top = -115.0
+offset_right = 155.0
+offset_bottom = 119.0
+
+[node name="Anim" type="AnimationPlayer" parent="EvilSprite2d/HitEffect"]
+libraries = {
+&"": SubResource("AnimationLibrary_2wjj3")
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 131072
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_hh4qn")
+
+[node name="AttackArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+shape = SubResource("RectangleShape2D_lwyjt")
+
+[node name="DamageSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_y0kpv")
+volume_db = 2.0
+bus = &"Sfx"
+
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]

@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://cs18s5yy5kgv5"]
+
+[ext_resource type="Script" uid="uid://dcvim8df2bxo3" path="res://Gameplay/dialog_love_ui.gd" id="1_icwbu"]
+[ext_resource type="Texture2D" uid="uid://bc8vajefmu6l" path="res://resources/ui/hp_icon_base.png" id="2_kqao8"]
+[ext_resource type="Texture2D" uid="uid://b6ymw5nwptv8v" path="res://resources/ui/hp_icon_active.png" id="3_aocg8"]
+[ext_resource type="FontFile" uid="uid://drk4ye7wq0wjq" path="res://resources/font/ShipporiGothicB2-Bold.ttf" id="4_icwbu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xjgum"]
+font = ExtResource("4_icwbu")
+font_size = 12
+outline_size = 3
+outline_color = Color(0.47451, 0.403922, 0.427451, 1)
+
+[node name="DialogLoveUi" type="Control" node_paths=PackedStringArray("LoveBar", "LoveLevel") groups=["dialog_love_ui"]]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 263.0
+offset_top = 245.0
+offset_right = 285.0
+offset_bottom = 263.0
+script = ExtResource("1_icwbu")
+LoveBar = NodePath("DialogLoveGage")
+LoveLevel = NodePath("DialogLoveLevel")
+
+[node name="DialogLoveGage" type="TextureProgressBar" parent="."]
+texture_filter = 2
+layout_mode = 0
+offset_right = 58.0
+offset_bottom = 50.0
+scale = Vector2(0.42, 0.42)
+value = 50.0
+fill_mode = 3
+texture_under = ExtResource("2_kqao8")
+texture_progress = ExtResource("3_aocg8")
+texture_progress_offset = Vector2(0, 5)
+
+[node name="DialogLoveLevel" type="Label" parent="."]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -11.0
+offset_top = -7.0
+offset_right = 14.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_xjgum")
+horizontal_alignment = 1
+vertical_alignment = 1

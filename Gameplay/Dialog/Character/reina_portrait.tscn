@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://ctxfns5n75icl"]
+
+[ext_resource type="Script" uid="uid://goabc6cw63uh" path="res://Gameplay/Dialog/Character/custom_layered_portrait.gd" id="1_uubi5"]
+[ext_resource type="Texture2D" uid="uid://1warhlj4ojkc" path="res://resources/ch/illust/reina/reina_body.png" id="2_v2a77"]
+[ext_resource type="Texture2D" uid="uid://rfykqly334ag" path="res://resources/ch/illust/reina/reina_idle.png" id="4_dvhj5"]
+[ext_resource type="Texture2D" uid="uid://m718w0hylmcr" path="res://resources/ch/illust/reina/reina_angry.png" id="5_kcw3l"]
+[ext_resource type="Texture2D" uid="uid://drvt4g667ocmo" path="res://resources/ch/illust/reina/reina_serious.png" id="5_yhuru"]
+[ext_resource type="Texture2D" uid="uid://bsy1upuvtrnec" path="res://resources/ch/illust/reina/reina_shy.png" id="6_ojdju"]
+[ext_resource type="Texture2D" uid="uid://clsivm2bpvixs" path="res://resources/ch/illust/reina/reina_suprised.png" id="7_x0vyg"]
+[ext_resource type="Texture2D" uid="uid://u0uyqa5rxu2t" path="res://resources/ch/illust/reina/reina_smile.png" id="8_06snt"]
+[ext_resource type="Texture2D" uid="uid://deel2gwpt6vj4" path="res://resources/ch/illust/reina/reina_etc_blur.png" id="10_ibrlr"]
+[ext_resource type="Texture2D" uid="uid://bkkvqok7326w8" path="res://resources/ch/illust/reina/reina_etc_sweat.png" id="11_bw85f"]
+
+[node name="LayeredPortrait" type="CanvasGroup"]
+script = ExtResource("1_uubi5")
+npc_name = "reina"
+
+[node name="Base" type="Sprite2D" parent="."]
+texture_filter = 2
+texture = ExtResource("2_v2a77")
+
+[node name="Face" type="Node2D" parent="."]
+
+[node name="Idle" type="Sprite2D" parent="Face"]
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("4_dvhj5")
+
+[node name="Angry" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("5_kcw3l")
+
+[node name="Serious" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("5_yhuru")
+
+[node name="Shy" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("6_ojdju")
+
+[node name="Suprised" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("7_x0vyg")
+
+[node name="Smile" type="Sprite2D" parent="Face"]
+visible = false
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("8_06snt")
+
+[node name="Etc" type="Node2D" parent="."]
+
+[node name="Blur" type="Sprite2D" parent="Etc"]
+visible = false
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("10_ibrlr")
+
+[node name="Sweat" type="Sprite2D" parent="Etc"]
+visible = false
+texture_filter = 2
+position = Vector2(-40, -592)
+texture = ExtResource("11_bw85f")

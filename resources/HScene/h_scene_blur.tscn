@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkc4i8s61njef"]
+
+[ext_resource type="Shader" uid="uid://2b82y7i3ag18" path="res://resources/ui/FreeAction/edge_blur.gdshader" id="1_3l6j0"]
+[ext_resource type="Texture2D" uid="uid://sxiagyk7lawd" path="res://resources/ui/FreeAction/BlurRect.png" id="2_xp2rp"]
+[ext_resource type="Script" uid="uid://bs4wjwt8u1h5s" path="res://resources/HScene/h_scene_blur.gd" id="3_blur"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y2jye"]
+shader = ExtResource("1_3l6j0")
+shader_parameter/lod = 1.1
+shader_parameter/mix_percentage = 0.0
+
+[node name="HSceneBlur" type="CanvasLayer"]
+script = ExtResource("3_blur")
+
+[node name="BlurRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_y2jye")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xp2rp")

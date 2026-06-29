@@ -1,0 +1,60 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "1707",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"sound_mood_default": "",
+"sound_moods": {},
+"style": ""
+},
+&"default_portrait": "Assets",
+&"description": "",
+&"display_name": "talk_asset",
+&"mirror": false,
+&"nicknames": [""],
+&"offset": Vector2(0, 0),
+&"portraits": {
+"Assets": {
+"export_overrides": {
+"image": "\"res://resources/talk_assets/talkassets1.png\""
+},
+"ignore_char_scale": true,
+"mirror": false,
+"offset": Vector2(0, -150),
+"scale": 0.5,
+"scene": "res://resources/talk_assets/layered_portrait_talk_asset.tscn"
+},
+"MeetKonial": {
+"export_overrides": {
+"image": "\"res://resources/cutscene/PixelCutscene/CutsceneMeetKonial.png\""
+},
+"ignore_char_scale": true,
+"mirror": false,
+"offset": Vector2(0, -150),
+"scale": 0.5,
+"scene": ""
+},
+"MeetMai": {
+"export_overrides": {
+"image": "\"res://resources/cutscene/PixelCutscene/CutsceneMeetMai.png\""
+},
+"ignore_char_scale": true,
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"MeetReina": {
+"export_overrides": {
+"image": "\"res://resources/cutscene/PixelCutscene/CutsceneMeetReina.png\""
+},
+"ignore_char_scale": true,
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1.0,
+"scene": ""
+}
+},
+&"scale": 0.5
+}

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://bsy0kdhj1ltjc"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_q6hx7"]
+[ext_resource type="Texture2D" uid="uid://bqiisc0k08fe4" path="res://resources/ui/icons/hint_icon_3.png" id="2_5ibic"]
+
+[resource]
+script = ExtResource("1_q6hx7")
+id = "storage"
+title = "DESTINATION_HINT_STORAGE_TITLE"
+texture = ExtResource("2_5ibic")
+description = "DESTINATION_HINT_STORAGE_INFO"
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityGet" load_steps=4 format=3 uid="uid://sxqa37toa5py"]
+
+[ext_resource type="PackedScene" uid="uid://bmqwi3884uk78" path="res://Gameplay/Upgrades/ghost_skip_controller.tscn" id="1_easex"]
+[ext_resource type="Texture2D" uid="uid://cyi6ltnvbaoig" path="res://resources/ui/icons/icons21.png" id="2_easex"]
+[ext_resource type="Script" uid="uid://f3crvy5px2r7" path="res://Gameplay/Upgrades/ability_get.gd" id="3_kdqrm"]
+
+[resource]
+script = ExtResource("3_kdqrm")
+ability_controller_scene = ExtResource("1_easex")
+icon = ExtResource("2_easex")
+id = "ghost_skip"
+price = Array[int]([0])
+max_quantity = 1
+cost = 11
+name = "GHOST_SKIP"
+description = "GHOST_SKIP_DESCRIPTION"

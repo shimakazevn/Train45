@@ -1,0 +1,135 @@
+do GameEvents.emit_cutscene_play("e_d_cat_cutscene1")
+join mai leftmost
+emotion mai Smile
+mai: 꺄아~ 고양이잖아? #id:91b
+mai: 이리 와봐! 한번만 쓰다듬어 봐도 돼? 우쭈쭈.. #id:91c
+- 무시하고 자고 있네. #id:91d
+emotion mai Idle
+mai: 그러게.. 그게 매력이지만 말이야. #id:91e
+mai: 고양이들은 아닌 것처럼 보여도 실은 다 듣고 있다는 거 있지? 그냥 귀찮아서 무시하는 거래. 정말 웃기지 않아? #id:91f
+- 마이는 고양이를 좋아해? #id:920
+mai: 나? 나는.. #id:921
+mai: 잠시 이리 와봐. #id:922
+mai: (...) #id:923
+emotion mai Dislike
+mai: (..사실은 강아지를 더 좋아해.) #id:924
+- 근데 어째서 속삭이는 거야? #id:925
+- 숨결이 귀에 닿아서 기분좋아.. #id:926
+mai: 에, 그야 방금도 말했잖아? #id:927
+mai: 고양이들은 아닌 척 해도 다 듣고 있다니까. 저거 봐, 한쪽 귀가 우리쪽으로 기울었지? #id:928
+- 정말이네.. #id:929
+emotion mai Idle
+mai: 고양이도 나름의 매력이 있지만 어쩐지 나랑은 어울리지 않는달까? #id:92a
+mai: 그야 나는 시끄럽고 칠칠맞으니까. 얌전하고 도도한 고양이 느낌하곤 딴판이잖아. #id:92b
+mai: 고양이가 어울리는 건 레이나 쪽이려나? 레이나짱, 귀엽고 정숙해서 인기도 무척 많을 거 같아.. #id:92c
+mai: 역시 남자는.. 그런 쪽을 더 좋아하는 걸까? #id:92d
+- 확실히 레이나는.. #id:92e
+- 다른 남자들의 시선을 엄청 받았지. #id:92f
+(그건 마이도 마찬가지지만..) #id:930
+emotion mai Dislike
+mai: 그렇구나. 으음.. 나도 역시 이미지를 좀 바꿔봐야 하나? #id:931
+- 남자들한테 인기 많아지고 싶어? #id:932
+mai: 응? 그건 별로 관심 없지만.. 으음~ ..너는.. 어떤 쪽이 좋아? #id:933
+mai: 너도 다른 남자들처럼 조용하고 여성스러운 쪽이 좋겠지? #id:934
+- 나는 활발하고 기운 넘치는 마이가 좋아. #id:935
+emotion mai Smile
+mai: ..하하하! 뭐야.. #id:936
+mai: 마치 내가 그런 대답을 유도한 거 같잖아. 정말.. #id:937
+emotion mai Idle
+mai: 뭐, 그럼 됐어! 지금의 내가 좋다는 거지? 다른 남자들이 어떻게 보든 상관 없어. #id:938
+mai: 네가 날 지금처럼 사랑해 주면.. 난 이대로 있을게. 활기차고 항상 웃는 모습으로, 알았지? #id:939
+- 응, 그대로가 좋아. #id:93a
+- 오히려 변하지 않았으면 좋겠어. #id:93b
+emotion mai Dislike
+update mai [extra_data="show Etc/Blur"]
+do GameEvents.emit_cutscene_play("e_d_cat_cutscene2")
+mai: 헤헤.. 으응. 정말.. ..너 때문에 또 스위치 켜져 버렸잖아. #id:93c
+mai: 저기.. ..지금 여기서 한번 할까? 응? 지금은 둘 뿐이니까. #id:93d
+- 그치만 듣는 귀가 있다고 했지 않아? #id:93e
+emotion mai Surprised
+mai: 어? ..아! #id:93f
+mai: 맞아, 고양이를 잊었네. 헤헤.. 어쩐지 부끄럽잖아.. #id:940
+mai: ..? #id:941
+emotion mai Serious
+mai: 없네? 그새 어디 간거지? #id:942
+- 정말 고양이 답네. #id:943
+mai: 으음. 만져보지 못한 건 아쉽지만, 그건 그거고. #id:944
+emotion mai Idle
+mai: 그럼 이제 둘뿐이니까.. 해도 되는 거지? 자~ 키스부터.. 우움.. #id:945
+(..툭) #id:946
+emotion mai Surprised
+update mai [extra_data="hide Etc/Blur"]
+mai: 아얏! 머리 위로 뭔가 떨어졌어.. #id:947
+- 이건.. #id:948
+emotion mai Flat
+mai: 이게 뭐지? 고양이 귀랑.. 꼬리? 어째서 이런 게 있는거야? #id:949
+- 아까 그 고양이가 주고 간 건가? #id:94a
+mai: 응? 어째서? #id:94b
+- 마이의 고민을 들었다거나.. #id:94c
+emotion mai Laugh
+mai: 뭐? 하핫! 뭐야 그게. 그래서 이걸 쓰면 더 매력있어질거라는 건가? #id:94d
+mai: 겨우 이런 걸로 말야.. 응? #id:94e
+- ... #id:94f
+emotion mai Flat
+mai: ... #id:950
+leave mai
+do TransitionScreen.dialog_transition()
+[background scene="res://scene/dialogic_blur_bg.tscn" arg="res://resources/cutscene/cutscene_mai_cat.png" fade="1.0"]
+[wait time="3.0" hide_text="true"]
+emotion mai Dislike
+mai: 어때? #id:951
+- 귀여워.. #id:952
+- 고양이귀는 진리야. #id:953
+emotion mai Serious
+update mai [extra_data="show Etc/Blur"]
+mai: 진심? 겨우 고양이 귀로? 뭐야 정말.. 그동안 잘 보이려고 고민한 나는 뭐가 되는 거야. #id:954
+emotion mai Idle
+mai: 뭐, 귀엽다니 상관 없나? #id:955
+mai: 그런데 이 꼬리는 어떻게 쓰는 거지? 끝에 구슬 같은 거만 달렸는데. #id:956
+- 그건 아마.. #id:957
+- 엉덩이 안에 넣는.. #id:958
+emotion mai Surprised
+mai: 에엣?! 엉덩이 안에.. 이 구슬을 집어 넣으라고? #id:959
+mai: 마.. 말로만 듣던.. 애널 비즈구나! 이건 쉽지 않은데.. #id:95a
+- 보.. 보고 싶어. #id:95b
+- 완전판 고양이 마이. #id:95c
+emotion mai Flat
+mai: 엣.. 엄청 발기했네.. #id:95d
+mai: ..꿀꺽.. #id:95e
+mai: 처음이지만.. 자.. 잠시 기다려봐. 뒤.. 뒤돌아 있어! 절대 보지 마. #id:95f
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="1.0"]
+leave mai
+mai: 여.. 여기에 이걸.. #id:960
+mai: 으.. 으읏! 아앙.. #id:961
+mai: 하아..하아.. ..응, 이제 봐도 돼. #id:962
+[background scene="res://scene/dialogic_blur_bg.tscn" arg="res://resources/cutscene/cutscene_mai_cat2.png" fade="3.0"]
+[wait time="3.0" hide_text="true"]
+mai: ... #id:963
+mai: ..야옹. #id:964
+mai: 돼..됐지? 이제 맘에 들어? 히.. 힘이 빠져서 이런 자세가 돼 버렸지만.. #id:965
+mai: 뭔가 새로운 것에 눈을 뜰 거 같아.. 좀 부끄럽기도 하고.. #id:966
+- 마이.. #id:967
+- 부탁이 있어. #id:968
+mai: 뭐, 뭔데? #id:969
+mai: ...애.. 애널로 하고 싶다고? #id:96a
+mai: 기껏 이렇게 끼워 놨는데?! ..정말.. #id:96b
+mai: 그치만.. 나도 궁금하긴 하네. 뒤는 처음이니까.. #id:96c
+mai: 아.. 알았어. 대신 상냥하게 해야 한다? #id:96d
+[clear time="1.0" text="false" portraits="false" music="false" positions="false" style="false"]
+do GameEvents.emit_cutscene_play("RESET")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(1, 100)
+[signal arg="scene5"]
+mai: 으읏.. 오옷.. #id:96e
+mai: 뭐야.. 뭐야 이거.. #id:96f
+mai: 보지랑은 완전 다른 기분이잖아.. #id:970
+mai: 너.. 너도 좋았다고? ..응, 그런 거 같았어. #id:971
+mai: 평소보다 엄청나게 커져 있었으니까. #id:972
+mai: 그리고 어째선지 평소보다 훨씬 부끄러운 거 있지. #id:973
+- 원래 모습과는 다른 부끄럼 많은 마이였어. #id:974
+mai: 그.. 그만! 엉덩이로 하는 거나 고양이 귀나 처음이었단 말야. #id:975
+- 평소에도 고양이 귀랑 꼬리 해주면 안돼? #id:976
+mai: 안돼! 레이나 앞에서 이런 모습을 보일 순 없어.. #id:977
+mai: ..하지만 둘뿐이라면 ..생각해 볼게. #id:978
+do GameEvents.emit_game_complete()
+[end_timeline]

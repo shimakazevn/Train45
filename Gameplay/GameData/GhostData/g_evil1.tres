@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="GhostRes" load_steps=2 format=3 uid="uid://da3k8mxt3k7d4"]
+
+[ext_resource type="Script" uid="uid://cgjdt200d0usf" path="res://Gameplay/GameData/GhostData/ghost_res.gd" id="1_54enb"]
+
+[resource]
+script = ExtResource("1_54enb")
+anim_name = "evil1"
+stage_name = "stage_51"

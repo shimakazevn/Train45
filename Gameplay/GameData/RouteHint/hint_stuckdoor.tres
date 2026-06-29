@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://cns2x70l2y0kg"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_8wkck"]
+[ext_resource type="Texture2D" uid="uid://b5n01t2yxnclu" path="res://resources/ui/icons/hint_icon_1.png" id="2_v8pax"]
+
+[resource]
+script = ExtResource("1_8wkck")
+id = "stuckdoor"
+title = "DESTINATION_HINT_STUCKDOOR_TITLE"
+texture = ExtResource("2_v8pax")
+description = "DESTINATION_HINT_STUCKDOOR_INFO"
+partner_type = 1
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

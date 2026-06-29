@@ -1,0 +1,120 @@
+테스트 인물 선택 #id:11
+타임라인 수정함 #id:12
+타임라인 재수정 #id:13
+- 레이나 #id:14
+	join reina left
+	reina: 표정 테스트 #id:15
+	emotion reina Serious
+	update reina [extra_data="show Etc/Blur, show Etc/Sweat"]
+	reina: serious #id:16
+	emotion reina Shy
+	update reina [extra_data="hide Etc/Blur, hide Etc/Sweat"]
+	reina: shy #id:17
+	emotion reina Smile
+	reina: smile #id:18
+	emotion reina Suprised
+	reina: surprised #id:19
+- 마이 #id:1a
+	join mai right
+	a #id:1b
+	emotion mai Ecchi
+	mai: ecchi #id:1c
+	emotion mai Serious
+	mai: serious #id:1d
+	emotion mai Smile
+	mai: smile #id:1e
+	emotion mai Dislike
+	mai: dislike #id:1f
+	emotion mai Idle
+	mai: idle #id:20
+- 코니알 #id:21
+- 파주주 #id:22
+- 집사 #id:23
+	join butler (human) center
+	emotion butler(human) Laugh
+	butler: laugh #id:24
+	emotion butler(human) Panic
+	butler: panic #id:25
+	emotion butler(human) Serious 
+	butler: serious #id:26
+
+
+
+[end_timeline]
+update mai [extra_data="set Face/Dislike, set Emotion/Hearts"]
+mai: Dislike #id:27
+update mai [extra_data="set Face/Ecchi, set Emotion/Flowers"]
+mai: Ecchi #id:28
+update mai [extra_data="set Face/Suprised"]
+mai: Suprised #id:29
+update mai [extra_data="set Face/Smile"]
+mai: Smile #id:2a
+
+update reina [extra_data="set Face/Serious, show Etc/Blur, show Etc/Sweat, set Emotion/Angry"]
+reina: Serious #id:2b
+update reina [extra_data="set Face/Shy, show Etc/Blur, show Etc/Sweat, set Emotion/MusicNote"]
+reina: Shy #id:2c
+update reina [extra_data="set Face/Suprised, show Etc/Blur, show Etc/Sweat"]
+reina: Suprised #id:2d
+update reina [extra_data="set Face/Smile, show Etc/Blur, show Etc/Sweat"]
+reina: Smile #id:2e
+update reina [extra_data="set Face/Idle, show Etc/Blur, show Etc/Sweat"]
+reina: Idle #id:2f
+
+update mai [extra_data="set Face/Idle, show Etc/Blur, show Etc/Sweat, set Emotion/Scratch"]
+mai: Idle #id:30
+update mai [extra_data="set Face/Dislike, show Etc/Blur, show Etc/Sweat, set Emotion/Wait"]
+mai: Dislike #id:31
+update mai [extra_data="set Face/Ecchi, show Etc/Blur, show Etc/Sweat"]
+mai: Ecchi #id:32
+update mai [extra_data="set Face/Suprised, show Etc/Blur, show Etc/Sweat"]
+mai: Suprised #id:33
+update mai [extra_data="set Face/Smile, show Etc/Blur, show Etc/Sweat"]
+mai: Smile #id:34
+
+leave --All--
+
+# #코니알, 파주주
+join konial left
+konial: 표정 테스트 #id:35
+join pazuzu right [mirrored="true"]
+pazuzu: 표정 테스트 #id:36
+update konial [extra_data="set Face/Dislike, set Emotion/Sparkle"]
+konial: Dislike #id:37
+update konial [extra_data="set Face/Sadistic, set Emotion/Shock"]
+konial: Sadistic #id:38
+update konial [extra_data="set Face/Suprised"]
+konial: Suprised #id:39
+update konial [extra_data="set Face/Smile"]
+konial: Smile #id:3a
+
+update pazuzu [extra_data="set Face/Seriouse, set Emotion/Sweat"]
+pazuzu: Seriouse #id:3b
+update pazuzu [extra_data="set Face/Ecchi"]
+pazuzu: Ecchi #id:3c
+update pazuzu [extra_data="set Face/Suprised"]
+pazuzu: Suprised #id:3d
+update pazuzu [extra_data="set Face/Smile"]
+pazuzu: Smile #id:3e
+
+update konial [extra_data="set Face/Dislike, show Etc/Blur, show Etc/Sweat"]
+konial: Dislike #id:3f
+update konial [extra_data="set Face/Sadistic, show Etc/Blur, show Etc/Sweat"]
+konial: Sadistic #id:40
+update konial [extra_data="set Face/Suprised, show Etc/Blur, show Etc/Sweat"]
+konial: Suprised #id:41
+update konial [extra_data="set Face/Smile, show Etc/Blur, show Etc/Sweat"]
+konial: Smile #id:42
+update konial [extra_data="set Face/Idle, show Etc/Blur, show Etc/Sweat"]
+konial: Idle #id:43
+
+update pazuzu [extra_data="set Face/Seriouse, show Etc/Blur, show Etc/Sweat"]
+pazuzu: Seriouse #id:44
+update pazuzu [extra_data="set Face/Smile, show Etc/Blur, show Etc/Sweat"]
+pazuzu: Smile #id:45
+update pazuzu [extra_data="set Face/Ecchi, show Etc/Blur, show Etc/Sweat"]
+pazuzu: Ecchi #id:46
+update pazuzu [extra_data="set Face/Suprised, show Etc/Blur, show Etc/Sweat"]
+pazuzu: Suprised #id:47
+update pazuzu [extra_data="set Face/Idle, show Etc/Blur, show Etc/Sweat"]
+pazuzu: Idle #id:48

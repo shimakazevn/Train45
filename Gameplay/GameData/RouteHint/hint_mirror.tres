@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://dykax0dvgnqq6"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_fq1dn"]
+[ext_resource type="Texture2D" uid="uid://bsv6h4duvwdwt" path="res://resources/ui/icons/icons_large6.png" id="2_fq1dn"]
+
+[resource]
+script = ExtResource("1_fq1dn")
+id = "mirror"
+title = "DESTINATION_HINT_MIRROR_TITLE"
+texture = ExtResource("2_fq1dn")
+description = "DESTINATION_HINT_MIRROR_INFO"
+partner_type = -1
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

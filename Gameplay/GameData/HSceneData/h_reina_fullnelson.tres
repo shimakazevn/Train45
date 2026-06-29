@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://1ra0crmx7tg4"]
+
+[ext_resource type="Texture2D" uid="uid://bd6ef2gbok1np" path="res://resources/ui/EventCoverImage/Hpreview_reina_13.png" id="1_cppi4"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="2_3lk0o"]
+
+[resource]
+script = ExtResource("2_3lk0o")
+main_love_event = true
+scene_description = "SCENE_SITTING_REVERSE"
+scene_name = "scene102"
+dialog_title = "e_reina_full_sitting"
+stage_name = "stage_30"
+love_ability = 7
+preview_texture = ExtResource("1_cppi4")
+ahen_keys = PackedStringArray("SCENE_REINA_AHEN_5", "SCENE_REINA_AHEN_6", "SCENE_REINA_AHEN_7", "SCENE_REINA_AHEN_8", "SCENE_REINA_AHEN_9", "SCENE_REINA_AHEN_10")

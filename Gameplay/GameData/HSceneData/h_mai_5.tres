@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://t6c5lrne03bm"]
+
+[ext_resource type="Texture2D" uid="uid://bepwplh5ugxwg" path="res://resources/ui/EventCoverImage/Hpreview_mai_6.png" id="1_puaah"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_qj2ko"]
+
+[resource]
+script = ExtResource("1_qj2ko")
+main_love_event = true
+scene_description = "SCENE_LYING_KISS"
+scene_name = "scene4"
+dialog_title = "e_semen"
+stage_name = "stage_0"
+partner = 1
+love_ability = 5
+preview_texture = ExtResource("1_puaah")
+is_position = Vector2(1386, 203)
+ahen_keys = PackedStringArray("SCENE_MAI_AHEN_KISS_1", "SCENE_MAI_AHEN_KISS_2", "SCENE_MAI_AHEN_KISS_3", "SCENE_MAI_AHEN_KISS_4", "SCENE_MAI_AHEN_KISS_5")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://lg6623mk53cw"]
+
+[ext_resource type="Script" uid="uid://cnyuaaeus72r" path="res://scene/game_object/player/TeleportComponent.gd" id="1_7m8lp"]
+
+[node name="TeleportComponent" type="Area2D"]
+script = ExtResource("1_7m8lp")
+entry_direction = 1
+transition_type = "fade_to_black"
+push_distance = 200

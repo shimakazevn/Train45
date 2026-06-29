@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=3 format=3 uid="uid://l8b7sji1kvgu"]
+
+[ext_resource type="Script" uid="uid://clvpdm1ps7wwf" path="res://Gameplay/GameData/QuestData/quest_npc.gd" id="1_uso0f"]
+[ext_resource type="Script" uid="uid://c5pycwl0nmslk" path="res://Gameplay/GameData/QuestData/quest.gd" id="2_xk2mr"]
+
+[resource]
+script = ExtResource("2_xk2mr")
+id = "quest_5_2"
+description = "집사의 호감도 1달성 이후 발생 이벤트
+노선도 기능을 이용해 파주주의 위치로 이동한
+"
+npcs = Array[ExtResource("1_uso0f")]([])
+total_love = -1
+ticket = -1
+route = -1
+collect_destinations = -1
+collect_items = -1
+complete_count = -1
+talk = "QUEST_GOAL_TEXT_6"

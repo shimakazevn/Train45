@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://dfh7wa3odyvp5"]
+
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_5p3b2"]
+[ext_resource type="Texture2D" uid="uid://d3vyyndcm0c23" path="res://resources/ui/EventCoverImage/Hpreview_mai_1.png" id="1_sbc4w"]
+
+[resource]
+script = ExtResource("1_5p3b2")
+scene_description = "SCENE_CAT"
+scene_name = "scene5"
+dialog_title = "e_cat"
+stage_name = "stage_d_cat"
+partner = 1
+preview_texture = ExtResource("1_sbc4w")
+is_position = Vector2(999, 211)
+ahen_keys = PackedStringArray("SCENE_MAI_AHEN_4", "SCENE_MAI_AHEN_5", "SCENE_MAI_AHEN_6", "SCENE_MAI_AHEN_7", "SCENE_MAI_AHEN_8", "SCENE_MAI_AHEN_9", "SCENE_MAI_AHEN_10")

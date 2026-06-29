@@ -1,0 +1,264 @@
+join reina left
+# jump sfx_test
+reina: ? 집사 씨 옆에.. 코니알? #id:2c2
+# #[debug] 대화 스킵할까요? #id:2c9
+# #- 네 #id:2ca
+# #	do GameEvents.emit_quest_process("butler_change_human")
+# #	jump debug_skip
+# #- 아니오 #id:2cb
+reina: 이곳엔 무슨 일로 온 걸까요? #id:2c3
+butler_bird_hidden: 정말 죄송합니다. 코니알 님.. #id:2c4
+join mai right [animation="Fade In Up" wait="true" mirrored="true"]
+emotion mai Serious
+mai: .. 뭔가 분위기가 이상한데. #id:2c5
+leave --All--
+[wait time="0.5"]
+do TransitionScreen.dialog_transition()
+do CutSceneManager.show_cutscene("CutsceneButlerKonial")
+[style name="fullscene_style"]
+# #join butler right
+[music path="res://sound/music/loop/Timeless Loop.ogg" fade="0.0" volume="0.0" bus="Music"]
+butler: 죽을 죄를 지었습니다. 하지만 정말로 저는 아무것도.. #id:2c6
+# #join konial left [animation="Fade In Up" wait="true"]
+emotion konial Dislike
+konial: 말이 되는 소리를 하고 있다고 생각하는 거니? 너에게 준 임무도 까먹었다고 하는 건 아니겠지? 말해 봐. #id:2c7
+butler: ..정념 티켓의 수거 및 전달입니다. #id:2c8
+konial: 관리는? #id:2c9
+butler: ..본 집사의 역할 밖입니다. 전차 내에 발행되는 티켓의 권한은 오직 코니알 님에게만 있습니다. #id:2ca
+konial: 하? 오해하고 있는 게 있을까봐 말해 둘게. 정념 티켓은 집사 네가 수거해서 바치는 순간 내 것이 되는 게 아냐. #id:2cb
+konial: 이 전차에서 생겨나는 순간. 아니, 원료인 정념일 때부터 모두 내 소유란 말이지. #id:2cc
+emotion konial Idle
+konial: 난 내 물건들을 아껴. 45번 전차, 사소한 이변 하나하나와 정념 한모금까지. #id:2cd
+konial: 내 소유의 것들은 아무리 작은 변화라도 알아차리지. 너 따위의 장난질을 위해 귀중한 티켓을 빼먹는 걸 내가 모를 줄 알았어? #id:2ce
+butler: 그.. 그건.. 오해입니다. #id:2cf
+leave --All--
+join mai leftmost [animation="Fade In Up" wait="true"]
+emotion mai Serious
+mai: ..설마.. 티켓을 이용한 걸 들킨 거야? #id:2d0
+leave mai
+# #join konial left
+# #join butler right [wait="true"]
+emotion konial Dislike
+konial: 마지막으로 물을게. 빼돌린 티켓은 어디 있지? #id:2d1
+butler: 코니알님, 그건.. 정말 모르겠습니다. 업무를 보던 중 누락했을 가능성이.. #id:2d2
+konial: 기억 못하는구나? 아니면 감히 나를 속이고 있거나. 너 같은 새대가리 종족을 고용하는게 아니었어. 습성은 결국 못 버리지. #id:2d3
+konial: 같잖은 쓰레기를 모으는 취미로 모자라 이제는 작은 뇌 때문에 일거리 하나도 제대로 처리 못하다니. #id:2d4
+butler: 코니알 님.. #id:2d5
+konial: 상당한 양의 정념들이 이곳에 모였다 흩어졌어. 니가 서 있는 그 자리에서. #id:2d6
+konial: 네가 벌인 게 아니더라도 무슨 일이 있었는지는 기억하겠지. 까먹었다면 업무 태만이고. #id:2d7
+butler: 그건.. #id:2d8
+butler: ... #id:2d9
+butler: ..기억이 나지 않습니다. #id:2da
+- ..... #id:2db
+konial: ... #id:2dc
+emotion konial Smile
+konial: 결정했어! 넌 해고야. #id:2dd
+butler: ..! #id:2de
+butler: 죄..죄송합니다! 코니알 님..! 다시는 이런 일 없을 테니.. #id:2df
+emotion konial Idle
+konial: 몇 번이고 있었지? 이런 일. 그때 쓰레기 더미들과 같이 태워 버렸어야 했는데. #id:2e0
+konial: 번거롭게 한번 더 불을 피워야 하잖아? #id:2e1
+emotion konial Sadistic
+konial: ..이번엔 연기 빼려면 고생 좀 하겠네. 그럼 잘 가. 고생했어. 집사. #id:2e2
+butler: ! ..코니알 님! #id:2e3
+- 자.. 잠깐 기다려! #id:2e4
+do CutSceneManager.hide_cutscene("CutsceneButlerKonial")
+do TransitionScreen.dialog_transition()
+[style]
+join konial left
+leave butler
+join reina right [animation="Fade In Up" wait="true" mirrored="true"]
+emotion reina Suprised
+reina: 잠시만요! 무슨 일이죠? #id:2e5
+emotion konial Idle
+konial: 뭐야, 너희들 돌아왔구나? #id:2e6
+reina: 소란이 있는 거 같은데.. #id:2e7
+leave reina
+join mai right [animation="Fade In Up" wait="true" mirrored="true"]
+emotion mai Laugh
+mai: 자자~ 일단 대화로 하자..? #id:2e8
+leave mai
+update konial center [move_time="0.5"]
+konial: 대화라면 너희들이 없는 동안 충분히 했어. 기특하게도, 이 말만 뱉을 줄 아는 새대가리를 상대로. #id:2e9
+konial: 이 녀석이 뭘 한 줄 알아? 너희들이 기껏 만들어 낸 정념 티켓을 빼돌렸다고. #id:2ea
+emotion konial Dislike
+konial: ...'20만 장'이나. #id:2eb
+- ..20만 장? #id:2ec
+update konial left [move_time="0.5"]
+join mai right [animation="Fade In Up" wait="true" mirrored="true"]
+emotion mai Serious
+mai: (..? 우리는 분명 2000장..) #id:2ed
+leave mai
+join reina right [animation="Fade In Up" wait="true" mirrored="true"]
+emotion reina Serious
+reina: ... #id:2ee
+konial: 너희는 용서할 수 있겠어? 한시 빨리 이곳에서 나가기 위해 꼭 필요한 티켓인데. #id:2ef
+emotion reina Idle
+reina: ..어차피 할당량에는 한참 미치지 못하는 수에요. #id:2f0
+leave reina
+join mai right [animation="Fade In Up" wait="true" mirrored="true"]
+emotion mai Flat
+mai: 맞아. 결국 수천만장을 모야야 하잖아. #id:2f1
+emotion konial Idle
+konial: ..그래? 언제부터 그렇게 너그러워진건지. 하지만 난 이런 나쁜짓은 못 참으니까. 마침 벌을 주려고 했지. #id:2f2
+konial: 전차 안에서 불을 피우는 건 금기지만.. 본보기가 될 테니 감안하는 수밖에. #id:2f3
+leave mai
+join reina right [animation="Fade In Up" wait="true" mirrored="true"]
+emotion reina Suprised
+update reina [extra_data="show Etc/Sweat"]
+reina: 잠깐만요! 괜찮으시겠어요?.. 집사 님을 죽여버리면.. 티켓을 수거하는 속도도 훨씬 적어질 거에요.. #id:2f4
+emotion konial Dislike
+konial: ..? 지금 날 협박하는 거야? #id:2f5
+emotion reina Shy
+reina: 그게 아니에요.. 그동안 집사님의 상품들을 사용해 더 많은 양의 티켓을 만들었어요. 전차를 탐색하는 속도와 효율은 그 상품들 덕분이었으니까요. #id:2f6
+leave reina
+join mai right [animation="Fade In Up" wait="true" mirrored="true"]
+mai: 그래! 이변은 더 까다로워지는데 이젠 집사가 없으면 도저히 탐색할 수 없을 정도라고. #id:2f7
+emotion mai Dislike
+mai: 코니알 너도 조금이라도 더 빨리 많은 양의 티켓을 모으고 싶어하잖아? #id:2f8
+- 그러니 죽이는 건 그만 둬. #id:2f9
+emotion konial Idle
+konial: ..하아. 어쩐 지 티켓이 들어오는 양이 점점 늘어난다 했는데. 그런 쓰레기들이 정말 도움이 되긴 하는구나? #id:2fa
+leave mai
+join reina right [animation="Fade In Up" wait="true" mirrored="true"]
+emotion reina Serious
+reina: 네.. 상당히. #id:2fb
+konial: ..... #id:2fc
+leave reina
+update konial center [move_time="0.5"]
+emotion konial Dislike
+konial: 너희들은 이 코니알님의 자비에 감사하도록 해. 죽이는 건 보류하도록 할테니. #id:2fd
+konial: 특히, 전차에 새 구이 냄새가 배는 건 싫으니까. #id:2fe
+update konial left [move_time="0.5"]
+join butler right [animation="Fade In Up" wait="true"]
+butler: 가.. 감사합니다! 코니알 님.. 앞으로 목숨을 다해.. #id:2ff
+emotion konial Idle
+konial: 하지만 벌은 줄거야. #id:300
+konial: 이봐 너! #id:301
+- ..? 나? #id:302
+konial: 너희들이 이 집사 녀석을 보증했지? 그렇담 연대 책임을 져야겠지. 네가 대표로 하면 되겠네. #id:303
+- 책임이라면 어떤 거야? #id:304
+emotion konial Sadistic
+konial: ..키히히. 집사와 티켓을 '만들어'. 빼돌린 만큼. #id:305
+butler: ... #id:306
+butler: ..네? #id:307
+konial: 뭘 못 들은 척이야? 레이나나 마이랑 했던 것처럼 티켓을 만들라고. 집사와 둘이서. 지금 당장. #id:308
+leave --All--
+join reina left [animation="Fade In Up" wait="true"]
+join mai right [animation="Fade In Up" wait="true" mirrored="true"]
+emotion reina Suprised
+update reina [extra_data="show Etc/Sweat"]
+reina: ... #id:309
+emotion mai Serious
+update mai [extra_data="show Etc/Sweat"]
+mai: ..미쳤어. #id:30a
+leave --All--
+label 1 #id:30b
+join butler right
+butler: 코..코니알 님. 죄송하지만 저는.. 새.. #id:30c
+- ... #id:30d
+join konial left
+emotion konial Idle
+konial: 뭐야. 똥꼬가 헐 정도로 편을 들더니. 그정도는 못하겠나봐? #id:30e
+- ..그럼 집사를 살려 주는 거지? #id:30f
+emotion konial Smile
+konial: 물론이지~ 빚이 없는 녀석에게 원한은 없어. #id:310
+- ... #id:311
+butler: ..?? #id:312
+leave konial
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="1.5"]
+... #id:313
+butler: 어..어째서 다가오시는..? #id:314
+- ..집사를 살리기 위해서라면.. #id:315
+	- 하는 수밖에 없어. #id:316
+butler: 네? 잠시 기다려 주세요! 저는 아직 준비가..! #id:317
+konial: ...그만! #id:318
+[clear time="1.0"]
+join konial left
+label sfx_test
+konial: 키히히! 누구 눈을 썩게 할 셈이야? 자지도 안 서면서 뭘 하겠다고. 하아. #id:319
+[sound path="res://sound/sfx/Finger_Snap.mp3" volume="5.0" bus="Sfx"]
+konial: (딱!) #id:31a
+do GameEvents.emit_add_read_history("chapter4_butler3")
+[clear time="1.0" text="false" portraits="false" background="false" positions="false" style="false"]
+leave --All--
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_quest_process("butler_change_human")
+join butler (human) center [mirrored="true"]
+emotion butler(human) Panic
+butler(human): ...! #id:31b
+update butler right [move_time="0.5"]
+join reina left [animation="Fade In Up" wait="true"]
+emotion reina Suprised
+reina: 집사 님이.. 변했어요? #id:31c
+leave reina
+- 집사가 사람으로? #id:31d
+butler(human): 코니알 님.. 이 모습은? #id:31e
+join konial left
+konial: 티켓을 만들어 내기 가장 효율적인 모습으로 맞춰 줬지. 아니면 너를 '새'로 만들어 줄까? #id:31f
+- 사양할게.. #id:320
+emotion konial Smile
+konial: 키히힛! 바로 반응이 오는군! #id:321
+emotion butler(human) Idle
+butler(human): 아.. 저기. 당신의.. 그 곳이.. #id:322
+leave --All--
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Dislike
+mai: 바로 엄청 커졌잖아! #id:323
+join reina right [animation="Fade In Up" wait="true" mirrored="true"]
+emotion reina Suprised
+reina: 확실히 엄청.. 이쁘니까요. 집사 님은 여자..였군요. #id:324
+leave --All--
+join butler (human) center [animation="Fade In Up" wait="true"]
+update butler (human) [extra_data="show Etc/Blur"]
+butler(human): ..저희 종족에선 성별의 개념은 희미하지만.. 사람의 기준이면 이런 모습이 되는군요. #id:325
+emotion butler(human) Serious
+butler(human): 그치만 이런 모습의 저라도.. 괜찮으시겠습니까? #id:326
+- 당연하지. #id:327
+- 감사합니다. #id:328
+- 티켓을 위해서라면.. #id:329
+butler(human): 그런.. 그렇다면. 부디 부탁드리겠습니다. 서툴겠지만. 최대한 노력하겠습니다.. #id:32a
+update butler right [move_time="0.5"]
+join konial left [animation="Fade In Up" wait="true"]
+emotion konial Dislike
+konial: 하암.. 뭐야 이 분위기. 어서 섹스하라고. 뭐가 더 필요해? #id:32b
+emotion butler(human) Panic
+butler(human): 그.. 그치만. 어떻게 시작해야 할지.. #id:32c
+leave butler
+update konial center [move_time="0.5"]
+emotion konial Surprised
+konial: 아 진짜! 하나하나 알려 줘야해? 됐어. 너희들이 알아서 해. 네가 빼돌린 20만 개의 티켓을 값을 때까지 '제조'에 동참하는 거야. #id:32d
+emotion konial Dislike
+konial: 방법은 니들이 알려 주도록 해.그럼 난 이만 간다? #id:32e
+leave konial
+join mai left [animation="Fade In Up" wait="true"]
+emotion mai Dislike
+mai: 가 버렸네. 항상 뭐가 저리 바쁜거야? #id:32f
+join reina right [animation="Fade In Up" wait="true" mirrored="true"]
+reina: 그래도.. 정말 다행이에요. 집사 님이 죽어 버리는건 면했으니. #id:330
+leave reina
+join butler (human) right [animation="Fade In Up" wait="true"]
+emotion butler(human) Serious
+butler(human): 아. 그건.. 감사합니다. 제 편을 들어주셔서.. #id:331
+emotion mai Idle
+mai: 애초에 우리를 도우려 한 거잖아. #id:332
+- 나야말로 고마워. #id:333
+leave mai
+join reina left
+reina: 코니알이 말한 티켓의 수.. 터무니없이 불어났네요. #id:334
+leave butler
+join mai right [animation="Fade In Up" wait="true" mirrored="true"]
+mai: 그 와중에도 이득을 생각한 거겠지. 빚이 늘어나 버렸네. #id:335
+leave --All--
+join butler (human) center [animation="Fade In Up" wait="true"]
+butler(human): 죄송합니다. 어떻게든 책임 지도록 하겠습니다. #id:336
+join reina left
+emotion reina Smile
+reina: 너무 무리하진 마세요. 그리고.. 생각보다 기분 좋을 거에요. 티켓 만드는 거. #id:337
+join mai right [animation="Fade In Up" wait="true" mirrored="true"]
+mai: 헤헤. 맞아. 방법은 우리가 전부 알려 줄 테니까. #id:338
+emotion butler(human) Smile
+butler(human): 아.. 네. 잘 부탁 드리겠습니다. #id:339
+label debug_skip #id:33a
+do TransitionScreen.dialog_transition()
+[end_timeline]

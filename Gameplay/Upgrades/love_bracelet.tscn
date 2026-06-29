@@ -1,0 +1,131 @@
+[gd_scene load_steps=9 format=3 uid="uid://dfga76a27kpun"]
+
+[ext_resource type="Script" uid="uid://da3lpygxa2d4l" path="res://Gameplay/Upgrades/love_bracelet.gd" id="1_b8bur"]
+[ext_resource type="Texture2D" uid="uid://ccxu3g6ob27tu" path="res://resources/ui/icons/sd_icon/konial.png" id="2_y2gkk"]
+[ext_resource type="Texture2D" uid="uid://b730bacmmvgj0" path="res://resources/ui/gui/circle_frame.png" id="3_q2eby"]
+[ext_resource type="Texture2D" uid="uid://7k2geb4eipdo" path="res://resources/ui/icons/icons15.png" id="4_ev8a2"]
+[ext_resource type="FontFile" uid="uid://b420coqgx7cq0" path="res://resources/font/TsunagiGothic.ttf" id="5_ev8a2"]
+[ext_resource type="PackedScene" uid="uid://dx38vqnwbp246" path="res://Gameplay/item_effect_icon.tscn" id="6_k6hg5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k6hg5"]
+font = ExtResource("5_ev8a2")
+font_size = 21
+font_color = Color(1, 0.3, 0.743333, 1)
+outline_size = 10
+outline_color = Color(0.109804, 0.109804, 0.109804, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ev8a2"]
+font = ExtResource("5_ev8a2")
+font_size = 11
+font_color = Color(1, 0.3, 0.743333, 1)
+outline_size = 10
+outline_color = Color(0.109804, 0.109804, 0.109804, 1)
+
+[node name="LoveBracelet" type="Node2D" groups=["love_bracelet"]]
+script = ExtResource("1_b8bur")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = -86.0
+offset_right = 198.0
+offset_bottom = 106.0
+grow_vertical = 0
+scale = Vector2(0.155, 0.155)
+value = 50.0
+fill_mode = 3
+texture_under = ExtResource("2_y2gkk")
+texture_progress = ExtResource("2_y2gkk")
+tint_under = Color(0.35, 0.35, 0.35, 1)
+
+[node name="Frame" type="TextureRect" parent="CanvasLayer/TextureProgressBar"]
+show_behind_parent = true
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.0
+offset_top = -105.0
+offset_right = 105.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_q2eby")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 3.0
+offset_top = 295.0
+offset_right = 18.0
+offset_bottom = 310.0
+texture = ExtResource("4_ev8a2")
+expand_mode = 1
+
+[node name="Frame" type="TextureRect" parent="CanvasLayer/TextureRect"]
+show_behind_parent = true
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.5
+offset_top = -8.5
+offset_right = 8.5
+offset_bottom = 9.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_q2eby")
+expand_mode = 1
+
+[node name="MaxLabel" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -294.0
+offset_top = 86.0
+offset_right = -275.0
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "!"
+label_settings = SubResource("LabelSettings_k6hg5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxLevelLabel" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -314.0
+offset_top = 81.0
+offset_right = -291.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MAX"
+label_settings = SubResource("LabelSettings_ev8a2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemEffectIcon" parent="CanvasLayer" instance=ExtResource("6_k6hg5")]
+offset_left = 10.0
+offset_top = 278.0
+offset_right = 31.0
+offset_bottom = 299.0
+npc_type = 1

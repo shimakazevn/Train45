@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckdyp8qgpvmlv"]
+
+[ext_resource type="Script" uid="uid://beijomkn22gws" path="res://Gameplay/Upgrades/multiple_choice_controller.gd" id="1_atk27"]
+[ext_resource type="PackedScene" uid="uid://b3efipd6nv61v" path="res://Gameplay/Upgrades/choice_circle.tscn" id="2_y63wd"]
+
+[node name="MultipleChoiceController" type="Node2D"]
+script = ExtResource("1_atk27")
+choice_circle = ExtResource("2_y63wd")

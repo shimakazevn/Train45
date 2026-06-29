@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://jlj0b8fulp4g"]
+
+[ext_resource type="Script" uid="uid://bjpk3vw2bktuq" path="res://Gameplay/Ui/TutorialBook/tutorial_book_list_button.gd" id="1_udf75"]
+
+[sub_resource type="Theme" id="Theme_udf75"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udf75"]
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="TutorialBookListButton" type="Button"]
+custom_minimum_size = Vector2(0, 40)
+size_flags_horizontal = 3
+theme = SubResource("Theme_udf75")
+theme_override_font_sizes/font_size = 11
+theme_override_styles/pressed = SubResource("StyleBoxFlat_udf75")
+toggle_mode = true
+text = "튜토리얼 이름"
+script = ExtResource("1_udf75")

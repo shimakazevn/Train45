@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkyb77eso2tce"]
+
+[ext_resource type="Script" uid="uid://cvyu45adogkjj" path="res://ticket_bonus_controller.gd" id="1_14u23"]
+[ext_resource type="PackedScene" uid="uid://xin80ix2pf7x" path="res://Gameplay/Upgrades/ticket_bonus.tscn" id="2_yvqjg"]
+
+[node name="TicketBonusController" type="Node2D"]
+script = ExtResource("1_14u23")
+ticket_bonus = ExtResource("2_yvqjg")

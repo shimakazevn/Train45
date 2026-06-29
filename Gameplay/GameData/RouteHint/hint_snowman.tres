@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://c1dc35qh80pyc"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_nqsgu"]
+[ext_resource type="Texture2D" uid="uid://b5n01t2yxnclu" path="res://resources/ui/icons/hint_icon_1.png" id="2_d1civ"]
+
+[resource]
+script = ExtResource("1_nqsgu")
+id = "snowman"
+title = "DESTINATION_HINT_SNOWMAN_TITLE"
+texture = ExtResource("2_d1civ")
+description = "DESTINATION_HINT_SNOWMAN_INFO"
+partner_type = -1
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

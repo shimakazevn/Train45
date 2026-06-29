@@ -1,0 +1,804 @@
+[gd_scene load_steps=28 format=3 uid="uid://bkgp65imvcd0s"]
+
+[ext_resource type="Script" uid="uid://cumqbqnndlfwl" path="res://Gameplay/load_menu.gd" id="1_g3yin"]
+[ext_resource type="PackedScene" uid="uid://cmeyvp67l4r3a" path="res://scene/UI/save_slot.tscn" id="2_c88f8"]
+[ext_resource type="Script" uid="uid://c5e3f321icqk7" path="res://Gameplay/clear_percent_component.gd" id="3_ilx06"]
+[ext_resource type="Texture2D" uid="uid://bibwvolm7edif" path="res://resources/ui/SaveMenu/save_back.png" id="3_t26dn"]
+[ext_resource type="Theme" uid="uid://btscey36vk310" path="res://resources/ui/SaveMenu/save_theme.tres" id="4_het4j"]
+[ext_resource type="Script" uid="uid://de4e4f0e8agrn" path="res://Gameplay/Details.gd" id="4_sg0hu"]
+[ext_resource type="FontFile" uid="uid://drk4ye7wq0wjq" path="res://resources/font/ShipporiGothicB2-Bold.ttf" id="6_odbh2"]
+[ext_resource type="Texture2D" uid="uid://c5dv2njyhfl01" path="res://resources/ui/icons/sd_icon/reina.png" id="7_uhv2c"]
+[ext_resource type="Texture2D" uid="uid://1nagpap0ywjh" path="res://resources/ui/icons/sd_icon/mai.png" id="8_b374t"]
+[ext_resource type="Shader" uid="uid://cka8r7f4nprv0" path="res://Gameplay/load_menu.gdshader" id="8_oyfjm"]
+[ext_resource type="Texture2D" uid="uid://ccxu3g6ob27tu" path="res://resources/ui/icons/sd_icon/konial.png" id="9_76cxx"]
+[ext_resource type="Texture2D" uid="uid://bg7y7t4yd1tpi" path="res://resources/ui/icons/sd_icon/butler.png" id="11_011wp"]
+
+[sub_resource type="Animation" id="Animation_thduy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(122, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.643137)]
+}
+
+[sub_resource type="Animation" id="Animation_pr46p"]
+resource_name = "in"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.5, 0.5),
+"update": 0,
+"values": [Vector2(200, 0), Vector2(122, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7ysup"]
+resource_name = "out"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(122, 0), Vector2(200, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.643137), Color(0, 0, 0, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0y1hd"]
+_data = {
+&"RESET": SubResource("Animation_thduy"),
+&"in": SubResource("Animation_pr46p"),
+&"out": SubResource("Animation_7ysup")
+}
+
+[sub_resource type="Animation" id="Animation_j00jv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:theme_override_constants/margin_top")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [21]
+}
+
+[sub_resource type="Animation" id="Animation_mv0j7"]
+resource_name = "update"
+length = 0.5
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.13, 0.3, 0.5),
+"transitions": PackedFloat32Array(-2, 1, -2, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.2), Color(1, 1, 1, 0), Color(1.5, 1.5, 1.5, 1), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:theme_override_constants/margin_top")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.33, 0.5),
+"transitions": PackedFloat32Array(0.5, 1, 1),
+"update": 0,
+"values": [150, 21, 21]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cf7cr"]
+_data = {
+&"RESET": SubResource("Animation_j00jv"),
+&"update": SubResource("Animation_mv0j7")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_ilx06"]
+font_size = 8
+
+[sub_resource type="FontVariation" id="FontVariation_44lu8"]
+base_font = ExtResource("6_odbh2")
+spacing_top = -9
+
+[sub_resource type="LabelSettings" id="LabelSettings_jf84e"]
+font_size = 9
+
+[sub_resource type="LabelSettings" id="LabelSettings_76cxx"]
+font_size = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fmqts"]
+bg_color = Color(0.72, 0.33912, 0.2232, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rq35i"]
+bg_color = Color(0.79, 0.37209, 0.2449, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jy200"]
+bg_color = Color(0.84, 0.39802, 0.1932, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fmib2"]
+shader = ExtResource("8_oyfjm")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.038
+shader_parameter/scanlines_width = 0.082
+shader_parameter/grille_opacity = 0.069
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = false
+shader_parameter/roll = true
+shader_parameter/roll_speed = 0.6
+shader_parameter/roll_size = 13.134
+shader_parameter/roll_variation = 1.489
+shader_parameter/distort_intensity = 0.004
+shader_parameter/noise_opacity = 0.034
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.026
+shader_parameter/aberration = -0.00499995
+shader_parameter/brightness = 1.375
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.142
+shader_parameter/clip_warp = true
+shader_parameter/vignette_intensity = 0.785
+shader_parameter/vignette_opacity = 0.299
+
+[node name="Menu" type="Control" node_paths=PackedStringArray("detail_panel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g3yin")
+detail_panel = NodePath("CanvasLayer/SaveScreen/Details")
+save_slot = ExtResource("2_c88f8")
+mode = 0
+
+[node name="ClearPercentComponent" type="Node" parent="."]
+script = ExtResource("3_ilx06")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 12
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+custom_minimum_size = Vector2(20, 20)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.643137)
+
+[node name="SaveScreen" type="TextureRect" parent="CanvasLayer"]
+offset_left = 122.0
+offset_right = 617.0
+offset_bottom = 360.0
+texture = ExtResource("3_t26dn")
+expand_mode = 1
+
+[node name="ScreenAnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/SaveScreen"]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_0y1hd")
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/SaveScreen"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 285.0
+offset_bottom = 85.0
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/SaveScreen/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/SaveScreen/HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="SlotContainer" type="VBoxContainer" parent="CanvasLayer/SaveScreen/HBoxContainer/MarginContainer/ScrollContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/separation = 2
+
+[node name="SaveSlot" parent="CanvasLayer/SaveScreen/HBoxContainer/MarginContainer/ScrollContainer/SlotContainer" instance=ExtResource("2_c88f8")]
+layout_mode = 2
+
+[node name="SaveSlot2" parent="CanvasLayer/SaveScreen/HBoxContainer/MarginContainer/ScrollContainer/SlotContainer" node_paths=PackedStringArray("save_info_node") instance=ExtResource("2_c88f8")]
+layout_mode = 2
+save_info_node = NodePath("../SaveSlot/SaveInfo")
+
+[node name="SaveSlot3" parent="CanvasLayer/SaveScreen/HBoxContainer/MarginContainer/ScrollContainer/SlotContainer" node_paths=PackedStringArray("save_info_node") instance=ExtResource("2_c88f8")]
+layout_mode = 2
+save_info_node = NodePath("../SaveSlot/SaveInfo")
+
+[node name="SaveSlot4" parent="CanvasLayer/SaveScreen/HBoxContainer/MarginContainer/ScrollContainer/SlotContainer" node_paths=PackedStringArray("save_info_node") instance=ExtResource("2_c88f8")]
+layout_mode = 2
+save_info_node = NodePath("../SaveSlot/SaveInfo")
+
+[node name="SaveSlot5" parent="CanvasLayer/SaveScreen/HBoxContainer/MarginContainer/ScrollContainer/SlotContainer" node_paths=PackedStringArray("save_info_node") instance=ExtResource("2_c88f8")]
+layout_mode = 2
+save_info_node = NodePath("../SaveSlot/SaveInfo")
+
+[node name="Details" type="MarginContainer" parent="CanvasLayer/SaveScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.723
+anchor_right = 0.723
+offset_left = -124.885
+offset_right = 126.115
+offset_bottom = 360.0
+grow_horizontal = 2
+pivot_offset = Vector2(100, 0)
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 21
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 50
+script = ExtResource("4_sg0hu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/SaveScreen/Details"]
+root_node = NodePath("../Empty")
+libraries = {
+&"": SubResource("AnimationLibrary_cf7cr")
+}
+
+[node name="DetailsInfo" type="Panel" parent="CanvasLayer/SaveScreen/Details"]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_right = 351.0
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="ChapterName" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 98.0
+offset_bottom = 24.0
+scale = Vector2(2.02, 2.02)
+theme = ExtResource("4_het4j")
+text = "体験版"
+
+[node name="ChapterDescription" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 36
+text = "体験版"
+label_settings = SubResource("LabelSettings_ilx06")
+visible_characters_behavior = 1
+
+[node name="Space" type="Panel" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 9
+
+[node name="PlayTimeTitle" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_fonts/font = SubResource("FontVariation_44lu8")
+theme_override_font_sizes/font_size = 11
+text = "PLAY_TIME"
+
+[node name="PlayTime" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_fonts/font = SubResource("FontVariation_44lu8")
+theme_override_font_sizes/font_size = 15
+text = "00:00:00"
+
+[node name="Space4" type="Panel" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="TicketNumText" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 11
+text = "TICKET_NUM"
+clip_text = true
+
+[node name="TicketNum" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 16
+text = "99999"
+
+[node name="Space2" type="Panel" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 77
+
+[node name="Reina" type="TextureRect" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("7_uhv2c")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer3/Reina"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = -10.0
+offset_right = 142.0
+offset_bottom = 30.0
+grow_vertical = 2
+theme_override_constants/separation = -2
+
+[node name="LoveBox" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer3/Reina/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="LoveLevelText" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer3/Reina/VBoxContainer/LoveBox"]
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 11
+text = "LOVE_LEVEL"
+label_settings = SubResource("LabelSettings_jf84e")
+
+[node name="ReinaLoveLevel" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer3/Reina/VBoxContainer/LoveBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 10
+text = "0"
+
+[node name="ReinaHScene" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer3/Reina/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 12
+text = "SAVE_H_SCENE"
+label_settings = SubResource("LabelSettings_76cxx")
+
+[node name="KonialSlot" type="TextureRect" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("9_76cxx")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer3/KonialSlot"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = -10.0
+offset_right = 142.0
+offset_bottom = 30.0
+grow_vertical = 2
+theme_override_constants/separation = -2
+
+[node name="LoveBox" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer3/KonialSlot/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="LoveLevelText" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer3/KonialSlot/VBoxContainer/LoveBox"]
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 11
+text = "LOVE_LEVEL"
+label_settings = SubResource("LabelSettings_jf84e")
+
+[node name="KonialLoveLevel" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer3/KonialSlot/VBoxContainer/LoveBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 10
+text = "0"
+
+[node name="KonialHScene" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer3/KonialSlot/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 12
+text = "SAVE_H_SCENE"
+label_settings = SubResource("LabelSettings_76cxx")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 77
+
+[node name="Mai" type="TextureRect" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("8_b374t")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer4/Mai"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = -10.0
+offset_right = 142.0
+offset_bottom = 30.0
+grow_vertical = 2
+theme_override_constants/separation = -2
+
+[node name="LoveBox" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer4/Mai/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="LoveLevelText" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer4/Mai/VBoxContainer/LoveBox"]
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 11
+text = "LOVE_LEVEL"
+label_settings = SubResource("LabelSettings_jf84e")
+
+[node name="MaiLoveLevel" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer4/Mai/VBoxContainer/LoveBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 10
+text = "0"
+
+[node name="MaiHScene" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer4/Mai/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 12
+text = "SAVE_H_SCENE"
+label_settings = SubResource("LabelSettings_76cxx")
+
+[node name="ButlerSlot" type="TextureRect" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer4"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("11_011wp")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer4/ButlerSlot"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = -10.0
+offset_right = 142.0
+offset_bottom = 30.0
+grow_vertical = 2
+theme_override_constants/separation = -2
+
+[node name="LoveBox" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer4/ButlerSlot/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="LoveLevelText" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer4/ButlerSlot/VBoxContainer/LoveBox"]
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 11
+text = "LOVE_LEVEL"
+label_settings = SubResource("LabelSettings_jf84e")
+
+[node name="ButlerLoveLevel" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer4/ButlerSlot/VBoxContainer/LoveBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 10
+text = "0"
+
+[node name="ButlerHScene" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer4/ButlerSlot/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 12
+text = "SAVE_H_SCENE"
+label_settings = SubResource("LabelSettings_76cxx")
+
+[node name="Space3" type="Panel" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+
+[node name="GameClearBox" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="GameClear" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/GameClearBox"]
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 17
+text = "CLEAR_NUM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameClearCount" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/GameClearBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 17
+text = "0"
+vertical_alignment = 1
+
+[node name="AllClearPercentBox" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 10
+alignment = 1
+
+[node name="AllClearPercentTitle" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/AllClearPercentBox"]
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 17
+text = "ALL_CLEAR_PERCENT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AllClearPercent" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/AllClearPercentBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 17
+text = "100%"
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="RoutePercentBox" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="RoutePercentTitle" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer2/RoutePercentBox"]
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 9
+text = "ROUTE_PERCENT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoutePercent" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer2/RoutePercentBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 9
+text = "100%"
+vertical_alignment = 1
+
+[node name="DestPercentBox" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="DestPercentTitle" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer2/DestPercentBox"]
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 9
+text = "DEST_PERCENT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DestPercent" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer2/DestPercentBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 9
+text = "100%"
+vertical_alignment = 1
+
+[node name="ItemPercentBox" type="HBoxContainer" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="ItemPercentTitle" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer2/ItemPercentBox"]
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 9
+text = "ITEM_PERCENT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemPercent" type="Label" parent="CanvasLayer/SaveScreen/Details/DetailsInfo/VBoxContainer/HBoxContainer2/ItemPercentBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_het4j")
+theme_override_font_sizes/font_size = 9
+text = "100%"
+vertical_alignment = 1
+
+[node name="Empty" type="Panel" parent="CanvasLayer/SaveScreen/Details"]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/SaveScreen/Details/Empty"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 58.0
+offset_top = -11.5
+offset_right = -57.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.32, 2.32)
+pivot_offset = Vector2(58, 13)
+theme = ExtResource("4_het4j")
+text = "SAVE_EMPTY"
+horizontal_alignment = 1
+
+[node name="Back" type="Button" parent="CanvasLayer/SaveScreen"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -261.0
+offset_top = -35.0
+offset_right = -133.0
+offset_bottom = -3.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme = ExtResource("4_het4j")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fmqts")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rq35i")
+theme_override_styles/focus = SubResource("StyleBoxFlat_jy200")
+text = "OPTION_BACK"
+
+[node name="ScreenEffect" type="ColorRect" parent="CanvasLayer/SaveScreen"]
+unique_name_in_owner = true
+texture_repeat = 2
+material = SubResource("ShaderMaterial_fmib2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+color = Color(1, 1, 1, 0.494118)
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="CanvasLayer/SaveScreen/Back" to="." method="_on_back_pressed"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://diax7erk7undx"]
+
+[ext_resource type="Texture2D" uid="uid://dpnb8gh2vfcy6" path="res://resources/bg/semen/floor_semen.png" id="1_eo3dq"]
+[ext_resource type="Script" uid="uid://dq3ghw405t0yr" path="res://effect_semens.gd" id="2_gxvlw"]
+
+[node name="Semens" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(0, -15)
+scale = Vector2(1.21, 1.21)
+texture = ExtResource("1_eo3dq")
+offset = Vector2(0, 15)
+hframes = 12
+script = ExtResource("2_gxvlw")

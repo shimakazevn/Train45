@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://ci7hw0ulnq12h"]
+
+[ext_resource type="Texture2D" uid="uid://dl0h8ivhadvh8" path="res://resources/ui/EventCoverImage/Hpreview_reina_2.png" id="1_1kx7j"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_arxrq"]
+
+[resource]
+script = ExtResource("1_arxrq")
+main_love_event = true
+scene_description = "SCENE_FELLATIO"
+scene_name = "scene10"
+dialog_title = "e_reina_fella"
+stage_name = "stage_17"
+love_ability = 6
+preview_texture = ExtResource("1_1kx7j")
+is_position = Vector2(145, 205)
+ahen_keys = PackedStringArray("SCENE_REINA_AHEN_FELLATIO_1", "SCENE_REINA_AHEN_FELLATIO_2", "SCENE_REINA_AHEN_FELLATIO_3", "SCENE_REINA_AHEN_FELLATIO_4", "SCENE_REINA_AHEN_FELLATIO_5")

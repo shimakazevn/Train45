@@ -1,0 +1,89 @@
+[gd_scene load_steps=8 format=3 uid="uid://e77nm6uylqia"]
+
+[ext_resource type="Script" uid="uid://dpgacyjaaqg6t" path="res://quest_component.gd" id="1_atmrv"]
+[ext_resource type="Resource" uid="uid://ckun3cbed1s0o" path="res://Gameplay/GameData/QuestData/quest_1.tres" id="2_5wxrv"]
+[ext_resource type="Texture2D" uid="uid://bdx54kkvfvfu3" path="res://resources/ui/gui/window.png" id="2_ix05q"]
+[ext_resource type="PackedScene" uid="uid://n6jyw51qxcax" path="res://Gameplay/Ui/quest_slot.tscn" id="4_71638"]
+[ext_resource type="Shader" uid="uid://bqknggdn8m3nm" path="res://Gameplay/Levels/unshaded.gdshader" id="5_m5nwp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_abge8"]
+shader = ExtResource("5_m5nwp")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h8f0b"]
+shader = ExtResource("5_m5nwp")
+
+[node name="QuestComponent" type="Control" node_paths=PackedStringArray("clear_label")]
+process_mode = 3
+z_index = 4
+material = SubResource("ShaderMaterial_abge8")
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11.0
+offset_top = 9.0
+offset_right = 204.0
+offset_bottom = 141.0
+scale = Vector2(0.735, 0.735)
+script = ExtResource("1_atmrv")
+quest_data = ExtResource("2_5wxrv")
+quest_slot = ExtResource("4_71638")
+clear_label = NodePath("MarginContainer/ClearLabel")
+
+[node name="QuestWindow" type="Panel" parent="."]
+use_parent_material = true
+layout_mode = 1
+offset_right = 1456.0
+offset_bottom = 665.0
+scale = Vector2(0.2, 0.2)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="QuestWindow"]
+modulate = Color(1, 1, 1, 0.619608)
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ix05q")
+region_rect = Rect2(0, 0, 300, 300)
+patch_margin_left = 84
+patch_margin_top = 84
+patch_margin_right = 84
+patch_margin_bottom = 84
+metadata/_edit_lock_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+use_parent_material = true
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.503
+anchor_bottom = 1.0
+offset_right = -0.07901
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="QuestListContainer" type="VBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+use_parent_material = true
+layout_mode = 2
+
+[node name="QuestSlot" parent="MarginContainer/QuestListContainer" instance=ExtResource("4_71638")]
+material = SubResource("ShaderMaterial_h8f0b")
+layout_mode = 2
+
+[node name="ClearLabel" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+visible = false
+use_parent_material = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.490367, 0.94, 0.1692, 1)
+text = "QUEST_CLEAR"
+horizontal_alignment = 1

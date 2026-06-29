@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7x0h1w2unepo"]
+
+[ext_resource type="Texture2D" uid="uid://bq5drh06h057u" path="res://resources/ui/OptionMenu/select.png" id="1_te4iq"]
+[ext_resource type="Script" uid="uid://c7yajpu1h7jtg" path="res://Gameplay/FocusRect.gd" id="2_uy17y"]
+
+[node name="FocusRect" type="NinePatchRect"]
+offset_left = 460.0
+offset_top = 100.0
+offset_right = 560.0
+offset_bottom = 130.0
+texture = ExtResource("1_te4iq")
+patch_margin_left = 10
+patch_margin_right = 25
+script = ExtResource("2_uy17y")

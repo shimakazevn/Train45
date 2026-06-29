@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Tutos" load_steps=5 format=3 uid="uid://vnswu6e1jrqh"]
+
+[ext_resource type="Script" uid="uid://e4im8cmlv638" path="res://Gameplay/GameData/Tutorials/tutos.gd" id="1_00qnx"]
+[ext_resource type="Script" uid="uid://cgivho4o0eoma" path="res://Gameplay/GameData/Tutorials/tuto.gd" id="2_u5fn3"]
+[ext_resource type="Texture2D" path="res://resources/ui/tuto_image/tuto_route_buy_mode.png" id="3_u5fn3"]
+
+[sub_resource type="Resource" id="Resource_00qnx"]
+script = ExtResource("2_u5fn3")
+texture = ExtResource("3_u5fn3")
+description = "TUTO_ROUTE_BUY_1"
+
+[resource]
+script = ExtResource("1_00qnx")
+id = "tuto_route_buy_mode"
+title = "TUTO_TITLE_ROUTE_BUY_MODE"
+tuto_pages = Array[ExtResource("2_u5fn3")]([SubResource("Resource_00qnx")])

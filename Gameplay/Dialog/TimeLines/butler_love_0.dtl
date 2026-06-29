@@ -1,0 +1,134 @@
+join butler(human) center 
+butler(human): 아, 오셨군요. #id:86
+## 디버그용 테스트
+#[Debug] 대화를 종료하고 다음 챕터로 넘어갈까요? #id:85
+#- 네 #id:86
+#	do GameEvents.emit_npc_level_up({ch.butler})
+#	do GameEvents.emit_update_quest_process()
+#	[end_timeline]
+#- 아니오 #id:87
+#계속 진행 #id:88
+- 새로운 모습은 좀 적응됐어? #id:87
+emotion butler(human) Smile 
+butler(human): 네, 생각보다 금방 적응했습니다. 날개나 깃털이 없어진 게 허전하지만.. #id:88
+butler(human): 두 발로 걷는다는 느낌이 신선해서 재미있습니다. #id:89
+- 익숙해 질 때까지 도와 줄게. #id:8a
+emotion butler(human) Idle 
+butler(human): 감사합니다. 다만.. #id:8b
+emotion butler(human) Panic 
+butler(human): 요즘 들어 저를 찾아 주시는 횟수가 많아 진 거 같아서.. #id:8c
+butler(human): 상품도 이것저것 가리지 않고 교환해 가시고.. 탐색에 나가는 횟수도 눈에 띄게 늘었습니다. #id:8d
+emotion butler(human) Serious 
+butler(human): 제가 이런 모습이 된 이후로 유독 신경 써 주시는 거 같습니다만.. #id:8e
+- 우리를 돕느라 변해버린 거잖아. #id:8f
+- 코니알에게 진 빚을 갚아야 하니까. #id:90
+emotion butler(human) Surprise 
+butler(human): 그건 여러분의 잘못이 아닙니다. 제가 조심하지 않은 탓에.. #id:91
+butler(human): 제가 좋아하는 것들에 관심을 가져 주시는 것에 어째선지 신이 나 버려서. #id:92
+emotion butler(human) Panic 
+butler(human): 그만 코니알 님의 심기를 건드려 버렸습니다. #id:93
+- 무언가에 열중하는 건 잘못된 게 아니야. #id:94
+- 실제로 집사 덕에 도움도 많이 받았잖아. #id:95
+emotion butler(human) Smile 
+butler(human): 정말 친절하시군요.. #id:96
+emotion butler(human) Serious 
+butler(human): 하지만 이대로라면.. 제가 진 빚을 갚는데만 적지 않은 시간을 낭비할 것입니다. #id:97
+butler(human): 여러분들에겐 더 중요한 목표가 있었지 않습니까? #id:98
+- 이 곳에서 탈출할 방법을 찾는 것. #id:99
+- 그 전에 집사의 문제를 해결하고 싶어. #id:9a
+emotion butler(human) Idle 
+butler(human): 코니알 님의 감시가 이전보다 심해져 직접적인 도움은 드릴 수 없지만 #id:9b
+butler(human): 적어도 걸림돌이 되고 싶지는 않습니다. #id:9c
+butler(human): 상품을 제공하는 것 외에도.. 여러분들을 도울 방법이 있었습니다만.. #id:9d
+- 방법이라면.. #id:9e
+- 그 때 코니알이 말했던? #id:9f
+emotion butler(human) Serious 
+update butler(human) [extra_data="show Etc/Blur"]
+butler(human): 네.. 섹스 라는 것을 하면. #id:a0
+butler(human): 저도 티켓을 만들어 낼 수 있다고 하셨죠. #id:a1
+emotion butler(human) Panic 
+butler(human): 무.. 물론 당신이 원하신다면 말입니다. #id:a2
+butler(human): 이런 행위는 서로가 좋아하는 상대여야 효과적이라고 들었으니까요.. #id:a3
+- 잘 부탁할게! #id:a4
+emotion butler(human) Surprise 
+butler(human): 즈..즉답이군요. 정말 괜찮겠습니까? 저는.. #id:a5
+- 집사는 내키지 않아? #id:a6
+emotion butler(human) Idle 
+butler(human): 저.. 전 #id:a7
+emotion butler(human) Surprise 
+butler(human): 저도 좋아해요! #id:a8
+butler(human): 사실 인간 모습으로 변하고 그.. 섹스 라는 것에 관심이 생겨서.. #id:a9
+emotion butler(human) Serious 
+butler(human): 많이 서툴러서 기분이라던가 좋지 않을 수 있지만.. 괜찮으시다면. #id:aa
+- 집사는 처음이니까 차례대로 알려 줄게. #id:ab
+- 우선은 자지에 익숙해져야겠지? #id:ac
+emotion butler(human) Laugh 
+butler(human): 네. 네! 열심히 배우도록 하겠습니다.. #id:ad
+leave butler
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_anim_change_this_npc("scene1_1", {ch.butler})
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change({ch.butler}, 100)
+butler(human): 이.. 이게 자지..라는 거군요. #id:ae
+butler(human): 항상 이렇게 큰 겁니까? 자지라는 건.. #id:af
+butler(human): 제 덕분이라고요? 자지를 쥐고 있을 뿐인데.. #id:b0
+butler(human): 하지만 이렇게 보고 있는 것만으로도 기분이 이상해집니다.. #id:b1
+butler(human): 여기서 손을 위 아래로 말입니까? #id:b2
+butler(human): 알겠습니다. 아.. 아프면 말해주세요. #id:b3
+butler(human): (문질..문질..) #id:b4
+butler(human): 이런게 정말 기분 좋으십니까? #id:b5
+butler(human): 아, 자지 끝에서 무언가 흐르고 있습니다만.. #id:b6
+butler(human): 덕분에 자지가 더 미끄러워서.. 문질문질하기 쉬워졌습니다. #id:b7
+butler(human): 하지만.. 제 작은 손으로는 이 커다란 자지를 전부 감쌀 수 없어서.. #id:b8
+butler(human): 괜찮으시다면 혀를 써도 되겠습니까? #id:b9
+butler(human): 침까지 섞어서 더 미끌거리게 만들면 기분이 더 좋아지지 않을까 싶습니다만.. #id:ba
+- 재능이 있는 걸. #id:bb
+butler(human): ..네? 재능이요? 혀를 쓰는게 정답이었던 건가요.. #id:bc
+butler(human): 그럼 하..핥아 보겠습니다. #id:bd
+do GameEvents.emit_anim_change_this_npc("scene1_2", {ch.butler})
+butler(human): 츄릅.. 하앗.. #id:be
+butler(human): 할짝.. 기분 좋으십니까? #id:bf
+butler(human): 위아래로.. 문질문질 하면서.. 하아. 혀를 써서.. #id:c0
+butler(human): 자지에서 나온 즙과 제 침이 섞여서.. 독특한 맛이 납니다.. #id:c1
+butler(human): 엄청나게 뜨거워서 열기가 제 두 볼에 느껴질 정도에요.. #id:c2
+butler(human): 찌걱..찌걱.. 왠지 부끄러운 소리가 나기 시작했습니다. #id:c3
+butler(human): 자지도 점점 커지고 있어요.. 정말 괜찮으신 겁니까? #id:c4
+butler(human): 밑에 불알도.. 수축하고 있는데.. 뭔가 잘못되고 있는 건..? #id:c5
+- 기분이 좋아서 사정하기 직전이야.. #id:c6
+butler(human): 사.. 사정 말입니까? 그렇군요.. 사정하기 전에는 이렇게 된다.. #id:c7
+butler(human): 네. 속도를 더 높여서.. 마지막까지 기분 좋게 해 드리겠습니다. #id:c8
+butler(human): 더 강하게 쥐고.. 혀를 써서.. 츄릅.. #id:c9
+butler(human): 문질문질.. 하아.. 하아.. 네. 사정해 주십시오.. 언제든지. #id:ca
+butler(human): 기분 좋게 사정하실 수 있게. 마지막까지 봉사하겠습니다.. 하아. #id:cb
+butler(human): 이제.. 사정하시는 겁니까? 할짝.. 하아.. #id:cc
+butler(human): 자지가 견딜 수 없이 떨립니다.. 참지 않으셔도 됩니다.. #id:cd
+butler(human): 당신의 커다란 자지에서 나오는 정액.. 얼마든지 뿌려 주세요.. #id:ce
+butler(human): 저는 얼마든지.. 아앗! #id:cf
+do GameEvents.emit_anim_change_this_npc("scene1_3", {ch.butler})
+[wait time="7.0"]
+butler(human): 하아.. 뜨겁고.. 야한 냄새로 가득합니다.. #id:d0
+do GameEvents.emit_anim_change_this_npc("scene1_4", {ch.butler})
+butler(human): 이게 당신의 정액.. 이군요. 코니알 님이 그토록 원하시는 이유를 알 것도 같습니다. #id:d1
+butler(human): 정말 남자답고.. 늠름한 자지에서 나온.. 신선한 정액.. #id:d2
+butler(human): 미숙한 봉사에도 기분 좋아지셨다니.. 정말 기쁩니다. #id:d3
+butler(human): 사정 후에는 이렇게 줄어드는군요.. #id:d4
+butler(human): ..그, 그게. #id:d5
+butler(human): 가.. 가능하다면, 좀 더 연습해보고 싶었습니다. #id:d6
+butler(human): 하지만 이미 한번 사정하셨으니.. 앗! #id:d7
+butler(human): 다시 전처럼 커져 버렸어요. 이게 대체? #id:d8
+butler(human): 이.. 익숙해 질때까지 얼마든지요? #id:d9
+butler(human): 그.. 그래도 되겠습니까? #id:da
+butler(human): ..그렇다면 실례하겠습니다.. #id:db
+butler(human): 부디 잔뜩 기분 좋아지셨으면 좋겠습니다. #id:dc
+set {npc.type} = {ch.butler}
+[signal arg="scene1"]
+butler(human): 하아..하아.. 정말로 몇번이고 사정하시다니.. #id:dd
+butler(human): 남성들은 전부 당신처럼 힘이 넘치는 겁니까?.. #id:de
+butler(human): 그래도 덕분에 자지에 대해 익숙해 진 거 같습니다. #id:df
+butler(human): 예행 연습이라 이번엔 손으로 끝낸 게 아쉽지만.. #id:e0
+butler(human): 다음번엔.. '실전'을 부탁드리겠습니다. #id:e1
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_anim_change_this_npc("idle", {ch.butler})
+do GameEvents.emit_npc_level_up({ch.butler})
+do GameEvents.emit_update_quest_process()
+[end_timeline]

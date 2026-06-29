@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6hlho66gl0fa"]
+
+[ext_resource type="Shader" uid="uid://chq1y6cne8sfn" path="res://Gameplay/pause_menu.gdshader" id="1_p8y55"]
+[ext_resource type="Script" uid="uid://ctuk4ra18jy3n" path="res://Gameplay/Ui/tutorial_rect.gd" id="1_wowim"]
+[ext_resource type="Shader" uid="uid://cakqda0cot0so" path="res://Gameplay/Ui/Outline.gdshader" id="2_7324v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mchxr"]
+shader = ExtResource("1_p8y55")
+shader_parameter/lod = 0.957
+shader_parameter/mix_percentage = 0.615
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m6uw7"]
+shader = ExtResource("2_7324v")
+shader_parameter/frequency = 0.855
+shader_parameter/amplitude = 1000.0
+shader_parameter/speed = 10.0
+shader_parameter/direction = -1.0
+shader_parameter/color1 = Color(1, 1, 1, 1)
+shader_parameter/color2 = Color(0, 0, 0, 0)
+shader_parameter/opacity = 1.0
+
+[node name="TutorialRect" type="Polygon2D" node_paths=PackedStringArray("rect")]
+process_mode = 3
+material = SubResource("ShaderMaterial_mchxr")
+color = Color(0, 0, 0, 0.513726)
+invert_enabled = true
+invert_border = 1000.0
+polygon = PackedVector2Array(13, 11, 190, 17, 194, 142, 14, 147)
+script = ExtResource("1_wowim")
+rect = [NodePath("ColorRect")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = 124.0
+offset_top = 54.0
+offset_right = 273.0
+offset_bottom = 173.0
+color = Color(1, 1, 1, 0.211765)
+
+[node name="Line2D" type="Line2D" parent="."]
+material = SubResource("ShaderMaterial_m6uw7")
+points = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+closed = true
+width = 2.0
+texture_mode = 1
+
+[node name="BlockRectContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

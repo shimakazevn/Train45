@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://b50xp2urncarh"]
+
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_b4ral"]
+[ext_resource type="Texture2D" uid="uid://bi5rf7xb5e4fv" path="res://resources/ui/EventCoverImage/Hpreview_reina_8.png" id="1_ju5gs"]
+
+[resource]
+script = ExtResource("1_b4ral")
+main_love_event = true
+scene_description = "SCENE_HANDJOB"
+scene_name = "scene5"
+dialog_title = "e_nopan"
+stage_name = "stage_4"
+love_ability = 1
+preview_texture = ExtResource("1_ju5gs")
+is_position = Vector2(979, 206)
+ahen_keys = PackedStringArray("SCENE_REINA_AHEN_1")

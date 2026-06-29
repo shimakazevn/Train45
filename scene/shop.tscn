@@ -1,0 +1,525 @@
+[gd_scene load_steps=30 format=3 uid="uid://bxgiy32bokuxg"]
+
+[ext_resource type="Script" uid="uid://cp7kt54n8yvfm" path="res://scene/shop.gd" id="1_bg1jn"]
+[ext_resource type="PackedScene" uid="uid://w2tpup8dkx8p" path="res://Gameplay/Upgrades/ability.tscn" id="2_pmfqn"]
+[ext_resource type="PackedScene" uid="uid://bvddyffn8losd" path="res://scene/blur_bg.tscn" id="3_08gde"]
+[ext_resource type="PackedScene" uid="uid://dfoj8l3p6ssk5" path="res://Gameplay/Sound/ui_sound_stream_player.tscn" id="3_oh3n3"]
+[ext_resource type="Texture2D" uid="uid://n26hsw50ij2r" path="res://resources/ui/Shop/shop_back.png" id="3_ult2j"]
+[ext_resource type="Theme" uid="uid://v21ts4c26wik" path="res://resources/ui/Shop/shop_theme.tres" id="4_2qvwe"]
+[ext_resource type="Texture2D" uid="uid://conovqby0tflg" path="res://resources/ui/Shop/shop_alpha.png" id="5_33mag"]
+[ext_resource type="Texture2D" uid="uid://c8ytkjb7rr7k3" path="res://resources/ui/Shop/shop_info.png" id="6_hyra0"]
+[ext_resource type="Script" uid="uid://cidcs0o6t4m20" path="res://scene/InfoTexture.gd" id="7_31gr1"]
+[ext_resource type="FontFile" uid="uid://drk4ye7wq0wjq" path="res://resources/font/ShipporiGothicB2-Bold.ttf" id="7_ik3u2"]
+[ext_resource type="Texture2D" uid="uid://4u6pnd86hxsm" path="res://resources/ui/icons/icons14.png" id="10_mskdj"]
+[ext_resource type="Shader" uid="uid://ba1gx4f87q8m4" path="res://scene/pixel_outline.gdshader" id="10_s07y5"]
+[ext_resource type="PackedScene" uid="uid://c2ma7qasrwtka" path="res://Gameplay/Sound/random_stream_player_global.tscn" id="11_guf26"]
+[ext_resource type="AudioStream" uid="uid://m5sgtr7lrua7" path="res://sound/sfx/ui/shop_focus1.wav" id="12_4sgfj"]
+[ext_resource type="Script" uid="uid://c0ekivxptehxs" path="res://scene/shop_item_icon.gd" id="12_s07y5"]
+[ext_resource type="AudioStream" uid="uid://dk48newlptxta" path="res://sound/sfx/ui/shop_focus2.wav" id="13_tbfqe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_guf26"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tbfqe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4sgfj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4sgfj"]
+font_size = 27
+font_color = Color(0.488492, 0.467482, 0.428569, 1)
+
+[sub_resource type="Animation" id="Animation_se8n5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_y5nrm"]
+resource_name = "in"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Vector2(-121, 81), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(0.5, 2, 1),
+"update": 0,
+"values": [Vector2(1.2, 1.2), Vector2(1.4, 1.4), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.187638, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_3dlco"]
+resource_name = "out"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(3.36358, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-121, 81)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(2, 0.5),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.2, 1.2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [0.0, -0.187638]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"shop_out"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_uj7ey"]
+_data = {
+&"RESET": SubResource("Animation_se8n5"),
+&"in": SubResource("Animation_y5nrm"),
+&"out": SubResource("Animation_3dlco")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_tbfqe"]
+font_size = 25
+font_color = Color(0.0976563, 0.0908203, 0.078125, 1)
+
+[sub_resource type="Animation" id="Animation_i7th2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(358, 191)]
+}
+
+[sub_resource type="Animation" id="Animation_1rtkr"]
+resource_name = "pop"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.2, 1.2), Vector2(1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"rand_rotation"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(455, 191), Vector2(355, 191)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kh053"]
+_data = {
+&"RESET": SubResource("Animation_i7th2"),
+&"pop": SubResource("Animation_1rtkr")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oh3n3"]
+shader = ExtResource("10_s07y5")
+shader_parameter/clr = Color(1, 0.993333, 0.96, 1)
+shader_parameter/type = 2
+shader_parameter/thickness = 1.0
+
+[node name="Shop" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_bg1jn")
+upgrade_list_scene = ExtResource("2_pmfqn")
+
+[node name="ShopStreamPlayer" parent="." instance=ExtResource("3_oh3n3")]
+
+[node name="ScreenBlurRect" parent="." instance=ExtResource("3_08gde")]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 352.0
+offset_bottom = 361.0
+texture = ExtResource("3_ult2j")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 305.0
+offset_right = 315.0
+offset_bottom = 345.0
+alignment = 2
+
+[node name="TicketLabel" type="Label" parent="TextureRect/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_2qvwe")
+text = "SHOP_TICKET_NUM"
+
+[node name="TicketNum" type="Label" parent="TextureRect/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 2
+theme = ExtResource("4_2qvwe")
+text = "9999"
+
+[node name="Exit" type="Button" parent="TextureRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 97.0
+offset_top = 142.0
+offset_right = 147.0
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_2qvwe")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_guf26")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_guf26")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_tbfqe")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_4sgfj")
+text = "SHOP_EXIT"
+text_overrun_behavior = 1
+
+[node name="ContainerAlpha" type="TextureRect" parent="TextureRect"]
+clip_children = 1
+layout_mode = 0
+offset_left = 80.0
+offset_top = 97.0
+offset_right = 324.0
+offset_bottom = 273.0
+texture = ExtResource("5_33mag")
+expand_mode = 1
+
+[node name="SoldOutLabel" type="Label" parent="TextureRect/ContainerAlpha"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.465
+anchor_top = 0.5
+anchor_right = 0.465
+anchor_bottom = 0.5
+offset_left = -126.46
+offset_top = -24.0
+offset_right = 126.54
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "SHOP_SOLD_OUT"
+label_settings = SubResource("LabelSettings_4sgfj")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/ContainerAlpha"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -91.0
+offset_right = 235.0
+offset_bottom = 91.0
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/ContainerAlpha/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/ContainerAlpha/VBoxContainer/MarginContainer"]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/margin_top = 23
+theme_override_constants/margin_bottom = 35
+
+[node name="Panel" type="ScrollContainer" parent="TextureRect/ContainerAlpha/VBoxContainer/MarginContainer/MarginContainer"]
+clip_contents = false
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="AbilityContainer" type="VBoxContainer" parent="TextureRect/ContainerAlpha/VBoxContainer/MarginContainer/MarginContainer/Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Ability" parent="TextureRect/ContainerAlpha/VBoxContainer/MarginContainer/MarginContainer/Panel/AbilityContainer" instance=ExtResource("2_pmfqn")]
+layout_mode = 2
+
+[node name="Ability2" parent="TextureRect/ContainerAlpha/VBoxContainer/MarginContainer/MarginContainer/Panel/AbilityContainer" instance=ExtResource("2_pmfqn")]
+layout_mode = 2
+
+[node name="Ability3" parent="TextureRect/ContainerAlpha/VBoxContainer/MarginContainer/MarginContainer/Panel/AbilityContainer" instance=ExtResource("2_pmfqn")]
+layout_mode = 2
+
+[node name="Ability4" parent="TextureRect/ContainerAlpha/VBoxContainer/MarginContainer/MarginContainer/Panel/AbilityContainer" instance=ExtResource("2_pmfqn")]
+layout_mode = 2
+
+[node name="Ability5" parent="TextureRect/ContainerAlpha/VBoxContainer/MarginContainer/MarginContainer/Panel/AbilityContainer" instance=ExtResource("2_pmfqn")]
+layout_mode = 2
+
+[node name="Ability6" parent="TextureRect/ContainerAlpha/VBoxContainer/MarginContainer/MarginContainer/Panel/AbilityContainer" instance=ExtResource("2_pmfqn")]
+layout_mode = 2
+
+[node name="Ability7" parent="TextureRect/ContainerAlpha/VBoxContainer/MarginContainer/MarginContainer/Panel/AbilityContainer" instance=ExtResource("2_pmfqn")]
+layout_mode = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextureRect"]
+libraries = {
+&"": SubResource("AnimationLibrary_uj7ey")
+}
+
+[node name="ShopTitleLabel" type="Label" parent="TextureRect"]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.296
+anchor_top = 0.149
+anchor_right = 0.296
+anchor_bottom = 0.149
+offset_left = 6.8079987
+offset_top = -19.14
+offset_right = 156.808
+offset_bottom = 17.86
+grow_horizontal = 2
+grow_vertical = 2
+text = "SHOP_TITLE"
+label_settings = SubResource("LabelSettings_tbfqe")
+horizontal_alignment = 1
+
+[node name="InfoTexture" type="TextureRect" parent="."]
+z_index = 1
+offset_left = 358.0
+offset_top = 191.0
+offset_right = 627.0
+offset_bottom = 347.0
+pivot_offset = Vector2(134, 78)
+texture = ExtResource("6_hyra0")
+expand_mode = 1
+script = ExtResource("7_31gr1")
+
+[node name="Info" type="Label" parent="InfoTexture"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.5001
+offset_top = -26.0
+offset_right = 93.4999
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_2qvwe")
+theme_override_fonts/font = ExtResource("7_ik3u2")
+theme_override_font_sizes/font_size = 10
+text = "설명이 들어가는 칸이야!"
+autowrap_mode = 3
+
+[node name="InfoCost" type="Label" parent="InfoTexture"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 60.5
+offset_top = -63.0
+offset_right = 102.5
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_2qvwe")
+theme_override_fonts/font = ExtResource("7_ik3u2")
+theme_override_font_sizes/font_size = 22
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="InfoName" type="Label" parent="InfoTexture"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.5
+offset_top = -65.0
+offset_right = 57.5
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("7_ik3u2")
+theme_override_font_sizes/font_size = 13
+text = "Coffee-colored Stockings"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InfoTexture"]
+libraries = {
+&"": SubResource("AnimationLibrary_kh053")
+}
+
+[node name="RandomStreamPlayerGlobalComponent" parent="InfoTexture" instance=ExtResource("11_guf26")]
+streams = Array[AudioStream]([ExtResource("12_4sgfj"), ExtResource("13_tbfqe")])
+
+[node name="ItemIcon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_oh3n3")
+custom_minimum_size = Vector2(150, 150)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 93.0
+offset_top = -148.0
+offset_right = 243.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(75, 75)
+texture = ExtResource("10_mskdj")
+expand_mode = 2
+script = ExtResource("12_s07y5")
+
+[connection signal="pressed" from="TextureRect/Exit" to="." method="_on_exit_pressed"]

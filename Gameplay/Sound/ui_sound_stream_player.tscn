@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfoj8l3p6ssk5"]
+
+[ext_resource type="Script" uid="uid://c67vgxet3mm8y" path="res://Gameplay/ui_state_player.gd" id="1_gog3t"]
+
+[node name="PauseMenuStreamPlayer" type="AudioStreamPlayer"]
+bus = &"Sfx"
+script = ExtResource("1_gog3t")

@@ -1,0 +1,40 @@
+do GameEvents.hide_dialog_love_ui()
+join pazuzu right [mirrored="true" ]
+pazuzu: 여러분들..! 무언가 수확이 있었나요? #id:4dd
+join reina left
+emotion reina Serious 
+reina: 코니알로부터 인과를 돌릴 방법을 알아냈어요. #id:4de
+leave reina
+join mai left 
+mai: 기관실로 통하는 노선을 얻었어. #id:4df
+emotion pazuzu Smile 
+pazuzu: 그렇군요.. 대단해요.. 이제 모든 게 끝나기 전이에요.. 일단 역장실에 도착하게 되면.. 다시는 돌아오지 못할 거에요.. #id:4e0
+emotion mai Serious 
+mai: 정말? 이 전차에 있는 것도 마지막이구나. #id:4e1
+leave mai
+join reina left
+reina: 뭔가.. 놓친 건 없겠죠? #id:4e2
+leave reina
+join mai left 
+mai: 난 전차에서 내릴 때 무언가 하나씩 자주 잃어버리거든.. 너희들도 확인해 봐. #id:4e3
+pazuzu: ..저기.. 여기서 내리게 되면 절대 되돌릴 수 없으니까.. 충분한 시간을 드릴 수 있어요. #id:4e4
+leave mai
+join reina left
+reina: 정말인가요? 하지만 지금 일을 수습하려면 한시 빨리 가야 되는게.. #id:4e5
+emotion pazuzu Smile 
+pazuzu: 큰 사건인 건 맞지만.. 이곳의 시간은 흐르지 않으니까요.. #id:4e6
+emotion reina Suprised 
+reina: 아.. 그러네요. #id:4e7
+emotion pazuzu Idle 
+pazuzu: 하지만 심리적인 체감은 들 테니.. 너무 오래동안 있는 것도 사양해 주세요.. #id:4e8
+- 그럼 후회 없을 만큼 준비한뒤 출발하자. #id:4e9
+emotion reina Idle 
+reina: 네. 기관실의 노선은 메모해 놨으니 칸칸네비를 통해 언제든 갈 수 있어요. #id:4ea
+leave reina
+join mai left 
+emotion mai Smile 
+mai: 역시 꼼꼼하다니까 레이나짱. 그럼 가 볼까! #id:4eb
+기관실에 도착하면 다시는 이곳으로 돌아 올 수 없습니다. #id:4ec
+게임을 저장하고 못다한 일을 마친 후 진행하시길 추천합니다. #id:4ed
+do GameEvents.emit_add_read_history("chapter6_2")
+[end_timeline]

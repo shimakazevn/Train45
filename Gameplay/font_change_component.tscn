@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvorrprxskobm"]
+
+[ext_resource type="Script" uid="uid://dnvuyblraqmoh" path="res://resources/Dialogic_Style/VisualNovelTextbox/font_change_component.gd" id="1_m5h7y"]
+
+[node name="FontChangeComponent" type="Node" node_paths=PackedStringArray("target_node")]
+script = ExtResource("1_m5h7y")
+target_node = NodePath("")

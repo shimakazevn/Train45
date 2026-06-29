@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://dixu5syg6p8x8"]
+
+[ext_resource type="Texture2D" uid="uid://cu0q0h7kpo31d" path="res://resources/ui/EventCoverImage/Hpreview_mai_10.png" id="1_h01qc"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_nqf0r"]
+
+[resource]
+script = ExtResource("1_nqf0r")
+main_love_event = true
+scene_description = "SCENE_DOGGY_SWIMSUIT"
+scene_name = "scene22"
+dialog_title = "e_swimsuit"
+stage_name = "stage_28"
+partner = 1
+love_ability = 6
+preview_texture = ExtResource("1_h01qc")
+is_position = Vector2(1589, 208)
+ahen_keys = PackedStringArray("SCENE_MAI_AHEN_KISS_1", "SCENE_MAI_AHEN_KISS_2", "SCENE_MAI_AHEN_KISS_3", "SCENE_MAI_AHEN_KISS_4", "SCENE_MAI_AHEN_KISS_5")

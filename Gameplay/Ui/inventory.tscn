@@ -1,0 +1,1061 @@
+[gd_scene load_steps=40 format=3 uid="uid://b0lm0c02t78oq"]
+
+[ext_resource type="Script" uid="uid://cruxprhtnuj0f" path="res://Gameplay/Ui/inventory.gd" id="1_etnud"]
+[ext_resource type="PackedScene" uid="uid://boo02aq5p0ren" path="res://Gameplay/Ui/inventory_item.tscn" id="2_6hysm"]
+[ext_resource type="PackedScene" uid="uid://dfoj8l3p6ssk5" path="res://Gameplay/Sound/ui_sound_stream_player.tscn" id="3_ghwdc"]
+[ext_resource type="PackedScene" uid="uid://bvddyffn8losd" path="res://scene/blur_bg.tscn" id="3_j5fhs"]
+[ext_resource type="Texture2D" uid="uid://dlg81gikragpi" path="res://resources/ui/Inventory/scalable_window_4.png" id="4_8g1m0"]
+[ext_resource type="Script" uid="uid://bytca61p8ec6h" path="res://Gameplay/Ui/cost_bubble_container.gd" id="4_j5fhs"]
+[ext_resource type="PackedScene" uid="uid://fqq42l3fwe5v" path="res://Gameplay/Ui/Inventory/cost_bubble.tscn" id="4_ldi7f"]
+[ext_resource type="FontFile" uid="uid://drk4ye7wq0wjq" path="res://resources/font/ShipporiGothicB2-Bold.ttf" id="5_k14wh"]
+[ext_resource type="Texture2D" uid="uid://m3hrir07luxa" path="res://resources/ui/Inventory/panel.png" id="6_cmmfp"]
+[ext_resource type="Texture2D" uid="uid://con4cfw5ggn21" path="res://resources/ui/Inventory/scalable_window.png" id="7_m2rjs"]
+[ext_resource type="Script" uid="uid://tdel6bqqs2x5" path="res://Gameplay/Ui/inven_cost.gd" id="7_tl73u"]
+[ext_resource type="Texture2D" uid="uid://cb2syayiw7qbb" path="res://resources/ui/Inventory/scalable_window_2.png" id="8_ldi7f"]
+[ext_resource type="Shader" uid="uid://ba1gx4f87q8m4" path="res://scene/pixel_outline.gdshader" id="10_j5fhs"]
+[ext_resource type="Texture2D" uid="uid://baa1m382juvcd" path="res://resources/ui/Inventory/scalable_window_3.png" id="10_tl73u"]
+[ext_resource type="PackedScene" uid="uid://c2ma7qasrwtka" path="res://Gameplay/Sound/random_stream_player_global.tscn" id="10_ydccc"]
+[ext_resource type="Shader" uid="uid://bxwds3tmnvnf4" path="res://Gameplay/NPC/vignette.gdshader" id="11_3eok5"]
+[ext_resource type="AudioStream" uid="uid://cytqrgl7ljlfi" path="res://sound/sfx/ui/inven_cost_count1.wav" id="11_40wh6"]
+[ext_resource type="Texture2D" uid="uid://dii7kjprh4ut2" path="res://resources/ui/icons/icons8.png" id="11_tl73u"]
+[ext_resource type="AudioStream" uid="uid://byil08ugv83ob" path="res://sound/sfx/ui/inven_cost_count2.wav" id="12_mn6v3"]
+[ext_resource type="Texture2D" uid="uid://bi1jrhib7q8fu" path="res://resources/ui/Inventory/back_button_focus.png" id="12_q2ffu"]
+[ext_resource type="Texture2D" uid="uid://bhw37ps7brf3i" path="res://resources/ui/Inventory/back_button.png" id="13_ghwdc"]
+[ext_resource type="AudioStream" uid="uid://c5nmenlvrmxik" path="res://sound/sfx/ui/inven_cost_count3.wav" id="13_yrgi4"]
+[ext_resource type="Texture2D" uid="uid://bwjh33kglwyt2" path="res://resources/ui/Inventory/title_rect.png" id="17_3eok5"]
+[ext_resource type="Texture2D" uid="uid://ci1w7p4qr8nws" path="res://resources/ui/Inventory/empty_slot.png" id="17_q2ffu"]
+[ext_resource type="Script" uid="uid://c4mqm7whllx2t" path="res://Gameplay/Ui/inven_exit_button.gd" id="19_3eok5"]
+
+[sub_resource type="Animation" id="Animation_ghwdc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InventoryRect/InventoryScreen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(38, 48)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InventoryRect/CostRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(431, 300)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InventoryRect/CostBubbleContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(45, 321)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("InventoryRect/InventoryTitleRect:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(21, 29)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("InventoryRect/InventoryScreen/InfoRect:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(568.067, 45.378)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("InventoryRect/InventoryScreen/InfoRect/TitleRect:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(17.9999, -28)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("InventoryRect:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("InventoryRect/InventoryTitleRect/HBoxContainer:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(109, 3)]
+}
+
+[sub_resource type="Animation" id="Animation_q2ffu"]
+resource_name = "in"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InventoryRect/InventoryScreen:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(193, 48), Vector2(38, 48)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InventoryRect/CostRect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(543, 300), Vector2(431, 300)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InventoryRect/CostBubbleContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(203, 321), Vector2(45, 321)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("InventoryRect/InventoryTitleRect:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(219, 29), Vector2(21, 29)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("InventoryRect/InventoryScreen/InfoRect:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(761.345, 45.378), Vector2(568.067, 45.378)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("InventoryRect/InventoryScreen/InfoRect/TitleRect:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(181.908, -28), Vector2(17.9999, -28)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("InventoryRect:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("InventoryRect/InventoryTitleRect/HBoxContainer:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(386.325, 3), Vector2(109, 3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b1m44"]
+_data = {
+&"RESET": SubResource("Animation_ghwdc"),
+&"in": SubResource("Animation_q2ffu")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k5jkx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b1m44"]
+font = ExtResource("5_k14wh")
+font_size = 31
+outline_size = 10
+outline_color = Color(0.149732, 0.149732, 0.149732, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ydccc"]
+shader = ExtResource("11_3eok5")
+shader_parameter/vignette_intensity = 0.305
+shader_parameter/vignette_opacity = 0.38
+shader_parameter/vignette_rgb = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q2ffu"]
+shader = ExtResource("10_j5fhs")
+shader_parameter/clr = Color(0.968627, 0.968627, 0.968627, 1)
+shader_parameter/type = 2
+shader_parameter/thickness = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_k5jkx"]
+font_size = 25
+font_color = Color(0.968627, 0.968627, 0.968627, 1)
+outline_size = 9
+outline_color = Color(0.376471, 0.352941, 0.4, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ybkyl"]
+font_size = 33
+font_color = Color(0.124867, 0.124867, 0.124867, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.282353)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mn6v3"]
+texture = ExtResource("13_ghwdc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_40wh6"]
+texture = ExtResource("12_q2ffu")
+
+[sub_resource type="LabelSettings" id="LabelSettings_yrgi4"]
+font_size = 21
+font_color = Color(0.368627, 0.337255, 0.392157, 1)
+outline_size = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_ghwdc"]
+font_size = 31
+font_color = Color(0.368627, 0.337255, 0.392157, 1)
+outline_size = 8
+shadow_size = 13
+shadow_color = Color(0.261, 0.222, 0.3, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ydccc"]
+font_size = 11
+shadow_color = Color(0.261, 0.222, 0.3, 1)
+shadow_offset = Vector2(2, 2)
+
+[node name="Inventory" type="Control" node_paths=PackedStringArray("cost_bubble_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_etnud")
+inven_item = ExtResource("2_6hysm")
+cost_bubble_container = NodePath("InventoryRect/CostBubbleContainer")
+
+[node name="InvenStreamPlayer" parent="." instance=ExtResource("3_ghwdc")]
+
+[node name="InventoryAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_b1m44")
+}
+
+[node name="ScreenBlurRect" parent="." instance=ExtResource("3_j5fhs")]
+layout_mode = 1
+
+[node name="InventoryRect" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_k5jkx")
+
+[node name="CostBubbleContainer" type="GridContainer" parent="InventoryRect"]
+layout_direction = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.326
+anchor_top = 0.886
+anchor_right = 0.326
+anchor_bottom = 0.886
+offset_left = 6.36
+offset_top = 2.04001
+offset_right = 386.36
+offset_bottom = 31.04
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(204, 0)
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 40
+script = ExtResource("4_j5fhs")
+cost_bubble_scene = ExtResource("4_ldi7f")
+
+[node name="CostBubble" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble2" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble3" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble4" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble5" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble6" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble7" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble8" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble9" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble10" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble11" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble12" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble13" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble14" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble15" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble16" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble17" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble18" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble19" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble20" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble21" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble22" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble23" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble24" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble25" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble26" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble27" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble28" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble29" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble30" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble31" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble32" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble33" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble34" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble35" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble36" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble37" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble38" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble39" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble40" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble41" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble42" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble43" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble44" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble45" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble46" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble47" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostBubble48" parent="InventoryRect/CostBubbleContainer" instance=ExtResource("4_ldi7f")]
+layout_mode = 2
+
+[node name="CostRect" type="NinePatchRect" parent="InventoryRect"]
+texture_filter = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 111.0
+offset_top = 120.0
+offset_right = 237.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.665, 0.665)
+texture = ExtResource("4_8g1m0")
+region_rect = Rect2(0, 0, 301, 41)
+patch_margin_left = 19
+patch_margin_top = 21
+patch_margin_right = 20
+patch_margin_bottom = 24
+
+[node name="CostLabelContainer" type="HBoxContainer" parent="InventoryRect/CostRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.5
+offset_top = -10.4398
+offset_right = 45.5
+offset_bottom = 29.5602
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+script = ExtResource("7_tl73u")
+
+[node name="CurrentCostLabel" type="Label" parent="InventoryRect/CostRect/CostLabelContainer"]
+layout_mode = 2
+text = "99"
+label_settings = SubResource("LabelSettings_b1m44")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SlashLabel" type="Label" parent="InventoryRect/CostRect/CostLabelContainer"]
+layout_mode = 2
+text = "/"
+label_settings = SubResource("LabelSettings_b1m44")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxCostLabel" type="Label" parent="InventoryRect/CostRect/CostLabelContainer"]
+layout_mode = 2
+text = "99"
+label_settings = SubResource("LabelSettings_b1m44")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RandomStreamPlayerGlobalComponent" parent="InventoryRect/CostRect/CostLabelContainer" instance=ExtResource("10_ydccc")]
+streams = Array[AudioStream]([ExtResource("11_40wh6"), ExtResource("12_mn6v3"), ExtResource("13_yrgi4")])
+
+[node name="InventoryScreen" type="TextureRect" parent="InventoryRect"]
+texture_filter = 2
+layout_mode = 0
+offset_left = 38.0
+offset_top = 48.0
+offset_right = 976.0
+offset_bottom = 496.0
+scale = Vector2(0.595, 0.595)
+texture = ExtResource("6_cmmfp")
+
+[node name="InfoRect" type="NinePatchRect" parent="InventoryRect/InventoryScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 99.067
+offset_top = -178.622
+offset_right = 503.067
+offset_bottom = 269.378
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("7_m2rjs")
+region_rect = Rect2(1, 0, 119, 124)
+patch_margin_left = 14
+patch_margin_top = 16
+patch_margin_right = 15
+patch_margin_bottom = 21
+
+[node name="InfoRect2" type="NinePatchRect" parent="InventoryRect/InventoryScreen/InfoRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -334.0
+offset_right = 503.0
+offset_bottom = 557.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.47, 0.47)
+pivot_offset = Vector2(218.5, 238)
+texture = ExtResource("7_m2rjs")
+region_rect = Rect2(1, 0, 119, 124)
+patch_margin_left = 14
+patch_margin_top = 16
+patch_margin_right = 15
+patch_margin_bottom = 21
+
+[node name="ColorRect" type="ColorRect" parent="InventoryRect/InventoryScreen/InfoRect"]
+material = SubResource("ShaderMaterial_ydccc")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -182.0
+offset_right = 169.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.27451)
+
+[node name="ItemIconSlot" type="Panel" parent="InventoryRect/InventoryScreen/InfoRect"]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.045
+anchor_top = 0.105
+anchor_right = 1.0
+anchor_bottom = 0.612
+offset_left = -0.179995
+offset_top = -0.0400009
+offset_right = -17.9999
+offset_bottom = -0.176025
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+
+[node name="IconSlot" type="TextureRect" parent="InventoryRect/InventoryScreen/InfoRect/ItemIconSlot"]
+unique_name_in_owner = true
+texture_filter = 1
+material = SubResource("ShaderMaterial_q2ffu")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.5
+offset_top = -107.114
+offset_right = 108.5
+offset_bottom = 113.886
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_tl73u")
+expand_mode = 4
+
+[node name="TitleRect" type="NinePatchRect" parent="InventoryRect/InventoryScreen/InfoRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -252.0
+offset_right = 184.0
+offset_bottom = -190.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_ldi7f")
+region_rect = Rect2(1, 0, 119, 124)
+patch_margin_left = 14
+patch_margin_top = 16
+patch_margin_right = 15
+patch_margin_bottom = 21
+
+[node name="ItemNameLable" type="Label" parent="InventoryRect/InventoryScreen/InfoRect/TitleRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 4.0
+offset_right = -14.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "아이템 이름"
+label_settings = SubResource("LabelSettings_k5jkx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DescriptionRect" type="NinePatchRect" parent="InventoryRect/InventoryScreen/InfoRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = 68.0
+offset_right = 552.0
+offset_bottom = 344.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_tl73u")
+region_rect = Rect2(1, 0, 119, 124)
+patch_margin_left = 19
+patch_margin_top = 21
+patch_margin_right = 20
+patch_margin_bottom = 24
+
+[node name="DescriptionLabel" type="Label" parent="InventoryRect/InventoryScreen/InfoRect/DescriptionRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 27.0
+offset_top = 24.0
+offset_right = -29.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "아이템 설명이 들어갑니다
+아이템 설명이 들어갑니다"
+label_settings = SubResource("LabelSettings_ybkyl")
+autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="InventoryRect/InventoryScreen"]
+material = SubResource("ShaderMaterial_ydccc")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -449.0
+offset_top = -194.0
+offset_right = 77.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.27451)
+
+[node name="MarginContainer" type="MarginContainer" parent="InventoryRect/InventoryScreen"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 55.4622
+offset_top = -155.092
+offset_right = 505.462
+offset_bottom = 173.908
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InventoryRect/InventoryScreen/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 23
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="Slot" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot2" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot3" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot4" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot5" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="Slot" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer2" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot2" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer2" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot3" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer2" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot4" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer2" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="Slot" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer3" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot2" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer3" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot3" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer3" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot4" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer3" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot5" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer3" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="Slot" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer4" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot2" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer4" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot3" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer4" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot4" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer4" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="Slot" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer5" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot2" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer5" groups=["invenitem"]]
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot3" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer5" groups=["invenitem"]]
+visible = false
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot4" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer5" groups=["invenitem"]]
+visible = false
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Slot5" type="TextureRect" parent="InventoryRect/InventoryScreen/MarginContainer/VBoxContainer/HBoxContainer5" groups=["invenitem"]]
+visible = false
+custom_minimum_size = Vector2(15, 15)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("17_q2ffu")
+expand_mode = 1
+
+[node name="Exit" type="Button" parent="InventoryRect/InventoryScreen"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 351.168
+offset_top = 209.613
+offset_right = 435.168
+offset_bottom = 274.613
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(42, 32.5)
+theme_override_styles/normal = SubResource("StyleBoxTexture_mn6v3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_40wh6")
+theme_override_styles/hover = SubResource("StyleBoxTexture_40wh6")
+theme_override_styles/focus = SubResource("StyleBoxTexture_40wh6")
+script = ExtResource("19_3eok5")
+
+[node name="Label" type="Label" parent="InventoryRect/InventoryScreen/Exit"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -26.5
+offset_top = -14.5799
+offset_right = 26.5
+offset_bottom = 17.4201
+grow_horizontal = 2
+grow_vertical = 0
+text = "INVENTORY_BACK"
+label_settings = SubResource("LabelSettings_yrgi4")
+horizontal_alignment = 1
+
+[node name="InventoryTitleRect" type="TextureRect" parent="InventoryRect"]
+texture_filter = 2
+layout_mode = 1
+offset_left = 21.0
+offset_top = 29.0
+offset_right = 649.0
+offset_bottom = 97.0
+scale = Vector2(0.585, 0.585)
+texture = ExtResource("17_3eok5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InventoryRect/InventoryTitleRect"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 3.0
+offset_right = 577.0
+offset_bottom = 51.0
+theme_override_constants/separation = 6
+
+[node name="InventoryTitleLabel" type="Label" parent="InventoryRect/InventoryTitleRect/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "INVENTORY_TITLE"
+label_settings = SubResource("LabelSettings_ghwdc")
+vertical_alignment = 1
+
+[node name="InventoryTitleDescriptionLabel" type="Label" parent="InventoryRect/InventoryTitleRect/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "INVENTORY_DESCRIPTION"
+label_settings = SubResource("LabelSettings_ydccc")
+vertical_alignment = 2
+
+[connection signal="focus_entered" from="InventoryRect/InventoryScreen/Exit" to="InventoryRect/InventoryScreen/Exit" method="_on_focus_entered"]
+[connection signal="focus_exited" from="InventoryRect/InventoryScreen/Exit" to="InventoryRect/InventoryScreen/Exit" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="InventoryRect/InventoryScreen/Exit" to="InventoryRect/InventoryScreen/Exit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="InventoryRect/InventoryScreen/Exit" to="InventoryRect/InventoryScreen/Exit" method="_on_mouse_exited"]
+[connection signal="pressed" from="InventoryRect/InventoryScreen/Exit" to="." method="_on_exit_pressed"]

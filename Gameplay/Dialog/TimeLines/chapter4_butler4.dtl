@@ -1,0 +1,68 @@
+join mai left 
+[music path="res://sound/music/loop/mellow.ogg" fade="1.0" volume="0.0" bus="Music"]
+mai: 자, 그럼 이제 지갑도 찾았겠다, 다음은 어쩌지? #id:193f
+join reina right [mirrored="true" ]
+reina: 역시 집사를 찾아가 볼까요? #id:1940
+- 그러자. #id:1941
+do TransitionScreen.dialog_transition()
+update reina leftmost [mirrored="true" move_time="0.5"]
+emotion mai Smile 
+mai: 야호- 집사, 우리 왔어. #id:1942
+join butler right
+butler: 여, 여러분! 무사히 돌아오셨습니까. #id:1943
+- 응, 덕분에 지갑-- #id:1944
+butler: 으, 으흠! #id:1945
+emotion reina Serious 
+reina: ? 왜 그러시나요? 어딘가 곤란해 보이는데.. #id:1946
+butler: 그게, 다름이 아니고.. 코니알 님이.. #id:1947
+emotion mai Idle 
+mai: 뭐? 잘 안 들려. #id:1948
+butler: ..코니알 님이 알아채신 거 같습니다. #id:1949
+- 알아채다니? #id:194a
+butler: 저희가 티켓을 이용해 칸칸네비를 만들어 낸 일 말입니다.. #id:194b
+butler: 코니알 님께서 이 칸으로 시찰 올 예정이라고 하셨습니다. #id:194c
+emotion reina Suprised 
+reina: 코니알이 직접이요? #id:194d
+butler: 네, 확실하게 이상한 낌새를 느끼신 거겠지요. #id:194e
+butler: 그 당시엔 분위기에 휩쓸려 도와드렸지만.. 티켓을 사적으로 사용한 건 역시 옳지 않은 일이었습니다.. #id:194f
+emotion reina Serious 
+reina: 그런.. 죄송해요. 저희 때문에. #id:1950
+butler: 아닙니다, 칸칸네비를 만들어 낸 건 후회하지 않습니다만.. #id:1951
+butler: 당분간 상품 교환 외의 접촉은 피해야 할 거 같습니다. #id:1952
+emotion mai Flat 
+mai: 응, 괜히 더 수상하게 보이면 위험하겠지. #id:1953
+- 우리가 도울 게 있을까? #id:1954
+butler: 아뇨, 괜찮습니다. 여러분들은 신경쓰지 말아 주세요. 코니알 님과 제 문제이니까요. #id:1955
+butler: 다시 이전과 같은 도움을 드리긴 어렵겠지만, 티켓을 가져오시면 언제든 좋은 상품과 교환해 드리겠습니다. #id:1956
+- 그렇구나.. 그래도 고마웠어. #id:1957
+butler: 저야말로, 그럼 이만.. 코니알 님을 맞이할 준비를 하러 가보겠습니다. #id:1958
+emotion mai Smile 
+mai: 이따 봐, 티켓 잔뜩 챙겨 갈게! #id:1959
+reina: 다음에 봐요. 무슨 일 있으면 말해 주세요. #id:195a
+butler: 네, 감사합니다.. 그럼. #id:195b
+... #id:195c
+- 맞다! #id:195d
+butler: ? #id:195e
+- 창고의 물건들, 잘 봤어. #id:195f
+- 나중에 자세한 감상 들려 줄게. #id:1960
+butler: ... #id:1961
+butler: ..후후, ..기대하겠습니다. #id:1962
+leave butler
+do TransitionScreen.dialog_transition()
+update reina right [mirrored="true" move_time="0.5"]
+... #id:1963
+emotion mai Dislike  
+mai: 어쩌지? 이래서야 집사에게 더 부탁하기도 어렵게 됐잖아. #id:1964
+emotion reina Idle 
+reina: 일단 저희끼리 해결해보는 수밖에 없겠네요. #id:1965
+- 이 전차에 파주주가 갇힌 건 확실해졌어. #id:1966
+reina: 맞아요. 그리고 칸칸네비도 사용할 수 있게 되었으니 더 효율적으로 탐색할 수 있어요. #id:1967
+emotion mai Idle 
+mai: 종착점 이라고 했나? 창고 외에도 여러개 존재한다고 했지? #id:1968
+mai: 그 중 하나에 파주주가 갇혀 있는 걸까? 가능한 곳은 전부 들러 보자! #id:1969
+reina: 마침 집사 님이 종착점에 대한 정보를 교환해 주는 걸 봤어요. #id:196a
+- 이외에 다른 상품들도 교환 할겸. #id:196b
+- 티켓에 여유가 있으면 들러 보자. #id:196c
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_add_read_history("chapter4_butler4")
+[end_timeline]

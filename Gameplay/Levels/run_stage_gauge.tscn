@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5ifdpfn4tlsf"]
+
+[ext_resource type="Script" uid="uid://di7wgjnho4g8r" path="res://Gameplay/Levels/run_stage_gauge.gd" id="1_wa2cf"]
+[ext_resource type="Texture2D" uid="uid://b41onydq67nkp" path="res://resources/ui/gui/runstage_gauge_back.png" id="2_wa2cf"]
+[ext_resource type="Texture2D" uid="uid://bbx42i2dfplbf" path="res://resources/ui/gui/runstage_gauge.png" id="3_mdyvq"]
+[ext_resource type="Texture2D" uid="uid://d0fyixdg5kr8i" path="res://resources/ui/gui/runstage_gauge2.png" id="4_801hp"]
+
+[node name="RunStageGauge" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_wa2cf")
+
+[node name="BaseProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 187.0
+offset_top = 304.0
+offset_right = 413.0
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+mouse_filter = 2
+step = 0.1
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("2_wa2cf")
+texture_progress = ExtResource("3_mdyvq")
+
+[node name="OverProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 187.0
+offset_top = 304.0
+offset_right = 413.0
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+mouse_filter = 2
+step = 0.1
+value = 40.0
+nine_patch_stretch = true
+texture_progress = ExtResource("4_801hp")

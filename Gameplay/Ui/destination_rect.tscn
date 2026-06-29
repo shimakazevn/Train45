@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7g5s4rnt7mtu"]
+
+[ext_resource type="Texture2D" uid="uid://8q14eoy68023" path="res://resources/ui/gui/KanKanNavi/destination_route_rect.png" id="1_e0cfy"]
+[ext_resource type="FontFile" uid="uid://b420coqgx7cq0" path="res://resources/font/TsunagiGothic.ttf" id="2_5plqy"]
+[ext_resource type="Script" uid="uid://bbt7sami7n1e2" path="res://Gameplay/Ui/destination_rect.gd" id="2_a80hb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a80hb"]
+font = ExtResource("2_5plqy")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_ide58"]
+line_spacing = 6.0
+font = ExtResource("2_5plqy")
+font_size = 60
+
+[node name="DestinationRect" type="TextureRect"]
+offset_right = 407.0
+offset_bottom = 363.0
+texture = ExtResource("1_e0cfy")
+script = ExtResource("2_a80hb")
+
+[node name="DestinationLable" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -281.0
+offset_top = 26.0
+offset_right = -45.0
+offset_bottom = 240.0
+grow_horizontal = 0
+text = "DEST_PERCENT"
+label_settings = SubResource("LabelSettings_a80hb")
+horizontal_alignment = 2
+autowrap_mode = 2
+
+[node name="DestinationTitle" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.5
+offset_top = -110.5
+offset_right = 138.5
+offset_bottom = 154.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "하얀 액체"
+label_settings = SubResource("LabelSettings_ide58")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

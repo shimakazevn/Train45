@@ -1,0 +1,9 @@
+if {npc.type} == {ch.pazuzu}:
+	join pazuzu center 
+	pazuzu: 이 뒤가 바로 기관실의 조종칸이에요.. 직접 가서 확인해 보세요.. #id:592
+elif {npc.type} == {ch.reina}:
+	join reina center 
+	reina: ..소름 끼치는 장소네요. 전차 칸의 끝을 보니까 오히려 어색해요. #id:593
+elif {npc.type} == {ch.mai}:
+	join mai center 
+	mai: 이 곳이 45번 전차의 제일 앞부분이구나. 역시 아무도 없어.. #id:594

@@ -1,0 +1,169 @@
+join mai leftmost 
+# jump sfx_test
+do GameEvents.emit_cutscene_play("e_roullete_cutscene1")
+emotion mai Surprised 
+update mai [extra_data="show Etc/Sweat"]
+mai: 해.. 해냈어! 셋 다 토끼로 맞췄어! #id:d8f
+- 한번에 맞춰 버리다니.. 대단해. #id:d90
+- 어떻게 한 거야? 난 아무리 해도.. #id:d91
+emotion mai Laugh 
+update mai [extra_data="hide Etc/Sweat"]
+mai: 히히 그러게. 이런 쪽으로 운이 좋다니까? 나한테 맡기기 잘했지? #id:d92
+emotion mai Flat 
+label sfx_test
+mai: 그런데.. 토끼가 무슨 의미인 걸까? 다른 그림들은 티켓을 주던 거 같은데. #id:d93
+emotion mai Dislike 
+[sound path="res://sound/sfx/GataGoto.mp3" volume="10.0" bus="Sfx"]
+mai: 아무것도 나오지 않네.. (덜컹덜컹) 이봐! 상품 주지 않을래~? #id:d94
+- 망가트리면 안돼. #id:d95
+mai: 토끼 그림은 확률 무척 낮은 거 같으니까. 분명 엄청난 상품일 게 분명해. #id:d96
+[sound path="res://sound/sfx/GataGoto.mp3" volume="10.0" bus="Sfx"]
+mai: (덜컹덜컹) 기계 중간에 걸려 있는건가? 으읏.. #id:d97
+emotion mai Idle 
+mai: 어떤 상품일까? 분명 엄청 호화로운 걸 거야. 토끼니까 분명.. 키링? 인형? 으으.. 기대되잖아! #id:d98
+- 기대하는 것 치곤 소박하네.. #id:d99
+- 겨우 그 정도면 만족하는거야? #id:d9a
+mai: 응? 그럼 넌 뭐 원하는 거 있어? 뭐가 나올 거 같은데? #id:d9b
+- 으음.. 토끼라면 분명.. #id:d9c
+- 그거밖에 없겠지. #id:d9d
+emotion mai Flat 
+mai: 그거? #id:d9e
+[sound path="res://sound/sfx/GataGoto.mp3" volume="10.0" bus="Sfx"]
+(덜컥!) #id:d9f
+emotion mai Idle 
+mai: 앗, 나왔다! ..이게 뭐지? #id:da0
+emotion mai Flat 
+mai: ..흐으응. 이 조그마한 천조각은.. 뭔지 알겠어? #id:da1
+- 역시 나왔다! 토끼하면 이거지. #id:da2
+	- 바니 걸! #id:da3
+emotion mai Serious 
+mai: 에에? 바니.. 걸? 이게? #id:da4
+mai: 분명 코스프레 의상 같은 거지? 이런 작은게 몸에 맞을까? #id:da5
+emotion mai Smile 
+mai: 그래.. 재밌는 취향이네. 자 여기. #id:da6
+- ..? 나 주는 거야? #id:da7
+emotion mai Ecchi 
+mai: ..? 이 토끼 옷 입고 싶은 거 아니었어? #id:da8
+- 아니아니아니 #id:da9
+- 내 말은 마이가 이걸 입어줬으면.. #id:daa
+emotion mai Idle 
+mai: 응? 내가? 왜? #id:dab
+- 부탁이야! 바니 걸 마이를 꼭 보고 싶어. #id:dac
+- 일생일대의 부탁이야! #id:dad
+emotion mai Laugh 
+mai: 에에~ 미안하지만 난 이런 귀여운 건 안 어울리거든. 실망할 걸.. #id:dae
+- 분명 잘 어울릴 테니까! #id:daf
+emotion mai Dislike 
+mai: 으으.. 이전에도 비슷한 상황이 있었던 거 같은.. #id:db0
+mai: 아.. 알았어! 대신 절대 놀리면 안된다?! #id:db1
+mai: 정말.. 때쓰면 거절하기 어렵다니까. 잠시 기다려 봐. 갈아입고 올게. #id:db2
+leave mai
+emotion mai Laugh 
+update mai [extra_data="show Etc/Blur"]
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("RESET")
+do GameEvents.anim_change("scene21_5")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(1, 100)
+[wait time="3.0" hide_text="true" skippable="false" ]
+mai: 뿅뿅~ ..어때..? #id:db3
+- 토.. 토끼다! #id:db4
+- 이게 말로만 듣던 바니 걸..! #id:db5
+mai: 네 취향은 알다가도 모르겠다니까. 이게 정말 맘에 들어? #id:db6
+- 살면서 본 토끼중에 최고야.. #id:db7
+- 젖이 넘쳐 흐를 거 같아서 위험해.. #id:db8
+emotion mai Idle 
+mai: 흐.. 히히.. 그.. 그래? 꽤 좋은 반응이네. 정말, 정말 어울려? 이런 귀여운 옷도.. #id:db9
+- 세상 제일로 귀여워.. #id:dba
+- 엉덩이도 그대로 보여서 참을 수 없어.. #id:dbb
+mai: 헤헤.. 그래? 이러면? 뿅 뿅~ 뒤에 꼬리도 보여? 귀엽지? #id:dbc
+emotion mai Ecchi 
+mai: 저기, 더 말해줘, 귀엽다거나 칭찬 잔뜩 해줘. #id:dbd
+mai: 이렇게~ 자세히 보고 감상을 말해 달라고, 어서~ #id:dbe
+(한동안 들뜬 마이의 칭찬을 끊임없이 이어나갔다.) #id:dbf
+emotion mai Laugh 
+mai: 에헤헤.. 그렇구나, 나도 귀여운 거지? 헤헤.. #id:dc0
+- 입이 귀에 걸렸네 마이.. #id:dc1
+- 그렇게 좋아? #id:dc2
+emotion mai Smile 
+mai: 응! 당연하지. 귀엽단 이야기를 싫어하는 여자가 있을까? #id:dc3
+mai: 나는 특히 들어본 적 없으니까.. 키도 가슴도 크니까 귀여운 거하곤 거리가 멀지. #id:dc4
+mai: 그래도 이렇게 잔뜩 들으니까 뭔가 부끄러우면서도 기분 좋아지는거 있지? #id:dc5
+- 그럼 더더욱 잔뜩 해줄게. #id:dc6
+emotion mai Surprised 
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="1.0"]
+mai: 으힛?! 귀.. 귀에 속삭이지 마! 아하하! 간지러워! 이미 치사량이라고. 더 이상은 위험해! #id:dc7
+emotion mai Idle 
+mai: 아하하.. 정말.. 간지럽히면 안된다고. 이 복장, 꽤나 아슬아슬하니까.. #id:dc8
+mai: 조금이라도 잘못 움직이면.. #id:dc9
+(지이익!) #id:dca
+join mai center 
+emotion mai Surprised 
+update mai [extra_data="show Etc/Sweat, hide Etc/Blur"]
+mai: ..앗.. 아아아! #id:dcb
+mai: 스.. 스타킹이.. #id:dcc
+- 움직이다가 어딘가에 걸린 거 같네.. #id:dcd
+emotion mai Serious 
+mai: 이럴수가.. 보기 흉하게 돼 버렸어.. 다시 꿰멜 수도 없고.. #id:dce
+emotion mai Flat 
+mai: 히잉.. 이게 뭐야. 이래서는.. #id:dcf
+- 마이.. 괜찮아? #id:dd0
+mai: 으.. 으응. 그치만.. 잔뜩 귀엽다고 해 줬는데. #id:dd1
+mai: 미안해. 조심하지 않는 바람에.. 바니 걸, 더 잔뜩 보고 싶었을 텐데.. #id:dd2
+- 나 말이야? #id:dd3
+- 나는 전혀 상관 없어. 오히려 이건.. #id:dd4
+mai: 위로해 줄 필요 없어.. 나는.. #id:dd5
+(꾸욱) #id:dd6
+emotion mai Dislike 
+mai: 응? 뭔가 딱딱한 게.. 이거.. #id:dd7
+mai: ..발기한 거야? 어째서? #id:dd8
+- 그게, 코스프레의 꽃은 역시.. #id:dd9
+mai: 에..? 이렇게 찢어져 버린 옷이.. 더 좋아? #id:dda
+emotion mai Serious 
+mai: 어째서? 스타킹 사이로 살이 잔뜩 튀어나와 버려서는.. #id:ddb
+mai: 힘들게 가린 부위가 삐져 나오는 게? 그런 게 좋은 거야? #id:ddc
+- 으읏.. 더.. 더이상은.. #id:ddd
+mai: 두번 다시는 의상을 쓸 수 없을 텐데.. 그래도.. #id:dde
+emotion mai Flat 
+mai: 모두 벗은 것보다 이런 금방이라도 벗겨질 듯한.. #id:ddf
+emotion mai Idle 
+mai: 보지와 가슴만 겨우 가린.. 이런 칠칠맞은 의상이 더 꼴린다는 얘기지? #id:de0
+- ... #id:de1
+	- 더 이상은 안되겠어! #id:de2
+emotion mai Surprised 
+update mai [extra_data="show Etc/Blur"]
+mai: 응? 꺄악! #id:de3
+leave mai
+(찌이익) #id:de4
+mai: 자.. 잠깐, 다 찢어져 버려.. 읏! #id:de5
+mai: 지.. 진정하고, 알았으니까! #id:de6
+do GameEvents.anim_change("scene21_1")
+[clear time="2.0" text="false" portraits="false" music="false" positions="false" style="false"]
+mai: 정말.. 결국 이렇게 되네. 못 말린다니까.. 하읏. #id:de7
+mai: 결국 원한 건 이거지? 헤헤.. 못 말리는 성욕이라니까.. #id:de8
+mai: 뭐.. 나도 마찬가지지만. 이 바니 복장을 입을 때부터 가슴 안쪽이 꾸욱, 하고 두근거리는 거 있지. #id:de9
+mai: 가슴이고 엉덩이도 잔뜩 조여 와서.. 조금만 움직여도 보지가 문질러지는 바람에.. #id:dea
+mai: 이미 잔뜩 젖어버렸지만.. 있잖아, 여기 이 부분을 젖히면 어떨지 궁금하지 않아? #id:deb
+mai: 애액으로 질척질척해진.. 언제라도 자지를 받아들일 수 있게 준비된 보지.. 어서 보고 싶지? #id:dec
+mai: 실은 이 안에 아무것도 입지 않았거든. 이 부분을 젖히면.. 봐봐. 생 보지가 바로 드러나 버려.. #id:ded
+mai: 얇은 스타킹 한장이 가로막고 있지만.. 이 정도는 문제도 아니지? #id:dee
+mai: 무척 얇아서.. 살짝만 힘을 줘도.. 찌이익. 찢어져 버릴 테니까. ..한번 해 볼래? #id:def
+mai: 포장을 뜯는 것처럼.. 스타킹을 찢은 후엔.. 원하는 대로 마음껏 맛봐도 되니까. #id:df0
+(매끈한 커피색 스타킹을 힘을 주고 찢는다. 마이의 말대로.. 애액으로 범벅된 보지가 수줍은 듯 모습을 드러낸다.) #id:df1
+mai: 아앙~ 보여지고 말았어.. 이대로 박을 생각이지? 헤헤.. 그래. 마음껏 맛봐 줘. #id:df2
+mai: 귀여운 토끼의 뜨거운 애액 투성이 보지에.. 얼마든지 자지 박아 줘.. 하아.. #id:df3
+do GameEvents.anim_change("scene21_2")
+mai: 아흣! ..하아.. 읏.. #id:df4
+mai: 헤헤.. 리듬감있게 박아대니까.. 정말 토끼가 된 거 같아. 하아.. #id:df5
+mai: 아앗.. 거기.. 뜨거운 자지 단숨에 들어와버려.. #id:df6
+mai: 아흣.. 앙! 아앙! 더 세게 쑤셔 줘! 내 약한 곳 잔뜩 찔러 줘.. 아앗..! #id:df7
+mai: 너만의 토끼니까.. 얼마든 거칠게.. 아흣.. ..자궁 끝까지 닿고 있어.. #id:df8
+mai: 응.. 원하는 대로.. 잔뜩 해버리자? #id:df9
+[signal arg="scene21"]
+mai: 정말.. 귀여운 옷이 정액 범벅이 돼 버렸잖아.. 하아.. #id:dfa
+mai: 어땠어? 코스프레 섹스.. 만족할만한 당첨 선물이 되었으려나? 헤헤. #id:dfb
+mai: 결국 엉망진창 찢어지는 바람에 더 입을 순 없겠지만.. 이제부턴 토끼가 아니더라도 말이야. #id:dfc
+mai: 귀여워 라던가. 잔뜩 말해줘야 한다? 알았지? #id:dfd
+do SteamManager.unlock(AchievementManager.ACH.DEST_BUNNY)
+do GameEvents.emit_game_complete()
+[end_timeline]

@@ -1,0 +1,198 @@
+do GameEvents.emit_cutscene_play("e_bottom_eye_cutscene_1")
+join reina leftmost
+reina: 저기. 혹시 아시겠나요? #id:81d
+reina: 누군가의 시선이 엄청나게 느껴져요. #id:81e
+reina: 틀림 없어요. 누군가 제 치마속을 집요하게 노려보고 있어요. #id:81f
+reina: 하지만 여긴 우리 둘 뿐인데.. #id:820
+- 응, 의자 밑에서 무언가 노려 보고 있어. #id:821
+reina: ..그렇군요. 이상 현상의 시선이었다니. #id:822
+reina: 이 의자 밑인가요? 확인해 보겠습니다. #id:823
+do GameEvents.emit_cutscene_play("e_bottom_eye_cutscene_2")
+reina: ... #id:824
+emotion reina Shy 
+reina: 이건가요? 뚫어져라 쳐다 보는데.. #id:825
+reina: 뭔가 기분 나빠요.. 좀 거리를 둘게요. #id:826
+do GameEvents.emit_cutscene_play("e_bottom_eye_cutscene_3")
+update reina right [mirrored="true" move_time="1.0" extra_data="set Face/Suprised"]
+reina: 어.. 어째서 따라 오는 거죠? #id:827
+update reina leftmost [mirrored="false" move_time="1.0"]
+do GameEvents.emit_cutscene_play("e_bottom_eye_cutscene_4")
+reina: 당신은 안중에 없고 저만 쫒아다니고 있어요. #id:828
+- 밑에서 올려다 본다는 건.. #id:829
+- 훔쳐 보려고 하는 거 같은데. 팬티라던가. #id:82a
+emotion reina Suprised 
+reina: 제, 제 팬티를요? 그런.. #id:82b
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("e_bottom_eye_cutscene_5")
+update reina leftmost [mirrored="true" move_time="1.0"]
+emotion reina Serious 
+reina: 이렇게 하면 못 보겠죠. #id:82c
+reina: 이 틈에 어서 감지하고 다음 칸으로 가시죠.. 기분이 이상해요. #id:82d
+do GameEvents.emit_cutscene_play("e_bottom_eye_cutscene_6")
+- 그치만.. 레이나가 숨어 버리니까. #id:82e
+- 저 녀석, 엄청나게 도망다니고 있어.. #id:82f
+reina: 그.. 그럼 어떻게 해야.. #id:830
+reina: ..... #id:831
+do GameEvents.emit_cutscene_play("e_bottom_eye_cutscene_7")
+emotion reina Idle 
+reina: ..알겠습니다. 다시 이렇게 서 있으면 되나요? #id:832
+reina: 아, 이젠 오히려 좋은 각도를 찾으려 이리저리 움직이고 있어요. #id:833
+reina: 코스플레이어 밑에서 사진찍는 사람 같아요.. #id:834
+reina: 그럼.. 확실하게 시선을 끌 방법이 필요하단 거군요. #id:835
+- 레이나의 치마 틈새를 보기 위해 움직이니까. #id:836
+- 오히려 반대의 방법을 써 보는 건? #id:837
+reina: 반대의 방법? 뭔지 모르겠지만.. 한번 설명 해 주시겠어요? #id:838
+레이나에게 다가가 내가 생각한, 의자 밑 이변의 움직임을 멈추기 위한 작전을 설명한다. #id:839
+emotion reina Suprised 
+reina: ...그, 그게 무슨. #id:83a
+- 어때, 완벽한 작전이지? #id:83b
+reina: 완벽하다니.. 정말 그게 통할까요? #id:83c
+reina: 으으.. 하지만 그 방법 외엔 딱히 다른 수가 없으니.. #id:83d
+reina: 이걸로 도움이 될 수 있다면.. 네. 한 번 해볼게요.. #id:83e
+[background arg="res://resources/nobel_bg/bg_black.jpg" fade="1.0"]
+레이나는 작은 한숨을 쉬며 전차의 중앙으로 향한다. #id:83f
+그대로, 두 팔을 바닥에 짚으며 머리를 바닥에 붙인 뒤 엎드린다. #id:840
+emotion reina Shy 
+update reina [extra_data="show Etc/Blur, show Etc/Sweat"]
+reina: 이렇게 하면 될까요..? #id:841
+- 음, 아직 어설픈 거 같아. #id:842
+- 엉덩이를 조금 더 들어주면.. #id:843
+reina: 엉덩이요? ..이렇게..? #id:844
+앞머리가 바닥에 닿을 정도로 허리를 숙이자, 레이나의 셔츠 속 거대한 가슴이 바닥에 눌려 양옆으로 퍼져 나간다. #id:845
+그 상태로 천천히, 고양이가 기지개를 켜듯 엉덩이를 치켜 올린다. #id:846
+짧은 치마가 순식간에 말려 올라가며 미처 가리지 못한 그녀의 팬티가 환하게 드러난다. #id:847
+leave reina
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("RESET")
+do GameEvents.anim_change("scene1_5")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(0, 100)
+[clear time="1.0" text="false" portraits="false" music="false" positions="false" style="false"]
+reina: 흐읏! ..이거 생각보다 훨씬 부끄러워요.. #id:848
+reina: 치마 안쪽까지 훤히 보이고 있어.. #id:849
+reina: 그치만.. 누군가 뚫어져라 보고 있는 게 느껴져요. 움직이는 소리도 줄어들었고.. #id:84a
+reina: 그러니.. 빨리 찾아서 끝내 주세요. 이 이상은 한계니까.. #id:84b
+폭력적인 엉덩이의 볼륨감과, 이어지는 가는 허리를 보고 있으니 나 역시 자지에 상당한 피가 쏠린다. #id:84c
+의자 밑의 저 눈알 녀석도 마찬가지겠지. 맘만 같아선 함께 이 풍경을 즐기고 싶지만.. #id:84d
+부끄러움을 무릅쓰고 팬티를 내보인 레이나를 위해서 눈알이 있는 의자 밑으로 향한다. #id:84e
+- 그럼 이제.. 앗! #id:84f
+reina: 무, 무슨 일이신가요? #id:850
+- 가까이 다가가니까 다시 도망쳐 버렸어. #id:851
+reina: 네? 그럴리가.. 그럼 어떻게 해야 하죠. #id:852
+실망한 와중에도 레이나는 성실하게 엉덩이를 치켜 들고 있다. #id:853
+눈 앞에 살랑살랑 흔들리는 거대한 엉덩이가 있는데, 이성적으로 더 좋은 해결 방안이 떠오를 리 없잖아.. #id:854
+이변을 찾아낸다는 목적 이전에, 단 한가지의 욕망이 머릿속을 가득 채운다. #id:855
+- ..한가지 더 좋은 방법이 있어. #id:856
+그렇게 말하며 나는 터질듯한 자지를 억누르며 그녀의 뒤에 무릎꿇는다. #id:857
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene1_6")
+reina: ?! #id:858
+reina: ..저 저기.. 뭔가요 이건. #id:859
+reina: 뭔가 뜨겁고 단단한 게 닿고 있는데.. #id:85a
+reina: 탐색을 위해서라지만.. 이.. 이건 좀 곤란하지 않을까요. #id:85b
+- 전보다 자극이 강한 걸 보여주면. #id:85c
+- 움직임을 완전히 멈출 수 있을 거야. #id:85d
+근거는 없다. 그저 지금은, 이 뽀얗고 부드러운 살결을 마구 주무르고, 자지에 비비고 싶다는 마음에, 되는 대로 내뱉은 말일 뿐이다. #id:85e
+나는 레이나의 가는 허리를 잡아, 보지를 가리고 있는 얇고 부드러운 한 겹의 팬티 위에, 내 자지 기둥을 비빈다. #id:85f
+reina: 아읏?! 화..확실히 엄청 자극적이긴 해도.. #id:860
+reina: 그렇게 거칠게 문질러 대면..앗.. 기분이 이상해져요.. #id:861
+reina: 조금만 천천히.. 꺄앗..! #id:862
+그렇게 삽입을 안했을 뿐인 후배위 자세는 한동안 이어진다. #id:863
+이변의 존재 따윈 어떻든 상관 없이. 그저 쿠퍼액으로 질척거리는 피부와 옷감이 문질러 지는 소리만이 전철을 채운다. #id:864
+당황하며 어색해 하던 레이나도 결국은 나에게 몸을 맡긴 채 조용히 붉어진 얼굴을 숨기고만 있을 뿐이다. #id:865
+do TransitionScreen.dialog_transition()
+reina: ..하아.. 으응.. #id:866
+한참 후, 전차가 덜컹이는 소리에 정신을 차린다. 시간이 지나는 것도 모른 채 열중하고 있었어.. #id:867
+눈을 가득 채우는 엉덩이에서 시선을 돌려 주변을 돌아본다. #id:868
+레이나는 이미 힘이 전부 빠졌는지 얕은 숨을 헐떡이며 엉덩이만을 들이민 채 늘어져있다. #id:869
+- 레.. 레이나. 괜찮아? #id:86a
+- 미안, 너무 열중해서. #id:86b
+reina: 으응.. 네.. 계속 문질러지니까 저도 모르게 온몸에 힘이 풀려서.. #id:86c
+reina: ..그런데.. 의자 밑의 그 눈은..? #id:86d
+깜박 잊고 있었다. 나는 황급히 눈이 있던 장소를 바라 본다. #id:86e
+- 앗, 저 녀석 이제는 미동도 없어. #id:86f
+reina: 정말인가요? ..아. 다행이에요.. #id:870
+reina: 그럼.. 이제는 모두 끝난 건가요? #id:871
+- 응, 수고했어. 무리하게 해서 미안. #id:872
+reina: 아니요, 그게.. 신경쓰지 마세요.. #id:873
+뚫어지게 보다 못해 이미 움직임을 완전 멈춰버린 눈알은 우리가 하는 대화에도 더 이상 아무런 반응을 하지 않는다. #id:874
+이젠 확실하게 감지할 수 있겠어. 이변이지만 레이나의 보지에 마음껏 비빌 수 있게 해준 녀석에게 마음속으로 감사 인사를 전한다. #id:875
+천천히 자리에서 일어나 눈알이 있는 곳으로 향하려던 때.. #id:876
+줄곧 같은 자세로 엎드려 고개를 숙이고 있던 레이나가, 주저하듯 말을 꺼낸다. #id:877
+reina: .. 정말 확실한 거.. 맞는 거죠? #id:878
+- ..? #id:879
+- 무슨 뜻이야? #id:87a
+reina: ...그게, 혹시라도 자극이 강하지 않아서.. #id:87b
+reina: 저 이변이 다시 도망가 버리면.. 곤란하니까요. #id:87c
+reina: 그러니까.. 기왕이면.. #id:87d
+reina: 확실하게, 움직임을 멈출 수 있을 정도의.. #id:87e
+reina: 지금보다 더한.. 그런 자극을.. 주면 좋을 거 같아서.. #id:87f
+마지막 말을 하며 레이나는 천천히 고개를 돌린다. #id:880
+이미 새빨갛게 상기한 볼과, 얇고 가늘게 늘어진 침이 옷소매에 늘어진다. #id:881
+땀으로 인해 얼굴에 붙은 몇가닥의 머리카락은 개의치 않는다는 듯, 촉촉해진 눈망울로 나를 애타게 바라보고 있다. #id:882
+찌거억.. 묘한 감각에 나는 시선을 내린다. #id:883
+레이나의 팬티에서 이어진 가는 실이, 내 바지 앞까지 이어져 천천히 흘러 내린다. #id:884
+그녀의 팬티는 이미 잔뜩 얼룩져 조금만 움직여도 끈적한 액체가 뚝뚝 떨어지고 있었다. #id:885
+그때 깨닫는다. #id:886
+이 전차에 오르고부터, 이변의 탐색을 진행하면서.. #id:887
+점점 변해가는 것은 나뿐만이 아니었다는 걸. #id:888
+reina: 당신의.. 자지가 닿을 때부터 엄청나게 흘러 나오고 있었어요.. #id:889
+reina: 이건.. 여성으로써, 받아들일 준비를 했다는 뜻..인가요? 당신의.. #id:88a
+reina: 계속해서 입구를 비비는 단단한 게.. 미칠듯이 궁금했어요.. #id:88b
+reina: 만약.. 여기서 끝나 버리면, 저 엄청 후회할 거 같아서.. #id:88c
+reina: 그러니까.. 조금만 더.. 부탁드려도.. 괜찮을까요? #id:88d
+그 말을 끝으로 심장이 미친듯 쿵쾅거리기 시작한다. 직접적으로 말하지 않았지만, 지금보다 더 라면. #id:88e
+아까 전처럼 자리를 잡고, 터질듯한 바지를 단숨에 내리자, 잔뜩 커져 있는 자지가 턱 하고 그녀의 엉덩이를 때린다. #id:88f
+동시에 레이나의 어깨가 움찔거렸지만, 이내 모든 것을 맡긴 듯 표정을 가리려 얼굴을 바닥에 숨긴다. #id:890
+흠뻑 젖어버린 팬티를 벗겨내고 연분홍 빛의 대음순이 훤히 보일 때까지도, 그녀는 미동도 않고 애액을 흘리며 나를 받아들일 준비를 한다. #id:891
+do GameEvents.anim_change("scene1_1")
+reina: 저.. 처음이니까.. #id:892
+그 말에 더욱 단단해진 자지를 잡고, 천천히. 질 입구에 귀두를 붙인다. #id:893
+찌거억.. 찌직.. #id:894
+reina: 꺄앗..! #id:895
+그녀의 좁디 좁은 틈새를 파고 들어가자, 작지만 고통스러운 신음을 흘린다. #id:896
+reina: 으응..! 하아.. #id:897
+reina: 아프지만.. 괜찮아요.. #id:898
+reina: 기분 좋으실 만큼.. 움직여 주셔도 돼요.. #id:899
+[signal arg="scene1"]
+reina: 으읏..! 하아.. 하아.. #id:89a
+reina: 하아.. 죄.. 죄송해요. #id:89b
+reina: 너무.. 기분 좋아서.. 도저히.. 움직일 수 없어요. #id:89c
+reina: 그러니 잠시 이대로.. 진정될 때까지.. 있어 주세요.. #id:89d
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+join reina center
+잠시 후.. #id:89e
+emotion reina Shy 
+update reina [extra_data="show Etc/Blur"]
+reina: 하아...이제 좀 움직일 수 있겠어요.. #id:89f
+reina: 엄청나게 격렬했는데.. 당신은 괜찮으신가요? #id:8a0
+- 솔직히 기분이 너무 좋아서.. #id:8a1
+- 다리에 힘이 안 들어가. #id:8a2
+emotion reina Smile 
+reina: 아.. 그건.. 네, 다행이네요. 기분 좋으셨다니.. #id:8a3
+reina: ....저도 무척 좋았으니까요. #id:8a4
+emotion reina Idle 
+reina: ..흠흠, 그러고 보니 그 눈알은.. #id:8a5
+reina: 아, 저쪽 구석에 있네요. 이젠 미동도 없어요. #id:8a6
+reina: ..원래 이렇게 눈이 빨갛던가요? 충혈된 거 같아요.. #id:8a7
+reina: 분명 저희가 섹.. 하는 걸 보고 이렇게 된 거였죠? #id:8a8
+reina: 전차 안에서 가능한 가장 자극적인 행위니까.. 결과적으로 좋은 작전이었네요. #id:8a9
+emotion reina Serious 
+reina: 하지만.. 아직 의문이 들어요.. #id:8aa
+- 어떤 게? #id:8ab
+reina: 저 스스로에 대해서.. 아무리 작전이었다지만.. 섹스.. 하게 될 줄은. #id:8ac
+reina: ..아! 물론 후회하진 않아요. 당신이라면 얼마든지.. #id:8ad
+reina: 그치만.. 당신이, 저를 음란한 여자라고 볼까봐.. #id:8ae
+- 그럴 리가 없지. #id:8af
+- 나는 음란한 레이나도 좋아해. #id:8b0
+emotion reina Suprised 
+..그것과는 별개로, 이 전차엔 확실히 이상한 부분이 많다. #id:8b1
+이변을 발견해 나갈 때마다 이성이 날아가고.. 다른 무언가로 채워지는 느낌. #id:8b2
+reina: 아.. 어, 어서 끝내고 다음으로 가도록 하죠. 시간을 오래 끌었네요. #id:8b3
+emotion reina Smile 
+reina: 그리고.. 앞으로도 잘 부탁 드려요. #id:8b4
+reina: 계속해서 쭉.. 함께 할 수 있으면 좋겠어요. #id:8b5
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+do GameEvents.emit_npc_level_up(0)

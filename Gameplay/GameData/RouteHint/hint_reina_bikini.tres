@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://k48jyui5nkt"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_h0ucn"]
+[ext_resource type="Texture2D" uid="uid://bka2wx0dfd20m" path="res://resources/ui/icons/icons_large1.png" id="2_h0ucn"]
+
+[resource]
+script = ExtResource("1_h0ucn")
+id = "reina_bikini"
+title = "DESTINATION_HINT_REINABIKINI_TITLE"
+texture = ExtResource("2_h0ucn")
+description = "DESTINATION_HINT_REINABIKINI_INFO"
+partner_type = 0
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://y0sxf2v2lyl5"]
+
+[ext_resource type="Texture2D" uid="uid://c8hmky0semkki" path="res://resources/ui/EventCoverImage/Hpreview_pazuzu_0.png" id="1_jgv1j"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_np2st"]
+
+[resource]
+script = ExtResource("1_np2st")
+scene_description = "SCENE_TENTACLES"
+scene_name = "scene1"
+dialog_title = "chapter3_talk2"
+partner = 3
+preview_texture = ExtResource("1_jgv1j")
+is_position = Vector2(1303, 151)
+unlock_chapter = 5
+ahen_keys = PackedStringArray("SCENE_PAZUZU_AHEN_1", "SCENE_PAZUZU_AHEN_2", "SCENE_PAZUZU_AHEN_3", "SCENE_PAZUZU_AHEN_4", "SCENE_PAZUZU_AHEN_5")

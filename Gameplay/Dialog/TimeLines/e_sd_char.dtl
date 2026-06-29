@@ -1,0 +1,143 @@
+join mai leftmost 
+do GameEvents.emit_cutscene_play("e_sd_char_cut1")
+emotion mai Dislike 
+mai: 응, 이건 분명 이상하지? #id:dfe
+mai: 이건 나도 한 눈에 달라졌단 걸 알았다니까. #id:dff
+- 정말이야? #id:e00
+mai: 뭐야. 못 믿겠다는 표정. #id:e01
+emotion mai Flat 
+mai: 여기 '레이'하고 '코쿄'의 복장이 바뀌었잖아. #id:e02
+mai: 분명 원래는 2기 최종결전의 복장이었는데. #id:e03
+mai: 이건 누가 봐도 라노벨판의 복장인걸. #id:e04
+- 그것까진 몰랐어. #id:e05
+- 이질감이 들어서 감지한 거 뿐이라.. #id:e06
+emotion mai Serious 
+mai: 뭐어? 정말이야? #id:e07
+mai: 요즘 대 인기작인 '샤이닝 라비린스' 몰라? #id:e08
+- 처음 들어봐. #id:e09
+- (별로 재미 없어 보이는 제목..) #id:e0a
+emotion mai Surprised 
+mai: 이번 분기 다크호스라고! #id:e0b
+emotion mai Smile 
+mai: ..라고 친구가 추천해줬어. 나도 제목이 귀여워서 보기 시작했는데. #id:e0c
+mai: 생각보다 무지 재밌는거 있지 이거! 특히 쌍검 히로인이 무척 귀엽다니까. #id:e0d
+emotion mai Idle 
+mai: 여기 이쪽이 레이짱, 저쪽이 코쿄 짱이야. 둘은 남자 주인공이 사용하는 검의 정령이라는 설정이지. #id:e0e
+mai: 코쿄의 검신이 레이보다 4센치 작은데, 그게 컴플렉스라 언급하면 검집에서 안 뽑혀. 귀엽지? #id:e0f
+mai: 레이는 튕겨내기만 전담하는 검이야. 몸에 피가 묻는걸 무서워해서 그렇데. 하하하! #id:e10
+mai: 특히 3기 오프닝이.. #id:e11
+마이는 한동안 애니 얘기에 열중한다. 본인의 취미에 열중한 모습이 귀여워 한동안 수다를 들어준다. #id:e12
+do TransitionScreen.dialog_transition()
+emotion mai Laugh 
+mai: ..그래서 이게 이번 극장판 홍보를 위해 붙은 지하철 광고라는 거야! #id:e13
+mai: 이제 이 작품이 얼마나 갓 작품인지 알겠지? #id:e14
+- 이런 걸 좋아하는지 몰랐어. #id:e15
+emotion mai Idle 
+mai: 라노벨이나 애니 말이야? 사실 입문한 지는 얼마 안됐는데.. #id:e16
+mai: 전철에서 폰으로 틈틈히 보기엔 라노벨만한 게 없거든. 다 읽고 나니 애니 버젼도 궁금해졌고. #id:e17
+mai: 그렇게 한 두편씩 보다 보니 요즘 작품들은 전부 챙겨보는 수준이 됐달까? #id:e18
+mai: 사실 여기서 광고로 봤을 때부터 반가웠는데, 티 안내려고 노력한 거야. #id:e19
+mai: 좋아하는 걸 설명할때 말이 무척 많아지거든. 지금처럼.. #id:e1a
+mai: 그때마다 난처해 할 때도 있으니까.. 혹시 너는 관심 없는 주제였으려나? #id:e1b
+- 이제부터 알아가면 되지. #id:e1c
+- 마이와 처음 만났던 것처럼. #id:e1d
+emotion mai Smile 
+mai: 다행이다! 히히.. #id:e1e
+mai: 특히 너랑 있을땐 말수가 더 많아 지는거 같아. 요즘은 같이 탐색하는 게 기대된다니까. #id:e1f
+mai: 그치만 항상 내 관심사들만 들어 주니까. 혹시 너는 좋아하는 거 있어? #id:e20
+- 관심사라.. 그러고 보니 딱히. #id:e21
+emotion mai Dislike 
+mai: ..따로 없다고? 휴일에는 보통 하는 거 없어? #id:e22
+- 보통 누워 있는데. #id:e23
+emotion mai Smile 
+mai: ..하하하! 뭐야 그게. 따로 취미는 없는 거야? 너무 삭막하잖아. #id:e24
+- 그럼 추천해 줄래? #id:e25
+- 마이가 하는 거면 뭐든 좋으니까. #id:e26
+emotion mai Idle 
+mai: 아 그렇구나! 서로 취미를 공유하면 얘깃거리도 많아 지겠네. 어쩌면 훨씬 친해질 수도. #id:e27
+emotion mai Flat 
+mai: 으음.. 뭐가 있을까. 라노벨, 애니는 이야기 했으니까. #id:e28
+mai: 서로가 관심 있을 만한 주제라.. 그래! #id:e29
+emotion mai Idle 
+mai: ..너, 야한 거 엄청 좋아하잖아? #id:e2a
+- ..야한 거? #id:e2b
+mai: 전에도 펠라라던가 야한거 해 줄 때 무척 기분 좋은 표정이라. #id:e2c
+mai: 사실 나도.. 무척 관심 있거든. h애니도 보고, 자위도 가끔.. #id:e2d
+emotion mai Flat 
+update mai [extra_data="show Etc/Blur"]
+mai: 특히 최근에 너와 함께 지내면서.. 더욱 더 관심이 커졌어. #id:e2e
+mai: 서로 취미를 같이 개발해 나가면 훨씬 좋지 않을까 하는데 어때? 너랑 나랑만 할 수 있는.. 야한 취미. #id:e2f
+- 부탁합니다! #id:e30
+- 사양하지 않을게! #id:e31
+emotion mai Laugh 
+update mai [extra_data="hide Etc/Blur"]
+mai: 정말? 와아, 기뻐! 이걸로 더 가까워 질 수 있어. #id:e32
+- 근데, 야한 취미라면.. #id:e33
+- 어떻게 시작하면 되는 거야? #id:e34
+emotion mai Dislike 
+mai: 그, 그건.. 생각 안 해봤는데. #id:e35
+mai: 지금까지의 야한 짓들은 자연스러운 흐름으로 해 왔으니까.. 오히려 신경쓰기 시작하면 부자연스러운 건가..? #id:e36
+mai: 처음엔 브래지어 때문에.. 다음은 핸드폰..이었던가? 으음.. 갑자기 머리가 복잡해지고 있어. #id:e37
+mai: 으음..아아.. #id:e38
+mai: ..아아아! 몰라! #id:e39
+do GameEvents.emit_cutscene_play("e_sd_char_cut2")
+그렇게 외치며 마이는 내 품 안으로 뛰어든다. 내 가슴에 고개를 파묻자 그녀의 가늘고 긴 금발이 팔에 스친다. #id:e3a
+update mai [extra_data="show Etc/Blur"]
+mai: ..그때 생각을 하니까 뭔가 이상해. 그때는 아무렇지도 않았는데. #id:e3b
+mai: 지금은.. 떠올린 것만으로 가슴이 뛰고 있어.. #id:e3c
+mai: 그러니 복잡한 건 생각 말고 하고 싶은 만큼 해버리면, 다음에 할 것도 자연스럽게 떠오르지 않을까? #id:e3d
+emotion mai Ecchi 
+mai: 헤헤, 자지 쪽에서는 이미 준비 완료인 거 같으니까. 어때? #id:e3e
+leave mai
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("e_sd_char_reset")
+do GameEvents.anim_change("scene2_2")
+do GameEvents.game_state_change(1)
+mai: 하아, 응, 어때? 여전히 좋지? #id:e3f
+mai: 그때보다 가슴 만지는 거 능숙해.. 더 잘 느끼게 됐어. #id:e40
+mai: 전에는 조심스러웠는데.. 이제는 내 약한 곳만 노려서.. 하읏! #id:e41
+mai: 엉덩이도.. 좀 더 팡 팡 쳐 줘.. 강하게.. #id:e42
+mai: 보지에 문질러져서.. 너무 기분 좋아..앗! #id:e43
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene1_2")
+mai: 움.. 우웁.. 쥬릅.. #id:e44
+mai: 이쪽이 약하지? 츄웁.. 하아.. #id:e45
+mai: 츄릅.. 츄.. 읏.. 지금까지 몇번이고 이 입으로 빼 왔으니까.. #id:e46
+mai: 어디를 자극해야 하는지 완벽하게 알고 있어.. 츄.. #id:e47
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene6_2")
+mai: 하아.. 헤헤.. 읏, 읏.. #id:e48
+mai: 가슴 사이에서.. 귀두가 왔다갔다 하고 있어.. #id:e49
+mai: 쿠퍼액으로 끈적해져서.. 야한 소리 나는 것도 좋아.. #id:e4a
+mai: 냄새도 사라지지 않을 정도로 비벼 줘. #id:e4b
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene101_1")
+mai: 하아.. 하아.. 너무 좋아. 땀범벅이 됐는데도 계속 하고 싶어. #id:e4c
+mai: 봐봐, 내 말이 맞지? 어떻게든 하다 보니까 이런 흐름으로. 네 자지 위에 올라와 있잖아. #id:e4d
+mai: 이거 보여..? 애액이 내 허벅지를 타고 바닥에 뚝뚝 떨어질 정도로 젖어 있어.. #id:e4e
+mai: 당장이라도.. 네 걸 넣고 싶어서 참을 수 없어.. #id:e4f
+mai: 너도 그렇지? 여전히 단단해져 있잖아. 몇번을 사정해도 이렇게 커져서는.. #id:e50
+mai: 내 축축한 보지에.. 크고 단단한 자지 박아대고 싶은 거지? #id:e51
+mai: 네 위에 올라타서 앙 앙 소리 지르는 거.. 듣고 싶은 거지? #id:e52
+mai: 그럼.. 이 참에 확실하게 새겨 두자.. #id:e53
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene101_1")
+mai: 저기.. 난 벌써부터 가버릴 거 같아.. #id:e54
+mai: 보지에 살짝씩 스치는 귀두 느낌이 좋아서.. 읏. #id:e55
+mai: 네 자지도 이미 내 흐르는 애액으로 범벅이 됐어.. #id:e56
+mai: 더 이상 참기 힘드니까.. 너..넣어 볼게. #id:e57
+mai: 질을 비집고 들어오는 느낌이랑.. 나의 체온, 조임까지 기억에 잘 새겨 둬.. #id:e58
+[signal arg="scene101"]
+mai: 으읏..으.. 하아.. #id:e59
+mai: 자지.. 너무 좋아..으응.. #id:e5a
+mai: 중간부터는.. 기억이 잘 안나는데.. #id:e5b
+mai: 무척 좋았다는 것밖엔..하..아아.. #id:e5c
+mai: 너는 어때?.. 보지의 느낌 잘 기억했어? #id:e5d
+- 너무 좋아서 의식이 날아갔어.. #id:e5e
+mai: 으응.. 뭐야 그게.. 나 처음이었단 말이야. 제대로 기억했어야지. #id:e5f
+mai: ..이러면 한번으로는 부족하겠네. #id:e60
+mai: 앞으로 잔뜩 잔뜩 기분 좋아지는 섹스 해서.. #id:e61
+mai: 서로 잊혀지지 않게, 온 몸이 확실하게 기억하도록 노력해보자? #id:e62
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+do GameEvents.emit_npc_level_up(1)

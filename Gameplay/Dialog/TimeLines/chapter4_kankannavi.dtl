@@ -1,0 +1,54 @@
+# #튜토리얼 
+[style name="TextBubbleStyle"]
+[signal arg="tuto_navifull"]
+do GameEvents.emit_add_route_hint("storage")
+butler: 이것이 '칸칸내비' 의 화면입니다. #id:3f8
+butler: 여러분이 모아 온 칸의 정보들을 배열하여 정리한 것입니다. 칸을 눌러 각 이변의 정보를 확인할 수 있습니다. #id:3f9
+- 정말 편한 기능이네. #id:3fa
+butler: 그리고 지금까지는 무작위의 이변 칸으로 이동하며 탐색했지만.. #id:3fb
+[signal arg="tuto_routelist"]
+butler: 앞으로는 이중 원하는 칸을 눌러 노선도에 등록하면, 그 순서대로 다음 회차의 탐색에서 등장하게 됩니다. #id:3fc
+mai: 대박이네! 그럼 탐지가 쉬운 칸들만 골라서 등록하면 더 수월하잖아? #id:3fd
+butler: 네, 또한 여러분들의 진정한 목적인 분실물을 찾는 칸으로 가기 위한 방법을 설명하겠습니다. #id:3fe
+[signal arg="tuto_navifull"]
+butler: 45번 전차에는 여러 '종착점'이 존재합니다. 탐색의 끝에 코니알님이 여러분을 시작 지점으로 돌려 보낸 곳, 그곳은 '일반 종착점'입니다. #id:3ff
+reina: 그럼 또 다른 종착점이 있다는 건가요? #id:400
+butler: 네. 현실 속 전차의 수많은 노선도를 생각하면 이해가 되실 겁니다. #id:401
+butler: '노선'에 알맞은 전차 칸들을 등록하고 탐색을 진행하면. 그 끝에 특별한 종착점으로 도착하게 됩니다. #id:402
+butler: 제가 분실물을 숨겨 놓은 전차 칸도 그 종착점 중 하나입니다. #id:403
+reina: 그렇군요.. 그래서 탐색 중에는 발견할 수 없었던 거에요. #id:404
+butler: 이외에도 무수한 종착점이 있지만.. 일단은 제가 알려드리는 칸을 등록해 보십시오. #id:405
+[signal arg="tuto_highlight_route"]
+butler: 방금 활성화 된 칸들을 노선에 등록해 보시겠습니까? #id:406
+[signal arg="tuto_routelist"]
+[signal arg="tuto_naviinput"]
+[signal arg="tuto_destination"]
+mai: 마지막 칸에 무언가 생겼어! #id:407
+butler: 네. 그것이 숨겨진 종착점. '경로 확정' 버튼을 누르면 그 순서대로 이변을 발견하게 됩니다. #id:408
+[signal arg="tuto_routeset"]
+[signal arg="tuto_confirminput_show"]
+[signal arg="tuto_navifull"]
+reina: 이곳에.. 파주주의 지갑.. 그리고 집사 님의 컬렉션이 있다는 거군요. #id:409
+butler: ..네. 부끄럽지만. 마음껏 관람 해 주십시오. #id:40a
+mai: 그런데.. 아까 말한 다른 종착점들은 뭐야? #id:40b
+butler: 그건 직접 확인해 봐야 알 수 있습니다. 하지만 단순한 탐색 과정으로는 나타나지 않는 칸인 건 분명합니다. #id:40c
+butler: 저도 몇가지의 종착점 정보를 알고 있으니 티켓이 충분하다면 교환 샵에서 교환하시거나.. #id:40d
+butler: 탐색중에 힌트를 발견하실 수도 있으니 정보가 생긴다면 적극적으로 시도해 보십시오. #id:40e
+[signal arg="tuto_hint_panel"]
+butler: 획득한 힌트는 여기서 확인할 수 있습니다. #id:40f
+[signal arg="tuto_navifull"]
+butler: 마지막으로, 특별한 종착점이 없는 노선의 경우 일반 종착점으로 도착합니다. #id:410
+butler: 종착점 이후에는 무조건 시작 지점으로 돌아오게 됩니다. 더 나아갈 길이 없으니 말입니다. #id:411
+mai: 노선의 갯수를 얼마나 배치하냐에 따라 탐색 시간을 조절할 수 있겠네? #id:412
+butler: 네, 또한 노선 칸을 비워 둔 경우는 전과 같이 무작위의 전차 칸이 등장하게 됩니다. #id:413
+butler: 발견하지 못한 전차 칸을 찾으려면 이 방법을 쓰시면 됩니다. #id:414
+butler: ..설명은 여기까지입니다. 앞으로는 직접 사용하면서 익히면 될 겁니다. #id:415
+reina: 집사님은 정말 친절하세요. 감사합니다. #id:416
+butler: 별 말씀을.. 제 의무이니까요. 그럼 즐거운 여정 되시길 바랍니다. 저는 이만 돌아가 보겠습니다. #id:417
+butler: 돌아오시면.. 컬렉션의 감상을 부탁드리겠습니다.. #id:418
+- 알겠어. 약속할게! #id:419
+mai: 엄청난 도움이 될 거 같아. #id:41a
+reina: 맞아요. 종착점의 존재를 그동안 모르고 있었으니.. 그럼 이제 서두르도록 하죠. #id:41b
+[signal arg="tuto_exit"]
+do GameEvents.emit_add_read_history("chapter4_kankannavi")
+[end_timeline]

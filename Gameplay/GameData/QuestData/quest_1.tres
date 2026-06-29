@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="QuestData" load_steps=3 format=3 uid="uid://ckun3cbed1s0o"]
+
+[ext_resource type="Script" uid="uid://clvpdm1ps7wwf" path="res://Gameplay/GameData/QuestData/quest_npc.gd" id="1_lu5rt"]
+[ext_resource type="Script" uid="uid://c5pycwl0nmslk" path="res://Gameplay/GameData/QuestData/quest.gd" id="1_u0nvy"]
+
+[resource]
+script = ExtResource("1_u0nvy")
+id = "quest_1"
+description = "챕터 1 클리어시 조건 체크"
+npcs = Array[ExtResource("1_lu5rt")]([])
+total_love = 1
+ticket = -1
+route = -1
+collect_destinations = -1
+collect_items = -1
+complete_count = -1
+talk = "QUEST_GOAL_TEXT_1"

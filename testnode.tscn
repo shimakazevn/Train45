@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://djk3c2twfpsch"]
+
+[ext_resource type="PackedScene" uid="uid://c6hlho66gl0fa" path="res://Gameplay/Ui/tutorial_rect.tscn" id="1_vqmj4"]
+
+[node name="Node" type="Node"]
+process_mode = 3
+
+[node name="Button" type="Button" parent="."]
+z_index = -999
+offset_left = 37.0
+offset_top = 29.0
+offset_right = 304.0
+offset_bottom = 272.0
+
+[node name="TutorialRect" parent="." instance=ExtResource("1_vqmj4")]

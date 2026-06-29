@@ -1,0 +1,11 @@
+label reina #id:128
+if {npc.type} == {ch.reina}:
+	join reina 2
+	reina: 이 근처가 마이 양이 말한 장소인 거 같아요. #id:129
+	reina: 우리 말고도 누군가 있다는 걸까요? 확실하게 살펴 보죠. #id:12a
+label mai #id:12b
+elif {npc.type} == {ch.mai}:
+	join mai 2  
+	emotion mai Dislike 
+	mai: 내 감으로는 이 근처인 거 같은데.. #id:12c
+	mai: 분명 사람의 소리였어. 전차 바깥에서 났는데.. 어떻게 사람 목소리일 수 있지? #id:12d

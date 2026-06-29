@@ -1,0 +1,209 @@
+# jump sfx_test
+- [if {MetaProgression.has_read_event("t_mai")} 첫 만남(완료)/첫 만남] | [if {npc.love} >= {GameEvents.get_need_love("t_mai")}] [else="hide" alt_text="hide"] #id:1452
+	emotion mai Idle
+	mai: 이야~ 설마 다시 만날 줄 몰랐어. 이것도 엄청난 우연이지? #id:1453
+	mai: 전차도 그렇고 코니알이라는 역장도 그렇고 이상한 거 뿐이지만. 당분간 하차는 힘들 거 같아 보이네. #id:1454
+	emotion mai Laugh 
+	mai: 이렇게 된 이상 잘 부탁할게! 나 바보라 도움이 될 지는 모르겠지만 말이야. 하핫! #id:1455
+	- 적어도 덕분에 분위기가 처지진 않을 거 같아. #id:1456
+	mai: 헤헤, 그거라면 걱정 마. 텐션 올리는 법 잘 알고 있으니까. #id:1457
+	emotion mai Dislike 
+	mai: 그나저나, 너도 제법이던 걸. 보통 그 상황에서 건강해지기 힘들텐데 말이야. #id:1458
+	- 아, 아까 전의.. #id:1459
+	- 그건 코니알이 강제로.. #id:145a
+	emotion mai Idle 
+	mai: 하하핫! 그런 거 치곤 장난아니게 기분좋은 표정이었다고? #id:145b
+	emotion mai Dislike 
+	mai: 네 물건도.. 엄청나게 커져 있었던 걸. #id:145c
+	- ..전부 보고 있었어? #id:145d
+	emotion mai Smile 
+	mai: 헤헤, 미안 미안. 그야 눈길이 갈 수 밖에 없는 상황이었으니까. #id:145e
+	emotion mai Idle 
+	mai: 뭐야, 뭘 그렇게 부끄러워 하는건데? #id:145f
+	emotion mai Dislike 
+	mai: 실은 나도.. 그렇게 싫어하지 않아. 야한 거. 헤헷. #id:1460
+	mai: 어쩌면 너나 나나, 이 전차에 오른 게 좋은 선택이었을 수도 있지 않을까? #id:1461
+	emotion mai Idle 
+	mai: 그런고로 앞으로 잘 부탁할게? 약간은 기대하고 있으니까. #id:1462
+	if {MetaProgression.has_read_event("t_mai") == false}:
+		do GameEvents.emit_get_npc_exp({GameEvents.get_talk_add_exp("t_mai")}, 1)
+		do GameEvents.emit_add_read_history("t_mai")
+	[end_timeline]
+
+- [if {MetaProgression.has_read_event("t_mai_rest")} 휴식(완료)/휴식] | [if {npc.love} >= {GameEvents.get_need_love("t_mai_rest")}] [else="hide" alt_text="hide"] #id:1463
+	emotion mai Dislike 
+	mai: 휴~ 지쳤어! 진전은 있지만 아직 갈길이 먼거 같아. #id:1464
+	emotion mai Idle 
+	mai: 좀 쉬어둬야겠어. 너도 옆에 앉아. 종일 움직이느라 피곤했지? 이럴 땐 귀여운 강아지 영상을 보면서 힐링하는거야. #id:1465
+	mai: 내가 엄선한 플레이 리스트거든. 같이 보자! 화면이 작으니 더 붙어, 자 자! #id:1466
+	- 팔에 가슴이 엄청나게 눌리는데.. #id:1467
+	emotion mai Laugh 
+	mai: 잘 됐네! 쿠션삼아 편하게 기대도 좋아. #id:1468
+	mai: 특별히야! 친구들은 내 가슴 엄청 부러워 하거든. 쉬고 싶을때 서로 차지하려 한다고. #id:1469
+	emotion mai Idle 
+	mai: 자, 난 익숙하니까 가슴에 편하게 기대. 무척 푹신할 거야. 남자는 처음이지만.. #id:146a
+	(꾸욱) #id:146b
+	mai: 히히.. 어때, 편하지? 좋은 냄새도 나고. 잠에 들 거 같다고? 안 돼! 나랑 강아지 영상 보기로 했잖아. #id:146c
+	mai: 자, 편하게 기대서 영상에만 집중해. 세 시간은 되니까. 절대 잠들면 안된다? #id:146d
+	(그렇게 가슴에 머리를 기댄채 몇시간동안 강아지 영상을 시청했다.) #id:146e
+	(확실히 피로가 풀렸지만, 도저히 영상에 집중할 수 없었다.) #id:146f
+	if {MetaProgression.has_read_event("t_mai_rest") == false}:
+		do GameEvents.emit_get_npc_exp({GameEvents.get_talk_add_exp("t_mai_rest")}, 1)
+		do GameEvents.emit_add_read_history("t_mai_rest")
+	[end_timeline]
+
+- [if {MetaProgression.has_read_event("t_mai_camera")} 셀카(완료)/셀카] | [if {npc.love} >= {GameEvents.get_need_love("t_mai_camera")}] [else="hide" alt_text="hide"] #id:1470
+	emotion mai 
+	label sfx_test
+	mai: 있잖아, 이리 와 봐. #id:1471
+	mai: 응, 좀 더 가까이! 옆으로 붙어. #id:1472
+	mai: 좋아! 자 여기 봐~ #id:1473
+	emotion mai Laugh 
+	[sound path="res://sound/sfx/Camera-Phone.mp3" volume="2.0" bus="Sfx"]
+	(찰칵) #id:1474
+	mai: 헤헤~ 잘 받았습니다. #id:1475
+	emotion mai Idle 
+	mai: 어? 뭐긴, 지금까지 지내면서 여러 일이 있었잖아. 여기서 나가게 되면 모두 기억으로만 남는게 아쉽지 않아? #id:1476
+	mai: 난 바보라 금방 까먹거든, 그래서 이렇게 사진으로 남기는 걸 좋아해. 언제든 찍을 수 있게 폰 용량도 엄청 큰 걸로 샀어. 대단하지? #id:1477
+	mai: 사실 이전에 레이나하고도 같이 찍었어. 이거 봐. 레이나는 아무래도 사진 같은 거에 익숙하지 않은거 같아. #id:1478
+	emotion mai Smile 
+	mai: 표정이 돌처럼 굳은 채 꼼짝 않는 거 있지? 이건 동영상인데.. #id:1479
+	emotion mai Idle 
+	mai: 아! 이건 코니알하고 찍은 거. #id:147a
+	- 코니알하고? #id:147b
+	emotion mai Dislike 
+	mai: 아앗! 뭐야 엄청 놀라긴. 이게 그렇게 놀랄 일이야? 의외로 흔쾌히 찍어 주던걸? 스무 장은 넘게 찍었어. #id:147c
+	mai: 심지어 자기 얼굴을 몰래 뒤로 빼서 내 얼굴이 더 크게 나오게 찍었단 말이지? #id:147d
+	mai: 이건 눈을 감았다고 다시 찍은 거. 정말 이상한 사람이야. 흠흠, 어쨌든 이걸로 모든 사람들과 사진을 남겼어. 어때, 우리 좀 더 찍을까? #id:147e
+	emotion mai Idle 
+	mai: 이번엔 네 폰으로.. 아 맞다. 잊어버렸다고 했지? 그럼 번호 알려 줘. 이 사진 보내 줄게! #id:147f
+	(마이에게 폰 번호를 알려 준다.) #id:1480
+	mai: ..좋아. 전송.. 완료! 헤헤. 특별히 잘 나온 사진으로 보냈어. #id:1481
+	mai: 돌아가면 꼭 확인해 봐! 답장 하는 거 잊지 말고. 나도 특별히 배경으로.. 응? #id:1482
+	emotion mai Dislike 
+	(마이가 화면을 손가락으로 몇 번 문질러댄다) #id:1483
+	mai: 이거 뭐지? 사진 속 내 얼굴에..  입에 이건 먼지인가?..음.. 닦아도 안 지워지네. 사진 찍을때 내 입에 이런 게 묻었던가? #id:1484
+	emotion mai Surprised 
+	mai: 털..인거 같은데..아. ..아아아아아아앗!!! #id:1485
+	mai: 이 구불구불한 털.. 그거 맞지? 자..자지의.. 이걸 입에 붙힌 채로 찍은 거야? #id:1486
+	emotion mai Serious 
+	mai: 저.. 저기! 어서 폰.. 사라졌다고 했지.. 너.. 돌아가면 당장 지워야 해. 절대 확인하지 말고. #id:1487
+	mai: 알겠지? 아니면 폰 채로 변기에 빠트려. 내가 새로 사줄게. #id:1488
+	mai: 흐으으.. 내가 자지털을 입에 붙힌 채로 털 주인과 셀카를?.. 완전 치녀잖아! #id:1489
+	mai: ..! 설마 역장 녀석.. 아까 같이 사진 찍을 때도 모른척 하고 있던 거야? 내 얼굴이 더 크게 나오게 한 것도?.. 으으!.. #id:148a
+	emotion mai Surprised 
+	mai: 난 좀 따지고 올게. 그리고.. 분명 말했다? 폰 찾아내면 사진 반드시 지워! #id:148b
+	emotion mai Dislike 
+	mai: 이봐!! 코니알! #id:148c
+	(마이는 나를 뒤로 하고 코니알에게 달려간다.) #id:148d
+	emotion mai Idle 
+	if {MetaProgression.has_read_event("t_mai_camera") == false}:
+		do GameEvents.emit_get_npc_exp({GameEvents.get_talk_add_exp("t_mai_camera")}, 1)
+		do GameEvents.emit_add_read_history("t_mai_camera")
+	[end_timeline]
+
+- [if {MetaProgression.has_read_event("t_mai_cat")} 좋아하는 동물(완료)/좋아하는 동물] | [if {npc.love} >= {GameEvents.get_need_love("t_mai_cat")}] [else="hide" alt_text="hide"] #id:148e
+	emotion mai Dislike 
+	mai: 좋아하는 동물이 있냐고? 후후후, 질문이 잘못됐어. #id:148f
+	emotion mai Idle 
+	mai: 좋아하지 않는 동물이 있냐고 묻는 편이 빠를 거야. 나 그 정도로 모든 동물들을 좋아하거든. #id:1490
+	mai: 기린, 낙타, 하마, 코끼리라던가.. 응? 키우고 싶은 것중에는? #id:1491
+	emotion mai Dislike 
+	mai: 당연히 전부 키우고 싶지만.. 현실적으로 생각하면 고양이나 강아지려나? #id:1492
+	emotion mai Laugh 
+	mai: 그중에는 강아지가 더 좋아! 활발하고 산책도 자주 할 수 있고! #id:1493
+	mai: 지금까지 동물은 키워본 적 없어서 영상으로 만족할 뿐이지만.. 기회가 되면 기르고 싶어. #id:1494
+	emotion mai Idle 
+	mai: 맞다, 동물 이야기를 하니까 떠올랐어. 탐색하던 중에 주운 건데.. 한번 확인해 볼래? #id:1495
+	낡은 판에 끼워진 종이에 '전차 점검 보고서'라고 적혀 있다. 전차 틈새로 소동물들이 추위를 피해 들어가 사고가 발생한다는 내용이다. #id:1496
+	mai: 추운 날에는 동물들이 따듯한 곳을 찾아 차량에 숨어 들어갔다가 종종 큰일이 난다고 해. 이 전차도 자주 발생하나봐. #id:1497
+	emotion mai Dislike 
+	mai: 아무래도 신경 쓰이는데.. '소동물'이라면 어떤걸 말하는 거지? #id:1498
+	emotion mai Idle 
+	mai: 무엇보다 이 전차에 다른 생명체가 타 있을수도 있다는 얘긴데.. 기회가 된다면 확인해 볼 수 있으면 좋겠어. #id:1499
+	if {MetaProgression.has_read_event("t_mai_cat") == false}:
+		do GameEvents.emit_get_npc_exp({GameEvents.get_talk_add_exp("t_mai_cat")}, 1)
+		do GameEvents.emit_add_route_hint("cat")
+		do GameEvents.emit_add_read_history("t_mai_cat")
+	[end_timeline]
+
+- [if {MetaProgression.has_read_event("t_mai_roullete")} 직감(완료)/직감] | [if {npc.love} >= {GameEvents.get_need_love("t_mai_roullete")}] [else="hide" alt_text="hide"] #id:149a
+	emotion mai Dislike 
+	mai: 또 돌아와 버렸네. #id:149b
+	mai: 이제는 이 장소가 집처럼 느껴지기 시작했어. 이거 위험한 거지? #id:149c
+	- 긴장이 풀린다는 건 좋지만. #id:149d
+	- 걱정되거나 하진 않아? #id:149e
+	emotion mai Flat 
+	mai: 집으로 돌아가지 못할까 봐? 물론 그건 싫어. 생각하면 무서워지기도 하고. #id:149f
+	mai: 집에 있는 동생들은 내가 전부 챙겨주고 있으니까. 식사나 목욕 같은거. #id:14a0
+	mai: 지금도 날 기다리고 있을거..라고 생각했지만, 코니알이 말한 거 기억나? #id:14a1
+	mai: 이 전차는 시간이 흐르고 있지 않다면서? 바깥의 풍경도 지금까지 그대로고. #id:14a2
+	emotion mai Idle 
+	mai: 적어도 동생들이 나를 걱정하며 기다리고 있지 않을거라는 사실만으로 조급한 마음은 사라졌어. #id:14a3
+	mai: 몇번이고 이변을 찾아내다 보면 결국엔 우리 모두 탈출할 수 있을 거니까. 그치? #id:14a4
+	- 당연하지. 내가 책임질게. #id:14a5
+	emotion mai Laugh 
+	mai: 응! 나도 엄~청 의지하고 있어. 모두 잘 될거야. 이래봬도 이런 쪽의 직감은 정말 좋거든. #id:14a6
+	- 그러고보니 마이는 감이 무척 좋지? #id:14a7
+	- 묘한 통찰력도 있는 거 같고.. #id:14a8
+	emotion mai Idle 
+	mai: 맞아! 몇 번 말했었지? 가챠를 할 때 원하는 걸 뽑는 타이밍은 기가 막히게 알 수 있어. #id:14a9
+	그녀는 능숙하게 스마트폰의 게임을 켜고 가챠 뽑기 화면으로 이동한다. #id:14aa
+	mai: 여기 보이지? 이 버튼을 누르면 한번에 10명의 랜덤 캐릭터를 뽑을 수 있어. #id:14ab
+	emotion mai Dislike 
+	mai: 내 '감'이라면.. A급 캐릭터가 3명정도 나오려나. #id:14ac
+	그렇게 말하곤 망설임 없이 뽑기 버튼을 누른다. 그 결과.. #id:14ad
+	- A급 3명, B급 7명.. #id:14ae
+	- ..정말 말한대로 나왔잖아? #id:14af
+	emotion mai Idle 
+	mai: 헤헤, 신기하지? 이유는 모르겠지만 결과는 절대 틀린 적 없다는 말씀. #id:14b0
+	- 저기 마이. 그렇다면. #id:14b1
+	- 복권이나 경마에 그 능력을 써 보는 건.. #id:14b2
+	emotion mai Smile 
+	mai: 하핫! 내 친구들이랑 똑같은 얘기를 하네. 눈을 엄청 반짝이는데? #id:14b3
+	mai: 하지만 어디까지나 직감이 좋은 거라서 말이야. 행운하고는 다른 걸. #id:14b4
+	emotion mai Flat 
+	mai: 복권은 몇장을 사도 꽝 뿐이라는 느낌이고.. #id:14b5
+	mai: 경마는 배당이 낮은 말이 이길 뿐인 데다 연속으로 맞춰 보니 경마장 직원이 다음부턴 오지 말라고 했어. #id:14b6
+	emotion mai Idle 
+	mai: 그런 이유로 편하게 돈 벌 수 있는 치트 능력은 아니라는 말씀! 실망했다면 미안. 하하핫 #id:14b7
+	- 아쉽네..가 아니고. 실은 말이야. #id:14b8
+	- 전에 탐색을 하면서 챙겨온 물건이 있어. #id:14b9
+	emotion mai Dislike 
+	mai: 응? 이게 뭐지? 전단지야? 어디 봐봐. #id:14ba
+	mai: 45번 전차와.. 파칭코 콜라보레이션? #id:14bb
+	- 전차칸 하나를 통째로 이벤트 칸으로 운행한 적이 있었나봐. #id:14bc
+	emotion mai Flat 
+	mai: 헤에, 그렇구나. 이것 때문에 복권 얘기를 꺼낸 거구나. #id:14bd
+	mai: 그치만 이 장소가 지금도 전차에 남아 있을까? 이미 기간이 지나 버린 거 같은데. #id:14be
+	- 이 전단지가 이유 없이 전차에 떨어져 있을거라 생각하진 않아. #id:14bf
+	- 아마도 칸칸네비를 이용해 도착할 수 있는 힌트가 되지 않을지.. #id:14c0
+	emotion mai Dislike 
+	mai: 노선들을 막 연결하는 그거 말이지? 이 전단지에 적힌 힌트들을 조합한다면.. #id:14c1
+	emotion mai Surprised 
+	mai: 어디어디.. ..으. 으앗?! #id:14c2
+	- 왜 그래? #id:14c3
+	mai: 이거! '샤이닝 라비린스'잖아? 내 최애 애니메이션인데! #id:14c4
+	- 파칭코와 애니메이션 콜라보는 흔하니까. #id:14c5
+	emotion mai Serious 
+	mai: 하, 한정 굿즈도 있다고? #id:14c6
+	mai: 저기, 당장 가 보자! 응? 이건 놓칠 수 없단 말이야! #id:14c7
+	- 파칭코보다 애니메이션에 더 크게 반응하네.. #id:14c8
+	emotion mai Surprised 
+	mai: 이런 콜라보는 이 이벤트에서만 볼 수 있는 일러스트나 굿즈가 잔뜩이니까! #id:14c9
+	emotion mai Dislike 
+	mai: 부탁이야~ 이 콜라보 전차 칸. 찾아줄 수 있지? #id:14ca
+	- 그렇게까지 간절하게 부탁하면.. #id:14cb
+	- 다음 탐색은 이 곳을 목표로 할게. #id:14cc
+	emotion mai Smile 
+	mai: 앗싸! 고마워, 정말 좋아! #id:14cd
+	이 전단지가 새로운 종착점을 발견할 힌트가 될 지 모르겠지만.. #id:14ce
+	방방 뛰며 기뻐하는 마이를 위해서라도 주의깊게 체크해 보자. #id:14cf
+	if {MetaProgression.has_read_event("t_mai_roullete") == false}:
+		do GameEvents.emit_get_npc_exp({GameEvents.get_talk_add_exp("t_mai_roullete")}, 1)
+		do MetaProgression.add_route_hint("roullet")
+		do GameEvents.emit_add_read_history("t_mai_roullete")
+	[end_timeline]
+
+- 뒤로 가기 #id:14d0
+	jump basetalk/mai #id:5f

@@ -1,0 +1,65 @@
+join reina left [animation="Fade In Up" wait="true"]
+reina: 이곳이 집사님이 말한 종착점인 거 같아요. #id:33b
+# #
+# ###출시 버전에서 이 항목은 지웁니다
+# #[Debug] 대화를 스킵하고 다음 챕터로 넘어갈까요? #id:345
+# #- 네 #id:346
+# #	do GameEvents.emit_set_chapter(5)
+# #	do GameEvents.emit_game_complete()
+# #	do TransitionScreen.dialog_transition()
+# #	[end_timeline]
+# #- 아니오 #id:347
+# ###
+# #
+join mai right [animation="Fade In Up" wait="true" mirrored="true"]
+emotion mai Serious
+mai: 발 디딜 틈 없이 잡동사니로 가득 차 있잖아? #id:33c
+- 조심해서 이동하도록 하자. #id:33d
+reina: 네. 발 밑을 잘 보지 않으면.. #id:33e
+[sound path="res://sound/sfx/chapter4_Mai_fall.mp3" volume="12.0" bus="Sfx"]
+update mai right [animation="Shake X" length="1.0" wait="true"]
+leave mai
+(우당탕!) #id:33f
+mai: 아야야.. #id:340
+- 이렇게 넘어질 테니까. #id:341
+emotion reina Suprised
+reina: 괜찮으신가요..? #id:342
+join mai right [mirrored="true"]
+emotion mai Dislike
+mai: 응.. 하지만 한쪽에 세워놨던 물건들이 쓰러졌어.. 집사가 화내려나? #id:343
+emotion reina Shy
+reina: 원상복구 한다면 이해해 주실 거에요. #id:344
+- 돌아가면 사과하자. #id:345
+mai: 그래야겠어. 꽤 비싸 보이는 것도 많네. 낡은 물건들일 줄 알았는데. #id:346
+emotion reina Idle
+reina: 코니알한테 들켜서 모두 버려진다면 서운할 거 같긴 하네요. #id:347
+emotion mai Idle
+mai: ..이 수많은 물건 사이에서 찾아야 하는 거지? 파주주의 지갑.. #id:348
+- 그리고 내 핸드폰도. #id:349
+mai: 분실물이 모인 장소에 도착했으니 다음은 핸드폰으로 전화를 걸면 되지? #id:34a
+emotion reina Serious
+reina: 하지만 이렇게 물건이 많아서야 핸드폰과 지갑이 흩어져 있을 가능성이 크겠네요.. #id:34b
+emotion mai Flat
+mai: 결국 손수 뒤져봐야 한다는 건가.. #id:34c
+- 아니, 여전히 그 방법이 유효할 수 있어. #id:34d
+	- 우리 주변의 물건들을 보면.. #id:34e
+emotion reina Idle
+reina: 이 주변? 그러고보니 저희가 있는 전차 칸 앞의 물건들은.. 뭐랄까.. '레트로'하네요.. #id:34f
+emotion mai Idle
+mai: 뭔가 옛날 냄새도 나고.. 낯선 물건이 많은데.. 와! 이건 나 어렸을 때 가지고 놀던 게임기랑 같은 기종이네? #id:350
+reina: 여기 보면 구권 지폐도 있어요. 어머, 옛날 승차권.. 정말 추억이네요. 적어도 10년.. 그 이상은 돼 보이는 물건들이에요. #id:351
+- 여기 엄청 옛날 신문도 있어. #id:352
+emotion reina Serious
+reina: 색이 바랠 정도로.. 하지만 깔끔하게 보관됐어요. 날짜는.. 2000년 3월 15일? 20년도 더 이전인데... 내용을 확인해 볼게요. #id:353
+'-시가 오늘 45번 전차의 공식 운행을 시작하며, 일본 지방 도시 교통의 새로운 장을 열었다.' #id:354
+'..총 25개의 역으로 구성된 노선은 시민들의 통근과 관광을 동시에 만족시키며..' #id:355
+'개통 기념식에는 수백 명의 시민이 몰려, 전차의 첫 출발을 환호로 맞이했다.' #id:356
+- ..45번 전차? #id:357
+emotion mai Serious
+mai: 이 전차잖아? 꽤나 오래 된 전차구나. 근데 여태 한번도 그 존재를 몰랐던거야? #id:358
+emotion reina Idle
+reina: 저도 출퇴근으로 한 노선만 이용하다보니.. 그래도 전혀 몰랐다는 건 이상하네요. #id:359
+- 의문들이 점점 많아지네.. #id:35a
+	- 일단은 더 앞쪽의 물건을 살펴보자. #id:35b
+do GameEvents.emit_quest_process("chapter4_talk1")
+do TransitionScreen.dialog_transition()

@@ -1,0 +1,42 @@
+[gd_scene load_steps=17 format=3 uid="uid://bciejpsp5or46"]
+
+[ext_resource type="Script" uid="uid://cyjlsnamoenmo" path="res://Autoloads/sound_manager.gd" id="1_jerlu"]
+[ext_resource type="AudioStream" uid="uid://c0fpnbw6ghdou" path="res://sound/voice/prologue/1362.ogg" id="2_hhkfp"]
+[ext_resource type="Script" uid="uid://cixg5vrd52rbb" path="res://Gameplay/Levels/train_broadcast.gd" id="3_yndwn"]
+[ext_resource type="AudioStream" uid="uid://e6vh38j6660" path="res://sound/voice/prologue/135d.ogg" id="4_4hpuk"]
+[ext_resource type="AudioStream" uid="uid://lwwxptlspbju" path="res://sound/voice/prologue/135e.ogg" id="5_jviym"]
+[ext_resource type="AudioStream" uid="uid://5sby1mjw8j1g" path="res://sound/voice/prologue/135f.ogg" id="6_iqgph"]
+[ext_resource type="AudioStream" uid="uid://byudw3rjd1t0v" path="res://sound/voice/prologue/1360.ogg" id="7_mywe5"]
+[ext_resource type="AudioStream" uid="uid://dcy73gg5xr1r2" path="res://sound/voice/prologue/1361.ogg" id="8_rjude"]
+[ext_resource type="AudioStream" uid="uid://b7f6nptpisu7r" path="res://sound/voice/konial_love_0/107c.ogg" id="9_101qo"]
+[ext_resource type="AudioStream" uid="uid://cocr86w7f4jtm" path="res://sound/voice/konial_love_0/1098.ogg" id="10_4p55r"]
+[ext_resource type="AudioStream" uid="uid://claxvmeb4s4e4" path="res://sound/voice/konial_love_1/112e.ogg" id="11_u7lpo"]
+[ext_resource type="AudioStream" uid="uid://b3mh71l1lxjd3" path="res://sound/voice/konial_love_1/112f.ogg" id="12_8dgw6"]
+[ext_resource type="AudioStream" uid="uid://c4ql3g7kd88wp" path="res://sound/voice/konial_love_1/1132.ogg" id="13_4c5u6"]
+[ext_resource type="AudioStream" uid="uid://dlwv5bxp80mk7" path="res://sound/voice/konial_love_1/1131.ogg" id="14_ht3uj"]
+[ext_resource type="AudioStream" uid="uid://cvs3i83c8gyvj" path="res://sound/voice/konial_love_1/1171.ogg" id="15_s0uvp"]
+[ext_resource type="AudioStream" uid="uid://3txjmja8h1mh" path="res://sound/voice/konial_love_2/1194.ogg" id="17_c24x7"]
+
+[node name="SoundManager" type="Node"]
+process_mode = 3
+script = ExtResource("1_jerlu")
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
+
+[node name="TrainSoundPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Sfx"
+
+[node name="SfxPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 2.0
+max_polyphony = 8
+bus = &"Sfx"
+
+[node name="TrainBroadcast" type="AudioStreamPlayer" parent="."]
+process_mode = 1
+stream = ExtResource("2_hhkfp")
+bus = &"TrainBroadcast"
+script = ExtResource("3_yndwn")
+broadcast_lines = Array[AudioStreamOggVorbis]([ExtResource("4_4hpuk"), ExtResource("5_jviym"), ExtResource("6_iqgph"), ExtResource("7_mywe5"), ExtResource("8_rjude"), ExtResource("2_hhkfp")])
+ahen_lines = Array[AudioStreamOggVorbis]([ExtResource("9_101qo"), ExtResource("10_4p55r"), ExtResource("11_u7lpo"), ExtResource("12_8dgw6"), ExtResource("13_4c5u6"), ExtResource("14_ht3uj"), ExtResource("15_s0uvp"), ExtResource("17_c24x7")])
+excluded_stages = Array[String](["stage_complete_ep6", "stage_complete_ep5", "stage_complete_ep5"])

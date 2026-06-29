@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c3f3akm7tc6xx"
+
+[deps]
+
+files=["res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.en.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.jp.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.ko.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.zh.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.cn.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.vi.translation"]
+
+source_file="res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.csv"
+dest_files=["res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.en.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.jp.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.ko.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.zh.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.cn.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations_temp.vi.translation"]
+
+[params]
+
+compress=true
+delimiter=0

@@ -1,0 +1,263 @@
+label find_pazuzu #id:18c
+do GameEvents.emit_quest_process("pazuzu_look")
+[wait time="1.1"]
+reina: ... #id:18d
+mai: ... #id:18e
+- ... #id:18f
+join reina leftmost
+join mai left
+emotion reina Suprised
+emotion mai Serious
+reina: 뭐죠? 제가 지금 보고 있는 건.. #id:190
+mai: ..사람? #id:191
+- 사람이 창밖에 매달려 있어! #id:192
+leave --All--
+[wait time="0.5"]
+do CutSceneManager.show_cutscene("CutsceneMeetPazuzu")
+[style name="fullscene_style"]
+[music path="res://sound/music/loop/mellow.ogg" fade="3.0" volume="0.0" bus="Music"]
+'죄송합니다! 저.. 사.. 살려 주세요!' #id:193
+emotion mai Surprised
+mai: 아! 맞아! 이 소리였어! 역시 틀리지 않았구나! #id:194
+emotion reina Suprised
+reina: 대단해요. 마이 씨의 직감.. #id:195
+- 그것보다.. 먼저 구해야 하지 않을까? #id:196
+reina: 아 맞아요! 어서 구해야.. #id:197
+emotion mai Serious
+mai: 그치만. 창 밖에 매달린 사람을 어떻게? 이곳 문은 절대 열리지 않는데.. 창문을 깰까? #id:198
+아.. 안 돼요! 위험해요! 유리 파편이 튀면 여러분이 다친다고요! #id:199
+emotion reina Serious
+reina: 이 상황에서도 우리 걱정을 하다니.. #id:19a
+'저.. 저는 걱정 마세요! 아.. 아직은.. 손 힘이 남았거든요..' #id:19b
+'당분간은 버틸 수 있어요! 여러분이 생각하기보다 가.. 강하거든요..' #id:19c
+- 저기.. 당신은? #id:19d
+join pazuzu rightmost [mirrored="true"]
+pazuzu: 제.. 제 이름은 파주주! 이 전차를 찾아서 드디어 도착했어요! #id:19e
+- 어떻게 여기까지? #id:19f
+reina: 분명 이 전차는 한번도 멈춘 적 없는데 어떻게 매달린 거죠? #id:1a0
+pazuzu: 제 전문이니까요! 허가되지 않은 에너지가 지속적으로 분출되어서..! 희미하지만 겨우 찾아낸 거에요! #id:1a1
+pazuzu: 몇번이고 노..놓쳤지만 이번에야말로 도착했어요..! 오..온 힘을 다해서 지금까지 매달려 있었죠.. #id:1a2
+emotion pazuzu Smile
+pazuzu: 그..그치만 지금 보시는 것처럼.. 사..사소한 문제가 있어서요.. 여러분의 도움이 필요해요..! #id:1a3
+- 우리가 도울 일이 뭐죠? #id:1a4
+pazuzu: 일단은 절 그 전차 안으로 들여보내줘야 해요! 원래라면 멋지게 전차 벽을 뚫고 침투할 수 있지만.. #id:1a5
+emotion mai Flat
+mai: 있지만? #id:1a6
+emotion pazuzu Ecchi
+pazuzu: 그..그게, 여기로 오면서 권능을 사용할 수 있는 면허 지갑을 잃어버렸어요.. #id:1a7
+- ...면허 지갑? #id:1a8
+emotion pazuzu Idle
+pazuzu: ..네..네.. 그그그게.. 그 탓에 이렇게 매달려 있는 거에요..! 금방이라도 떨어질 거 같지만.. 권능만 사용할 수 있다면! #id:1a9
+emotion mai Dislike
+mai: 면허라면.. 굳이 없어도 사용할 수 있는 거 아냐? #id:1aa
+emotion pazuzu Suprised
+pazuzu: 그..그런 말 하면 안 돼요! 악을 잡아내는 역할이 불법적인 짓을 하는 순간 자격 박탈이라고요! 엄청나게 고생해서 취득한 자격인데.. #id:1ab
+mai: 꽤나 도덕적이구나. 그럼 그 지갑을 우리가 찾아 주면 된다는 거지? #id:1ac
+emotion pazuzu Idle
+pazuzu: 네..! 맞아요! 면허가 든 지갑만 있다면! #id:1ad
+emotion reina Serious
+reina: 그치만 도대체 그 지갑을 어디서 찾아야 할까요.. 전차 안에 있을 거 같진 않은데. 밖으로 나갈 수도 없고요. #id:1ae
+emotion mai Flat
+mai: 지금까지 여기 있으면서 지갑 같은건 보지 못했어. #id:1af
+emotion pazuzu Suprised
+pazuzu: 그.. 그럴수가. 그럼 어떻게 해..해해해야 하죠! #id:1b0
+emotion mai Idle
+mai: 그걸 우리한테 물어도.. 너무 걱정하지 마. 탐색하는 겸사겸사 찾아볼게? #id:1b1
+emotion pazuzu Idle
+pazuzu: 저저 정말 중요한 건데..! 리모컨 찾듯 가벼운 마음으로 생각하면 아..안 돼요! 여러분들을 무사히 이..인도하기 위해 꼭 필요한 거라고요..! #id:1b2
+pazuzu: 저..저는 앞으로도 트럭에 늘어진 이상한 끈처럼 매달려 있어야 하는 걸까요? #id:1b3
+pazuzu: 으으.. 분명 도착하기 전까진 지니고 있었을텐데.. 그렇게 중요한 걸 분실하다니.. 천사 실격이에요.. #id:1b4
+- 잠깐.. #id:1b5
+	- 분실 했다고? #id:1b6
+	- 그렇다면 찾을 방법이 있을 수도.. #id:1b7
+mai: 응? 정말이야? #id:1b8
+- 마침 나도 잃어버린 게 있어. #id:1b9
+do CutSceneManager.hide_cutscene("CutsceneMeetPazuzu")
+[style]
+join reina leftmost
+join mai left
+emotion reina Idle
+reina: ... 잃어버린 것? #id:1ba
+reina: 아, 맞아요. 당신의 핸드폰. #id:1bb
+emotion mai Dislike
+mai: 으응..? 핸드폰이 왜? #id:1bc
+- 역에서 분실물을 주으면 보통.. #id:1bd
+emotion mai Flat
+mai: 음.. 본인을 찾긴 어렵고 시간도 없으니까 분실물 센터에 맡기지 않을까? #id:1be
+emotion reina Serious
+reina: 이 전차에서는 그 역할을 집사가 하고 있어요. #id:1bf
+mai: 집사? 시작 칸에서 티켓을 교환해주는 녀석? #id:1c0
+emotion reina Idle
+reina: 네. 집사가 말했던 것 기억하시나요? #id:1c1
+- 분실물은 모두 모아서.. #id:1c2
+- 교환샵 경품으로 판매한다.. #id:1c3
+reina: 맞아요. 쓸모 있는 물품들은 능력을 주입해서 판매하고, 쓸모 없는 것들의 처분은 모르겠지만.. 일단은 전차 내에서 집사의 손을 거쳤을 거에요. #id:1c4
+reina: 그리고 어떤 기분 나쁜 지갑과 핸드폰도.. 주웠다고 했죠. 하지만 마력 주입에 실패했다고 말했어요. #id:1c5
+reina: 그때는 중요하게 생각하지 않았지만 어쩌면 그게 파주주 님의 지갑일 가능성도.. #id:1c6
+- 맞아. 하지만 교환샵에 진열되어 있진 않았어. #id:1c7
+emotion mai Serious
+mai: 아앗! 그렇구나! 교환샵에서 봤을 때는 지갑이나 핸드폰 같은건 없었으니까. 모아서 어딘가에 버렸으려나? 그걸 어떻게 찾지? #id:1c8
+- 일단 집사에게 분실물들의 처분 위치를 알아내고.. #id:1c9
+- 마이가 내 핸드폰으로 전화를 걸다 보면.. #id:1ca
+emotion mai Surprised
+mai: 응? .. 아! 이해했어! #id:1cb
+emotion mai Laugh
+mai: 전화벨이 울리는 곳을 찾아 내면 핸드폰과 같이 버린 지갑을 찾아 낼 수 있다는 거구나. 잊어버린 시기는 비슷하니까! #id:1cc
+emotion reina Serious
+reina: 네, 맞아요. 쓸모 없어진 분실물을 창밖으로 버리거나 개별적으로 처리하지 않았다면.. 어쩌면 찾아낼 수 있어요. #id:1cd
+emotion pazuzu Smile
+pazuzu: 그그그 그렇군요! 저저 정말 다행이에요! #id:1ce
+emotion pazuzu Ecchi
+pazuzu: 지..지금은 그 방법밖에 없어요! 여러분만 미..믿을게요! 저.. 저 더이상은 팔에 힘이 빠져서! 여기까지가 한계에요! #id:1cf
+emotion mai Serious
+mai: 뭐? 여기서 떨어지면 다시 찾아 올 수 있는 거야? #id:1d0
+emotion pazuzu Idle
+pazuzu: 걱정 마..마세요! 말한 대로 지갑이 전차 안에 있다면.. 위..위치를 알 수 있으니까! #id:1d1
+pazuzu: 지금처럼 제가 있는 칸을 찾아 주세요! 여러분들이 오실 때까지 며..몇 번이든 매달려 있을게요! #id:1d2
+emotion reina Idle
+reina: 좀 불쌍해요.. #id:1d3
+- 하지만 달리 방법이 없으니까.. #id:1d4
+emotion mai Flat
+mai: 얼른 찾아야겠네. 분실물.. #id:1d5
+pazuzu: 여..여러분! 저는 이제 팔에 감각이 없어요..! 부디 저를 다시 만나러 와 주세요! #id:1d6
+emotion pazuzu Ecchi
+pazuzu: 저.. 저는 이제 한계니까! 다음 번에 다시 올 테니.. 자.. 잘 부탁 드립..! #id:1d7
+[clear time="1.0" text="false" portraits="false" background="false" positions="false" style="false"]
+join konial center
+konial: 누구 맘대로 다시 오겠다는 거야? #id:1d8
+- .. 코니알! #id:1d9
+konial: 안녕~ 뭐 하고 있었어? #id:1da
+leave reina
+leave mai [animation="Fade Out" wait="true"]
+update konial leftmost [wait="true" move_time="0.5"]
+[wait time="0.5" hide_text="false"]
+do GameEvents.emit_quest_process("pazuzu_bind")
+emotion konial Dislike
+konial: 티타임을 가지던 중에 내 전차가 비명을 질러서 말이야~ 엄~청나게 가려운 듯 울어 대길래. 와서 확인해 보니 이렇게 큰 벼룩이 붙어 있었네? #id:1db
+emotion pazuzu Idle
+pazuzu: ...! 너..너.. 드디어 찾아냈어! #id:1dc
+emotion konial Idle
+konial: 흐응? 누구였더라? 처음 보는 얼굴인데. #id:1dd
+pazuzu: ..기억 아.. 안 날지 모르겠지만. 난 잘 알고 있어. #id:1de
+emotion pazuzu Ecchi
+pazuzu: ..라마슈투.. #id:1df
+- 라마슈투? #id:1e0
+emotion konial Dislike
+konial: ..... #id:1e1
+emotion konial Smile
+konial: 키힛! 뭐야 그 촌스러운 이름. 모르겠는걸. #id:1e2
+join mai left
+mai: ..아는 사이? #id:1e3
+emotion konial Idle
+konial: 내가 이런 하얀 벼룩과 아는 사이일리가 아닌게 분명하잖아. 난 단지 45번 전차의 주인으로써, 전차가 괴로워하는 모습을 볼 수 없어 확인하러 온 거야. #id:1e4
+konial: 벼룩은 털어내기만 하면 몇번이든 다시 붙어 온다니까. 확실하게 눌러 죽여야지. #id:1e5
+emotion pazuzu Idle
+pazuzu: ...? 뭐..무슨. #id:1e6
+emotion konial Sadistic
+konial: 걱정 마~ 내 사랑스러운 전차. 다시는 들러붙을 생각 못하게 복수하렴! #id:1e7
+emotion pazuzu Suprised
+update pazuzu [extra_data="show Etc/Blur"]
+pazuzu: ..!! 꺄악! #id:1e8
+leave pazuzu
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_anim_change_this_npc("scene1_1", {ch.pazuzu})
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(3, 100)
+leave mai
+join reina rightmost [mirrored="true"]
+emotion reina Suprised
+reina: ..! 뭐죠 저건.. 대체. #id:1e9
+emotion konial Idle
+konial: 보시다시피 전차를 괴롭게 한 원흉에게 복수하고 싶대. 45번 전차가 직접. 나는 혼내줄 수 있게 약간의 도움을 준 거지. #id:1ea
+leave reina
+pazuzu: 크읏.. 읏!.. 뭐.. 뭔가요! 팔다리가 묶여서.. 놔.. 놔주세요! #id:1eb
+konial: 전차도 많이 화가 났나 봐. 봐줄 생각은 없어 보이네. #id:1ec
+pazuzu: 꺄약! 이 큰 건 뭐..뭔가요! #id:1ed
+#그녀의 말과는 달리, 파주주의 시선은 그 촉수에게서 한치도 떨어지지 않았다. #id:1984
+#천사의 규율로 엄격하게 지켜온 금욕이, 지금 한순간에 깨질 수 있음을 느낀 그녀가 느끼는 감정은.. #id:1985
+#거부감이 아닌, 묘한 흥분감으로 차오르고 있었다는 것을, 파주주는 필사적으로 숨기고 있었다. #id:1986
+konial: 바로 알게 될 거야. 키히히. #id:1ee
+pazuzu: 자..잠깐.. 오 오지 마세요! 그렇게 큰 거..! #id:1ef
+#커다란 자지의 모습을 한 촉수 하나가 파주주의 바로 밑에서 꿈틀거린다. #id:1987
+지금부터 어떤 일을 당하게 되는 걸까, 온갖 망상이 그녀의 머릿속에 재생된다. #id:1988
+상상만으로 그녀의 음순은 부풀어 오르고, 이윽고 질척한 애액이 흘러 나온다. #id:1989
+#그녀의 몸을 묶고 있을 뿐인 촉수들에게, 오히려 파주주는 묘한 기대감을 가지며.. #id:198a
+#그것들을 받아들일 준비마저 마친 듯, 애액은 멈출 줄을 모르고 새어 나온다. #id:198b
+#보지에서 질척하게 흘러나오는 애액이 허벅지를 타고 흐르자, 촉수는 그 액체의 자국을 거슬러 활짝 벌려진 보지의 입구에 닿는다. #id:198c
+do GameEvents.emit_anim_change_this_npc("scene1_2", {ch.pazuzu})
+pazuzu: 그.. 그런! 아앙! 앗! 그만 해 주세욧! 아읏! 읏! #id:1f0
+pazuzu: 너무 커요..! 앗.. 아..! 저 더 이상은.. 그렇게 계속 휘저으면..! #id:1f1
+pazuzu: 아앗! 아읏.. #id:1f2
+emotion konial Dislike
+... #id:198d
+konial: (..? 분명 붙잡아 놓으라고만 했는데. ..이 촉수들은 대상의 욕구에 반응하니까.. ..그렇다는 건?) #id:198e
+#코니알은 순간 미간을 찌푸렸다. 그녀의 명령은 단지 파주주를 묶어두라는 것뿐이었다. #id:198f
+#자율적인 행동이 허용되는 순간은 단 한가지.. 대상이 티켓을 생성해내기 위한 기본 요건인 기분 좋은 쾌락을 원하는 경우.. #id:1990
+#이내 코니알은 미소를 짓는다. #id:1991
+emotion konial Smile
+konial: 키히힛.. 엄청나게 난폭한데? #id:1f3
+konial: 응? 아. 그래. 더 거칠게 해도 상관 없어. 분이 풀릴 때까지 박아버리렴? #id:1f4
+pazuzu: 아앗..큿.. 라..라마슈투..! #id:1f5
+파주주의 온 몸을 감은 촉수는, 사실 그녀의 남은 힘으로도 충분히 떨쳐낼 수 있을 정도로 느슨히 압박하고 있었지만.. #id:1992
+그녀가 끝내 숨기지 못한 자지에 대한 욕구는 촉수들이 파주주를 더욱 기분좋은 쾌락으로 이끌도록 만들고 있었다. #id:1993
+pazuzu: 아앙.. 이 이거.. 반드시 후회.. 앗.. 후회할 거에요..! 아응! 읏.. 반드시 찾아 올 테니.. 아읏.. #id:1f6
+konial: 뭐? 엥엥거려서 잘 안들리네. 슬슬 마무리를 지어 볼래? #id:1f7
+pazuzu: 뭐..뭐라고.. 아읏! 꺄악! #id:1f8
+pazuzu: 너..너무 격하겟..! 찢어져 버릴 거 같아.. 아.. 앗 앗.. #id:1f9
+pazuzu: 꺄앗!! #id:1fa
+do GameEvents.emit_anim_change_this_npc("scene1_3", {ch.pazuzu})
+[wait time="3.0"]
+do GameEvents.emit_anim_change_this_npc("scene1_4", {ch.pazuzu})
+konial: 후후.. 엉망진창이네. #id:1fb
+pazuzu: 하아..하아..아.. #id:1fc
+pazuzu: 이..이건 대체.. #id:1fd
+pazuzu: 라마슈투.. 당신은 이..이렇게까지.. #id:1fe
+emotion konial Idle
+konial: ... 뭐라고? #id:1ff
+pazuzu: ..? #id:200
+konial: 아직 분이 덜 풀렸어? 키히히! 그래. 얼마든지. #id:201
+#그 순간 코니알은 확신하고 있었다. 믿기진 않지만.. #id:1994
+#이 녀석, 즐기고 있어. #id:1995
+pazuzu: 그..그게 무슨.. 읏?! #id:202
+do GameEvents.emit_anim_change_this_npc("scene1_2", {ch.pazuzu})
+konial: 다시는 돌아올 마음이 안 들게 망가트리렴. #id:203
+pazuzu: 크흣?! 그.. 그만! 아앙.. #id:204
+#라마슈투의 명령에 촉수가 다시 꿈틀거리는 것을 느끼며.. #id:1996
+#파주주는 이미 그것을 거부할 생각이 조금도 남아 있지 않다는 것을 깨달았다. #id:1997
+#한 번 알아버린 그 감각이, 오히려 다음을 갈망하게 만들고 있었다. #id:1998
+pazuzu: 앙.. 아앗! 라.. 라마슈.. #id:205
+leave --All-- [animation="Fade Out" wait="true"]
+set {npc.type} = 3
+[signal arg="scene1"]
+do GameEvents.emit_camera_order_change(3, 0)
+do GameEvents.emit_quest_process("pazuzu_exit")
+[wait time="3.0"]
+join reina center
+emotion reina Suprised
+reina: ...사라졌어요.. #id:206
+- ... #id:207
+leave reina
+join konial center
+emotion konial Smile
+konial: 좋아, 벌레는 처리했네! 항상 이렇다니까. 역장으로써 끊임없이 관리해 줘야 해. 안그러면 몇 번이고 같은 자리에 꼬이거든. #id:208
+konial: 그럼 나는 나머지 티타임을 즐기러 돌아갈게. 너희도 할 일이 있지? 열심히 티켓을 만들어 내라고, 그럼 이만! #id:209
+leave konial [animation="Slide Out Right" length="1.3" wait="true"]
+join reina center
+emotion reina Serious
+reina: 가 버렸어요.. #id:20a
+update reina left
+join mai right [mirrored="true"]
+emotion mai Serious
+mai: 어떡하지? 파주주.. 저렇게나 당했는데.. 다시 만날 수 있는 거야? #id:20b
+- 하지만 방법이 이것밖엔 없으니까.. #id:20c
+reina: 맞아요. 우리가 해야 할 일을 하죠. #id:20d
+emotion mai Flat
+mai: 그렇네.. 어쩔 수 없는 거구나. #id:20e
+- 돌아가면 내 핸드폰을 찾을 계획을 구체적으로 세우자. #id:20f
+reina: 좋아요. 의심을 사지 않도록 탐색도 겸하면서 찾는 게 좋겠어요. 파주주가 걱정되긴 하지만.. 창틀에 그정도로 매달렸던 사람이니까 분명 괜찮을 거에요. #id:210
+- 꼭 다시 만나야 해. #id:211
+- 탈출하려면 지금은 그 방법 뿐이야. #id:212
+do GameEvents.emit_position_change(-1, 227, 338)
+do GameEvents.emit_set_chapter(4)
+do GameEvents.emit_game_complete()
+[end_timeline]

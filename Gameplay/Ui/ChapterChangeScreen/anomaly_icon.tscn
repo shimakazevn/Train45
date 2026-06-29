@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://20je5ykcu8o1"]
+
+[ext_resource type="Script" uid="uid://knh01kwie07p" path="res://Gameplay/Ui/ChapterChangeScreen/chapter_anomaly_icon.gd" id="1_rff3r"]
+[ext_resource type="Script" uid="uid://c67vgxet3mm8y" path="res://Gameplay/ui_state_player.gd" id="2_fjjt0"]
+
+[node name="AnomalyIcon" type="ColorRect"]
+custom_minimum_size = Vector2(15, 15)
+script = ExtResource("1_rff3r")
+
+[node name="UiSoundStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+max_polyphony = 10
+bus = &"Sfx"
+script = ExtResource("2_fjjt0")
+metadata/_custom_type_script = "uid://c67vgxet3mm8y"

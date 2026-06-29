@@ -1,0 +1,58 @@
+# jump d_cat
+if {npc.type} == {ch.reina}:
+	reina: 어디.. 이 곳의 이상한 점은.. #id:16bc
+	reina: ..응? 저 앞에 무언가 있어요. 확인해 보죠. #id:16bd
+	[end_timeline]
+elif {npc.type} == {ch.mai}:
+	mai: 좋아! 이번 칸도 힘내볼까? #id:16be
+	mai: ..어? 저 앞에 뭔가 있는데? #id:16bf
+	[end_timeline]
+
+
+label d_cat #id:16c0
+if {npc.type} == {ch.reina}:
+	[sound path="res://sound/sfx/cat_sweet_voice.mp3" volume="0.0" bus="Sfx"]
+	[wait time="1.0"]
+	reina: 어머, 고양이에요. 잠든 것처럼 보이는데.. #id:16c1
+	reina: 만약 보고서에서처럼 몰래 전차에 들어온 고양이라면.. 사고를 내기 전에 붙잡아야겠어요. #id:16c2
+	[end_timeline]
+elif {npc.type} == {ch.mai}:
+	[sound path="res://sound/sfx/cat_sweet_voice.mp3" volume="0.0" bus="Sfx"]
+	[wait time="1.0"]
+	mai: 고양이잖아?! 어째서 여기 있지? #id:16c3
+	mai: ..아! 그 보고서에 써 있던 고양이인가? 그렇다면 위험한 곳에 들어가기 전에 잡아야겠어. #id:16c4
+	[end_timeline]
+
+label d_cat_failed #id:16c5
+if {npc.type} == {ch.reina}:
+	reina: 앗, 놓쳐 버렸어요. 쓰다듬어 보고 싶었는데.. #id:16c6
+	reina: 좀 더 빠르게 다가간다면 가능할 거 같아요. #id:16c7
+	reina: 지금보다 '빠르게 이동할 방법'이 있을까요? #id:16c8
+	do GameEvents.emit_game_complete()
+	[end_timeline]
+elif {npc.type} == {ch.mai}:
+	mai: 으아.. 놓쳐 버렸어.. #id:16c9
+	mai: 있잖아, 지금보다 조금 더 빠르면 잡을 수 있지 않을까? #id:16ca
+	mai: 하지만 더 '빨라질 방법'이 있으려나.. #id:16cb
+	do GameEvents.emit_game_complete()
+	[end_timeline]
+
+label d_stuckdoor #id:16cc
+if {npc.type} == {ch.reina}:
+	reina: ..문이 보란듯이 열려 있어요. #id:16cd
+	reina: 네.. 딱 보기에도 수상하네요. 코니알이 파 둔 함정인 거 같아요. #id:16ce
+	reina: 우리를 이런 함정에 걸릴 거라 생각할 정도로 깔보고 있었다니.. #id:16cf
+	reina: 이곳으로 나가게 되면 무슨 짓을 당할 지 모르니 이만 돌아가도록 하죠. #id:16d0
+	do GameEvents.emit_game_complete()
+	[end_timeline]
+elif {npc.type} == {ch.mai}:
+	mai: 이거 봐! 문이 활짝 열려 있어! #id:16d1
+	mai: 어서 확인해 보자! #id:16d2
+	do GameEvents.emit_stage_clear()
+	[end_timeline]
+
+label not_matching_partner #id:16d3
+이 종착점은 다른 파트너가 관심을 보일 거 같다. #id:16d4
+파트너를 바꿔서 다시 와 보자. #id:16d5
+do GameEvents.emit_game_complete()
+[end_timeline]

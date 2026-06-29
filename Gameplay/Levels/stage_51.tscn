@@ -1,0 +1,282 @@
+[gd_scene load_steps=33 format=3]
+
+[ext_resource type="Texture2D" uid="uid://b5dabgwvrc2ku" path="res://Gameplay/ghost_evil.png" id="1_1nkpb"]
+[ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://d1wqwlwmljdpj" path="res://Gameplay/Levels/ghost_skip_component.gd" id="2_x6778"]
+[ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="9_62jqa"]
+[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_2kt0v"]
+[ext_resource type="Script" uid="uid://hvgrox4cyo0c" path="res://Gameplay/Levels/bg_evil_spwaner.gd" id="10_pa3uq"]
+[ext_resource type="PackedScene" uid="uid://dxxjp5re7ww3x" path="res://Gameplay/Levels/bg_evil.tscn" id="11_fte81"]
+[ext_resource type="Script" uid="uid://1mcrwtulyudf" path="res://Gameplay/Levels/flash_light_component.gd" id="17_1lcd4"]
+[ext_resource type="Texture2D" uid="uid://bq3uu0wbr022i" path="res://resources/effect/flashlight.png" id="18_lyvfe"]
+[ext_resource type="Script" uid="uid://dtujbeveac1np" path="res://Gameplay/Levels/evil_play_ground.gd" id="19_batyu"]
+[ext_resource type="PackedScene" uid="uid://d3u6jrbhv2q1q" path="res://Gameplay/anomaly_evil.tscn" id="20_s6xge"]
+[ext_resource type="PackedScene" uid="uid://lg6623mk53cw" path="res://scene/component/teleport_component.tscn" id="26_1r73j"]
+[ext_resource type="Texture2D" uid="uid://du0ewe3ii4vjn" path="res://resources/bg_train_wall.png" id="27_50oqc"]
+[ext_resource type="PackedScene" uid="uid://dnc5rb3rrpan3" path="res://scene/UI/clear_text.tscn" id="31_82fnd"]
+[ext_resource type="PackedScene" uid="uid://bxk6xej0qykv7" path="res://scene/component/stage_handler.tscn" id="32_gilft"]
+[ext_resource type="Script" uid="uid://dsomb6g1hlvem" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="33_50oqc"]
+[ext_resource type="Script" uid="uid://dxlagu4dbag77" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="34_w1jdk"]
+[ext_resource type="PackedScene" uid="uid://bvt4gj56eqbp3" path="res://Gameplay/train_standard.tscn" id="35_iyww2"]
+[ext_resource type="Script" uid="uid://bsexxxiyoqg01" path="res://Gameplay/Levels/PlayTrigger.gd" id="37_w4m01"]
+[ext_resource type="PackedScene" uid="uid://djbwoq5ul6rbk" path="res://scene/game_object/player/player.tscn" id="38_dr17e"]
+[ext_resource type="PackedScene" uid="uid://dsch54fxvgg58" path="res://Gameplay/door.tscn" id="41_i5sgb"]
+[ext_resource type="PackedScene" uid="uid://c5ifdpfn4tlsf" path="res://Gameplay/Levels/run_stage_gauge.tscn" id="43_6uqe7"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_amqrc"]
+blend_mode = 2
+
+[sub_resource type="Resource" id="Resource_7xtoy"]
+script = ExtResource("34_w1jdk")
+duration = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v61mu"]
+size = Vector2(1920, 360)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lk82m"]
+size = Vector2(70, 348)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_oly03"]
+blend_mode = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3gah"]
+size = Vector2(176, 124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ow8dy"]
+size = Vector2(241.25, 369)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oly03"]
+size = Vector2(100, 360)
+
+[sub_resource type="Resource" id="Resource_oly03"]
+script = ExtResource("34_w1jdk")
+ease = 0
+
+[node name="Stage_51" type="Node2D" node_paths=PackedStringArray("player", "current_npc", "doors", "teleports")]
+script = ExtResource("1_5frgf")
+player = NodePath("TrainStandard/Entity/Player")
+current_npc = NodePath("TrainStandard/Entity/CurrentNPC")
+doors = [NodePath("frontDoor"), NodePath("Exit")]
+teleports = [NodePath("TeleportComponent")]
+stage_type = 1
+run_stage = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DarkLight" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("CanvasItemMaterial_amqrc")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.5, 0.484, 0.48, 0.701961)
+
+[node name="RunStageGauge" parent="CanvasLayer" instance=ExtResource("43_6uqe7")]
+
+[node name="GhostSkipComponent" type="Node" parent="."]
+script = ExtResource("2_x6778")
+
+[node name="TeleportComponent" parent="." instance=ExtResource("26_1r73j")]
+entry_direction = 3
+path_to_new_scene = "res://Gameplay/Levels/base_00.tscn"
+entry_door_name = "TeleportComponent"
+
+[node name="ClearText" parent="." instance=ExtResource("31_82fnd")]
+
+[node name="StageHandler" parent="." instance=ExtResource("32_gilft")]
+
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
+position = Vector2(321, 180)
+script = ExtResource("33_50oqc")
+priority = 10
+follow_mode = 2
+follow_target = NodePath("../TrainStandard/Entity/Player")
+snap_to_pixel = true
+tween_resource = SubResource("Resource_7xtoy")
+follow_offset = Vector2(0, -150)
+follow_damping = true
+follow_damping_value = Vector2(0.3, 0.3)
+draw_limits = true
+limit_target = NodePath("../CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(961, 180)
+shape = SubResource("RectangleShape2D_v61mu")
+
+[node name="TrainStandard" parent="." instance=ExtResource("35_iyww2")]
+
+[node name="BGEvilSpwaner" type="Node2D" parent="TrainStandard/BackGround" index="4" node_paths=PackedStringArray("evil_play_ground")]
+script = ExtResource("10_pa3uq")
+evil_play_ground = NodePath("../../EvilPlayGround")
+bg_evil = ExtResource("11_fte81")
+
+[node name="SpwanPositionRight" type="Sprite2D" parent="TrainStandard/BackGround/BGEvilSpwaner"]
+self_modulate = Color(0.4, 1, 0.99, 0.305882)
+position = Vector2(1565, 129.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1nkpb")
+hframes = 3
+vframes = 3
+
+[node name="SpwanPositionLeft" type="Sprite2D" parent="TrainStandard/BackGround/BGEvilSpwaner"]
+self_modulate = Color(0.4, 1, 0.99, 0.305882)
+position = Vector2(699, 129.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1nkpb")
+flip_h = true
+hframes = 3
+vframes = 3
+
+[node name="Timer" type="Timer" parent="TrainStandard/BackGround/BGEvilSpwaner"]
+
+[node name="Anomaly" type="Area2D" parent="TrainStandard"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("9_62jqa")
+bubble = ExtResource("10_2kt0v")
+
+[node name="AnomalyCollision" type="CollisionShape2D" parent="TrainStandard/Anomaly"]
+unique_name_in_owner = true
+z_index = 30
+position = Vector2(1883, 186)
+shape = SubResource("RectangleShape2D_lk82m")
+
+[node name="Entity" type="Node2D" parent="TrainStandard"]
+y_sort_enabled = true
+
+[node name="CurrentNPC" parent="TrainStandard/Entity" instance=ExtResource("6_ajpmm")]
+position = Vector2(999, 322)
+npc_on_stage = false
+
+[node name="Player" parent="TrainStandard/Entity" instance=ExtResource("38_dr17e")]
+z_index = 3
+position = Vector2(43, 338)
+
+[node name="FlashLightComponent" type="Control" parent="TrainStandard/Entity/Player" node_paths=PackedStringArray("player")]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("17_1lcd4")
+player = NodePath("..")
+
+[node name="FlashLightRight" type="TextureRect" parent="TrainStandard/Entity/Player/FlashLightComponent"]
+self_modulate = Color(1, 1, 1, 0.611765)
+material = SubResource("CanvasItemMaterial_oly03")
+layout_mode = 0
+offset_left = -21.0
+offset_top = -467.0
+offset_right = 877.0
+offset_bottom = 179.0
+texture = ExtResource("18_lyvfe")
+
+[node name="FlashArea" type="Area2D" parent="TrainStandard/Entity/Player/FlashLightComponent"]
+position = Vector2(158, -152)
+collision_layer = 0
+collision_mask = 131072
+
+[node name="CollisionRight" type="CollisionShape2D" parent="TrainStandard/Entity/Player/FlashLightComponent/FlashArea"]
+position = Vector2(-42, 0)
+shape = SubResource("RectangleShape2D_n3gah")
+
+[node name="CollisionLeft" type="CollisionShape2D" parent="TrainStandard/Entity/Player/FlashLightComponent/FlashArea"]
+position = Vector2(-279, 0)
+shape = SubResource("RectangleShape2D_n3gah")
+
+[node name="FlashLightLeft" type="TextureRect" parent="TrainStandard/Entity/Player/FlashLightComponent"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.611765)
+material = SubResource("CanvasItemMaterial_oly03")
+layout_mode = 0
+offset_left = -880.0
+offset_top = -467.0
+offset_right = 18.0
+offset_bottom = 179.0
+texture = ExtResource("18_lyvfe")
+flip_h = true
+
+[node name="PlayWall" type="StaticBody2D" parent="TrainStandard"]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrainStandard/PlayWall"]
+position = Vector2(1492, 181)
+shape = SubResource("RectangleShape2D_ow8dy")
+disabled = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TrainStandard/PlayWall"]
+position = Vector2(621, 181)
+shape = SubResource("RectangleShape2D_ow8dy")
+disabled = true
+
+[node name="EvilPlayGround" type="Node2D" parent="TrainStandard" node_paths=PackedStringArray("player", "flash_light", "ghost_skip_component", "ground_cam", "play_wall", "dark_light")]
+script = ExtResource("19_batyu")
+player = NodePath("../Entity/Player")
+anomaly_evil = ExtResource("20_s6xge")
+flash_light = NodePath("../Entity/Player/FlashLightComponent")
+ghost_skip_component = NodePath("../../GhostSkipComponent")
+ground_cam = NodePath("../PlayGroundPcam")
+play_wall = NodePath("../PlayWall")
+dark_light = NodePath("../../CanvasLayer/DarkLight")
+
+[node name="SpwanPositionRight" type="Sprite2D" parent="TrainStandard/EvilPlayGround"]
+self_modulate = Color(0.4, 1, 0.99, 0.305882)
+position = Vector2(1515, 185.5)
+texture = ExtResource("1_1nkpb")
+hframes = 3
+vframes = 3
+
+[node name="SpwanPositionLeft" type="Sprite2D" parent="TrainStandard/EvilPlayGround"]
+self_modulate = Color(0.4, 1, 0.99, 0.305882)
+position = Vector2(596, 185.5)
+texture = ExtResource("1_1nkpb")
+flip_h = true
+hframes = 3
+vframes = 3
+
+[node name="EvilSpwanTimer" type="Timer" parent="TrainStandard/EvilPlayGround"]
+
+[node name="PlayTrigger" type="Area2D" parent="TrainStandard" node_paths=PackedStringArray("play_ground")]
+position = Vector2(1139, 183)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("37_w4m01")
+play_ground = NodePath("../EvilPlayGround")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrainStandard/PlayTrigger"]
+position = Vector2(-3, 0)
+shape = SubResource("RectangleShape2D_oly03")
+
+[node name="PlayGroundPcam" type="Node2D" parent="TrainStandard"]
+position = Vector2(1057, 182)
+script = ExtResource("33_50oqc")
+tween_resource = SubResource("Resource_oly03")
+draw_limits = true
+
+[node name="frontDoor" parent="." instance=ExtResource("41_i5sgb")]
+position = Vector2(-24, 356)
+entry_direction = 1
+transition_type = "zelda"
+push_distance = 100
+
+[node name="Exit" parent="." instance=ExtResource("41_i5sgb")]
+position = Vector2(2016, 352)
+entry_direction = 3
+transition_type = "zelda"
+push_distance = 100
+path_to_new_scene = "res://Gameplay/Levels/event_OL_00.tscn"
+entry_door_name = "frontDoor"
+
+[node name="BgTrainWall" type="Sprite2D" parent="."]
+texture = ExtResource("27_50oqc")
+centered = false
+
+[connection signal="area_entered" from="TrainStandard/Entity/Player/FlashLightComponent/FlashArea" to="TrainStandard/Entity/Player/FlashLightComponent" method="_on_flash_area_area_entered"]
+[connection signal="area_exited" from="TrainStandard/Entity/Player/FlashLightComponent/FlashArea" to="TrainStandard/Entity/Player/FlashLightComponent" method="_on_flash_area_area_exited"]
+[connection signal="body_entered" from="TrainStandard/PlayTrigger" to="TrainStandard/PlayTrigger" method="_on_body_entered"]
+
+[editable path="TrainStandard"]

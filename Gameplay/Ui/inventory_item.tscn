@@ -1,0 +1,157 @@
+[gd_scene load_steps=22 format=3 uid="uid://boo02aq5p0ren"]
+
+[ext_resource type="Script" uid="uid://cxrp3n8ojsp6o" path="res://Gameplay/Ui/inventory_item.gd" id="1_2ilvc"]
+[ext_resource type="Texture2D" uid="uid://c3tqknipyxiko" path="res://resources/ui/Inventory/item_button_normal.png" id="1_eukpq"]
+[ext_resource type="Texture2D" uid="uid://j3jwefoh4gp3" path="res://resources/ui/Inventory/item_button_hover.png" id="1_rcjdv"]
+[ext_resource type="Texture2D" uid="uid://fh0wrsojcgh6" path="res://resources/ui/Inventory/item_button_click.png" id="2_dmx0u"]
+[ext_resource type="Texture2D" uid="uid://dii7kjprh4ut2" path="res://resources/ui/icons/icons8.png" id="3_q5h6i"]
+[ext_resource type="Texture2D" uid="uid://den0u2tg8b1au" path="res://resources/ui/Inventory/item_button_equiped.png" id="5_dmx0u"]
+[ext_resource type="Texture2D" uid="uid://bbw0hc7n2fv7s" path="res://resources/ui/Inventory/button_circle.png" id="5_q5h6i"]
+[ext_resource type="Script" uid="uid://dyv5rhdafrdwf" path="res://Gameplay/Ui/button_focus_anim_conponent.gd" id="5_ya4fh"]
+[ext_resource type="FontFile" uid="uid://b420coqgx7cq0" path="res://resources/font/TsunagiGothic.ttf" id="6_un1rv"]
+[ext_resource type="Shader" uid="uid://ba1gx4f87q8m4" path="res://scene/pixel_outline.gdshader" id="7_ya4fh"]
+[ext_resource type="Script" uid="uid://dg2m4pgoontf4" path="res://Gameplay/Ui/inven_item_icon.gd" id="10_ya4fh"]
+[ext_resource type="PackedScene" uid="uid://bj1jpntptaqij" path="res://Gameplay/Sound/button_stream_player_component.tscn" id="12_1wjsl"]
+[ext_resource type="AudioStream" uid="uid://dhdypd0yggjy3" path="res://sound/sfx/ui/inven_item_focus1.wav" id="13_rmetv"]
+[ext_resource type="AudioStream" uid="uid://cuoroldrnbmfh" path="res://sound/sfx/ui/inven_item_focus2.wav" id="14_8jjyf"]
+[ext_resource type="AudioStream" uid="uid://dfvlo1gntb7je" path="res://sound/sfx/ui/inven_item_focus3.wav" id="15_pu1fe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_up3x5"]
+texture = ExtResource("1_eukpq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s15wg"]
+texture = ExtResource("2_dmx0u")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_babao"]
+texture = ExtResource("1_rcjdv")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ei14f"]
+shader = ExtResource("7_ya4fh")
+shader_parameter/clr = Color(0.851575, 0.843085, 0.860098, 1)
+shader_parameter/type = 2
+shader_parameter/thickness = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_su2a6"]
+font = ExtResource("6_un1rv")
+font_size = 70
+font_color = Color(0.247059, 0.223529, 0.262745, 1)
+outline_size = 16
+outline_color = Color(0.784314, 0.772549, 0.796078, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_q5h6i"]
+outline_size = 6
+outline_color = Color(0.0728426, 0.0728426, 0.0728426, 1)
+
+[node name="Inven_Item" type="Button" groups=["invenitembutton"]]
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -42.0
+offset_right = 36.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.835, 0.835)
+pivot_offset = Vector2(50, 52)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 9
+theme_override_styles/normal = SubResource("StyleBoxTexture_up3x5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_s15wg")
+theme_override_styles/hover = SubResource("StyleBoxTexture_babao")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_s15wg")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_s15wg")
+theme_override_styles/focus = SubResource("StyleBoxTexture_babao")
+autowrap_mode = 1
+icon_alignment = 1
+vertical_icon_alignment = 0
+script = ExtResource("1_2ilvc")
+
+[node name="ButtonFocusAnimConponent" type="Node" parent="." node_paths=PackedStringArray("target_button")]
+script = ExtResource("5_ya4fh")
+target_button = NodePath("..")
+
+[node name="SelectBox" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_dmx0u")
+
+[node name="IconRect" type="TextureRect" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_ei14f")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -27.5
+offset_right = 27.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(33, 33)
+texture = ExtResource("3_q5h6i")
+expand_mode = 1
+script = ExtResource("10_ya4fh")
+
+[node name="CostRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -19.1377
+offset_top = -67.7186
+offset_right = 80.8623
+offset_bottom = 32.2814
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.27, 0.27)
+pivot_offset = Vector2(50, 50)
+texture = ExtResource("5_q5h6i")
+
+[node name="CostLabel" type="Label" parent="CostRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "5"
+label_settings = SubResource("LabelSettings_su2a6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemName" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -44.8144
+offset_bottom = -13.8144
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 9
+text = "ItemName"
+label_settings = SubResource("LabelSettings_q5h6i")
+horizontal_alignment = 1
+clip_text = true
+
+[node name="ButtonStreamPlayerComponent" parent="." instance=ExtResource("12_1wjsl")]
+volume_db = 9.665
+focus = Array[AudioStream]([ExtResource("13_rmetv"), ExtResource("14_8jjyf"), ExtResource("15_pu1fe")])

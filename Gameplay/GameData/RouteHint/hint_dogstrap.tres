@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://cd0d5hxxmyfec"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_fairy"]
+[ext_resource type="Texture2D" uid="uid://duc5u270l488t" path="res://resources/ui/icons/icons_large3.png" id="2_fairy"]
+
+[resource]
+script = ExtResource("1_fairy")
+id = "dogstrap"
+title = "DESTINATION_HINT_DOGSTRAP_TITLE"
+texture = ExtResource("2_fairy")
+description = "DESTINATION_HINT_DOGSTRAP_INFO"
+partner_type = 0
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

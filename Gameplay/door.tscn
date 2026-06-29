@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://dsch54fxvgg58"]
+
+[ext_resource type="Script" uid="uid://dw2isglpr0kf6" path="res://Gameplay/door.gd" id="1_c366w"]
+[ext_resource type="PackedScene" uid="uid://bqsvbfwmhicx5" path="res://scene/UI/train_ui.tscn" id="2_jhok3"]
+[ext_resource type="Script" uid="uid://cv8gdy48jh0ql" path="res://Gameplay/DoorContactUI.gd" id="2_we8sd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wwsv"]
+size = Vector2(50, 300)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gu5q8"]
+size = Vector2(208, 329)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_akcnq"]
+size = Vector2(232, 334)
+
+[node name="Door" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_c366w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -153)
+shape = SubResource("RectangleShape2D_6wwsv")
+
+[node name="DoorContactUI" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_we8sd")
+
+[node name="DoorContactCollision2D" type="CollisionShape2D" parent="DoorContactUI"]
+position = Vector2(-94, -154.5)
+shape = SubResource("RectangleShape2D_gu5q8")
+
+[node name="TrainUI" parent="DoorContactUI" instance=ExtResource("2_jhok3")]
+visible = false
+offset_left = -139.0
+offset_top = -197.0
+offset_right = -139.0
+offset_bottom = -197.0
+
+[node name="BlockArea" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlockArea"]
+position = Vector2(-106, -157)
+shape = SubResource("RectangleShape2D_akcnq")
+debug_color = Color(0.693549, 0.487, 0.266099, 0.42)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="body_entered" from="DoorContactUI" to="DoorContactUI" method="_on_body_entered"]
+[connection signal="body_exited" from="DoorContactUI" to="DoorContactUI" method="_on_body_exited"]
+[connection signal="body_entered" from="BlockArea" to="." method="_on_block_area_body_entered"]

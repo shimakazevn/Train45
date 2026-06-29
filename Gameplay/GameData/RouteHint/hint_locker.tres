@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://dopxglyjckoiw"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_cf08o"]
+[ext_resource type="Texture2D" uid="uid://crcao3pwb2cin" path="res://resources/ui/icons/icons_large7.png" id="2_cf08o"]
+
+[resource]
+script = ExtResource("1_cf08o")
+id = "locker"
+title = "DESTINATION_HINT_LOCKER_TITLE"
+texture = ExtResource("2_cf08o")
+description = "DESTINATION_HINT_LOCKER_INFO"
+partner_type = -1
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

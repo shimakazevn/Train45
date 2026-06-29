@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqabotpanelsc"]
+
+[ext_resource type="Script" uid="uid://brwi33thhe5sm" path="res://Autoloads/qa_bot_panel.gd" id="1_qabot"]
+
+[node name="QABotPanel" type="PanelContainer"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 270.0
+offset_bottom = 402.0
+scale = Vector2(0.54, 0.54)
+script = ExtResource("1_qabot")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "── QABot ──"
+horizontal_alignment = 1
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "상태: OFF | 페이즈: IDLE"
+
+[node name="ToggleButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "시작"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="DialogueSkipCheck" type="CheckButton" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "대화 자동스킵"
+
+[node name="TutorialCheck" type="CheckButton" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "튜토리얼/확인창"
+
+[node name="HSceneCheck" type="CheckButton" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "H씬 자동진행"
+
+[node name="AnomalyCheck" type="CheckButton" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "이변 탐지/차징"
+
+[node name="EventCheck" type="CheckButton" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "호감도 이벤트"
+
+[node name="RunClearCheck" type="CheckButton" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "런스테이지 클리어"
+
+[node name="EarnTicketCheck" type="CheckButton" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "티켓 획득"
+
+[node name="EroCheatCheck" type="CheckButton" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "정념 부족시 치트충전"
+
+[node name="EquipAllCheck" type="CheckButton" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "코스트만큼 아이템 장착"

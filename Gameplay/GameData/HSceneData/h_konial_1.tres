@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://cho7p0gksvvc5"]
+
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_5lckx"]
+[ext_resource type="Texture2D" uid="uid://c6rrulvf3soo3" path="res://resources/ui/EventCoverImage/Hpreview_konial_4.png" id="1_e7epn"]
+
+[resource]
+script = ExtResource("1_5lckx")
+scene_description = "SCENE_COWGIRL"
+scene_name = "scene4"
+dialog_title = "konial_love_2"
+partner = 2
+love_ability = 2
+preview_texture = ExtResource("1_e7epn")
+is_position = Vector2(711, 229)
+unlock_chapter = 6
+ahen_keys = PackedStringArray("SCENE_KONIAL_AHEN_6", "SCENE_KONIAL_AHEN_7", "SCENE_KONIAL_AHEN_8", "SCENE_KONIAL_AHEN_9", "SCENE_KONIAL_AHEN_10")

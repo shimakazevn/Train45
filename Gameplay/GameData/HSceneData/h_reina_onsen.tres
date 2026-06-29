@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://d1jp5jnh2nf7d"]
+
+[ext_resource type="Texture2D" uid="uid://dt8gusdrm1onu" path="res://resources/ui/EventCoverImage/Hpreview_reina_9.png" id="1_cby2o"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_ce80o"]
+
+[resource]
+script = ExtResource("1_ce80o")
+main_love_event = false
+scene_description = "SCENE_LYING_SIDEWAYS"
+scene_name = "scene3"
+dialog_title = "e_onsen"
+stage_name = "stage_d_onsen"
+partner = 0
+love_ability = 0
+preview_texture = ExtResource("1_cby2o")
+is_position = Vector2(1355, 220)
+unlock_chapter = 0
+ahen_keys = PackedStringArray("SCENE_REINA_AHEN_1", "SCENE_REINA_AHEN_2", "SCENE_REINA_AHEN_3", "SCENE_REINA_AHEN_4", "SCENE_REINA_AHEN_5", "SCENE_REINA_AHEN_6", "SCENE_REINA_AHEN_7", "SCENE_REINA_AHEN_8", "SCENE_REINA_AHEN_9", "SCENE_REINA_AHEN_10")

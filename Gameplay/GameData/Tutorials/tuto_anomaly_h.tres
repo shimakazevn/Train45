@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Tutos" load_steps=4 format=3 uid="uid://ddce40mriwo4k"]
+
+[ext_resource type="Script" uid="uid://e4im8cmlv638" path="res://Gameplay/GameData/Tutorials/tutos.gd" id="1_ckhoe"]
+[ext_resource type="Script" uid="uid://cgivho4o0eoma" path="res://Gameplay/GameData/Tutorials/tuto.gd" id="2_t6tfk"]
+
+[sub_resource type="Resource" id="Resource_l6xdi"]
+script = ExtResource("2_t6tfk")
+description = "TUTO_GHOST_H"
+metadata/_custom_type_script = "uid://cgivho4o0eoma"
+
+[resource]
+script = ExtResource("1_ckhoe")
+id = "anomaly_ghost_h"
+title = "TUTO_TITLE_ANOMALY_GHOST_H"
+tuto_pages = Array[ExtResource("2_t6tfk")]([SubResource("Resource_l6xdi")])

@@ -1,0 +1,121 @@
+do GameEvents.emit_cutscene_play("e_reverse_train_cut_1")
+join reina left 
+emotion reina Shy 
+update reina [extra_data="show Etc/Sweat"]
+이 칸에 들어서고부터 레이나의 표정이 유독 좋지 않다. #id:d34
+- 레이나, 어디 불편해? #id:d35
+emotion reina Suprised 
+reina: 아.. 신경 쓰이게 했군요. 죄송해요. #id:d36
+emotion reina Shy 
+reina: 그동안 앞으로 향하는 열차에 익숙해지다 보니.. #id:d37
+reina: 갑자기 반대 방향이 되니 어지러워서 멀미가.. #id:d38
+- 잠시 쉬어갈까? #id:d39
+reina: 네.. 그게 좋겠어요. 잠시면 되니까.. #id:d3a
+do TransitionScreen.dialog_transition()
+do GameEvents.emit_cutscene_play("RESET")
+update reina right 
+reina: ... #id:d3b
+reina: 의자에 앉아 있어도.. 여전히 어지러워요. #id:d3c
+reina: 저 생각보다 달팽이관이 약해서.. #id:d3d
+emotion reina Angry 
+reina: 지각해도 택시를 타지 않는 이유가 그거에요. #id:d3e
+reina: 출근시간이 붐벼도 전철을 선호하는 이유가 멀미 때문이죠. #id:d3f
+reina: 으윽.. 어떻게 하면 편해질지.. #id:d40
+- 다르게 앉아 보는건 어떨까? #id:d41
+emotion reina Idle 
+reina: 아.. 그렇군요. 열차가 향하는 방향으로 앉으면 좀 더 편할까요? #id:d42
+update reina center [mirrored="true" move_time="1.0"]
+reina: 이렇게.. 옆으로 걸쳐 앉으면.. #id:d43
+emotion reina Suprised 
+reina: 읏!으으.. #id:d44
+reina: 별 효과 없는 거 같아요. #id:d45
+reina: 그렇다면 반대로 앉으면.. #id:d46
+emotion reina Smile 
+reina: ..어..어쩐지 당신을 바라보는 모습이 됐네요. #id:d47
+reina: ... #id:d48
+reina: ..좀 괜찮아 지고 있어요. #id:d49
+reina: 오히려 열차를 등지고 앉은 게 더 효과가 있네요. #id:d4a
+reina: 아니면 혹시.. #id:d4b
+reina: 저기. 얼굴 좀 더 보여주세요. 숨이 닿게 가까이.. #id:d4c
+emotion reina Shy 
+reina: ..아. 더 나아졌어요. #id:d4d
+reina: 신기하네요.. 엄청 편한 느낌.. #id:d4e
+emotion reina Serious 
+reina: 더 가까이 붙어도 되나요? #id:d4f
+reina: 가까이 할 수록 두근거려서.. 어지러운 게 사라지는 거 같아요. #id:d50
+reina: ..당신의 숨이 닿고 있어요.. #id:d51
+잠시동안 서로를 바라 본 채로 있는다. 이미 섹스까지 해 버렸지만.. 얼굴을 가까이 마주하는 건 처음이다. #id:d52
+어지럼증이 좀 나아졌는지 여유를 찾은 레이나는 상황을 깨닫고 눈을 마주치지 못한다. #id:d53
+반쯤 감긴 눈의 길다란 속눈썹이 살짝 떨리고, 이내 무언가 결심한듯 입을 땐다. #id:d54
+reina: 저.. 더 나아질 방법이 떠오른 거 같아요.. #id:d55
+reina: ..... #id:d56
+emotion reina Smile 
+update reina [extra_data="show Etc/Blur, hide Etc/Sweat"]
+reina: ..키스..해도 될까요? #id:d57
+- ..키스? #id:d58
+reina: 그게.. 아직까지 해보지 못했잖아요? 그보다 더한 건 많이 했지만.. #id:d59
+reina: 서로의 거리가 이정도로 가까운 건 처음이라.. #id:d5a
+emotion reina Suprised 
+reina: 무.. 물론 키스는.. 서로가 사랑해야 하는 거겠죠. #id:d5b
+emotion reina Shy 
+reina: 하지만 당신의 입술.. 조금만 빌리면. 어지러운 게 사라질 거 같으니까. #id:d5c
+reina: 혹시.. 너무 무리한 부탁일까요? #id:d5d
+- ..그럴 리가. #id:d5e
+- 나라도 괜찮다면.. 얼마든지. #id:d5f
+emotion reina Suprised 
+말을 마치자 마자 레이나의 고개를 잡아 입술을 맞댄다. #id:d60
+갑작스런 접촉에 반쯤 벌어졌던 레이나의 입술은 이내 힘이 풀리고, 서로의 입술은 조금의 틈도 생기지 않을 정도로 밀착된다. #id:d61
+leave reina
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("scene2_1")
+do GameEvents.game_state_change(1)
+do GameEvents.emit_camera_order_change(0, 100)
+서로의 혀가 섞이며 나는 음란한 소리만이 전차칸을 채운다. #id:d62
+reina: 으음..츄.. #id:d63
+reina: 심장 소리도 들릴 정도로.. 무척 안심돼요.. 우웃..음.. #id:d64
+그녀의 작고 말랑한 혀가 어색하지만 꼼꼼히 내 혀를 따라 반응하며 기분좋은 곳을 찾아낸다. #id:d65
+잠시 숨을 돌리려 고개를 때자, 서로의 타액이 섞여 생기는 끈이 길게 늘어진다. #id:d66
+하지만 그 짧은 틈도 허용하지 않는 듯, 이번엔 레이나의 고개가 나에게 급하게 다가오며 입술을 덮는다. #id:d67
+reina: 으음.. 츄우.. 으응.. #id:d68
+reina: 입술.. 때지 말아 주세요.. #id:d69
+reina: 이렇게 안 하면 어지러워져서 괴로우니까.. 쥬웃..응..츄.. #id:d6a
+평소와 달리 적극적인 모습에 이미 커질대로 커진 자지를 본능적으로 그녀의 아랫배에 문지른다. #id:d6b
+reina: 아..아응..제 배에 무언가 닿고 있어요. #id:d6c
+reina: 당신 자지.. 이렇게나 커져서. 제 배를 찌르고 있어요. #id:d6d
+레이나는 자신의 배 아래 닿는 자지를 상냥하게 쓰다듬는다. #id:d6e
+reina: 당신은.. 저를 좋아하나요? 저는.. 아직 잘 모르겠어요. #id:d6f
+reina: 하지만 어떤 핑계를 대서라도 먼저 키스해달라고 말할 만큼, 이상한 마음이 들어요. #id:d70
+reina: 당신은.. 어떠신가요? #id:d71
+지금까지 이 전차에서 함께 하면서. 당연하지만 그렇기 때문에 생각하지 않았던 질문이다. #id:d72
+표현하지 않았으니까, 그녀는 불안한 마음이었을까? 내게 모든 걸 내주면서도.. #id:d73
+45번 전차의 일반적이지 않은 환경 때문에, 코니알의 장난 때문에 몸을 섞었다 라고. '그녀 역시' 나같이 생각했던 걸까? #id:d74
+아니, 그렇지 않아. 적어도 지금 이 순간만큼은. 필사적으로 전하고 싶다. #id:d75
+그 방법이 이런 입맞춤으로 전해질 수 있다면.. 얼마든지.. #id:d76
+- 사랑해. 레이나. #id:d77
+순간 격렬하게 섞이던 혀의 움직임이 멈춘다. #id:d78
+밀착한 입술이 떨어지고, 붉어진 볼을 비비며 그녀는 작게 속삭인다. #id:d79
+reina: 저기..이대로 해 버릴까요? #id:d7a
+reina: 저는 더 참을 수 없을 거 같아요.. #id:d7b
+reina: 진하게 키스하면서.. 마주 본 채로. #id:d7c
+reina: 지금은 당신 외엔 어떤 생각도 들지 않으니까.. #id:d7d
+reina: 저는 이미 받아들일 준비 됐으니.. #id:d7e
+reina: 자지.. 넣어 주세요. #id:d7f
+[signal arg="scene2"]
+reina: 아앙..앗..츄..츄웁.. 읏.. #id:d80
+reina: 더..더 싸주세요.. 츄웁.. #id:d81
+reina: 키스하면서 하는 섹스..좋아.. #id:d82
+reina: 으응..으.. 하아.. 하아.. #id:d83
+reina: 정말.. 좋았어요.. #id:d84
+reina: 아. 아직 빼지 말아 주세요. #id:d85
+reina: 이대로.. 넣은 채로 잠시 있고 싶어요. #id:d86
+reina: 무척 따듯하고 기분 좋은 여운이라.. #id:d87
+reina: 저를 감싸고 있는 손도 포근해서 좋아요. #id:d88
+reina: 이대로 얼굴 보고 있어요 되나요?.. #id:d89
+reina: 마음이 엄청 편해지거든요. 어떤 풍경보다.. #id:d8a
+reina: 당신도.. 다른 곳 말고.. 절 봐주세요. #id:d8b
+reina: 이렇게 마주 보며 있는게 좋아요. #id:d8c
+reina: 멀미요?.. 이젠 아무래도 상관 없어요. #id:d8d
+reina: 저기.. 좀 더 키스 할까요? #id:d8e
+do TransitionScreen.dialog_transition()
+do GameEvents.anim_change("idle")
+do GameEvents.emit_npc_level_up(0)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bvddyffn8losd"]
+
+[ext_resource type="Shader" uid="uid://chq1y6cne8sfn" path="res://Gameplay/pause_menu.gdshader" id="1_vkb0t"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5kat2"]
+shader = ExtResource("1_vkb0t")
+shader_parameter/lod = 1.1
+shader_parameter/mix_percentage = 0.2
+
+[node name="ColorRect" type="ColorRect"]
+material = SubResource("ShaderMaterial_5kat2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true

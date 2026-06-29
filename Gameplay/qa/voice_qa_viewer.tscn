@@ -1,0 +1,154 @@
+[gd_scene load_steps=2 format=3 uid="uid://bidvacsvspst"]
+
+[ext_resource type="Script" uid="uid://cqshhx1xru4ip" path="res://Gameplay/qa/voice_qa_viewer.gd" id="1_viewer"]
+
+[node name="VoiceQaViewer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_viewer")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 99
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.08, 0.08, 0.97)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ColorRect"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Voice QA Viewer"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+
+[node name="SectionsContainer" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LoadingLabel" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Loading..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoadingBar" type="ProgressBar" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="RightPanel" type="VBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="LabelKey" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel"]
+layout_mode = 2
+text = "Jump to Key"
+
+[node name="KeyRow" type="HBoxContainer" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel"]
+layout_mode = 2
+
+[node name="KeyInput" type="LineEdit" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel/KeyRow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "hex id..."
+
+[node name="JumpButton" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel/KeyRow"]
+layout_mode = 2
+text = "GO"
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel"]
+layout_mode = 2
+
+[node name="CollapseAllButton" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Collapse All"
+
+[node name="LogIssuesButton" type="Button" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel"]
+layout_mode = 2
+text = "Log Voice Issues"
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel"]
+layout_mode = 2
+
+[node name="LabelCharFilter" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Character Filter"
+
+[node name="CharFilterOption" type="OptionButton" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+
+[node name="HSeparator3" type="HSeparator" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel"]
+layout_mode = 2
+
+[node name="LabelSections" type="Label" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Sections"
+
+[node name="SectionOptionButton" type="OptionButton" parent="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+
+[node name="Close" type="Button" parent="CanvasLayer/ColorRect/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "X"
+
+[connection signal="text_submitted" from="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel/KeyRow/KeyInput" to="." method="_on_key_jump"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel/KeyRow/JumpButton" to="." method="_on_jump_pressed"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel/CollapseAllButton" to="." method="_toggle_all"]
+[connection signal="pressed" from="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel/LogIssuesButton" to="." method="_log_voice_issues"]
+[connection signal="item_selected" from="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel/CharFilterOption" to="." method="_on_char_filter_changed"]
+[connection signal="item_selected" from="CanvasLayer/ColorRect/MarginContainer/HBoxContainer/ScrollContainer/RightPanel/SectionOptionButton" to="." method="_on_section_selected"]

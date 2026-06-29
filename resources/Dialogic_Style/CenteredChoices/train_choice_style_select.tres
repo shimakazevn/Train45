@@ -1,0 +1,8 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bunrtmoxje2wi"]
+
+[ext_resource type="Texture2D" uid="uid://b0e6nf5527y46" path="res://resources/ui/gui/choice_hover.png" id="1_1egn2"]
+
+[resource]
+content_margin_left = 24.0
+texture = ExtResource("1_1egn2")
+modulate_color = Color(1, 1, 1, 0.607843)

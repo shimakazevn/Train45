@@ -1,0 +1,168 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4b0r7mu4ctve"]
+
+[ext_resource type="Script" uid="uid://db5msaj346efc" path="res://Autoloads/BugReporterDialog.gd" id="1_dialog"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b4b37"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ky77o"]
+font_size = 12
+
+[node name="BugReporterDialog" type="CanvasLayer"]
+layer = 128
+script = ExtResource("1_dialog")
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.75)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -159.0
+offset_right = 336.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.64, 0.64)
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="ThumbRect" type="TextureRect" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 110)
+layout_mode = 2
+expand_mode = 2
+stretch_mode = 5
+
+[node name="InfoLabel" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+label_settings = SubResource("LabelSettings_b4b37")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 4
+columns = 2
+
+[node name="LabelName" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Tester Name:"
+label_settings = SubResource("LabelSettings_ky77o")
+
+[node name="TesterNameInput" type="LineEdit" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Enter your name"
+
+[node name="LabelPriority" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Priority:"
+label_settings = SubResource("LabelSettings_ky77o")
+
+[node name="PriorityOption" type="OptionButton" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LabelBugType" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Bug Type:"
+label_settings = SubResource("LabelSettings_ky77o")
+
+[node name="BugTypeOption" type="OptionButton" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LabelRepro" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Reproducibility:"
+label_settings = SubResource("LabelSettings_ky77o")
+
+[node name="ReproOption" type="OptionButton" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DescLabel" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Description:"
+label_settings = SubResource("LabelSettings_ky77o")
+
+[node name="DescInput" type="TextEdit" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+placeholder_text = "e.g. Character gets stuck in the wall when jumping near floor 3"
+wrap_mode = 1
+
+[node name="StepsLabel" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Steps to Reproduce (optional):"
+label_settings = SubResource("LabelSettings_ky77o")
+
+[node name="StepsInput" type="TextEdit" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+placeholder_text = "e.g. 1. Enter floor 3 → 2. Jump near the left wall"
+wrap_mode = 1
+
+[node name="StatusLabel" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="CancelButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Cancel"
+
+[node name="SendButton" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Submit"
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = 19.0
+offset_top = 7.0
+offset_right = 86.0
+offset_bottom = 31.7917
+size_flags_horizontal = 4
+text = "Bug Report"
+label_settings = SubResource("LabelSettings_b4b37")
+horizontal_alignment = 1

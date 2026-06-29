@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="RouteHintPage" load_steps=3 format=3 uid="uid://bt1yrbgcw6g1e"]
+
+[ext_resource type="Script" uid="uid://v2kv8ek0jq7c" path="res://Gameplay/GameData/RouteHint/route_hint.gd" id="1_r0wd0"]
+[ext_resource type="Texture2D" uid="uid://b5n01t2yxnclu" path="res://resources/ui/icons/hint_icon_1.png" id="2_r0wd0"]
+
+[resource]
+script = ExtResource("1_r0wd0")
+id = "partner_anomaly"
+title = "DESTINATION_HINT_PARTNER_ANOMALY_TITLE"
+texture = ExtResource("2_r0wd0")
+description = "DESTINATION_HINT_PARTNER_ANOMALY_INFO"
+partner_type = -1
+metadata/_custom_type_script = "uid://v2kv8ek0jq7c"

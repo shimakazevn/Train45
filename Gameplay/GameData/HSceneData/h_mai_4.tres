@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://bqvhmcahly054"]
+
+[ext_resource type="Texture2D" uid="uid://bwm65mwc8l8vy" path="res://resources/ui/EventCoverImage/Hpreview_mai_3.png" id="1_gmck7"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_qj2ko"]
+
+[resource]
+script = ExtResource("1_qj2ko")
+main_love_event = true
+scene_description = "SCENE_PAIZURI"
+scene_name = "scene6"
+dialog_title = "e_paizuri_mai"
+stage_name = "stage_33"
+partner = 1
+love_ability = 2
+preview_texture = ExtResource("1_gmck7")
+is_position = Vector2(1216, 249)
+ahen_keys = PackedStringArray("SCENE_MAI_AHEN_1", "SCENE_MAI_AHEN_2", "SCENE_MAI_AHEN_3")

@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dewkhp222eflk"]
+
+[ext_resource type="Script" uid="uid://bkar60obw0nqp" path="res://Gameplay/Ui/tutorial_block.gd" id="1_qg8id"]
+[ext_resource type="PackedScene" uid="uid://c6hlho66gl0fa" path="res://Gameplay/Ui/tutorial_rect.tscn" id="2_ydiu4"]
+
+[node name="TutorialBlockRect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_qg8id")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="TutorialBlock" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 594.0
+offset_top = 15.0
+offset_right = -2.0
+offset_bottom = -301.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.243137)
+
+[node name="TutorialRect" parent="CanvasLayer" node_paths=PackedStringArray("rect") instance=ExtResource("2_ydiu4")]
+rect = [NodePath("../TutorialBlock")]
+
+[node name="Label" type="Label" parent="CanvasLayer/TutorialRect"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 394.0
+offset_top = 73.0
+offset_right = 636.0
+offset_bottom = 97.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "TUTO_PRESS_KANKAN_ICON"
+horizontal_alignment = 2

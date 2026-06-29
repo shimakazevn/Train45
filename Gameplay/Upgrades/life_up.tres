@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://cr0ij3wtyqx5m"]
+
+[ext_resource type="Script" uid="uid://mkaxgrunbvhi" path="res://Gameplay/Upgrades/ability_upgrade.gd" id="1_444j0"]
+[ext_resource type="Texture2D" uid="uid://dii7kjprh4ut2" path="res://resources/ui/icons/icons8.png" id="1_tkxhh"]
+
+[resource]
+script = ExtResource("1_444j0")
+icon = ExtResource("1_tkxhh")
+id = "life_up"
+price = Array[int]([300])
+max_quantity = 1
+cost = 8
+name = "LIFE_UP"
+description = "LIFE_UP_DESCRIPTION"

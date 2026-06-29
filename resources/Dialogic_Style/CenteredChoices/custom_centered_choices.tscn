@@ -1,0 +1,264 @@
+[gd_scene load_steps=12 format=3 uid="uid://chvr8odk3rhoo"]
+
+[ext_resource type="Script" uid="uid://gn67ox1fu34q" path="res://resources/Dialogic_Style/CenteredChoices/vn_choice_layer.gd" id="1_kurgw"]
+[ext_resource type="Script" uid="uid://clsbef3itep1w" path="res://addons/dialogic/Modules/Choice/node_choice_button.gd" id="1_w632k"]
+[ext_resource type="Theme" uid="uid://csjm024dvyee2" path="res://resources/Dialogic_Style/CenteredChoices/train_dialogic_theme.tres" id="2_5r107"]
+[ext_resource type="Script" uid="uid://dmyrjpdl4mxlj" path="res://addons/dialogic/Modules/Choice/node_button_sound.gd" id="2_mgko6"]
+[ext_resource type="Script" uid="uid://c2bek2d72nrim" path="res://resources/Dialogic_Style/CenteredChoices/choices_component.gd" id="2_ostcx"]
+[ext_resource type="AudioStream" uid="uid://b6c1p14bc20p1" path="res://addons/dialogic/Example Assets/sound-effects/typing1.wav" id="3_mql8i"]
+[ext_resource type="Script" uid="uid://d23b1v0ulh3l4" path="res://resources/Dialogic_Style/CenteredChoices/choiced_anim.gd" id="4_82xwn"]
+[ext_resource type="AudioStream" uid="uid://c2viukvbub6v6" path="res://addons/dialogic/Example Assets/sound-effects/typing4.wav" id="4_420fr"]
+[ext_resource type="PackedScene" uid="uid://c7tthty2e1w31" path="res://Gameplay/Ui/auto_shirink_component.tscn" id="6_7gu7j"]
+[ext_resource type="PackedScene" uid="uid://cvorrprxskobm" path="res://Gameplay/font_change_component.tscn" id="8_waicv"]
+
+[sub_resource type="AudioStream" id="AudioStream_pe27w"]
+
+[node name="VN_ChoiceLayer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_kurgw")
+font_size_custom = 13
+boxes_fill_width = false
+
+[node name="Choices" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -333.0
+offset_top = -185.0
+offset_right = 111.0
+offset_bottom = 185.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+alignment = 1
+script = ExtResource("2_ostcx")
+metadata/_edit_layout_mode = 1
+
+[node name="DialogicNode_ChoiceButton1" type="Button" parent="Choices"]
+texture_filter = 2
+custom_minimum_size = Vector2(444, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_5r107")
+theme_override_font_sizes/font_size = 13
+text = "ssssssssss"
+alignment = 0
+script = ExtResource("1_w632k")
+
+[node name="ChoicedAnim" type="Node" parent="Choices/DialogicNode_ChoiceButton1"]
+script = ExtResource("4_82xwn")
+
+[node name="AutoShirinkComponent" parent="Choices/DialogicNode_ChoiceButton1" instance=ExtResource("6_7gu7j")]
+max_font_size = 13
+min_font_size = 11
+fixed_ref_width = 500.0
+
+[node name="DialogicNode_ChoiceButton2" type="Button" parent="Choices"]
+texture_filter = 2
+custom_minimum_size = Vector2(444, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_5r107")
+theme_override_font_sizes/font_size = 13
+text = "Some text"
+alignment = 0
+script = ExtResource("1_w632k")
+
+[node name="ChoicedAnim" type="Node" parent="Choices/DialogicNode_ChoiceButton2"]
+script = ExtResource("4_82xwn")
+
+[node name="AutoShirinkComponent" parent="Choices/DialogicNode_ChoiceButton2" instance=ExtResource("6_7gu7j")]
+max_font_size = 13
+min_font_size = 11
+fixed_ref_width = 500.0
+
+[node name="DialogicNode_ChoiceButton3" type="Button" parent="Choices"]
+texture_filter = 2
+custom_minimum_size = Vector2(444, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_5r107")
+theme_override_font_sizes/font_size = 13
+text = "Some text"
+alignment = 0
+script = ExtResource("1_w632k")
+
+[node name="ChoicedAnim" type="Node" parent="Choices/DialogicNode_ChoiceButton3"]
+script = ExtResource("4_82xwn")
+
+[node name="AutoShirinkComponent" parent="Choices/DialogicNode_ChoiceButton3" instance=ExtResource("6_7gu7j")]
+max_font_size = 13
+min_font_size = 11
+fixed_ref_width = 500.0
+
+[node name="DialogicNode_ChoiceButton4" type="Button" parent="Choices"]
+texture_filter = 2
+custom_minimum_size = Vector2(444, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_5r107")
+theme_override_font_sizes/font_size = 13
+text = "Some text"
+alignment = 0
+script = ExtResource("1_w632k")
+
+[node name="ChoicedAnim2" type="Node" parent="Choices/DialogicNode_ChoiceButton4"]
+script = ExtResource("4_82xwn")
+
+[node name="AutoShirinkComponent" parent="Choices/DialogicNode_ChoiceButton4" instance=ExtResource("6_7gu7j")]
+max_font_size = 13
+min_font_size = 11
+fixed_ref_width = 500.0
+
+[node name="DialogicNode_ChoiceButton5" type="Button" parent="Choices"]
+texture_filter = 2
+custom_minimum_size = Vector2(444, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_5r107")
+theme_override_font_sizes/font_size = 13
+text = "Some text"
+alignment = 0
+script = ExtResource("1_w632k")
+
+[node name="ChoicedAnim3" type="Node" parent="Choices/DialogicNode_ChoiceButton5"]
+script = ExtResource("4_82xwn")
+
+[node name="AutoShirinkComponent" parent="Choices/DialogicNode_ChoiceButton5" instance=ExtResource("6_7gu7j")]
+max_font_size = 13
+min_font_size = 11
+fixed_ref_width = 500.0
+
+[node name="DialogicNode_ChoiceButton6" type="Button" parent="Choices"]
+texture_filter = 2
+custom_minimum_size = Vector2(444, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_5r107")
+theme_override_font_sizes/font_size = 13
+text = "Some text"
+alignment = 0
+script = ExtResource("1_w632k")
+
+[node name="ChoicedAnim4" type="Node" parent="Choices/DialogicNode_ChoiceButton6"]
+script = ExtResource("4_82xwn")
+
+[node name="AutoShirinkComponent" parent="Choices/DialogicNode_ChoiceButton6" instance=ExtResource("6_7gu7j")]
+max_font_size = 13
+min_font_size = 11
+fixed_ref_width = 500.0
+
+[node name="DialogicNode_ChoiceButton7" type="Button" parent="Choices"]
+texture_filter = 2
+custom_minimum_size = Vector2(444, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_5r107")
+theme_override_font_sizes/font_size = 13
+text = "Some text"
+alignment = 0
+script = ExtResource("1_w632k")
+
+[node name="ChoicedAnim5" type="Node" parent="Choices/DialogicNode_ChoiceButton7"]
+script = ExtResource("4_82xwn")
+
+[node name="AutoShirinkComponent" parent="Choices/DialogicNode_ChoiceButton7" instance=ExtResource("6_7gu7j")]
+max_font_size = 13
+min_font_size = 11
+fixed_ref_width = 500.0
+
+[node name="DialogicNode_ChoiceButton8" type="Button" parent="Choices"]
+texture_filter = 2
+custom_minimum_size = Vector2(444, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_5r107")
+theme_override_font_sizes/font_size = 13
+text = "Some text"
+alignment = 0
+script = ExtResource("1_w632k")
+
+[node name="ChoicedAnim6" type="Node" parent="Choices/DialogicNode_ChoiceButton8"]
+script = ExtResource("4_82xwn")
+
+[node name="AutoShirinkComponent" parent="Choices/DialogicNode_ChoiceButton8" instance=ExtResource("6_7gu7j")]
+max_font_size = 13
+min_font_size = 11
+fixed_ref_width = 500.0
+
+[node name="DialogicNode_ChoiceButton9" type="Button" parent="Choices"]
+texture_filter = 2
+custom_minimum_size = Vector2(444, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_5r107")
+theme_override_font_sizes/font_size = 13
+text = "Some text"
+alignment = 0
+script = ExtResource("1_w632k")
+
+[node name="ChoicedAnim7" type="Node" parent="Choices/DialogicNode_ChoiceButton9"]
+script = ExtResource("4_82xwn")
+
+[node name="AutoShirinkComponent" parent="Choices/DialogicNode_ChoiceButton9" instance=ExtResource("6_7gu7j")]
+max_font_size = 13
+min_font_size = 11
+fixed_ref_width = 500.0
+
+[node name="DialogicNode_ChoiceButton10" type="Button" parent="Choices"]
+texture_filter = 2
+custom_minimum_size = Vector2(444, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_5r107")
+theme_override_font_sizes/font_size = 13
+text = "Some text"
+alignment = 0
+script = ExtResource("1_w632k")
+
+[node name="ChoicedAnim8" type="Node" parent="Choices/DialogicNode_ChoiceButton10"]
+script = ExtResource("4_82xwn")
+
+[node name="AutoShirinkComponent" parent="Choices/DialogicNode_ChoiceButton10" instance=ExtResource("6_7gu7j")]
+max_font_size = 13
+min_font_size = 11
+fixed_ref_width = 500.0
+
+[node name="DialogicNode_ChoiceButton11" type="Button" parent="Choices"]
+texture_filter = 2
+custom_minimum_size = Vector2(444, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_5r107")
+theme_override_font_sizes/font_size = 13
+text = "Some text"
+alignment = 0
+script = ExtResource("1_w632k")
+
+[node name="ChoicedAnim9" type="Node" parent="Choices/DialogicNode_ChoiceButton11"]
+script = ExtResource("4_82xwn")
+
+[node name="AutoShirinkComponent" parent="Choices/DialogicNode_ChoiceButton11" instance=ExtResource("6_7gu7j")]
+max_font_size = 13
+min_font_size = 11
+fixed_ref_width = 500.0
+
+[node name="DialogicNode_ButtonSound" type="AudioStreamPlayer" parent="Choices"]
+unique_name_in_owner = true
+bus = &"Sfx"
+script = ExtResource("2_mgko6")
+sound_pressed = ExtResource("3_mql8i")
+sound_hover = ExtResource("4_420fr")
+sound_focus = SubResource("AudioStream_pe27w")
+
+[node name="FontChangeComponent" parent="." node_paths=PackedStringArray("target_node") instance=ExtResource("8_waicv")]
+target_node = NodePath("..")

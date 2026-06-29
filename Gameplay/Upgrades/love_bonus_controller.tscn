@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnfjykanys71h"]
+
+[ext_resource type="Script" uid="uid://b4fuxwr4xmj5r" path="res://Gameplay/Upgrades/love_bonus_controller.gd" id="1_3e7sm"]
+[ext_resource type="PackedScene" uid="uid://cnmiurhil6t6y" path="res://Gameplay/Upgrades/love_bonus.tscn" id="2_feo1o"]
+
+[node name="LoveBonusController" type="Node2D"]
+script = ExtResource("1_3e7sm")
+love_bonus = ExtResource("2_feo1o")

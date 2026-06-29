@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://btlthfdhea2op"]
+
+[ext_resource type="Shader" path="res://scene/shader/stage_8_bg3.gdshader" id="1_fvt8j"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_fvt8j")
+shader_parameter/final_uv_x = null

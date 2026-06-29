@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://6g1orheq6jnc"]
+
+[ext_resource type="Script" uid="uid://w6ss1ksqmkp5" path="res://addons/dialogic/Modules/Background/DefaultBackgroundScene/default_background.gd" id="1_1sa5n"]
+[ext_resource type="Shader" uid="uid://bxwds3tmnvnf4" path="res://Gameplay/NPC/vignette.gdshader" id="2_5p11v"]
+[ext_resource type="Texture2D" uid="uid://chby4tc85mlg8" path="res://resources/cutscene/cutscene_swimsuit.png" id="3_u53an"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5kat2"]
+shader = ExtResource("2_5p11v")
+shader_parameter/vignette_intensity = 0.38
+shader_parameter/vignette_opacity = 0.5
+shader_parameter/vignette_rgb = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1sa5n")
+metadata/_edit_lock_ = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_5kat2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Image" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = ExtResource("3_u53an")
+expand_mode = 2
+stretch_mode = 5

@@ -1,0 +1,85 @@
+if {npc.type} == 0:
+	label reina #id:136b
+	join reina center
+	reina: 이 전차.. 상당히 오래동안 멈추지 않고 있어요. #id:136c
+	reina: 어디에도 노선에 대한 정보는 써 있지 않고요.. #id:136d
+	emotion reina Serious 
+	reina: 45번.. 그런 이름의 전차는 처음 들어 봐요. 탑승한 사람이 우리 외에 없는 걸 봐선.. 운행 정비중인 전차일수도 있겠네요. #id:136e
+	emotion reina Shy 
+	reina: 혹시 관리자 분과 마주치면.. 똑바로 사과해야겠어요. 무단 탑승한 책임을 묻는다거나 하진 않겠죠? #id:136f
+	- 그런 걱정까지는 안 해도.. #id:1370
+	leave reina
+	join mai center 
+	emotion mai Smile 
+	mai: 맞아! 문을 열어둔 게 잘못이야. 어떻게든 될 테니 걱정하지 마! #id:1371
+	leave mai
+	join reina center
+	reina: 네.. 고마워요. 이런저런 걱정을 자주 하는 성격이라.. #id:1372
+	reina: 그건 그렇고. 제 소개를 안 했네요. 타카하시 레이나 입니다. 아키하바라의 작은 회사에 다니고 있어요. #id:1373
+	emotion reina Smile 
+	reina: 당신과는 몇 번인가 마주친 기억이 있어요. #id:1374
+	- 실은 나도 몇 번인가 눈이 마주쳐서.. #id:1375
+	leave reina
+	join mai center 
+	emotion mai Idle 
+	mai: 뭐야, 둘은 구면인 거였어? #id:1376
+	leave mai
+	join reina center 
+	emotion reina Idle 
+	reina: 아뇨, 같은 전철을 타느라 얼굴이 익었던 거 같네요. 실제로 대화하는 건 이번이 처음이에요. #id:1377
+	reina: 저 분이 핸드폰을 떨어트리는 걸 우연히 봐서.. 알려드리려고 쫓아 오다가 전차에 올랐어요. #id:1378
+	leave reina
+	join mai center
+	mai: 그렇구나.. 이것도 정말 우연이네. 우리들 나이도 비슷해 보이고. #id:1379
+	leave mai
+	join reina center
+	reina: 네. 저는 상관 없으니 두분 다 편하게 대해 주세요. #id:137a
+	- 만나서 반가워, 레이나. #id:137b
+	leave reina
+	join mai center 
+	emotion mai Smile 
+	mai: 나도, 잘 부탁해! 레이나! #id:137c
+	leave mai
+	join reina center 
+	emotion reina Smile 
+	reina: 후훗, 네. 잘 부탁드립니다. #id:137d
+	emotion reina Serious 
+	reina: 그나저나, 아까부터 나오던 이 방송.. 신경이 쓰이네요. 내용도 심상치 않고, 앞쪽에서 들려오는 거 같아요. #id:137e
+	reina: 관리자 분이 있다면 제대로 설명을 드려야 하겠어요. 앞 칸으로 가서 역장..이라고 하는 사람을 찾아 보도록 하죠. #id:137f
+	do GameEvents.emit_quest_process("prologue_reina")
+elif {npc.type} == 1:
+	label mai #id:1380
+	join mai center 
+	emotion mai Surprised 
+	mai: 45번 전차라고? 망했다.. 완전 잘못 타 버렸잖아. #id:1381
+	emotion mai Dislike 
+	mai: 그것보다.. 그런 이름의 전차가 지나는 역이 있었던가? 이번에 새로 생긴 역이려나? #id:1382
+	mai: 너는 어떻게 생각.. 아. 그러고 보니 통성명도 안 했잖아! 미안! #id:1383
+	emotion mai Idle 
+	mai: 내 이름은 아사쿠라 마이! 오카치마치역 근처에 살고 있어. 상점가에서 엄마 일을 돕는 중이야! #id:1384
+	mai: 나이도 비슷한 거 같은데 편하게 말해도 돼! #id:1385
+	- 반가워. 마이. #id:1386
+	leave mai
+	join reina center
+	reina: 네, 저기.. 마이 양, 잘 부탁드려요. 전 이렇게 하는 게 편해서.. #id:1387
+	leave reina
+	join mai center
+	mai: 그래? 상관 없어! #id:1388
+	mai: 친구들이랑 만나서 놀기로 약속했는데, 가는 도중에 핸드폰 배터리가 다 되는 바람에.. #id:1389
+	mai: 주변 사람들에게 전화를 빌리고 있었지. 근데 어쩐지 전부 거절당하는거 있지? #id:138a
+	- 요즘은 함부로 자기 물건은 빌려주지 않으니.. #id:138b
+	emotion mai Smile 
+	mai: 그래서 포기하고 돌아가는 길이었어. 그 와중에 전철은 또 잘못 타 버렸네. 하핫! #id:138c
+	mai: 그래도 덕분에 새로운 사람도 만나고, 어째선지 핸드폰도 다시 켜졌으니까 상관 없겠지? #id:138d
+	- 마이는 긍정적이네. #id:138e
+	leave mai
+	join reina center 
+	emotion reina Smile 
+	reina: 마이 양의 그런 성격이 부러워요.. 하지만 친구들과 약속은..? #id:138f
+	leave reina
+	join mai center
+	mai: 전화를 빌리느라 이미 늦어 버렸으니까 뭐. 나중에 사과해야지. 그거 외엔 마침 할 일도 없었으니까! 저녁까지 돌아가면 상관 없어. #id:1390
+	emotion mai Dislike 
+	mai: 그나저나.. 이 방송 소리 너무 거슬리잖아! 게다가 정차하지 않는다니? #id:1391
+	mai: 문이 닫힌지 시간이 꽤 지났는데 말야.. 아무래도 수상해. 앞으로 가 보자. #id:1392
+	do GameEvents.emit_quest_process("prologue_mai")

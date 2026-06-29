@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bv132orgp5htv"
+
+[deps]
+
+files=["res://Gameplay/Dialog/TimeLines/dtl_file_status.검수 여부.translation", "res://Gameplay/Dialog/TimeLines/dtl_file_status.번역 여부.translation", "res://Gameplay/Dialog/TimeLines/dtl_file_status.비고.translation", "res://Gameplay/Dialog/TimeLines/dtl_file_status.작성 여부.translation"]
+
+source_file="res://Gameplay/Dialog/TimeLines/dtl_file_status.csv"
+dest_files=["res://Gameplay/Dialog/TimeLines/dtl_file_status.검수 여부.translation", "res://Gameplay/Dialog/TimeLines/dtl_file_status.번역 여부.translation", "res://Gameplay/Dialog/TimeLines/dtl_file_status.비고.translation", "res://Gameplay/Dialog/TimeLines/dtl_file_status.작성 여부.translation"]
+
+[params]
+
+compress=true
+delimiter=0

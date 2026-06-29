@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://pra1sklih2l2"]
+
+[ext_resource type="Texture2D" uid="uid://bxvu0yrfkmo3b" path="res://resources/ui/EventCoverImage/Hpreview_reina_0.png" id="1_5cx4t"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_uykkc"]
+
+[resource]
+script = ExtResource("1_uykkc")
+main_love_event = true
+scene_description = "SCENE_BREAST_TOUCH"
+scene_name = "scene7"
+dialog_title = "e_green"
+stage_name = "stage_2"
+preview_texture = ExtResource("1_5cx4t")
+is_position = Vector2(1424, 210)
+ahen_keys = PackedStringArray("SCENE_REINA_AHEN_1", "SCENE_REINA_AHEN_2")

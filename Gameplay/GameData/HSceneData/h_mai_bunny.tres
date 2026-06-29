@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="HSceneRes" load_steps=3 format=3 uid="uid://dohrek3bcdg14"]
+
+[ext_resource type="Texture2D" uid="uid://cd1dkb4k4pu3k" path="res://resources/ui/EventCoverImage/Hpreview_mai_4.png" id="1_ajng6"]
+[ext_resource type="Script" uid="uid://byylfjmnsbntx" path="res://Gameplay/GameData/HSceneData/h_scene_res.gd" id="1_fx13m"]
+
+[resource]
+script = ExtResource("1_fx13m")
+scene_description = "SCENE_BUNNYGIRL"
+scene_name = "scene21"
+dialog_title = "e_roullete"
+stage_name = "stage_d_rulet"
+partner = 1
+preview_texture = ExtResource("1_ajng6")
+is_position = Vector2(523, 191)
+ahen_keys = PackedStringArray("SCENE_MAI_AHEN_5", "SCENE_MAI_AHEN_6", "SCENE_MAI_AHEN_7", "SCENE_MAI_AHEN_8", "SCENE_MAI_AHEN_9", "SCENE_MAI_AHEN_10")

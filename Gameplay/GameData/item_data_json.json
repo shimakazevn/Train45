@@ -1,0 +1,270 @@
+{
+  "item_data": {
+	"box_map_1": {
+	  "item_type": "box_map",
+	  "how_to_get": "shop",
+	  "add_chapter": null,
+	  "add_dialogue": "chapter4_butler3",
+	  "path": "uid://i3yi1kyvn2ox"
+	},
+	"box_map_2": {
+	  "item_type": "box_map",
+	  "how_to_get": "shop",
+	  "add_chapter": null,
+	  "add_dialogue": "chapter4_butler3",
+	  "path": "uid://bg3l2eupoc0w2"
+	},
+	"box_map_3": {
+	  "item_type": "box_map",
+	  "how_to_get": "shop",
+	  "add_chapter": null,
+	  "add_dialogue": "chapter6_start",
+	  "path": "uid://ckt8p8664cd5"
+	},
+	"item_route_coin1": {
+	  "item_type": "currency",
+	  "how_to_get": "shop",
+	  "add_chapter": 5,
+	  "add_dialogue": null,
+	  "path": "uid://c22esv5gcuv2s"
+	},
+	"item_equip_cost_1": {
+	  "item_type": "currency",
+	  "how_to_get": "shop",
+	  "add_chapter": 6,
+	  "add_dialogue": null,
+	  "path": "uid://c70ms4emjv1cf"
+	},
+	"hint_item_milk": {
+	  "item_type": "hint_item",
+	  "how_to_get": "item_box",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://bc37etpo5b2ug"
+	},
+	"hint_item_stuck_door": {
+	  "item_type": "hint_item",
+	  "how_to_get": "item_box",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://cxkiv8jnvxtax"
+	},
+	"hint_item_clock": {
+	  "item_type": "hint_item",
+	  "how_to_get": "shop",
+	  "add_chapter": null,
+	  "add_dialogue": "chapter4_butler3",
+	  "path": "uid://12xfkrp13em1"
+	},
+	"hint_item_ticket_check": {
+	  "item_type": "hint_item",
+	  "how_to_get": "shop",
+	  "add_chapter": null,
+	  "add_dialogue": "chapter4_butler3",
+	  "path": "uid://b7q7xybk41g7u"
+	},
+	"hint_item_snowman": {
+	  "item_type": "hint_item",
+	  "how_to_get": "shop",
+	  "add_chapter": null,
+	  "add_dialogue": "chapter4_butler3",
+	  "path": "uid://w2tv37csc0tk"
+	},
+	"hint_mirror": {
+	  "item_type": "hint_item",
+	  "how_to_get": "item_box",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": null
+	},
+	"hint_item_handfan": {
+	  "item_type": "hint_item",
+	  "how_to_get": "shop",
+	  "add_chapter": null,
+	  "add_dialogue": "chapter4_kankannavi",
+	  "path": "uid://buxoaofsm31v5"
+	},
+	"hint_item_ghost": {
+	  "item_type": "hint_item",
+	  "how_to_get": "shop",
+	  "add_chapter": null,
+	  "add_dialogue": "chapter4_kankannavi",
+	  "path": "uid://clq7eubtg01sl"
+	},
+	"hint_item_locker": {
+	  "item_type": "hint_item",
+	  "how_to_get": "shop",
+	  "add_chapter": null,
+	  "add_dialogue": "chapter4_kankannavi",
+	  "path": "uid://dg63dun2gwcjf"
+	},
+	"hint_item_partner_anomaly": {
+	  "item_type": "hint_item",
+	  "how_to_get": "shop",
+	  "add_chapter": null,
+	  "add_dialogue": "chapter4_kankannavi",
+	  "path": "uid://b7vv7spjfdtqp"
+	},
+	"hint_item_lowspeed": {
+	  "item_type": "hint_item",
+	  "how_to_get": "shop",
+	  "add_chapter": null,
+	  "add_dialogue": "chapter4_kankannavi",
+	  "path": "uid://b3uww8iugffjk"
+	},
+	"hint_item_cat": {
+	  "item_type": "hint_item",
+	  "how_to_get": "story",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://c0gyk34ubgnkx"
+	},
+	"hint_item_dog_strap": {
+	  "item_type": "hint_item",
+	  "how_to_get": "story",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://7mb7p8f1txn5"
+	},
+	"time_limiter": {
+	  "item_type": "upgrade",
+	  "how_to_get": "item_box_dest",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://b5g5wp6e3ife8"
+	},
+	"daruma_chan": {
+	  "item_type": "upgrade",
+	  "how_to_get": "item_box_dest",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://0ms8cj6665xu"
+	},
+	"multiple_choice": {
+	  "item_type": "upgrade",
+	  "how_to_get": "item_box_dest",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://dkqbj5od6fjee"
+	},
+	"ghost_skip": {
+	  "item_type": "upgrade",
+	  "how_to_get": "item_box_dest",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://sxqa37toa5py"
+	},
+	"magnet_ticket": {
+	  "item_type": "upgrade",
+	  "how_to_get": "item_box_dest",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://djd7p77hurwmi"
+	},
+	"ghost_ano_h": {
+	  "item_type": "upgrade",
+	  "how_to_get": "item_box_dest",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://0hn5i30a7qy5"
+	},
+	"npc_ano_h": {
+	  "item_type": "upgrade",
+	  "how_to_get": "item_box_dest",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://cumwcbka66y4k"
+	},
+	"unvisit_finder": {
+	  "item_type": "upgrade",
+	  "how_to_get": "item_box_dest",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://dli7vlxrvqpo1"
+	},
+	"life_up": {
+	  "item_type": "upgrade",
+	  "how_to_get": "shop",
+	  "add_chapter": 0,
+	  "add_dialogue": null,
+	  "path": "uid://cr0ij3wtyqx5m"
+	},
+	"detect_area_up": {
+	  "item_type": "upgrade",
+	  "how_to_get": "shop",
+	  "add_chapter": 0,
+	  "add_dialogue": null,
+	  "path": "uid://btlhx8j7liqb4"
+	},
+	"cola_finder": {
+	  "item_type": "upgrade",
+	  "how_to_get": "shop",
+	  "add_chapter": 0,
+	  "add_dialogue": null,
+	  "path": "uid://fdp31vbmug2a"
+	},
+	"speed_up": {
+	  "item_type": "upgrade",
+	  "how_to_get": "shop",
+	  "add_chapter": 3,
+	  "add_dialogue": null,
+	  "path": "uid://nm2xt6a7fd1e"
+	},
+	"anomaly_finder": {
+	  "item_type": "upgrade",
+	  "how_to_get": "shop",
+	  "add_chapter": 0,
+	  "add_dialogue": null,
+	  "path": "uid://ntt3ygh4fsrd"
+	},
+	"ticket_bonus": {
+	  "item_type": "upgrade",
+	  "how_to_get": "shop",
+	  "add_chapter": 3,
+	  "add_dialogue": null,
+	  "path": "uid://jf1um36bje8y"
+	},
+	"area_charge_time_up": {
+	  "item_type": "upgrade",
+	  "how_to_get": "shop",
+	  "add_chapter": 0,
+	  "add_dialogue": null,
+	  "path": "uid://syx78yy8epl8"
+	},
+	"horizon_finder": {
+	  "item_type": "upgrade",
+	  "how_to_get": "shop",
+	  "add_chapter": 3,
+	  "add_dialogue": null,
+	  "path": "uid://djyvitr6c6ene"
+	},
+	"collect_area_up": {
+	  "item_type": "upgrade",
+	  "how_to_get": "shop",
+	  "add_chapter": 0,
+	  "add_dialogue": null,
+	  "path": "uid://buqs5f8gt5ofg"
+	},
+	"love_bonus": {
+	  "item_type": "upgrade",
+	  "how_to_get": "shop",
+	  "add_chapter": 3,
+	  "add_dialogue": null,
+	  "path": "uid://bgwe6olmrjx28"
+	},
+	"ero_gauge_comsume_up": {
+	  "item_type": "upgrade",
+	  "how_to_get": "shop",
+	  "add_chapter": 3,
+	  "add_dialogue": null,
+	  "path": "uid://c6lcmgo5qhpf0"
+	},
+	"love_bracelet": {
+	  "item_type": "upgrade",
+	  "how_to_get": "story",
+	  "add_chapter": null,
+	  "add_dialogue": null,
+	  "path": "uid://c6fllickjj26v"
+	}
+  }
+}

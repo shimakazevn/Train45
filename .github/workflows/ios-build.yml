@@ -1,0 +1,73 @@
+name: Build iOS IPA (Unsigned)
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Download Godot Engine 4.5.0
+        run: |
+          curl -L -o godot.zip https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_macos.universal.zip
+          unzip godot.zip
+          mv Godot.app /Applications/
+
+      - name: Download and Install Godot Export Templates
+        run: |
+          curl -L -o templates.tpz https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_export_templates.tpz
+          unzip templates.tpz
+          mkdir -p ~/Library/Application\ Support/Godot/export_templates/4.5.stable/
+          mv templates/* ~/Library/Application\ Support/Godot/export_templates/4.5.stable/
+          # Verify templates are placed correctly
+          ls -la ~/Library/Application\ Support/Godot/export_templates/4.5.stable/
+
+      - name: Export Xcode Project from Godot
+        run: |
+          mkdir -p build/ios
+          # Run headless import pass to compile CSV translations and generate import cache
+          /Applications/Godot.app/Contents/MacOS/Godot --headless --path . --editor --quit
+          # Run headless export
+          /Applications/Godot.app/Contents/MacOS/Godot --headless --path . --export-release "iOS" build/ios/Train45.zip
+          # Unzip Xcode project structure
+          unzip build/ios/Train45.zip -d build/ios/project
+
+      - name: Compile Xcode Project (Unsigned)
+        run: |
+          cd build/ios/project
+          # Run xcodebuild build without signing
+          xcodebuild -project Train45.xcodeproj \
+            -scheme Train45 \
+            -sdk iphoneos \
+            -configuration Release \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            clean build
+
+      - name: Package into IPA
+        run: |
+          cd build/ios/project
+          # Create Payload directory for IPA structure
+          mkdir Payload
+          # Locate built .app bundle (xcodebuild default output is in build/Release-iphoneos/ or DerivedData)
+          # We search for it and move it to Payload
+          APP_PATH=$(find build -name "Train45.app" -type d | head -n 1)
+          if [ -z "$APP_PATH" ]; then
+            APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -name "Train45.app" -type d | head -n 1)
+          fi
+          echo "Found compiled app at: $APP_PATH"
+          cp -r "$APP_PATH" Payload/
+          # Compress Payload to create IPA
+          zip -r ../../Train45.ipa Payload
+          echo "Packaged IPA successfully."
+
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Train45-iOS-IPA
+          path: build/ios/Train45.ipa

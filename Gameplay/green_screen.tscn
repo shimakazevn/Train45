@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt38wb7mvcojh"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_j4qw6"]
+light_mode = 1
+
+[node name="GreenScreen" type="ColorRect"]
+z_index = 2
+material = SubResource("CanvasItemMaterial_j4qw6")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.694118, 0.25098, 1)
