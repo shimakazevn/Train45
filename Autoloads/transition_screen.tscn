@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bhnjef7fm7na7"]
 
-[ext_resource type="Script" uid="uid://cnwdcbaqs4kr6" path="res://Autoloads/transition_screen.gd" id="1_tsrhr"]
+[ext_resource type="Script" uid="uid://cnwdcbaqs4kr6" path="res://Autoloads/Transition_Screen.gd" id="1_tsrhr"]
 
 [sub_resource type="Animation" id="Animation_voodi"]
 length = 0.001
