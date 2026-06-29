@@ -27,20 +27,17 @@ jobs:
           # Verify templates are placed correctly
           ls -la ~/Library/Application\ Support/Godot/export_templates/4.5.stable/
 
-      - name: Patch export_presets.cfg (ensure Team ID is set)
-        run: |
-          sed -i '' 's/codesign\/team_id=""/codesign\/team_id="H6H365832M"/' export_presets.cfg
-          grep "codesign/team_id" export_presets.cfg
-
       - name: Export Xcode Project from Godot
         run: |
           mkdir -p build/ios
           rm -f project.binary
           chmod 444 project.godot
           /Applications/Godot.app/Contents/MacOS/Godot --headless --path . --editor --quit || true
-          /Applications/Godot.app/Contents/MacOS/Godot --headless --path . --export-release "iOS" build/ios/Train45.zip
-          # Restore write permissions
           chmod 644 project.godot
+          # Patch after editor run (editor may reset export_presets.cfg)
+          sed -i '' 's|codesign/team_id="[^"]*"|codesign/team_id="H6H365832M"|g' export_presets.cfg
+          grep "codesign/team_id" export_presets.cfg
+          /Applications/Godot.app/Contents/MacOS/Godot --headless --path . --export-release "iOS" build/ios/Train45.zip
           # Unzip Xcode project structure
           unzip build/ios/Train45.zip -d build/ios/project
 
