@@ -42,7 +42,6 @@ LightOptimizer="*res://Autoloads/LightOptimizer.gd"
 DialogicDubbingManager="*res://Autoloads/dialogic_dubbing_manager.gd"
 SteamManager="*res://Autoloads/SteamManager.gd"
 AchievementManager="*res://Autoloads/AchievementManager.gd"
-MobileControls="*res://Autoloads/MobileControls.gd"
 QABot="*res://Autoloads/QABot.gd"
 
 [debug]
