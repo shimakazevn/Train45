@@ -45,8 +45,16 @@ jobs:
 
       - name: Disable GodotSteam plugin for CI
         run: |
-          sed -i 's|"res://addons/godotsteam/godotsteam_plugin.gd"||g' project.godot
-          sed -i '/godotsteam/d' project.godot
+          rm -rf addons/godotsteam
+          python3 -c "
+          import re
+          content = open('project.godot').read()
+          content = re.sub(r'\"res://addons/godotsteam/[^\"]*\"', '', content)
+          content = re.sub(r',\s*,', ',', content)
+          content = re.sub(r'\(\s*,', '(', content)
+          content = re.sub(r',\s*\)', ')', content)
+          open('project.godot', 'w').write(content)
+          "
 
       - name: Import Project Assets
         run: |
