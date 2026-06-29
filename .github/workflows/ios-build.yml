@@ -27,6 +27,15 @@ jobs:
           # Verify templates are placed correctly
           ls -la ~/Library/Application\ Support/Godot/export_templates/4.5.stable/
 
+      - name: Disable GodotSteam plugin for CI
+        run: |
+          sed -i '' 's|"res://addons/godotsteam/godotsteam_plugin.gd"||g' project.godot
+          sed -i '' '/godotsteam/d' project.godot
+
+      - name: Import Project Assets
+        run: |
+          /Applications/Godot.app/Contents/MacOS/Godot --headless --path . --editor --quit 2>&1 || true
+
       - name: Patch export_presets.cfg
         run: |
           python3 << 'PYEOF'
