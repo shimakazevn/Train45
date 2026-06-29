@@ -42,9 +42,10 @@ jobs:
           import re
           content = open('export_presets.cfg').read()
           content = re.sub(r'codesign/team_id="[^"]*"', 'codesign/team_id="H6H365832M"', content)
-          content = re.sub(r'application/app_store_team_id="[^"]*"', 'application/app_store_team_id="H6H365832M"', content)
-          if 'codesign/team_id=' not in content:
-              content = content.replace('codesign/enable=false', 'codesign/enable=false\ncodesign/team_id="H6H365832M"\napplication/app_store_team_id="H6H365832M"', 1)
+          if 'application/app_store_team_id=' in content:
+              content = re.sub(r'application/app_store_team_id="[^"]*"', 'application/app_store_team_id="H6H365832M"', content)
+          else:
+              content = content.replace('codesign/team_id="H6H365832M"', 'codesign/team_id="H6H365832M"\napplication/app_store_team_id="H6H365832M"')
           open('export_presets.cfg', 'w').write(content)
           PYEOF
           grep "team_id" export_presets.cfg

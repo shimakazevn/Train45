@@ -40,8 +40,8 @@ jobs:
       - name: Configure Godot Editor Settings (Android SDK)
         run: |
           mkdir -p ~/.config/godot
-          printf '[gd_resource type="EditorSettings" format=3]\n[resource]\nexport/android/android_sdk_path = "%s"\nexport/android/java_sdk_path = "%s"\nexport/android/debug_keystore = "%s/debug.keystore"\n' "$ANDROID_HOME" "$JAVA_HOME" "$(pwd)" > ~/.config/godot/editor_settings-4.tres
-          cat ~/.config/godot/editor_settings-4.tres
+          printf '[gd_resource type="EditorSettings" format=3]\n[resource]\nexport/android/android_sdk_path = "%s"\nexport/android/java_sdk_path = "%s"\nexport/android/debug_keystore = "%s/debug.keystore"\n' "$ANDROID_HOME" "$JAVA_HOME" "$(pwd)" > ~/.config/godot/editor_settings-4.5.tres
+          cat ~/.config/godot/editor_settings-4.5.tres
 
       - name: Disable GodotSteam plugin for CI
         run: |
