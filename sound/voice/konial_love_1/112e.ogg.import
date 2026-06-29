@@ -3,11 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://claxvmeb4s4e4"
-valid=false
+path="res://.godot/imported/112e.ogg-02d3cdda529bc83ba8b257fc5d5caf6a.oggvorbisstr"
 
 [deps]
 
 source_file="res://sound/voice/konial_love_1/112e.ogg"
+dest_files=["res://.godot/imported/112e.ogg-02d3cdda529bc83ba8b257fc5d5caf6a.oggvorbisstr"]
 
 [params]
 
