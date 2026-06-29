@@ -40,7 +40,7 @@ jobs:
       - name: Configure Godot Editor Settings (Android SDK)
         run: |
           mkdir -p ~/.config/godot
-          printf '[gd_resource type="EditorSettings" format=3]\n[resource]\nexport/android/android_sdk_path = "%s"\nexport/android/java_sdk_path = "%s"\n' "$ANDROID_HOME" "$JAVA_HOME" > ~/.config/godot/editor_settings-4.tres
+          printf '[gd_resource type="EditorSettings" format=3]\n[resource]\nexport/android/android_sdk_path = "%s"\nexport/android/java_sdk_path = "%s"\nexport/android/debug_keystore = "%s/debug.keystore"\n' "$ANDROID_HOME" "$JAVA_HOME" "$(pwd)" > ~/.config/godot/editor_settings-4.tres
           cat ~/.config/godot/editor_settings-4.tres
 
       - name: Disable GodotSteam plugin for CI
@@ -55,7 +55,7 @@ jobs:
       - name: Export Android APK
         run: |
           mkdir -p build/android
-          godot --headless --path . --export-release "Android" build/android/Train45.apk 2>&1
+          godot --headless --verbose --path . --export-release "Android" build/android/Train45.apk 2>&1
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4

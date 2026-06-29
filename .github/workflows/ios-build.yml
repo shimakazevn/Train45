@@ -41,18 +41,18 @@ jobs:
           python3 << 'PYEOF'
           import re
           content = open('export_presets.cfg').read()
-          if 'codesign/team_id=' in content:
-              content = re.sub(r'codesign/team_id="[^"]*"', 'codesign/team_id="H6H365832M"', content)
-          else:
-              content = content.replace('codesign/enable=false', 'codesign/enable=false\ncodesign/team_id="H6H365832M"', 1)
+          content = re.sub(r'codesign/team_id="[^"]*"', 'codesign/team_id="H6H365832M"', content)
+          content = re.sub(r'application/app_store_team_id="[^"]*"', 'application/app_store_team_id="H6H365832M"', content)
+          if 'codesign/team_id=' not in content:
+              content = content.replace('codesign/enable=false', 'codesign/enable=false\ncodesign/team_id="H6H365832M"\napplication/app_store_team_id="H6H365832M"', 1)
           open('export_presets.cfg', 'w').write(content)
           PYEOF
-          grep "codesign/team_id" export_presets.cfg
+          grep "team_id" export_presets.cfg
 
       - name: Export Xcode Project from Godot
         run: |
           mkdir -p build/ios
-          /Applications/Godot.app/Contents/MacOS/Godot --headless --path . --export-release "iOS" build/ios/Train45.zip
+          /Applications/Godot.app/Contents/MacOS/Godot --headless --verbose --path . --export-release "iOS" build/ios/Train45.zip
           unzip build/ios/Train45.zip -d build/ios/project
 
       - name: Compile Xcode Project (Unsigned)
