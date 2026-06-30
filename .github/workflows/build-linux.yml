@@ -75,9 +75,14 @@ jobs:
             $GODOT_BIN --headless --export-release "Linux"
           fi
 
+      - name: Prepare artifact
+        run: |
+          mkdir -p dist
+          cp -r ../bin/Linux/* dist/
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: Train45-Linux-${{ inputs.export_mode || 'release' }}
-          path: ../bin/Linux/
+          path: dist/
           if-no-files-found: error

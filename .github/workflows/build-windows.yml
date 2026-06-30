@@ -79,9 +79,15 @@ jobs:
             & $env:GODOT_BIN --headless --export-release "Windows Desktop"
           }
 
+      - name: Prepare artifact
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path dist -Force
+          Copy-Item -Path "..\bin\Train45\*" -Destination dist\ -Recurse -Force
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: Train45-Windows-${{ inputs.export_mode || 'release' }}
-          path: ../bin/Train45/
+          path: dist/
           if-no-files-found: error

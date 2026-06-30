@@ -87,9 +87,14 @@ jobs:
             $GODOT_BIN --headless --export-release "macOS"
           fi
 
+      - name: Prepare artifact
+        run: |
+          mkdir -p dist
+          cp ../bin/macOS/Train45.zip dist/Train45-macOS.zip
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: Train45-macOS-${{ inputs.export_mode || 'release' }}
-          path: ../bin/macOS/Train45.zip
+          path: dist/Train45-macOS.zip
           if-no-files-found: error
