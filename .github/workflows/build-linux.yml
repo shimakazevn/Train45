@@ -1,0 +1,83 @@
+name: Build Linux
+
+on:
+  workflow_dispatch:
+    inputs:
+      export_mode:
+        description: 'Export mode (debug/release)'
+        required: true
+        default: 'release'
+        type: choice
+        options:
+          - debug
+          - release
+  push:
+    branches: [main, master]
+
+env:
+  GODOT_VERSION: 4.5
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Restore Godot binary cache
+        id: cache-godot
+        uses: actions/cache@v4
+        with:
+          path: godot_cache/
+          key: Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64
+
+      - name: Download Godot binary
+        if: steps.cache-godot.outputs.cache-hit != 'true'
+        run: |
+          curl -L -o godot.zip \
+            "https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64.zip"
+          mkdir -p godot_cache
+          unzip -q godot.zip -d godot_cache/
+          chmod +x godot_cache/Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64
+
+      - name: Export path
+        run: |
+          echo "GODOT_BIN=$PWD/godot_cache/Godot_v${{ env.GODOT_VERSION }}-stable_linux.x86_64" >> $GITHUB_ENV
+
+      - name: Restore export templates cache
+        id: cache-templates
+        uses: actions/cache@v4
+        with:
+          path: templates_cache/
+          key: Godot_v${{ env.GODOT_VERSION }}-stable_export_templates_linux
+
+      - name: Download export templates
+        if: steps.cache-templates.outputs.cache-hit != 'true'
+        run: |
+          curl -L -o templates.tpz \
+            "https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_export_templates.tpz"
+          mkdir -p templates_cache
+          unzip -q templates.tpz -d templates_cache/
+
+      - name: Install export templates
+        run: |
+          mkdir -p ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
+          cp -r templates_cache/templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable/
+
+      - name: Export Linux (${{ inputs.export_mode || 'release' }})
+        run: |
+          mkdir -p ../bin/Linux
+          MODE="${{ inputs.export_mode || 'release' }}"
+          if [ "$MODE" = "debug" ]; then
+            $GODOT_BIN --headless --export-debug "Linux"
+          else
+            $GODOT_BIN --headless --export-release "Linux"
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Train45-Linux-${{ inputs.export_mode || 'release' }}
+          path: ../bin/Linux/
+          if-no-files-found: error

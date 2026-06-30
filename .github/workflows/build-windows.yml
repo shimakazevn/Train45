@@ -1,0 +1,87 @@
+name: Build Windows
+
+on:
+  workflow_dispatch:
+    inputs:
+      export_mode:
+        description: 'Export mode (debug/release)'
+        required: true
+        default: 'release'
+        type: choice
+        options:
+          - debug
+          - release
+  push:
+    branches: [main, master]
+
+env:
+  GODOT_VERSION: 4.5
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Restore Godot binary cache
+        id: cache-godot
+        uses: actions/cache@v4
+        with:
+          path: godot_cache/
+          key: Godot_v${{ env.GODOT_VERSION }}-stable_win64
+
+      - name: Download Godot binary
+        if: steps.cache-godot.outputs.cache-hit != 'true'
+        shell: pwsh
+        run: |
+          curl.exe -L -o godot.zip "https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_win64.exe.zip"
+          mkdir -p godot_cache
+          tar -xf godot.zip -C godot_cache/
+
+      - name: Export path
+        shell: pwsh
+        run: |
+          $bin = Get-ChildItem -Path godot_cache -Filter "Godot_*.exe" -Recurse | Select-Object -First 1
+          Add-Content $env:GITHUB_ENV "GODOT_BIN=$($bin.FullName)"
+
+      - name: Restore export templates cache
+        id: cache-templates
+        uses: actions/cache@v4
+        with:
+          path: templates_cache/
+          key: Godot_v${{ env.GODOT_VERSION }}-stable_export_templates_win
+
+      - name: Download export templates
+        if: steps.cache-templates.outputs.cache-hit != 'true'
+        shell: pwsh
+        run: |
+          curl.exe -L -o templates.tpz "https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_export_templates.tpz"
+          mkdir -p templates_cache
+          tar -xf templates.tpz -C templates_cache/
+
+      - name: Install export templates
+        shell: pwsh
+        run: |
+          $templateDir = "$env:APPDATA\Godot\export_templates\${{ env.GODOT_VERSION }}.stable"
+          New-Item -ItemType Directory -Path $templateDir -Force
+          Copy-Item -Path "templates_cache\templates\*" -Destination $templateDir -Recurse -Force
+
+      - name: Export Windows (${{ inputs.export_mode || 'release' }})
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path "..\bin\Train45" -Force
+          $mode = "${{ inputs.export_mode || 'release' }}"
+          if ($mode -eq "debug") {
+            & $env:GODOT_BIN --headless --export-debug "Windows Desktop"
+          } else {
+            & $env:GODOT_BIN --headless --export-release "Windows Desktop"
+          }
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Train45-Windows-${{ inputs.export_mode || 'release' }}
+          path: ../bin/Train45/
+          if-no-files-found: error
