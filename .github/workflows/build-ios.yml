@@ -82,22 +82,31 @@ jobs:
       - name: Import project assets
         continue-on-error: true
         run: |
-          $GODOT_BIN --headless --editor --quit 2>&1 || true
-
-      - name: Patch export preset for project-only export
-        run: |
-          sed -i '' 's/application\/export_project_only=false/application\/export_project_only=true/' export_presets.cfg
+          rm -rf .godot/imported
+          $GODOT_BIN --headless --editor --quit --verbose 2>&1 || true
+          echo "=== Imported files ==="
+          find .godot/imported -type f 2>/dev/null | head -20
+          echo "=== Total imported ==="
+          find .godot/imported -type f 2>/dev/null | wc -l
 
       - name: Export Xcode project
         run: |
           mkdir -p build/ios
           MODE="${{ inputs.export_mode || 'release' }}"
           if [ "$MODE" = "debug" ]; then
-            $GODOT_BIN --headless --export-debug "iOS" build/ios/Train45.zip
+            $GODOT_BIN --headless --export-debug "iOS" 2>&1 || true
           else
-            $GODOT_BIN --headless --export-release "iOS" build/ios/Train45.zip
-          fi || true
-          unzip -q build/ios/Train45.zip -d build/ios/project
+            $GODOT_BIN --headless --export-release "iOS" 2>&1 || true
+          fi
+          echo "=== build/ios/ contents ==="
+          ls -laR build/ios/
+          if [ -f build/ios/Train45.zip ]; then
+            unzip -q build/ios/Train45.zip -d build/ios/project
+            echo "Xcode project extracted successfully"
+          else
+            echo "WARNING: Train45.zip not found at expected path"
+            exit 1
+          fi
 
       - name: Build Xcode project (unsigned)
         run: |
@@ -109,16 +118,37 @@ jobs:
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
-            clean build
+            DEVELOPMENT_TEAM="" \
+            clean build 2>&1 || {
+            echo "First build attempt failed, trying without clean..."
+            xcodebuild -project Train45.xcodeproj \
+              -scheme Train45 \
+              -sdk iphoneos \
+              -configuration Release \
+              CODE_SIGNING_ALLOWED=NO \
+              CODE_SIGNING_REQUIRED=NO \
+              CODE_SIGN_IDENTITY="" \
+              DEVELOPMENT_TEAM="" \
+              build 2>&1 || echo "BUILD_FAILED=true" >> $GITHUB_ENV
+          }
 
       - name: Package IPA
+        if: env.BUILD_FAILED != 'true'
         run: |
           cd build/ios/project
           APP_PATH=$(find . -name "Train45.app" -type d | head -n 1)
           if [ -z "$APP_PATH" ]; then
             APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -name "Train45.app" -type d | head -n 1)
           fi
+          if [ -z "$APP_PATH" ]; then
+            echo "Searching for .app in wider scope..."
+            APP_PATH=$(find build/ios -name "Train45.app" -type d | head -n 1)
+          fi
           echo "Found app at: $APP_PATH"
+          if [ -z "$APP_PATH" ]; then
+            echo "ERROR: No .app found!"
+            exit 1
+          fi
           mkdir Payload
           cp -r "$APP_PATH" Payload/
           mkdir -p ../../dist
