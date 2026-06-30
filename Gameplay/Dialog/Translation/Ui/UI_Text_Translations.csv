@@ -1,4 +1,4 @@
-﻿key,en,jp,vi
+key,en,jp,vi
 RAPE_RETURN_GUIDE,Return,帰還,Trở về
 QUEST_PROCESS_FIND_ROUTE,Discover %d+ Anomalies,異変を%d個以上発見,Phát hiện từ %d hiện tượng lạ
 TUTO_TITLE_KONIAL_H,Konial H,コニアルH,Cảnh H Konial
@@ -8,7 +8,7 @@ Information on which cars contain lost items can be purchased at the Exchange Sh
 落とし物ボックスを獲得するたびに、執事の好感度が上昇します。
 落とし物がある車両の情報は、交換ショップで購入できます。","Hãy giúp Quản gia, người có khả năng cảm ứng bị suy yếu, thu thập các món đồ thất lạc rải rác khắp các toa tàu. Mỗi lần bạn thu hồi một Hộp Đồ Thất Lạc, Thiện cảm của Quản gia sẽ tăng lên. Thông tin về việc toa tàu nào có chứa đồ thất lạc có thể được mua tại Cửa hàng Trao đổi."
 ROUTE_APP_MSG_NEEDCOIN,Not enough Coins.,コインが不足しています。,Không đủ Xu.
-NOW_DESTINATION_COMFIRMED,Route Set,路線設定完了,Tuyến đường đã thiết lập
+NOW_DESTINATION_COMFIRMED,Route Set,路線設定完了,Route Set
 SCENE_LYING_KISS,Lying Down & Kissing,添い寝キス,Đồng sàng cộng hôn
 QUEST_PROCESS_COLLECT_ITEM,Collect %d+ Items,景品%d個以上収集,Thu thập từ %d vật phẩm
 TUTO_BUTLER_H_1,"To engage in sexual activities with the Butler in human form, you must raise her Affection.
@@ -389,7 +389,7 @@ It seems you might be able to recover a lost item.","どこかの終着点へと
 Có vẻ bạn có thể tìm lại được một món đồ thất lạc."
 TUTO_PRESS_KANKAN_ICON,Please click the Phone icon.,携帯アイコンをクリックしてください。,Hãy nhấp vào biểu tượng điện thoại.
 RETURN_BASE_TITLE,T Key: Return to Start,Tキー：帰還,Phím T: Quay về điểm xuất phát
-SCENE_SUMATA,Thighjob,素股,Cổ giao đoạt hồn
+SCENE_SUMATA,Thighjob,素股,Kẹp đùi
 ROUTE_TITLE_FLIGHT,Flying,飛行,Bay
 LOVE_BRACELET_DESCRIPTION,"Successful detection while equipped increases Konial's Affection.
 Kankan Navi cannot be used while equipped, and all Route Map settings will be reset.","装着した状態で探知に成功すると、コニアルの好感度が上昇します。
