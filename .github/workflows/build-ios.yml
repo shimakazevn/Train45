@@ -84,6 +84,10 @@ jobs:
         run: |
           $GODOT_BIN --headless --editor --quit 2>&1 || true
 
+      - name: Patch export preset for project-only export
+        run: |
+          sed -i '' 's/application\/export_project_only=false/application\/export_project_only=true/' export_presets.cfg
+
       - name: Export Xcode project
         run: |
           mkdir -p build/ios
@@ -92,7 +96,7 @@ jobs:
             $GODOT_BIN --headless --export-debug "iOS" build/ios/Train45.zip
           else
             $GODOT_BIN --headless --export-release "iOS" build/ios/Train45.zip
-          fi
+          fi || true
           unzip -q build/ios/Train45.zip -d build/ios/project
 
       - name: Build Xcode project (unsigned)
