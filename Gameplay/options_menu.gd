@@ -162,6 +162,7 @@ func _on_option_button_item_selected(index: int):
 			_hide_small_text(true) # 영어일때만 작은 글자 숨김
 		5:
 			LanguageManager.change_language("vi")
+			_hide_small_text(true) # 베트남어일때도 작은 글자 숨김
 
 	_set_title_labels_visible(id)
 	_tab_title_update()
@@ -291,7 +292,7 @@ func _on_lang_changed(locale: String) -> void:
 	option_button.select(option_button.get_item_index(id))
 	_set_title_labels_visible(id)
 	_tab_title_update()
-	_hide_small_text(id == 4)
+	_hide_small_text(id == 4 or id == 5)
 
 ## 영어 UI일 때 [code]"OptionSmallText"[/code] 그룹의 작은 글자를 숨긴다.
 ## [br]Why: 영어는 글자 폭이 넓어 작은 보조 텍스트가 레이아웃을 깨뜨릴 수 있기 때문.
