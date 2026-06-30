@@ -112,8 +112,13 @@ jobs:
           else
             $GODOT_BIN --headless --path . --export-release "iOS" build/ios/Train45.zip 2>&1
           fi
-          echo "=== Unzipping Xcode project ==="
-          unzip -q build/ios/Train45.zip -d build/ios/
+          if [ -f "build/ios/Train45.zip" ]; then
+            echo "iOS project exported successfully! Unzipping..."
+            unzip -q build/ios/Train45.zip -d build/ios/
+          else
+            echo "Export failed: Output file not found!"
+            exit 1
+          fi
           echo "=== build/ios/ contents ==="
           ls -la build/ios/
           ls -la build/ios/Train45.xcodeproj/
