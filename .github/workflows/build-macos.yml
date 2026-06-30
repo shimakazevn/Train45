@@ -11,8 +11,6 @@ on:
         options:
           - debug
           - release
-  push:
-    branches: [main, master]
 
 env:
   GODOT_VERSION: 4.5
