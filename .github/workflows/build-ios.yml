@@ -83,11 +83,12 @@ jobs:
         continue-on-error: true
         run: |
           rm -rf .godot/imported
+          echo "=== Running editor import ==="
           $GODOT_BIN --headless --editor --quit --verbose 2>&1 || true
-          echo "=== Imported files ==="
-          find .godot/imported -type f 2>/dev/null | head -20
+          echo "=== Imported cache files ==="
+          find .godot/imported -type f 2>/dev/null | head -30 || true
           echo "=== Total imported ==="
-          find .godot/imported -type f 2>/dev/null | wc -l
+          find .godot/imported -type f 2>/dev/null | wc -l || true
 
       - name: Export Xcode project
         run: |

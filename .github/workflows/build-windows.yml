@@ -70,7 +70,12 @@ jobs:
         continue-on-error: true
         shell: pwsh
         run: |
-          & $env:GODOT_BIN --headless --editor --quit 2>&1
+          Remove-Item -Recurse -Force ".godot/imported" -ErrorAction SilentlyContinue
+          $proc = Start-Process -FilePath $env:GODOT_BIN -ArgumentList "--headless", "--editor", "--quit" -NoNewWindow -Wait -PassThru
+          Write-Output "=== Imported cache files ==="
+          Get-ChildItem -File -Recurse ".godot/imported" -ErrorAction SilentlyContinue | Select-Object -First 30
+          Write-Output "=== Total imported ==="
+          (Get-ChildItem -File -Recurse ".godot/imported" -ErrorAction SilentlyContinue | Measure-Object).Count
 
       - name: Export Windows (${{ inputs.export_mode || 'release' }})
         shell: pwsh

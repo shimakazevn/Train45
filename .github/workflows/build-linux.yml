@@ -66,7 +66,13 @@ jobs:
       - name: Import project assets
         continue-on-error: true
         run: |
-          $GODOT_BIN --headless --editor --quit 2>&1 || true
+          rm -rf .godot/imported
+          echo "=== Running editor import ==="
+          $GODOT_BIN --headless --editor --quit --verbose 2>&1 || true
+          echo "=== Imported cache files ==="
+          find .godot/imported -type f 2>/dev/null | head -30 || true
+          echo "=== Total imported ==="
+          find .godot/imported -type f 2>/dev/null | wc -l || true
 
       - name: Export Linux (${{ inputs.export_mode || 'release' }})
         run: |
