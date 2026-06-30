@@ -100,19 +100,13 @@ jobs:
             $GODOT_BIN --headless --export-release "iOS" 2>&1 || true
           fi
           echo "=== build/ios/ contents ==="
-          ls -laR build/ios/
-          if [ -f build/ios/Train45.zip ]; then
-            unzip -q build/ios/Train45.zip -d build/ios/project
-            echo "Xcode project extracted successfully"
-          else
-            echo "WARNING: Train45.zip not found at expected path"
-            exit 1
-          fi
+          ls -la build/ios/
+          ls -la build/ios/Train45.xcodeproj/
+          echo "Xcode project exported to build/ios/"
 
       - name: Build Xcode project (unsigned)
         run: |
-          cd build/ios/project
-          xcodebuild -project Train45.xcodeproj \
+          xcodebuild -project build/ios/Train45.xcodeproj \
             -scheme Train45 \
             -sdk iphoneos \
             -configuration Release \
@@ -122,7 +116,7 @@ jobs:
             DEVELOPMENT_TEAM="" \
             clean build 2>&1 || {
             echo "First build attempt failed, trying without clean..."
-            xcodebuild -project Train45.xcodeproj \
+            xcodebuild -project build/ios/Train45.xcodeproj \
               -scheme Train45 \
               -sdk iphoneos \
               -configuration Release \
@@ -133,27 +127,22 @@ jobs:
               build 2>&1 || echo "BUILD_FAILED=true" >> $GITHUB_ENV
           }
 
-      - name: Package IPA
+      - name: Find and package .app
         if: env.BUILD_FAILED != 'true'
         run: |
-          cd build/ios/project
-          APP_PATH=$(find . -name "Train45.app" -type d | head -n 1)
+          APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -name "Train45.app" -type d | head -n 1)
           if [ -z "$APP_PATH" ]; then
-            APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -name "Train45.app" -type d | head -n 1)
-          fi
-          if [ -z "$APP_PATH" ]; then
-            echo "Searching for .app in wider scope..."
-            APP_PATH=$(find build/ios -name "Train45.app" -type d | head -n 1)
+            APP_PATH=$(find "$PWD" -name "Train45.app" -type d | head -n 1)
           fi
           echo "Found app at: $APP_PATH"
           if [ -z "$APP_PATH" ]; then
             echo "ERROR: No .app found!"
             exit 1
           fi
-          mkdir Payload
+          mkdir -p Payload dist
           cp -r "$APP_PATH" Payload/
-          mkdir -p ../../dist
-          zip -r ../../dist/Train45-iOS.ipa Payload/
+          zip -r dist/Train45-iOS.ipa Payload/
+          echo "IPA created at: $PWD/dist/Train45-iOS.ipa"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
