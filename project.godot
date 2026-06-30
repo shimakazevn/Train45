@@ -43,6 +43,7 @@ DialogicDubbingManager="*res://Autoloads/dialogic_dubbing_manager.gd"
 SteamManager="*res://Autoloads/SteamManager.gd"
 AchievementManager="*res://Autoloads/AchievementManager.gd"
 QABot="*res://Autoloads/QABot.gd"
+MobileControls="*res://Autoloads/MobileControls.gd"
 
 [debug]
 
