@@ -54,10 +54,10 @@ jobs:
       - name: Download export templates
         if: steps.cache-templates.outputs.cache-hit != 'true'
         run: |
-          curl -L -o templates.zip \
-            "https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_export_templates.zip"
+          curl -L -o templates.tpz \
+            "https://github.com/godotengine/godot/releases/download/${{ env.GODOT_VERSION }}-stable/Godot_v${{ env.GODOT_VERSION }}-stable_export_templates.tpz"
           mkdir -p templates_cache
-          unzip -q templates.zip -d templates_cache/
+          unzip -q templates.tpz -d templates_cache/
 
       - name: Install export templates
         run: |
