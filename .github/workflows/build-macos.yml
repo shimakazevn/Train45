@@ -77,6 +77,11 @@ jobs:
           security import cert.p12 -P "$P12_PASSWORD" -A
           echo "Code signing configured successfully"
 
+      - name: Import project assets
+        continue-on-error: true
+        run: |
+          $GODOT_BIN --headless --editor --quit 2>&1 || true
+
       - name: Export macOS (${{ inputs.export_mode || 'release' }})
         run: |
           mkdir -p ../bin/macOS

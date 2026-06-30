@@ -81,6 +81,11 @@ jobs:
           cp profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
           echo "Code signing configured successfully"
 
+      - name: Import project assets
+        continue-on-error: true
+        run: |
+          $GODOT_BIN --headless --editor --quit 2>&1 || true
+
       - name: Export iOS (${{ inputs.export_mode || 'release' }})
         run: |
           mkdir -p ../bin/iOS

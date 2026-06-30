@@ -65,6 +65,11 @@ jobs:
           mkdir -p ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
           cp -r templates_cache/templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable/
 
+      - name: Import project assets
+        continue-on-error: true
+        run: |
+          $GODOT_BIN --headless --editor --quit 2>&1 || true
+
       - name: Export Linux (${{ inputs.export_mode || 'release' }})
         run: |
           mkdir -p ../bin/Linux

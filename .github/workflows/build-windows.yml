@@ -68,6 +68,12 @@ jobs:
           New-Item -ItemType Directory -Path $templateDir -Force
           Copy-Item -Path "templates_cache\templates\*" -Destination $templateDir -Recurse -Force
 
+      - name: Import project assets
+        continue-on-error: true
+        shell: pwsh
+        run: |
+          & $env:GODOT_BIN --headless --editor --quit 2>&1
+
       - name: Export Windows (${{ inputs.export_mode || 'release' }})
         shell: pwsh
         run: |
