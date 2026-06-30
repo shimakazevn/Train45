@@ -66,6 +66,20 @@ jobs:
           New-Item -ItemType Directory -Path $templateDir -Force
           Copy-Item -Path "templates_cache\templates\*" -Destination $templateDir -Recurse -Force
 
+      - name: Disable GodotSteam plugin for CI
+        shell: pwsh
+        run: |
+          Remove-Item -Recurse -Force "addons/godotsteam" -ErrorAction SilentlyContinue
+          python -c "
+          import re
+          content = open('project.godot', encoding='utf-8').read()
+          content = re.sub(r'\"res://addons/godotsteam/[^\"]*\"', '', content)
+          content = re.sub(r',\s*,', ',', content)
+          content = re.sub(r'\(\s*,', '(', content)
+          content = re.sub(r',\s*\)', ')', content)
+          open('project.godot', 'w', encoding='utf-8').write(content)
+          "
+
       - name: Import project assets
         continue-on-error: true
         shell: pwsh

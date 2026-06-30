@@ -63,6 +63,19 @@ jobs:
           mkdir -p ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable
           cp -r templates_cache/templates/* ~/.local/share/godot/export_templates/${{ env.GODOT_VERSION }}.stable/
 
+      - name: Disable GodotSteam plugin for CI
+        run: |
+          rm -rf addons/godotsteam
+          python3 -c "
+          import re
+          content = open('project.godot').read()
+          content = re.sub(r'\"res://addons/godotsteam/[^\"]*\"', '', content)
+          content = re.sub(r',\s*,', ',', content)
+          content = re.sub(r'\(\s*,', '(', content)
+          content = re.sub(r',\s*\)', ')', content)
+          open('project.godot', 'w').write(content)
+          "
+
       - name: Import project assets
         continue-on-error: true
         run: |

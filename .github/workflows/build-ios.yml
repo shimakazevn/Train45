@@ -79,6 +79,19 @@ jobs:
           cp profile.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
           echo "Code signing configured successfully"
 
+      - name: Disable GodotSteam plugin for CI
+        run: |
+          rm -rf addons/godotsteam
+          python3 -c "
+          import re
+          content = open('project.godot').read()
+          content = re.sub(r'\"res://addons/godotsteam/[^\"]*\"', '', content)
+          content = re.sub(r',\s*,', ',', content)
+          content = re.sub(r'\(\s*,', '(', content)
+          content = re.sub(r',\s*\)', ')', content)
+          open('project.godot', 'w').write(content)
+          "
+
       - name: Import project assets
         continue-on-error: true
         run: |
@@ -95,10 +108,12 @@ jobs:
           mkdir -p build/ios
           MODE="${{ inputs.export_mode || 'release' }}"
           if [ "$MODE" = "debug" ]; then
-            $GODOT_BIN --headless --export-debug "iOS" 2>&1 || true
+            $GODOT_BIN --headless --export-debug "iOS" build/ios/Train45.zip 2>&1
           else
-            $GODOT_BIN --headless --export-release "iOS" 2>&1 || true
+            $GODOT_BIN --headless --export-release "iOS" build/ios/Train45.zip 2>&1
           fi
+          echo "=== Unzipping Xcode project ==="
+          unzip -q build/ios/Train45.zip -d build/ios/
           echo "=== build/ios/ contents ==="
           ls -la build/ios/
           ls -la build/ios/Train45.xcodeproj/
