@@ -93,7 +93,7 @@ jobs:
         run: |
           rm -rf .godot/imported
           echo "=== Running editor import ==="
-          $GODOT_BIN --headless --editor --quit --verbose 2>&1 || true
+          $GODOT_BIN --headless --path . --editor --quit --verbose 2>&1 || true
           echo "=== Imported cache files ==="
           find .godot/imported -type f 2>/dev/null | head -30 || true
           echo "=== Total imported ==="
@@ -104,9 +104,9 @@ jobs:
           mkdir -p ../bin/macOS
           MODE="${{ inputs.export_mode || 'release' }}"
           if [ "$MODE" = "debug" ]; then
-            $GODOT_BIN --headless --export-debug "macOS"
+            $GODOT_BIN --headless --path . --export-debug "macOS" ../bin/macOS/Train45.zip
           else
-            $GODOT_BIN --headless --export-release "macOS"
+            $GODOT_BIN --headless --path . --export-release "macOS" ../bin/macOS/Train45.zip
           fi
 
       - name: Prepare artifact

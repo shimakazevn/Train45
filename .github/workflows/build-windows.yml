@@ -85,7 +85,7 @@ jobs:
         shell: pwsh
         run: |
           Remove-Item -Recurse -Force ".godot/imported" -ErrorAction SilentlyContinue
-          $proc = Start-Process -FilePath $env:GODOT_BIN -ArgumentList "--headless", "--editor", "--quit" -NoNewWindow -Wait -PassThru
+          & $env:GODOT_BIN --headless --path . --editor --quit
           Write-Output "=== Imported cache files ==="
           Get-ChildItem -File -Recurse ".godot/imported" -ErrorAction SilentlyContinue | Select-Object -First 30
           Write-Output "=== Total imported ==="
@@ -97,11 +97,10 @@ jobs:
           New-Item -ItemType Directory -Path "..\bin\Train45" -Force
           $mode = "${{ inputs.export_mode || 'release' }}"
           if ($mode -eq "debug") {
-            & $env:GODOT_BIN --headless --export-debug "Windows Desktop"
+            & $env:GODOT_BIN --headless --path . --export-debug "Windows Desktop" "../bin/Train45/Train45.exe"
           } else {
-            & $env:GODOT_BIN --headless --export-release "Windows Desktop"
+            & $env:GODOT_BIN --headless --path . --export-release "Windows Desktop" "../bin/Train45/Train45.exe"
           }
-          exit 0
 
       - name: Prepare artifact
         shell: pwsh

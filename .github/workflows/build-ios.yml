@@ -97,7 +97,7 @@ jobs:
         run: |
           rm -rf .godot/imported
           echo "=== Running editor import ==="
-          $GODOT_BIN --headless --editor --quit --verbose 2>&1 || true
+          $GODOT_BIN --headless --path . --editor --quit --verbose 2>&1 || true
           echo "=== Imported cache files ==="
           find .godot/imported -type f 2>/dev/null | head -30 || true
           echo "=== Total imported ==="
@@ -108,9 +108,9 @@ jobs:
           mkdir -p build/ios
           MODE="${{ inputs.export_mode || 'release' }}"
           if [ "$MODE" = "debug" ]; then
-            $GODOT_BIN --headless --export-debug "iOS" build/ios/Train45.zip 2>&1
+            $GODOT_BIN --headless --path . --export-debug "iOS" build/ios/Train45.zip 2>&1
           else
-            $GODOT_BIN --headless --export-release "iOS" build/ios/Train45.zip 2>&1
+            $GODOT_BIN --headless --path . --export-release "iOS" build/ios/Train45.zip 2>&1
           fi
           echo "=== Unzipping Xcode project ==="
           unzip -q build/ios/Train45.zip -d build/ios/
