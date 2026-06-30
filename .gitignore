@@ -6,3 +6,7 @@
 Thumbs.db
 
 bin/
+
+# Large Android AAR files (too big for GitHub)
+android/libs/debug/godot-lib.template_debug.aar
+android/libs/release/godot-lib.template_release.aar
