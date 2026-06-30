@@ -8,7 +8,7 @@ Information on which cars contain lost items can be purchased at the Exchange Sh
 落とし物ボックスを獲得するたびに、執事の好感度が上昇します。
 落とし物がある車両の情報は、交換ショップで購入できます。","Hãy giúp Quản gia, người có khả năng cảm ứng bị suy yếu, thu thập các món đồ thất lạc rải rác khắp các toa tàu. Mỗi lần bạn thu hồi một Hộp Đồ Thất Lạc, Thiện cảm của Quản gia sẽ tăng lên. Thông tin về việc toa tàu nào có chứa đồ thất lạc có thể được mua tại Cửa hàng Trao đổi."
 ROUTE_APP_MSG_NEEDCOIN,Not enough Coins.,コインが不足しています。,Không đủ Xu.
-NOW_DESTINATION_COMFIRMED,Route Set,路線設定完了,Tuyến đường đã được thiết lập
+NOW_DESTINATION_COMFIRMED,Route Set,路線設定完了,Tuyến đường đã thiết lập
 SCENE_LYING_KISS,Lying Down & Kissing,添い寝キス,Đồng sàng cộng hôn
 QUEST_PROCESS_COLLECT_ITEM,Collect %d+ Items,景品%d個以上収集,Thu thập từ %d vật phẩm
 TUTO_BUTLER_H_1,"To engage in sexual activities with the Butler in human form, you must raise her Affection.
@@ -75,7 +75,7 @@ You won't earn Tickets without enough Lust, so build it up through exploration.
 Exchange your collected Tickets for items to explore more efficiently and quickly.","エッチ中も左右方向キーを押すと、別の体位に変更できます！
 情念が不足するとチケットを獲得できないため、探索を行って情念を溜めてください。
 集めたチケットでアイテムを交換し、より効率的かつスピーディーに探索を進められます。","Bạn có thể thay đổi tư thế trong các phân cảnh H bằng cách sử dụng các phím Trái và Phải! Bạn sẽ không thể kiếm được Vé nếu không có đủ điểm Dục vọng, vì vậy hãy tích lũy điểm này thông qua việc thám hiểm. Hãy đổi Vé đã thu thập để lấy các vật phẩm nhằm thám hiểm hiệu quả và nhanh chóng hơn."
-ROUTE_APP_CONFIRM_ROUTE,Confirm Route,ルート確定,Xác nhận tuyến đường
+ROUTE_APP_CONFIRM_ROUTE,Confirm Route,ルート確定,Xác nhận
 <!MissingKey:50:You grew closer to Butler.>,You grew closer to Butler.,執事とさらに仲良くなったようだ。,Có vẻ bạn đã trở nên thân thiết hơn với Quản gia.
 TUTO_BASE_H_ACTION_1,"At the starting point, you can convert accumulated Lust into Tickets through sex scenes with your partner.
 Use the left and right arrow keys and the select key to choose your desired sex scene.
