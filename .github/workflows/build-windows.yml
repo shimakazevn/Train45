@@ -67,9 +67,9 @@ jobs:
           Copy-Item -Path "templates_cache\templates\*" -Destination $templateDir -Recurse -Force
 
       - name: Disable GodotSteam plugin for CI
-        shell: pwsh
+        shell: bash
         run: |
-          Remove-Item -Recurse -Force "addons/godotsteam" -ErrorAction SilentlyContinue
+          rm -rf addons/godotsteam
           python -c "
           import re
           content = open('project.godot', encoding='utf-8').read()
