@@ -79,6 +79,7 @@ jobs:
 
       - name: Export macOS (${{ inputs.export_mode || 'release' }})
         run: |
+          mkdir -p ../bin/macOS
           MODE="${{ inputs.export_mode || 'release' }}"
           if [ "$MODE" = "debug" ]; then
             $GODOT_BIN --headless --export-debug "macOS"
