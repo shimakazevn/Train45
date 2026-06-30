@@ -214,7 +214,7 @@ export/convert_text_resources_to_binary=false
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/godotsteam/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/gut/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
 
 [global_group]
 
@@ -535,6 +535,7 @@ tips/show_jitter_tips=false
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/vram_compression/import_etc2_astc=true
 lights_and_shadows/directional_shadow/size=256
 lights_and_shadows/directional_shadow/size.mobile=256
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
