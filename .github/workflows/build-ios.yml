@@ -6,7 +6,7 @@ on:
       export_mode:
         description: 'Export mode (debug/release)'
         required: true
-        default: 'debug'
+        default: 'release'
         type: choice
         options:
           - debug
@@ -86,20 +86,41 @@ jobs:
         run: |
           $GODOT_BIN --headless --editor --quit 2>&1 || true
 
-      - name: Export iOS (${{ inputs.export_mode || 'release' }})
+      - name: Export Xcode project
         run: |
-          mkdir -p ../bin/iOS
+          mkdir -p build/ios
           MODE="${{ inputs.export_mode || 'release' }}"
           if [ "$MODE" = "debug" ]; then
-            $GODOT_BIN --headless --export-debug "iOS"
+            $GODOT_BIN --headless --export-debug "iOS" build/ios/Train45.zip
           else
-            $GODOT_BIN --headless --export-release "iOS"
+            $GODOT_BIN --headless --export-release "iOS" build/ios/Train45.zip
           fi
+          unzip -q build/ios/Train45.zip -d build/ios/project
 
-      - name: Prepare artifact
+      - name: Build Xcode project (unsigned)
         run: |
-          mkdir -p dist
-          cp ../bin/iOS/Train45.zip.ipa dist/Train45-iOS.ipa
+          cd build/ios/project
+          xcodebuild -project Train45.xcodeproj \
+            -scheme Train45 \
+            -sdk iphoneos \
+            -configuration Release \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            clean build
+
+      - name: Package IPA
+        run: |
+          cd build/ios/project
+          APP_PATH=$(find . -name "Train45.app" -type d | head -n 1)
+          if [ -z "$APP_PATH" ]; then
+            APP_PATH=$(find ~/Library/Developer/Xcode/DerivedData -name "Train45.app" -type d | head -n 1)
+          fi
+          echo "Found app at: $APP_PATH"
+          mkdir Payload
+          cp -r "$APP_PATH" Payload/
+          mkdir -p ../../dist
+          zip -r ../../dist/Train45-iOS.ipa Payload/
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4

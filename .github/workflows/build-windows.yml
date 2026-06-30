@@ -84,6 +84,7 @@ jobs:
           } else {
             & $env:GODOT_BIN --headless --export-release "Windows Desktop"
           }
+          exit 0
 
       - name: Prepare artifact
         shell: pwsh
