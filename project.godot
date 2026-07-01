@@ -1,4 +1,4 @@
-﻿; Engine configuration file.
+; Engine configuration file.
 ; It's best edited using the editor UI and not directly,
 ; since the parameters that go here are not all obvious.
 ;
@@ -201,12 +201,12 @@ audio/type_sound_bus="Sfx"
 
 [display]
 
-window/vsync/vsync_mode=3
 window/size/viewport_width=640
 window/size/viewport_height=360
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=3
 window/main_scene="res://Gameplay/gameplay.tscn"
 
 [editor]
@@ -538,10 +538,6 @@ tips/show_jitter_tips=false
 
 [rendering]
 
-driver/driver_name.macos="Metal"
-driver/driver_name.ios="Metal"
-shader_compilation/mode=2
-
 textures/canvas_textures/default_texture_filter=0
 textures/vram_compression/import_etc2_astc=true
 lights_and_shadows/directional_shadow/size=256
@@ -558,6 +554,11 @@ lights_and_shadows/positional_shadow/atlas_quadrant_0_subdiv=0
 lights_and_shadows/positional_shadow/atlas_quadrant_1_subdiv=0
 lights_and_shadows/positional_shadow/atlas_quadrant_2_subdiv=0
 lights_and_shadows/positional_shadow/atlas_quadrant_3_subdiv=0
+driver/driver_name.macos="Metal"
+driver/driver_name.ios="Metal"
+shader_compilation/mode=2
+rendering/renderer/rendering_method.android="mobile"
+viewport/hdr_2d.android=false
 
 [steam]
 

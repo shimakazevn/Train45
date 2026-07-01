@@ -6,6 +6,7 @@
 Thumbs.db
 
 bin/
+build_tools/import_cache.zip
 
 # Large Android AAR files (too big for GitHub)
 android/libs/debug/godot-lib.template_debug.aar

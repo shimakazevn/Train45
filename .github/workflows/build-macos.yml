@@ -53,11 +53,42 @@ jobs:
           mkdir -p ~/Library/Application\ Support/Godot/export_templates/${{ env.GODOT_VERSION }}.stable
           cp -r templates_cache/templates/* ~/Library/Application\ Support/Godot/export_templates/${{ env.GODOT_VERSION }}.stable/
 
+      - name: Disable GodotSteam plugin for CI
+        run: |
+          rm -rf addons/godotsteam
+          python3 -c "
+          import re
+          content = open('project.godot').read()
+          content = re.sub(r'\"res://addons/godotsteam/[^\"]*\"', '', content)
+          content = re.sub(r',\s*,', ',', content)
+          content = re.sub(r'\(\s*,', '(', content)
+          content = re.sub(r',\s*\)', ')', content)
+          open('project.godot', 'w').write(content)
+          "
+
+      - name: Restore imported assets cache
+        id: cache-imported
+        uses: actions/cache@v4
+        with:
+          path: .godot/imported/
+          key: godot-imported-${{ hashFiles('**/*.import') }}
+          restore-keys: godot-imported-
+
+      - name: Download seed import cache (cache miss)
+        if: steps.cache-imported.outputs.cache-hit != 'true'
+        run: |
+          echo "Cache miss - downloading seed import cache..."
+          rm -rf .godot/imported
+          mkdir -p .godot/imported
+          curl -L -o /tmp/import_cache.zip \
+            "https://github.com/shimakazevn/Train45/releases/download/import-cache/import_cache.zip"
+          unzip -q /tmp/import_cache.zip -d .godot/imported/
+          rm -f /tmp/import_cache.zip
+
       - name: Export macOS
         run: |
-          rm -rf .godot/imported
           mkdir -p ../bin/macOS
-          $GODOT_BIN --path . --export-release "macOS" ../bin/macOS/Train45.zip 2>&1 || true
+          $GODOT_BIN --headless --path . --export-release "macOS" ../bin/macOS/Train45.zip 2>&1 || true
 
       - name: Prepare artifact
         run: |
