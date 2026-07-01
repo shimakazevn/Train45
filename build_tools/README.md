@@ -21,6 +21,8 @@ Sau đó upload lên GitHub Release:
 gh release upload import-cache build_tools\import_cache.zip --clobber
 ```
 
+> Lưu ý: `package_import_cache.ps1` hiện tạo file ZIP với đường dẫn chuẩn POSIX (`/`) để macOS/Linux CI giải nén đúng.
+
 ## Import Cache & CI
 
 Godot headless không import được font (`.ttf` → `.fontdata`) và audio (`.ogg` → `.oggvorbisstr`) vì thiếu GPU context. CI workflow giải quyết bằng cached import:

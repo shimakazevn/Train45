@@ -28,7 +28,40 @@ Write-Host "Size: $($totalSize / 1MB) MB"
 # Remove old zip if exists
 if (Test-Path $outputZip) { Remove-Item -Force $outputZip }
 
-Compress-Archive -Path "$tempDir\*" -DestinationPath $outputZip -CompressionLevel Optimal
+$python = Get-Command python -ErrorAction SilentlyContinue | Select-Object -First 1
+if (-not $python) {
+    $python = Get-Command py -ErrorAction SilentlyContinue | Select-Object -First 1
+}
+if (-not $python) {
+    Write-Error "Python is required to create import_cache.zip with POSIX paths. Install Python or add it to PATH."
+    exit 1
+}
+
+$pyScriptPath = Join-Path $projectDir "build_tools\package_import_cache_temp.py"
+@"
+import os
+import sys
+import zipfile
+from pathlib import Path
+
+src = sys.argv[1]
+dest = sys.argv[2]
+with zipfile.ZipFile(dest, 'w', compression=zipfile.ZIP_DEFLATED) as zf:
+    for root, dirs, files in os.walk(src):
+        for name in files:
+            path = os.path.join(root, name)
+            rel_path = Path(path).relative_to(src)
+            arcname = str(rel_path).replace(os.sep, '/')
+            zf.write(path, arcname)
+"@ | Set-Content -Path $pyScriptPath -Encoding UTF8
+
+& $python.Path $pyScriptPath $tempDir $outputZip
+$lastExitCode = $LASTEXITCODE
+Remove-Item -Force $pyScriptPath
+if ($lastExitCode -ne 0) {
+    Write-Error "Python failed to create the ZIP archive. Exit code: $lastExitCode"
+    exit $lastExitCode
+}
 
 # Cleanup temp
 Remove-Item -Recurse -Force $tempDir

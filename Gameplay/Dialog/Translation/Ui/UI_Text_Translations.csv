@@ -493,15 +493,15 @@ Company policy, nothing we can do. If you don't like it, take unpaid leave.","45
 「会社の方針だから仕方ないでしょ。嫌なら無給休暇とれって言われたし。」","Chiến dịch kỷ niệm sự kiện liên kết máy Pachinko giữa Tuyến tàu số 45 × [color=#ADFF2F]Mê cung tỏa sáng[/color] (Shining Labyrinth)!\nNếu lên tàu số 45 ngay bây giờ, bạn có thể trải nghiệm hành trình đặc biệt cùng các [color=#ADFF2F]nhân vật được yêu thích[/color]!\nSự kiện thu thập dấu đóng trên tàu, thông báo bằng giọng nói của nhân vật, và tặng quà giới hạn!\nTrong suốt thời gian chiến dịch, toàn bộ nhân viên sẽ mặc trang phục đặc biệt khi làm việc!\n""...Trang phục đặc biệt đó, không lẽ là...""\n""Đúng vậy. [color=#ADFF2F]Nữ hoàng thỏ[/color] (Bunny Girl). Và tùy chọn bổ sung là có thể mặc cả [color=#ADFF2F]đồ bơi Slingshot Bikini[/color].""\n""Điên rồi sao? Đây là tàu điện chứ đâu phải hộp đêm.""\n""Chỉ thị của công ty nên đành chịu thôi. Không thích thì xin nghỉ không lương đi."""
 QUEST_GOAL_TEXT_5,"After meeting the conditions, talk to Butler.",条件を満たして執事と会話しよう,Hãy nói chuyện với Quản gia sau khi đáp ứng các điều kiện
 ROUTE_TITLE_DOLL,Doll,人形,Búp bê
-CHAPTER_DESCRIPTION_1,Help Konial explore the train,コニアルを手伝って電車を探索しよう。,Hãy giúp Konial thám hiểm tàu.
+CHAPTER_DESCRIPTION_1,Help Konial explore the train,コニアルを手伝って電車を探索しよう。,Hãy giúp Konial thám hiểm tàu
 QUEST_GOAL_TEXT_2,"After meeting the conditions above, reach the 7th car.",上記条件を満たして7番目の車両に到達しよう,"Đáp Ứng Điều Kiện, Hướng Đến Toa Số 7"
-CHAPTER_DESCRIPTION_2,Use the Exchange Shop and explore deeper Anomalies,交換ショップを利用して、より深層の異変を探索しよう。,"Tận Dụng Cửa Hàng Trao Đổi, Khám Phá Dị Biến Tầng Sâu Hơn."
+CHAPTER_DESCRIPTION_2,Use the Exchange Shop and explore deeper Anomalies,交換ショップを利用して、より深層の異変を探索しよう。,"Tận Dụng Cửa Hàng Trao Đổi, Khám Phá Dị Biến Tầng Sâu Hơn"
 PAUSE_RESUME,Continue,続行,Tiếp tục
 QUEST_GOAL_TEXT_3,Create an item to find Pazuzu.,パズズを見つける道具を作ろう,Tạo ra dụng cụ để tìm kiếm Pazuzu
-CHAPTER_DESCRIPTION_3,Find the new passenger on the train,電車の新たな乗客を見つけ出そう。,Tìm Những Hành Khách Mới Trên Tàu.
+CHAPTER_DESCRIPTION_3,Find the new passenger on the train,電車の新たな乗客を見つけ出そう。,Tìm Những Hành Khách Mới Trên Tàu
 CHAPTER_DESCRIPTION_4,Find Pazuzu's Wallet,パズズの財布を見つけ出そう。,Truy Tìm Chiếc Ví Của Pazuzu.
 QUEST_GOAL_TEXT_1,"After meeting the conditions above, reach the 5th car.",上記条件を満たして5番目の車両に到達しよう,Hãy đạt toa thứ 5 sau khi đáp ứng các điều kiện trên
-CHAPTER_DESCRIPTION_5,Find where Pazuzu is trapped,パズズが閉じ込められている場所を見つけ出そう。,Tìm Nơi Pazuzu Đang Bị Giam Cầm.
+CHAPTER_DESCRIPTION_5,Find where Pazuzu is trapped,パズズが閉じ込められている場所を見つけ出そう。,Tìm Nơi Pazuzu Đang Bị Giam Cầm
 SHOP_EXIT,Exit,閉じる,Thoát
 CHAPTER_DESCRIPTION_6,Interrogate Konial and escape the train,コニアルを尋問して電車から脱出しよう。,Tra Hỏi Konial Và Thoát Khỏi Chuyến Tàu.
 QUEST_GOAL_TEXT_8,"Head to the Engine Room, or finish any unfinished business.",機関室へ移動するか、やり残したことを片付けよう,Hãy di chuyển đến Phòng động cơ hoặc hoàn thành các việc chưa xong

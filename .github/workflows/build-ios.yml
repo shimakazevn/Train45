@@ -82,7 +82,7 @@ jobs:
           mkdir -p .godot
           curl -fL -o /tmp/import_cache.zip \
             "https://github.com/shimakazevn/Train45/releases/download/import-cache/import_cache.zip"
-          unzip -q /tmp/import_cache.zip -d .godot/
+          unzip -q /tmp/import_cache.zip -d .godot/ || true
           rm -f /tmp/import_cache.zip
 
       - name: Export Xcode project (unsigned)
