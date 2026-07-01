@@ -57,7 +57,7 @@ jobs:
         run: |
           rm -rf .godot/imported
           mkdir -p ../bin/macOS
-          $GODOT_BIN --headless --path . --export-release "macOS" ../bin/macOS/Train45.zip 2>&1 || true
+          $GODOT_BIN --path . --export-release "macOS" ../bin/macOS/Train45.zip 2>&1 || true
 
       - name: Prepare artifact
         run: |
