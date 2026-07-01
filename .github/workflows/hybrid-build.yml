@@ -1,0 +1,40 @@
+name: Hybrid Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: 'Platform to build'
+        required: true
+        default: 'macos'
+        type: choice
+        options:
+          - macos
+          - ios
+          - both
+
+jobs:
+  hybrid-build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Restore import cache
+        shell: bash
+        run: |
+          mkdir -p .godot/imported
+          if [ -f build_tools/import_cache.zip ]; then
+            unzip -q build_tools/import_cache.zip -d /tmp/import_cache
+            if [ -d /tmp/import_cache/imported ]; then
+              cp -R /tmp/import_cache/imported/. .godot/imported/
+            fi
+          fi
+
+      - name: Build macOS or iOS
+        shell: bash
+        run: |
+          python3 build_tools/hybrid_build.py "${{ github.event.inputs.platform }}"
