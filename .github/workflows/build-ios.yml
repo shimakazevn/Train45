@@ -78,12 +78,26 @@ jobs:
         if: steps.cache-imported.outputs.cache-hit != 'true'
         run: |
           echo "Cache miss - downloading seed import cache..."
-          rm -rf .godot
-          mkdir -p .godot
+          rm -rf .godot /tmp/import_cache_extract
+          mkdir -p .godot /tmp/import_cache_extract
           curl -fL -o /tmp/import_cache.zip \
             "https://github.com/shimakazevn/Train45/releases/download/import-cache/import_cache.zip"
-          unzip -q /tmp/import_cache.zip -d .godot/ || true
+          unzip -q /tmp/import_cache.zip -d /tmp/import_cache_extract
+          if [ -d /tmp/import_cache_extract/imported ]; then
+            mkdir -p .godot/imported
+            cp -R /tmp/import_cache_extract/imported/. .godot/imported/
+          fi
+          if [ -f /tmp/import_cache_extract/uid_cache.bin ]; then cp /tmp/import_cache_extract/uid_cache.bin .godot/; fi
+          if [ -f /tmp/import_cache_extract/global_script_class_cache.cfg ]; then cp /tmp/import_cache_extract/global_script_class_cache.cfg .godot/; fi
+          if [ -f /tmp/import_cache_extract/.gdignore ]; then cp /tmp/import_cache_extract/.gdignore .godot/; fi
+          echo "Imported cache restored:"
+          find .godot/imported -type f | wc -l | xargs echo "files="
+          if [ ! -d ".godot/imported" ] || [ -z "$(find .godot/imported -type f | head -n 1)" ]; then
+            echo "Import cache restore failed: no imported files found"
+            exit 1
+          fi
           rm -f /tmp/import_cache.zip
+          rm -rf /tmp/import_cache_extract
 
       - name: Export Xcode project (unsigned)
         run: |

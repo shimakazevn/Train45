@@ -1,0 +1,79 @@
+name: Hybrid Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      platform:
+        description: 'Platform to build'
+        required: true
+        default: 'both'
+        type: choice
+        options:
+          - both
+          - macos
+          - ios
+
+jobs:
+  build-macos:
+    if: ${{ github.event.inputs.platform == 'both' || github.event.inputs.platform == 'macos' }}
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Restore Godot binary cache
+        id: cache-godot
+        uses: actions/cache@v4
+        with:
+          path: godot_cache/
+          key: Godot_v4.5-stable_macos.universal
+      - name: Download Godot binary
+        if: steps.cache-godot.outputs.cache-hit != 'true'
+        run: |
+          curl -L -o godot.zip https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_macos.universal.zip
+          mkdir -p godot_cache
+          unzip -q godot.zip -d godot_cache/
+      - name: Export path
+        run: echo "GODOT_BIN=$PWD/godot_cache/Godot.app/Contents/MacOS/Godot" >> $GITHUB_ENV
+      - name: Build macOS artifact
+        run: python3 build_tools/hybrid_build.py macos --output-dir dist/macos
+      - name: Upload macOS artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Train45-macOS-hybrid
+          path: dist/macos/Train45-macOS.zip
+          if-no-files-found: error
+
+  build-ios:
+    if: ${{ github.event.inputs.platform == 'both' || github.event.inputs.platform == 'ios' }}
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Restore Godot binary cache
+        id: cache-godot
+        uses: actions/cache@v4
+        with:
+          path: godot_cache/
+          key: Godot_v4.5-stable_macos.universal
+      - name: Download Godot binary
+        if: steps.cache-godot.outputs.cache-hit != 'true'
+        run: |
+          curl -L -o godot.zip https://github.com/godotengine/godot/releases/download/4.5-stable/Godot_v4.5-stable_macos.universal.zip
+          mkdir -p godot_cache
+          unzip -q godot.zip -d godot_cache/
+      - name: Export path
+        run: echo "GODOT_BIN=$PWD/godot_cache/Godot.app/Contents/MacOS/Godot" >> $GITHUB_ENV
+      - name: Build iOS artifact
+        run: python3 build_tools/hybrid_build.py ios --output-dir dist/ios
+      - name: Upload iOS artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Train45-iOS-hybrid
+          path: dist/ios/Train45-iOS.ipa
+          if-no-files-found: error
