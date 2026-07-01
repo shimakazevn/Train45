@@ -77,16 +77,13 @@ jobs:
           mkdir -p build/ios
           rm -rf build/ios/Train45.xcodeproj build/ios/Train45.zip
           $GODOT_BIN --headless --path . --export-release "iOS" build/ios/Train45.zip 2>&1 || true
-          if [ -f "build/ios/Train45.zip" ]; then
-            unzip -q build/ios/Train45.zip -d build/ios/
-            rm build/ios/Train45.zip
-          fi
+          echo "=== build/ios/ contents ==="
+          ls -la build/ios/
 
       - name: Build Xcode project (unsigned)
         run: |
           xcodebuild -project build/ios/Train45.xcodeproj \
             -scheme Train45 \
-            -sdk iphoneos \
             -configuration Release \
             CODE_SIGNING_ALLOWED=NO \
             CODE_SIGNING_REQUIRED=NO \
