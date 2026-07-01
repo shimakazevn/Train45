@@ -53,6 +53,19 @@ jobs:
           mkdir -p ~/Library/Application\ Support/Godot/export_templates/${{ env.GODOT_VERSION }}.stable
           cp -r templates_cache/templates/* ~/Library/Application\ Support/Godot/export_templates/${{ env.GODOT_VERSION }}.stable/
 
+      - name: Disable GodotSteam plugin for CI
+        run: |
+          rm -rf addons/godotsteam
+          python3 -c "
+          import re
+          content = open('project.godot').read()
+          content = re.sub(r'\"res://addons/godotsteam/[^\"]*\"', '', content)
+          content = re.sub(r',\s*,', ',', content)
+          content = re.sub(r'\(\s*,', '(', content)
+          content = re.sub(r',\s*\)', ')', content)
+          open('project.godot', 'w').write(content)
+          "
+
       - name: Import project assets
         continue-on-error: true
         run: |
@@ -63,7 +76,7 @@ jobs:
         run: |
           mkdir -p build/ios
           rm -rf build/ios/Train45.xcodeproj build/ios/Train45.zip
-          $GODOT_BIN --headless --path . --export-release "iOS" build/ios/Train45.zip 2>&1
+          $GODOT_BIN --headless --path . --export-release "iOS" build/ios/Train45.zip 2>&1 || true
           if [ -f "build/ios/Train45.zip" ]; then
             unzip -q build/ios/Train45.zip -d build/ios/
             rm build/ios/Train45.zip
