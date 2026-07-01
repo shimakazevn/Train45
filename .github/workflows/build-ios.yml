@@ -66,23 +66,23 @@ jobs:
           open('project.godot', 'w').write(content)
           "
 
-      - name: Restore imported assets cache
+      - name: Restore imported assets cache (full .godot/)
         id: cache-imported
         uses: actions/cache@v4
         with:
-          path: .godot/imported/
-          key: godot-imported-${{ hashFiles('**/*.import') }}
-          restore-keys: godot-imported-
+          path: .godot/
+          key: godot-cache-${{ hashFiles('**/*.import') }}
+          restore-keys: godot-cache-
 
       - name: Download seed import cache (cache miss)
         if: steps.cache-imported.outputs.cache-hit != 'true'
         run: |
           echo "Cache miss - downloading seed import cache..."
-          rm -rf .godot/imported
-          mkdir -p .godot/imported
+          rm -rf .godot
+          mkdir -p .godot
           curl -fL -o /tmp/import_cache.zip \
             "https://github.com/shimakazevn/Train45/releases/download/import-cache/import_cache.zip"
-          unzip -q /tmp/import_cache.zip -d .godot/imported/
+          unzip -q /tmp/import_cache.zip -d .godot/
           rm -f /tmp/import_cache.zip
 
       - name: Export Xcode project (unsigned)
