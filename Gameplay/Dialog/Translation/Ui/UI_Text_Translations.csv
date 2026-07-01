@@ -494,8 +494,8 @@ Company policy, nothing we can do. If you don't like it, take unpaid leave.","45
 QUEST_GOAL_TEXT_5,"After meeting the conditions, talk to Butler.",条件を満たして執事と会話しよう,Hãy nói chuyện với Quản gia sau khi đáp ứng các điều kiện
 ROUTE_TITLE_DOLL,Doll,人形,Búp bê
 CHAPTER_DESCRIPTION_1,Help Konial explore the train,コニアルを手伝って電車を探索しよう。,Hãy giúp Konial thám hiểm tàu.
-QUEST_GOAL_TEXT_2,"After meeting the conditions above, reach the 7th car.",上記条件を満たして7番目の車両に到達しよう,Đáp Ứng Điều Kiện, Hướng Đến Toa Số 7
-CHAPTER_DESCRIPTION_2,Use the Exchange Shop and explore deeper Anomalies,交換ショップを利用して、より深層の異変を探索しよう。,Tận Dụng Cửa Hàng Trao Đổi, Khám Phá Dị Biến Tầng Sâu Hơn.
+QUEST_GOAL_TEXT_2,"After meeting the conditions above, reach the 7th car.",上記条件を満たして7番目の車両に到達しよう,"Đáp Ứng Điều Kiện, Hướng Đến Toa Số 7"
+CHAPTER_DESCRIPTION_2,Use the Exchange Shop and explore deeper Anomalies,交換ショップを利用して、より深層の異変を探索しよう。,"Tận Dụng Cửa Hàng Trao Đổi, Khám Phá Dị Biến Tầng Sâu Hơn."
 PAUSE_RESUME,Continue,続行,Tiếp tục
 QUEST_GOAL_TEXT_3,Create an item to find Pazuzu.,パズズを見つける道具を作ろう,Tạo ra dụng cụ để tìm kiếm Pazuzu
 CHAPTER_DESCRIPTION_3,Find the new passenger on the train,電車の新たな乗客を見つけ出そう。,Tìm Những Hành Khách Mới Trên Tàu.

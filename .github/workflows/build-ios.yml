@@ -80,7 +80,7 @@ jobs:
           echo "Cache miss - downloading seed import cache..."
           rm -rf .godot/imported
           mkdir -p .godot/imported
-          curl -L -o /tmp/import_cache.zip \
+          curl -fL -o /tmp/import_cache.zip \
             "https://github.com/shimakazevn/Train45/releases/download/import-cache/import_cache.zip"
           unzip -q /tmp/import_cache.zip -d .godot/imported/
           rm -f /tmp/import_cache.zip
