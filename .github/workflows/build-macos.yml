@@ -5,6 +5,7 @@ on:
 
 env:
   GODOT_VERSION: 4.5
+  IMPORT_CACHE_URL: https://github.com/shimakazevn/Train45/releases/download/import-cache/import_cache.zip
 
 jobs:
   build:
@@ -13,6 +14,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
       - name: Restore Godot binary cache
         id: cache-godot
@@ -66,34 +72,12 @@ jobs:
           open('project.godot', 'w').write(content)
           "
 
-      - name: Restore imported assets cache (full .godot/)
-        id: cache-imported
-        uses: actions/cache@v4
-        with:
-          path: .godot/
-          key: godot-cache-${{ hashFiles('**/*.import') }}
-          restore-keys: godot-cache-
-
-      - name: Download seed import cache (cache miss)
-        if: steps.cache-imported.outputs.cache-hit != 'true'
-        run: |
-          echo "Cache miss - downloading seed import cache..."
-          rm -rf .godot
-          mkdir -p .godot
-          curl -fL -o /tmp/import_cache.zip \
-            "https://github.com/shimakazevn/Train45/releases/download/import-cache/import_cache.zip"
-          unzip -q /tmp/import_cache.zip -d .godot/ || true
-          rm -f /tmp/import_cache.zip
-
       - name: Export macOS
-        run: |
-          mkdir -p ../bin/macOS
-          $GODOT_BIN --headless --path . --export-release "macOS" ../bin/macOS/Train45.zip 2>&1 || true
-
-      - name: Prepare artifact
+        env:
+          IMPORT_CACHE_URL: ${{ env.IMPORT_CACHE_URL }}
         run: |
           mkdir -p dist
-          cp ../bin/macOS/Train45.zip dist/Train45-macOS.zip
+          python3 build_tools/hybrid_build.py macos --project-dir "$PWD" --output-dir "$PWD/dist" --godot-bin "$GODOT_BIN" --import-cache-url "$IMPORT_CACHE_URL"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
