@@ -7,7 +7,7 @@ extends CanvasLayer
 ## scale theo màn hình (DPI-independent), rung haptic khi nhấn.
 
 # ── Hằng số tinh chỉnh (đổi ở đây nếu muốn) ─────────────────────────────
-const REFERENCE_SHORT_SIDE := 720.0   ## Cạnh ngắn màn hình tham chiếu → scale = 1.0
+const REFERENCE_SHORT_SIDE := 360.0   ## Cạnh ngắn viewport (canvas) tham chiếu → scale = 1.0
 const UI_SCALE_MIN := 0.8
 const UI_SCALE_MAX := 2.2
 const FADE_SPEED := 5.0                ## Tốc độ fade in/out lớp nút
@@ -35,6 +35,7 @@ var _lb_top := 0.0
 var _lb_bottom := 0.0
 var _lb_left := 0.0    ## Dải đen trái (pillarbox) khi màn hình rộng hơn 16:9
 var _lb_right := 0.0   ## Dải đen phải
+var _vp_size := Vector2.ZERO   ## Kích thước viewport (đơn vị canvas) — trùng hệ toạ độ với nút
 var _ui_scale := 1.0
 var _enabled := false
 var _last_window_size := Vector2i.ZERO
@@ -95,28 +96,33 @@ func _new_full_rect_control() -> Control:
 
 
 func _calculate_layout() -> void:
-	var size := DisplayServer.window_get_size()
-	_last_window_size = size
+	_last_window_size = DisplayServer.window_get_size()
 
-	# Scale theo cạnh ngắn của màn hình để nút không quá bé/quá to trên máy nét cao.
+	# [VI] Dùng kích thước VIEWPORT (đơn vị canvas), KHÔNG dùng window px, để trùng hệ toạ độ
+	# với các Control nút. Với stretch mode=canvas_items + aspect=expand, viewport phủ toàn màn hình
+	# (không còn viền đen do engine tạo) nên ta TỰ vẽ panel đen vào vùng ngoài khung 16:9.
+	var size := get_viewport().get_visible_rect().size
+	_vp_size = size
+
+	# Scale theo cạnh ngắn viewport để nút không quá bé/quá to.
 	var short_side := float(min(size.x, size.y))
 	_ui_scale = clampf(short_side / REFERENCE_SHORT_SIDE, UI_SCALE_MIN, UI_SCALE_MAX)
 
-	# Viền đen quanh khung game 16:9:
-	#  - Màn hình CAO hơn 16:9 (dọc)  → letterbox trên/dưới.
-	#  - Màn hình RỘNG hơn 16:9 (đa số ĐT ngang) → pillarbox trái/phải.
+	# "Viền đen" ảo quanh khung game 16:9 (giờ là vùng ta tự vẽ panel đen, không phải engine):
+	#  - Màn hình CAO hơn 16:9 (dọc)  → dải trên/dưới.
+	#  - Màn hình RỘNG hơn 16:9 (đa số ĐT ngang) → dải trái/phải.
 	_lb_top = 0.0
 	_lb_bottom = 0.0
 	_lb_left = 0.0
 	_lb_right = 0.0
-	var current_ratio := float(size.x) / float(size.y)
+	var current_ratio := size.x / size.y
 	if current_ratio < TARGET_RATIO:
-		var game_height := float(size.x) / TARGET_RATIO
-		_lb_top = (float(size.y) - game_height) / 2.0
+		var game_height := size.x / TARGET_RATIO
+		_lb_top = (size.y - game_height) / 2.0
 		_lb_bottom = _lb_top
 	elif current_ratio > TARGET_RATIO:
-		var game_width := float(size.y) * TARGET_RATIO
-		_lb_left = (float(size.x) - game_width) / 2.0
+		var game_width := size.y * TARGET_RATIO
+		_lb_left = (size.x - game_width) / 2.0
 		_lb_right = _lb_left
 
 
@@ -186,6 +192,11 @@ func _setup_buttons() -> void:
 ## Bố cục tận dụng 2 dải đen 2 bên (điện thoại ngang rộng hơn 16:9).
 ## D-pad giữa dải TRÁI, nút hành động giữa dải PHẢI, tiện ích xếp dọc đỉnh dải trái.
 func _setup_gameplay_side_bars() -> void:
+	# Tự vẽ 2 panel đen đục phủ vùng ngoài khung 16:9 (che phần gameplay lộ ra do aspect=expand),
+	# rồi đặt nút lên panel → nút nằm ngoài vùng chơi, không che gameplay.
+	_add_side_panel(Vector2.ZERO, Vector2(_lb_left, _vp_size.y))
+	_add_side_panel(Vector2(_vp_size.x - _lb_right, 0.0), Vector2(_lb_right, _vp_size.y))
+
 	var btn_w := 46.0
 	var btn_h := 24.0
 	var left_cx := _lb_left * 0.5      # tâm dải trái (tính từ mép trái)
@@ -207,6 +218,18 @@ func _setup_gameplay_side_bars() -> void:
 	_add_utility_button(gameplay_container, "esc", Vector2(left_cx, _s(20.0)), btn_w, btn_h, "ESC", Control.PRESET_TOP_LEFT, COLOR_EXIT)
 	_add_utility_button(gameplay_container, "testkey", Vector2(left_cx, _s(52.0)), btn_w, btn_h, "XEM", Control.PRESET_TOP_LEFT, COLOR_UTILITY)
 	_add_utility_button(gameplay_container, "return_base", Vector2(left_cx, _s(84.0)), btn_w, btn_h, "VỀ", Control.PRESET_TOP_LEFT, COLOR_UTILITY)
+
+
+## Vẽ một panel đen đục (che gameplay lộ ra ngoài khung 16:9) làm nền cho nút.
+func _add_side_panel(pos: Vector2, sz: Vector2) -> void:
+	if sz.x <= 0.0 or sz.y <= 0.0:
+		return
+	var panel := ColorRect.new()
+	panel.color = Color(0.0, 0.0, 0.0, 1.0)
+	panel.position = pos
+	panel.size = sz
+	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	gameplay_container.add_child(panel)
 
 
 ## Bố cục dự phòng khi KHÔNG có dải bên (đúng 16:9 hoặc màn hình dọc → letterbox trên/dưới).

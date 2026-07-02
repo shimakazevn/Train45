@@ -9,7 +9,9 @@ extends DialogicBackground
 
 func _ready() -> void:
 	image_node.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	image_node.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	# [VI] COVERED: phủ kín màn hình (cắt phần thừa) thay vì canh giữa để tránh viền lộ lớp dưới,
+	# quan trọng trên mobile khi tỉ lệ màn khác tỉ lệ ảnh (16:9).
+	image_node.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 
 	image_node.anchor_right = 1
 	image_node.anchor_bottom = 1
@@ -18,7 +20,11 @@ func _ready() -> void:
 func _update_background(argument:String, _time:float) -> void:
 	if argument.begins_with('res://'):
 		image_node.texture = load(argument)
-		color_node.color = Color.TRANSPARENT
+		# [VI] Nền đen ĐỤC (không trong suốt) làm lớp lót.
+		# Dialogic render mỗi bg vào SubViewport có transparent_bg=true; trên renderer mobile
+		# nền trong suốt hay bị lỗi blend alpha khiến bg hiện mờ/thấu, lộ gameplay bên dưới.
+		# Lớp lót đục đảm bảo texture bg luôn alpha=1 → không bao giờ lộ lớp dưới.
+		color_node.color = Color.BLACK
 	elif argument.is_valid_html_color():
 		image_node.texture = null
 		color_node.color = Color(argument, 1)

@@ -772,3 +772,10 @@ BROADCAST_INTERVAL_LONG,Long,長い,Dài
 BROADCAST_INTERVAL_OFF,Off,オフ,Tắt
 DIALOGIC_AUTOPLAY,Auto (A),オート (A),Tự động (A)
 FREE_H_PANNING,"Screen Move : Toggle Ctrl, then Arrows",画面移動：Ctrl切替後、方向キー,Di chuyển màn hình: Nhấn Ctrl rồi dùng phím mũi tên
+OPTION_QUALITY,Quality,画質,Chất lượng
+OPTION_QUALITY_HIGH,High,高,Cao
+OPTION_QUALITY_MEDIUM,Medium,中,Vừa
+OPTION_QUALITY_LOW,Low,低,Thấp
+OPTION_RENDER_SCALE,Render Scale,レンダースケール,Tỷ lệ render
+OPTION_FPS_LIMIT,FPS Limit,FPS制限,Giới hạn FPS
+OPTION_FPS_UNLIMITED,Unlimited,無制限,Không giới hạn

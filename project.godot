@@ -206,6 +206,7 @@ window/size/viewport_height=360
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/vsync/vsync_mode=3
 window/main_scene="res://Gameplay/gameplay.tscn"
 
@@ -498,8 +499,8 @@ dialog_option={
 [internationalization]
 
 locale/translation_remaps={
-"res://resources/font/ShipporiGothicB2-Bold.ttf": PackedStringArray("res://resources/font/NotoSansEN-Medium.ttf:vi"),
-"res://resources/font/TsunagiGothic.ttf": PackedStringArray("res://resources/font/NotoSansEN-Medium.ttf:vi"),
+"res://resources/font/ShipporiGothicB2-Bold.ttf": PackedStringArray("res://resources/font/NotoSansCJKjp-Regular.otf:vi"),
+"res://resources/font/TsunagiGothic.ttf": PackedStringArray("res://resources/font/NotoSansCJKjp-Regular.otf:vi"),
 "res://resources/theme/theme_zh.tres": PackedStringArray("res://resources/theme/theme_jp.tres:jp", "res://resources/theme/theme_ko.tres:ko", "res://resources/theme/theme_en.tres:en", "res://resources/theme/theme_cn.tres:cn", "res://resources/theme/theme_vi.tres:vi"),
 "res://resources/ui/title_jp.png": PackedStringArray("res://resources/ui/title_zh.png:zh", "res://resources/ui/title_cn.png:cn", "res://resources/ui/title_en.png:en", "res://resources/ui/title_kr.png:ko"),
 "res://resources/ui/tuto_image/tuto_ero_gage.png": PackedStringArray("res://resources/ui/tuto_image/tuto_ero_gage_jp.png:jp", "res://resources/ui/tuto_image/tuto_ero_gage_kr.png:ko", "res://resources/ui/tuto_image/tuto_ero_gage_cn.png:cn", "res://resources/ui/tuto_image/tuto_ero_gage_zh.png:zh"),
@@ -564,7 +565,7 @@ rendering_method="forward_plus"
 rendering_method.mobile="gl_compatibility"
 rendering_method.android="mobile"
 rendering_method.ios="mobile"
-viewport/hdr_2d.mobile=true
+viewport/hdr_2d.mobile=false
 driver/driver_name.macos="Metal"
 driver/driver_name.ios="Metal"
 shader_compilation/mode=2

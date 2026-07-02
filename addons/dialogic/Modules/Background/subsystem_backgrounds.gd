@@ -164,7 +164,10 @@ func add_background_node(scene:PackedScene, parent:DialogicNode_BackgroundHolder
 	v_con.set_anchors_preset(Control.PRESET_FULL_RECT)
 
 	v_con.add_child(viewport)
-	viewport.transparent_bg = true
+	# [VI] transparent_bg=false: trên renderer mobile, SubViewport nền trong suốt bị blend alpha sai
+	# → background hiện mờ/thấu lộ gameplay bên dưới. Nền đục làm texture bg luôn alpha=1.
+	# (Background full-screen luôn cần đục; khi không có bg thì viewport không được tạo nên vô hại.)
+	viewport.transparent_bg = false
 	viewport.disable_3d = true
 	viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
 	viewport.canvas_item_default_texture_filter = ProjectSettings.get_setting("rendering/textures/canvas_textures/default_texture_filter")

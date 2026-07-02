@@ -11,6 +11,12 @@ extends Control
 @onready var lighting_button: CheckBox = %LightingQuality
 ## 해상도 선택 드롭다운.
 @onready var resolution_button = %Resolution
+## 그래픽 프리셋(화질) 선택 드롭다운.
+@onready var quality_button: OptionButton = %QualityTier
+## FPS 상한 선택 드롭다운.
+@onready var fps_button: OptionButton = %FpsLimit
+## 해상도 행 컨테이너. (모바일에서는 숨김)
+@onready var resolution_container: Control = %Resolution.get_parent()
 ## 현재 포커스된 UI 요소를 강조하는 사각형.
 @export var focus_rect : NinePatchRect
 @onready var animation_player = $CanvasLayer/Panel/AnimationPlayer
@@ -46,6 +52,15 @@ const RESOLUTION_DICTIONARY : Dictionary = {
 	"3840 x 2160" : Vector2i(3840,2160)
 }
 
+## 화질 프리셋 항목 순서. OptionButton item index ↔ tier 문자열.
+const QUALITY_TIERS : Array[String] = ["high", "medium", "low"]
+## 화질 프리셋 항목의 번역 키.
+const QUALITY_TIER_KEYS : Array[String] = ["OPTION_QUALITY_HIGH", "OPTION_QUALITY_MEDIUM", "OPTION_QUALITY_LOW"]
+## FPS 상한 항목. index ↔ 실제 FPS 값. (0 = 무제한)
+const FPS_OPTIONS : Array[int] = [30, 60, 120, 0]
+## FPS 상한 항목 표시 텍스트.
+const FPS_LABELS : Array[String] = ["30", "60", "120", "OPTION_FPS_UNLIMITED"]
+
 ## 진입 애니메이션을 재생하고, 저장된 비디오 설정으로 UI를 초기화한다.
 func _ready():
 	animation_player.play("in")
@@ -73,6 +88,7 @@ func _ready():
 	full_screen_button.button_pressed = video_settings.fullscreen
 	lighting_button.set_pressed_no_signal(not video_settings.get("light_quality", true))
 	resolution_button_show()
+	_init_quality_and_scale(video_settings)
 	
 	
 	# ID 기반으로 항목을 선택한다 (순서가 바뀌어도 안전)
@@ -207,8 +223,60 @@ func _on_full_screen_toggled(toggled_on):
 
 
 ## 조명 품질 토글 콜백. 조명을 켜거나 끄고 설정을 저장한다.
+## [br]체크=성능(저사양) 모드. tier 드롭다운과 동기화하기 위해 high/medium을 오간다.
 func _on_lighting_toggled(toggled_on: bool) -> void:
-	LightOptimizer.set_quality(not toggled_on)
+	var tier := "medium" if toggled_on else "high"
+	LightOptimizer.apply_tier(tier)
+	_sync_quality_dropdown(tier)
+
+## 화질 프리셋 드롭다운을 저장값으로 초기화한다.
+## [br]모바일에서는 해상도·전체화면 설정을 숨긴다. (기기 화면에 항상 꽉 차게 config 계층에서 강제)
+func _init_quality_and_scale(video_settings: Dictionary) -> void:
+	# 화질 프리셋 드롭다운 (모든 플랫폼)
+	quality_button.clear()
+	for i in QUALITY_TIERS.size():
+		quality_button.add_item(tr(QUALITY_TIER_KEYS[i]), i)
+	var tier: String = video_settings.get("quality_tier", "high" if video_settings.get("light_quality", true) else "medium")
+	_sync_quality_dropdown(tier)
+
+	# FPS 상한 드롭다운 (모든 플랫폼)
+	fps_button.clear()
+	var saved_fps: int = int(video_settings.get("max_fps", 60))
+	for i in FPS_OPTIONS.size():
+		var label: String = FPS_LABELS[i]
+		fps_button.add_item(tr(label) if label.begins_with("OPTION_") else label, i)
+		if FPS_OPTIONS[i] == saved_fps:
+			fps_button.select(i)
+
+	# 모바일: 해상도/전체화면 설정 불필요 → 숨김. (항상 전체화면은 ConfigFileHandler에서 처리)
+	var mobile: bool = ConfigFileHandler.is_mobile()
+	resolution_container.visible = not mobile
+	full_screen_button.get_parent().visible = not mobile
+
+	# 모바일에서는 숨긴 행(해상도/전체화면) 때문에 FPS 행이 아래에 떨어져 빈 칸이 생긴다.
+	# 화질 행(offset_top 96) 바로 아래(136)로 끌어올려 빈 칸을 없앤다.
+	if mobile:
+		var fps_row: Control = fps_button.get_parent()
+		fps_row.offset_top = 136.0
+		fps_row.offset_bottom = 172.0
+
+## tier 문자열에 맞춰 화질 드롭다운 선택과 조명 체크박스를 동기화한다. (신호 없이)
+func _sync_quality_dropdown(tier: String) -> void:
+	var idx: int = QUALITY_TIERS.find(tier)
+	if idx == -1:
+		idx = 0
+	quality_button.select(idx)
+	lighting_button.set_pressed_no_signal(tier != "high")
+
+## 화질 프리셋 드롭다운 변경 콜백. tier를 적용·저장하고 조명 체크박스를 동기화한다.
+func _on_quality_tier_item_selected(index: int) -> void:
+	var tier: String = QUALITY_TIERS[index]
+	LightOptimizer.apply_tier(tier)
+	lighting_button.set_pressed_no_signal(tier != "high")
+
+## FPS 상한 드롭다운 변경 콜백. 선택한 FPS 상한을 즉시 적용·저장한다. (0 = 무제한)
+func _on_fps_limit_item_selected(index: int) -> void:
+	LightOptimizer.set_max_fps(FPS_OPTIONS[index])
 
 
 ## 뒤로가기 처리. 퇴장 애니메이션을 재생하고 포커스 콜백을 해제한다.

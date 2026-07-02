@@ -17,6 +17,12 @@ var config = ConfigFile.new()
 ## [EN] Config file storage path.
 const SETTING_FILE_PATH = "user://settings.ini"
 
+## [KR] 현재 플랫폼이 모바일(Android/iOS)인지 여부. 그래픽 프리셋 기본값 결정에 사용.
+## [EN] Whether the current platform is mobile (Android/iOS). Used to decide graphics-preset defaults.
+## [br]Why: 모바일에서는 발열/OOM 방지를 위해 기본 화질·해상도·FPS를 낮게 잡아야 하기 때문.
+func is_mobile() -> bool:
+	return OS.get_name() in ["Android", "iOS"]
+
 ## [KR] OS 로케일을 게임 지원 언어 키로 변환한다. 미지원 언어는 "en" 반환.
 ## [EN] Converts OS locale to a supported language key. Returns "en" for unsupported locales.
 func _detect_system_language() -> String:
@@ -40,7 +46,14 @@ func _ready():
 		config.set_value("video", "language", _detect_system_language())
 		config.set_value("video", "fullscreen", false)
 		config.set_value("video", "resolution", Vector2i(1920,1080))
-		config.set_value("video", "light_quality", true)
+		# [KR] 그래픽 프리셋: 데스크톱은 high, 모바일은 발열 방지를 위해 medium을 기본값으로.
+		# [EN] Graphics preset: high on desktop, medium on mobile to avoid overheating.
+		var default_mobile := is_mobile()
+		config.set_value("video", "quality_tier", "medium" if default_mobile else "high")
+		config.set_value("video", "max_fps", 60)
+		# [KR] 하위 호환용: 기존 light_quality는 tier에서 파생(medium/low=off, high=on).
+		# [EN] Backward-compat: light_quality derived from tier (medium/low=off, high=on).
+		config.set_value("video", "light_quality", not default_mobile)
 		
 		# [KR] audio / [EN] audio
 		config.set_value("audio", "voice_lang", "jp")
@@ -134,11 +147,20 @@ func init_config():
 	else:
 		# _ready() 중 set_locale() 호출 시 폰트 미초기화로 인한 에러 방지
 		LanguageManager.set_language.call_deferred(video_settings.language)
-	DisplayServer.window_set_size(video_settings.resolution)
-	if video_settings.fullscreen:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	# [KR] 모바일에서는 데스크톱용 해상도/윈도우 모드 강제를 건너뛴다.
+	# 안드로이드/iOS는 플랫폼 레벨(Export > Android > Screen > Immersive Mode)에서 전체화면을 처리하므로,
+	# 여기서 WINDOW_MODE_WINDOWED를 강제하면 오히려 몰입형 전체화면이 깨진다.
+	# [EN] On mobile, skip forcing desktop resolution/window mode.
+	# Android/iOS handle fullscreen at the platform level (Export > Android > Screen > Immersive Mode);
+	# forcing WINDOW_MODE_WINDOWED here would break the immersive fullscreen.
+	if is_mobile():
+		pass
 	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		DisplayServer.window_set_size(video_settings.resolution)
+		if video_settings.fullscreen:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		else:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	
 	var audio_settings = load_audio_setting()
 	var bus_index_master:int = AudioServer.get_bus_index("Master")
