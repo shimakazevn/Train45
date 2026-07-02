@@ -22,6 +22,9 @@ func _ready():
 	stage.npc_active = npc_active
 
 func find_target() -> void:
+	# 회상방은 일반 스테이지 클리어 개념이 없다(귀신은 per-ghost로 따로 감지) → 전역 클리어 파이프라인 차단.
+	if GameEvents.is_recollection_room:
+		return
 	if stage_type == Constants.TYPE_BASE:
 		return
 	if stage_clear == true:

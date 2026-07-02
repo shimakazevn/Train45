@@ -1,10 +1,10 @@
 [gd_scene load_steps=18 format=3]
 
 [ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="1_aamxw"]
 [ext_resource type="Script" uid="uid://b5supx1x5cd2y" path="res://Gameplay/Levels/npc_anomaly.gd" id="2_fyq3t"]
 [ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
-[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="9_62jqa"]
-[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_2kt0v"]
+[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_62jqa"]
 [ext_resource type="PackedScene" uid="uid://lg6623mk53cw" path="res://scene/component/teleport_component.tscn" id="26_1r73j"]
 [ext_resource type="Texture2D" uid="uid://du0ewe3ii4vjn" path="res://resources/bg_train_wall.png" id="27_50oqc"]
 [ext_resource type="PackedScene" uid="uid://dnc5rb3rrpan3" path="res://scene/UI/clear_text.tscn" id="31_82fnd"]
@@ -74,8 +74,8 @@ shape = SubResource("RectangleShape2D_v61mu")
 [node name="Anomaly" type="Area2D" parent="TrainStandard"]
 collision_layer = 8
 collision_mask = 0
-script = ExtResource("9_62jqa")
-bubble = ExtResource("10_2kt0v")
+script = ExtResource("1_aamxw")
+bubble = ExtResource("10_62jqa")
 
 [node name="AnomalyCollision" type="CollisionShape2D" parent="TrainStandard/Anomaly"]
 unique_name_in_owner = true

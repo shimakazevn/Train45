@@ -102,6 +102,11 @@ var is_increasing := false
 ## [EN] Whether gauge changes are paused.
 var is_paused := false
 var is_input_locked := false  # [KR] 입력 잠금 상태 변수 추가 / [EN] Input lock state variable
+## [KR] 화면 팬(오프셋 이동) 모드 활성화 여부. ZoomInComponent가 토글하며,
+## [code]true[/code]이면 move_up/move_down을 팬이 가져가므로 속도/일시정지 입력을 무시한다.
+## [EN] Whether screen pan (offset move) mode is active. Toggled by ZoomInComponent.
+## When [code]true[/code], move_up/move_down are used for panning, so speed/pause input is ignored.
+var is_pan_mode := false
 ## [KR] 사정이 발생했는지 여부.
 ## [EN] Whether climax has occurred.
 var is_cum := false
@@ -208,7 +213,9 @@ func _process(delta):
 	
 	# [KR] 입력 처리 (action)
 	# [EN] Input handling (action)
-	if not is_input_locked:
+	# [KR] 팬 모드일 때는 move_up/move_down을 화면 이동이 가져가므로 속도/일시정지 입력을 무시한다.
+	# [EN] In pan mode, move_up/move_down drive panning, so ignore speed/pause input.
+	if not is_input_locked and not is_pan_mode:
 		if Input.is_action_just_pressed("move_down"):
 			handle_action_input()
 		# [KR] move_right 입력 처리 (언제든지 입력 가능하게 설정)
@@ -247,6 +254,11 @@ func _update_zoom(delta):
 func _reset_zoom():
 	if npc and npc.npc_camera:
 		npc.npc_camera.zoom = Vector2.ONE
+		# [KR] ZoomInComponent가 화면 팬으로 바꾼 Camera2D.offset도 함께 원복(공유 카메라라 다른 상태로 새는 것 방지)
+		# [EN] Also reset the Camera2D.offset that ZoomInComponent changed for panning (shared camera, prevents leaking to other states)
+		var host = npc.npc_camera.get_pcam_host_owner()
+		if host and host.camera_2d:
+			host.camera_2d.offset = Vector2.ZERO
 
 ## [KR] ESC 입력 시 H 이벤트를 종료하는 글로벌 입력 핸들러.
 ## [br]이벤트 비활성 상태이거나 입력 잠금 / 화면 전환 중에는 무시한다.

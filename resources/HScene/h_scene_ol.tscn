@@ -1,9 +1,9 @@
 [gd_scene load_steps=154 format=4]
 
-[ext_resource type="Texture2D" uid="uid://cw55b61ol1jwy" path="res://resources/HScene/ol_scene.png" id="3_1lcd4"]
+[ext_resource type="Texture2D" uid="uid://cw55b61ol1jwy" path="res://resources/HScene/ol_scene.png" id="3_wb0dw"]
 [ext_resource type="Script" uid="uid://xham5m0ijh6a" path="res://resources/HScene/h_scene_audio_stream_player_2d.gd" id="3_yca1i"]
 [ext_resource type="AudioStream" uid="uid://x6n38q2xf8bn" path="res://sound/sfx/h_sfx/normal/h_sfx_normal1.wav" id="4_20fwj"]
-[ext_resource type="Script" uid="uid://bikl16l6q4pas" path="res://resources/HScene/h_scene.gd" id="4_lyvfe"]
+[ext_resource type="Script" uid="uid://bikl16l6q4pas" path="res://resources/HScene/h_scene.gd" id="4_bpix1"]
 [ext_resource type="AudioStream" uid="uid://c2dpfiabhxllj" path="res://sound/sfx/h_sfx/normal/h_sfx_normal2.wav" id="5_05omy"]
 [ext_resource type="AudioStream" uid="uid://0kx2flvefjev" path="res://sound/sfx/h_sfx/normal/h_sfx_normal3.wav" id="6_2ikp8"]
 [ext_resource type="AudioStream" uid="uid://kvefno173rxk" path="res://sound/sfx/h_sfx/normal/h_sfx_normal4.wav" id="7_5132w"]
@@ -2071,11 +2071,11 @@ height = 94.78772
 texture_filter = 1
 material = SubResource("ShaderMaterial_s3jlc")
 position = Vector2(0, -122)
-texture = ExtResource("3_1lcd4")
+texture = ExtResource("3_wb0dw")
 hframes = 20
 vframes = 19
 frame = 211
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,

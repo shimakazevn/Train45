@@ -1,6 +1,0 @@
-[configuration]
-entry_symbol = "godotsteam_init"
-compatibility_minimum = "4.4"
-
-[libraries]
-

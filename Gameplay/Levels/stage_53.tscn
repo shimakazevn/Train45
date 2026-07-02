@@ -1,16 +1,16 @@
 [gd_scene load_steps=36 format=3]
 
 [ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="1_aamxw"]
+[ext_resource type="Texture2D" uid="uid://56minra20l5y" path="res://Gameplay/Levels/ano_oppai.png" id="2_q7elp"]
 [ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
-[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="9_62jqa"]
-[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_2kt0v"]
-[ext_resource type="Texture2D" uid="uid://56minra20l5y" path="res://Gameplay/Levels/ano_oppai.png" id="10_hf2vb"]
-[ext_resource type="Script" uid="uid://b1f7jsipe626u" path="res://Gameplay/Levels/ghost_h_anomaly_component.gd" id="11_62jqa"]
-[ext_resource type="Texture2D" uid="uid://duva4mnpevjja" path="res://resources/ui/heart.png" id="18_07nih"]
-[ext_resource type="Texture2D" uid="uid://bisawr6dhlsb2" path="res://resources/ui/keyboard_icon/keyboard_icon11.png" id="19_ngwj7"]
-[ext_resource type="Texture2D" uid="uid://d05jjmxu4w3sd" path="res://resources/ui/keyboard_icon/keyboard_icon12.png" id="20_a86ny"]
-[ext_resource type="PackedScene" uid="uid://c5cqnjwgn5mkw" path="res://scene/UI/action_progress.tscn" id="21_g0oe4"]
-[ext_resource type="PackedScene" uid="uid://d375wpw5cnun3" path="res://sound/h_sfx_audio_stream_player_2d.tscn" id="23_a86ny"]
+[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_62jqa"]
+[ext_resource type="Texture2D" uid="uid://bisawr6dhlsb2" path="res://resources/ui/keyboard_icon/keyboard_icon11.png" id="11_1lcd4"]
+[ext_resource type="Script" uid="uid://b1f7jsipe626u" path="res://Gameplay/Levels/ghost_h_anomaly_component.gd" id="11_hf2vb"]
+[ext_resource type="Texture2D" uid="uid://d05jjmxu4w3sd" path="res://resources/ui/keyboard_icon/keyboard_icon12.png" id="12_lyvfe"]
+[ext_resource type="Texture2D" uid="uid://duva4mnpevjja" path="res://resources/ui/heart.png" id="13_batyu"]
+[ext_resource type="PackedScene" uid="uid://c5cqnjwgn5mkw" path="res://scene/UI/action_progress.tscn" id="14_s6xge"]
+[ext_resource type="PackedScene" uid="uid://d375wpw5cnun3" path="res://sound/h_sfx_audio_stream_player_2d.tscn" id="15_ohf14"]
 [ext_resource type="PackedScene" uid="uid://lg6623mk53cw" path="res://scene/component/teleport_component.tscn" id="26_1r73j"]
 [ext_resource type="Texture2D" uid="uid://du0ewe3ii4vjn" path="res://resources/bg_train_wall.png" id="27_50oqc"]
 [ext_resource type="PackedScene" uid="uid://dnc5rb3rrpan3" path="res://scene/UI/clear_text.tscn" id="31_82fnd"]
@@ -39,8 +39,8 @@ light_mode = 1
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_mr2jr"]
 frames = 2
-frame_0/texture = ExtResource("19_ngwj7")
-frame_1/texture = ExtResource("20_a86ny")
+frame_0/texture = ExtResource("11_1lcd4")
+frame_1/texture = ExtResource("12_lyvfe")
 frame_1/duration = 1.0
 
 [sub_resource type="Curve" id="Curve_5rwmx"]
@@ -337,8 +337,8 @@ shape = SubResource("RectangleShape2D_v61mu")
 [node name="Anomaly" type="Area2D" parent="TrainStandard"]
 collision_layer = 8
 collision_mask = 0
-script = ExtResource("9_62jqa")
-bubble = ExtResource("10_2kt0v")
+script = ExtResource("1_aamxw")
+bubble = ExtResource("10_62jqa")
 
 [node name="AnomalyCollision" type="CollisionShape2D" parent="TrainStandard/Anomaly"]
 unique_name_in_owner = true
@@ -349,7 +349,7 @@ shape = SubResource("RectangleShape2D_3yiyt")
 [node name="GhostHAnomaly" type="Sprite2D" parent="TrainStandard/Anomaly"]
 texture_filter = 1
 position = Vector2(1563, 223)
-texture = ExtResource("10_hf2vb")
+texture = ExtResource("2_q7elp")
 hframes = 6
 vframes = 5
 frame = 25
@@ -359,7 +359,7 @@ metadata/_aseprite_wizard_interface_config_ = {
 }
 
 [node name="GhostHAnomalyComponent" type="Node2D" parent="TrainStandard/Anomaly/GhostHAnomaly" node_paths=PackedStringArray("ghost_sprite", "ghost_anim", "player")]
-script = ExtResource("11_62jqa")
+script = ExtResource("11_hf2vb")
 ghost_sprite = NodePath("..")
 ghost_anim = NodePath("../AnimationPlayer")
 player = NodePath("../../../Entity/Player")
@@ -387,7 +387,7 @@ texture = SubResource("AnimatedTexture_mr2jr")
 [node name="LoveEffect" type="CPUParticles2D" parent="TrainStandard/Anomaly/GhostHAnomaly/GhostHAnomalyComponent"]
 position = Vector2(5, -91)
 amount = 5
-texture = ExtResource("18_07nih")
+texture = ExtResource("13_batyu")
 lifetime = 3.0
 randomness = 0.1
 emission_shape = 3
@@ -404,7 +404,7 @@ scale_amount_min = 0.5
 scale_amount_max = 0.5
 scale_amount_curve = SubResource("Curve_5rwmx")
 
-[node name="ActionProgressBase" parent="TrainStandard/Anomaly/GhostHAnomaly/GhostHAnomalyComponent" instance=ExtResource("21_g0oe4")]
+[node name="ActionProgressBase" parent="TrainStandard/Anomaly/GhostHAnomaly/GhostHAnomalyComponent" instance=ExtResource("14_s6xge")]
 position = Vector2(6.9999466, -117)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TrainStandard/Anomaly/GhostHAnomaly"]
@@ -412,9 +412,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_5rwmx")
 }
 
-[node name="HSfxAudioStreamPlayer2D" parent="TrainStandard/Anomaly/GhostHAnomaly" instance=ExtResource("23_a86ny")]
+[node name="HSfxAudioStreamPlayer2D" parent="TrainStandard/Anomaly/GhostHAnomaly" instance=ExtResource("15_ohf14")]
 
-[node name="HSfxAudioStreamPlayer2DSub" parent="TrainStandard/Anomaly/GhostHAnomaly" instance=ExtResource("23_a86ny")]
+[node name="HSfxAudioStreamPlayer2DSub" parent="TrainStandard/Anomaly/GhostHAnomaly" instance=ExtResource("15_ohf14")]
 
 [node name="Entity" type="Node2D" parent="TrainStandard"]
 y_sort_enabled = true

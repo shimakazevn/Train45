@@ -1,12 +1,12 @@
 [gd_scene load_steps=28 format=3]
 
 [ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="1_aamxw"]
 [ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
 [ext_resource type="PackedScene" uid="uid://xm3jf22phtyd" path="res://scene/component/anomaly_event_component.tscn" id="6_gvche"]
 [ext_resource type="Script" uid="uid://cwi8idx60x1p2" path="res://Gameplay/Levels/anomaly_dick.gd" id="8_5gyie"]
-[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="9_62jqa"]
 [ext_resource type="Texture2D" uid="uid://hn06an2npo1t" path="res://Gameplay/Levels/anomaly_dick.png" id="9_hne8d"]
-[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_2kt0v"]
+[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_62jqa"]
 [ext_resource type="Resource" uid="uid://bqvhmcahly054" path="res://Gameplay/GameData/HSceneData/h_mai_4.tres" id="13_hf2vb"]
 [ext_resource type="AudioStream" uid="uid://8as50xio7lb2" path="res://sound/sfx/SmallFootStep.mp3" id="14_62jqa"]
 [ext_resource type="PackedScene" uid="uid://lg6623mk53cw" path="res://scene/component/teleport_component.tscn" id="26_1r73j"]
@@ -246,8 +246,8 @@ debug_color = Color(0.785605, 0.38856, 0.508944, 0.42)
 position = Vector2(0, -41)
 collision_layer = 8
 collision_mask = 0
-script = ExtResource("9_62jqa")
-bubble = ExtResource("10_2kt0v")
+script = ExtResource("1_aamxw")
+bubble = ExtResource("10_62jqa")
 
 [node name="AnomalyCollision" type="CollisionShape2D" parent="TrainStandard/Dick/Anomaly"]
 unique_name_in_owner = true

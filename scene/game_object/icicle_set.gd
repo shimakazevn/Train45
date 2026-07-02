@@ -15,7 +15,7 @@ func _ready():
 	warning_player.play("ready")
 	play_ground = get_parent()
 
-## 매 프레임 스테이지 실패 여부를 확인하여 피격 판정을 비활성화한다.
+## 매 프레임 스테이지 실패 또는 고드름 페이즈 종료(생존 성공 포함) 여부를 확인하여 피격 판정을 비활성화한다.
 func _process(_delta):
-	if play_ground.stage_failed == true:
+	if play_ground.stage_failed == true or play_ground.icicle_end == true:
 		hit_monitaring = false

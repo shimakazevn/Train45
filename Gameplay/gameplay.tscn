@@ -1323,7 +1323,7 @@ anchor_bottom = 1.0
 offset_left = -38.0
 offset_top = -38.958336
 offset_right = -8.0
-offset_bottom = -14.958124
+offset_bottom = -14.958122
 grow_horizontal = 0
 grow_vertical = 0
 text = "+99"
@@ -1961,7 +1961,6 @@ partner_manager = NodePath("../PartnerManager")
 global_game_manager = NodePath("../GlobalGameManager")
 
 [node name="ConfirmBox" parent="Dialog" instance=ExtResource("81_hk7gf")]
-visible = false
 
 [node name="DialogPreload" type="Node" parent="Dialog"]
 script = ExtResource("96_imumn")

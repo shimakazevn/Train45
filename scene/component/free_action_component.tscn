@@ -1,95 +1,98 @@
-[gd_scene load_steps=105 format=3]
+[gd_scene load_steps=109 format=3]
 
-[ext_resource type="Script" uid="uid://c12lncksvrqkc" path="res://scene/component/free_action_component.gd" id="1_yca1i"]
-[ext_resource type="Script" uid="uid://cjwbey4rrgl1s" path="res://scene/component/ActionUI.gd" id="2_20fwj"]
-[ext_resource type="Texture2D" uid="uid://cccsn126gjbbt" path="res://resources/ui/FreeAction/button_pause.png" id="3_05omy"]
-[ext_resource type="Texture2D" uid="uid://ce0b6ldbhmx5w" path="res://resources/ui/FreeAction/button_pause_active.png" id="4_2ikp8"]
-[ext_resource type="Script" uid="uid://bplbr3ljkluch" path="res://scene/component/button_set_anim_component.gd" id="5_5132w"]
-[ext_resource type="Texture2D" uid="uid://dc2awj4s8ipab" path="res://resources/ui/FreeAction/button_play.png" id="6_03acr"]
-[ext_resource type="Texture2D" uid="uid://bmatixrb0fyng" path="res://resources/ui/FreeAction/button_play_active.png" id="7_fa4vs"]
-[ext_resource type="Texture2D" uid="uid://cscwcciipr3ak" path="res://resources/ui/FreeAction/button_double.png" id="8_dyiuj"]
-[ext_resource type="Texture2D" uid="uid://ukmqswblt2qe" path="res://resources/ui/FreeAction/button_double_active.png" id="9_1k5uq"]
-[ext_resource type="Texture2D" uid="uid://dvb657jbn3ejl" path="res://resources/ui/controller_icons/xbox-start-16.png" id="11_cisj0"]
-[ext_resource type="Texture2D" uid="uid://caai3wovnk4rs" path="res://resources/ui/FreeAction/main_gage_base.png" id="13_i8khw"]
-[ext_resource type="Script" uid="uid://inw4e1qc06yb" path="res://scene/component/action_progress_base.gd" id="14_tgbsp"]
+[ext_resource type="Script" uid="uid://c12lncksvrqkc" path="res://scene/component/free_action_component.gd" id="1_2ikp8"]
+[ext_resource type="Script" uid="uid://cjwbey4rrgl1s" path="res://scene/component/ActionUI.gd" id="2_5132w"]
+[ext_resource type="Texture2D" uid="uid://cccsn126gjbbt" path="res://resources/ui/FreeAction/button_pause.png" id="3_03acr"]
+[ext_resource type="Texture2D" uid="uid://ce0b6ldbhmx5w" path="res://resources/ui/FreeAction/button_pause_active.png" id="4_fa4vs"]
+[ext_resource type="Script" uid="uid://bplbr3ljkluch" path="res://scene/component/button_set_anim_component.gd" id="5_dyiuj"]
+[ext_resource type="Texture2D" uid="uid://dc2awj4s8ipab" path="res://resources/ui/FreeAction/button_play.png" id="6_1k5uq"]
+[ext_resource type="Texture2D" uid="uid://bmatixrb0fyng" path="res://resources/ui/FreeAction/button_play_active.png" id="7_cisj0"]
+[ext_resource type="Texture2D" uid="uid://cscwcciipr3ak" path="res://resources/ui/FreeAction/button_double.png" id="8_i8khw"]
+[ext_resource type="Texture2D" uid="uid://ukmqswblt2qe" path="res://resources/ui/FreeAction/button_double_active.png" id="9_tgbsp"]
+[ext_resource type="Texture2D" uid="uid://dvb657jbn3ejl" path="res://resources/ui/controller_icons/xbox-start-16.png" id="12_w4m01"]
+[ext_resource type="Texture2D" uid="uid://caai3wovnk4rs" path="res://resources/ui/FreeAction/main_gage_base.png" id="13_vc7yx"]
+[ext_resource type="Script" uid="uid://inw4e1qc06yb" path="res://scene/component/action_progress_base.gd" id="14_cxs4i"]
 [ext_resource type="FontFile" uid="uid://b420coqgx7cq0" path="res://resources/font/TsunagiGothic.ttf" id="15_ll8yw"]
-[ext_resource type="Texture2D" uid="uid://xudrtcc46m3" path="res://resources/ui/FreeAction/main_gage_empty.png" id="15_vc7yx"]
-[ext_resource type="Texture2D" uid="uid://dbh14fsm3tk4t" path="res://resources/ui/FreeAction/main_gage_fill.png" id="16_cxs4i"]
-[ext_resource type="Script" uid="uid://be0i24kj6kavb" path="res://scene/component/free_h_ticket_multiplier.gd" id="17_qisa8"]
-[ext_resource type="Script" uid="uid://cuumogtudxxg6" path="res://scene/component/h_talk_component.gd" id="19_nln40"]
-[ext_resource type="PackedScene" uid="uid://d1thb6a8p8ufs" path="res://Gameplay/XRay/x_ray_component.tscn" id="20_c23xs"]
-[ext_resource type="PackedScene" uid="uid://ctfnrby2q21te" path="res://Gameplay/SubScreen/sub_screen_component.tscn" id="21_trqux"]
-[ext_resource type="Texture2D" uid="uid://boqgqyovw8mgv" path="res://resources/omt/piston_voice/162off.png" id="22_5sdeo"]
-[ext_resource type="Texture2D" uid="uid://bnc4g0pxfvc8p" path="res://resources/omt/piston_voice/162.png" id="23_nyy1m"]
-[ext_resource type="PackedScene" uid="uid://c8spg168xguc2" path="res://Gameplay/Ui/controller_button_component.tscn" id="24_aikpl"]
+[ext_resource type="Texture2D" uid="uid://xudrtcc46m3" path="res://resources/ui/FreeAction/main_gage_empty.png" id="15_qisa8"]
+[ext_resource type="Texture2D" uid="uid://dbh14fsm3tk4t" path="res://resources/ui/FreeAction/main_gage_fill.png" id="16_nln40"]
+[ext_resource type="Script" uid="uid://be0i24kj6kavb" path="res://scene/component/free_h_ticket_multiplier.gd" id="17_c23xs"]
+[ext_resource type="Script" uid="uid://cuumogtudxxg6" path="res://scene/component/h_talk_component.gd" id="19_trqux"]
+[ext_resource type="PackedScene" uid="uid://d1thb6a8p8ufs" path="res://Gameplay/XRay/x_ray_component.tscn" id="20_5sdeo"]
+[ext_resource type="Texture2D" uid="uid://ht8yonan4uba" path="res://resources/ui/gui/arrow_next_hover.png" id="21_6rsnw"]
+[ext_resource type="PackedScene" uid="uid://ctfnrby2q21te" path="res://Gameplay/SubScreen/sub_screen_component.tscn" id="21_nyy1m"]
+[ext_resource type="Texture2D" uid="uid://boqgqyovw8mgv" path="res://resources/omt/piston_voice/162off.png" id="22_aikpl"]
+[ext_resource type="Texture2D" uid="uid://bnc4g0pxfvc8p" path="res://resources/omt/piston_voice/162.png" id="23_7kct0"]
 [ext_resource type="Script" uid="uid://nnjff5ms5xn6" path="res://scene/component/controller_button_component.gd" id="24_qnb12"]
-[ext_resource type="Script" uid="uid://du5fghku0j75a" path="res://scene/component/omt_component.gd" id="26_7kct0"]
-[ext_resource type="Texture2D" uid="uid://7q2vb7widh65" path="res://resources/omt/piston/083.png" id="27_24ywi"]
-[ext_resource type="Texture2D" uid="uid://bperkpvm13v7b" path="res://resources/omt/piston/084.png" id="28_poy8v"]
-[ext_resource type="Texture2D" uid="uid://kdw3ntq1xc14" path="res://resources/omt/piston/137.png" id="29_8uywe"]
-[ext_resource type="Texture2D" uid="uid://cov8gu1d5fk7i" path="res://resources/omt/piston/144.png" id="30_gipea"]
-[ext_resource type="Texture2D" uid="uid://dl4eghlcotb8a" path="res://resources/omt/piston/145.png" id="31_27f77"]
-[ext_resource type="Texture2D" uid="uid://onebw8sfme8" path="res://resources/omt/piston/149.png" id="32_lttxt"]
-[ext_resource type="Texture2D" uid="uid://blhq1w0k1bbwb" path="res://resources/omt/piston/150.png" id="33_17i0s"]
-[ext_resource type="Texture2D" uid="uid://cosdw7hsf2qmk" path="res://resources/omt/hand/010.png" id="34_hbs72"]
-[ext_resource type="Texture2D" uid="uid://cda50tq33avdo" path="res://resources/omt/hand/023.png" id="35_mywyy"]
-[ext_resource type="Texture2D" uid="uid://dp2cmorul62w3" path="res://resources/omt/hand/024.png" id="36_uivih"]
-[ext_resource type="Texture2D" uid="uid://cp4v8nuvv0mb5" path="res://resources/omt/hand/054.png" id="37_txn0d"]
-[ext_resource type="Texture2D" uid="uid://b0pjtb3vn8fwb" path="res://resources/omt/fella/093.png" id="38_ou8ds"]
-[ext_resource type="Texture2D" uid="uid://dmmuvpfs4dihu" path="res://resources/omt/fella/097.png" id="39_781bl"]
-[ext_resource type="Texture2D" uid="uid://caflunrr3c4c" path="res://resources/omt/fella/124.png" id="40_4xr6x"]
-[ext_resource type="Texture2D" uid="uid://ba8ertcomorcc" path="res://resources/omt/fella/143.png" id="41_sdn8f"]
-[ext_resource type="Texture2D" uid="uid://dm8dvfy7xut6s" path="res://resources/omt/fella/146.png" id="42_j1r5f"]
-[ext_resource type="Texture2D" uid="uid://6eeomxlaq6l3" path="res://resources/omt/fella/148.png" id="43_twhk0"]
-[ext_resource type="Texture2D" uid="uid://brylum2xe75en" path="res://resources/omt/fella/151.png" id="44_mpqtk"]
-[ext_resource type="Texture2D" uid="uid://c3pwiqahd3pxw" path="res://resources/omt/fella/152.png" id="45_frsw5"]
-[ext_resource type="Texture2D" uid="uid://c6dfh28fbry1x" path="res://resources/omt/kiss/025.png" id="46_2lllp"]
-[ext_resource type="Texture2D" uid="uid://dfarsp6iubcwn" path="res://resources/omt/kiss/026.png" id="47_ru1of"]
-[ext_resource type="Texture2D" uid="uid://gqt26k2ass7x" path="res://resources/omt/kiss/070.png" id="48_a5txg"]
-[ext_resource type="Texture2D" uid="uid://c2ia3cqk6v0x4" path="res://resources/omt/kiss/093.png" id="49_kmend"]
-[ext_resource type="Texture2D" uid="uid://b05wdlgbphbum" path="res://resources/omt/cum/077.png" id="50_g4l2s"]
-[ext_resource type="Texture2D" uid="uid://crut75f1amobp" path="res://resources/omt/cum/078.png" id="51_xpe1w"]
-[ext_resource type="Texture2D" uid="uid://bojfpk8elakye" path="res://resources/omt/cum/085.png" id="52_smj0k"]
-[ext_resource type="Texture2D" uid="uid://dhpjtngcgpjex" path="res://resources/omt/cum/135.png" id="53_d84s2"]
-[ext_resource type="Texture2D" uid="uid://wwfdivcpfn2l" path="res://resources/omt/cum/153.png" id="54_7rp8t"]
-[ext_resource type="Texture2D" uid="uid://b55naqkuy0hhf" path="res://resources/omt/onaho/010.png" id="55_7g8ie"]
-[ext_resource type="Texture2D" uid="uid://doj5cijtg56vf" path="res://resources/omt/onaho/046.png" id="56_pd44k"]
-[ext_resource type="Texture2D" uid="uid://dx3gi5qi28i7k" path="res://resources/omt/onaho/052.png" id="57_e1xm1"]
-[ext_resource type="Texture2D" uid="uid://b7ivp2e16hswk" path="res://resources/omt/onaho/053.png" id="58_snapk"]
-[ext_resource type="Texture2D" uid="uid://chh7ce48k2aq" path="res://resources/omt/onaho/054.png" id="59_c2qpw"]
-[ext_resource type="Texture2D" uid="uid://csv2yr7py8575" path="res://resources/omt/onaho/060.png" id="60_6kv7s"]
-[ext_resource type="Texture2D" uid="uid://tiwa71ggljbx" path="res://resources/omt/onaho/061.png" id="61_ko5kx"]
-[ext_resource type="Texture2D" uid="uid://bpij1euajwsoc" path="res://resources/omt/orgasm/139.png" id="62_iagwx"]
-[ext_resource type="Texture2D" uid="uid://0loe83gus8y0" path="res://resources/omt/orgasm/154.png" id="63_44iwf"]
+[ext_resource type="Script" uid="uid://du5fghku0j75a" path="res://scene/component/omt_component.gd" id="26_24ywi"]
+[ext_resource type="Texture2D" uid="uid://7q2vb7widh65" path="res://resources/omt/piston/083.png" id="27_poy8v"]
+[ext_resource type="Texture2D" uid="uid://bperkpvm13v7b" path="res://resources/omt/piston/084.png" id="28_8uywe"]
+[ext_resource type="Texture2D" uid="uid://kdw3ntq1xc14" path="res://resources/omt/piston/137.png" id="29_gipea"]
+[ext_resource type="Texture2D" uid="uid://cov8gu1d5fk7i" path="res://resources/omt/piston/144.png" id="30_27f77"]
+[ext_resource type="Texture2D" uid="uid://dl4eghlcotb8a" path="res://resources/omt/piston/145.png" id="31_lttxt"]
+[ext_resource type="Texture2D" uid="uid://onebw8sfme8" path="res://resources/omt/piston/149.png" id="32_17i0s"]
+[ext_resource type="Texture2D" uid="uid://blhq1w0k1bbwb" path="res://resources/omt/piston/150.png" id="33_hbs72"]
+[ext_resource type="Texture2D" uid="uid://cosdw7hsf2qmk" path="res://resources/omt/hand/010.png" id="34_mywyy"]
+[ext_resource type="Texture2D" uid="uid://cda50tq33avdo" path="res://resources/omt/hand/023.png" id="35_uivih"]
+[ext_resource type="Texture2D" uid="uid://dp2cmorul62w3" path="res://resources/omt/hand/024.png" id="36_txn0d"]
+[ext_resource type="Texture2D" uid="uid://cp4v8nuvv0mb5" path="res://resources/omt/hand/054.png" id="37_ou8ds"]
+[ext_resource type="PackedScene" uid="uid://c8spg168xguc2" path="res://Gameplay/Ui/controller_button_component.tscn" id="38_6rsnw"]
+[ext_resource type="Texture2D" uid="uid://b0pjtb3vn8fwb" path="res://resources/omt/fella/093.png" id="38_781bl"]
+[ext_resource type="Texture2D" uid="uid://dmmuvpfs4dihu" path="res://resources/omt/fella/097.png" id="39_4xr6x"]
+[ext_resource type="Texture2D" uid="uid://caflunrr3c4c" path="res://resources/omt/fella/124.png" id="40_sdn8f"]
+[ext_resource type="Texture2D" uid="uid://ba8ertcomorcc" path="res://resources/omt/fella/143.png" id="41_j1r5f"]
+[ext_resource type="Texture2D" uid="uid://dm8dvfy7xut6s" path="res://resources/omt/fella/146.png" id="42_twhk0"]
+[ext_resource type="Texture2D" uid="uid://6eeomxlaq6l3" path="res://resources/omt/fella/148.png" id="43_mpqtk"]
+[ext_resource type="Texture2D" uid="uid://brylum2xe75en" path="res://resources/omt/fella/151.png" id="44_frsw5"]
+[ext_resource type="Texture2D" uid="uid://c3pwiqahd3pxw" path="res://resources/omt/fella/152.png" id="45_2lllp"]
+[ext_resource type="Texture2D" uid="uid://c6dfh28fbry1x" path="res://resources/omt/kiss/025.png" id="46_ru1of"]
+[ext_resource type="Texture2D" uid="uid://dfarsp6iubcwn" path="res://resources/omt/kiss/026.png" id="47_a5txg"]
+[ext_resource type="Texture2D" uid="uid://gqt26k2ass7x" path="res://resources/omt/kiss/070.png" id="48_kmend"]
+[ext_resource type="Texture2D" uid="uid://c2ia3cqk6v0x4" path="res://resources/omt/kiss/093.png" id="49_g4l2s"]
+[ext_resource type="Texture2D" uid="uid://b05wdlgbphbum" path="res://resources/omt/cum/077.png" id="50_xpe1w"]
+[ext_resource type="Texture2D" uid="uid://crut75f1amobp" path="res://resources/omt/cum/078.png" id="51_smj0k"]
+[ext_resource type="Texture2D" uid="uid://bojfpk8elakye" path="res://resources/omt/cum/085.png" id="52_d84s2"]
+[ext_resource type="Texture2D" uid="uid://dhpjtngcgpjex" path="res://resources/omt/cum/135.png" id="53_7rp8t"]
+[ext_resource type="Texture2D" uid="uid://wwfdivcpfn2l" path="res://resources/omt/cum/153.png" id="54_7g8ie"]
+[ext_resource type="Texture2D" uid="uid://b55naqkuy0hhf" path="res://resources/omt/onaho/010.png" id="55_pd44k"]
+[ext_resource type="Texture2D" uid="uid://doj5cijtg56vf" path="res://resources/omt/onaho/046.png" id="56_e1xm1"]
+[ext_resource type="Texture2D" uid="uid://dx3gi5qi28i7k" path="res://resources/omt/onaho/052.png" id="57_snapk"]
+[ext_resource type="Texture2D" uid="uid://b7ivp2e16hswk" path="res://resources/omt/onaho/053.png" id="58_c2qpw"]
+[ext_resource type="Texture2D" uid="uid://chh7ce48k2aq" path="res://resources/omt/onaho/054.png" id="59_6kv7s"]
+[ext_resource type="Texture2D" uid="uid://csv2yr7py8575" path="res://resources/omt/onaho/060.png" id="60_ko5kx"]
+[ext_resource type="Texture2D" uid="uid://tiwa71ggljbx" path="res://resources/omt/onaho/061.png" id="61_iagwx"]
+[ext_resource type="Texture2D" uid="uid://bpij1euajwsoc" path="res://resources/omt/orgasm/139.png" id="62_44iwf"]
+[ext_resource type="Texture2D" uid="uid://0loe83gus8y0" path="res://resources/omt/orgasm/154.png" id="63_s4p86"]
 [ext_resource type="Texture2D" uid="uid://cexffg1rr6ds2" path="res://resources/ui/ticket_icon.png" id="64_ivatf"]
-[ext_resource type="Texture2D" uid="uid://ux6dn6gucn1y" path="res://resources/omt/orgasm/156.png" id="64_s4p86"]
-[ext_resource type="Texture2D" uid="uid://ccf1n6nyc8s6g" path="res://resources/omt/orgasm/160.png" id="65_ti1am"]
-[ext_resource type="Texture2D" uid="uid://cgaax4sun3c8h" path="res://resources/omt/orgasm/161.png" id="66_ivatf"]
-[ext_resource type="Texture2D" uid="uid://d0ajv3spjojll" path="res://resources/omt/orgasm/166.png" id="67_dtmkn"]
-[ext_resource type="Texture2D" uid="uid://bhenrc6o0te4f" path="res://resources/omt/orgasm/168.png" id="68_un02n"]
-[ext_resource type="Texture2D" uid="uid://2kit51w8mpja" path="res://resources/omt/piston_voice/155.png" id="69_3ogxo"]
-[ext_resource type="Texture2D" uid="uid://chpkyds32ff82" path="res://resources/omt/piston_voice/157.png" id="70_bthir"]
+[ext_resource type="Texture2D" uid="uid://ux6dn6gucn1y" path="res://resources/omt/orgasm/156.png" id="64_ti1am"]
+[ext_resource type="Texture2D" uid="uid://ccf1n6nyc8s6g" path="res://resources/omt/orgasm/160.png" id="65_ivatf"]
+[ext_resource type="Texture2D" uid="uid://cgaax4sun3c8h" path="res://resources/omt/orgasm/161.png" id="66_dtmkn"]
+[ext_resource type="Texture2D" uid="uid://d0ajv3spjojll" path="res://resources/omt/orgasm/166.png" id="67_un02n"]
+[ext_resource type="Texture2D" uid="uid://bhenrc6o0te4f" path="res://resources/omt/orgasm/168.png" id="68_3ogxo"]
+[ext_resource type="Texture2D" uid="uid://2kit51w8mpja" path="res://resources/omt/piston_voice/155.png" id="69_bthir"]
+[ext_resource type="Texture2D" uid="uid://chpkyds32ff82" path="res://resources/omt/piston_voice/157.png" id="70_eqol1"]
 [ext_resource type="Texture2D" uid="uid://bmyk6ptsbc2rd" path="res://resources/ui/controller_icons/xbox-RB-16.png" id="70_ss64q"]
-[ext_resource type="Texture2D" uid="uid://dkimp8yiee2dq" path="res://resources/omt/piston_voice/164.png" id="71_eqol1"]
-[ext_resource type="Texture2D" uid="uid://dhentajxhlccp" path="res://resources/omt/piston_voice/165.png" id="72_ss64q"]
-[ext_resource type="Texture2D" uid="uid://ba2ho5l5u3rom" path="res://resources/omt/sumata/001.png" id="73_mqmxm"]
-[ext_resource type="Texture2D" uid="uid://hsqpwvotqmc2" path="res://resources/omt/sumata/010.png" id="74_wuj1l"]
+[ext_resource type="Texture2D" uid="uid://dkimp8yiee2dq" path="res://resources/omt/piston_voice/164.png" id="71_ss64q"]
+[ext_resource type="Texture2D" uid="uid://dhentajxhlccp" path="res://resources/omt/piston_voice/165.png" id="72_mqmxm"]
+[ext_resource type="Texture2D" uid="uid://ba2ho5l5u3rom" path="res://resources/omt/sumata/001.png" id="73_wuj1l"]
+[ext_resource type="Texture2D" uid="uid://hsqpwvotqmc2" path="res://resources/omt/sumata/010.png" id="74_y7om6"]
+[ext_resource type="Texture2D" uid="uid://sihi2uum7rh1" path="res://resources/omt/sumata/054.png" id="75_6f0m7"]
 [ext_resource type="Texture2D" uid="uid://cmghb2yaabqt8" path="res://resources/ui/controller_icons/xbox-LB-16.png" id="75_oac80"]
-[ext_resource type="Texture2D" uid="uid://sihi2uum7rh1" path="res://resources/omt/sumata/054.png" id="75_y7om6"]
-[ext_resource type="Texture2D" uid="uid://s2knpfd1jk36" path="res://resources/omt/sumata/062.png" id="76_oac80"]
-[ext_resource type="Texture2D" uid="uid://che12dg8jtmcm" path="res://resources/omt/sumata/083.png" id="77_6f0m7"]
-[ext_resource type="Texture2D" uid="uid://cfoa0vt6bm11t" path="res://resources/omt/sumata/084.png" id="78_v5kmo"]
-[ext_resource type="Texture2D" uid="uid://brldiejlc6wni" path="res://resources/omt/sumata/103.png" id="79_25cxb"]
-[ext_resource type="Texture2D" uid="uid://clq60clscme1" path="res://resources/omt/sumata/104.png" id="80_rpfgv"]
-[ext_resource type="Texture2D" uid="uid://d1k7k2e6t0hi5" path="res://resources/omt/sumata/105.png" id="81_wlpdl"]
-[ext_resource type="Texture2D" uid="uid://c477tbs344uvh" path="res://resources/omt/breast_touch/011.png" id="82_hk7gf"]
-[ext_resource type="Texture2D" uid="uid://j4vpu8v32tdf" path="res://resources/omt/breast_touch/012.png" id="83_tbjol"]
-[ext_resource type="Texture2D" uid="uid://dfi0kvtv6ofye" path="res://resources/omt/breast_touch/017.png" id="84_pvnpy"]
-[ext_resource type="Texture2D" uid="uid://k4ahkhoamev7" path="res://resources/omt/breast_touch/018.png" id="85_g58xx"]
-[ext_resource type="Texture2D" uid="uid://cl814hpf8b23i" path="res://resources/omt/breast_touch/023.png" id="86_7lj5e"]
-[ext_resource type="Texture2D" uid="uid://cbmmngfh0fhab" path="res://resources/omt/breast_touch/024.png" id="87_s2tb1"]
-[ext_resource type="Texture2D" uid="uid://cyp3ntnn5vn8k" path="res://resources/omt/breast_touch/029.png" id="88_uuhmx"]
-[ext_resource type="Texture2D" uid="uid://diw71725m1hqu" path="res://resources/omt/breast_touch/054.png" id="89_sdxy5"]
+[ext_resource type="Texture2D" uid="uid://s2knpfd1jk36" path="res://resources/omt/sumata/062.png" id="76_v5kmo"]
+[ext_resource type="Texture2D" uid="uid://che12dg8jtmcm" path="res://resources/omt/sumata/083.png" id="77_25cxb"]
+[ext_resource type="Texture2D" uid="uid://cfoa0vt6bm11t" path="res://resources/omt/sumata/084.png" id="78_rpfgv"]
+[ext_resource type="Texture2D" uid="uid://brldiejlc6wni" path="res://resources/omt/sumata/103.png" id="79_wlpdl"]
+[ext_resource type="Texture2D" uid="uid://clq60clscme1" path="res://resources/omt/sumata/104.png" id="80_hk7gf"]
+[ext_resource type="Texture2D" uid="uid://d1k7k2e6t0hi5" path="res://resources/omt/sumata/105.png" id="81_tbjol"]
+[ext_resource type="Texture2D" uid="uid://c477tbs344uvh" path="res://resources/omt/breast_touch/011.png" id="82_pvnpy"]
+[ext_resource type="Texture2D" uid="uid://j4vpu8v32tdf" path="res://resources/omt/breast_touch/012.png" id="83_g58xx"]
+[ext_resource type="Texture2D" uid="uid://dfi0kvtv6ofye" path="res://resources/omt/breast_touch/017.png" id="84_7lj5e"]
+[ext_resource type="Texture2D" uid="uid://k4ahkhoamev7" path="res://resources/omt/breast_touch/018.png" id="85_s2tb1"]
+[ext_resource type="Texture2D" uid="uid://cl814hpf8b23i" path="res://resources/omt/breast_touch/023.png" id="86_uuhmx"]
+[ext_resource type="Texture2D" uid="uid://cbmmngfh0fhab" path="res://resources/omt/breast_touch/024.png" id="87_sdxy5"]
+[ext_resource type="Texture2D" uid="uid://cyp3ntnn5vn8k" path="res://resources/omt/breast_touch/029.png" id="88_wec21"]
+[ext_resource type="Texture2D" uid="uid://diw71725m1hqu" path="res://resources/omt/breast_touch/054.png" id="89_3cebf"]
+[ext_resource type="Script" uid="uid://ddd3i02kk05eh" path="res://scene/component/zoom_in_component.gd" id="91_yjcum"]
+[ext_resource type="Texture2D" uid="uid://ckytudgsjj08k" path="res://resources/ui/controller_icons/xbox-L3.png" id="93_5myok"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_y1pgo"]
 font_size = 8
@@ -168,6 +171,11 @@ font_size = 6
 outline_size = 3
 outline_color = Color(0.4, 0.321569, 0.345098, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_0qrk4"]
+font_size = 6
+outline_size = 3
+outline_color = Color(0.4, 0.321569, 0.345098, 1)
+
 [sub_resource type="Animation" id="Animation_54x6d"]
 length = 0.001
 tracks/0/type = "value"
@@ -207,7 +215,7 @@ _data = {
 }
 
 [node name="FreeActionComponent" type="Node" node_paths=PackedStringArray("free_action_ticket_multiplier")]
-script = ExtResource("1_yca1i")
+script = ExtResource("1_2ikp8")
 free_action_ticket_multiplier = NodePath("CanvasLayer/ActionUI/FreeHTicketMultiplier")
 zoom_speed = 0.7
 
@@ -223,7 +231,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-script = ExtResource("2_20fwj")
+script = ExtResource("2_5132w")
 free_action = NodePath("../..")
 
 [node name="Stop" type="TextureButton" parent="CanvasLayer/ActionUI"]
@@ -238,14 +246,14 @@ pivot_offset = Vector2(10.5, 11)
 focus_mode = 0
 toggle_mode = true
 action_mode = 0
-texture_normal = ExtResource("3_05omy")
-texture_pressed = ExtResource("4_2ikp8")
-texture_hover = ExtResource("4_2ikp8")
+texture_normal = ExtResource("3_03acr")
+texture_pressed = ExtResource("4_fa4vs")
+texture_hover = ExtResource("4_fa4vs")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="ButtonSetAnimComponent" type="Node" parent="CanvasLayer/ActionUI/Stop" node_paths=PackedStringArray("is_owner")]
-script = ExtResource("5_5132w")
+script = ExtResource("5_dyiuj")
 is_owner = NodePath("..")
 
 [node name="Play" type="TextureButton" parent="CanvasLayer/ActionUI"]
@@ -261,14 +269,14 @@ pivot_offset = Vector2(10.5, 11)
 focus_mode = 0
 toggle_mode = true
 action_mode = 0
-texture_normal = ExtResource("6_03acr")
-texture_pressed = ExtResource("7_fa4vs")
-texture_hover = ExtResource("7_fa4vs")
+texture_normal = ExtResource("6_1k5uq")
+texture_pressed = ExtResource("7_cisj0")
+texture_hover = ExtResource("7_cisj0")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="ButtonSetAnimComponent" type="Node" parent="CanvasLayer/ActionUI/Play" node_paths=PackedStringArray("is_owner")]
-script = ExtResource("5_5132w")
+script = ExtResource("5_dyiuj")
 is_owner = NodePath("..")
 
 [node name="Double" type="TextureButton" parent="CanvasLayer/ActionUI"]
@@ -284,14 +292,14 @@ pivot_offset = Vector2(10.5, 11)
 focus_mode = 0
 toggle_mode = true
 action_mode = 0
-texture_normal = ExtResource("8_dyiuj")
-texture_pressed = ExtResource("9_1k5uq")
-texture_hover = ExtResource("9_1k5uq")
+texture_normal = ExtResource("8_i8khw")
+texture_pressed = ExtResource("9_tgbsp")
+texture_hover = ExtResource("9_tgbsp")
 ignore_texture_size = true
 stretch_mode = 0
 
 [node name="ButtonSetAnimComponent" type="Node" parent="CanvasLayer/ActionUI/Double" node_paths=PackedStringArray("is_owner")]
-script = ExtResource("5_5132w")
+script = ExtResource("5_dyiuj")
 is_owner = NodePath("..")
 
 [node name="Label2" type="Label" parent="CanvasLayer/ActionUI"]
@@ -356,7 +364,7 @@ anchor_bottom = 1.0
 offset_left = -26.0
 offset_right = -6.0
 grow_vertical = 2
-texture = ExtResource("11_cisj0")
+texture = ExtResource("12_w4m01")
 stretch_mode = 5
 script = ExtResource("24_qnb12")
 metadata/_custom_type_script = "uid://nnjff5ms5xn6"
@@ -367,9 +375,9 @@ texture_filter = 1
 position = Vector2(624, 316)
 rotation = -1.57079
 scale = Vector2(0.41, 0.41)
-texture = ExtResource("13_i8khw")
+texture = ExtResource("13_vc7yx")
 hframes = 7
-script = ExtResource("14_tgbsp")
+script = ExtResource("14_cxs4i")
 
 [node name="ActionProgressBar" type="TextureProgressBar" parent="CanvasLayer/ActionUI/ActionProgressBase"]
 unique_name_in_owner = true
@@ -389,8 +397,8 @@ size_flags_horizontal = 4
 size_flags_vertical = 8
 step = 0.5
 value = 50.0
-texture_under = ExtResource("15_vc7yx")
-texture_progress = ExtResource("16_cxs4i")
+texture_under = ExtResource("15_qisa8")
+texture_progress = ExtResource("16_nln40")
 texture_progress_offset = Vector2(1, 1)
 
 [node name="ActionProgressAnim" type="AnimationPlayer" parent="CanvasLayer/ActionUI/ActionProgressBase"]
@@ -406,7 +414,7 @@ offset_left = 8.0
 offset_top = 252.0
 offset_right = 48.0
 offset_bottom = 292.0
-script = ExtResource("17_qisa8")
+script = ExtResource("17_c23xs")
 
 [node name="TicketBonusTitle" type="Label" parent="CanvasLayer/ActionUI/FreeHTicketMultiplier"]
 layout_mode = 1
@@ -467,7 +475,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 3
 mouse_filter = 2
-script = ExtResource("19_nln40")
+script = ExtResource("19_trqux")
 free_action_component = NodePath("../..")
 
 [node name="HTalkLabel" type="Label" parent="CanvasLayer/HTalkComponent"]
@@ -496,11 +504,11 @@ one_shot = true
 [node name="ShowTimer" type="Timer" parent="CanvasLayer/HTalkComponent"]
 one_shot = true
 
-[node name="XRayComponent" parent="CanvasLayer" node_paths=PackedStringArray("free_action_component") instance=ExtResource("20_c23xs")]
-position = Vector2(588, 134)
+[node name="XRayComponent" parent="CanvasLayer" node_paths=PackedStringArray("free_action_component") instance=ExtResource("20_5sdeo")]
+position = Vector2(588, 124)
 free_action_component = NodePath("../..")
 
-[node name="SubScreenComponent" parent="CanvasLayer" node_paths=PackedStringArray("free_action_component") instance=ExtResource("21_trqux")]
+[node name="SubScreenComponent" parent="CanvasLayer" node_paths=PackedStringArray("free_action_component") instance=ExtResource("21_nyy1m")]
 visible = false
 position = Vector2(116, 135)
 free_action_component = NodePath("../..")
@@ -525,9 +533,9 @@ offset_bottom = 280.0
 pivot_offset = Vector2(25, 26)
 toggle_mode = true
 action_mode = 0
-texture_normal = ExtResource("22_5sdeo")
-texture_pressed = ExtResource("23_nyy1m")
-texture_hover = ExtResource("23_nyy1m")
+texture_normal = ExtResource("22_aikpl")
+texture_pressed = ExtResource("23_7kct0")
+texture_hover = ExtResource("23_7kct0")
 ignore_texture_size = true
 stretch_mode = 5
 
@@ -572,10 +580,11 @@ horizontal_alignment = 2
 vertical_alignment = 2
 
 [node name="ButtonSetAnimComponent" type="Node" parent="CanvasLayer/OMTToggleButton" node_paths=PackedStringArray("is_owner")]
-script = ExtResource("5_5132w")
+script = ExtResource("5_dyiuj")
 is_owner = NodePath("..")
 
-[node name="ControllerButtonComponent" parent="CanvasLayer/OMTToggleButton" instance=ExtResource("24_aikpl")]
+[node name="ControllerButtonComponent" parent="CanvasLayer/OMTToggleButton" instance=ExtResource("38_6rsnw")]
+texture_filter = 1
 layout_mode = 1
 offset_left = -20.5
 offset_top = 9.5
@@ -588,17 +597,17 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("26_7kct0")
-piston = Array[CompressedTexture2D]([ExtResource("27_24ywi"), ExtResource("28_poy8v"), ExtResource("29_8uywe"), ExtResource("30_gipea"), ExtResource("31_27f77"), ExtResource("32_lttxt"), ExtResource("33_17i0s")])
-hand = Array[CompressedTexture2D]([ExtResource("34_hbs72"), ExtResource("35_mywyy"), ExtResource("36_uivih"), ExtResource("37_txn0d")])
-fella = Array[CompressedTexture2D]([ExtResource("38_ou8ds"), ExtResource("39_781bl"), ExtResource("40_4xr6x"), ExtResource("41_sdn8f"), ExtResource("42_j1r5f"), ExtResource("43_twhk0"), ExtResource("44_mpqtk"), ExtResource("45_frsw5")])
-kiss = Array[CompressedTexture2D]([ExtResource("46_2lllp"), ExtResource("47_ru1of"), ExtResource("48_a5txg"), ExtResource("49_kmend")])
-cum = Array[CompressedTexture2D]([ExtResource("50_g4l2s"), ExtResource("51_xpe1w"), ExtResource("52_smj0k"), ExtResource("53_d84s2"), ExtResource("54_7rp8t")])
-onaho = Array[CompressedTexture2D]([ExtResource("55_7g8ie"), ExtResource("56_pd44k"), ExtResource("57_e1xm1"), ExtResource("58_snapk"), ExtResource("59_c2qpw"), ExtResource("60_6kv7s"), ExtResource("61_ko5kx")])
-orgasm = Array[CompressedTexture2D]([ExtResource("62_iagwx"), ExtResource("63_44iwf"), ExtResource("64_s4p86"), ExtResource("65_ti1am"), ExtResource("66_ivatf"), ExtResource("67_dtmkn"), ExtResource("68_un02n")])
-piston_voice = Array[CompressedTexture2D]([ExtResource("69_3ogxo"), ExtResource("70_bthir"), ExtResource("23_nyy1m"), ExtResource("71_eqol1"), ExtResource("72_ss64q")])
-sumata = Array[CompressedTexture2D]([ExtResource("73_mqmxm"), ExtResource("74_wuj1l"), ExtResource("75_y7om6"), ExtResource("76_oac80"), ExtResource("77_6f0m7"), ExtResource("78_v5kmo"), ExtResource("79_25cxb"), ExtResource("80_rpfgv"), ExtResource("81_wlpdl")])
-breast_touch = Array[CompressedTexture2D]([ExtResource("82_hk7gf"), ExtResource("83_tbjol"), ExtResource("84_pvnpy"), ExtResource("85_g58xx"), ExtResource("86_7lj5e"), ExtResource("87_s2tb1"), ExtResource("88_uuhmx"), ExtResource("89_sdxy5")])
+script = ExtResource("26_24ywi")
+piston = Array[CompressedTexture2D]([ExtResource("27_poy8v"), ExtResource("28_8uywe"), ExtResource("29_gipea"), ExtResource("30_27f77"), ExtResource("31_lttxt"), ExtResource("32_17i0s"), ExtResource("33_hbs72")])
+hand = Array[CompressedTexture2D]([ExtResource("34_mywyy"), ExtResource("35_uivih"), ExtResource("36_txn0d"), ExtResource("37_ou8ds")])
+fella = Array[CompressedTexture2D]([ExtResource("38_781bl"), ExtResource("39_4xr6x"), ExtResource("40_sdn8f"), ExtResource("41_j1r5f"), ExtResource("42_twhk0"), ExtResource("43_mpqtk"), ExtResource("44_frsw5"), ExtResource("45_2lllp")])
+kiss = Array[CompressedTexture2D]([ExtResource("46_ru1of"), ExtResource("47_a5txg"), ExtResource("48_kmend"), ExtResource("49_g4l2s")])
+cum = Array[CompressedTexture2D]([ExtResource("50_xpe1w"), ExtResource("51_smj0k"), ExtResource("52_d84s2"), ExtResource("53_7rp8t"), ExtResource("54_7g8ie")])
+onaho = Array[CompressedTexture2D]([ExtResource("55_pd44k"), ExtResource("56_e1xm1"), ExtResource("57_snapk"), ExtResource("58_c2qpw"), ExtResource("59_6kv7s"), ExtResource("60_ko5kx"), ExtResource("61_iagwx")])
+orgasm = Array[CompressedTexture2D]([ExtResource("62_44iwf"), ExtResource("63_s4p86"), ExtResource("64_ti1am"), ExtResource("65_ivatf"), ExtResource("66_dtmkn"), ExtResource("67_un02n"), ExtResource("68_3ogxo")])
+piston_voice = Array[CompressedTexture2D]([ExtResource("69_bthir"), ExtResource("70_eqol1"), ExtResource("23_7kct0"), ExtResource("71_ss64q"), ExtResource("72_mqmxm")])
+sumata = Array[CompressedTexture2D]([ExtResource("73_wuj1l"), ExtResource("74_y7om6"), ExtResource("75_6f0m7"), ExtResource("76_v5kmo"), ExtResource("77_25cxb"), ExtResource("78_rpfgv"), ExtResource("79_wlpdl"), ExtResource("80_hk7gf"), ExtResource("81_tbjol")])
+breast_touch = Array[CompressedTexture2D]([ExtResource("82_pvnpy"), ExtResource("83_g58xx"), ExtResource("84_7lj5e"), ExtResource("85_s2tb1"), ExtResource("86_uuhmx"), ExtResource("87_sdxy5"), ExtResource("88_wec21"), ExtResource("89_3cebf")])
 cum_ef = NodePath("../CumEffect")
 texture_sample = NodePath("OMTTextureSample")
 
@@ -609,8 +618,21 @@ layout_mode = 0
 offset_right = 50.0
 offset_bottom = 72.0
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("29_8uywe")
+texture = ExtResource("29_gipea")
 stretch_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer"]
+offset_left = 565.0
+offset_top = 214.0
+offset_right = 637.0
+offset_bottom = 224.0
+alignment = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer3"]
+layout_mode = 2
+text = "FREE_H_SCREEN_ZOOM"
+label_settings = SubResource("LabelSettings_4100a")
+horizontal_alignment = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = 6
@@ -627,33 +649,129 @@ grow_vertical = 2
 theme_override_constants/separation = 2
 alignment = 2
 
-[node name="ControllerButtonComponent" parent="CanvasLayer/HBoxContainer" instance=ExtResource("24_aikpl")]
-custom_minimum_size = Vector2(12, 0)
-layout_mode = 2
-texture = ExtResource("75_oac80")
-stretch_mode = 5
-
 [node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 text = "FREE_H_EDGE_BLUR"
 label_settings = SubResource("LabelSettings_4100a")
 horizontal_alignment = 2
 
-[node name="Label" type="Label" parent="CanvasLayer/HBoxContainer/Label2"]
+[node name="ControllerButtonComponent" parent="CanvasLayer/HBoxContainer" instance=ExtResource("38_6rsnw")]
+custom_minimum_size = Vector2(12, 0)
+layout_mode = 2
+texture = ExtResource("75_oac80")
+stretch_mode = 5
+
+[node name="ZoomInComponent" type="Control" parent="CanvasLayer" node_paths=PackedStringArray("free_action_component")]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("91_yjcum")
+free_action_component = NodePath("../..")
+debug = false
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ZoomInComponent"]
 layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 117.0
+offset_top = -16.0
+offset_right = 294.0
+offset_bottom = 289.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.12, 0.12)
+mouse_filter = 2
+texture = ExtResource("21_6rsnw")
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/ZoomInComponent"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -16.0
+offset_right = -1.0
+offset_bottom = 289.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.12, 0.12)
+mouse_filter = 2
+texture = ExtResource("21_6rsnw")
+flip_h = true
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/ZoomInComponent"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 114.0
+offset_right = 177.0
+offset_bottom = 419.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+scale = Vector2(0.12, 0.12)
+mouse_filter = 2
+texture = ExtResource("21_6rsnw")
+
+[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/ZoomInComponent"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -128.0
+offset_right = 177.0
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+scale = Vector2(0.12, 0.12)
+mouse_filter = 2
+texture = ExtResource("21_6rsnw")
+flip_h = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer"]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -49.0
-offset_top = -13.375
-offset_bottom = -2.375
+offset_left = -98.0
+offset_top = 23.0
+offset_right = -3.0
+offset_bottom = 33.0
 grow_horizontal = 0
 grow_vertical = 2
-text = "FREE_H_SCREEN_ZOOM"
-label_settings = SubResource("LabelSettings_4100a")
+theme_override_constants/separation = 2
+alignment = 2
+
+[node name="PanningLabel" type="Label" parent="CanvasLayer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "FREE_H_PANNING"
+label_settings = SubResource("LabelSettings_0qrk4")
 horizontal_alignment = 2
+
+[node name="ControllerButtonComponent" parent="CanvasLayer/HBoxContainer2" instance=ExtResource("38_6rsnw")]
+custom_minimum_size = Vector2(12, 0)
+layout_mode = 2
+texture = ExtResource("93_5myok")
+stretch_mode = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

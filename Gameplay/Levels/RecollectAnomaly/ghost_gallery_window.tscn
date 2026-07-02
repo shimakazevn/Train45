@@ -1,0 +1,115 @@
+[gd_scene load_steps=7 format=3 uid="uid://spkm245oau0o"]
+
+[ext_resource type="Script" uid="uid://bgc2hfk8q4cm0" path="res://Gameplay/Levels/RecollectAnomaly/ghost_gallery_window.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://dgto4vl1vei26" path="res://Gameplay/Levels/RecollectAnomaly/ghost_gallery_button.tscn" id="2"]
+[ext_resource type="Texture2D" uid="uid://bdx54kkvfvfu3" path="res://resources/ui/gui/window.png" id="5_4cf2k"]
+[ext_resource type="Texture2D" uid="uid://ht8yonan4uba" path="res://resources/ui/gui/arrow_next_hover.png" id="7_yhs6j"]
+[ext_resource type="Script" uid="uid://dnirv8kd0mgxr" path="res://Gameplay/Levels/h_window_select_frame.gd" id="11_8rdc7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ig0oe"]
+font_size = 8
+
+[node name="GhostGalleryWindow" type="CanvasLayer"]
+process_mode = 3
+layer = 6
+script = ExtResource("1")
+button_scene = ExtResource("2")
+
+[node name="HSceneSwitchWindow" type="TextureRect" parent="."]
+offset_right = 641.0
+offset_bottom = 48.0
+
+[node name="ColorRect" type="NinePatchRect" parent="HSceneSwitchWindow"]
+self_modulate = Color(1, 1, 1, 0.784314)
+layout_mode = 0
+offset_left = -8.0
+offset_top = -9.0
+offset_right = 2479.0
+offset_bottom = 210.0
+scale = Vector2(0.265, 0.265)
+texture = ExtResource("5_4cf2k")
+region_rect = Rect2(0, 0, 300, 300)
+patch_margin_left = 90
+patch_margin_top = 93
+patch_margin_right = 91
+patch_margin_bottom = 98
+
+[node name="RecollectionScrollContainer" type="ScrollContainer" parent="HSceneSwitchWindow"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = -8.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+vertical_scroll_mode = 0
+
+[node name="RecollectionContainer" type="HBoxContainer" parent="HSceneSwitchWindow/RecollectionScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 7
+alignment = 1
+
+[node name="GhostGalleryButton" parent="HSceneSwitchWindow/RecollectionScrollContainer/RecollectionContainer" instance=ExtResource("2")]
+layout_mode = 2
+
+[node name="SelectFrame" type="Control" parent="HSceneSwitchWindow"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = 8.0
+offset_bottom = 3.0
+mouse_filter = 2
+script = ExtResource("11_8rdc7")
+
+[node name="TextureRect" type="TextureRect" parent="HSceneSwitchWindow/SelectFrame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 37.0
+offset_top = 8.0
+offset_right = 214.0
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.08, 0.08)
+mouse_filter = 2
+texture = ExtResource("7_yhs6j")
+
+[node name="TextureRect2" type="TextureRect" parent="HSceneSwitchWindow/SelectFrame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = 8.0
+offset_right = 167.0
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.08, 0.08)
+mouse_filter = 2
+texture = ExtResource("7_yhs6j")
+flip_h = true
+
+[node name="Label" type="Label" parent="HSceneSwitchWindow/SelectFrame"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 37.0
+offset_right = 32.0
+offset_bottom = 50.0
+text = "BUTTON_SELECT"
+label_settings = SubResource("LabelSettings_ig0oe")
+horizontal_alignment = 1
+vertical_alignment = 1

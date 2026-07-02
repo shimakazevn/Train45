@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://xham5m0ijh6a" path="res://resources/HScene/h_scene_audio_stream_player_2d.gd" id="3_yca1i"]
 [ext_resource type="AudioStream" uid="uid://x6n38q2xf8bn" path="res://sound/sfx/h_sfx/normal/h_sfx_normal1.wav" id="4_20fwj"]
-[ext_resource type="Script" uid="uid://bikl16l6q4pas" path="res://resources/HScene/h_scene.gd" id="4_lyvfe"]
+[ext_resource type="Script" uid="uid://bikl16l6q4pas" path="res://resources/HScene/h_scene.gd" id="4_bpix1"]
 [ext_resource type="AudioStream" uid="uid://c2dpfiabhxllj" path="res://sound/sfx/h_sfx/normal/h_sfx_normal2.wav" id="5_05omy"]
 [ext_resource type="AudioStream" uid="uid://0kx2flvefjev" path="res://sound/sfx/h_sfx/normal/h_sfx_normal3.wav" id="6_2ikp8"]
-[ext_resource type="Texture2D" uid="uid://bwum64wc3ekwr" path="res://resources/HScene/konial_scene.png" id="6_s6xge"]
+[ext_resource type="Texture2D" uid="uid://bwum64wc3ekwr" path="res://resources/HScene/konial_scene.png" id="6_fudp0"]
 [ext_resource type="AudioStream" uid="uid://kvefno173rxk" path="res://sound/sfx/h_sfx/normal/h_sfx_normal4.wav" id="7_5132w"]
 [ext_resource type="AudioStream" uid="uid://b0amtx7kraahf" path="res://sound/sfx/h_sfx/normal/h_sfx_normal5.wav" id="8_03acr"]
 [ext_resource type="AudioStream" uid="uid://c24q4hi1nn8ef" path="res://sound/sfx/h_sfx/normal/h_sfx_normal6.wav" id="9_fa4vs"]
@@ -864,11 +864,11 @@ height = 64.38718
 texture_filter = 1
 material = SubResource("ShaderMaterial_fxr7i")
 position = Vector2(0, -122)
-texture = ExtResource("6_s6xge")
+texture = ExtResource("6_fudp0")
 hframes = 12
 vframes = 12
 frame = 5
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,

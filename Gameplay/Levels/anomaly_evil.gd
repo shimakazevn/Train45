@@ -14,8 +14,8 @@ var is_type: EvilType = EvilType.values()[randi() % EvilType.values().size()]
 
 var player: Player
 var is_die:= false
-var is_life := 70
-var spd := randf_range(36.0, 120.0) # 이동속도 -10%
+var is_life := 55
+var spd := randf_range(36.0, 100.0) # 이동속도 -10%
 const lower_spd := 12.0
 
 var is_hitting:= false

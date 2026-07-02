@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="GhostRes" load_steps=2 format=3 uid="uid://bhm07bwt3k6yx"]
+[gd_resource type="Resource" script_class="GhostRes" load_steps=3 format=3 uid="uid://bhm07bwt3k6yx"]
 
 [ext_resource type="Script" uid="uid://cgjdt200d0usf" path="res://Gameplay/GameData/GhostData/ghost_res.gd" id="1_54enb"]
+[ext_resource type="Texture2D" uid="uid://dea5nsj2q37fo" path="res://resources/ui/EventCoverImage/Hpreview_tunnel_0.png" id="1_wclpv"]
 
 [resource]
 script = ExtResource("1_54enb")
+preview_img = ExtResource("1_wclpv")
 anim_name = "ghost"
 stage_name = "stage_13"

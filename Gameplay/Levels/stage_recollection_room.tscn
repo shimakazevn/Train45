@@ -1,28 +1,47 @@
-[gd_scene load_steps=141 format=3]
+[gd_scene load_steps=170 format=3]
 
+[ext_resource type="Texture2D" uid="uid://b5dabgwvrc2ku" path="res://Gameplay/ghost_evil.png" id="1_1nkpb"]
 [ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
-[ext_resource type="Script" uid="uid://cb506250uhrg1" path="res://Gameplay/Levels/h_scene_position_data_component.gd" id="2_fte81"]
-[ext_resource type="Texture2D" uid="uid://cw55b61ol1jwy" path="res://resources/HScene/ol_scene.png" id="3_1lcd4"]
+[ext_resource type="Script" uid="uid://cb506250uhrg1" path="res://Gameplay/Levels/h_scene_position_data_component.gd" id="2_vhit3"]
 [ext_resource type="PackedScene" uid="uid://bxik3k1yxg833" path="res://Gameplay/NPC/butler.tscn" id="3_vhit3"]
-[ext_resource type="Script" uid="uid://bikl16l6q4pas" path="res://resources/HScene/h_scene.gd" id="4_lyvfe"]
+[ext_resource type="Texture2D" uid="uid://cw55b61ol1jwy" path="res://resources/HScene/ol_scene.png" id="3_wb0dw"]
+[ext_resource type="Script" uid="uid://bikl16l6q4pas" path="res://resources/HScene/h_scene.gd" id="4_bpix1"]
 [ext_resource type="PackedScene" uid="uid://d0mobvya0ewag" path="res://Gameplay/NPC/konial.tscn" id="4_wb0dw"]
-[ext_resource type="Texture2D" uid="uid://dcp87qkcq0hel" path="res://resources/HScene/gal_scene.png" id="5_batyu"]
-[ext_resource type="Texture2D" uid="uid://bwum64wc3ekwr" path="res://resources/HScene/konial_scene.png" id="6_s6xge"]
-[ext_resource type="Texture2D" uid="uid://dexb0nnsbefh5" path="res://Gameplay/Levels/pazuzu_scene.png" id="7_ohf14"]
-[ext_resource type="Texture2D" uid="uid://pfq4wi1eiiml" path="res://Gameplay/Levels/butler_scene.png" id="8_syup6"]
-[ext_resource type="Script" uid="uid://bxkqas612lpxf" path="res://Gameplay/Levels/recollection_event_component.gd" id="9_07nih"]
-[ext_resource type="PackedScene" uid="uid://dq27sehklxxjt" path="res://Gameplay/Ui/recollection_rect.tscn" id="10_ngwj7"]
+[ext_resource type="Texture2D" uid="uid://dcp87qkcq0hel" path="res://resources/HScene/gal_scene.png" id="5_gvche"]
+[ext_resource type="Texture2D" uid="uid://bwum64wc3ekwr" path="res://resources/HScene/konial_scene.png" id="6_fudp0"]
+[ext_resource type="Texture2D" uid="uid://dexb0nnsbefh5" path="res://Gameplay/Levels/pazuzu_scene.png" id="7_bhyh5"]
+[ext_resource type="Texture2D" uid="uid://dwpvjx8ylt4ol" path="res://resources/anomaly/window_ghost.png" id="8_aamxw"]
+[ext_resource type="Texture2D" uid="uid://pfq4wi1eiiml" path="res://Gameplay/Levels/butler_scene.png" id="8_g4t3a"]
+[ext_resource type="Script" uid="uid://ddk8btye4o6ye" path="res://Gameplay/Levels/window_ghost.gd" id="9_e1mfo"]
+[ext_resource type="Script" uid="uid://bxkqas612lpxf" path="res://Gameplay/Levels/recollection_event_component.gd" id="9_lygut"]
+[ext_resource type="PackedScene" uid="uid://spkm245oau0o" path="res://Gameplay/Levels/RecollectAnomaly/ghost_gallery_window.tscn" id="10_p0pvg"]
+[ext_resource type="Texture2D" uid="uid://bisawr6dhlsb2" path="res://resources/ui/keyboard_icon/keyboard_icon11.png" id="11_1lcd4"]
+[ext_resource type="PackedScene" uid="uid://dq27sehklxxjt" path="res://Gameplay/Ui/recollection_rect.tscn" id="11_eqa4d"]
+[ext_resource type="PackedScene" uid="uid://dxxjp5re7ww3x" path="res://Gameplay/Levels/bg_evil.tscn" id="11_fte81"]
 [ext_resource type="PackedScene" uid="uid://dvrb02eo457o2" path="res://Gameplay/NPC/pazuzu.tscn" id="11_vlow7"]
+[ext_resource type="Texture2D" uid="uid://bg1fj03dtyu8m" path="res://resources/bg/ghosts_room/ghosts_object.png" id="12_e1mfo"]
+[ext_resource type="Texture2D" uid="uid://d05jjmxu4w3sd" path="res://resources/ui/keyboard_icon/keyboard_icon12.png" id="12_lyvfe"]
+[ext_resource type="Texture2D" uid="uid://dvb657jbn3ejl" path="res://resources/ui/controller_icons/xbox-start-16.png" id="12_w4m01"]
+[ext_resource type="Script" uid="uid://bcxuoeki3mcmo" path="res://Gameplay/Levels/RecollectAnomaly/recollect_bg_evil_spawner.gd" id="19_6uqe7"]
+[ext_resource type="Script" uid="uid://nnjff5ms5xn6" path="res://scene/component/controller_button_component.gd" id="24_qnb12"]
 [ext_resource type="PackedScene" uid="uid://lg6623mk53cw" path="res://scene/component/teleport_component.tscn" id="26_1r73j"]
 [ext_resource type="Texture2D" uid="uid://du0ewe3ii4vjn" path="res://resources/bg_train_wall.png" id="27_50oqc"]
+[ext_resource type="PackedScene" uid="uid://l5r47ne6as13" path="res://Gameplay/Levels/RecollectAnomaly/g_oppai.tscn" id="29_ll8yw"]
+[ext_resource type="PackedScene" uid="uid://dhydvmnip4qtj" path="res://Gameplay/Levels/RecollectAnomaly/g_butt.tscn" id="30_qitrf"]
+[ext_resource type="PackedScene" uid="uid://d1y487ejcruxd" path="res://Gameplay/Levels/RecollectAnomaly/g_hide.tscn" id="31_16j4g"]
 [ext_resource type="PackedScene" uid="uid://dnc5rb3rrpan3" path="res://scene/UI/clear_text.tscn" id="31_82fnd"]
+[ext_resource type="PackedScene" uid="uid://dv837gqsjkvjd" path="res://Gameplay/Levels/RecollectAnomaly/g_drop.tscn" id="32_0rqms"]
 [ext_resource type="PackedScene" uid="uid://bxk6xej0qykv7" path="res://scene/component/stage_handler.tscn" id="32_gilft"]
 [ext_resource type="Script" uid="uid://dsomb6g1hlvem" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="33_50oqc"]
+[ext_resource type="Shader" uid="uid://bk24ebrxinks4" path="res://Gameplay/Levels/RecollectAnomaly/recollect_ghost_outline.gdshader" id="33_u1jql"]
 [ext_resource type="Script" uid="uid://dxlagu4dbag77" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="34_w1jdk"]
 [ext_resource type="PackedScene" uid="uid://bvt4gj56eqbp3" path="res://Gameplay/train_standard.tscn" id="35_iyww2"]
+[ext_resource type="Script" uid="uid://cl7345qkkagjy" path="res://Gameplay/Levels/RecollectAnomaly/recollect_ghost_gallery.gd" id="35_mogqn"]
 [ext_resource type="PackedScene" uid="uid://baub7ftcte2oe" path="res://Gameplay/NPC/gyaru.tscn" id="36_dt07b"]
 [ext_resource type="PackedScene" uid="uid://bjn4cyp2l8xve" path="res://Gameplay/NPC/ol.tscn" id="37_8r0be"]
+[ext_resource type="PackedScene" uid="uid://c8spg168xguc2" path="res://Gameplay/Ui/controller_button_component.tscn" id="38_6rsnw"]
 [ext_resource type="PackedScene" uid="uid://djbwoq5ul6rbk" path="res://scene/game_object/player/player.tscn" id="38_dr17e"]
+[ext_resource type="PackedScene" uid="uid://cr3dick45room" path="res://Gameplay/Levels/RecollectAnomaly/recollect_dick.tscn" id="41_ei1pc"]
 [ext_resource type="PackedScene" uid="uid://dsch54fxvgg58" path="res://Gameplay/door.tscn" id="41_i5sgb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_s3jlc"]
@@ -4167,12 +4186,95 @@ _data = {
 &"scene3_4": SubResource("Animation_v33x4")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_7o1sc"]
+font_size = 11
+outline_size = 5
+outline_color = Color(0.4, 0.321569, 0.345098, 1)
+
 [sub_resource type="Resource" id="Resource_7xtoy"]
 script = ExtResource("34_w1jdk")
 duration = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v61mu"]
 size = Vector2(1920, 360)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_46bfo"]
+shader = ExtResource("33_u1jql")
+shader_parameter/Smooth = false
+shader_parameter/width = 9.622000457045
+shader_parameter/outline_color = Vector4(1, 1, 1, 2)
+shader_parameter/pixel_size = 7
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fdj4d"]
+light_mode = 1
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_7o1sc"]
+frames = 2
+frame_0/texture = ExtResource("11_1lcd4")
+frame_1/texture = ExtResource("12_lyvfe")
+frame_1/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ckjfd"]
+size = Vector2(215, 184)
+
+[sub_resource type="Animation" id="Animation_wg_reset"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_wg_idle"]
+resource_name = "idle"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 3]
+}
+
+[sub_resource type="Animation" id="Animation_wg_move"]
+resource_name = "move"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wg"]
+_data = {
+&"RESET": SubResource("Animation_wg_reset"),
+&"idle": SubResource("Animation_wg_idle"),
+&"move": SubResource("Animation_wg_move")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_if4jc"]
+size = Vector2(20, 383.5)
 
 [node name="Stage_Recollection_Room" type="Node2D" node_paths=PackedStringArray("player", "doors", "teleports")]
 script = ExtResource("1_5frgf")
@@ -4184,7 +4286,7 @@ current_chapter = 3
 
 [node name="HScenePositionDataComponent" type="Node2D" parent="."]
 visible = false
-script = ExtResource("2_fte81")
+script = ExtResource("2_vhit3")
 
 [node name="ReinaHScenes" type="Node2D" parent="HScenePositionDataComponent"]
 visible = false
@@ -4195,10 +4297,10 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_s3jlc")
 position = Vector2(788, 276)
-texture = ExtResource("3_1lcd4")
+texture = ExtResource("3_wb0dw")
 hframes = 19
 vframes = 18
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4218,11 +4320,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_s3jlc")
 position = Vector2(841, 225)
-texture = ExtResource("3_1lcd4")
+texture = ExtResource("3_wb0dw")
 hframes = 19
 vframes = 18
 frame = 36
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4242,11 +4344,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_s3jlc")
 position = Vector2(1355, 220)
-texture = ExtResource("3_1lcd4")
+texture = ExtResource("3_wb0dw")
 hframes = 19
 vframes = 18
 frame = 77
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4266,11 +4368,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_s3jlc")
 position = Vector2(1564, 261)
-texture = ExtResource("3_1lcd4")
+texture = ExtResource("3_wb0dw")
 hframes = 19
 vframes = 18
 frame = 112
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4290,11 +4392,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_s3jlc")
 position = Vector2(979, 206)
-texture = ExtResource("3_1lcd4")
+texture = ExtResource("3_wb0dw")
 hframes = 19
 vframes = 18
 frame = 138
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4314,11 +4416,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_s3jlc")
 position = Vector2(546, 228)
-texture = ExtResource("3_1lcd4")
+texture = ExtResource("3_wb0dw")
 hframes = 19
 vframes = 18
 frame = 182
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4338,11 +4440,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_s3jlc")
 position = Vector2(1424, 210)
-texture = ExtResource("3_1lcd4")
+texture = ExtResource("3_wb0dw")
 hframes = 19
 vframes = 18
 frame = 205
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4362,11 +4464,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_s3jlc")
 position = Vector2(759, 205)
-texture = ExtResource("3_1lcd4")
+texture = ExtResource("3_wb0dw")
 hframes = 19
 vframes = 18
 frame = 226
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4386,11 +4488,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_s3jlc")
 position = Vector2(1089, 190)
-texture = ExtResource("3_1lcd4")
+texture = ExtResource("3_wb0dw")
 hframes = 19
 vframes = 18
 frame = 264
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4410,11 +4512,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_s3jlc")
 position = Vector2(145, 205)
-texture = ExtResource("3_1lcd4")
+texture = ExtResource("3_wb0dw")
 hframes = 19
 vframes = 18
 frame = 299
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4436,10 +4538,10 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_ckjfd")
 position = Vector2(733, 223)
-texture = ExtResource("5_batyu")
+texture = ExtResource("5_gvche")
 hframes = 16
 vframes = 16
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4458,11 +4560,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_ckjfd")
 position = Vector2(511, 216)
-texture = ExtResource("5_batyu")
+texture = ExtResource("5_gvche")
 hframes = 16
 vframes = 16
 frame = 31
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4481,11 +4583,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_ckjfd")
 position = Vector2(523, 191)
-texture = ExtResource("5_batyu")
+texture = ExtResource("5_gvche")
 hframes = 16
 vframes = 16
 frame = 67
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4504,11 +4606,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_ckjfd")
 position = Vector2(1386, 203)
-texture = ExtResource("5_batyu")
+texture = ExtResource("5_gvche")
 hframes = 16
 vframes = 16
 frame = 114
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4527,11 +4629,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_ckjfd")
 position = Vector2(999, 211)
-texture = ExtResource("5_batyu")
+texture = ExtResource("5_gvche")
 hframes = 16
 vframes = 16
 frame = 155
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4550,11 +4652,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_ckjfd")
 position = Vector2(1216, 249)
-texture = ExtResource("5_batyu")
+texture = ExtResource("5_gvche")
 hframes = 16
 vframes = 16
 frame = 179
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4573,11 +4675,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_ckjfd")
 position = Vector2(1589, 208)
-texture = ExtResource("5_batyu")
+texture = ExtResource("5_gvche")
 hframes = 16
 vframes = 16
 frame = 215
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4599,10 +4701,10 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_fxr7i")
 position = Vector2(668, 200)
-texture = ExtResource("6_s6xge")
+texture = ExtResource("6_fudp0")
 hframes = 12
 vframes = 12
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4621,11 +4723,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_fxr7i")
 position = Vector2(1040, 216)
-texture = ExtResource("6_s6xge")
+texture = ExtResource("6_fudp0")
 hframes = 12
 vframes = 12
 frame = 51
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4644,11 +4746,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_fxr7i")
 position = Vector2(490, 231)
-texture = ExtResource("6_s6xge")
+texture = ExtResource("6_fudp0")
 hframes = 12
 vframes = 12
 frame = 73
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4667,11 +4769,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_fxr7i")
 position = Vector2(711, 229)
-texture = ExtResource("6_s6xge")
+texture = ExtResource("6_fudp0")
 hframes = 12
 vframes = 12
 frame = 96
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4693,10 +4795,10 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_fdj4d")
 position = Vector2(1303, 126)
-texture = ExtResource("7_ohf14")
+texture = ExtResource("7_bhyh5")
 hframes = 8
 vframes = 8
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4715,11 +4817,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_fdj4d")
 position = Vector2(1054, 226)
-texture = ExtResource("7_ohf14")
+texture = ExtResource("7_bhyh5")
 hframes = 8
 vframes = 8
 frame = 20
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4740,10 +4842,10 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_s5wxt")
 position = Vector2(798, 242)
-texture = ExtResource("8_syup6")
+texture = ExtResource("8_g4t3a")
 hframes = 9
 vframes = 8
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4762,11 +4864,11 @@ z_index = 3
 texture_filter = 1
 material = SubResource("ShaderMaterial_s5wxt")
 position = Vector2(740, 270)
-texture = ExtResource("8_syup6")
+texture = ExtResource("8_g4t3a")
 hframes = 9
 vframes = 8
 frame = 44
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
@@ -4781,15 +4883,50 @@ libraries = {
 }
 
 [node name="RecollectionEventComponent" type="Node" parent="." node_paths=PackedStringArray("recollect_rect")]
-script = ExtResource("9_07nih")
+script = ExtResource("9_lygut")
 recollect_rect = NodePath("RecollectionCanvas/RecollectionRect")
+
+[node name="GhostGalleryWindow" parent="RecollectionEventComponent" instance=ExtResource("10_p0pvg")]
+visible = false
 
 [node name="RecollectionCanvas" type="CanvasLayer" parent="RecollectionEventComponent"]
 layer = 5
 
-[node name="RecollectionRect" parent="RecollectionEventComponent/RecollectionCanvas" node_paths=PackedStringArray("Npcs", "player") instance=ExtResource("10_ngwj7")]
+[node name="RecollectionRect" parent="RecollectionEventComponent/RecollectionCanvas" node_paths=PackedStringArray("Npcs", "player") instance=ExtResource("11_eqa4d")]
+visible = false
 Npcs = [NodePath("../../../TrainStandard/Entity/OL"), NodePath("../../../TrainStandard/Entity/Gyaru"), NodePath("../../../TrainStandard/Entity/Konial"), NodePath("../../../TrainStandard/Entity/Butler"), NodePath("../../../TrainStandard/Entity/Pazuzu")]
 player = NodePath("../../../TrainStandard/Entity/Player")
+
+[node name="ExitLabel" type="Label" parent="RecollectionEventComponent/RecollectionCanvas"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -96.0
+offset_top = -20.0
+offset_right = -8.0
+offset_bottom = -2.6458435
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 0
+text = "FREE_H_SCENE_EXIT"
+label_settings = SubResource("LabelSettings_7o1sc")
+horizontal_alignment = 2
+
+[node name="PadUiIcon" type="TextureRect" parent="RecollectionEventComponent/RecollectionCanvas/ExitLabel"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -26.0
+offset_right = -6.0
+grow_vertical = 2
+texture = ExtResource("12_w4m01")
+stretch_mode = 5
+script = ExtResource("24_qnb12")
+metadata/_custom_type_script = "uid://nnjff5ms5xn6"
 
 [node name="TeleportComponent" parent="." instance=ExtResource("26_1r73j")]
 entry_direction = 3
@@ -4820,6 +4957,30 @@ visible = false
 position = Vector2(961, 180)
 shape = SubResource("RectangleShape2D_v61mu")
 
+[node name="BGEvilSpwaner" type="Node2D" parent="."]
+script = ExtResource("19_6uqe7")
+bg_evil = ExtResource("11_fte81")
+spawn_cap = 1
+
+[node name="SpwanPositionRight" type="Sprite2D" parent="BGEvilSpwaner"]
+self_modulate = Color(0.4, 1, 0.99, 0.305882)
+position = Vector2(1926, 129.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1nkpb")
+hframes = 3
+vframes = 3
+
+[node name="SpwanPositionLeft" type="Sprite2D" parent="BGEvilSpwaner"]
+self_modulate = Color(0.4, 1, 0.99, 0.305882)
+position = Vector2(-4.999939, 129.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_1nkpb")
+flip_h = true
+hframes = 3
+vframes = 3
+
+[node name="Timer" type="Timer" parent="BGEvilSpwaner"]
+
 [node name="TrainStandard" parent="." instance=ExtResource("35_iyww2")]
 
 [node name="Entity" type="Node2D" parent="TrainStandard"]
@@ -4845,6 +5006,76 @@ position = Vector2(1477, 337)
 [node name="Pazuzu" parent="TrainStandard/Entity" instance=ExtResource("11_vlow7")]
 position = Vector2(1754, 334)
 
+[node name="GOppai" parent="TrainStandard" groups=["RecollectGhost"] instance=ExtResource("29_ll8yw")]
+
+[node name="GButt" parent="TrainStandard" groups=["RecollectGhost"] instance=ExtResource("30_qitrf")]
+
+[node name="GHide" parent="TrainStandard" groups=["RecollectGhost"] instance=ExtResource("31_16j4g")]
+position = Vector2(-28, 0)
+
+[node name="GDrop" parent="TrainStandard" groups=["RecollectGhost"] instance=ExtResource("32_0rqms")]
+position = Vector2(354, 0)
+
+[node name="Ghosts" type="Sprite2D" parent="TrainStandard" node_paths=PackedStringArray("gallery_window") groups=["RecollectGhost"]]
+material = SubResource("ShaderMaterial_46bfo")
+position = Vector2(731, 226)
+texture = ExtResource("12_e1mfo")
+script = ExtResource("35_mogqn")
+gallery_window = NodePath("../../RecollectionEventComponent/GhostGalleryWindow")
+
+[node name="KeyboardIcon" type="TextureRect" parent="TrainStandard/Ghosts"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_fdj4d")
+offset_left = -25.0
+offset_top = -124.0
+offset_right = 7.0
+offset_bottom = -108.0
+texture = SubResource("AnimatedTexture_7o1sc")
+
+[node name="ControllerButtonComponent" parent="TrainStandard/Ghosts/KeyboardIcon" instance=ExtResource("38_6rsnw")]
+layout_mode = 1
+offset_left = 18.0
+offset_top = -5.0
+offset_right = 28.0
+offset_bottom = 5.0
+
+[node name="Area2D" type="Area2D" parent="TrainStandard/Ghosts"]
+collision_layer = 0
+collision_mask = 8192
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrainStandard/Ghosts/Area2D"]
+position = Vector2(5.5, 0)
+shape = SubResource("RectangleShape2D_ckjfd")
+
+[node name="WindowGhostFrame" type="ColorRect" parent="TrainStandard" groups=["RecollectGhost"]]
+z_index = -3
+clip_contents = true
+offset_left = 1212.0
+offset_top = 57.0
+offset_right = 1396.0
+offset_bottom = 173.0
+color = Color(1, 1, 1, 0)
+
+[node name="WindowGhost" type="Sprite2D" parent="TrainStandard/WindowGhostFrame" node_paths=PackedStringArray("level")]
+self_modulate = Color(1, 1, 1, 0.4)
+z_index = 2
+texture_filter = 1
+position = Vector2(58, 70)
+texture = ExtResource("8_aamxw")
+hframes = 4
+script = ExtResource("9_e1mfo")
+level = NodePath("../../..")
+hide_on_clear = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TrainStandard/WindowGhostFrame/WindowGhost"]
+libraries = {
+&"": SubResource("AnimationLibrary_wg")
+}
+
+[node name="RecollectDick" parent="TrainStandard" groups=["RecollectGhost"] instance=ExtResource("41_ei1pc")]
+z_index = 2
+position = Vector2(900, 348)
+
 [node name="frontDoor" parent="." instance=ExtResource("41_i5sgb")]
 position = Vector2(-24, 356)
 entry_direction = 1
@@ -4852,7 +5083,7 @@ transition_type = "zelda"
 push_distance = 100
 
 [node name="Exit" parent="." instance=ExtResource("41_i5sgb")]
-position = Vector2(2016, 352)
+position = Vector2(2360, 352)
 entry_direction = 3
 transition_type = "zelda"
 push_distance = 100
@@ -4862,3 +5093,12 @@ entry_door_name = "frontDoor"
 [node name="BgTrainWall" type="Sprite2D" parent="."]
 texture = ExtResource("27_50oqc")
 centered = false
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1568, 337)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(342, -162)
+shape = SubResource("RectangleShape2D_if4jc")

@@ -47,6 +47,10 @@ var block_skip_on_choice: bool = false
 func stop_skip_on_next_choice() -> void:
 	block_skip_on_choice = true
 
+## [KR] 대화 오토 플레이(AutoButton) on/off. 텍스트박스가 대화마다 새로 생성돼도
+## 세션 동안 유지되도록 오토로드에 보관한다. (저장 안 됨 — 게임 재시작 시 초기화)
+var autoplay_enabled: bool = false
+
 ## [KR] 현재 실행 중인 창이나 상태의 현황을 기록한 배열.
 ## [method set_window_state] / [method get_window_state]를 통해 접근한다.
 ## [EN] Array recording the status of currently open windows or states.

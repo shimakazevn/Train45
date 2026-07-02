@@ -18,7 +18,7 @@ signal start_h
 @onready var love_effect: CPUParticles2D = $LoveEffect
 
 
-@export var climax_life_max: float = 900.0
+@export var climax_life_max: float = 700.0
 var climax_life: float = climax_life_max # 절정 게이지
 @export var ticket_total: int = 120
 var ticket_n: int = 20 #n등분 지점마다 드롭

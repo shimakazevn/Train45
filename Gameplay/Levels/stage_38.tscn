@@ -1,27 +1,27 @@
 [gd_scene load_steps=53 format=3]
 
 [ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="1_aamxw"]
 [ext_resource type="Script" uid="uid://b5supx1x5cd2y" path="res://Gameplay/Levels/npc_anomaly.gd" id="2_fyq3t"]
 [ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
-[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="9_62jqa"]
-[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_2kt0v"]
+[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_62jqa"]
+[ext_resource type="Texture2D" uid="uid://bisawr6dhlsb2" path="res://resources/ui/keyboard_icon/keyboard_icon11.png" id="11_1lcd4"]
+[ext_resource type="Texture2D" uid="uid://d05jjmxu4w3sd" path="res://resources/ui/keyboard_icon/keyboard_icon12.png" id="12_lyvfe"]
+[ext_resource type="Texture2D" uid="uid://duva4mnpevjja" path="res://resources/ui/heart.png" id="13_batyu"]
 [ext_resource type="Texture2D" uid="uid://21uwboh6s64n" path="res://Gameplay/Levels/ano_reina_back.png" id="13_ohf14"]
 [ext_resource type="Script" uid="uid://c8jgf25nv4oa4" path="res://Gameplay/Levels/npc_h_anomaly_component.gd" id="14_batyu"]
+[ext_resource type="PackedScene" uid="uid://c5cqnjwgn5mkw" path="res://scene/UI/action_progress.tscn" id="14_s6xge"]
+[ext_resource type="PackedScene" uid="uid://d375wpw5cnun3" path="res://sound/h_sfx_audio_stream_player_2d.tscn" id="15_ohf14"]
 [ext_resource type="Script" uid="uid://c42e2hbfgia71" path="res://scene/game_object/player/h_moan_stream.gd" id="15_s6xge"]
 [ext_resource type="AudioStream" uid="uid://d1303sc8lbvkv" path="res://sound/voice/scene_voice/SCENE_REINA_AHEN_4.ogg" id="16_syup6"]
 [ext_resource type="AudioStream" uid="uid://c045brlft4x1f" path="res://sound/voice/scene_voice/SCENE_REINA_AHEN_5.ogg" id="17_07nih"]
-[ext_resource type="Texture2D" uid="uid://duva4mnpevjja" path="res://resources/ui/heart.png" id="18_07nih"]
 [ext_resource type="AudioStream" uid="uid://bd8e60wfnav78" path="res://sound/voice/scene_voice/SCENE_REINA_AHEN_6.ogg" id="18_ngwj7"]
-[ext_resource type="Texture2D" uid="uid://bisawr6dhlsb2" path="res://resources/ui/keyboard_icon/keyboard_icon11.png" id="19_ngwj7"]
-[ext_resource type="Texture2D" uid="uid://d05jjmxu4w3sd" path="res://resources/ui/keyboard_icon/keyboard_icon12.png" id="20_a86ny"]
-[ext_resource type="PackedScene" uid="uid://c5cqnjwgn5mkw" path="res://scene/UI/action_progress.tscn" id="21_g0oe4"]
-[ext_resource type="PackedScene" uid="uid://d375wpw5cnun3" path="res://sound/h_sfx_audio_stream_player_2d.tscn" id="23_a86ny"]
-[ext_resource type="Texture2D" uid="uid://cmtctj057h48d" path="res://Gameplay/Levels/ano_mai_back.png" id="24_g0oe4"]
-[ext_resource type="AudioStream" uid="uid://ed51vlbdj68g" path="res://sound/voice/scene_voice/SCENE_MAI_AHEN_4.ogg" id="25_uving"]
+[ext_resource type="Texture2D" uid="uid://cmtctj057h48d" path="res://Gameplay/Levels/ano_mai_back.png" id="24_a86ny"]
+[ext_resource type="AudioStream" uid="uid://ed51vlbdj68g" path="res://sound/voice/scene_voice/SCENE_MAI_AHEN_4.ogg" id="25_g0oe4"]
 [ext_resource type="PackedScene" uid="uid://lg6623mk53cw" path="res://scene/component/teleport_component.tscn" id="26_1r73j"]
-[ext_resource type="AudioStream" uid="uid://d11l1wcmlwjfm" path="res://sound/voice/scene_voice/SCENE_MAI_AHEN_5.ogg" id="26_ftsf8"]
+[ext_resource type="AudioStream" uid="uid://d11l1wcmlwjfm" path="res://sound/voice/scene_voice/SCENE_MAI_AHEN_5.ogg" id="26_uving"]
 [ext_resource type="Texture2D" uid="uid://du0ewe3ii4vjn" path="res://resources/bg_train_wall.png" id="27_50oqc"]
-[ext_resource type="AudioStream" uid="uid://dwcjnhvcbrtsp" path="res://sound/voice/scene_voice/SCENE_MAI_AHEN_6.ogg" id="27_k0roo"]
+[ext_resource type="AudioStream" uid="uid://dwcjnhvcbrtsp" path="res://sound/voice/scene_voice/SCENE_MAI_AHEN_6.ogg" id="27_ftsf8"]
 [ext_resource type="PackedScene" uid="uid://dnc5rb3rrpan3" path="res://scene/UI/clear_text.tscn" id="31_82fnd"]
 [ext_resource type="PackedScene" uid="uid://bxk6xej0qykv7" path="res://scene/component/stage_handler.tscn" id="32_gilft"]
 [ext_resource type="Script" uid="uid://dsomb6g1hlvem" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="33_50oqc"]
@@ -52,8 +52,8 @@ light_mode = 1
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_qyaaa"]
 frames = 2
-frame_0/texture = ExtResource("19_ngwj7")
-frame_1/texture = ExtResource("20_a86ny")
+frame_0/texture = ExtResource("11_1lcd4")
+frame_1/texture = ExtResource("12_lyvfe")
 frame_1/duration = 1.0
 
 [sub_resource type="Animation" id="Animation_88eqf"]
@@ -603,8 +603,8 @@ shape = SubResource("RectangleShape2D_v61mu")
 [node name="Anomaly" type="Area2D" parent="TrainStandard"]
 collision_layer = 8
 collision_mask = 0
-script = ExtResource("9_62jqa")
-bubble = ExtResource("10_2kt0v")
+script = ExtResource("1_aamxw")
+bubble = ExtResource("10_62jqa")
 
 [node name="AnomalyCollision" type="CollisionShape2D" parent="TrainStandard/Anomaly"]
 unique_name_in_owner = true
@@ -649,7 +649,7 @@ streams = Array[AudioStream]([ExtResource("16_syup6"), ExtResource("17_07nih"), 
 [node name="LoveEffect" type="CPUParticles2D" parent="TrainStandard/Entity/ReinaHAnomalySprite/NpcHAnomalyComponent"]
 position = Vector2(-8, -79)
 amount = 5
-texture = ExtResource("18_07nih")
+texture = ExtResource("13_batyu")
 lifetime = 3.0
 randomness = 0.1
 emission_shape = 3
@@ -686,7 +686,7 @@ offset_bottom = -119.0
 pivot_offset = Vector2(16, 8)
 texture = SubResource("AnimatedTexture_qyaaa")
 
-[node name="ActionProgressBase" parent="TrainStandard/Entity/ReinaHAnomalySprite/NpcHAnomalyComponent" instance=ExtResource("21_g0oe4")]
+[node name="ActionProgressBase" parent="TrainStandard/Entity/ReinaHAnomalySprite/NpcHAnomalyComponent" instance=ExtResource("14_s6xge")]
 position = Vector2(-3.9449997, -109.57001)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TrainStandard/Entity/ReinaHAnomalySprite"]
@@ -694,14 +694,14 @@ libraries = {
 &"": SubResource("AnimationLibrary_yppfw")
 }
 
-[node name="HSfxAudioStreamPlayer2D" parent="TrainStandard/Entity/ReinaHAnomalySprite" instance=ExtResource("23_a86ny")]
+[node name="HSfxAudioStreamPlayer2D" parent="TrainStandard/Entity/ReinaHAnomalySprite" instance=ExtResource("15_ohf14")]
 
-[node name="HSfxAudioStreamPlayer2DSub" parent="TrainStandard/Entity/ReinaHAnomalySprite" instance=ExtResource("23_a86ny")]
+[node name="HSfxAudioStreamPlayer2DSub" parent="TrainStandard/Entity/ReinaHAnomalySprite" instance=ExtResource("15_ohf14")]
 
 [node name="MaiHAnomalySprite" type="Sprite2D" parent="TrainStandard/Entity"]
 visible = false
 texture_filter = 1
-texture = ExtResource("24_g0oe4")
+texture = ExtResource("24_a86ny")
 hframes = 5
 vframes = 5
 frame = 20
@@ -722,12 +722,12 @@ moan_stream = NodePath("HMoanStream")
 [node name="HMoanStream" type="AudioStreamPlayer" parent="TrainStandard/Entity/MaiHAnomalySprite/NpcHAnomalyComponent"]
 bus = &"Character"
 script = ExtResource("15_s6xge")
-streams = Array[AudioStream]([ExtResource("25_uving"), ExtResource("26_ftsf8"), ExtResource("27_k0roo")])
+streams = Array[AudioStream]([ExtResource("25_g0oe4"), ExtResource("26_uving"), ExtResource("27_ftsf8")])
 
 [node name="LoveEffect" type="CPUParticles2D" parent="TrainStandard/Entity/MaiHAnomalySprite/NpcHAnomalyComponent"]
 position = Vector2(-2, -119)
 amount = 5
-texture = ExtResource("18_07nih")
+texture = ExtResource("13_batyu")
 lifetime = 3.0
 randomness = 0.1
 emission_shape = 3
@@ -754,7 +754,7 @@ offset_bottom = -115.57001
 pivot_offset = Vector2(16, 8)
 texture = SubResource("AnimatedTexture_qyaaa")
 
-[node name="ActionProgressBase" parent="TrainStandard/Entity/MaiHAnomalySprite/NpcHAnomalyComponent" instance=ExtResource("21_g0oe4")]
+[node name="ActionProgressBase" parent="TrainStandard/Entity/MaiHAnomalySprite/NpcHAnomalyComponent" instance=ExtResource("14_s6xge")]
 position = Vector2(3, -141.57)
 
 [node name="HArea" type="Area2D" parent="TrainStandard/Entity/MaiHAnomalySprite/NpcHAnomalyComponent"]
@@ -772,9 +772,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_3dgjl")
 }
 
-[node name="HSfxAudioStreamPlayer2D" parent="TrainStandard/Entity/MaiHAnomalySprite" instance=ExtResource("23_a86ny")]
+[node name="HSfxAudioStreamPlayer2D" parent="TrainStandard/Entity/MaiHAnomalySprite" instance=ExtResource("15_ohf14")]
 
-[node name="HSfxAudioStreamPlayer2DSub" parent="TrainStandard/Entity/MaiHAnomalySprite" instance=ExtResource("23_a86ny")]
+[node name="HSfxAudioStreamPlayer2DSub" parent="TrainStandard/Entity/MaiHAnomalySprite" instance=ExtResource("15_ohf14")]
 
 [node name="frontDoor" parent="." instance=ExtResource("41_i5sgb")]
 position = Vector2(-24, 356)

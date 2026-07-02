@@ -1,0 +1,695 @@
+﻿key,en,jp,vi
+RAPE_RETURN_GUIDE,Return,帰還,Trở về
+QUEST_PROCESS_FIND_ROUTE,Discover %d+ Anomalies,異変を%d個以上発見,Phát hiện từ %d hiện tượng lạ
+TUTO_TITLE_KONIAL_H,Konial H,コニアルH,Cảnh H Konial
+TUTO_BUTLER_H_2,"Help the Butler, whose detection abilities have weakened, collect the lost items scattered throughout the train cars.
+The Butler's Affection increases each time you retrieve a Lost Item Box.
+Information on which cars contain lost items can be purchased at the Exchange Shop.","感知能力が弱体化した執事を助け、車両のあちこちに散らばった落とし物を回収してください。
+落とし物ボックスを獲得するたびに、執事の好感度が上昇します。
+落とし物がある車両の情報は、交換ショップで購入できます。","Hãy giúp Quản gia, người có khả năng cảm ứng bị suy yếu, thu thập các món đồ thất lạc rải rác khắp các toa tàu. Mỗi lần bạn thu hồi một Hộp Đồ Thất Lạc, Thiện cảm của Quản gia sẽ tăng lên. Thông tin về việc toa tàu nào có chứa đồ thất lạc có thể được mua tại Cửa hàng Trao đổi."
+ROUTE_APP_MSG_NEEDCOIN,Not enough Coins.,コインが不足しています。,Không đủ Xu.
+NOW_DESTINATION_COMFIRMED,Route Set,路線設定完了,Đã đặt tuyến
+SCENE_LYING_KISS,Lying Down & Kissing,添い寝キス,Đồng sàng cộng hôn
+QUEST_PROCESS_COLLECT_ITEM,Collect %d+ Items,景品%d個以上収集,Thu thập từ %d vật phẩm
+TUTO_BUTLER_H_1,"To engage in sexual activities with the Butler in human form, you must raise her Affection.
+Hearts drop when you engage in sexual activities with Reina or Mai at the starting point. Collecting them raises the Butler's Affection.","人間の姿になった執事とエッチするには、好感度を上げる必要があります。
+開始地点で怜奈や舞とエッチするとハートがドロップし、それを獲得すると執事の好感度が上がります。","Để kích hoạt các hoạt động thân mật với Quản gia trong dạng người, bạn phải tăng điểm Thiện cảm của cô ấy. Trái tim sẽ rơi ra khi bạn thực hiện hoạt động thân mật với Reina hoặc Mai tại điểm xuất phát. Thu thập chúng sẽ giúp tăng điểm Thiện cảm của Quản gia."
+SYSTEM_EXIT_CONFIRM_DESCRIPTION,Exit the game?,ゲームを終了しますか？,Bạn có muốn thoát game không?
+DESTINATION_D_RULET,Collab Car,コラボ車両,Toa liên kết
+NOTI_NEW_ROUTE_ADDED,New Terminal registered.,新しい終点情報が登録されました。,Đã ghi nhận ga cuối mới.
+NOTI_LOVE_LEVEL_UP_BONUS_TICKET,Affection Bonus Ticket + %d,好感度上昇ボーナス チケット + %d,Vé thưởng tăng Thiện cảm + %d
+INVENTORY_TITLE,Inventory,所持品,Túi đồ
+ROUTE_TITLE_WATCHER,Watching,監視,Giám sát
+QUEST_PROCESS_GOAL_COUNT,Complete %d+ runs,完走回数%d回以上,Hoàn thành từ %d lượt chạy
+ROUTE_INFO_SEATEYE,Please be careful not to sit right on it.,うっかり座ってしまわぬよう、ご注意くださいませ。,Xin hãy cẩn thận đừng vô tình ngồi thẳng lên đó.
+SCENE_FIRST_SEX,First Time,初セックス,Khai trinh đại điển
+BOX_MAP_ITEM_3_TITLE,Lost Item Location Hint -3-,落とし物位置のヒント -3-,Gợi ý vị trí đồ thất lạc -3-
+ROUTE_COIN,Commemorative Coin,記念硬貨,Xu kỷ niệm
+OPTION_TAB_SCREEN,Display,画面,Hiển thị
+LOVE_BONUS_DESCRIPTION,Gain bonus Affection from your accompanying heroine with each successful exploration.,探索に成功する毎に、同行ヒロインの追加好感度を獲得します。,Nhận thêm điểm Thiện cảm từ nữ chính đồng hành sau mỗi lần thám hiểm thành công.
+EXIT_CONFIRM,Main Menu,メインメニューへ,Menu chính
+ROUTE_APP_NOT_FIND,Not detected,未探知,Không phát hiện
+VIEW_MODE_TITLE,R Key: Observation Mode,Rキー：観察モード,Phím R: Chế độ quan sát
+SPEED_UP,Love Love Lotion,ラブラブローション,Gel bôi trơn tình yêu
+SCENE_FULL_NELSON,Full Nelson,フルネルソン,Song thủ khóa cánh én
+CREDIT_PUBLISHED_BY,Published by,販売元,Phát hành bởi
+LOAD_GAME,Load,ロード,Tải game
+SCENE_MISSIONARY,Missionary,正常位,Chính diện song tu
+ROUTE_INFO_PANCHIRA,Please check the advertisements up above carefully as well.,上の方の広告看板も、隅々まで確認してみてくださいませ。,Xin hãy kiểm tra kỹ lưỡng cả các biển quảng cáo ở phía trên nữa nhé.
+BOX_MAP_ITEM_1_INFO,"A slip of paper with lost item locations.
+Marks train cars containing lost items from cars 1-20 on your Kankan Navi.","落とし物の位置が記された紙。
+1～20号車のうち、落とし物がある車両をシャリョーナビに表示します。",Một mảnh giấy ghi chép vị trí của các món đồ thất lạc. Đánh dấu các toa tàu có chứa đồ thất lạc từ toa 1 đến toa 20 trên Bản đồ dẫn đường của bạn.
+CREDIT_THANKSFORPLAY,Thanks for Playing,プレイしていただきありがとうございます,Cảm ơn bạn đã chơi game
+DESTINATION_HINT_MIRROR_INFO,"...Pazuzu! I never expected you to volunteer so eagerly for this mission. I don't know what this means to you, but make sure there are no mistakes this time.
+Here, this is a [color=#ADFF2F]cipher[/color]. Don't you dare forget it, understood?","……パズズ！ お前がここまで積極的に任務を志願するとはな。お前にとってどんな意味があるのかは知らんが、今回はしくじるなよ。
+ほら、これは[color=#ADFF2F]暗号文[/color]だ。絶対に忘れるんじゃないぞ？","...Pazuzu! Ta không ngờ ngươi lại hăng hái tự nguyện nhận nhiệm vụ này đến thế. Ta không biết việc này có ý nghĩa gì với ngươi, nhưng hãy chắc chắn rằng lần này không được xảy ra bất kỳ sai sót nào đấy. Này, đây là [color=#ADFF2F]mật thư[/color]. Tuyệt đối không được quên đấy nhé, rõ chưa?"
+DETECT_AREA_UP_DESCRIPTION,Expands the detection range.,感知範囲を拡大します。,Mở rộng phạm vi phát hiện.
+ROUTE_NOT_FIND,Undiscovered,未発見,Chưa phát hiện
+SCENE_DOOR_STUCK,Stuck in Door,ドア挟み,Mắc kẹt sơn môn
+SHOP_TICKET_NUM,Tickets:,チケット：,Số vé:
+ROUTE_TITLE_WHITE,White Liquid,白い液体,Chất lỏng màu trắng
+COLA_FINDER_DESCRIPTION,Move around until the cola explodes to reveal the Anomaly's location.,コーラが爆発するまで動くと、異変の位置を知らせます。,Hãy di chuyển liên tục cho đến khi chai cola phát nổ để làm hiển thị vị trí của Hiện tượng lạ.
+LIFE_UP,Okaboshi 0.00001,オカボシ 0.00001,Ngôi sao may mắn 0.00001
+CHAPTER_CHANGING_NEW_ANOMALY,New anomalies have been added.,新たな異変が追加されました。,Đã thêm các hiện tượng lạ mới.
+NOTI_NOT_ENOUGH_TICKET,Not enough Tickets.,チケットが不足しています。,Không đủ Vé.
+ROUTE_APP_MSG_UNLOCKROUTE,Unlock Route,車両のアンロック,Mở khóa tuyến đường
+ROUTE_TITLE_BUTTON,Button,ボタン,Nút bấm
+DESTINATION_HINT_LOWSPEED_INFO,"Train 45 is fully equipped with auxiliary facilities for socially vulnerable passengers!
+In addition to [color=#ADFF2F]priority seating[/color] and [color=#ADFF2F]tactile paving blocks[/color] installed at every entrance, we are proud to announce the first-ever introduction of an [color=#ADFF2F]ultra-slow safety zone[/color] across all Routes!
+This slow zone operates at approximately 20% of regular train speed to prevent unforeseen accidents...(omitted)
+
+""...So slow it makes me nauseous. Probably faster to just run. Can't believe it really takes an hour to the next station.""","『当45番電車は、社会的弱者のための補助設備も完備しております！
+[color=#ADFF2F]優先席[/color]や出入り口ごとの[color=#ADFF2F]点字ブロック[/color]はもちろん、安全のための[color=#ADFF2F]超低速[/color]区間を全路線で初めて導入決定いたしました！
+この低速区間は、従来の20％程度の速度で運行し、不慮の事故を予防……（中略）』
+……遅すぎて酔うわ。走ったほうが速いんじゃないか。次の駅まで1時間かかるってマジだったんだな。","Tuyến tàu số 45 của chúng tôi được trang bị đầy đủ các cơ sở vật chất hỗ trợ cho những hành khách cần được ưu tiên! Ngoài [color=#ADFF2F]ghế ưu tiên[/color] và [color=#ADFF2F]vạch chỉ dẫn nổi[/color] được lắp đặt ở mỗi lối ra vào, chúng tôi tự hào công bố lần đầu tiên đưa vào hoạt động khu vực [color=#ADFF2F]tốc độ siêu chậm[/color] trên toàn tuyến để đảm bảo an toàn! Khu vực chậm này vận hành ở mức khoảng 20% tốc độ tàu thông thường nhằm ngăn ngừa các tai nạn đáng tiếc... (lược dịch)\n\n...Chậm đến phát nôn. Thà chạy bộ có khi còn nhanh hơn. Không ngờ việc mất cả tiếng đồng hồ để đến ga tiếp theo là có thật."
+ROUTE_APP_MSG_UNLOCKBUTTON,"Press to
+Unlock","押して
+アンロック",Nhấn để\nMở khóa
+TUTO_BASE_H_ACTION_2,"Press the up arrow key to adjust the speed of the sexual activity. During sex scenes, accumulated Lust is continuously consumed. Press the down key to lock in the current speed.
+When the gauge fills up, you'll ejaculate, and the consumed Lust converts into Tickets.
+Higher Affection means better quality Tickets.","上方向キーを押してエッチの速度を調節できます。エッチ中は溜まった情念が持続的に消費され、下方向キーを押すとその速度で固定できます。
+ゲージがいっぱいになると射精し、消費された情念がチケットに変換されます。
+好感度が高いほど、より高品質なチケットを獲得できます。","Nhấn phím mũi tên Lên để điều chỉnh tốc độ hoạt động thân mật. Trong các phân cảnh H, điểm Dục vọng tích lũy sẽ liên tục bị tiêu hao. Nhấn phím Xuống để cố định tốc độ hiện tại. Khi thanh đo đầy, bạn sẽ xuất tinh và điểm Dục vọng đã tiêu hao sẽ được chuyển đổi thành Vé. Điểm Thiện cảm càng cao thì chất lượng Vé thu được càng tốt."
+TUTO_BASE_H_ACTION_3,"You can change positions during sex scenes using the left and right keys!
+You won't earn Tickets without enough Lust, so build it up through exploration.
+Exchange your collected Tickets for items to explore more efficiently and quickly.","エッチ中も左右方向キーを押すと、別の体位に変更できます！
+情念が不足するとチケットを獲得できないため、探索を行って情念を溜めてください。
+集めたチケットでアイテムを交換し、より効率的かつスピーディーに探索を進められます。","Bạn có thể thay đổi tư thế trong các phân cảnh H bằng cách sử dụng các phím Trái và Phải! Bạn sẽ không thể kiếm được Vé nếu không có đủ điểm Dục vọng, vì vậy hãy tích lũy điểm này thông qua việc thám hiểm. Hãy đổi Vé đã thu thập để lấy các vật phẩm nhằm thám hiểm hiệu quả và nhanh chóng hơn."
+ROUTE_APP_CONFIRM_ROUTE,Confirm Route,ルート確定,Xác nhận
+<!MissingKey:50:You grew closer to Butler.>,You grew closer to Butler.,執事とさらに仲良くなったようだ。,Có vẻ bạn đã trở nên thân thiết hơn với Quản gia.
+TUTO_BASE_H_ACTION_1,"At the starting point, you can convert accumulated Lust into Tickets through sex scenes with your partner.
+Use the left and right arrow keys and the select key to choose your desired sex scene.
+Raise Affection and view events to unlock more positions.
+Your partner's preferred position changes each time. Selecting a heart-marked position earns bonus Tickets.","開始地点では、パートナーとのエッチを通じて溜まった情念をチケットに変換できます。
+左右の方向キーと選択キーを押して、希望のエッチシーンを選択できます。
+好感度を上げてイベントを見ると、より多くの体位がアンロックされます。
+行為毎にパートナーが好む体位は変化し、ハートマークのついた体位ではボーナスチケットを獲得できます。","Tại điểm xuất phát, bạn có thể chuyển đổi điểm Dục vọng tích lũy thành Vé thông qua việc thực hiện hoạt động thân mật với bạn đồng hành. Sử dụng phím mũi tên Trái/Phải và phím Chọn để chọn phân cảnh H mong muốn. Hãy nâng cao điểm Thiện cảm và xem các sự kiện để mở khóa thêm nhiều tư thế hơn. Tư thế ưu thích của bạn đồng hành sẽ thay đổi sau mỗi lần thực hiện, chọn tư thế có đánh dấu trái tim sẽ nhận được vé thưởng."
+BUTTON_SELECT,Select,選択,Chọn
+ROUTE_INFO_PRIORITYSEAT,The seats at the end are priority seating. Please pay close attention to the signage.,端の座席は優先席でございます。案内板を注意深くご覧くださいませ。,Các ghế ở góc là ghế ưu tiên. Hãy chú ý kỹ đến biển báo hướng dẫn nhé.
+CLEAR_NUM,Times Cleared,クリア回数,Số lần hoàn thành
+ERO_GAUGE_COMSUME_UP,Retro Game Console,レトロゲーム機,Máy chơi game cổ điển
+SCENE_KISSING_FACING,Face-to-Face Kissing,対面座位(キス),Diện đối diện giao hôn
+DESTINATION_HINT_HANDFAN_TITLE,Torn Fan,破れたうちわ,Chiếc quạt rách
+NOTI_CHAPTER_LOVE_LEVEL_LIMIT,I feel like we'll get closer if the story progresses.,物語を進めれば、もっと親しくなれそうだ。,Có vẻ chúng ta sẽ trở nên thân thiết hơn khi cốt truyện tiến triển.
+ROUTE_INFO_FELLATION,Wasn't there a woman in the advertisement with something in her mouth?,広告の中の女性が、何かを口に咥えてはいませんでしたか？,Chẳng phải người phụ nữ trong ảnh quảng cáo đang ngậm thứ gì đó trong miệng sao?
+FREE_H_SCENE_DOWN_KEY,"S, Down Key",S、下キー,"Phím S, mũi tên Xuống"
+DESTINATION_HINT_ONSEN_INFO,"A flyer from inside the train. The date has long since passed.
+""...A hot spring experience inside a train car? Is that even possible?""
+""That's why it got trashed and shut down early.
+[color=#ADFF2F]The whole car flooded[/color]... and [color=#ADFF2F]white water was pouring from the ceiling[/color]. They say [color=#ADFF2F]the windows were so fogged up[/color] you couldn't see the scenery at all.""
+""White water... could that be limestone water?...""","車内の広告チラシ。日付はだいぶ昔のものだ。
+『……車内で温泉体験ができる特別客室？…正気かよ？』
+『だから文句言われまくって早期終了したんだよ。[color=#ADFF2F]あちこち浸水する[/color]わ……天井からも[color=#ADFF2F]白い謎の液体がボタボタ滴ってくる[/color]わ。[color=#ADFF2F]窓は全部結露[/color]して風景なんて全く見えなかったらしいし』
+『白い液体って……石灰水か何かか？……』","Đây là tờ rơi quảng cáo trên tàu. Ngày tháng trên đó đã qua từ lâu rồi.\n\n""...Toa đặc biệt cho phép trải nghiệm suối nước nóng ngay trên tàu? Có thật không vậy?""\n""Thế nên mới bị chỉ trích và đóng cửa sớm đấy. Toa tàu [color=#ADFF2F]bị ngập nước khắp nơi[/color]... và [color=#ADFF2F]nước màu trắng cứ thế đổ xuống từ trần nhà[/color]. Người ta nói [color=#ADFF2F]các cửa sổ đều bị mờ sương[/color] đến nỗi chẳng nhìn thấy gì bên ngoài cả.""\n""Nước màu trắng... có phải là nước vôi không nhỉ?..."""
+CREDIT_BACKGROUND,Background,背景,Bối cảnh
+RETURN_BASE_CONFIRM_DESCRIPTION,Return to the starting point?,スタート地点に戻りますか？,Bạn có muốn quay lại điểm xuất phát không?
+SCENE_SWIMSUIT,Swimsuit,水着,Đồ bơi
+OPTION_MASTER_VOLUME,Master Volume,全体音量,Âm lượng tổng
+NOTI_LOVE_EXP_BONUS,Affection + %d,好感度 + %d,Thiện cảm + %d
+UNVISIT_FINDER_DESCRIPTION,"A rectangular tablet of unknown purpose.
+If you encounter previously visited cars a certain number of times, you'll be moved to an undiscovered car next.
+Route must not be set.","用途不明の四角い板。
+発見済みの車両への進入が一定回数続いた場合、次は未発見の車両へ移動します。
+路線が指定されていない状態である必要があります。","Đây là một tấm bảng hình chữ nhật không rõ công dụng.\nNếu bạn đi vào các toa tàu đã phát hiện một số lần nhất định, lần tiếp theo bạn sẽ được chuyển đến một toa tàu chưa phát hiện.\nTuyến đường phải ở trạng thái chưa được thiết lập."
+EQUIP_COST,Equipment Cost,装着コスト,Điểm trang bị
+ROUTE_TITLE_EXTENSION,Extended,延長,Mở rộng
+ROUTE_APP_EXIT,Exit,閉じる,Thoát
+DETECT_AREA_UP,Unpaired Earphone,片耳イヤホン,Tai nghe lẻ cặp
+DESTINATION_D_DOGSTRAP,Pet Car,ペット車両,Toa thú cưng
+PRESS_FIND_KEY,Press the Exploration key to continue.,探索キーを押して進んでください。,Nhấn phím Thám hiểm để tiếp tục.
+ROUTE_INFO_VERTICALEXPANSION,This is a vertically extended ad.,縦に長くなったサイズの広告でございます。,Đây là biển quảng cáo được kéo dài theo chiều dọc.
+H_LIST_FOLD,Expand/Collapse Sex List (Use left/right arrow keys to expand),Hリスト展開/折りたたみ(左右方向キーで展開),"Mở rộng/Thu gọn Danh sách H (Dùng phím mũi tên Trái/Phải để mở rộng, phím Shift để thu gọn)"
+TIME_LIMITER,Silent Alarm Clock,静かな目覚まし時計,Đồng hồ báo thức im lặng
+DARUMA_CHAN_DESCRIPTION,The Daruma will appear in cars with no Anomaly.,異変がない車両の場合、だるまちゃんが現れます。,Búp bê Daruma sẽ xuất hiện ở toa tàu không có hiện tượng lạ.
+QUEST_GOAL_TEXT_2_1,"After meeting the conditions above, reach the 8th car.",上記条件を満たして8番目の車両に到達しよう,Hãy đạt toa thứ 8 sau khi đáp ứng các điều kiện trên
+ROUTE_APP_MSG_COMFIRM,Route setting completed.,ルート設定を完了しました。,Đã hoàn tất thiết lập tuyến đường.
+ROUTE_INFO_OUTFIT,The woman in the leftmost advertisement seems different from usual.,一番左の広告の女性ですが、雰囲気がいつもと異なるようでございます。,Bầu không khí của người phụ nữ trong quảng cáo ngoài cùng bên trái trông khác hẳn so với thường ngày.
+ROUTE_INFO_SAFEROOM,There was no Anomaly there.,先ほどの場所には異変はないようでございます。,Nơi vừa rồi không có hiện tượng lạ nào cả.
+EXIT_CONFIRM_DESCRIPTION,Unsaved progress will be lost.,セーブしていないデータは失われます。,Các tiến trình chưa lưu sẽ bị mất.
+FREE_H_SCREEN_ZOOM,Screen Zoom : Z(.) X(/),画面ズーム：Z(.) X(/),Phóng to màn hình: Z(.) X(/)
+DESTINATION_HINT_LOWSPEED_TITLE,Slow Zone Notice,低速区間導入のご案内,Bảng thông báo tốc độ chậm
+DESTINATION_D_COMPLETE_EP6,Engine Room,機関室,Phòng động cơ
+CREDIT_SOUND,Sound,サウンド,Âm thanh
+DESTINATION_D_COMPLETE_EP4,Storage,倉庫,Kho hàng
+DESTINATION_HINT_STORAGE_TITLE,The Path to the Storage,倉庫への道,Đường đến kho hàng
+DESTINATION_D_COMPLETE_EP5,Dark Room,暗い部屋,Phòng tối
+NOTI_PROLOGUE_FAILED,"""Bzzt! That's not it!""",「ブー！そこじゃない！」,"""Sai rồi~ Không phải chỗ đó đâu!"""
+ROUTE_INFO_ESCAPE,"That car has nothing in it, so feel free to pass through. Nothing at all...",その車両には何もございませんので、そのまま通り過ぎて構いません。ええ、何も……,"Toa tàu đó không có gì cả, bạn có thể đi thẳng qua. Hoàn toàn không có gì cả..."
+SCENE_DOGGY_SWIMSUIT,Doggy Style - Swimsuit,バック - 水着,Tư thế la hán đẩy xe bò - Đồ bơi
+ROUTE_INFO_FLIGHT,Was that... outside the window... a pair of panties?,窓の外のあれは……パンティでございましょうか？,Thứ ở ngoài cửa sổ đó... có phải là một chiếc quần lót không?
+ROUTE_APP_HINT,Hint,ヒント,Gợi ý
+VIEW_MODE_ACTIVE,Observation Mode,観察モード,Chế độ quan sát
+FREE_H_SCENE_EXIT,Press ESC to exit.,ESCを押して終了します,Nhấn ESC để kết thúc
+HINT_ITEM_GET,"A hint that leads to a certain Terminal.
+Added to ""Hints"" in Kankan Navi.","どこかの終点へ移動できるヒント。
+シャリョーナビの『ヒント』に登録されました。",Đây là gợi ý để đi đến một ga cuối nào đó.\nĐã được đăng ký vào mục 'Gợi ý' trên Bản đồ dẫn đường của bạn.
+ROUTE_INFO_SHADOW,That was simply a shadow from a rather peculiarly-shaped utility pole.,奇妙な形の電柱の影でございました。,Đó chỉ là bóng của một cây cột điện có hình dáng hơi kỳ lạ mà thôi.
+SAVE_EMPTY,Empty,空き,Trống
+QUEST_CLEAR,Ready to Proceed,進行可能,Có thể tiến hành
+ROUTE_TITLE_GAZE,Gaze,視線,Ánh nhìn
+ALL_CLEAR_PERCENT,Progress,進行度,Tiến độ
+MORE_FRIENDLY_REINA,You need to get a little closer to Reina...,怜奈とはもう少し仲良くならないといけない気がする…,Có vẻ bạn cần phải thân thiết hơn nữa với Reina...
+DESTINATION_HINT_ROULLET_TITLE,Flyer - Pachinko,広告チラシ -パチンコ,Tờ rơi quảng cáo - Pachinko
+FREE_H_SCENE_UP_KEY,"W, Up Key",W、上キー,"Phím W, mũi tên Lên"
+SCENE_STANDING_SIDEWAYS,Standing Sideways,立ち側位,Độc lập trắc vị
+NOTI_TICKET_BONUS,Car %d Bonus x%.1f (%d Tickets),%d番車両ボーナス %.1f倍(%d枚),Thưởng toa %d x%.1f (%d Vé)
+DIALOG_BACKLOG,Backlog (B),バックログ (B),Nhật ký (B)
+ROUTE_FIND,Discovered,発見,Đã phát hiện
+ROUTE_TITLE_DEFORME,Chibi,デフォルメ,Chibi
+ROUTE_INFO_TUNNEL,"Please take care not to enter ""their"" line of sight.",「それら」の視界に入らぬよう、ご注意くださいませ。,"Xin hãy cẩn thận đừng đi vào tầm mắt của ""chúng""."
+ANOMALY_FINDER_DESCRIPTION,"Indicates areas where Anomalies may appear.
+Shows a random area if no Anomaly is present.","異変が発生する可能性のあるエリアを表示します。
+異変が存在しない場合、ランダムなエリアを表示します。",Hiển thị khu vực có khả năng xuất hiện Hiện tượng lạ.\nHiển thị ngẫu nhiên nếu không có Hiện tượng lạ nào tồn tại.
+ROUTE_TITLE_VEIL,Disguise,偽装,Ngụy trang
+ROUTE_PERCENT,Route,路線,Tuyến đường
+NOTI_EXP_UP_MAI,You grew closer to Mai.,舞とさらに仲良くなったようだ。,Có vẻ bạn đã trở nên thân thiết hơn với Mai.
+DESTINATION_HINT_DARK_ROOM_TITLE,Memo -Dark Room-,メモ -暗い部屋-,Ghi chú -Phòng tối-
+DESTINATION_HINT_LOCKER_INFO,"""Why aren't you bailing water?! [color=#ADFF2F]It's rising! Is this really the time to be scribbling on the walls?[/color]""
+""Keep it down. With this mark, everyone will know we were here...""
+""Stop talking nonsense! If we can't stop this flooding, we're all getting our pay docked!""","「排水作業をサボって何をやってんだ？ [color=#ADFF2F]どんどん増えてるぞ！ 壁に落書きなんかしてる場合か！？[/color]」
+「静かにしてくれ。この印があれば、俺たちがここにいた事実をみんなが知ることになる……」
+「そんなことはどうでもいい！ 浸水を止めないと、俺たち全員減給処分だぞ！」","""Sao không múc nước ra đi?! [color=#ADFF2F]Nước dâng lên rồi kìa! Bây giờ là lúc để vẽ bậy lên tường à?[/color]""\n""Suỵt, khẽ thôi. Nhờ ký hiệu này, tất cả mọi người sẽ biết chúng ta đã từng ở đây...""\n""Đừng có nói nhảm nữa! Nếu không ngăn được ngập nước, tất cả chúng ta sẽ bị trừ lương đấy!"""
+ROUTE_TITLE_DIVE,Diving,潜水,Lặn xuống
+LOW_SPEC_MODE,Performance Mode,パフォーマンス優先,Chế độ ưu tiên hiệu năng
+ROUTE_TITLE_TENTACLE2,Tentacle 2,触手 - 2,Xúc tu - 2
+ROUTE_TITLE_TENTACLE3,Tentacle 3,触手 - 3,Xúc tu - 3
+MAIN_RECOLLECT,Event Gallery,イベント回想,Phòng trưng bày sự kiện
+UNVISIT_FINDER,Ancient Record Tablet,古代の記録板,Phiến đá cổ xưa
+ROUTE_TITLE_TENTACLE1,Tentacle 1,触手 - 1,Xúc tu - 1
+MULTIPLE_CHOICE_DESCRIPTION,"Displays the Anomaly's location as one of 5 multiple-choice options.
+All options are randomized if no Anomaly is present.","異変の位置を5つの選択肢で表示します。
+異変が存在しない場合、すべてランダムに表示します。","Hiển thị vị trí của hiện tượng lạ dưới dạng 1 trong 5 lựa chọn trắc nghiệm.
+Tất cả lựa chọn đều được hiển thị ngẫu nhiên nếu không có hiện tượng lạ."
+DESTINATION_HINT_GHOST_INFO,"...I've seen all kinds of complaints, but this takes the cake. Ghosts now? Are they pranking us because their complaints weren't heard?
+[color=#ADFF2F]Complaint 1 - Creepy stare felt from under the seats[/color]
+[color=#ADFF2F]Complaint 2 - Crying sounds heard whenever entering a tunnel[/color]
+[color=#ADFF2F]Complaint 3 - A resentful ghost following from the end of the train[/color]
+[color=#ADFF2F]Complaint 4 - A window where a ghost appears when you look at it[/color]","『……まったく、あらゆる苦情があるもんだな。今度は幽霊だと？対応しないからって悪戯でクレーム入れてるんじゃないのか？』
+[color=#ADFF2F]苦情1 - 椅子の下から感じる気味の悪い視線[/color]
+[color=#ADFF2F]苦情2 - トンネルに入るたびに聞こえてくる泣き声[/color]
+[color=#ADFF2F]苦情3 - 電車の端からついてくる怨念じみた幽霊[/color]
+[color=#ADFF2F]苦情4 - 見つめると幽霊が現れる窓[/color]","""...Xem qua đủ loại khiếu nại rồi, nhưng cái này đúng là đỉnh điểm. Bây giờ lại còn có cả ma à? Hay tụi nó phá rối vì khiếu nại không được giải quyết nhỉ?""\n[color=#ADFF2F]Khiếu nại 1 - Cảm giác có ánh nhìn rợn tóc gáy từ dưới ghế ngồi[/color]\n[color=#ADFF2F]Khiếu nại 2 - Tiếng khóc vang lên mỗi khi tàu đi vào đường hầm[/color]\n[color=#ADFF2F]Khiếu nại 3 - Một oan hồn bám theo từ phía đuôi tàu[/color]\n[color=#ADFF2F]Khiếu nại 4 - Ô cửa sổ nơi ma hiện hồn khi nhìn vào[/color]"
+GHOST_SKIP,Empty Beer Can,空のビール缶,Lon bia rỗng
+NOTI_PROLOGUE_TUTO2,"""Remember what the train looks like, then head all the way to the left!""",「電車の様子を覚えて、一番左へ移動しろ！」,"""Hãy ghi nhớ diện mạo của tàu, sau đó đi hết cỡ về bên trái!"""
+TUTO_TITLE_ROUTE_BUY_MODE,Route Purchase Mode,路線購入モード,Chế độ mua tuyến đường
+NOTI_PROLOGUE_TUTO1,Press Shift to Talk.,Shiftキーを押して会話,Nhấn phím Shift để trò chuyện.
+TUTO_H_EVENT_1,"If your Affection is 1 or higher, you can talk to Reina or Mai at the starting point to engage in sexual activities.
+Additional sex scenes unlock by raising Affection or through events.","好感度が1以上あれば、開始地点で怜奈や舞に話しかけてエッチすることができます。
+行えるエッチの種類は、好感度を上げたりイベントを経ることでアンロックされます。","Nếu điểm Thiện cảm đạt từ 1 trở lên, bạn có thể nói chuyện với Reina hoặc Mai tại điểm xuất phát để kích hoạt hoạt động thân mật. Các phân cảnh H bổ sung sẽ được mở khóa bằng cách tăng điểm Thiện cảm hoặc thông qua các sự kiện."
+ROUTE_TITLE_ESCAPE,Empty Car,無人の車両,Toa trống
+TUTO_H_EVENT_2,"Each time you reach Ejaculation, your accumulated Lust is converted into a set amount of Tickets.
+Higher Affection increases the chance of producing higher-quality Tickets.","また、射精するたびに蓄積した情念が一定量のチケットに変換されます。
+好感度が高いほど、高品質なチケットが生成される確率が上がります。","Ngoài ra, mỗi khi xuất tinh, điểm Dục vọng tích lũy sẽ được chuyển đổi thành một lượng Vé nhất định. Điểm Thiện cảm càng cao thì tỷ lệ nhận được Vé chất lượng cao càng tăng."
+SHOP_BUY,Purchase,購入,Mua
+BOX_MAP_ITEM_1_TITLE,Lost Item Location Hint -1-,落とし物位置のヒント -1-,Gợi ý vị trí đồ thất lạc -1-
+ROUTE_INFO_BRAILLEBLOCK,"Like that, it can hardly serve its purpose as tactile paving...",あれでは点字ブロックの役割を果たせないでしょうに……,Như thế kia thì vạch chỉ dẫn nổi làm sao thực hiện được vai trò của nó cơ chứ...
+ROUTE_INFO_DROP,Whoa!,きゃあっ、大変驚いてしまいました…,Giật cả mình!
+ROUTE_INFO_WHITE,Please keep a close eye on what falls from above.,上から落ちてくる「何か」を、よくご覧ください。,"Xin hãy chú ý quan sát ""thứ gì đó"" rơi xuống từ phía trên."
+NPC_ANO_H,Clogged Lock,鍵穴の詰まった南京錠,Ổ khóa bị kẹt
+ROUTE_TITLE_FLOOD,Flooding,浸水,Ngập nước
+ROUTE_TITLE_ALNICO,Alnico,アルニコ,Alnico
+DESTINATION_D_CLOCK,Passing Car,追越車両,Toa vượt tuyến
+ROUTE_TITLE_DICKWALKER,Walking Dick,歩くちんぽ,Cậu nhỏ biết đi
+NOTI_WISPER_HINT,That place just now was...,さっきの場所は…,Nơi vừa rồi là...
+ROUTE_FIND_NO_EVENT,Discovered (Event Locked),発見 (イベント未開放),Đã phát hiện (Sự kiện chưa mở khóa)
+<!MissingKey:146:You grew closer to Konial.>,You grew closer to Konial.,コニアルとさらに仲良くなったようだ。,Có vẻ bạn đã trở nên thân thiết hơn với Konial.
+BOX_MAP_ITEM_2_INFO,"A slip of paper with lost item locations.
+Marks train cars containing lost items from cars 21-40 on your Kankan Navi.","落とし物の位置が記された紙。
+21～40号車のうち、落とし物がある車両をシャリョーナビに表示します。",Một mảnh giấy ghi chép vị trí của các món đồ thất lạc. Đánh dấu các toa tàu có chứa đồ thất lạc từ toa 21 đến toa 40 trên Bản đồ dẫn đường của bạn.
+OPTION_SFX_VOLUME,Sound Effects,効果音,Hiệu ứng âm thanh
+DIALOGIC_OPTION,Settings(ESC),設定(ESC),Cài đặt (ESC)
+TICKET_BONUS_DESCRIPTION,Earn bonus Tickets with each successful exploration.,探索に成功する毎に、追加チケットを獲得します。,Nhận thêm Vé sau mỗi lần thám hiểm thành công.
+ROUTE_TITLE_SHADOW,Shadow,影,Bóng tối
+DESTINATION_HINT_CAT_TITLE,Train Inspection Report -3-,車両点検報告書 -3-,Báo cáo kiểm tra tàu -3-
+ROUTE_TITLE_HUG,Embrace,抱擁,Ôm
+ROUTE_TITLE_BRAILLEBLOCK,Tactile Paving,点字ブロック,Vạch chỉ dẫn nổi
+SCENE_COWGIRL,Cowgirl,騎乗位,Thượng mã truy phong
+SCENE_BREAST_TOUCH,Breast Fondling,胸愛撫,Thiết sa chưởng nắn bưởi
+DESTINATION_HINT_STORAGE_INFO,"The butler said [color=#ADFF2F]you need to pass through cars 3, 4, and 5[/color] to reach the storage.",執事の倉庫へ行くには、[color=#ADFF2F]3番、4番、5番車両を通らなければならない[/color]と言っていた。,"Quản gia nói [color=#ADFF2F]phải đi qua các toa số 3, số 4 và số 5[/color] mới đến được kho hàng."
+ROUTE_TITLE_CONDENSATION,Fogged Glass,曇り,Cửa kính mờ sương
+DEST_PERCENT,Terminal,終点,Ga cuối
+CHAPTER_CHANGING_FIND_ANOMALY,Detected Anomalies:,探知した異変：,Hiện tượng lạ đã phát hiện:
+ROUTE_TITLE_BUNNYGIRL,Bunny Girl,バニーガール,Bunny Girl
+COLA_FINDER,Fizzy Cola,ビクッとコーラ,Cola sủi bọt
+VO_JP,Japanese,日本語,Tiếng Nhật
+ROUTE_TITLE_TOPLESS,Topless,トップレス,Cởi trần
+TUTO_KONIAL_H_2,"You cannot use Kankan Navi functions while wearing the Bracelet imbued with Pazuzu's divine power.
+To use Kankan Navi, please unequip the Bracelet first.","パズズの神聖力が込められたブレスレットを装着している間は、シャリョーナビの機能を使用できません。
+シャリョーナビを使用するには、先にブレスレットを外してください。","Bạn không thể sử dụng các chức năng của Bản đồ dẫn đường khi đang đeo chiếc Vòng tay mang thần lực của Pazuzu.\nĐể sử dụng Bản đồ dẫn đường, vui lòng tháo chiếc Vòng tay ra trước."
+TUTO_KONIAL_H_1,"The Bracelet you received from Pazuzu allows you to transfer Lust to Konial.
+Equip the Bracelet from your Inventory, and successful Anomaly detection will increase Konial's Affection.","パズズから受け取ったブレスレットを通じて、コニアルへ情念を送ることができます。
+インベントリでブレスレットを装着した状態で異変の感知に成功すると、コニアルの好感度が上昇します。","Chiếc Vòng tay bạn nhận được từ Pazuzu cho phép chuyển hóa điểm Dục vọng sang cho Konial.\nHãy trang bị chiếc Vòng tay trong Túi đồ, khi thám hiểm và phát hiện Hiện tượng lạ thành công sẽ giúp tăng điểm Thiện cảm của Konial."
+TAB_MOVE,◀ Q　　Switch Tab　　E ▶,◀ Q　　タブ切替　　E ▶,◀ Q　　Chuyển Tab　　E ▶
+CLOSE_BUTTON,Close,閉じる,Đóng
+DESTINATION_HINT_GHOST_TITLE,Train Inspection Report -2-,電車点検報告書 -2-,Báo cáo kiểm tra tàu -2-
+ROUTE_TITLE_SEATEYE,Seat Eyeball,座席の目玉,Nhãn cầu trên ghế
+CREDIT_UI,UI,UI,Giao diện (UI)
+DESTINATION_HINT_MILK_INFO,Someone left this milk bottle behind.,誰かが捨てた牛乳瓶だ。,Một chai sữa bị ai đó bỏ lại.
+OPTION_RESOLUTION,Resolution,解像度,Độ phân giải
+ROUTE_TITLE_LOWSPEED,Low Speed,低速,Tốc độ chậm
+ROUTE_TITLE_WINDOWGHOST,Window,窓,Cửa sổ
+ROUTE_TITLE_VERTICALEXPANSION,Ad Expansion,広告拡張,Biển quảng cáo mở rộng
+ROUTE_TITLE_REI_KOKYO,"Rei, Kokyo",レイ、コキョ,"Rei, Kokyo"
+ROUTE_INFO_BRA,"I could have sworn it was a hand strap, but... whose might that be?",つり革かと思いましたが……あれは誰の物でしょうか……,"Cứ ngỡ là tay nắm treo, nhưng... đó là của ai vậy nhỉ..."
+NOTI_SET_UNVISIT_STAGE,Unvisited Route set.,未訪問の路線が指定されました。,Đã thiết lập tuyến đường chưa thám hiểm.
+ROUTE_INFO_CROW,Sometimes it's nice to just relax and look out the window...,時には窓の外を眺めて、リラックスなさるのも……,Đôi khi chỉ cần thư giãn và ngắm nhìn ra ngoài cửa sổ...
+ROUTE_INFO_REVERSE,"You didn't happen to feel any motion sickness, did you?",乗り物酔いなどございませんでしたか？,Bạn có cảm thấy bị chóng mặt hay say tàu không?
+YES,Yes,はい,Có
+ROUTE_INFO_EXITAD,The advertisement above the Door window seemed rather... off.,ドアの窓上の広告、様子がおかしかったようでございます。,Biển quảng cáo phía trên ô cửa ra vào có vẻ... hơi bất thường.
+DESTINATION_HINT_HANDFAN_INFO,"A tattered, worn-out fan.
+It has a local event promotion printed on it.
+([color=#ADFF2F]From the 18th to 21st[/color]! Visit all 4 days to receive a special prize!)
+""When are they ever going to fix the AC in this car?""
+""Probably never? Last time I complained, they just gave me this lousy fan.""","破れてボロボロになったうちわ。
+地域イベントの宣伝文句が書かれている。
+（[color=#ADFF2F]18日から21日まで[/color]！全4日間訪問頂いた方には特別な景品を贈呈いたします！）
+『この車両のエアコン、いつ直るの？』
+『一生直らないんじゃないか？この前文句を言ったら、このうちわ一枚だけ渡されたんだぜ？』","Một chiếc quạt rách nát tả tơi.\nTrên đó có in dòng chữ quảng cáo cho một sự kiện địa phương.\n([color=#ADFF2F]Từ ngày 18 đến ngày 21[/color]! Ghé thăm cả 4 ngày để nhận phần quà đặc biệt!)\n""Khi nào họ mới chịu sửa điều hòa ở toa này thế?""\n""Chắc là không bao giờ đâu. Lần trước tôi đi khiếu nại, họ chỉ đưa cho mỗi chiếc quạt rách này thôi đấy."""
+ROUTE_TITLE_VIBRATOR,Vibrator,ローター,Trứng rung
+BOX_MAP_ITEM_2_TITLE,Lost Item Location Hint -2-,落とし物位置のヒント -2-,Gợi ý vị trí đồ thất lạc -2-
+ROUTE_TITLE_ACCELERATION,Speed Up,加速,Tăng tốc
+HINT_ITEM_WITH_REINA,"A hint that may lead you to a certain Terminal.
+Reina seems like she might be interested.","どこかの終着点へと移動できるヒント。
+怜奈が興味を持ちそうだ。",Một gợi ý có thể dẫn bạn đến ga cuối nào đó.\nCó vẻ Reina sẽ hứng thú với thứ này đấy.
+TIME_LIMITER_DESCRIPTION,Earn bonus Tickets if you successfully detect within the time limit.,制限時間内に探知に成功すると、ボーナスチケットを獲得します。,Nhận thêm Vé nếu thám hiểm và phát hiện thành công trong giới hạn thời gian.
+ROUTE_INFO_WATCHER,I think there was someone outside the door just now...,ドアの外に、誰かいたように思われます…,Tôi nghĩ vừa nãy có ai đó ở ngoài cửa...
+ROUTE_COIN_DESCRIPTION,"A commemorative coin for Train 45's 10th anniversary.
+Can unlock unvisited cars in Kankan Navi.","45番電車の10周年記念硬貨。
+シャリョーナビで未訪問の車両を解禁できます。",Đồng xu kỷ niệm 10 năm của tuyến tàu số 45.\nCó thể dùng để mở khóa các toa tàu chưa thám hiểm trên Bản đồ dẫn đường.
+HORIZON_FINDER,Coffee-Colored Stockings,コーヒー色のストッキング,Quần tất màu cà phê
+INVENTORY_DESCRIPTION,You can equip items you've obtained.,獲得した景品を装着できます。,Bạn có thể trang bị các vật phẩm đã nhận được.
+TUTO_FIND_1,"This is the ""starting point"".
+Remember the scenery here, then pass through the right corridor and detect differences in the car you arrive at.","ここは『開始地点』です。
+この場所の光景・状態をよく記憶した後、右側の通路を通って到着した先の車両にて、開始地点との違い…即ち『異変』を見つけ出す必要があります。","Đây là ""điểm xuất phát"".\nHãy ghi nhớ kỹ cảnh vật ở đây, sau đó đi qua lối đi bên phải và phát hiện xem toa tàu tiếp theo có điểm gì khác biệt hay không."
+TUTO_FIND_2,"If there are no Anomalies present, simply proceed to the next car.
+Some cars contain undetectable Anomalies that you must escape from. In these cars, the screen display will change.","異変が存在しないと判断した場合は、そのまま次の車両へ進んでください。
+中には、異変を探すのではなく、迫りくる危険な異変から逃げなければならない車両も存在します。そうした車両では、スクリーンの表示が変化します。","Nếu bạn phán đoán toa tiếp theo không có hiện tượng lạ nào, hãy tiếp tục đi sang toa kế tiếp.\nNgoài ra, có những toa chứa hiện tượng lạ mà bạn không thể phát hiện bằng cách thông thường mà phải trốn chạy khỏi chúng. Ở những toa này, màn hình hiển thị sẽ có sự thay đổi."
+TUTO_FIND_3,"Incorrectly detecting an Anomaly or moving to the next car without detecting one results in failure, sending you back to the starting point.
+Reach the goal car without any failures to clear the stage.","異変の有無を間違えたり、異変を見逃して次の車両へ進んだ場合は失敗となり、開始地点に戻されます。
+失敗せずに目標の車両へ到達すればクリアです。","Phán đoán sai hiện tượng lạ hoặc bỏ sót rồi đi sang toa kế tiếp sẽ bị thất bại và đưa về điểm xuất phát.
+Hãy đến được toa mục tiêu mà không thất bại để vượt màn."
+TUTO_FIND_4,Your current objective is displayed in the upper left. Fulfill the conditions and reach the destination to advance to the next chapter.,左上に今回の目標が表示されます。その条件を満たした状態で最終地点まで到達すれば、次の章へ進むことができます。,Mục tiêu hiện tại sẽ được hiển thị ở góc trên bên trái. Hãy đáp ứng các điều kiện đó và đi đến điểm cuối để có thể chuyển sang chương tiếp theo.
+NO,No,いいえ,Không
+CREDIT_ASSISTANCE,Assistance,協力,Hỗ trợ
+TUTO_ROUTE_BUY_2,"Additionally, if you have enough Tickets, you can click on locked Routes to unlock them.
+The cost varies based on how many Routes you have visited.","また、チケットが十分にあればロックされた路線をクリックしてアンロックできます。
+費用は、訪問済みの路線の数によって変動します。","Ngoài ra, nếu có đủ Vé, bạn có thể nhấp vào các tuyến đường đang khóa để mở khóa chúng.\nChi phí sẽ thay đổi tùy thuộc vào số lượng tuyến đường bạn đã thám hiểm."
+ROUTE_TITLE_EXITAD,Ad,出口広告,Biển quảng cáo lối ra
+DESTINATION_HINT_ONSEN_TITLE,Flyer - Hot Spring Car,広告チラシ -温泉車両,Tờ rơi quảng cáo - Toa suối nước nóng
+TUTO_ROUTE_BUY_1,"Sufficient Lust has been channeled into the Kankan Navi. From now on, information will be displayed even for unvisited anomaly cars.",シャリョーナビに十分量の情念が宿りました。これからは、未訪問の異変車両であっても情報が表示されます。,"Bản đồ dẫn đường đã tích lũy đủ điểm Dục vọng. Từ bây giờ, thông tin sẽ được hiển thị ngay cả đối với các toa có hiện tượng lạ chưa từng thám hiểm qua."
+LIFE_UP_DESCRIPTION,Grants an extra chance when exploration fails.,探索に失敗した時、追加チャンスを得られます。,Tăng thêm một cơ hội phụ khi thám hiểm thất bại.
+SHOP_SOLD_OUT,Sold Out,売り切れ,Hết hàng
+QUEST_PROCESS_CURRENT,(Current: %d),(現在 %d),(Hiện tại: %d)
+DESTINATION_D_LOCKER,Security Car,保安車両,Toa bảo an
+DESTINATION_HINT_STUCKDOOR_TITLE,Door Repair Notice,ドア修理のお知らせ,Thông báo sửa cửa ra vào
+TUTO_FIND_3_2,"The light at the bottom right of the screen represents your detection chances.
+If you incorrectly detect an anomaly or move to the next car without detecting one, a charge will be lost. If all are lost, you will be returned to the starting point.
+Reach the goal car without failing to clear the stage.","画面右下にある光は、あなたに与えられた探知チャンスです。
+異変を誤って感知する、または感知せずに次の車両へ進むと破壊され、すべて失うとスタート地点に戻されます。
+失敗せずに目標マスに到達すればクリアです。","Ánh sáng ở góc dưới bên phải màn hình đại diện cho cơ hội phát hiện của bạn.
+Nếu bạn phát hiện sai hiện tượng lạ hoặc đi sang toa tiếp theo mà không phát hiện được, một cơ hội sẽ bị mất. Nếu mất hết tất cả, bạn sẽ bị đưa trở lại điểm xuất phát.
+Hãy đến toa mục tiêu mà không thất bại để hoàn thành màn chơi."
+TUTO_TITLE_ANOMALY_GHOST_H,Ghost Anomaly H,幽霊異変H,Cảnh H dị biến ma
+ROUTE_INFO_ACCELERATION,Mistress Konial does enjoy testing the limits of speed from time to time.,コニアル様は時折、速度の限界をお試しになるのです。,Thỉnh thoảng cô Konial cũng thích thử thách giới hạn của tốc độ đấy.
+ROUTE_TITLE_FELLATION,Blowjob,フェラチオ,Ngậm ngọc phun châu
+LOVE_BONUS,Spare Panties,予備のパンティ,Quần lót dự phòng
+ROUTE_INFO_DEFORME,Perhaps you missed it because it became too small?,小さくなりすぎて、見落としてしまわれたのですか？,Có phải vì nó thu nhỏ quá mức nên bạn đã bỏ sót không?
+SAVE_OVERLAP,Overwrite,上書き,Ghi đè
+ROUTE_INFO_DIVE,Please keep a close eye on the water's surface.,水面の上を、よくご覧になってください。,Xin hãy chú ý quan sát kỹ mặt nước.
+SCENE_MATING_PRESS,Mating Press,種付けプレス,Ép khung phối giống
+OPTION_CHAR_VOLUME,Voice Volume,ボイス音量,Âm lượng giọng nói
+BOX_MAP_ITEM_3_INFO,"A slip of paper with lost item locations.
+Marks train cars containing lost items from car 41 onward on your Kankan Navi.","落とし物の位置が記された紙。
+41号車以降のうち、落とし物がある車両をシャリョーナビに表示します。",Một mảnh giấy ghi chép vị trí của các món đồ thất lạc. Đánh dấu các toa tàu có chứa đồ thất lạc từ toa 41 trở đi trên Bản đồ dẫn đường của bạn.
+ROUTE_INFO_PARTNER_ANOMALY4,"I think that style suits her quite well, too.",そのようなスタイルも、よくお似合いだと思います。,Tôi nghĩ phong cách đó cũng rất hợp với cô ấy đấy chứ.
+DESTINATION_HINT_CLOCK_INFO,"A clock that's completely stopped. There's a memo stuck to the back.
+""BEYOND REPAIR - No matter how I adjust it, it's always [color=#ADFF2F]3 hours and 15 minutes fast[/color]! I smashed it out of frustration and now it won't run at all. Throw it away for all I care!""","完全に止まってしまった時計だ。裏にメモが貼ってある。
+『修理不可――いくら調整しても、[color=#ADFF2F]3時間15分で止まってしまう[/color]！頭にきたので叩いたらウンともスンとも言わなくなった。捨てるなり何なり好きにしてくれ！』","Một chiếc đồng hồ đã ngừng chạy hoàn toàn. Có một mảnh giấy ghi chú dán ở mặt sau:\n""KHÔNG THỂ SỬA - Cho dù điều chỉnh thế nào đi nữa, nó vẫn [color=#ADFF2F]chạy nhanh 3 tiếng 15 phút[/color]! Do tức giận đập vào nên giờ nó hỏng hẳn luôn rồi. Vứt đi hay làm gì tùy ý!"""
+LEAD_AGAIN_DESCRIPTION,Replay this event?,イベントをもう一度見ますか？,Xem lại sự kiện này chứ?
+ROUTE_INFO_PARTNER_ANOMALY5,Perhaps she was so absorbed in her exploration that she forgot to get dressed...,探索に熱中するあまり、着るのを忘れてしまったのでしょうか……,Có lẽ vì quá mải mê thám hiểm nên cô ấy đã quên mặc quần áo chăng...
+ROUTE_INFO_PARTNER_ANOMALY6,This one... I believe they want you to notice them.,これは……彼女たちの方から、見てほしがっているようでございますね。,Cái này... Tôi nghĩ họ muốn bạn chú ý đến họ đấy.
+ROUTE_INFO_XXX,I wonder how many more will appear?,一体いくつまで増えるのでしょうか？,Liệu nó sẽ tăng lên đến bao nhiêu cái đây?
+SCENE_FELLATIO,Blowjob,フェラ,Ngậm ngọc phun châu
+NOW_DESTINATION_NOTHING,No Terminal,終着点なし,Không có ga cuối
+ROUTE_INFO_PARTNER_ANOMALY1,Please observe your accompanying partner closely as well.,同行されているパートナーの方も、注意深く観察してくださいませ。,Xin hãy chú ý quan sát kỹ cả người bạn đồng hành của mình nữa.
+ROUTE_INFO_PARTNER_ANOMALY2,Your accompanying partner is also... closely... Never mind.,同行されているパートナーの方も……注意深く……いえ、何でもございません。,"Người bạn đồng hành của bạn cũng... cần quan sát... Mà thôi, không có gì đâu."
+<!MissingKey:230:You can spend one Commemorative Coin to unlock a locked Route.>,"You can spend one Commemorative Coin to unlock a locked Route.
+Commemorative Coins can be obtained by trading with the Butler or through gameplay.","記念硬貨を1枚消費して、ロックされた路線をアンロックできます。
+記念硬貨は執事と交換するか、ゲームをプレイすることで獲得できます。",Bạn có thể dùng một Đồng xu kỷ niệm để mở khóa tuyến đường đang khóa.\nĐồng xu kỷ niệm có thể nhận được bằng cách trao đổi với Quản gia hoặc thông qua quá trình chơi game.
+TUTO_TITLE_BUTLER_H,Butler H,執事H,Cảnh H Quản gia
+ROUTE_INFO_PARTNER_ANOMALY3,I-I'm relieved you didn't see it.,み、見られなかったのでしたら、何よりでございます。,R-rất may là bạn đã không nhìn thấy nó.
+NOTI_ITEM_COLA2,This car doesn't seem to have any anomalies.,異変が存在しない車両のようだ。,Toa tàu này có vẻ không có hiện tượng lạ nào cả.
+NOTI_ITEM_COLA1,The cola isn't responding...,コーラの反応がない……,Chai cola không có phản ứng gì...
+NOTI_EXP_UP_REINA,You grew closer to Reina.,怜奈とさらに仲良くなったようだ。,Có vẻ bạn đã trở nên thân thiết hơn với Reina.
+ROUTE_TITLE_XXX,XXX,XXX,XXX
+ROUTE_INFO_REI_KOKYO,"It's from a work called Shining Labyrinth. 
+Rei has white twintails, and Kokyo has the gold bob cut... 
+Please try to remember their outfits carefully.","『シャイニング・ラビリンス』という作品でございます。
+白いツインテールがレイ、金色のボブがコキョという名前だそうですが……
+服装をよく覚えておいてくださいませ。","Đó là hình minh họa từ tác phẩm mang tên ""Mê cung tỏa sáng"" (Shining Labyrinth). Cô gái tóc hai bím màu trắng tên là Rei, còn cô gái tóc ngắn màu vàng tên là Kokyo... Xin hãy ghi nhớ kỹ trang phục của họ nhé."
+ROUTE_TITLE_DROP,Falling,落下,Rơi xuống
+NPC_ANO_H_DESCRIPTION,"After a successful detection, you will be able to purify any Anomalies that appear on your partner.",感知に成功すると、パートナーに生じた異変を浄化できるようになります。,"Sau khi phát hiện thành công, bạn sẽ có thể thanh tẩy bất kỳ hiện tượng lạ nào xuất hiện trên người bạn đồng hành."
+CREDIT_ASSETS,Assets,アセット,Tài nguyên
+ROUTE_INFO_ALNICO,I wonder what kind of place Alnico Studio up there might be?,上の方にあるアルニコスタジオとは、どのような場所なのでしょうか？,Không biết Alnico Studio ở phía trên kia là nơi như thế nào nhỉ?
+DESTINATION_D_TICKET_CHECK,Ticket Check Car,検札車両,Toa kiểm vé
+OPTION_LANGUAGE,Language,言語,Ngôn ngữ
+PLAY_TIME,Play Time,プレイ時間,Thời gian chơi
+SCENE_ONAHLE_HJ,Onahole Handjob,オナホコキ,Thủ dâm bằng Onahole
+ROUTE_TITLE_CAUTIONSTICKER,Sticker,ステッカー,Nhãn dán
+ROUTE_INFO_DICKWALKER,"It's rather grotesque, I'm afraid... but being cornered seems to be your chance.",少々グロテスクですが……隅に追い詰めた時がチャンスかと思われます。,Trông hơi ghê rợn một chút... nhưng khi nó bị dồn vào góc sẽ là cơ hội tốt của bạn đấy.
+NOTI_LOVE_LEVEL_UP,Affection Level Up,好感度レベル上昇,Tăng cấp Thiện cảm
+DESTINATION_D_HANDFAN,Broken AC Car,冷房故障車両,Toa hỏng điều hòa
+CREDIT_CREATED,Created by,制作,Phát triển bởi
+CHAPTER_CHANGING_GOAL_COUNT,Target Car:,目標車両：,Toa đích:
+CREDIT_SPECIAL_THANKS,"To Evzki and 36 other supporters
+who cheered us on and backed the game until completion","ゲームの完成を応援し、支援してくださった
+Evzki様、ほか36名の支援者の皆様",Xin gửi lời cảm ơn đặc biệt đến bạn Evzki cùng 36 nhà tài trợ khác đã cổ vũ và ủng hộ để hoàn thành tựa game này.
+DESTINATION_D_LOWSPEED,Slow Car,低速車両,Toa tốc độ chậm
+GHOST_SKIP_DESCRIPTION,"A token of friendship.
+While equipped, Ghosts will not interfere with you.","友情の証。
+装着中は幽霊たちの妨害を受けません。","Biểu tượng của tình bạn.
+Khi trang bị, ma quỷ sẽ không quấy rầy bạn."
+TUTO_TITLE_FIND,Find the Anomaly,異変を探せ,Tìm hiện tượng lạ
+SCENE_PAIZURI,Titjob,パイズリ,Nhũ giao đại pháp
+ROUTE_INFO_GIANTKONIAL,"For some reason, Mistress Konial has become quite enormous...",なぜか、とても大きくなってしまわれたコニアル様が……,"Không hiểu sao, cô Konial lại trở nên to lớn khác thường..."
+HINT_ITEM_WITH_MAI,"A hint that may lead you to a certain Terminal.
+Mai seems like she might be interested.","どこかの終着点へと移動できるヒント。
+舞が興味を持ちそうだ。","Một gợi ý có thể dẫn bạn đến ga cuối nào đó.
+Có vẻ Mai sẽ hứng thú với thứ này đấy."
+MAIN_LOAD,Load,ロード,Load Game
+ERO_GAUGE,Lust,情念,Dục vọng
+COLLECT_AREA_UP,Imitation Breasts,偽造おっぱい,Ngực giả
+DESTINATION_HINT_PARTNER_ANOMALY_TITLE,Groper Warning,痴漢へのご注意,Cảnh báo quấy rối
+NOTI_NEW_BOX_MAP_ADDED,Lost item location registered.,落とし物の位置情報が登録されました。,Vị trí đồ thất lạc đã được ghi nhận.
+ROUTE_TITLE_TUNNEL,Tunnel,トンネル,Đường hầm
+HELP,Help,ヘルプ,Trợ giúp
+HINT_ITEM_WITH_EQUIPMENT,"A hint that may lead you to a certain Terminal.
+It seems you might be able to recover a lost item.","どこかの終着点へと移動できるヒント。
+落とし物を拾えそうだ。","Một gợi ý có thể dẫn bạn đến ga cuối nào đó.
+Có vẻ bạn có thể tìm lại được một món đồ thất lạc."
+TUTO_PRESS_KANKAN_ICON,Please click the Phone icon.,携帯アイコンをクリックしてください。,Hãy nhấp vào biểu tượng điện thoại.
+RETURN_BASE_TITLE,T Key: Return to Start,Tキー：帰還,Phím T: Quay về điểm xuất phát
+SCENE_SUMATA,Thighjob,素股,Kẹp đùi
+ROUTE_TITLE_FLIGHT,Flying,飛行,Bay
+LOVE_BRACELET_DESCRIPTION,"Successful detection while equipped increases Konial's Affection.
+Kankan Navi cannot be used while equipped, and all Route Map settings will be reset.","装着した状態で探知に成功すると、コニアルの好感度が上昇します。
+装着中はシャリョーナビが使用不可になり、設定済みの路線図がすべて解除されます。","Phát hiện thành công khi đeo vòng sẽ tăng Thiện cảm của Konial.
+Khi đang đeo, Bản đồ dẫn đường sẽ không thể sử dụng và các thiết lập tuyến đường hiện tại sẽ bị xóa bỏ."
+MULTIPLE_CHOICE,Used Lipstick,使いかけのリップスティック,Son môi đã qua sử dụng
+ROUTE_APP_NEED_COIN,Required Coins:,必要コイン数：,Xu cần:
+ROUTE_TITLE_BUTTOCKS,Butt,お尻,Mông
+ROUTE_TITLE_SLINGSHOT,Slingshot Bikini,スリングショット,Bikini dây
+SCENE_SITTING_REVERSE,Reverse Cowgirl,背面座位,Thượng đế bế quan âm (Ngược)
+DESTINATION_HINT_MILK_TITLE,Empty Milk Bottle,空の牛乳瓶,Bình sữa rỗng
+SCENE_WALL_LEAN,Against the Wall,壁際,Tư thế dựa tường
+SCENE_DOGGYSTYLE,Doggy Style,バック,La hán đẩy xe bò
+ROUTE_HINT_PINNED,Pin Hint,ヒント固定,Ghim gợi ý
+ROUTE_TITLE_YUKIONNA,Snow Woman,雪女,Tuyết nữ
+ROUTE_APP_ROUTE_CLEAR,Clear,リセット,Xóa
+ERO_GAUGE_COMSUME_UP_DESCRIPTION,Increases the rate of Lust consumption during sex scenes with your partner.,パートナーとHする際、情念の消耗速度が上がります。,Tăng tốc độ tiêu hao điểm Dục vọng khi thực hiện H với bạn đồng hành.
+ROUTE_INFO_TOPLESS,Please check the clothing on billboard above.,上にある広告看板の服をご確認くださいませ。,Hãy kiểm tra quần áo trên biển quảng cáo phía trên nhé.
+NOTI_FIRST_FIND_ROUTE,New Anomaly detected!,異変の初回探知に成功,Đã phát hiện hiện tượng lạ mới!
+ROUTE_TITLE_PANCHIRA,Panty Shot,パンチラ,Lộ hàng
+DESTINATION_D_PARTNER_ANOMALY,Groper Car,痴漢車両,Toa quấy rối
+CHAPTER_TITLE_4,Chapter 4,第4章,Chương 4
+CHAPTER_TITLE_5,Chapter 5,第5章,Chương 5
+RAPE_RESIST_GUIDE,Hold Back,射精を我慢,Nhịn xuất
+CHAPTER_TITLE_6,Chapter 6,第6章,Chương 6
+TUTO_TITLE_BASE_H_ACTION,Basic H Action,基本Hアクション,Thao tác H cơ bản
+ROUTE_INFO_DESTROYED,Who could've done this?!,一体どなたがこのようなことをなさったのでしょうか…？,Ai lại phá hoại ra nông nỗi này chứ...?!
+CHAPTER_TITLE_0,Prologue,プロローグ,Mở đầu
+ROUTE_APP_NOT_FIND_DESCRIPTION,This Anomaly hasn't been discovered yet.,まだ探知できていない異変です。,Hiện tượng lạ này vẫn chưa được phát hiện.
+CHAPTER_TITLE_1,Chapter 1,第1章,Chương 1
+CHAPTER_TITLE_2,Chapter 2,第2章,Chương 2
+CHAPTER_TITLE_3,Chapter 3,第3章,Chương 3
+DESTINATION_HINT_PARTNER_ANOMALY_INFO,"Attention passengers of Train 45.
+Recently, there have been incidents of intentionally causing discomfort to other passengers.
+Please be advised that the following indecent behaviors are subject to sanctions and may result in removal from the train:
+[color=#ADFF2F]- Excessive exposure resulting in visible undergarments[/color]
+[color=#ADFF2F]- Removing clothing to explicitly reveal private areas[/color]
+[color=#ADFF2F]- Assuming inappropriate postures other than normal standing[/color]
+To date, all identified perpetrators have been female, with male passengers as the primary victims.
+However, thanks to the remarkable patience and tolerance of the victimized male passengers, not a single report has been filed to date, making early intervention difficult.
+While not reporting despite being victimized has seemingly become an unspoken rule, this constitutes a clear violation of regulations. We kindly request your active cooperation in reporting such incidents going forward.'","『当45番電車をご利用の乗客の皆様にお知らせいたします。
+最近、一部のお客様による、他のお客様へ意図的に不快感を与える行為が確認されています。
+特に、以下のような公序良俗に反する行為は規則に則って乗車を制限させて頂く場合がございますので、ご注意ください。
+[color=#ADFF2F]- 過度な露出。下着等が見えている行為。[/color]
+[color=#ADFF2F]- 衣服を脱ぎ。局部を露骨に露出する行為。[/color]
+[color=#ADFF2F]- 通常の直立状態ではない、不適切な姿勢を意図的にとる行為。[/color]
+主な加害者は女性で、被害者は男性であるケースが多く確認されています。
+しかし、被害男性のお客様の皆様の驚くべき忍耐と寛容のおかげか、現在まで一件の通報も寄せられておらず、摘発が難航しております。
+被害に遭われているにもかかわらず通報しないことが暗黙の了解となっているようですが、これは明白な迷惑行為となりますので、積極的な通報のご協力をお願いいたします。』","Kính gửi toàn thể quý hành khách đang sử dụng tuyến tàu số 45.\nGần đây, chúng tôi phát hiện một số hành vi cố ý gây phiền toái cho người khác.\nĐặc biệt, xin lưu ý các hành vi khiếm nhã sau đây sẽ bị phạt và có thể bị cưỡng chế rời khỏi tàu:\n[color=#ADFF2F]- Hành vi ăn mặc quá hở hang để lộ đồ lót[/color]\n[color=#ADFF2F]- Hành vi cởi bỏ y phục để lộ trực tiếp bộ phận nhạy cảm[/color]\n[color=#ADFF2F]- Hành vi tạo tư thế không đứng đắn, khác với tư thế đứng thẳng thông thường[/color]\nCho đến nay, tất cả các đối tượng vi phạm được xác định là nữ giới, và nạn nhân chủ yếu là các hành khách nam.\nTuy nhiên, có lẽ nhờ vào sự kiên nhẫn và bao dung đáng kinh ngạc của các hành khách nam là nạn nhân, cho đến nay vẫn chưa có một báo cáo nào được ghi nhận, gây khó khăn cho việc xử lý sớm.\nMặc dù bị quấy rối nhưng việc không báo cáo dường như đã trở thành một quy luật ngầm, song đây rõ ràng là hành vi vi phạm quy định. Chúng tôi khẩn thiết yêu cầu sự hợp tác tích cực của quý hành khách trong việc báo cáo các sự việc tương tự từ nay về sau."
+DESTINATION_HINT_ENGINE_ROOM_INFO,"A page from Konial's notebook.
+""Afternoon Schedule - Tea time with 45 in the Engine Room""
+""Let's see, there are 4 Routes to get there? First, the two at the beginning are...""
+'[color=#ADFF2F]Roulette[/color] and [color=#ADFF2F]hot spring[/color]? Are those the Terminals? Was there something there?'
+""...The Routes to the Engine Room are written here. Mistress Konial, please refrain from recording important information on paper...""
+""Shut it! You want me to ask you every single time? ...Whatever, just tell me the last two numbers.""
+""Y-yes, um, that's... The last two numbers are... the date you took me in, Mistress Konial.""
+""Hah? How am I supposed to know that?!""
+""D-don't worry, I [color=#ADFF2F]wrote the date on this poster[/color] so you wouldn't forget...!""
+""*Sigh*... From now on, your place is right next to that poster. You're not allowed to move from there.""","コニアルがいつも持ち歩いている手帳の1ページ。
+『午後の予定――機関室で45とティータイム。』
+『ええと、向かう路線は全部で4つ？ まず前の2つは……』
+『[color=#ADFF2F]ルーレット[/color]と[color=#ADFF2F]温泉[/color]？ 終点のことか？ ここに何かあったか？』
+『……機関室へ向かう路線が書かれています。コニアル様、重要な情報は紙に記録しないほうが……』
+『うるさい！ じゃあ毎回執事のお前に聞けと言うのか？ ……もういい、最後の番号2つ教えろ。』
+『は、はい、そ、それは……最後の番号2つは……コニアル様がわたくしを拾ってくださった日付でございます。』
+『はあ？ そんなの私が覚えてるわけないだろう？』
+『ご、ご心配なく。お忘れにならないよう、[color=#ADFF2F]このポスターに日付を書いておきました[/color]……！』
+『はぁ……これからお前の席はそのポスターの横だ。絶対離れるんじゃないぞ。』","Một trang trong cuốn sổ tay mà Konial luôn mang theo bên mình.\n""Lịch trình buổi chiều - Uống trà với 45 ở Phòng động cơ""\n""Xem nào, có tổng cộng 4 tuyến đường để đến đó? Trước tiên, hai tuyến ở đầu là...""\n""[color=#ADFF2F]Vòng quay[/color] và [color=#ADFF2F]suối nước nóng[/color]? Đó là các ga cuối sao? Ở đó có thứ gì à?""\n""...Các tuyến đường đến Phòng động cơ được ghi ở đây. Cô Konial, xin đừng ghi chép những thông tin quan trọng ra giấy...""\n""Ồn ào quá! Bộ muốn ta lần nào cũng phải hỏi quản gia nhà ngươi chắc? ...Được rồi, nói cho ta biết hai số cuối đi.""\n""V-vâng, ừm, đó là... Hai số cuối là... ngày cô nhận nuôi tôi, thưa cô Konial.""\n""Hả? Làm sao ta biết được chuyện đó?!""\n""Đ-đừng lo lắng, tôi đã [color=#ADFF2F]viết ngày tháng lên bức áp phích này[/color] để cô không quên rồi...!""\n""Hầy... Từ giờ trở đi, chỗ của ngươi sẽ là ngay cạnh bức áp phích đó. Tuyệt đối không được rời đi đâu cả."""
+TICKET_ITEM,Ticket,チケット,Vé
+ROUTE_INFO_CONDENSATION,If you were to breathe on one of the glass windows near the entrance...,いずれかのドアの窓ガラスに、息を吹きかけてみますと……,Nếu thử hà hơi lên ô cửa kính của lối ra vào...
+TICKET_ITEM_DESCRIPTION,"Lust manifested in the form of a Ticket.
+Can be exchanged for various items with the Butler.","情念がチケットの形に変換されたもの。
+執事の景品ショップで様々な景品と交換できます。",Điểm Dục vọng được hiện thực hóa dưới hình dạng chiếc Vé.\nCó thể dùng để đổi lấy nhiều vật phẩm khác nhau từ Quản gia.
+NOTI_MAX_COST_UP,Max Equipment Cost increased by +,最大装着コスト上昇 +,Tăng giới hạn trang bị tối đa +
+QUEST_GOAL_TEXT_6,Head to the Terminal where Pazuzu is trapped.,パズズが閉じ込められた終着点へ移動しよう,Hãy di chuyển đến ga cuối nơi Pazuzu đang bị giam giữ
+QUEST_GOAL_TEXT_7,"Equip the Copper Bracelet, then proceed with exploration.",銅の腕輪を装備して探索を進めよう,Hãy trang bị Vòng tay đồng và tiến hành thám hiểm
+QUEST_GOAL_TEXT_4,Find Pazuzu's Wallet at a Special Terminal.,特別な終着点でパズズの財布を見つけよう,Tìm chiếc ví của Pazuzu tại ga cuối đặc biệt
+DESTINATION_HINT_CAT_INFO,"Multiple incidents of small animals entering gaps under the train and being electrocuted.
+External barrier installation - PENDING
+Equipment inspection - PENDING
+Accident history inquiry - NO DATA
+Memo - Unable to inspect all cars due to staff shortage. [color=#ADFF2F]Priority inspection and report on accident sites: cars 7, 22, 24, and 32[/color].","『車両下部の隙間に小動物が入り込み、感電する事故が数回発生。』
+『外部遮断幕の設置 - 保留。』
+『設備点検 - 保留。』
+『事故履歴照会 - 資料なし。』
+『メモ - 当直人員不足により全車両の点検は不可。[color=#ADFF2F]事故発生現場である7番、22番、24番、32番車両を優先して点検後、報告すること。[/color]』","Đã xảy ra vài vụ tai nạn do thú nhỏ chui vào khe hở dưới gầm tàu và bị điện giật.\nLắp rào chắn bảo vệ bên ngoài - TẠM HOÃN\nKiểm tra thiết bị - TẠM HOÃN\nTruy xuất lịch sử tai nạn - KHÔNG CÓ DỮ LIỆU\nGhi chú - Do thiếu nhân viên trực ban nên không thể kiểm tra toàn bộ toa tàu. [color=#ADFF2F]Ưu tiên kiểm tra và báo cáo các toa xảy ra tai nạn: toa số 7, số 22, số 24 và số 32[/color]."
+DESTINATION_HINT_ROULLET_INFO,"Train 45 x [color=#ADFF2F]Shining Labyrinth[/color] Pachinko Collaboration Campaign
+Board Train 45 now and experience a special journey with your [color=#ADFF2F]favorite characters[/color]!
+In-train stamp rally, character voice announcements, and limited goods giveaway events!
+All staff will wear special uniforms during the campaign period!
+...Don't tell me that ""special uniform"" is...
+Yep. [color=#ADFF2F]Bunny girl[/color]. And [color=#ADFF2F]slingshot bikini[/color] as an optional extra.
+Are they insane? This is a train, not a hostess club.
+Company policy, nothing we can do. If you don't like it, take unpaid leave.","45番電車×[color=#ADFF2F]シャイニング・ラビリンス[/color] パチンコ コラボ記念キャンペーン
+今45番電車にご乗車いただくと、あの[color=#ADFF2F]人気キャラクター[/color]との特別な旅体験をお楽しみ頂けます！
+車内スタンプラリー、キャラクターボイス案内放送、限定グッズプレゼントイベントも実施中！
+キャンペーン期間中、全従業員が特別衣装で勤務実施！
+「……その特別衣装って、まさか……」
+「うん。[color=#ADFF2F]バニーガール[/color]。あと追加オプションで[color=#ADFF2F]スリングショットビキニ[/color]も可だって。」
+「頭おかしいんですか？ここは電車であって風俗店じゃないんですよ…？」
+「会社の方針だから仕方ないでしょ。嫌なら無給休暇とれって言われたし。」","Chiến dịch kỷ niệm sự kiện liên kết máy Pachinko giữa Tuyến tàu số 45 × [color=#ADFF2F]Mê cung tỏa sáng[/color] (Shining Labyrinth)!\nNếu lên tàu số 45 ngay bây giờ, bạn có thể trải nghiệm hành trình đặc biệt cùng các [color=#ADFF2F]nhân vật được yêu thích[/color]!\nSự kiện thu thập dấu đóng trên tàu, thông báo bằng giọng nói của nhân vật, và tặng quà giới hạn!\nTrong suốt thời gian chiến dịch, toàn bộ nhân viên sẽ mặc trang phục đặc biệt khi làm việc!\n""...Trang phục đặc biệt đó, không lẽ là...""\n""Đúng vậy. [color=#ADFF2F]Nữ hoàng thỏ[/color] (Bunny Girl). Và tùy chọn bổ sung là có thể mặc cả [color=#ADFF2F]đồ bơi Slingshot Bikini[/color].""\n""Điên rồi sao? Đây là tàu điện chứ đâu phải hộp đêm.""\n""Chỉ thị của công ty nên đành chịu thôi. Không thích thì xin nghỉ không lương đi."""
+QUEST_GOAL_TEXT_5,"After meeting the conditions, talk to Butler.",条件を満たして執事と会話しよう,Hãy nói chuyện với Quản gia sau khi đáp ứng các điều kiện
+ROUTE_TITLE_DOLL,Doll,人形,Búp bê
+CHAPTER_DESCRIPTION_1,Help Konial explore the train,コニアルを手伝って電車を探索しよう。,Hãy giúp Konial thám hiểm tàu
+QUEST_GOAL_TEXT_2,"After meeting the conditions above, reach the 7th car.",上記条件を満たして7番目の車両に到達しよう,"Đáp Ứng Điều Kiện, Hướng Đến Toa Số 7"
+CHAPTER_DESCRIPTION_2,Use the Exchange Shop and explore deeper Anomalies,交換ショップを利用して、より深層の異変を探索しよう。,"Tận Dụng Cửa Hàng Trao Đổi, Khám Phá Dị Biến Tầng Sâu Hơn"
+PAUSE_RESUME,Continue,続行,Tiếp tục
+QUEST_GOAL_TEXT_3,Create an item to find Pazuzu.,パズズを見つける道具を作ろう,Tạo ra dụng cụ để tìm kiếm Pazuzu
+CHAPTER_DESCRIPTION_3,Find the new passenger on the train,電車の新たな乗客を見つけ出そう。,Tìm Những Hành Khách Mới Trên Tàu
+CHAPTER_DESCRIPTION_4,Find Pazuzu's Wallet,パズズの財布を見つけ出そう。,Truy Tìm Chiếc Ví Của Pazuzu.
+QUEST_GOAL_TEXT_1,"After meeting the conditions above, reach the 5th car.",上記条件を満たして5番目の車両に到達しよう,Hãy đạt toa thứ 5 sau khi đáp ứng các điều kiện trên
+CHAPTER_DESCRIPTION_5,Find where Pazuzu is trapped,パズズが閉じ込められている場所を見つけ出そう。,Tìm Nơi Pazuzu Đang Bị Giam Cầm
+SHOP_EXIT,Exit,閉じる,Thoát
+CHAPTER_DESCRIPTION_6,Interrogate Konial and escape the train,コニアルを尋問して電車から脱出しよう。,Tra Hỏi Konial Và Thoát Khỏi Chuyến Tàu.
+QUEST_GOAL_TEXT_8,"Head to the Engine Room, or finish any unfinished business.",機関室へ移動するか、やり残したことを片付けよう,Hãy di chuyển đến Phòng động cơ hoặc hoàn thành các việc chưa xong
+ROUTE_TITLE_NOPANTIES,No Panties,ノーパン,Không quần lót
+SAVE_OVERLAP_DESCRIPTION,The existing data will be overwritten.,既存のデータは上書きされます。,Dữ liệu lưu trữ cũ sẽ bị ghi đè.
+DESTINATION_HINT_DARK_ROOM_INFO,"Notes written based on what Pazuzu told me.
+""A sensation as if the trains were [color=#ADFF2F]heading in reverse[/color]... The only thing visible in the darkness is a [color=#ADFF2F]green light[/color]...
+And [color=#ADFF2F]my whole body is bound, it's agonizing[/color]... The only sound I can hear is [color=#ADFF2F]birds chirping outside[/color] ...""","パズズから聞いた情報を記したノート。
+『電車がまるで[color=#ADFF2F]逆方向に進んでいる[/color]ような感覚に……闇の中に見えるのは[color=#ADFF2F]緑色の光[/color]だけ……
+そして全身を[color=#ADFF2F]縛られていて苦しい[/color]です……聞こえるのは[color=#ADFF2F]外の鳥[/color]の声だけです……』","Cuốn sổ tay ghi chép thông tin nghe được từ Pazuzu:\n""Có cảm giác như đoàn tàu đang [color=#ADFF2F]chạy lùi[/color]... Thứ duy nhất nhìn thấy trong bóng tối là [color=#ADFF2F]ánh sáng màu xanh lá[/color]...\nVà [color=#ADFF2F]toàn thân tôi bị trói chặt vô cùng đau đớn[/color]... Chẳng nghe được gì ngoài tiếng [color=#ADFF2F]chim hót ngoài trời[/color]..."""
+DESTINATION_HINT_TICKET_CHECK_INFO,"What a hassle~ Might as well punch them all at once~ 
+...I just need to remember [color=#ADFF2F]which holes I punched[/color].","めんどくさいから、まとめてチェックしちゃおっかな～ 
+…[color=#ADFF2F]穴を開けた場所[/color]だけ、ちゃんと覚えておけばいいよね","Phiền phức quá, kiểm tra một lượt luôn cho xong~\n...Chỉ cần nhớ kỹ [color=#ADFF2F]những vị trí đã bấm lỗ[/color] là được đúng không nhỉ?"
+SHOP_TITLE,Exchange Shop,交換ショップ,Cửa hàng trao đổi
+ROUTE_INFO_VIBRATOR,To think someone would discard such a thing in the corner by the entrance...,ドアの隅に、あのような物を捨てるなど……,Vứt thứ đó ở góc lối ra vào thật là...
+ROUTE_TITLE_OUTFIT,Fashion,ファッション,Trang phục
+RETURN_BASE_CONFIRM,Return,帰還,Trở về
+MAGNET_TICKET_DESCRIPTION,Draws in Tickets from the floor while holding the detection key.,探知キーを押している間、床に落ちたチケットを引き寄せます。,Hút các Vé rơi trên sàn khi đang giữ phím Thám hiểm.
+SCENE_SYUYU_HJ,Nursing Handjob,授乳手コキ,Vừa bú vừa quay
+MORE_FRIENDLY_MAI,You need to get a little closer to Mai...,舞とはもう少し仲良くならないといけない気がする…,Có vẻ bạn cần phải thân thiết hơn nữa với Mai...
+ANOMALY_FINDER,Dim Red Light,暗い提灯,Đèn lồng đỏ tối tăm
+ROUTE_INFO_FLOOD,"The water rises ceaselessly, so please proceed quickly.",水は絶えず満ちてまいります。急いで先へお進みくださいませ。,"Nước đang dâng lên không ngừng, xin hãy tiến lên thật nhanh."
+TUTO_INVEN_1,Speak to the Butler at the starting point to exchange your collected Tickets for Items at the Exchange Shop.,開始地点にいる執事に話しかけると、集めたチケットを景品と交換できます。,Bạn có thể nói chuyện với Quản gia tại điểm xuất phát để đổi Vé lấy các vật phẩm trong Cửa hàng trao đổi.
+QUEST_PROCESS_TICKET,Hold %d+ Tickets,チケットを%d枚以上所持,Sở hữu từ %d Vé
+TUTO_INVEN_3,"Equipping Items requires cost. Exploring more Anomalies increases your maximum cost, allowing you to equip multiple Items at once.",景品の装着にはコストが必要です。異変を探索するほどコストの上限が増加し、一度により多くの景品を装着できるようになります。,"Để trang bị vật phẩm cần có điểm trang bị (Cost), thám hiểm càng nhiều hiện tượng lạ thì điểm trang bị tối đa sẽ tăng lên, giúp bạn trang bị nhiều vật phẩm cùng lúc."
+TUTO_INVEN_2,"Acquired items can be equipped from the Inventory.
+Items must be equipped for their effects to activate during exploration.","入手した景品は、インベントリを開いて装着できます。
+景品は装着しなければ探索時に効果が発生しません。",Các vật phẩm thu được có thể được trang bị bằng cách mở Túi đồ.\nVật phẩm phải được trang bị mới có thể phát huy hiệu quả khi thám hiểm.
+ROUTE_INFO_BONDAGE,They say it's the preference of the woman in the ad by the corridor...,通路入口の広告に映っているものは、彼女の趣味とのことでございます……,Nghe nói đó là sở thích của cô gái trong ảnh quảng cáo ở lối vào hành lang...
+ITEM_PERCENT,Item,景品,Vật phẩm
+NOTI_ITEM_TICKET_BONUS,Ticket + %d,チケット + %d,Vé + %d
+OPTION_VO_LANGUAGE,Voice,音声,Giọng nói
+MAIN_START,Start Game,ゲーム開始,Bắt đầu
+SCENE_DOG,Puppy Costume,犬コスプレ,Hóa trang Cún con
+DESTINATION_D_REINABIKINI,Changing Room,脱衣所,Phòng thay đồ
+SCENE_HANDJOB,Handjob,手コキ,Thủ dâm bằng tay
+QUEST_GOAL_TEXT_4_2,Find the Butler after meeting the conditions.,条件を満たした後、執事に会おう。,Hãy gặp Quản gia sau khi đáp ứng các điều kiện
+ROUTE_TITLE_BRA,Bra,ブラ,Áo ngực
+SCENE_WINDOW_DOGGY,Doggy Style - Against Glass,ガラス押し付け後背位,Tư thế từ phía sau sát cửa kính
+ROUTE_INFO_BUTTON,Please press the button next to the door only in case of emergency.,ドア横のボタンは、緊急時にのみ押してくださいませ。,Chỉ nhấn chiếc nút bên cạnh lối ra vào trong trường hợp khẩn cấp.
+NOTI_DONT_KANKAN_ON_2,Please unequip the Bracelet to use this.,使用するにはブレスレットを外してください。,Vui lòng tháo chiếc Vòng tay ra để sử dụng tính năng này.
+OPTION_NEXT,Next,次へ,Tiếp theo
+NOTI_DONT_KANKAN_ON_1,Unavailable due to the Bracelet's holy power...,ブレスレットの神聖力により利用できません。,Không thể sử dụng do thần lực của chiếc Vòng tay...
+DESTINATION_D_STUCKDOOR,Faulty Door,扉故障車両,Toa cửa hỏng
+DARUMA_CHAN_MSG,"No Anomaly here!
+Move to the next car!","ここには異変はないわ！
+次の車両へ行きなさい！",Ở đây không có hiện tượng lạ nào cả!\nHãy đi sang toa tiếp theo!
+BASE_H_SCENE_EXIT,Press ESC to go back.,ESCを押して戻ります,Nhấn ESC để quay lại trang trước
+MAGNET_TICKET,Crude Fan,粗末なうちわ,Chiếc quạt thô sơ
+TICKET_NUM,Tickets,チケット数,Số lượng vé
+ROUTE_TITLE_GIANTKONIAL,Giant Konial,巨大コニアル,Konial khổng lồ
+DESTINATION_HINT_DOGSTRAP_INFO,"A large dog collar, sized for a big breed.",大型犬が着けるような、首回りの大きな首輪だ。,"Một chiếc vòng cổ cho chó có chu vi lớn, kích cỡ dành cho giống chó lớn."
+MAIN_OPTION,Settings,設定,Cài đặt
+QUEST_PROCESS_COLLECT_DEST,Visit %d+ Terminals,終点%dヶ所以上訪問,Ghé thăm từ %d ga cuối
+LOVE_BRACELET,Copper Bracelet,銅の腕輪,Vòng tay đồng
+ROUTE_TITLE_PRIORITYSEAT,Priority Seat,優先席,Ghế ưu tiên
+NOTI_FIND_ROUTE_VALUE,Anomalies Found: %d,発見した異変 : %d個,Hiện tượng lạ đã phát hiện: %d
+"<!MissingKey:368:D, Right Key>","D, Right Key",D、右キー,"Phím D, mũi tên Phải"
+ROUTE_TITLE_SWAY,Jiggle,たゆんたゆん,Rung rinh
+ROUTE_INFO_WINDOWGHOST,They say that there is something visible only from a certain window.,特定の窓からしか見えない、何かがあるそうでございます。,Nghe nói có thứ gì đó chỉ có thể nhìn thấy qua một ô cửa sổ nhất định.
+ALREADY_ITEM_GET,Already obtained.,既に獲得済みです。,Đã nhận vật phẩm này rồi.
+CHARGE_TIME_UP,Cute Massager,可愛いマッサージ器,Máy mát-xa dễ thương
+ROUTE_TITLE_REVERSE,Reverse,逆走,Chạy ngược
+ROUTE_TITLE_CROW,Crow,カラス,Quạ
+DESTINATION_HINT_DOGSTRAP_TITLE,Dog Collar,犬の首輪,Vòng cổ cho chó
+ROUTE_INFO_EXTENSION,It was just a bit longer than usual. Please do continue walking.,少々長かっただけでございます。そのまま歩き続けてください。,"Chỉ là hành lang hơi dài một chút thôi, xin hãy tiếp tục bước đi."
+NOTI_PARTNER_CHANGE,Partner has been changed.,パートナーが変更されました。,Bạn đồng hành đã được thay đổi.
+SCENE_SITTING,Sitting,座位,Tư thế ngồi
+HORIZON_FINDER_DESCRIPTION,"Displays the height level of Anomalies as Top, Middle, or Bottom.
+Shows a random height if no Anomaly is present.","異変が存在する高さを上・中・下に分けて表示します。
+異変が存在しない場合、ランダムな高さを表示します。","Hiển thị chiều cao xuất hiện của Hiện tượng lạ được chia thành Trên, Giữa, Dưới.\nHiển thị ngẫu nhiên nếu không có Hiện tượng lạ nào tồn tại."
+ROUTE_INFO_YUKIONNA,"I'm not fond of the cold, so... I've never once visited that car.",わたくし、寒さが苦手でして……その車両には一度も訪れたことがございません。,Tôi rất ghét cái lạnh... nên chưa từng ghé thăm toa đó một lần nào cả.
+ROUTE_INFO_BUTTOCKS,I do wonder what that large butt advertisement up above is trying to sell...,上の方にある大きなお尻の看板は、一体何を宣伝しているのでしょうか……,Chiếc biển quảng cáo mông lớn ở phía trên kia rốt cuộc là quảng cáo cho cái gì thế nhỉ...
+GHOST_ANO_H,Broken Key,歯の欠けた鍵,Chiếc chìa khóa mẻ răng
+FREE_H_EDGE_BLUR,Edge Blur : Q,縁ぼかし調整：Q,Điều chỉnh độ mờ viền: Phím Q
+ROUTE_INFO_HUG,It seems to really hate talismans.,お札を大変嫌っているようでございます。,Có vẻ nó rất ghét những chiếc bùa chú.
+ROUTE_TITLE_FLASHLIGHT,Torch,懐中電灯,Đèn pin
+ROUTE_APP_MSG_USECOIN,Spend Coins to unlock this Route?,コインを使用して車両をアンロックしますか？,Bạn có muốn dùng Xu để mở khóa tuyến đường này không?
+OPTION_BG_VOLUME,BGM,BGM,Nhạc nền
+SCENE_CAT,Cat Costume,猫コスプレ,Hóa trang Mèo con
+ROUTE_INFO_VEIL,Taking up three whole seats... That's just inconsiderate...,座席を三つ分も占領しているとは、いささかご迷惑かと存じます…,"Chiếm dụng tận ba chiếc ghế liền, thật là phiền phức quá đi..."
+TUTO_TITLE_INVEN,Inventory,インベントリ,Túi đồ
+TUTO_TITLE_BASE_H_EVENT,H Event,Hイベント,Sự kiện H
+DESTINATION_D_GHOST,Break Room,休憩室,Phòng nghỉ
+DESTINATION_D_SNOWMAN,Strong AC Car,強冷房車両,Toa điều hòa cực mạnh
+ROUTE_INFO_CAUTIONSTICKER,It looks like it would be quite the ordeal to peel off...,剥がす時に、苦労しそうでございますね……,Bóc cái này ra chắc hẳn sẽ tốn công sức lắm đây...
+QUEST_PROCESS_TOTAL_LOVE,Reina & Mai combined Affection %d+,怜奈と舞の好感度合計%d以上,Tổng điểm Thiện cảm Reina và Mai đạt từ %d trở lên
+MAIN_EXIT,Quit,終了,Thoát game
+DESTINATION_HINT_LOCKER_TITLE,Padlock,南京錠,Ổ khóa
+EQUIP_COST_DESCRIPTION,"The cost required to equip items.
+The more you have, the more Items you can bring on exploration.","景品を装着するのに必要なコスト。
+多いほど、探索に多くの景品を持っていくことができます。",Điểm trang bị cần thiết để trang bị vật phẩm.\nĐiểm càng cao thì bạn càng mang được nhiều vật phẩm khi thám hiểm.
+ROUTE_TITLE_DESTROYED,Half Destroyed,半壊,Hỏng một phần
+INVENTORY_BACK,Back,戻る,Thoát
+SCENE_BUNNYGIRL,Bunny Girl,バニーガール,Bunny Girl
+ROUTE_INFO_DOLL,"If it begins to follow you, you absolutely must run.",あれがついて来はじめたら、必ずお逃げくださいませ。,"Nếu thứ đó bắt đầu bám theo bạn, hãy lập tức bỏ chạy."
+SCENE_WALL_LEAN_NUDE,Against the Wall - Naked,壁寄り - 全裸,Tư thế tựa tường - Khỏa thân
+TUTO_TITLE_ERO_GAGE,Passion Gauge,情念ゲージ,Thanh Dục vọng
+ROUTE_INFO_TENTACLE2,"As for Mistress Konial, who can control them...",それを制御できるコニアル様は……,"Về cô Konial, người có thể chế ngự chúng..."
+DIALOG_HIDE,Hide (H),非表示 (H),Ẩn (H)
+ROUTE_INFO_TENTACLE3,"For now, detection is our only option.",今のところ、それらを探知するほかございません。,Hiện tại chúng ta không còn cách nào khác ngoài việc thám hiểm và phát hiện ra chúng.
+DESTINATION_HINT_REINABIKINI_INFO,There are some suspicious stains on this black bikini.,黒いビキニに、奇妙なシミがついている。,Có vết ố kỳ lạ xuất hiện trên bộ bikini màu đen.
+ROUTE_INFO_TENTACLE1,"That is... its lust, overflowing uncontrollably.",それは……情念を抑えきれずに、溢れ出しております。,Thứ đó... Điểm Dục vọng đang tràn trề không thể kiểm soát nổi.
+DESTINATION_HINT_TICKET_CHECK_TITLE,Validated Ticket,検札済みチケット,Vé đã kiểm
+COLLECT_AREA_UP_DESCRIPTION,Increases item pickup range.,アイテムの獲得範囲を拡大します。,Mở rộng phạm vi hút vật phẩm.
+TUTO_GHOST_H,"Some Anomaly Events can be ""purified"" to extract Tickets.
+After detecting an Anomaly, hold the Detection key nearby to initiate a sex scene.
+Try to find other Anomalies that can be purified!","一部の異常現象は『浄化』することでチケットを入手できます。
+異常現象を感知した後、近くで感知キーを長押しするとエッチが可能です。
+これ以外にも、浄化可能な異常現象を探してみてください！","Một số hiện tượng lạ có thể rút được Vé thông qua việc ""thanh tẩy"".\nSau khi phát hiện hiện tượng lạ, hãy đứng gần đó và giữ phím Thám hiểm để bắt đầu phân cảnh H.\nNgoài ra, hãy tìm kiếm các hiện tượng lạ khác có thể thanh tẩy được nhé!"
+OPTION_TAB_VOLUME,Sound,サウンド,Âm lượng
+ROUTE_INFO_GAZE,Did you perhaps feel a persistent gaze coming from beneath the seats?,椅子の下から、執拗な視線を感じませんでしたか？,Bạn có cảm nhận được ánh mắt kiên trì từ dưới gầm ghế không?
+PAUSE_OPTION,Settings,設定,Cài đặt
+PAUSE_MAIN_EXIT,Main Menu,タイトル画面,Menu chính
+NOTI_UNEQUIP_ITEM,I think I need a certain item for this...,何か景品が必要な気がする……,Có vẻ cần một vật phẩm nào đó...
+LOVE_LEVEL,Affection,好感度,Thiện cảm
+ROUTE_INFO_SWAY,"People in photographs don't jiggle. Normally, that is.",写真の中の人物は揺れたりいたしません。一般的には…でございますが。,Nhân vật trong ảnh thì không thể rung rinh được. Thường là như thế.
+LEAD_AGAIN,Replay,もう一度見る,Xem lại
+DESTINATION_D_ONSEN,Hot Spring Car,温泉車両,Toa suối nước nóng
+ROUTE_INFO_SLINGSHOT,The original design of the white swimsuit in the corridor entrance advertisement was...,通路入口の広告にある、白い水着の元のデザインは……,Thiết kế gốc của bộ đồ bơi màu trắng trên biển quảng cáo ở hành lang là...
+NOTE_PLACEHOLDER,Click here to jot down anything important!,ここをクリックして大事なことをメモできるよ！,Nhấp vào đây để ghi chú những điều quan trọng!
+DESTINATION_HINT_STUCKDOOR_INFO,"At approximately 2:00 PM today, a temporary malfunction occurred in some doors of this train.
+Investigation revealed that an external inspection contractor carelessly connected the ""open"" and ""close"" control wires in reverse,
+resulting in door operations that appeared natural enough to go unnoticed on-site.
+While some passengers were aboard at the time,
+fortunately, thanks to the remarkable effectiveness of
+our ongoing ""Do Not Lean on Doors"" campaign,
+no accidents occurred.
+Accordingly,
+the scheduled ""[color=#ADFF2F]March-July Odd Months[/color] Accident-Free Operation Commemorative Event""
+will proceed as originally planned without any changes.","本日午後2時頃、本電車の一部のドアにおいて一時的な動作不良が発生いたしました。調査の結果、外部業者が『開』と『閉』の制御線を逆に接続するというミスが確認されましたが、これは現場でも即座に認知されないほど自然な開閉動作へとつながりました。
+当時、列車には若干名のお客様が乗車されておりましたが、幸いにも当社が継続的に展開してまいりました「ドアに寄りかからない」キャンペーンの驚くべき効果もあり、いかなる深刻な事故も発生しませんでした。
+つきましては、予定されておりました「[color=#ADFF2F]3月～7月の奇数月[/color] 無事故運行記念行事」は当初の計画通り変更なく実施されます。","Khoảng 2 giờ chiều nay, một sự cố vận hành tạm thời đã xảy ra ở một số cửa ra vào của đoàn tàu.\nKết quả điều tra xác nhận rằng nhà thầu kiểm tra bên ngoài đã vô tình đấu nối ngược dây điều khiển ""Mở"" và ""Đóng"",\ndẫn đến hành động đóng mở cửa diễn ra tự nhiên đến mức nhân viên tại hiện trường không phát hiện ra ngay lập tức.\n\nLúc đó trên tàu có một số hành khách,\nnhưng rất may nhờ vào hiệu quả đáng kinh ngạc của chiến dịch\n""Không tựa vào cửa ra vào"" mà công ty chúng tôi liên tục thúc đẩy,\nđã không có bất kỳ tai nạn nào xảy ra.\n\nVì lý do này,\n""Lễ kỷ niệm vận hành an toàn các tháng lẻ từ tháng 3 đến tháng 7"" dự kiến\nvẫn sẽ được diễn ra như kế hoạch ban đầu mà không có thay đổi nào."
+CHARGE_TIME_UP_DESCRIPTION,Reduces the time required for detection.,感知に必要な時間を短縮します。,Rút ngắn thời gian cần thiết để thám hiểm.
+ROUTE_TITLE_BONDAGE,Bondage,ボンデージ,Bondage
+SPEED_UP_DESCRIPTION,Increases movement speed.,移動速度が増加します。,Tăng tốc độ di chuyển.
+SAVE_GAME,Save,セーブ,Lưu
+GHOST_ANO_H_DESCRIPTION,"After a successful detection, you can purify certain Ghosts.",感知に成功すると、一部の幽霊を浄化できるようになります。,"Sau khi phát hiện thành công, bạn sẽ có thể thanh tẩy một số oan hồn."
+ROUTE_INFO_FLASHLIGHT,"An old flashlight, but it'll come in handy.",古い懐中電灯ではございますが、大いに役立つかと存じます。,Tuy là một chiếc đèn pin cũ kỹ nhưng nó sẽ giúp ích rất nhiều đấy.
+TICKET_BONUS,Cheap Charm,安物のお守り,Bùa hộ mệnh rẻ tiền
+ROUTE_INFO_BUNNYGIRL,"I believe it was definitely a bunny girl outfit normally, but...",普段は確か、バニーガールの衣装だった気がいたしますが……,"Thông thường ở đó chắc chắn là quảng cáo trang phục Nữ hoàng thỏ, nhưng..."
+SCENE_TENTACLES,Tentacles,触手責め,Xúc tu quấn thân
+DESTINATION_D_MIRROR,Penalty Car,懲罰車両,Toa trừng phạt
+DESTINATION_D_MILK,Nursing Center,授乳室,Toa cho bú
+HINT_PARTIAL_NEEDED,Any {n} of these,{n}個以上の一致で到達,Đến nơi khi khớp từ {n} mục
+QUEST_PROCESS_LOVE_LEVEL,Affection %d+,好感度%d以上,Điểm Thiện cảm đạt từ %d trở lên
+DESTINATION_HINT_ENGINE_ROOM_TITLE,Konial's Memo,コニアルのメモ,Ghi chú của Konial
+DESTINATION_HINT_REINABIKINI_TITLE,Black Bikini,黒いビキニ,Bikini đen
+ROUTE_CLOSE,Closed,閉鎖,Đã đóng cửa
+ROUTE_INFO_NOPANTIES,Please take careful note of what the bikini model in the center is wearing.,中央のビキニモデルの装いを、よく記憶しておいてください。,Hãy ghi nhớ kỹ trang phục của cô người mẫu bikini ở giữa nhé.
+DESTINATION_HINT_SNOWMAN_TITLE,Lover's Letter,恋人の手紙,Bức thư của người yêu
+H_LOCKED,Locked,ロック中,Đang khóa
+NOTI_ITEM_KONIAL_LOVE_BONUS,Konial Affection + %d,コニアル好感度 + %d,Thiện cảm Konial + %d
+SAVE_H_SCENE,H-Scene,Hシーン,Phân cảnh H
+SCENE_LYING_SIDEWAYS,Lying on Side,側位,Trắc vị song tu
+DESTINATION_HINT_CLOCK_TITLE,Broken Clock,壊れた時計,Đồng hồ hỏng
+CREDIT_SPECIALTHANKS,Special Thanks,スペシャルサンクス,Cám ơn đặc biệt
+DESTINATION_HINT_SNOWMAN_INFO,"[color=#ADFF2F]It's hard to see snow where you are, isn't it? The snow you love so much[/color] falls endlessly here—it's actually become a nuisance.
+But finally, next month, I'll be able to come see you. On that train.
+If you'd known beforehand, you would've told me not to come. But I can't bear lying in this hospital bed any longer.
+At this rate, I might not live to see spring. So I want to see you at least one more time before then.
+Snow melts too quickly to bring with me... but I'll bring a snowman doll that looks just like you.
+...Once the snow stops, please meet me when I get off in the Car you always used to sit in.""","[color=#ADFF2F]そちらでは、あまり雪を見ることがないでしょう？ あなたが大好きな雪[/color]が、こちらではうんざりするほど降り積もるので困りものです。
+でも…来月になれば、やっとあなたに会いに行けます。列車に乗って。
+あなたがそれを知ったら、来るなと言うでしょうね。でも、もう病室のベッドで寝ているのは嫌なんです。
+このままじゃ、春が訪れを見られないかもしれない。その前に、もう一度だけでもあなたに会いたいから。
+雪はすぐに溶けてしまうから、持ってはいけないけど……あなたにそっくりな雪だるまの人形を持っていきますね。
+……雪が止んだら、あなたがいつも座っていた……車両から降りる私を、迎えてくださいね。","[color=#ADFF2F]Ở chỗ anh rất khó thấy tuyết đúng không? Tuyết mà anh vô cùng yêu thích[/color] rơi không ngừng ở nơi này — thật ra nó còn gây ra chút phiền thoát nữa.\nNhưng cuối cùng thì tháng sau em có thể đến gặp anh rồi. Bằng chuyến tàu đó đấy.\nNếu anh biết trước thế nào cũng cản em lại. Nhưng em không muốn tiếp tục nằm trên giường bệnh này nữa đâu.\nCứ đà này có khi em không thể sống đến lúc mùa xuân tới. Nên em muốn gặp anh thêm ít nhất một lần nữa trước lúc đó.\nTuyết tan rất nhanh nên em không thể mang theo được... nhưng em sẽ mang theo một búp bê người tuyết trông rất giống anh.\n...Khi tuyết ngừng rơi, xin hãy đón em tại toa tàu mà anh vẫn thường ngồi ngày xưa nhé."
+DESTINATION_HINT_MIRROR_TITLE,Rod and Rope,棒と紐,Gậy và dây thừng
+NOTI_ITEM_TIME_BONUS,Ticket + %d,チケット + %d,Vé + %d
+ROUTE_TITLE_PARTNER_ANOMALY1,Exposure: Breasts,露出：おっぱい,Lộ đồ: Ngực
+ROUTE_TITLE_PARTNER_ANOMALY2,Exposure: Breasts+,露出：おっぱい＋,Lộ đồ: Ngực+
+ROUTE_TITLE_PARTNER_ANOMALY3,Exposure: Panties,露出：パンツ,Lộ đồ: Quần lót
+ROUTE_TITLE_PARTNER_ANOMALY4,Hairstyle,ヘアスタイル,Kiểu tóc
+OPTION_BACK,Back,戻る,Thoát
+DARUMA_CHAN,Daruma,だるまちゃん,Daruma
+ROUTE_TITLE_PARTNER_ANOMALY5,Exposure: Explore,露出：探索,Lộ đồ: Thám hiểm
+ROUTE_TITLE_PARTNER_ANOMALY6,Exposure: Explore+,露出：探索＋,Lộ đồ: Thám hiểm+
+SCENE_FULL_DOGGY,Love Love Doggy Style,ラブラブバック,La hán đẩy xe bò nồng thắm
+NOTI_AUTOSAVE_COMPLETE,Auto-save completed,オートセーブ完了,Đã hoàn thành tự động lưu
+ROUTE_INFO_LOWSPEED,That was merely a slow zone just now.,今のは徐行区間でございました。,Vừa rồi chỉ là khu vực chạy chậm mà thôi.
+OPTION_FULLSCREEN,Full Screen,フルスクリーン,Toàn màn hình
+DESTINATION_D_CAT,Broken Car,故障車両,Toa tàu hỏng
+DIALOG_SKIP,Skip (Ctrl),スキップ (Ctrl),Tua (Ctrl)
+SYSTEM_EXIT_CONFIRM,Exit Game,ゲーム終了,Thoát game
+OPTION_TAB_GAMEPLAY,Gameplay,ゲームプレイ,Trò chơi
+OPTION_HINT_BUBBLE,Failure Hint,失敗のヒント,Gợi ý thất bại
+OPTION_BROADCAST_INTERVAL,Broadcast Interval,配信間隔,Khoảng thời gian phát sóng
+BROADCAST_INTERVAL_STANDARD,Standard,標準,Tiêu chuẩn
+BROADCAST_INTERVAL_LONG,Long,長い,Dài
+BROADCAST_INTERVAL_OFF,Off,オフ,Tắt

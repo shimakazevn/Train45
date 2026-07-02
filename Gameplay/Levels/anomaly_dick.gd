@@ -1,4 +1,5 @@
 extends Node2D
+class_name DickAnomaly
 
 @export var player: Player
 @export var anim_player: AnimationPlayer

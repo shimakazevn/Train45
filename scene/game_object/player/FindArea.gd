@@ -53,6 +53,9 @@ func _on_player_action():
 	if is_player_in_area:
 		player.find_anomaly.emit()
 	else:
+		# [KR] 회상방은 탐지 실패 페널티(라이프 감소) 없음 — 빈 곳 차지로 게임오버되지 않게 한다.
+		if GameEvents.is_recollection_room:
+			return
 		if player.floor_manager.current_level.stage_clear and player.floor_manager.current_level.stage_type != Constants.TYPE_SAFE: ## [KR] 스테이지 클리어 상태일시 리턴 / [EN] Return if stage is in cleared state
 			return
 		var global_game = player.global_game_manager as GlobalGameManager

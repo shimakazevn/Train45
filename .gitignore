@@ -8,6 +8,12 @@ Thumbs.db
 bin/
 build_tools/import_cache.zip
 
+# Build output (regenerable)
+dist/
+
+# Temp build/scratch files (root-level, e.g. _vi_build.json, _build_vi.gd)
+/_*
+
 # Large Android AAR files (too big for GitHub)
 android/libs/debug/godot-lib.template_debug.aar
 android/libs/release/godot-lib.template_release.aar

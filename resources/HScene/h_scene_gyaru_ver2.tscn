@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b11x1ix8i8tf" path="res://resources/HScene/gal_scene_ver2.png" id="1_ssua5"]
 [ext_resource type="Script" uid="uid://xham5m0ijh6a" path="res://resources/HScene/h_scene_audio_stream_player_2d.gd" id="3_yca1i"]
 [ext_resource type="AudioStream" uid="uid://x6n38q2xf8bn" path="res://sound/sfx/h_sfx/normal/h_sfx_normal1.wav" id="4_20fwj"]
-[ext_resource type="Script" uid="uid://bikl16l6q4pas" path="res://resources/HScene/h_scene.gd" id="4_lyvfe"]
+[ext_resource type="Script" uid="uid://bikl16l6q4pas" path="res://resources/HScene/h_scene.gd" id="4_bpix1"]
 [ext_resource type="AudioStream" uid="uid://c2dpfiabhxllj" path="res://sound/sfx/h_sfx/normal/h_sfx_normal2.wav" id="5_05omy"]
 [ext_resource type="AudioStream" uid="uid://0kx2flvefjev" path="res://sound/sfx/h_sfx/normal/h_sfx_normal3.wav" id="6_2ikp8"]
 [ext_resource type="AudioStream" uid="uid://kvefno173rxk" path="res://sound/sfx/h_sfx/normal/h_sfx_normal4.wav" id="7_5132w"]
@@ -540,7 +540,7 @@ texture = ExtResource("1_ssua5")
 hframes = 10
 vframes = 9
 frame = 59
-script = ExtResource("4_lyvfe")
+script = ExtResource("4_bpix1")
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,

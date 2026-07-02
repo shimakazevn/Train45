@@ -1,6 +1,7 @@
 이 곳에서는 감상한 이벤트를 다시 재생할 수 있습니다. #id:144a
 어떤 인물의 이벤트를 재생할까요? #id:144b
 do GameEvents.stop_skip_on_next_choice()
+label page1
 - 레이나 #id:144c
 	do GameEvents.emit_quest_process("recollect_reina")
 	[end_timeline]
@@ -10,12 +11,26 @@ do GameEvents.stop_skip_on_next_choice()
 - 코니알 #id:144e
 	do GameEvents.emit_quest_process("recollect_konial")
 	[end_timeline]
+- 다음 #id:19a4
+	jump page2
+- 나가기 #id:1451
+	do GameEvents.emit_quest_process("recollect_exit")
+	[end_timeline]
+
+label page2
 - 집사 #id:144f
 	do GameEvents.emit_quest_process("recollect_butler")
 	[end_timeline]
 - 파주주 #id:1450
 	do GameEvents.emit_quest_process("recollect_pazuzu")
 	[end_timeline]
+- 귀신 이상현상 #id:19a5
+	# 플레이어가 조작 가능해지며, 기존 나열된 npc들은 감춰진다.(상호작용도 안되는거 확인)
+	do TransitionScreen.dialog_transition()
+	do GameEvents.emit_quest_process("recollect_ghost_h")
+	[end_timeline]
+- 이전 #id:19a6
+	jump page1
 - 나가기 #id:1451
 	do GameEvents.emit_quest_process("recollect_exit")
 	[end_timeline]

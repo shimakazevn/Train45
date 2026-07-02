@@ -6,22 +6,22 @@
 [ext_resource type="Script" uid="uid://doqfquf1vs3w4" path="res://scene/game_object/player/UpgradeComponent.gd" id="4_ohf14"]
 [ext_resource type="Script" uid="uid://b51ta8gaucwu4" path="res://scene/game_object/player/abilities.gd" id="5_syup6"]
 [ext_resource type="Texture2D" uid="uid://bkjp4e0atu5jt" path="res://scene/game_object/player/player_cum.png" id="7_07nih"]
+[ext_resource type="Texture2D" uid="uid://bisawr6dhlsb2" path="res://resources/ui/keyboard_icon/keyboard_icon11.png" id="11_1lcd4"]
 [ext_resource type="Shader" uid="uid://bswn1eoblmxes" path="res://scene/shader/FindEffect.gdshader" id="11_ngwj7"]
 [ext_resource type="Shader" uid="uid://c1kveqaw1fv6e" path="res://scene/shader/screenFindEffect.gdshader" id="12_a86ny"]
+[ext_resource type="Texture2D" uid="uid://d05jjmxu4w3sd" path="res://resources/ui/keyboard_icon/keyboard_icon12.png" id="12_lyvfe"]
 [ext_resource type="Texture2D" uid="uid://du2ya33p8io2l" path="res://resources/ui/progress_empty.png" id="13_g0oe4"]
+[ext_resource type="PackedScene" uid="uid://c5cqnjwgn5mkw" path="res://scene/UI/action_progress.tscn" id="14_s6xge"]
 [ext_resource type="Texture2D" uid="uid://b00dd2nfwei0b" path="res://resources/ui/progress_fill.png" id="14_uving"]
 [ext_resource type="Script" uid="uid://dpe06ncilhy2l" path="res://scene/game_object/player/FindArea.gd" id="15_ftsf8"]
+[ext_resource type="PackedScene" uid="uid://d375wpw5cnun3" path="res://sound/h_sfx_audio_stream_player_2d.tscn" id="15_ohf14"]
 [ext_resource type="Script" uid="uid://c5q7k2hiv6qey" path="res://scene/game_object/player/TalkArea.gd" id="16_k0roo"]
 [ext_resource type="Script" uid="uid://db2r763ks18kp" path="res://scene/game_object/player/item_collect_area.gd" id="17_x6778"]
 [ext_resource type="PackedScene" uid="uid://bfc61c3fv64tn" path="res://Gameplay/Sound/random_stream_player_2d_component.tscn" id="18_17pdg"]
-[ext_resource type="Texture2D" uid="uid://bisawr6dhlsb2" path="res://resources/ui/keyboard_icon/keyboard_icon11.png" id="19_ngwj7"]
 [ext_resource type="AudioStream" uid="uid://mt56f7d1ih6p" path="res://sound/sfx/footstep_normal_1.wav" id="19_op72e"]
 [ext_resource type="AudioStream" uid="uid://dal0y22qkv4xc" path="res://sound/sfx/footstep_normal_2.wav" id="20_5frgf"]
-[ext_resource type="Texture2D" uid="uid://d05jjmxu4w3sd" path="res://resources/ui/keyboard_icon/keyboard_icon12.png" id="20_a86ny"]
 [ext_resource type="AudioStream" uid="uid://cjoil7m61xbuf" path="res://sound/sfx/footstep_normal_3.wav" id="21_dupl0"]
-[ext_resource type="PackedScene" uid="uid://c5cqnjwgn5mkw" path="res://scene/UI/action_progress.tscn" id="21_g0oe4"]
 [ext_resource type="AudioStream" uid="uid://dujttkmdbwjfy" path="res://sound/sfx/finding_charge.wav" id="22_vhit3"]
-[ext_resource type="PackedScene" uid="uid://d375wpw5cnun3" path="res://sound/h_sfx_audio_stream_player_2d.tscn" id="23_a86ny"]
 [ext_resource type="Script" uid="uid://bbxt5x732heku" path="res://scene/game_object/player/finding_charge_stream_player.gd" id="23_wb0dw"]
 [ext_resource type="Script" uid="uid://c67vgxet3mm8y" path="res://Gameplay/ui_state_player.gd" id="24_bpix1"]
 [ext_resource type="Script" uid="uid://6u1wh3d1nnjh" path="res://scene/game_object/player/ghost_moan_stream.gd" id="26_gvche"]
@@ -815,8 +815,8 @@ light_mode = 1
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_l82gn"]
 frames = 2
-frame_0/texture = ExtResource("19_ngwj7")
-frame_1/texture = ExtResource("20_a86ny")
+frame_0/texture = ExtResource("11_1lcd4")
+frame_1/texture = ExtResource("12_lyvfe")
 frame_1/duration = 1.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3v42i"]
@@ -950,7 +950,7 @@ offset_bottom = 98.0
 pivot_offset = Vector2(16, 8)
 texture = SubResource("AnimatedTexture_l82gn")
 
-[node name="ActionProgressBase" parent="RapeGaugeLayer" instance=ExtResource("21_g0oe4")]
+[node name="ActionProgressBase" parent="RapeGaugeLayer" instance=ExtResource("14_s6xge")]
 unique_name_in_owner = true
 visible = false
 position = Vector2(-116.94501, 107.43)
@@ -1073,9 +1073,9 @@ bus = &"Sfx"
 script = ExtResource("24_bpix1")
 metadata/_custom_type_script = "uid://c67vgxet3mm8y"
 
-[node name="HSfxAudioStreamPlayer2D" parent="." instance=ExtResource("23_a86ny")]
+[node name="HSfxAudioStreamPlayer2D" parent="." instance=ExtResource("15_ohf14")]
 
-[node name="HSfxAudioStreamPlayer2DSub" parent="." instance=ExtResource("23_a86ny")]
+[node name="HSfxAudioStreamPlayer2DSub" parent="." instance=ExtResource("15_ohf14")]
 
 [node name="GhostMoanStream" type="AudioStreamPlayer" parent="."]
 bus = &"Character"

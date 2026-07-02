@@ -1,0 +1,382 @@
+[gd_scene load_steps=29 format=3]
+
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="1_aamxw"]
+[ext_resource type="Texture2D" uid="uid://baqcdxj2263vm" path="res://Gameplay/Levels/ano_ass7.png" id="2_e1mfo"]
+[ext_resource type="Script" uid="uid://c7yill14ylec3" path="res://Gameplay/Levels/RecollectAnomaly/recollect_ghost_anomaly_random.gd" id="3_vlow7"]
+[ext_resource type="Texture2D" uid="uid://bc2qmty81l1h1" path="res://Gameplay/Levels/ano_ass0.png" id="4_5gyie"]
+[ext_resource type="Texture2D" uid="uid://cgx4c2du21vux" path="res://Gameplay/Levels/ano_ass1.png" id="5_hne8d"]
+[ext_resource type="Texture2D" uid="uid://x83ti0tfkwje" path="res://Gameplay/Levels/ano_ass2.png" id="6_hf2vb"]
+[ext_resource type="Texture2D" uid="uid://dwvix43rw2ws4" path="res://Gameplay/Levels/ano_ass3.png" id="7_62jqa"]
+[ext_resource type="Texture2D" uid="uid://7ydaq6yj3v1g" path="res://Gameplay/Levels/ano_ass4.png" id="8_2kt0v"]
+[ext_resource type="Texture2D" uid="uid://vdy07vc53sw3" path="res://Gameplay/Levels/ano_ass5.png" id="9_pa3uq"]
+[ext_resource type="Texture2D" uid="uid://dfbbj7vna6qmu" path="res://Gameplay/Levels/ano_ass6.png" id="10_fte81"]
+[ext_resource type="Texture2D" uid="uid://bisawr6dhlsb2" path="res://resources/ui/keyboard_icon/keyboard_icon11.png" id="11_1lcd4"]
+[ext_resource type="Texture2D" uid="uid://d05jjmxu4w3sd" path="res://resources/ui/keyboard_icon/keyboard_icon12.png" id="12_lyvfe"]
+[ext_resource type="Texture2D" uid="uid://duva4mnpevjja" path="res://resources/ui/heart.png" id="13_batyu"]
+[ext_resource type="PackedScene" uid="uid://c5cqnjwgn5mkw" path="res://scene/UI/action_progress.tscn" id="14_s6xge"]
+[ext_resource type="PackedScene" uid="uid://d375wpw5cnun3" path="res://sound/h_sfx_audio_stream_player_2d.tscn" id="15_ohf14"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jx8lm"]
+size = Vector2(44, 34.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5rvj"]
+size = Vector2(78, 272)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_w5ewf"]
+light_mode = 1
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_do0ex"]
+frames = 2
+frame_0/texture = ExtResource("11_1lcd4")
+frame_1/texture = ExtResource("12_lyvfe")
+frame_1/duration = 1.0
+
+[sub_resource type="Curve" id="Curve_gx628"]
+_data = [Vector2(0, 0.17142), 0.0, 0.0, 0, 0, Vector2(0.11373, 0.773064), 0.0, 0.0, 0, 0, Vector2(0.896516, 0.514463), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Animation" id="Animation_11vt6"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HSfxAudioStreamPlayer2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_h_sfx_hard"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [14, 15, 16, 17]
+}
+
+[sub_resource type="Animation" id="Animation_x5jb2"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HSfxAudioStreamPlayer2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_h_sfx_hard"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [14, 15, 16, 17]
+}
+
+[sub_resource type="Animation" id="Animation_vo6rk"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [25]
+}
+
+[sub_resource type="Animation" id="Animation_s610l"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [13]
+}
+
+[sub_resource type="Animation" id="Animation_sxtgd"]
+length = 3.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HSfxAudioStreamPlayer2D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_h_sfx_hard"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HSfxAudioStreamPlayer2DSub")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_h_sfx_cum"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.9, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [18, 19, 20, 21, 22, 23, 24]
+}
+
+[sub_resource type="Animation" id="Animation_qk2ol"]
+length = 3.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.6, 2, 2.2, 2.4, 2.6, 2.8, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+}
+
+[sub_resource type="Animation" id="Animation_baodo"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w8gyd"]
+_data = {
+&"action": SubResource("Animation_11vt6"),
+&"action_climax": SubResource("Animation_x5jb2"),
+&"after_cum": SubResource("Animation_vo6rk"),
+&"after_find": SubResource("Animation_s610l"),
+&"cum": SubResource("Animation_sxtgd"),
+&"in": SubResource("Animation_qk2ol"),
+&"not_find": SubResource("Animation_baodo")
+}
+
+[node name="GButt" type="Area2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_aamxw")
+
+[node name="AnomalyCollision" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+z_index = 30
+position = Vector2(149, 91.75)
+shape = SubResource("RectangleShape2D_jx8lm")
+
+[node name="GhostHAnomaly" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(146, 205.5)
+texture = ExtResource("2_e1mfo")
+hframes = 6
+vframes = 5
+frame = 25
+metadata/_aseprite_wizard_source_file_hash_ = "9ccaa7a5ea3e63ceffb49fed49d00ea7"
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": true,
+"layer_section": true,
+"output_section": true,
+"slice_section": true
+}
+
+[node name="GhostHAnomalyComponent" type="Node2D" parent="GhostHAnomaly" node_paths=PackedStringArray("ghost_sprite", "ghost_anim")]
+script = ExtResource("3_vlow7")
+rand_sprite = Array[CompressedTexture2D]([ExtResource("4_5gyie"), ExtResource("5_hne8d"), ExtResource("6_hf2vb"), ExtResource("7_62jqa"), ExtResource("8_2kt0v"), ExtResource("9_pa3uq"), ExtResource("10_fte81"), ExtResource("2_e1mfo")])
+ghost_sprite = NodePath("..")
+ghost_anim = NodePath("../AnimationPlayer")
+
+[node name="HArea" type="Area2D" parent="GhostHAnomaly/GhostHAnomalyComponent"]
+unique_name_in_owner = true
+collision_layer = 262144
+collision_mask = 9216
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GhostHAnomaly/GhostHAnomalyComponent/HArea"]
+visible = false
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_m5rvj")
+debug_color = Color(0.390956, 0.606467, 0.214678, 0.42)
+
+[node name="KeyboardIcon" type="TextureRect" parent="GhostHAnomaly/GhostHAnomalyComponent"]
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_w5ewf")
+offset_left = -15.0
+offset_top = -74.5
+offset_right = 17.0
+offset_bottom = -58.5
+pivot_offset = Vector2(16, 8)
+texture = SubResource("AnimatedTexture_do0ex")
+
+[node name="LoveEffect" type="CPUParticles2D" parent="GhostHAnomaly/GhostHAnomalyComponent"]
+position = Vector2(2, -39.5)
+amount = 5
+texture = ExtResource("13_batyu")
+lifetime = 3.0
+randomness = 0.1
+emission_shape = 3
+emission_rect_extents = Vector2(15, 5)
+direction = Vector2(0, -20)
+gravity = Vector2(0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 30.0
+radial_accel_min = 5.0
+radial_accel_max = 5.0
+tangential_accel_min = 10.0
+tangential_accel_max = 10.0
+scale_amount_min = 0.5
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_gx628")
+
+[node name="ActionProgressBase" parent="GhostHAnomaly/GhostHAnomalyComponent" instance=ExtResource("14_s6xge")]
+position = Vector2(1.0000076, -82.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GhostHAnomaly"]
+libraries = {
+&"": SubResource("AnimationLibrary_w8gyd")
+}
+
+[node name="HSfxAudioStreamPlayer2D" parent="GhostHAnomaly" instance=ExtResource("15_ohf14")]
+
+[node name="HSfxAudioStreamPlayer2DSub" parent="GhostHAnomaly" instance=ExtResource("15_ohf14")]

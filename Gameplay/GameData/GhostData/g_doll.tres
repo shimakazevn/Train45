@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="GhostRes" load_steps=2 format=3 uid="uid://dq8n2gwt3k7a1"]
+[gd_resource type="Resource" script_class="GhostRes" load_steps=3 format=3 uid="uid://dq8n2gwt3k7a1"]
 
 [ext_resource type="Script" uid="uid://cgjdt200d0usf" path="res://Gameplay/GameData/GhostData/ghost_res.gd" id="1_54enb"]
+[ext_resource type="Texture2D" uid="uid://cfxms50astif0" path="res://resources/ui/EventCoverImage/Hpreview_doll_0.png" id="1_ivy15"]
 
 [resource]
 script = ExtResource("1_54enb")
+preview_img = ExtResource("1_ivy15")
 anim_name = "white_ghost"
 stage_name = "stage_20"

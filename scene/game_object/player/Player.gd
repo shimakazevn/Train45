@@ -20,6 +20,14 @@
 ## Loosely connected to external systems via signals ([code]GameEvents[/code], [code]Dialogic[/code]).
 class_name Player extends CharacterBody2D
 
+## [KR] 아날로그 스틱 이동 데드존. 이동은 normalized()로 크기를 버려 풀스피드라
+##      미세 조작이 없으므로, 드리프트 방지를 위해 다소 높게 잡는다.
+const STICK_DEADZONE := 0.3
+
+## [KR] 차징(액션 키)을 시작한 패드 device. 진동은 이 패드에만 보낸다.
+##      패드 0 하드코딩은 2개 연결 시 미사용 패드를 울리므로, 액션 키를 실제로 누른 패드만 진동시킨다.
+var _charging_pad_device := -1
+
 ## [KR] 전역 게임 흐름(스테이지 전환, 상태 관리 등)을 조율하는 매니저 참조.
 ## [EN] Reference to the manager that coordinates global game flow (stage transitions, state management, etc.).
 var global_game_manager : GlobalGameManager
@@ -287,7 +295,7 @@ func character_move():
 	move_dir = movement_vector
 
 ## [KR] 키보드/D패드와 아날로그 스틱 입력을 통합하여 이동 벡터를 반환한다.[br]
-## 아날로그 스틱 입력이 데드존([code]0.2[/code])을 초과하면 스틱 우선, 아니면 키보드 사용.
+## 아날로그 스틱 입력이 데드존([code]STICK_DEADZONE[/code])을 초과하면 스틱 우선, 아니면 키보드 사용.
 ## [EN] Combines keyboard/D-pad and analog stick input to return a movement vector.[br]
 ## If analog stick input exceeds the deadzone ([code]0.2[/code]), stick takes priority; otherwise keyboard is used.
 func get_movement_vector() -> Vector2:
@@ -298,17 +306,24 @@ func get_movement_vector() -> Vector2:
 	var keyboard_vec = Vector2(x, y)
 
 	# [KR] 2) 패드 왼쪽/오른쪽 스틱(아날로그) 읽기
+	#     패드 2개 연결 시 device 0 고정은 엉뚱한(방치된) 패드를 읽어 조작이 막힌다.
+	#     연결된 모든 패드를 순회해 가장 강한 스틱 입력을 채택한다.
 	# [EN] 2) Read gamepad left/right stick (analog)
-	var joy_x = Input.get_joy_axis(0, JOY_AXIS_LEFT_X) # -1.0 ~ 1.0
-	var joy_y = Input.get_joy_axis(0, JOY_AXIS_LEFT_Y) # -1.0 ~ 1.0
-	var joy_vec = Vector2(joy_x, joy_y)
-	var joy_right_vec = Vector2(Input.get_joy_axis(0, JOY_AXIS_RIGHT_X), Input.get_joy_axis(0, JOY_AXIS_RIGHT_Y))
+	var joy_vec := Vector2.ZERO
+	var joy_right_vec := Vector2.ZERO
+	for device in Input.get_connected_joypads():
+		var lv := Vector2(Input.get_joy_axis(device, JOY_AXIS_LEFT_X), Input.get_joy_axis(device, JOY_AXIS_LEFT_Y))
+		var rv := Vector2(Input.get_joy_axis(device, JOY_AXIS_RIGHT_X), Input.get_joy_axis(device, JOY_AXIS_RIGHT_Y))
+		if lv.length() > joy_vec.length():
+			joy_vec = lv
+		if rv.length() > joy_right_vec.length():
+			joy_right_vec = rv
 
 	# [KR] 3) 데드존 설정 (스틱 중립 근처는 0 처리) — 왼쪽 스틱 → 오른쪽 스틱 → 키보드/D패드 순으로 우선
 	# [EN] 3) Deadzone setting — priority: left stick → right stick → keyboard/D-pad
-	if joy_vec.length() > 0.2:
+	if joy_vec.length() > STICK_DEADZONE:
 		return joy_vec
-	elif joy_right_vec.length() > 0.2:
+	elif joy_right_vec.length() > STICK_DEADZONE:
 		return joy_right_vec
 	else:
 		return keyboard_vec
@@ -389,7 +404,7 @@ func find_target():
 	# [KR] 키가 눌렸을 때 충전 시작
 	# [EN] Start charging when key is pressed
 	if Input.is_action_just_pressed("action") and find_lock == false:
-		Input.start_joy_vibration(0,0.1,0.1, 7.0)
+		_vibrate_charging(0.1, 0.1, 7.0)
 		is_charging = true
 		charging_start_time = Time.get_ticks_msec() / 1000.0  # [KR] 현재 시간(초) 저장 / [EN] Store current time (seconds)
 		charging_percentage = 0.0  # [KR] 초기화 / [EN] Initialize
@@ -422,13 +437,13 @@ func find_target():
 				if floor_manager.current_prologue:
 					player_tuto_action.emit()
 
-			Input.stop_joy_vibration(0)
+			_stop_charging_vibration()
 			is_charging = false  # [KR] 완료 후 더 이상 누르지 않도록 처리 / [EN] Prevent further holding after completion
 
 	# [KR] 키가 떼졌을 때 충전 중지
 	# [EN] Stop charging when key is released
 	if Input.is_action_just_released("action") and is_charging or not Input.is_action_pressed("action"):
-		Input.stop_joy_vibration(0)
+		_stop_charging_vibration()
 		is_charging = false
 		charging_percentage = 0.0  # [KR] 초기화 / [EN] Initialize
 
@@ -477,7 +492,24 @@ func _stop_charging():
 	charging_percentage = 0.0
 	find_progress.visible = false
 	find_effect.visible = false
-	Input.stop_joy_vibration(0)
+	_stop_charging_vibration()
+
+## [KR] 액션 키를 누른 패드를 진동 대상으로 기록한다.[br]
+## 키보드 입력은 [InputEventJoypadButton]이 아니므로 기록되지 않아 진동도 발생하지 않는다.
+## Why: 패드 2개 연결 시 미사용 패드(device 0)를 울리던 문제를, 실제로 누른 패드만 진동시켜 해결.
+func _input(event):
+	if event is InputEventJoypadButton and event.is_action_pressed("action"):
+		_charging_pad_device = event.device
+
+## [KR] 차징을 시작한 패드만 진동시킨다. 해당 패드가 연결돼 있지 않으면 아무것도 하지 않는다.
+func _vibrate_charging(weak: float, strong: float, duration: float):
+	if _charging_pad_device in Input.get_connected_joypads():
+		Input.start_joy_vibration(_charging_pad_device, weak, strong, duration)
+
+## [KR] 차징 패드의 진동을 멈춘다.
+func _stop_charging_vibration():
+	if _charging_pad_device in Input.get_connected_joypads():
+		Input.stop_joy_vibration(_charging_pad_device)
 
 ## [KR] 강제 피격(rape) 연출 진입 헬퍼.[br]
 ## 게임 상태를 [code]STATE_RAPE[/code]로 전환하고, 화면 트랜지션 완료 후

@@ -143,17 +143,18 @@ offset_right = 38.0
 offset_bottom = 55.0
 texture = SubResource("AnimatedTexture_vvryb")
 
+[node name="ControllerButtonComponent" parent="HEventBubble/KeyboardIcon" instance=ExtResource("9_fj1g3")]
+layout_mode = 1
+offset_left = -25.0
+offset_top = -19.0
+offset_right = -15.0
+offset_bottom = -9.0
+texture = ExtResource("10_vvryb")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.5, 24)
 shape = SubResource("RectangleShape2D_farfq")
 debug_color = Color(0.502751, 0.573206, 0.263723, 0.42)
-
-[node name="ControllerButtonComponent" parent="." instance=ExtResource("9_fj1g3")]
-offset_left = -25.0
-offset_top = 6.0
-offset_right = -15.0
-offset_bottom = 16.0
-texture = ExtResource("10_vvryb")
 
 [node name="UiSoundStreamPlayer" type="AudioStreamPlayer" parent="."]
 volume_db = -5.0

@@ -73,6 +73,9 @@ func prompt(pause: bool = false) -> bool:
 	animation_player.play("in")
 	show()
 	is_open = true
+	# Panel을 씬에서 항상 visible로 두어 버튼이 즉시 visible_in_tree가 되므로,
+	# grab한 포커스가 어떤 입력(패드 상시 노이즈 등)이 와도 풀리지 않는다.
+	# (혹시 위치가 한 프레임 번쩍이면 play 직후 animation_player.seek(0.0, true)를 추가)
 	cancel_button.call_deferred("grab_focus")
 	var is_confirmed = await confirmed
 	return is_confirmed

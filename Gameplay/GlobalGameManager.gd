@@ -62,6 +62,10 @@ var choice_block_delay_base : float
 ## [EN] Choice reveal delay default value (for skip restoration)
 var choice_reveal_delay_base : float
 
+## [KR] 오토 플레이(스킵 아님) 중 선택지가 떴을 때, 첫 선택지를 자동선택하기 전 최소 대기(초).
+## 선택지를 읽을 시간을 확보한다. (중요 선택지는 자동선택하지 않음)
+const AUTOPLAY_CHOICE_DELAY := 3.0
+
 ## [KR] 플레이어 데이터
 ## [EN] Player data
 var player_data : PlayerData
@@ -272,17 +276,49 @@ func _on_question_shown(info:Dictionary):
 		Dialogic.Inputs.auto_skip.enabled = false
 		return
 
-	if Dialogic.Inputs.auto_skip.enabled == false:
+	# 자동 스킵 또는 오토 플레이 중일 때만 첫 선택지를 자동선택한다.
+	if not Dialogic.Inputs.auto_skip.enabled and not GameEvents.autoplay_enabled:
 		return
 
 	#print(info)
+	# 이 질문의 이벤트 인덱스. 대기 중 수동 선택/다른 질문으로 바뀌면 자동선택을 취소한다(이중 선택 방지).
+	var question_idx := Dialogic.current_event_idx
 	var delay := DialogicUtil.autoload().Choices.block_delay
+	# 오토 플레이(스킵 아님)에서는 음성을 끝까지 듣고, 선택지를 읽을 시간을 확보한다.
+	if GameEvents.autoplay_enabled and not Dialogic.Inputs.auto_skip.enabled:
+		delay = maxf(delay, AUTOPLAY_CHOICE_DELAY)
+		# 음성이 재생 중이면 끝날 때까지 기다린다(음성이 다 나오기 전 자동선택 방지).
+		if not await _wait_for_choice_voice_end():
+			return
 	await get_tree().create_timer(delay+0.1).timeout
+
+	# 대기 중 상태가 바뀌었을 수 있다(수동 선택·타임라인 종료·오토 해제). 재확인 후 선택.
+	if Dialogic.current_state != Dialogic.States.AWAITING_CHOICE:
+		return
+	# 수동(스페이스)으로 이미 선택했거나 다른 질문으로 넘어갔으면 자동선택하지 않는다.
+	if Dialogic.current_event_idx != question_idx:
+		return
+	if not Dialogic.Inputs.auto_skip.enabled and not GameEvents.autoplay_enabled:
+		return
 
 	for choice in info["choices"].size():
 		if info["choices"][choice]["disabled"] == false:
 			DialogicUtil.autoload().Choices._on_choice_selected(info["choices"][choice])
 			break
+
+## [KR] 오토 플레이에서 선택지 질문의 음성이 재생 중이면 끝날 때까지 기다린다.
+## 도중에 오토가 꺼지거나 선택지 상태가 풀리면(수동 선택 등) false를 반환해 자동선택을 중단한다.
+func _wait_for_choice_voice_end() -> bool:
+	if not Dialogic.has_subsystem("Voice"):
+		return true
+	# 일시정지(백로그·옵션 메뉴) 중에는 음성이 멈춰 있어도 끝난 게 아니므로 계속 기다린다.
+	while Dialogic.paused or Dialogic.Voice.is_running():
+		await get_tree().process_frame
+		if not GameEvents.autoplay_enabled:
+			return false
+		if Dialogic.current_state != Dialogic.States.AWAITING_CHOICE:
+			return false
+	return true
 
 ## [KR] 선택지가 선택되면 중요 선택지 멈춤 플래그를 해제한다.
 func _on_choice_selected(_info:Dictionary):

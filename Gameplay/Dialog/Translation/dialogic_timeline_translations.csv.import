@@ -1,17 +1,4 @@
 [remap]
 
-importer="csv_translation"
-type="Translation"
+importer="keep"
 uid="uid://chjhugmcdlqq"
-
-[deps]
-
-files=["res://Gameplay/Dialog/Translation/dialogic_timeline_translations.jp.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.vi.translation"]
-
-source_file="res://Gameplay/Dialog/Translation/dialogic_timeline_translations.csv"
-dest_files=["res://Gameplay/Dialog/Translation/dialogic_timeline_translations.jp.translation", "res://Gameplay/Dialog/Translation/dialogic_timeline_translations.vi.translation"]
-
-[params]
-
-compress=true
-delimiter=0

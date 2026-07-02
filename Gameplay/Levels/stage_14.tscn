@@ -1,9 +1,9 @@
 [gd_scene load_steps=36 format=3]
 
 [ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="1_aamxw"]
 [ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
-[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="9_62jqa"]
-[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_2kt0v"]
+[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_62jqa"]
 [ext_resource type="Texture2D" uid="uid://dbb21del0k5xk" path="res://resources/anomaly/anomaly_lockerhint.png" id="12_hne8d"]
 [ext_resource type="Script" uid="uid://l35mp8n68p70" path="res://Gameplay/Levels/Water.gd" id="13_hf2vb"]
 [ext_resource type="Shader" uid="uid://urhgs61dbotq" path="res://Gameplay/Levels/Water.gdshader" id="14_62jqa"]
@@ -135,8 +135,8 @@ shape = SubResource("RectangleShape2D_v61mu")
 [node name="Anomaly" type="Area2D" parent="TrainStandard"]
 collision_layer = 8
 collision_mask = 0
-script = ExtResource("9_62jqa")
-bubble = ExtResource("10_2kt0v")
+script = ExtResource("1_aamxw")
+bubble = ExtResource("10_62jqa")
 
 [node name="AnomalyCollision" type="CollisionShape2D" parent="TrainStandard/Anomaly"]
 unique_name_in_owner = true

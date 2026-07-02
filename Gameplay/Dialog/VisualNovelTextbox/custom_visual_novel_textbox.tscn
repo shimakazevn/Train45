@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://drcjgkhylsber"]
+[gd_scene load_steps=32 format=3 uid="uid://drcjgkhylsber"]
 
 [ext_resource type="Script" uid="uid://qvwnrpe2v8e0" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.gd" id="1_bpydr"]
 [ext_resource type="Script" uid="uid://b7q5wu7esaot4" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/animations.gd" id="2_xy7a2"]
@@ -18,6 +18,8 @@
 [ext_resource type="Script" uid="uid://nnjff5ms5xn6" path="res://scene/component/controller_button_component.gd" id="16_qheof"]
 [ext_resource type="Script" uid="uid://cfq2xjs0wj1x8" path="res://resources/Dialogic_Style/VisualNovelTextbox/dialog_option_button.gd" id="17_qheof"]
 [ext_resource type="Texture2D" uid="uid://dvb657jbn3ejl" path="res://resources/ui/controller_icons/xbox-start-16.png" id="18_2m6tm"]
+[ext_resource type="Script" uid="uid://7o7lusa11k6o" path="res://resources/Dialogic_Style/VisualNovelTextbox/AutoButton.gd" id="19_07vsb"]
+[ext_resource type="Texture2D" uid="uid://bkqohak5o6pph" path="res://resources/ui/controller_icons/xbox-X.png" id="20_1b1em"]
 
 [sub_resource type="Animation" id="Animation_au0a2"]
 length = 0.001
@@ -219,6 +221,8 @@ outline_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2m6tm"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_07vsb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7e0td"]
 
 [node name="VN_TextboxLayer" type="Control"]
 layout_mode = 3
@@ -481,9 +485,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 40.999985
+offset_left = -58.200024
 offset_top = -19.0
-offset_right = 96.999985
+offset_right = 55.799976
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.58, 0.58)
@@ -517,6 +521,55 @@ offset_bottom = 8.00001
 grow_horizontal = 0
 grow_vertical = 2
 texture = ExtResource("18_2m6tm")
+script = ExtResource("16_qheof")
+metadata/_custom_type_script = "uid://nnjff5ms5xn6"
+
+[node name="AutoButton" type="Button" parent="Anchor/AnimationParent"]
+self_modulate = Color(1, 1, 1, 0.756863)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 45.059986
+offset_top = -19.0
+offset_right = 94.05998
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.58, 0.58)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1)
+theme_override_colors/font_pressed_color = Color(0.85, 0.451633, 0.204, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7e0td")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7e0td")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7e0td")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7e0td")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7e0td")
+toggle_mode = true
+text = "DIALOGIC_AUTOPLAY"
+script = ExtResource("19_07vsb")
+
+[node name="PadUiIcon" type="TextureRect" parent="Anchor/AnimationParent/AutoButton"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 6.241352
+offset_top = -4.9999957
+offset_right = 16.241352
+offset_bottom = 4.999996
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("20_1b1em")
+expand_mode = 1
 script = ExtResource("16_qheof")
 metadata/_custom_type_script = "uid://nnjff5ms5xn6"
 

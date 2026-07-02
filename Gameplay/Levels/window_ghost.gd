@@ -6,6 +6,10 @@ extends Sprite2D
 var follow_speed := 0.03  # 플레이어를 따라가는 속도 (값이 작을수록 느림)
 var offset_distance := 50.0  # 플레이어와의 최소 거리 (offset)
 
+## 스테이지 클리어 시 자동으로 숨길지 여부.
+## 회상방(TYPE_COMPLETE)은 stage_clear가 항상 true라, 장식용으로 띄우려면 false로 둔다.
+@export var hide_on_clear := true
+
 var player : Player
 var is_move := false
 
@@ -16,10 +20,10 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	# 플레이어가 존재할 때만 따라다니도록 처리
 	if is_instance_valid(player) and is_instance_valid(level):
-		if level.stage_clear:
+		if hide_on_clear and level.stage_clear:
 			if self.visible:
 				hide()
-				
+
 			return
 		# 플레이어와 이 노드의 X축 거리 계산
 		var distance_to_player = abs(self.global_position.x - player.position.x)

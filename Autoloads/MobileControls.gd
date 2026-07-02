@@ -5,25 +5,27 @@ var gameplay_container: Control
 var hscene_container: Control
 var target_opacity = 0.0
 
+var _lb_top: float = 0.0
+var _lb_bottom: float = 0.0
+
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
-	# Only show on Android, iOS or devices with touchscreen support
 	var is_mobile = OS.get_name() in ["Android", "iOS"]
 	var is_touch = DisplayServer.is_touchscreen_available()
 	if not (is_mobile or is_touch):
 		visible = false
 		set_process(false)
 		return
-		
-	# Setup main container for smooth fade transitions
+	
+	_calculate_letterbox()
+	
 	main_container = Control.new()
 	main_container.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	main_container.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	main_container.modulate.a = 0.0
 	add_child(main_container)
 	
-	# Setup sub-containers for modular layouts
 	gameplay_container = Control.new()
 	gameplay_container.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	gameplay_container.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -34,8 +36,20 @@ func _ready():
 	hscene_container.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	main_container.add_child(hscene_container)
 	
-	# Setup all virtual buttons
 	_setup_buttons()
+
+func _calculate_letterbox():
+	var size = DisplayServer.window_get_size()
+	var target_ratio = 16.0 / 9.0
+	var current_ratio = float(size.x) / float(size.y)
+	
+	if current_ratio < target_ratio:
+		var game_height = float(size.x) / target_ratio
+		_lb_top = (float(size.y) - game_height) / 2.0
+		_lb_bottom = _lb_top
+	else:
+		_lb_top = 0.0
+		_lb_bottom = 0.0
 
 func _process(delta):
 	var current_scene = get_tree().current_scene
@@ -48,25 +62,20 @@ func _process(delta):
 	var scene_path = current_scene.scene_file_path.to_lower()
 	var scene_name = current_scene.name.to_lower()
 
-	# Hide on menu screens, options, recollection room, credits, prologue
 	var is_menu = ("menu" in scene_path) or ("menu" in scene_name) or ("logo" in scene_name) or ("intro" in scene_name) or ("credit" in scene_name) or ("stage_picker" in scene_path) or ("stage_picker" in scene_name) or ("recollection" in scene_path) or ("prologue" in scene_path)
 	
-	# Hide during Dialogic dialogue timelines
 	var is_dialog = false
 	if has_node("/root/Dialogic"):
 		is_dialog = get_node("/root/Dialogic").current_timeline != null
 		
-	# Hide if the game is paused
 	var is_paused = get_tree().paused
 	
-	# Check if H-scene is active using the game's official window state
 	var is_h_scene = false
 	if has_node("/root/GameEvents") and has_node("/root/Constants"):
 		var ge = get_node("/root/GameEvents")
 		var c = get_node("/root/Constants")
 		is_h_scene = ge.get_window_state(c.WINDOW_STATE_H_ACTION)
 		
-	# Determine visibility based on whether H-scene is active
 	var should_be_visible = false
 	if is_h_scene:
 		should_be_visible = not is_paused
@@ -77,7 +86,6 @@ func _process(delta):
 		self.visible = true
 		target_opacity = move_toward(target_opacity, 1.0, delta * 5.0)
 		
-		# Toggle layouts dynamically
 		if is_h_scene:
 			gameplay_container.visible = false
 			hscene_container.visible = true
@@ -92,54 +100,54 @@ func _process(delta):
 	main_container.modulate.a = target_opacity
 
 func _setup_buttons():
-	var action_color = Color(1.0, 0.72, 0.18)   # Glow Gold for Primary Action
-	var shift_color = Color(0.22, 0.65, 1.0)    # Glow Cyan/Blue for Dash/Talk
-	var utility_color = Color(0.8, 0.8, 0.85)   # Clean Silver for Secondary utilities
-	var dpad_color = Color(0.85, 0.85, 0.85)    # Silver/White
-	var exit_color = Color(1.0, 0.35, 0.35)    # Soft glowing Red for exit/escape button
-	var y_pos = 30.0                           # Shared vertical position for top row elements
-	
+	var action_color = Color(1.0, 0.72, 0.18)
+	var shift_color = Color(0.22, 0.65, 1.0)
+	var utility_color = Color(0.8, 0.8, 0.85)
+	var dpad_color = Color(0.85, 0.85, 0.85)
+	var exit_color = Color(1.0, 0.35, 0.35)
+	var y_pos = 30.0
+
+	# Shared button dimensions
+	var btn_w = 46.0
+	var btn_h = 24.0
+	var col_x = -35.0
+
 	# =========================================================================
 	# 1. NORMAL GAMEPLAY LAYOUT (gameplay_container)
 	# =========================================================================
-	# D-Pad (Bottom Left) - More compact and shifted closer to corner
-	var dpad_center_x = 150.0
-	var dpad_offset_y = 120.0
-	var dpad_radius = 21.0
-	var dpad_gap = 30.0
+	# D-Pad (Bottom Left) — INSIDE game frame, shifted up by bottom letterbox
+	var dpad_center_x = 100.0
+	var dpad_offset_y = 120.0 + _lb_bottom
+	var dpad_radius = 25.0
+	var dpad_gap = 32.0
 	
 	_add_virtual_button(gameplay_container, "move_up", Vector2(dpad_center_x, -dpad_offset_y - dpad_gap), dpad_radius, "↑", Control.PRESET_BOTTOM_LEFT, dpad_color)
 	_add_virtual_button(gameplay_container, "move_down", Vector2(dpad_center_x, -dpad_offset_y + dpad_gap), dpad_radius, "↓", Control.PRESET_BOTTOM_LEFT, dpad_color)
 	_add_virtual_button(gameplay_container, "move_left", Vector2(dpad_center_x - dpad_gap, -dpad_offset_y), dpad_radius, "←", Control.PRESET_BOTTOM_LEFT, dpad_color)
 	_add_virtual_button(gameplay_container, "move_right", Vector2(dpad_center_x + dpad_gap, -dpad_offset_y), dpad_radius, "→", Control.PRESET_BOTTOM_LEFT, dpad_color)
 	
-	# Primary circular action buttons (Bottom Right) - Shrunk & lifted slightly to clear the ticket bar
-	_add_virtual_button(gameplay_container, "action", Vector2(-65.0, -85.0), 28.0, "DÒ", Control.PRESET_BOTTOM_RIGHT, action_color)
-	_add_virtual_button(gameplay_container, "shift", Vector2(-125.0, -85.0), 22.0, "THOẠI", Control.PRESET_BOTTOM_RIGHT, shift_color)
+	# Primary rectangular action buttons (Bottom Right) — INSIDE game frame
+	_add_utility_button(gameplay_container, "action", Vector2(-65.0, -85.0 - _lb_bottom), btn_w, btn_h, "DÒ", Control.PRESET_BOTTOM_RIGHT, action_color)
+	_add_utility_button(gameplay_container, "shift", Vector2(-125.0, -85.0 - _lb_bottom), 56.0, btn_h, "THOẠI", Control.PRESET_BOTTOM_RIGHT, shift_color)
 	
-	# Utility buttons (Top Right vertical column to prevent keyboard helper overlaps)
-	# Sleek horizontal row is replaced with a right-aligned vertical strip
-	var btn_w = 46.0
-	var btn_h = 24.0
-	var col_x = -35.0
+	# Utility buttons (Top Right) — OUTSIDE game frame (in top letterbox)
 	
-	_add_utility_button(gameplay_container, "esc", Vector2(col_x, 25.0), btn_w, btn_h, "ESC", Control.PRESET_TOP_RIGHT, exit_color)
-	_add_utility_button(gameplay_container, "shotcut_kankan", Vector2(col_x, 56.0), btn_w, btn_h, "NAVI", Control.PRESET_TOP_RIGHT, utility_color)
-	_add_utility_button(gameplay_container, "shotcut_inventory", Vector2(col_x, 87.0), btn_w, btn_h, "KHO", Control.PRESET_TOP_RIGHT, utility_color)
-	_add_utility_button(gameplay_container, "testkey", Vector2(col_x, 118.0), btn_w, btn_h, "XEM", Control.PRESET_TOP_RIGHT, utility_color)
-	_add_utility_button(gameplay_container, "return_base", Vector2(col_x, 149.0), btn_w, btn_h, "VỀ", Control.PRESET_TOP_RIGHT, utility_color)
+	# Keep NAVI + KHO removed to avoid duplicates (HUD originals handle them)
+	_add_utility_button(gameplay_container, "esc", Vector2(col_x, 15.0 + _lb_top * 0.5), btn_w, btn_h, "ESC", Control.PRESET_TOP_RIGHT, exit_color)
+	_add_utility_button(gameplay_container, "testkey", Vector2(col_x, 46.0 + _lb_top * 0.5), btn_w, btn_h, "XEM", Control.PRESET_TOP_RIGHT, utility_color)
+	_add_utility_button(gameplay_container, "return_base", Vector2(col_x, 77.0 + _lb_top * 0.5), btn_w, btn_h, "VỀ", Control.PRESET_TOP_RIGHT, utility_color)
 
 	# =========================================================================
-	# 2. H-SCENE LAYOUT (hscene_container)
+	# 2. H-SCENE LAYOUT (hscene_container) — ALL buttons OUTSIDE game frame
 	# =========================================================================
-	# Speed control and Thrust action (Bottom Left to clear the right side HUD)
-	_add_virtual_button(hscene_container, "move_down", Vector2(135.0, -65.0), 32.0, "XUỐNG", Control.PRESET_BOTTOM_LEFT, action_color)
-	_add_virtual_button(hscene_container, "move_up", Vector2(65.0, -65.0), 26.0, "LÊN", Control.PRESET_BOTTOM_LEFT, shift_color)
+	# Bottom-left cluster (LÊN, XUỐNG) in bottom letterbox
+	_add_virtual_button(hscene_container, "move_down", Vector2(135.0, 15.0), 32.0, "XUỐNG", Control.PRESET_BOTTOM_LEFT, action_color)
+	_add_virtual_button(hscene_container, "move_up", Vector2(65.0, 15.0), 26.0, "LÊN", Control.PRESET_BOTTOM_LEFT, shift_color)
 	
-	# Top Left row for Exit and Zoom in H-scene (keeps the right side X-Ray clean)
-	_add_utility_button(hscene_container, "esc", Vector2(45.0, y_pos), 58.0, btn_h, "THOÁT", Control.PRESET_TOP_LEFT, exit_color)
-	_add_utility_button(hscene_container, "scroll_down", Vector2(110.0, y_pos), btn_w, btn_h, "RỘNG", Control.PRESET_TOP_LEFT, utility_color)
-	_add_utility_button(hscene_container, "scroll_up", Vector2(170.0, y_pos), btn_w, btn_h, "CẬN", Control.PRESET_TOP_LEFT, utility_color)
+	# Top-left row (THOÁT, RỘNG, CẬN) in top letterbox
+	_add_utility_button(hscene_container, "esc", Vector2(45.0, 15.0), 58.0, btn_h, "THOÁT", Control.PRESET_TOP_LEFT, exit_color)
+	_add_utility_button(hscene_container, "scroll_down", Vector2(110.0, 15.0), btn_w, btn_h, "RỘNG", Control.PRESET_TOP_LEFT, utility_color)
+	_add_utility_button(hscene_container, "scroll_up", Vector2(170.0, 15.0), btn_w, btn_h, "CẬN", Control.PRESET_TOP_LEFT, utility_color)
 
 func _add_virtual_button(parent_node: Control, action_name: String, offset: Vector2, radius: float, label_text: String, anchor_preset: int, theme_color: Color):
 	var tex_normal = _generate_circle_texture(radius, theme_color, false)

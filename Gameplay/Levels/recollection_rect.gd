@@ -13,6 +13,8 @@ var base_postion : Vector2
 @export var h_scene_window_component: HSceneWindowComponent
 @onready var recollection_container: Container = %RecollectionContainer
 @onready var scroll_container: ScrollContainer = %RecollectionScrollContainer
+## [KR] 귀신 H 모드 안내 라벨(나가기). 귀신 H 모드일 때만 표시.
+@onready var exit_label: CanvasItem = get_node_or_null("../ExitLabel")
 
 
 @export var recollection_button: PackedScene
@@ -32,6 +34,15 @@ var multiplier_dict: Dictionary = {
 }
 var multiplier_setted: bool = false
 
+## 귀신 H 모드(로밍) 활성 여부. ESC 처리 분기에 사용.
+var ghost_h_mode_active := false
+## 귀신 H 모드 진입 시 끈 NPC 콜리전 레이어를 복원하기 위한 원본 값 저장.
+var _npc_orig_layers := {}
+## 회상방 최초 진입(메뉴) 플레이어 위치. 로드 시 1회 저장해 귀신 H 종료 시 이 위치로 리셋.
+var _menu_player_pos: Vector2
+## 배경 장식용 귀신 스포너(같은 씬 루트의 BGEvilSpwaner). 귀신 H 모드에서만 스폰. 없으면 무시.
+var bg_evil_spawner
+
 
 func _ready() -> void:
 	select_frame = get_node_or_null("SelectFrame")
@@ -48,6 +59,22 @@ func _ready() -> void:
 	
 	for child in recollection_container.get_children():
 		child.queue_free()
+
+	# 선택 메뉴 단계에선 귀신을 숨긴다("귀신 H" 선택 시 다시 표시).
+	# 그룹 등록이 끝난 뒤 처리하도록 지연 호출한다.
+	call_deferred("_set_recollect_ghosts_visible", false)
+	# 최초 진입(메뉴) 플레이어 위치를 1회 저장(스테이지 초기화 후).
+	call_deferred("_capture_menu_player_pos")
+	# 귀신 H 모드 안내 라벨은 평소 숨김.
+	if exit_label:
+		exit_label.hide()
+	# 같은 씬 루트의 배경 귀신 스포너를 찾아 둔다(있을 때만).
+	bg_evil_spawner = owner.get_node_or_null("BGEvilSpwaner") if owner else null
+
+## [KR] 메뉴(최초 진입) 플레이어 위치를 1회 저장한다 — 귀신 H 종료 시 이 위치로 리셋.
+func _capture_menu_player_pos() -> void:
+	if player:
+		_menu_player_pos = player.position
 
 
 func _input(event: InputEvent) -> void:
@@ -187,14 +214,101 @@ func all_npc_show():
 ## 이동 자체는 game_state=STATE_NORMAL이고 타임라인이 종료되면
 ## player._process가 자동으로 가시화·입력을 복원하므로 별도 처리가 필요 없다.
 func start_ghost_h_mode():
+	ghost_h_mode_active = true
+	if exit_label:
+		exit_label.show()
 	for i in Npcs:
 		if not is_instance_valid(i):
 			continue
+		_npc_orig_layers[i] = i.collision_layer
 		i.hide()
 		# NPC는 Entity 공유 부모를 두므로 hide만으로는 can_talk_to_npc(부모 visible)를
 		# 통과해 대화가 걸린다. talk_area가 감지하지 못하도록 콜리전 레이어를 끈다.
 		i.set_deferred("collision_layer", 0)
 	player.show()
+	# 귀신 H 모드 시작 위치로 플레이어를 옮긴다.
+	player.position = GhostGalleryWindow.PLAYER_BASE_POS
+	# 숨겨 뒀던 귀신들을 표시한다.
+	_set_recollect_ghosts_visible(true)
+	# 귀신 H 시작(ghost_sex)과 차지 감지는 둘 다 find_lock==false를 요구한다.
+	# 회상방은 TYPE_COMPLETE라 init_scene이 find_lock=true로 잠그므로 여기서 해제한다.
+	player.set_find_lock(false)
+	# 차지 탐지를 3배 빠르게, find 이펙트 크기를 감지 거리(GHOST_DETECT_RANGE 반경)에 맞춘다.
+	_apply_ghost_detection_boost()
+	# player.enable()이 불릴 때마다 UpgradeComponent가 스탯을 기본값으로 되돌린다(도감 H 재생 등).
+	# enable 이후 부스트를 다시 적용하도록 player_enable에 연결한다.
+	if not player.player_enable.is_connected(_on_player_enable_reapply_boost):
+		player.player_enable.connect(_on_player_enable_reapply_boost)
+	# 차지 완료(player_action) 시 스프라이트 거리 기준으로 가장 가까운 귀신을 감지한다.
+	# find_anomaly는 FindArea의 단일 불리언(is_player_in_area)에 의존하는데, 귀신이 여럿이면
+	# 그 불리언이 어긋나 감지가 누락된다. player_action 직접 연결로 우회한다.
+	if not player.player_action.is_connected(_on_recollect_find):
+		player.player_action.connect(_on_recollect_find)
+	# 배경 장식용 귀신 스폰 시작.
+	if bg_evil_spawner:
+		bg_evil_spawner.start_spawning()
+
+## [KR] 귀신 H 모드 감지 부스트(차지 속도 3배·가로 감지 범위 확대)를 적용한다.
+func _apply_ghost_detection_boost() -> void:
+	player.charge_time = player.charge_base_time / 3.0
+	# 세로(Y)는 기본값을 유지하고, 가로(X)만 감지 거리에 맞춘다.
+	player.find_area.set_detect_size(Vector2(GHOST_DETECT_RANGE * 2.0, player.find_area.collision_shape.size.y))
+
+## [KR] player.enable() 시 UpgradeComponent가 call_deferred로 스탯을 리셋하므로,
+## 그 뒤에 실행되도록 deferred로 부스트를 다시 적용한다(도감 H 감상 후 부스트 유지).
+func _on_player_enable_reapply_boost() -> void:
+	if ghost_h_mode_active:
+		_apply_ghost_detection_boost.call_deferred()
+
+## 귀신 H 모드 종료: 선택 메뉴로 돌아가기 전에 start_ghost_h_mode가 바꾼 상태를 원복한다.
+func end_ghost_h_mode():
+	ghost_h_mode_active = false
+	if exit_label:
+		exit_label.hide()
+	if player.player_action.is_connected(_on_recollect_find):
+		player.player_action.disconnect(_on_recollect_find)
+	if player.player_enable.is_connected(_on_player_enable_reapply_boost):
+		player.player_enable.disconnect(_on_player_enable_reapply_boost)
+	# 귀신·플레이어를 메뉴 상태로 되돌린다.
+	_set_recollect_ghosts_visible(false)
+	player.is_ghost_play = false
+	player.set_find_lock(true) # 회상방은 TYPE_COMPLETE 기본값
+	player.position = _menu_player_pos # 최초 진입(중앙) 위치로 리셋
+	player.hide()
+	# NPC 표시·콜리전 복원(이후 일반 회상 재생에 지장 없도록).
+	for i in Npcs:
+		if not is_instance_valid(i):
+			continue
+		i.show()
+		if _npc_orig_layers.has(i):
+			i.set_deferred("collision_layer", _npc_orig_layers[i])
+	# 배경 장식용 귀신 스폰 중지 및 정리.
+	if bg_evil_spawner:
+		bg_evil_spawner.stop_spawning()
+
+## 회상방 귀신 감지 범위(px). 감지 시 이 안의 가장 가까운 NOT_FIND 귀신을 IN으로 만든다.
+const GHOST_DETECT_RANGE := 120.0
+
+## [KR] 이변 감지 콜백. 범위 내에서 가장 가까운 NOT_FIND 회상 귀신을 감지(IN)시킨다.
+func _on_recollect_find() -> void:
+	# 감지 기준점은 find 이펙트 중심(find_area)과 일치시켜 시각/감지를 정렬한다.
+	var find_pos: Vector2 = player.find_area.global_position
+	var nearest: GhostHAnomaly = null
+	var nearest_dist := GHOST_DETECT_RANGE
+	for g in get_tree().get_nodes_in_group("recollect_ghost"):
+		var d: float = find_pos.distance_to(g.ghost_sprite.global_position)
+		if g.current_state != GhostHAnomaly.GhostState.NOT_FIND:
+			continue
+		if d <= nearest_dist:
+			nearest_dist = d
+			nearest = g
+	if nearest:
+		nearest.recollect_detect()
+
+## [KR] 회상방 귀신들(RecollectGhost 그룹)의 표시/숨김을 일괄 전환한다.
+func _set_recollect_ghosts_visible(visible_state: bool) -> void:
+	for g in get_tree().get_nodes_in_group("RecollectGhost"):
+		g.visible = visible_state
 
 func get_npc_info(npc_types: Constants.NpcTypes)-> Array[HSceneRes]:
 	var current_h_array: Array[HSceneRes] = []

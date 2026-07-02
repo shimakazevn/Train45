@@ -1,15 +1,15 @@
 [gd_scene load_steps=47 format=3]
 
 [ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="1_aamxw"]
 [ext_resource type="Script" uid="uid://3mc5em6jwwyj" path="res://Gameplay/Levels/h_scene_cut_scene_component.gd" id="2_hf2vb"]
 [ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
 [ext_resource type="PackedScene" uid="uid://xm3jf22phtyd" path="res://scene/component/anomaly_event_component.tscn" id="6_gvche"]
-[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="9_62jqa"]
-[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_2kt0v"]
-[ext_resource type="Resource" uid="uid://t6c5lrne03bm" path="res://Gameplay/GameData/HSceneData/h_mai_5.tres" id="12_pa3uq"]
-[ext_resource type="Texture2D" uid="uid://c5lj1cg6jxuwa" path="res://resources/anomaly/anomaly_semen.png" id="13_fte81"]
-[ext_resource type="Script" uid="uid://k8jhy5qtimfk" path="res://scene/game_object/player/random_stream_player_2d_component.gd" id="14_1lcd4"]
-[ext_resource type="AudioStream" uid="uid://b8il37ar4771h" path="res://sound/sfx/DropWater.mp3" id="15_lyvfe"]
+[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_62jqa"]
+[ext_resource type="Resource" uid="uid://t6c5lrne03bm" path="res://Gameplay/GameData/HSceneData/h_mai_5.tres" id="12_2kt0v"]
+[ext_resource type="Texture2D" uid="uid://c5lj1cg6jxuwa" path="res://resources/anomaly/anomaly_semen.png" id="13_pa3uq"]
+[ext_resource type="Script" uid="uid://k8jhy5qtimfk" path="res://scene/game_object/player/random_stream_player_2d_component.gd" id="14_fte81"]
+[ext_resource type="AudioStream" uid="uid://b8il37ar4771h" path="res://sound/sfx/DropWater.mp3" id="15_1lcd4"]
 [ext_resource type="PackedScene" uid="uid://lg6623mk53cw" path="res://scene/component/teleport_component.tscn" id="26_1r73j"]
 [ext_resource type="Texture2D" uid="uid://du0ewe3ii4vjn" path="res://resources/bg_train_wall.png" id="27_50oqc"]
 [ext_resource type="PackedScene" uid="uid://dnc5rb3rrpan3" path="res://scene/UI/clear_text.tscn" id="31_82fnd"]
@@ -718,12 +718,12 @@ shape = SubResource("RectangleShape2D_v61mu")
 [node name="Anomaly" type="Area2D" parent="TrainStandard"]
 collision_layer = 8
 collision_mask = 0
-script = ExtResource("9_62jqa")
-bubble = ExtResource("10_2kt0v")
+script = ExtResource("1_aamxw")
+bubble = ExtResource("10_62jqa")
 
 [node name="AnomalyEventComponent" parent="TrainStandard/Anomaly" instance=ExtResource("6_gvche")]
 position = Vector2(804, 166)
-h_scene_info = ExtResource("12_pa3uq")
+h_scene_info = ExtResource("12_2kt0v")
 
 [node name="AnomalyCollision" type="CollisionShape2D" parent="TrainStandard/Anomaly"]
 unique_name_in_owner = true
@@ -735,7 +735,7 @@ shape = SubResource("RectangleShape2D_thq4j")
 z_index = 2
 texture_filter = 1
 position = Vector2(728, 0)
-texture = ExtResource("13_fte81")
+texture = ExtResource("13_pa3uq")
 centered = false
 hframes = 6
 
@@ -750,8 +750,8 @@ position = Vector2(72, 281)
 volume_db = 13.5
 max_distance = 400.0
 bus = &"Sfx"
-script = ExtResource("14_1lcd4")
-streams = Array[AudioStream]([ExtResource("15_lyvfe")])
+script = ExtResource("14_fte81")
+streams = Array[AudioStream]([ExtResource("15_1lcd4")])
 min_pitch = 0.7
 max_pitch = 1.3
 metadata/_custom_type_script = "uid://k8jhy5qtimfk"

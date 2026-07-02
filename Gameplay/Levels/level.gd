@@ -18,6 +18,10 @@ var level_path:String
 @onready var train_standard = $TrainStandard
 ## 카메라 줌 제어용 [PhantomCamera2D].
 @onready var phantom_camera_2d = $PhantomCamera2D
+## H씬(is_ghost_play) 중 카메라 리미트 해제 상태 추적(상태 변할 때만 토글).
+var _ghost_limit_off := false
+## 리미트 해제 전 원래 limit_target을 저장해 두고 종료 시 복원한다.
+var _saved_limit_target: NodePath
 
 ## 스테이지 유형 — base, stage, event, safe_stage, complete 중 하나.
 @export_enum("base", "stage", "event", "safe_stage", "complete") var stage_type
@@ -112,6 +116,19 @@ func _process(_delta):
 	if player.is_ghost_play:
 		target_zoom = Vector2(1.2, 1.2)  # 차징 중일 때 목표 줌 설정
 		phantom_camera_2d.zoom = phantom_camera_2d.zoom.lerp(target_zoom, 0.3)
+
+	# 회상방 한정: H씬(is_ghost_play 갤러리 뷰 / STATE_RAPE 강간) 중엔 화면이 카메라 리미트에
+	# 잘리지 않도록 해제한다. limit_target을 비우면 reset_limit + update_limit_all_sides가 돌아
+	# _limit_sides가 기본값(무제한)이 되고 limit 라인도 화면 밖으로 밀려난다. 종료 시 원래 target 복원.
+	var need_limit_off: bool = GameEvents.is_recollection_room \
+		and (player.is_ghost_play or GameEvents.game_state == Constants.STATE_RAPE)
+	if need_limit_off != _ghost_limit_off:
+		_ghost_limit_off = need_limit_off
+		if need_limit_off:
+			_saved_limit_target = phantom_camera_2d.limit_target
+			phantom_camera_2d.limit_target = NodePath("")
+		else:
+			phantom_camera_2d.limit_target = _saved_limit_target
 
 ## 현재 레벨의 핸드오프 데이터를 반환한다.
 ## [SceneManager]가 씬 전환 시 이 메서드를 호출하여 다음 씬에 데이터를 전달한다.

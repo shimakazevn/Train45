@@ -47,7 +47,7 @@ func set_dir(dir: FlashDir):
 	if light_tween:
 		light_tween.kill()
 	light_tween = create_tween()
-	light_tween.tween_property(self, "modulate:a", 1.0, 0.5).from(0.0).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_ELASTIC)
+	light_tween.tween_property(self, "modulate:a", 1.0, 0.25).from(0.0).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_ELASTIC)
 	light_tween.tween_callback(set_light_on)
 
 func set_light_on():

@@ -1,11 +1,11 @@
 [gd_scene load_steps=25 format=3]
 
 [ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="1_aamxw"]
 [ext_resource type="Script" uid="uid://3mc5em6jwwyj" path="res://Gameplay/Levels/h_scene_cut_scene_component.gd" id="2_hf2vb"]
 [ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
 [ext_resource type="PackedScene" uid="uid://xm3jf22phtyd" path="res://scene/component/anomaly_event_component.tscn" id="6_gvche"]
-[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="9_62jqa"]
-[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_2kt0v"]
+[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_62jqa"]
 [ext_resource type="Resource" uid="uid://w8vt6etih2de" path="res://Gameplay/GameData/HSceneData/h_mai_1.tres" id="12_5gyie"]
 [ext_resource type="Texture2D" uid="uid://citp0ih0hc2a0" path="res://resources/anomaly/anomaly_fella.png" id="13_hne8d"]
 [ext_resource type="PackedScene" uid="uid://txg8j51ga3aw" path="res://Gameplay/NPC/Dummy/gyaru_dummy.tscn" id="16_hf2vb"]
@@ -178,8 +178,8 @@ shape = SubResource("RectangleShape2D_v61mu")
 [node name="Anomaly" type="Area2D" parent="TrainStandard"]
 collision_layer = 8
 collision_mask = 0
-script = ExtResource("9_62jqa")
-bubble = ExtResource("10_2kt0v")
+script = ExtResource("1_aamxw")
+bubble = ExtResource("10_62jqa")
 
 [node name="AnomalyEventComponent" parent="TrainStandard/Anomaly" instance=ExtResource("6_gvche")]
 position = Vector2(520, 77)

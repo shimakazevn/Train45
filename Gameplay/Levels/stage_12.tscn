@@ -1,12 +1,12 @@
 [gd_scene load_steps=55 format=3]
 
 [ext_resource type="Script" uid="uid://b87n3c22gny5k" path="res://Gameplay/Levels/level.gd" id="1_5frgf"]
+[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="1_aamxw"]
 [ext_resource type="Script" uid="uid://3mc5em6jwwyj" path="res://Gameplay/Levels/h_scene_cut_scene_component.gd" id="2_hf2vb"]
 [ext_resource type="PackedScene" uid="uid://sl6d2h0edxf8" path="res://Gameplay/current_npc.tscn" id="6_ajpmm"]
 [ext_resource type="PackedScene" uid="uid://xm3jf22phtyd" path="res://scene/component/anomaly_event_component.tscn" id="6_gvche"]
-[ext_resource type="Script" uid="uid://dpl1lor577qte" path="res://Gameplay/Levels/Anomaly.gd" id="9_62jqa"]
 [ext_resource type="Texture2D" uid="uid://bwwur0n55c6vf" path="res://resources/anomaly/bg_train_anomaly_eye_screen.png" id="9_pa3uq"]
-[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_2kt0v"]
+[ext_resource type="PackedScene" uid="uid://cwgnyvgmhaxv7" path="res://scene/game_object/exp_bubble.tscn" id="10_62jqa"]
 [ext_resource type="Script" uid="uid://cc5mkn17mlvbv" path="res://Gameplay/Levels/EyeBody.gd" id="10_fte81"]
 [ext_resource type="Texture2D" uid="uid://bd2sjmqdxi0uv" path="res://resources/anomaly/anomaly_eye.png" id="11_1lcd4"]
 [ext_resource type="PackedScene" uid="uid://mjvl860yvplh" path="res://Gameplay/item_box.tscn" id="12_aamxw"]
@@ -1320,8 +1320,8 @@ autoplay = "idle"
 position = Vector2(-548, -280)
 collision_layer = 8
 collision_mask = 0
-script = ExtResource("9_62jqa")
-bubble = ExtResource("10_2kt0v")
+script = ExtResource("1_aamxw")
+bubble = ExtResource("10_62jqa")
 
 [node name="AnomalyEventComponent" parent="TrainStandard/EyeScreen/EyeBody/Anomaly" instance=ExtResource("6_gvche")]
 position = Vector2(553, 234)

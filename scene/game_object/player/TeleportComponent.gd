@@ -74,6 +74,10 @@ func _on_teleport_ep_change(chapter : int) -> void:
 ## [EN] Why: ties the SFX to the return action (not life deduction) so it sounds consistently
 ## [EN] across all find_faild returns (return button, H-scene end, etc.), not just detection failure.
 func _on_find_faild_teleport() -> void:
+	# [KR] 회상방은 단일 방이라 시작 지점 복귀(=base 씬 전환)를 하면 안 된다.
+	#      귀신 도감의 rape 재생 종료(find_faild)는 갤러리 창이 받아 처리한다.
+	if GameEvents.is_recollection_room:
+		return
 	# [KR] 이미 전환 중이면(다른 텔레포트가 먼저 처리) SE 중복 재생을 막는다.
 	if SceneManager._loading_in_progress:
 		return
